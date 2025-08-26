@@ -613,3 +613,49 @@
   will-change: transform;
   transform: translate3d(0, 0, 0);
 }
+
+/* Адаптивні кольори для хедера - точно як на Rejouice */
+header {
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+
+.header-text {
+  color: #ffffff;
+  mix-blend-mode: difference;
+  isolation: isolate;
+}
+
+.header-text:hover {
+  color: #ffffff;
+  mix-blend-mode: difference;
+  isolation: isolate;
+  opacity: 0.8;
+}
+
+.header-text-active {
+  color: #ffffff;
+  mix-blend-mode: difference;
+  isolation: isolate;
+  opacity: 0.6;
+}
+
+.header-logo {
+  mix-blend-mode: difference;
+  isolation: isolate;
+}
+
+.header-logo:hover {
+  opacity: 0.8;
+}
+
+.header-icon {
+  mix-blend-mode: difference;
+  isolation: isolate;
+}
+
+.header-underline {
+  background-color: #ffffff;
+  mix-blend-mode: difference;
+  isolation: isolate;
+}
