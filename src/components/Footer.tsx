@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="px-4 sm:px-6 lg:px-10 py-10 max-w-[1512px] mx-auto text-text-700">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="hoves-h5-reg mb-8">Relax. We've Got You.</h3>
+              <h3 className="hoves-h5-reg mb-8">Relax. We&apos;ve Got You.</h3>
               <div className="flex gap-8">
                 <div>
                   <p className="hoves-p2-reg">Contact us:</p>

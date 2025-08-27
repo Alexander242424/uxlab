@@ -62,7 +62,7 @@ export default function QuestionSections() {
       </div>
       <div className="w-full lg:max-w-[60%]">
         <Accordion type="single" collapsible>
-          {faqData.map((item, index) => (
+          {faqData.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
               <AccordionTrigger 
                 className="hoves-p1-reg text-left"

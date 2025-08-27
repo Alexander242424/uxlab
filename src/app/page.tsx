@@ -56,7 +56,7 @@ export default function Home() {
         <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-20 text-black">
           <p className="text-right">After shipping hundreds of products,</p>
           <p>
-            there are a few key things we’ve learned are needed to do the best
+            there are a few key things we&apos;ve learned are needed to do the best
             work
           </p>
         </div>
