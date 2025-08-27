@@ -47,15 +47,32 @@ export default function InsightsSection() {
   return (
     <motion.div ref={insightsRef} style={{ y }}>
       <div className="flex flex-col bg-bg-white px-10 mb-40">
-        <div className="flex py-8 border-t border-border-100 hoves-p1-reg">
+        <motion.div 
+          className="flex py-8 border-t border-border-100 hoves-p1-reg"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+        >
           <p className="text-black">Insights, Inspirations</p>
-        </div>
+        </motion.div>
 
         <div className="flex flex-col md:flex-row gap-8 w-full">
-          {insightsData.map((insight) => (
-            <div
+          {insightsData.map((insight, index) => (
+            <motion.div
               key={insight.id}
               className="flex flex-col gap-3 w-full md:max-w-[334px]"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 0.2 + index * 0.1,
+              }}
             >
               <Image src={insight.image} alt={insight.title} />
               <div className="flex flex-col gap-6">
@@ -64,7 +81,7 @@ export default function InsightsSection() {
                   {insight.author} · {insight.date}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
