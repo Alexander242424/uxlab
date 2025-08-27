@@ -105,7 +105,7 @@ const HoverSection: React.FC = () => {
               hoveredSection === section.id ? "bg-bg-gray" : "hover:bg-bg-white"
             }`}
             style={{
-              flexBasis: hoveredSection === section.id ? "50%" : "16.666%",
+              flexBasis: hoveredSection === section.id ? "50%" : `${100 / sections.length}%`,
               transition:
                 "flex-basis 1s ease-in-out, background-color 0.7s ease-out",
             }}
