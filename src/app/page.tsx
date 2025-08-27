@@ -18,6 +18,7 @@ import GlanceSection from "@/components/GlanceSection";
 import HoverSection from "@/components/HoverSection";
 import { Button } from "@/components/ui/button";
 import InsightsSection from "@/components/InsightsSection";
+import QuestionSections from "@/components/QuestionSections";
 
 const slides = [
   // { icon: <BMWLogo /> },
@@ -64,6 +65,7 @@ export default function Home() {
           <VideoPlayer src="/video/reel-short.mp4" />
         </div>
         {/* TODO:Accordion */}
+        <QuestionSections />
         <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-40 text-black">
           <p className="text-right">Work seamlessly with a creative</p>
           <p>

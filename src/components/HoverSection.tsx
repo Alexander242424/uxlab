@@ -36,11 +36,6 @@ const sections: SectionData[] = [
     title: "05",
     content: "",
   },
-  {
-    id: 6,
-    title: "06",
-    content: "",
-  },
 ];
 
 const HoverSection: React.FC = () => {
