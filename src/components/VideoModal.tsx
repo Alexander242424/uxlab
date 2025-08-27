@@ -2,14 +2,10 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
+import { useVideoModal } from "@/context/VideoModalContext";
 
-interface VideoModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  videoSrc: string;
-}
-
-export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProps) {
+export default function VideoModal() {
+  const { isModalOpen, videoSrc, closeModal } = useVideoModal();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -47,10 +43,10 @@ export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProp
       ease: "power2.in",
       onComplete: () => {
         setIsAnimating(false);
-        onClose();
+        closeModal();
       }
     });
-  }, [isAnimating, onClose]);
+  }, [isAnimating, closeModal]);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -71,7 +67,7 @@ export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProp
     }
 
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && isModalOpen) {
         handleClose();
       }
     };
@@ -83,7 +79,7 @@ export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProp
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener('keydown', handleEscape);
     };
-  }, [handleMouseMove, isInitialized, onClose, isOpen, handleClose]);
+  }, [handleMouseMove, isInitialized, isModalOpen, handleClose]);
 
   useEffect(() => {
     if (isHovering && !isMobile && cursorRef.current) {
@@ -132,14 +128,14 @@ export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProp
   }, [isHovering, isMobile]);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!isModalOpen) {
       setIsHovering(false);
       setIsInitialized(false);
     }
-  }, [isOpen]);
+  }, [isModalOpen]);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isModalOpen) {
       setIsAnimating(true);
       
       // Анімація фону (швидша)
@@ -175,14 +171,23 @@ export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProp
         }
       );
     }
-  }, [isOpen]);
+  }, [isModalOpen]);
 
-  if (!isOpen) return null;
+  if (!isModalOpen) return null;
 
   return (
     <div 
       ref={modalRef}
-      className="fixed inset-0 bg-black z-[9999] flex items-center justify-center px-10 py-5"
+      className="fixed inset-0 bg-black z-[999999] flex items-center justify-center px-10 py-5"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 999999,
+        backgroundColor: 'rgba(0, 0, 0, 0.95)'
+      }}
       onMouseEnter={() => {
         if (!isMobile) {
           setIsHovering(true);

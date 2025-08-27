@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { VideoModalProvider } from "@/context/VideoModalContext";
+import VideoModal from "@/components/VideoModal";
 
 const ttHoves = localFont({
   src: [
@@ -45,13 +47,16 @@ export default function RootLayout({
       <body
         className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
       >
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <VideoModalProvider>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+          <VideoModal />
+        </VideoModalProvider>
       </body>
     </html>
   );
