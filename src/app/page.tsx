@@ -64,12 +64,11 @@ export default function Home() {
         <div className="w-full px-10 mt-40">
           <VideoPlayer src="/video/reel-short.mp4" />
         </div>
-        {/* TODO:Accordion */}
         <QuestionSections />
         <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-40 text-black">
           <p className="text-right">Work seamlessly with a creative</p>
           <p>
-            team that's built to match your pace and exceed your expectations.
+            team that&apos;s built to match your pace and exceed your expectations.
           </p>
           <Button
             variant="secondary"
