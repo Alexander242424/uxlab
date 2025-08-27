@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { Button } from "./ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import AvatarsSVG from "@/assets/avatars.svg";
+import { motion } from "motion/react";
 import {
   Accordion,
   AccordionContent,
@@ -40,9 +42,29 @@ const faqData = [
 export default function QuestionSections() {
   return (
     <div className="flex flex-col lg:flex-row text-black mx-10 gap-8 lg:gap-16 xl:gap-[276px] mt-20 py-8 border-t border-border-100">
-      <div className="flex flex-col justify-between lg:min-w-[30%]">
+      <motion.div 
+        className="flex flex-col justify-between lg:min-w-[30%]"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+      >
         <h3 className="hoves-p1-reg mb-6 lg:mb-0">Frequently Asked Question</h3>
-        <div className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] xl:h-[340px] xl:self-end">
+        <motion.div 
+          className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] xl:h-[340px] xl:self-end"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.4,
+          }}
+        >
           <AvatarsSVG />
           <div className="flex flex-col gap-2.5">
             <h4 className="hoves-h4-med">Book an intro call</h4>
@@ -58,24 +80,46 @@ export default function QuestionSections() {
           >
             Book a Call
           </Button>
-        </div>
-      </div>
-      <div className="w-full lg:max-w-[60%]">
+        </motion.div>
+      </motion.div>
+      <motion.div 
+        className="w-full lg:max-w-[60%]"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+          delay: 0.3,
+        }}
+      >
         <Accordion type="single" collapsible>
-          {faqData.map((item) => (
-            <AccordionItem key={item.id} value={item.id}>
-              <AccordionTrigger 
-                className="hoves-p1-reg text-left"
-              >
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="hoves-p2-reg">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
+          {faqData.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: 0.5 + index * 0.1,
+              }}
+            >
+              <AccordionItem value={item.id}>
+                <AccordionTrigger 
+                  className="hoves-p1-reg text-left"
+                >
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="hoves-p2-reg">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
           ))}
         </Accordion>
-      </div>
+      </motion.div>
     </div>
   );
 }
