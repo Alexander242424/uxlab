@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Background from "../assets/image/Insights/Background.png";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const insightsData = [
   {
@@ -34,28 +36,38 @@ const insightsData = [
 ];
 
 export default function InsightsSection() {
-  return (
-    <div className="flex flex-col bg-bg-white mx-10 mb-40">
-      <div className="flex py-8 border-t border-border-100 hoves-p1-reg">
-        <p className="text-black">Insights, Inspirations</p>
-      </div>
+  const insightsRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: insightsRef,
+    offset: ["start end", "end start"],
+  });
 
-      <div className="flex flex-col md:flex-row gap-8 w-full">
-        {insightsData.map((insight) => (
-          <div
-            key={insight.id}
-            className="flex flex-col gap-3 w-full md:max-w-[334px]"
-          >
-            <Image src={insight.image} alt={insight.title} />
-            <div className="flex flex-col gap-6">
-              <p className="text-black hoves-p1-reg">{insight.title}</p>
-              <p className="text-black hoves-p3-reg">
-                {insight.author} · {insight.date}
-              </p>
+  const y = useTransform(scrollYProgress, [0, 8], [0, 1000]);
+
+  return (
+    <motion.div ref={insightsRef} style={{ y }}>
+      <div className="flex flex-col bg-bg-white px-10 mb-40">
+        <div className="flex py-8 border-t border-border-100 hoves-p1-reg">
+          <p className="text-black">Insights, Inspirations</p>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-8 w-full">
+          {insightsData.map((insight) => (
+            <div
+              key={insight.id}
+              className="flex flex-col gap-3 w-full md:max-w-[334px]"
+            >
+              <Image src={insight.image} alt={insight.title} />
+              <div className="flex flex-col gap-6">
+                <p className="text-black hoves-p1-reg">{insight.title}</p>
+                <p className="text-black hoves-p3-reg">
+                  {insight.author} · {insight.date}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
