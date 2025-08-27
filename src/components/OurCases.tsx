@@ -13,6 +13,7 @@ interface OurCasesItem {
   alt: string;
   title: string;
   videoSrc?: string;
+  videoTitle?: string;
   fallbackImage?: StaticImageData;
 }
 
@@ -23,6 +24,7 @@ const cases: OurCasesItem[] = [
     title:
       "+47% Engagement Lift in 1 Month After a 5-Minute Boostra Usability & Accessibility Audit of Emma",
     videoSrc: "/video/reel-short.mp4",
+    videoTitle: "Emma usability audit case study",
   },
   {
     src: ShapphireImage,
@@ -30,6 +32,7 @@ const cases: OurCasesItem[] = [
     title:
       "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Sapphire",
     videoSrc: "/video/reel-short.mp4",
+    videoTitle: "Sapphire analysis case study",
   },
   {
     src: GuideImage,
@@ -37,6 +40,7 @@ const cases: OurCasesItem[] = [
     title:
       "+54% More Hotel Bookings in Just 1 Month After a 5-Minute Boostra Analysis of ForbesTravelGuide.com",
     videoSrc: "/video/reel-short.mp4",
+    videoTitle: "Forbes Travel Guide analysis case study",
   },
 ];
 
@@ -191,7 +195,7 @@ export default function OurCases() {
             )}
             <div className="video-cursor-content">
               <p className="text-text-700 hoves-p3-reg text-right">
-                {cases[hoveredIndex].title}
+                {cases[hoveredIndex].videoTitle}
               </p>
             </div>
           </div>

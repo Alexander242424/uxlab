@@ -671,6 +671,26 @@ header {
   transition: opacity 0.4s ease-in-out;
 }
 
+/* Кастомний курсор для Showreel */
+.showreel-cursor {
+  position: fixed !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+  will-change: left, top, transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transition: opacity 0.4s ease-in-out;
+  background: transparent !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+
 .video-cursor-container {
   overflow: hidden;
 }
