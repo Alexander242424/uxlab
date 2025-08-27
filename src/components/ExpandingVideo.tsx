@@ -23,7 +23,6 @@ export default function ExpandingVideo({ src, className = "" }: ExpandingVideoPr
     const leftShutter = leftShutterRef.current;
     const rightShutter = rightShutterRef.current;
 
-    // Початковий стан - шторки закриті
     gsap.set(leftShutter, {
       x: "0%",
     });
@@ -31,22 +30,21 @@ export default function ExpandingVideo({ src, className = "" }: ExpandingVideoPr
       x: "0%",
     });
 
-    // Анімація розкриття шторок при скролі
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        start: "top 100%", // анімація починається ще раніше
+        start: "top 100%",
         end: "center center",
         scrub: 1.5,
         onUpdate: (self) => {
           const progress = self.progress;
           gsap.to(leftShutter, {
-            x: `-${progress * 100}%`, // ліва шторка повністю зникає вліво
+            x: `-${progress * 100}%`,
             duration: 0.05,
             ease: "power3.out",
           });
           gsap.to(rightShutter, {
-            x: `${progress * 100}%`, // права шторка повністю зникає вправо
+            x: `${progress * 100}%`,
             duration: 0.05,
             ease: "power3.out",
           });
@@ -65,18 +63,15 @@ export default function ExpandingVideo({ src, className = "" }: ExpandingVideoPr
       ref={containerRef}
       className={`w-full relative overflow-hidden ${className}`}
     >
-      {/* Відео */}
       <div className="w-full">
         <VideoPlayer src={src} />
       </div>
       
-      {/* Ліва шторка */}
       <div 
         ref={leftShutterRef}
         className="absolute top-0 left-0 w-1/4 h-full bg-bg-white z-10"
       />
       
-      {/* Права шторка */}
       <div 
         ref={rightShutterRef}
         className="absolute top-0 right-0 w-1/4 h-full bg-bg-white z-10"
