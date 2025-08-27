@@ -21,6 +21,7 @@ import InsightsSection from "@/components/InsightsSection";
 import QuestionSections from "@/components/QuestionSections";
 import ShowreelSection from "@/components/ShowreelSection";
 import ExpandingVideo from "@/components/ExpandingVideo";
+import TextSection from "@/components/TextSection";
 
 const slides = [
   // { icon: <BMWLogo /> },
@@ -41,46 +42,32 @@ export default function Home() {
       <div className="w-full">
         <ShowreelSection />
       </div>
-      <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-20">
-        <p className="text-text-700 text-right">
-          The design dream team for founders
-        </p>
-        <p className="text-text-700">
-          obsessed with speed and efficiency, clients raised over $600M+ in 2024
-          alone.
-        </p>
-      </div>
+      <TextSection
+        firstText="The design dream team for founders"
+        secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
+      />
       <ServiceItems />
       <OurCases />
       <div className="w-full bg-bg-white">
         <InfiniteSlider slides={slides} duration={20} className="py-[173px]" />
         <GlanceSection />
-        <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-20 text-black">
-          <p className="text-right">After shipping hundreds of products,</p>
-          <p>
-            there are a few key things we&apos;ve learned are needed to do the best
-            work
-          </p>
-        </div>
+        <TextSection
+          firstText="After shipping hundreds of products,"
+          secondText="there are a few key things we've learned are needed to do the best work"
+          textColor="text-black"
+        />
         <HoverSection />
         <div className="w-full px-10 mt-40">
           <ExpandingVideo src="/video/reel-short.mp4" className="my-20" />
         </div>
         <QuestionSections />
-        <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-40 text-black">
-          <p className="text-right">Work seamlessly with a creative</p>
-          <p>
-            team that&apos;s built to match your pace and exceed your expectations.
-          </p>
-          <Button
-            variant="secondary"
-            size="lg"
-            iconRight={<ArrowUpRightSVG className="!size-6" />}
-            className="max-w-40 self-center mt-10"
-          >
-            Book a Call
-          </Button>
-        </div>
+        <TextSection
+          firstText="Work seamlessly with a creative"
+          secondText="team that's built to match your pace and exceed your expectations."
+          showButton={true}
+          textColor="text-black"
+          className="pb-40"
+        />
         <InsightsSection />
       </div>
     </div>
