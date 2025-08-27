@@ -659,3 +659,76 @@ header {
   mix-blend-mode: difference;
   isolation: isolate;
 }
+
+/* Кастомний курсор з відео для OurCases */
+.video-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: left, top, transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Кастомний курсор для Showreel */
+.showreel-cursor {
+  position: fixed !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+  will-change: left, top, transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transition: opacity 0.4s ease-in-out;
+  background: transparent !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+
+.video-cursor-container {
+  overflow: hidden;
+}
+
+.video-cursor-content {
+  padding-top: 12px;
+  /* padding: 8px;
+  background: white; */
+}
+
+.video-cursor-content p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Плавна анімація появи/зникнення */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+.video-cursor-enter {
+  animation: fadeInScale 0.3s ease-out forwards;
+}
+
+/* Стилі для затемнення зображень при наведенні */
+.image-hover-darken {
+  transition: filter 0.3s ease-in-out;
+}
+
+.image-hover-darken:hover {
+  filter: brightness(0.5);
+}
