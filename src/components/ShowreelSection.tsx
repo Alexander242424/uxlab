@@ -2,8 +2,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
-import VideoModal from "./VideoModal";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useVideoModal } from "@/context/VideoModalContext";
 
 export default function ShowreelSection() {
   const showreelRef = useRef(null);
@@ -19,7 +19,7 @@ export default function ShowreelSection() {
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isInitialized, setIsInitialized] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openModal } = useVideoModal();
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
@@ -124,7 +124,7 @@ export default function ShowreelSection() {
             setMousePosition({ x: e.clientX, y: e.clientY });
           }
         }}
-        onClick={() => setIsModalOpen(true)}
+        onClick={() => openModal("/video/reel-short.mp4")}
       >
         {isHovering && !isMobile && (
           <div
@@ -155,11 +155,7 @@ export default function ShowreelSection() {
           <VideoPlayer src="/video/reel-short.mp4" />
         </div>
 
-        <VideoModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          videoSrc="/video/reel-short.mp4"
-        />
+
       </div>
     </motion.div>
   );
