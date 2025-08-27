@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import InsightsSection from "@/components/InsightsSection";
 import QuestionSections from "@/components/QuestionSections";
 import ShowreelSection from "@/components/ShowreelSection";
+import ExpandingVideo from "@/components/ExpandingVideo";
 
 const slides = [
   // { icon: <BMWLogo /> },
@@ -63,7 +64,7 @@ export default function Home() {
         </div>
         <HoverSection />
         <div className="w-full px-10 mt-40">
-          <ShowreelSection />
+          <ExpandingVideo src="/video/reel-short.mp4" className="my-20" />
         </div>
         <QuestionSections />
         <div className="flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-40 text-black">
