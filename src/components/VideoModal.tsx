@@ -1,21 +1,56 @@
 "use client";
-import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
-import VideoModal from "./VideoModal";
 
-export default function ShowreelSection() {
+interface VideoModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  videoSrc: string;
+}
+
+export default function VideoModal({ isOpen, onClose, videoSrc }: VideoModalProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isInitialized, setIsInitialized] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
   }, []);
+
+  const handleClose = useCallback(() => {
+    if (isAnimating) return;
+    
+    setIsAnimating(true);
+    
+    // Анімація фону (швидша)
+    gsap.to(modalRef.current, {
+      opacity: 0,
+      scale: 0.05,
+      rotation: -20,
+      duration: 0.6,
+      ease: "power2.in",
+    });
+    
+    // Анімація відео (повільніша)
+    gsap.to(videoRef.current, {
+      opacity: 0,
+      scale: 0.05,
+      rotation: -20,
+      duration: 0.7,
+      ease: "power2.in",
+      onComplete: () => {
+        setIsAnimating(false);
+        onClose();
+      }
+    });
+  }, [isAnimating, onClose]);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -35,19 +70,28 @@ export default function ShowreelSection() {
       setIsInitialized(true);
     }
 
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+
     return () => {
       window.removeEventListener("resize", checkMobile);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('keydown', handleEscape);
     };
-  }, [handleMouseMove, isInitialized]);
+  }, [handleMouseMove, isInitialized, onClose, isOpen, handleClose]);
 
   useEffect(() => {
     if (isHovering && !isMobile && cursorRef.current) {
       const cursorWidth = 120;
       const cursorHeight = 40;
       
-      let targetLeft = mousePosition.x - 5;
-      let targetTop = mousePosition.y - 5;
+      let targetLeft = mousePosition.x + 5;
+      let targetTop = mousePosition.y + 5;
       
       if (targetLeft < 0) targetLeft = 0;
       if (targetLeft + cursorWidth > windowSize.width) targetLeft = windowSize.width - cursorWidth;
@@ -87,9 +131,58 @@ export default function ShowreelSection() {
     }
   }, [isHovering, isMobile]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      setIsHovering(false);
+      setIsInitialized(false);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsAnimating(true);
+      
+      // Анімація фону (швидша)
+      gsap.fromTo(modalRef.current,
+        {
+          opacity: 0,
+          scale: 0.05,
+          rotation: -20,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.6,
+          ease: "power2.out",
+        }
+      );
+      
+      // Анімація відео (повільніша)
+      gsap.fromTo(videoRef.current,
+        {
+          opacity: 0,
+          scale: 0.05,
+          rotation: -20,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.7,
+          ease: "power2.out",
+          onComplete: () => setIsAnimating(false)
+        }
+      );
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
   return (
     <div 
-      className="relative w-full"
+      ref={modalRef}
+      className="fixed inset-0 bg-black z-[9999] flex items-center justify-center px-10 py-5"
       onMouseEnter={() => {
         if (!isMobile) {
           setIsHovering(true);
@@ -100,12 +193,6 @@ export default function ShowreelSection() {
           setIsHovering(false);
         }
       }}
-      onMouseMove={(e) => {
-        if (!isMobile && isHovering) {
-          setMousePosition({ x: e.clientX, y: e.clientY });
-        }
-      }}
-      onClick={() => setIsModalOpen(true)}
     >
       {isHovering && !isMobile && (
         <div
@@ -119,26 +206,21 @@ export default function ShowreelSection() {
             height: '40px',
           }}
         >
-          <span className="text-white hoves-p2-reg header-text">Play Reel</span>
+          <span className="text-white hoves-p2-reg header-text">Close Reel</span>
         </div>
       )}
 
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <h2 className="hoves-h3-med text-text-700 relative group select-none">
-          Showreel
-          <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-        </h2>
+      <div 
+        ref={videoRef}
+        className="w-full h-full"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          handleClose();
+        }}
+      >
+        <VideoPlayer className="max-w-[87dvw] mx-auto" controls={true} loop={false} muted={false} src={videoSrc} />
       </div>
-
-      <div className="relative cursor-pointer">
-        <VideoPlayer src="/video/reel-short.mp4" />
-      </div>
-
-      <VideoModal 
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        videoSrc="/video/reel-short.mp4"
-      />
     </div>
   );
 }
