@@ -6,9 +6,10 @@ interface VideoPlayerProps {
   src: string;
   poster?: string;
   className?: string;
+  onError?: () => void;
 }
 
-export default function VideoPlayer({ src, poster, className = '' }: VideoPlayerProps) {
+export default function VideoPlayer({ src, poster, className = '', onError }: VideoPlayerProps) {
   return (
     <MediaPlayer
       className={`w-full ${className}`}
@@ -21,6 +22,7 @@ export default function VideoPlayer({ src, poster, className = '' }: VideoPlayer
       autoPlay
       muted
       loop
+      onError={onError}
     >
       <MediaProvider />
     </MediaPlayer>
