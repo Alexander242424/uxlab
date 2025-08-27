@@ -1,10 +1,18 @@
 "use client";
-import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
 import VideoModal from "./VideoModal";
+import { motion, useScroll, useTransform } from "motion/react";
 
 export default function ShowreelSection() {
+  const showreelRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: showreelRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [0, -220]);
+
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -28,9 +36,9 @@ export default function ShowreelSection() {
     window.addEventListener("mousemove", handleMouseMove);
 
     if (!isInitialized) {
-      setMousePosition({ 
-        x: window.innerWidth / 2, 
-        y: window.innerHeight / 2 
+      setMousePosition({
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
       });
       setIsInitialized(true);
     }
@@ -45,36 +53,46 @@ export default function ShowreelSection() {
     if (isHovering && !isMobile && cursorRef.current) {
       const cursorWidth = 120;
       const cursorHeight = 40;
-      
+
       let targetLeft = mousePosition.x - 5;
       let targetTop = mousePosition.y - 5;
-      
+
       if (targetLeft < 0) targetLeft = 0;
-      if (targetLeft + cursorWidth > windowSize.width) targetLeft = windowSize.width - cursorWidth;
+      if (targetLeft + cursorWidth > windowSize.width)
+        targetLeft = windowSize.width - cursorWidth;
       if (targetTop < 0) targetTop = 0;
-      if (targetTop + cursorHeight > windowSize.height) targetTop = windowSize.height - cursorHeight;
-      
+      if (targetTop + cursorHeight > windowSize.height)
+        targetTop = windowSize.height - cursorHeight;
+
       gsap.to(cursorRef.current, {
         left: targetLeft,
         top: targetTop,
         duration: 0.6,
-        ease: "power1.out"
+        ease: "power1.out",
       });
     }
-  }, [isHovering, isMobile, mousePosition.x, mousePosition.y, windowSize.width, windowSize.height]);
+  }, [
+    isHovering,
+    isMobile,
+    mousePosition.x,
+    mousePosition.y,
+    windowSize.width,
+    windowSize.height,
+  ]);
 
   useEffect(() => {
     if (isHovering && !isMobile && cursorRef.current) {
-      gsap.fromTo(cursorRef.current, 
-        { 
-          scale: 0.9, 
-          opacity: 0 
+      gsap.fromTo(
+        cursorRef.current,
+        {
+          scale: 0.9,
+          opacity: 0,
         },
-        { 
-          scale: 1, 
-          opacity: 1, 
-          duration: 0.5, 
-          ease: "power2.out" 
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
         }
       );
     } else if (!isHovering && cursorRef.current) {
@@ -82,63 +100,67 @@ export default function ShowreelSection() {
         scale: 0.9,
         opacity: 0,
         duration: 0.4,
-        ease: "power2.in"
+        ease: "power2.in",
       });
     }
   }, [isHovering, isMobile]);
 
   return (
-    <div 
-      className="relative w-full"
-      onMouseEnter={() => {
-        if (!isMobile) {
-          setIsHovering(true);
-        }
-      }}
-      onMouseLeave={() => {
-        if (!isMobile) {
-          setIsHovering(false);
-        }
-      }}
-      onMouseMove={(e) => {
-        if (!isMobile && isHovering) {
-          setMousePosition({ x: e.clientX, y: e.clientY });
-        }
-      }}
-      onClick={() => setIsModalOpen(true)}
-    >
-      {isHovering && !isMobile && (
-        <div
-          ref={cursorRef}
-          className="showreel-cursor"
-          style={{
-            position: 'fixed',
-            left: mousePosition.x + 5,
-            top: mousePosition.y + 5,
-            width: '120px',
-            height: '40px',
-          }}
-        >
-          <span className="text-white hoves-p2-reg header-text">Play Reel</span>
+    <motion.div ref={showreelRef} style={{ y }}>
+      <div
+        className="relative w-full"
+        onMouseEnter={() => {
+          if (!isMobile) {
+            setIsHovering(true);
+          }
+        }}
+        onMouseLeave={() => {
+          if (!isMobile) {
+            setIsHovering(false);
+          }
+        }}
+        onMouseMove={(e) => {
+          if (!isMobile && isHovering) {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+          }
+        }}
+        onClick={() => setIsModalOpen(true)}
+      >
+        {isHovering && !isMobile && (
+          <div
+            ref={cursorRef}
+            className="showreel-cursor"
+            style={{
+              position: "fixed",
+              left: mousePosition.x + 5,
+              top: mousePosition.y + 5,
+              width: "120px",
+              height: "40px",
+            }}
+          >
+            <span className="text-white hoves-p2-reg header-text">
+              Play Reel
+            </span>
+          </div>
+        )}
+
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <h2 className="hoves-h3-med text-text-700 relative group select-none">
+            Showreel
+            <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+          </h2>
         </div>
-      )}
 
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <h2 className="hoves-h3-med text-text-700 relative group select-none">
-          Showreel
-          <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-        </h2>
+        <div className="relative cursor-pointer">
+          <VideoPlayer src="/video/reel-short.mp4" />
+        </div>
+
+        <VideoModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          videoSrc="/video/reel-short.mp4"
+        />
       </div>
-
-      <div className="relative cursor-pointer">
-        <VideoPlayer src="/video/reel-short.mp4" />
-      </div>
-
-      <VideoModal 
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        videoSrc="/video/reel-short.mp4"
-      />
-    </div>
+    </motion.div>
   );
 }
