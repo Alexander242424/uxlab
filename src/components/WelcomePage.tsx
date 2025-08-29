@@ -15,7 +15,7 @@ export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
       setIsVisible(false);
       // Trigger main content rendering when animation starts
       onAnimationStart();
-    }, 2500);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [onAnimationStart]);
@@ -46,9 +46,9 @@ export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{
-                    duration: 1.5,
+                    duration: 1.0,
                     ease: "easeInOut",
-                    delay: 0.8 + index * 0.4,
+                    delay: 0.5 + index * 0.2,
                   }}
                 >
                   {word}
