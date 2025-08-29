@@ -38,37 +38,43 @@ const slides = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <HeroSection />
-      <div className="w-full">
-        <ShowreelSection />
-      </div>
-      <TextSection
-        firstText="The design dream team for founders"
-        secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
-      />
-      <ServiceItems />
-      <OurCases />
-      <div className="w-full bg-bg-white">
-        <InfiniteSlider slides={slides} duration={20} className="py-[173px]" />
-        <GlanceSection />
-        <TextSection
-          firstText="After shipping hundreds of products,"
-          secondText="there are a few key things we've learned are needed to do the best work"
-          textColor="text-black"
-        />
-        <HoverSection />
-        <div className="w-full px-10 mt-40">
-          <ExpandingVideo src="/video/reel-short.mp4" className="my-20" />
+      <div className="2xl:max-w-[1512px] 2xl:mx-auto w-full">
+        <HeroSection />
+        <div className="w-full">
+          <ShowreelSection />
         </div>
-        <QuestionSections />
         <TextSection
-          firstText="Work seamlessly with a creative"
-          secondText="team that's built to match your pace and exceed your expectations."
-          showButton={true}
-          textColor="text-black"
-          className="pb-40"
+          className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+          firstText="The design dream team for founders"
+          secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
         />
-        <InsightsSection />
+        <ServiceItems />
+        <OurCases />
+      </div>
+      <div className="w-full bg-bg-white">
+        <div className="2xl:max-w-[1512px] 2xl:mx-auto w-full">
+          <InfiniteSlider slides={slides} duration={20} className="py-[90px] lg:py-[173px]" />
+          <GlanceSection />
+          <TextSection
+            className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+            firstText="After shipping hundreds of products,"
+            secondText="there are a few key things we've learned are needed to do the best work"
+            textColor="text-black"
+          />
+          <HoverSection />
+          <div className="w-full px-4 lg:px-10 mt-[56px] lg:mt-40 mb-[96px] lg:mb-[161px]">
+            <ExpandingVideo src="/video/reel-short.mp4" />
+          </div>
+          <QuestionSections />
+          <TextSection
+            firstText="Work seamlessly with a creative"
+            secondText="team that's built to match your pace and exceed your expectations."
+            showButton={true}
+            textColor="text-black"
+            className="mb-[96px] lg:pb-[161px] px-4 lg:px-10"
+          />
+          <InsightsSection />
+        </div>
       </div>
     </div>
   );

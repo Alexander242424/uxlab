@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <motion.div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-50px)]"
       initial={{ opacity: 0, y: -400 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -27,11 +27,11 @@ export default function HeroSection() {
       }}
     >
       <motion.div
-        className="absolute top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 sm:px-6 lg:px-0"
+        className="absolute top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
-        <div className="flex flex-col ml-auto max-w-[456px] mr-0 lg:mr-[250px] hoves-p1-reg">
-          <p className="text-text-700 text-right">We unite User Experience</p>
+        <div className="flex flex-col ml-auto max-w-[456px] mr-0 lg:mr-[17.4vw] hoves-p1-reg">
+          <p className="text-text-700 lg:text-right">We unite User Experience</p>
           <p className="text-text-700" style={{ letterSpacing: "-0.03em" }}>
             CRO and data-driven design to help digital products convert, scale,
             and win in competitive markets.
@@ -40,9 +40,9 @@ export default function HeroSection() {
       </motion.div>
       <SplitText
         text="We Make Interfaces"
-        className="w-full text-center mt-auto"
+        className="w-full text-center mt-auto text-nowrap"
         style={{
-          fontSize: "clamp(3rem, 12vw, 11rem)",
+          fontSize: "clamp(1.5rem, 12vw, 11rem)",
           letterSpacing: "-0.04em",
         }}
         delay={60}

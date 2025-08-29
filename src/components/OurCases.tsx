@@ -4,9 +4,10 @@ import Image, { StaticImageData } from "next/image";
 import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
-import OptionImage from "../assets/image/Option 22.png";
-import ShapphireImage from "../assets/image/Shapphire 5.png";
-import GuideImage from "../assets/image/Option 28.png";
+import OptionImage from "../assets/image/OurCases/Option 22.png";
+import ShapphireImage from "../assets/image/OurCases/Shapphire 5.png";
+import GuideImage from "../assets/image/OurCases/Option 28.png";
+import NestpressoLogo from "../assets/image/OurCases/logo/Group 1820549587.svg";
 
 interface OurCasesItem {
   src: StaticImageData;
@@ -15,6 +16,7 @@ interface OurCasesItem {
   videoSrc?: string;
   videoTitle?: string;
   fallbackImage?: StaticImageData;
+  logo?: React.ReactNode;
 }
 
 const cases: OurCasesItem[] = [
@@ -25,6 +27,7 @@ const cases: OurCasesItem[] = [
       "+47% Engagement Lift in 1 Month After a 5-Minute Boostra Usability & Accessibility Audit of Emma",
     videoSrc: "/video/reel-short.mp4",
     videoTitle: "Emma usability audit case study",
+    logo: <NestpressoLogo />,
   },
   {
     src: ShapphireImage,
@@ -32,7 +35,8 @@ const cases: OurCasesItem[] = [
     title:
       "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Sapphire",
     videoSrc: "/video/reel-short.mp4",
-    videoTitle: "Sapphire analysis case study",
+    videoTitle: "Sapphire analysis case study", 
+    logo: <NestpressoLogo />,
   },
   {
     src: GuideImage,
@@ -41,6 +45,7 @@ const cases: OurCasesItem[] = [
       "+54% More Hotel Bookings in Just 1 Month After a 5-Minute Boostra Analysis of ForbesTravelGuide.com",
     videoSrc: "/video/reel-short.mp4",
     videoTitle: "Forbes Travel Guide analysis case study",
+    logo: <NestpressoLogo />,
   },
 ];
 
@@ -162,7 +167,7 @@ export default function OurCases() {
   }, [isHovering, isMobile]);
 
   return (
-    <div className="flex flex-col gap-8 my-[160px] mx-10 relative">
+    <div className="flex flex-col gap-8 my-[96px] lg:my-[160px] mx-4 lg:mx-10 relative">
       {isHovering && !isMobile && hoveredIndex !== null && cases[hoveredIndex]?.videoSrc && cursorStyles && isInitialized && (
         <div
           ref={cursorRef}
@@ -171,19 +176,18 @@ export default function OurCases() {
         >
           <div className="bg-transparent">
             {videoError === hoveredIndex ? (
-              // <div className="w-full h-[200px] bg-gray-100 flex items-center justify-center rounded-lg">
-              //   <div className="text-center">
-              //     <p className="text-gray-500 hoves-p1-reg text-xs">Video unavailable</p>
-              //     <Image
-              //       src={cases[hoveredIndex].src}
-              //       alt={cases[hoveredIndex].alt}
-              //       width={200}
-              //       height={150}
-              //       className="w-full h-auto object-cover mt-2 rounded-lg"
-              //     />
-              //   </div>
-              // </div>
-              <></>
+              <div className="w-full h-[200px] bg-gray-100 flex items-center justify-center rounded-lg">
+                <div className="text-center">
+                  <p className="text-gray-500 hoves-p1-reg text-xs">Video unavailable</p>
+                  <Image
+                    src={cases[hoveredIndex].src}
+                    alt={cases[hoveredIndex].alt}
+                    width={200}
+                    height={150}
+                    className="w-full h-auto object-cover mt-2 rounded-lg"
+                  />
+                </div>
+              </div>
             ) : (
               <div className="rounded-[8px] overflow-hidden">
                 <VideoPlayer
@@ -211,11 +215,11 @@ export default function OurCases() {
       >
         Our Cases
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex gap-2 lg:gap-8 overflow-x-auto">
         {cases.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-[21px] w-[268px] h-[453px] lg:w-[456px] lg:h-[677px] flex-shrink-0"
           >
             <div
               className="relative cursor-pointer"
@@ -241,6 +245,14 @@ export default function OurCases() {
                   isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"
                 }`}
               />
+              
+              {item.logo && (
+                <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] lg:mb-[48px] transition-opacity duration-300 ${
+                  isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                }`}>
+                  {item.logo}
+                </div>
+              )}
             </div>
             <p className="text-text-500 hoves-p1-reg">{item.title}</p>
           </div>
