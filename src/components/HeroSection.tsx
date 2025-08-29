@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -26,7 +26,7 @@ export default function HeroSection() {
         delay: 0.2,
       }}
     >
-      <motion.div 
+      <motion.div
         className="absolute top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 sm:px-6 lg:px-0"
         style={{ y: textBlockY }}
       >
@@ -46,7 +46,7 @@ export default function HeroSection() {
           letterSpacing: "-0.04em",
         }}
         delay={60}
-        duration={3}
+        duration={2}
         ease="power3.out"
         splitType="words, chars"
         from={{ opacity: 0.9, y: -200 }}

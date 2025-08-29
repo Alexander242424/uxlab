@@ -71,7 +71,7 @@ const HoverSection: React.FC = () => {
     if (hoveredSection) {
       const timer = setTimeout(() => {
         setShowContent(hoveredSection);
-      }, 700);
+      }, 900);
 
       return () => {
         clearTimeout(timer);
@@ -105,7 +105,10 @@ const HoverSection: React.FC = () => {
               hoveredSection === section.id ? "bg-bg-gray" : "hover:bg-bg-white"
             }`}
             style={{
-              flexBasis: hoveredSection === section.id ? "50%" : `${100 / sections.length}%`,
+              flexBasis:
+                hoveredSection === section.id
+                  ? "50%"
+                  : `${100 / sections.length}%`,
               transition:
                 "flex-basis 1s ease-in-out, background-color 0.7s ease-out",
             }}
@@ -128,25 +131,29 @@ const HoverSection: React.FC = () => {
             </div>
 
             {/* Контент секції */}
-            <div className="pt-16 pb-8 px-4 h-64 flex flex-col justify-center">
-              {(showContent === section.id || (isMobile && section.content)) &&
-                section.content && (
-                  <div className="hover-section-content show animate-fade-in-left">
-                    <div className="flex items-start">
-                      {/* Текст контенту */}
-                      <div className="flex-1">
-                        <p className="text-black hoves-p1-reg">
-                          {section.content}
-                        </p>
+            <div className="pt-16 pb-8 px-4 h-64 flex flex-col justify-end">
+              <div className="flex items-end gap-4">
+                {/* Підпис "UX Analysis" - завжди зліва */}
+                <div className="flex-shrink-0 hoves-h6-med text-black">
+                  UX Analysis
+                </div>
+
+                {/* Контент - справа від підпису */}
+                {(showContent === section.id ||
+                  (isMobile && section.content)) &&
+                  section.content && (
+                    <div className="hover-section-content show animate-fade-in-left flex-1">
+                      <div className="flex items-start">
+                        {/* Текст контенту */}
+                        <div className="flex-1">
+                          <p className="text-black hoves-p1-reg">
+                            {section.content}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-            </div>
-
-            {/* Підпис "UX Analysis" */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hoves-h6-med text-black">
-              UX Analysis
+                  )}
+              </div>
             </div>
           </div>
         ))}
