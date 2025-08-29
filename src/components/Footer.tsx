@@ -151,7 +151,7 @@ export default function Footer() {
           text="We Make Interfaces"
           className="w-full text-center"
           style={{
-            fontSize: "clamp(3rem, 12vw, 11rem)",
+            fontSize: "clamp(1.5rem, 12vw, 11rem)",
             letterSpacing: "-0.04em",
           }}
           delay={60}

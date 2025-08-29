@@ -59,23 +59,28 @@ export default function ExpandingVideo({ src, className = "" }: ExpandingVideoPr
   }, []);
 
   return (
-    <div 
-      ref={containerRef}
-      className={`w-full relative overflow-hidden ${className}`}
-    >
-      <div className="w-full">
+    <>
+      <div className="w-full block rounded-[8px] overflow-hidden lg:hidden">
         <VideoPlayer src={src} />
       </div>
-      
-      <div 
-        ref={leftShutterRef}
-        className="absolute top-0 left-0 w-1/4 h-full bg-bg-white z-10"
-      />
-      
-      <div 
-        ref={rightShutterRef}
-        className="absolute top-0 right-0 w-1/4 h-full bg-bg-white z-10"
-      />
-    </div>
+      <div
+        ref={containerRef}
+        className={`w-full relative overflow-hidden hidden lg:flex ${className}`}
+      >
+        <div className="w-full">
+          <VideoPlayer src={src} />
+        </div>
+
+        <div
+          ref={leftShutterRef}
+          className="absolute top-0 left-0 w-1/4 h-full bg-bg-white z-10"
+        />
+
+        <div
+          ref={rightShutterRef}
+          className="absolute top-0 right-0 w-1/4 h-full bg-bg-white z-10"
+        />
+      </div>
+    </>
   );
 }

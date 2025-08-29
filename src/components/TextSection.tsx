@@ -22,9 +22,9 @@ export default function TextSection({
   textColor = "text-text-700",
 }: TextSectionProps) {
   return (
-    <div className={`flex flex-col w-full px-4 sm:px-6 lg:px-10 pt-12 pb-20 ${className}`}>
+    <div className={`flex flex-col w-full ${className}`}>
       {/* First text with SplitText animation */}
-      <div className="flex justify-end md:justify-end lg:justify-end">
+      <div className="flex justify-start md:justify-start lg:justify-end">
         <SplitText
           text={firstText}
           className={textColor}

@@ -15,12 +15,12 @@ const slides = [
 
 export default function GlanceSection() {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "100px" });
+  const isInView = useInView(ref, { once: true, margin: "-200px" });
 
   return (
     <div ref={ref} className="flex flex-col bg-bg-white relative overflow-hidden">
       <motion.div
-        className="absolute top-0 left-10 right-10 h-[1px] z-10 bg-border-100"
+        className="absolute top-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100"
         style={{
           transformOrigin: "left",
         }}
@@ -28,7 +28,7 @@ export default function GlanceSection() {
         animate={{ scaleX: isInView ? 1 : 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
-      <div className="flex justify-between mx-10 py-8 hoves-p1-reg">
+      <div className="flex justify-between mx-4 lg:mx-10 lg:py-8 py-4 hoves-p1-reg">
         <p className="text-black">UxLab at a Glance.</p>
         <div className="relative group">
           <a 
@@ -47,7 +47,7 @@ export default function GlanceSection() {
         className="cursor-grab"
       />
       <motion.div
-        className="absolute bottom-0 left-10 right-10 h-[1px] z-10 bg-border-100"
+        className="absolute bottom-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100"
         style={{
           transformOrigin: "left",
         }}
@@ -55,7 +55,7 @@ export default function GlanceSection() {
         animate={{ scaleX: isInView ? 1 : 0 }}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
       />
-      <div className="flex mx-10 my-20 md:my-40 hoves-p1-reg" />
+      <div className="flex mx-4 lg:mx-10 my-[96px] lg:my-40 hoves-p1-reg" />
     </div>
   );
 }

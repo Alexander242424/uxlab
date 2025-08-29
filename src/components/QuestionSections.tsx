@@ -41,12 +41,12 @@ const faqData = [
 
 export default function QuestionSections() {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "100px" });
+  const isInView = useInView(ref, { once: true, margin: "-200px" });
 
   return (
-    <div ref={ref} className="flex flex-col lg:flex-row text-black mx-10 gap-8 lg:gap-16 xl:gap-[276px] mt-20 py-8 relative">
+    <div ref={ref} className="flex flex-col mb-[96px] lg:mb-[160px] lg:flex-row text-black px-4 lg:mx-10 py-4 lg:py-8 relative gap-6 lg:gap-16 xl:gap-[279px]">
       <motion.div 
-        className="absolute top-0 left-10 right-10 h-[1px] z-10 bg-border-100"
+        className="absolute top-0 left-4 right-4 h-[1px] z-10 bg-border-100"
         style={{
           transformOrigin: "left",
         }}
@@ -56,8 +56,8 @@ export default function QuestionSections() {
       />
       <motion.div 
         className="flex flex-col justify-between lg:min-w-[30%]"
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{
           duration: 0.6,
@@ -68,7 +68,7 @@ export default function QuestionSections() {
         <h3 className="hoves-p1-reg mb-6 lg:mb-0">Frequently Asked Question</h3>
         <motion.div 
           className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] xl:h-[340px] xl:self-end"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{
@@ -96,8 +96,8 @@ export default function QuestionSections() {
       </motion.div>
       <motion.div 
         className="w-full lg:max-w-[60%]"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{
           duration: 0.6,
@@ -110,7 +110,7 @@ export default function QuestionSections() {
             <motion.div
               key={item.id}
               className="relative"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{

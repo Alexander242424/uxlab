@@ -36,11 +36,13 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
         {duplicatedSlides.map((slide, index) => (
           <div
             key={index}
-            className="flex-shrink-0"
+            className="flex-shrink-0 min-w-[150px] lg:min-w-[100px]"
             style={{ width: `${100 / slides.length}%` }}
           >
-            <div className="flex items-center justify-center h-full">
-              {slide.icon}
+            <div className="flex items-center justify-center h-full p-4">
+              <div className="w-full h-full flex items-center justify-center">
+                {slide.icon}
+              </div>
             </div>
           </div>
         ))}

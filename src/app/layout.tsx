@@ -10,6 +10,11 @@ import AppWrapper from "@/components/AppWrapper";
 const ttHoves = localFont({
   src: [
     {
+      path: "../../public/fonts/TTHoves-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "../../public/fonts/TTHoves-Regular.woff2",
       weight: "400",
       style: "normal",

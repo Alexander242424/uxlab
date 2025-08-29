@@ -29,7 +29,7 @@ const services: ServiceItem[] = [
 
 export default function ServiceItems() {
   return (
-    <section className="bg-bg-black mx-10 pt-20 relative overflow-hidden">
+    <section className="bg-bg-black mx-4 lg:mx-10 pt-10 lg:pt-20 relative overflow-hidden">
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
         style={{
@@ -46,23 +46,41 @@ export default function ServiceItems() {
           className="lg:col-span-3 flex items-start"
 
         >
-          <SplitText
-            text="Your Grow Starts Here"
-            className="text-text-700 hoves-p1-reg"
-            splitType="lines"
-            delay={100}
-            duration={0.8}
-            ease="power3.out"
-            from={{ opacity: 0, y: 50 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="100px"
-          />
+          <div className="grid not-lg:grid-cols-2 not-lg:gap-8 w-full">
+            <SplitText
+              text="Your Grow Starts Here"
+              className="text-text-700 hoves-p1-reg"
+              splitType="lines"
+              delay={100}
+              duration={0.8}
+              ease="power3.out"
+              from={{ opacity: 0, y: 50 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="100px"
+              textAlign="left"
+            />
+            <div className="block lg:hidden w-full">
+              <SplitText
+                text="Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
+                className="text-text-700 hoves-p1-reg"
+                splitType="lines"
+                delay={100}
+                duration={0.8}
+                ease="power3.out"
+                from={{ opacity: 0, y: 50 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="100px"
+                textAlign="left"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="lg:col-span-7 flex flex-col">
           <div
-            className="space-y-6 mb-20 max-w-[456px]"
+            className="space-y-6 mb-20 max-w-[456px] not-lg:hidden"
           >
             <SplitText
               text="Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
@@ -75,6 +93,7 @@ export default function ServiceItems() {
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
               rootMargin="100px"
+              textAlign="left"
             />
             <SplitText
               text="UXLab is the design partner teams turn to when speed and quality matter most. Our approach is fast and flexible - purpose built for startup speed."
@@ -87,6 +106,7 @@ export default function ServiceItems() {
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
               rootMargin="100px"
+              textAlign="left"
             />
           </div>
 
@@ -97,29 +117,29 @@ export default function ServiceItems() {
                 className="group cursor-pointer relative"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "100px" }}
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
-                  delay: index * 0.1,
+                  delay: index * 0.15,
                 }}
               >
                 <motion.div
                   className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "100px" }}
                   transition={{
                     duration: 0.8,
                     ease: "easeOut",
-                    delay: index * 0.1 + 0.3,
+                    delay: index * 0.15 + 0.3,
                   }}
                   style={{ transformOrigin: "left" }}
                 />
-                <div className="flex items-center justify-between py-10">
+                <div className="flex items-center justify-between py-6 lg:py-10">
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <h3 className="hoves-h5-med text-text-700 mb-3">
+                    <div className="flex items-center justify-between gap-2 lg:gap-3">
+                      <h3 className="hoves-h5-med text-text-700">
                         {service.title}
                       </h3>
                       <div className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">

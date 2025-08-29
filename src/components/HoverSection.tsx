@@ -71,7 +71,7 @@ const HoverSection: React.FC = () => {
     if (hoveredSection) {
       const timer = setTimeout(() => {
         setShowContent(hoveredSection);
-      }, 900);
+      }, 800);
 
       return () => {
         clearTimeout(timer);
@@ -83,7 +83,7 @@ const HoverSection: React.FC = () => {
   }, [hoveredSection]);
 
   return (
-    <section className="w-full bg-white px-10">
+    <section className="w-full bg-white px-4 lg:px-10">
       {isHovering && !isMobile && (
         <div
           className="hover-cursor hoves-p3-reg"
@@ -126,13 +126,13 @@ const HoverSection: React.FC = () => {
             }}
           >
             {/* Номер секції */}
-            <div className="absolute top-4 left-4 hoves-p3-reg text-black transition-opacity duration-300">
+            <div className="absolute top-[20px] lg:top-4 left-0 lg:left-4 hoves-p3-reg text-black transition-opacity duration-300">
               {section.title}
             </div>
 
             {/* Контент секції */}
-            <div className="pt-16 pb-8 px-4 h-64 flex flex-col justify-end">
-              <div className="flex items-end gap-4">
+            <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-64 flex flex-col justify-end">
+              <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-4">
                 {/* Підпис "UX Analysis" - завжди зліва */}
                 <div className="flex-shrink-0 hoves-h6-med text-black">
                   UX Analysis
