@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import { motion } from "motion/react";
+import SplitText from "./SplitText";
 
 interface TextSectionProps {
   firstText: string;
@@ -21,51 +22,64 @@ export default function TextSection({
   textColor = "text-text-700",
 }: TextSectionProps) {
   return (
-    <motion.div 
-      className={`flex flex-col w-full hoves-h1-med px-4 sm:px-6 lg:px-10 pt-12 pb-20 ${className}`}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{
-        duration: 0.8,
-        ease: "easeOut",
-      }}
-    >
-      <motion.p 
-        className={`${textColor} text-right`}
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{
-          duration: 0.6,
-          ease: "easeOut",
-          delay: 0.1,
-        }}
-      >
-        {firstText}
-      </motion.p>
-      <motion.p 
-        className={textColor}
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{
-          duration: 0.6,
-          ease: "easeOut",
-          delay: 0.2,
-        }}
-      >
-        {secondText}
-      </motion.p>
+    <div className={`flex flex-col w-full px-4 sm:px-6 lg:px-10 pt-12 pb-20 ${className}`}>
+      {/* First text with SplitText animation */}
+      <div className="flex justify-end md:justify-end lg:justify-end">
+        <SplitText
+          text={firstText}
+          className={textColor}
+          style={{
+            fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
+            fontWeight: 300,
+            fontSize: "clamp(2rem, 8vw, 4.5rem)",
+            lineHeight: "1.06",
+            letterSpacing: "-0.03em",
+          }}
+          splitType="lines"
+          delay={200}
+          duration={1.2}
+          ease="power3.out"
+          from={{ opacity: 0, y: 100 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.01}
+          rootMargin="50px"
+          textAlign="left"
+        />
+      </div>
+
+      {/* Second text with SplitText animation */}
+      <div>
+        <SplitText
+          text={secondText}
+          className={textColor}
+          style={{
+            fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
+            fontWeight: 300,
+            fontSize: "clamp(2rem, 8vw, 4.5rem)",
+            lineHeight: "1.06",
+            letterSpacing: "-0.03em",
+          }}
+          splitType="lines"
+          delay={200}
+          duration={1.2}
+          ease="power3.out"
+          from={{ opacity: 0, y: 100 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.01}
+          rootMargin="50px"
+          textAlign="left"
+        />
+      </div>
+
       {showButton && (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{
-            duration: 0.6,
+            duration: 0.8,
             ease: "easeOut",
-            delay: 0.3,
+            delay: 0.6,
           }}
           className="flex justify-center"
         >
@@ -79,6 +93,6 @@ export default function TextSection({
           </Button>
         </motion.div>
       )}
-    </motion.div>
+    </div>
   );
 }

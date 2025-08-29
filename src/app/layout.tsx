@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { VideoModalProvider } from "@/context/VideoModalContext";
 import VideoModal from "@/components/VideoModal";
+import AppWrapper from "@/components/AppWrapper";
 
 const ttHoves = localFont({
   src: [
@@ -48,13 +49,16 @@ export default function RootLayout({
         className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
       >
         <VideoModalProvider>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <AppWrapper>
+            <div
+              className="min-h-screen flex flex-col"
+              style={{ scrollBehavior: "smooth" }}
+            >
+              <Header />
+              <main className="flex-1 overflow-x-hidden ">{children}</main>
+              <Footer />
+            </div>
+          </AppWrapper>
           <VideoModal />
         </VideoModalProvider>
       </body>

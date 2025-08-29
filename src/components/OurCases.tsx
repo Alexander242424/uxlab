@@ -213,17 +213,9 @@ export default function OurCases() {
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cases.map((item, index) => (
-          <motion.div
+          <div
             key={index}
             className="flex flex-col gap-5"
-            initial={{ opacity: 0, x: -50, y: 50 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-              delay: index * 0.2,
-            }}
           >
             <div
               className="relative cursor-pointer"
@@ -251,7 +243,7 @@ export default function OurCases() {
               />
             </div>
             <p className="text-text-500 hoves-p1-reg">{item.title}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

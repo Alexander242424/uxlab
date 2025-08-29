@@ -2,17 +2,9 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
-import { motion, useScroll, useTransform } from "motion/react";
 import { useVideoModal } from "@/context/VideoModalContext";
 
 export default function ShowreelSection() {
-  const showreelRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: showreelRef,
-    offset: ["start end", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], [0, -220]);
-
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -106,57 +98,66 @@ export default function ShowreelSection() {
   }, [isHovering, isMobile]);
 
   return (
-    <motion.div ref={showreelRef} style={{ y }}>
-      <div
-        className="relative w-full"
-        onMouseEnter={() => {
-          if (!isMobile) {
-            setIsHovering(true);
-          }
-        }}
-        onMouseLeave={() => {
-          if (!isMobile) {
-            setIsHovering(false);
-          }
-        }}
-        onMouseMove={(e) => {
-          if (!isMobile && isHovering) {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-          }
-        }}
-        onClick={() => openModal("/video/reel-short.mp4")}
-      >
-        {isHovering && !isMobile && (
-          <div
-            ref={cursorRef}
-            className="showreel-cursor"
-            style={{
-              position: "fixed",
-              left: mousePosition.x + 5,
-              top: mousePosition.y + 5,
-              width: "120px",
-              height: "40px",
-            }}
-          >
-            <span className="text-white hoves-p2-reg header-text">
-              Play Reel
-            </span>
+    <div
+      className="relative w-full"
+      onMouseEnter={() => {
+        if (!isMobile) {
+          setIsHovering(true);
+        }
+      }}
+      onMouseLeave={() => {
+        if (!isMobile) {
+          setIsHovering(false);
+        }
+      }}
+      onMouseMove={(e) => {
+        if (!isMobile && isHovering) {
+          setMousePosition({ x: e.clientX, y: e.clientY });
+        }
+      }}
+      onClick={() => openModal("/video/reel-short.mp4")}
+    >
+      {isHovering && !isMobile && (
+        <div
+          ref={cursorRef}
+          className="showreel-cursor"
+          style={{
+            position: "fixed",
+            left: mousePosition.x + 5,
+            top: mousePosition.y + 5,
+            width: "120px",
+            height: "40px",
+          }}
+        >
+          <div className="flex items-center justify-center gap-2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="flex-shrink-0"
+            >
+              <path
+                d="M8 5L19 12L8 19V5Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span className="text-white hoves-p2-reg header-text">Play Reel</span>
           </div>
-        )}
-
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h2 className="hoves-h3-med text-text-700 relative group select-none">
-            Showreel
-            <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-          </h2>
         </div>
+      )}
 
-        <div className="relative cursor-pointer">
-          <VideoPlayer src="/video/reel-short.mp4" />
-        </div>
-
-
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <h2 className="hoves-h3-med text-text-700 relative group select-none">
+          Showreel
+          <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+        </h2>
       </div>
-    </motion.div>
+
+      <div className="relative cursor-pointer">
+        <VideoPlayer src="/video/reel-short.mp4" />
+      </div>
+    </div>
   );
 }
