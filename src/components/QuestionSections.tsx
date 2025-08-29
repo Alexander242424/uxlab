@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import AvatarsSVG from "@/assets/avatars.svg";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import {
   Accordion,
   AccordionContent,
@@ -40,8 +40,20 @@ const faqData = [
 ];
 
 export default function QuestionSections() {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "100px" });
+
   return (
-    <div className="flex flex-col lg:flex-row text-black mx-10 gap-8 lg:gap-16 xl:gap-[276px] mt-20 py-8 border-t border-border-100">
+    <div ref={ref} className="flex flex-col lg:flex-row text-black mx-10 gap-8 lg:gap-16 xl:gap-[276px] mt-20 py-8 relative">
+      <motion.div 
+        className="absolute top-0 left-10 right-10 h-[1px] z-10 bg-border-100"
+        style={{
+          transformOrigin: "left",
+        }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: isInView ? 1 : 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      />
       <motion.div 
         className="flex flex-col justify-between lg:min-w-[30%]"
         initial={{ opacity: 0, x: -50 }}
@@ -97,6 +109,7 @@ export default function QuestionSections() {
           {faqData.map((item, index) => (
             <motion.div
               key={item.id}
+              className="relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -106,7 +119,19 @@ export default function QuestionSections() {
                 delay: 0.5 + index * 0.1,
               }}
             >
-              <AccordionItem value={item.id}>
+              <motion.div
+                className="absolute bottom-0 left-0 w-full h-[1px] bg-border-100"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.5 + index * 0.1 + 0.3,
+                }}
+                style={{ transformOrigin: "left" }}
+              />
+              <AccordionItem value={item.id} className="border-b-0">
                 <AccordionTrigger 
                   className="hoves-p1-reg text-left"
                 >

@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import Background from "../assets/image/Insights/Background.png";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, useInView } from "motion/react";
 
 const insightsData = [
   {
@@ -37,18 +37,29 @@ const insightsData = [
 
 export default function InsightsSection() {
   const insightsRef = useRef(null);
+  const borderRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: insightsRef,
     offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 8], [0, 1000]);
+  const isInView = useInView(borderRef, { once: true, margin: "100px" });
 
   return (
     <motion.div ref={insightsRef} style={{ y }}>
-      <div className="flex flex-col bg-bg-white px-10 mb-40">
+      <div ref={borderRef} className="flex flex-col bg-bg-white px-10 mb-40 relative">
         <motion.div 
-          className="flex py-8 border-t border-border-100 hoves-p1-reg"
+          className="absolute top-0 left-10 right-10 h-[1px] bg-border-100"
+          style={{
+            transformOrigin: "left",
+          }}
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: isInView ? 1 : 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        />
+        <motion.div 
+          className="flex py-8 hoves-p1-reg"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -65,11 +76,11 @@ export default function InsightsSection() {
             <motion.div
               key={insight.id}
               className="flex flex-col gap-3 w-full md:max-w-[334px]"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{
-                duration: 0.6,
+                duration: 0.8,
                 ease: "easeOut",
                 delay: 0.2 + index * 0.1,
               }}

@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import EmblaCarousel from "./EmblaCarousel";
 import NestPresso from "../assets/image/Glance/Frame 2147229118.png";
 import Calendly from "../assets/image/Glance/Group 1820549637.png";
@@ -12,11 +14,31 @@ const slides = [
 ];
 
 export default function GlanceSection() {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "100px" });
+
   return (
-    <div className="flex flex-col bg-bg-white">
-      <div className="flex justify-between mx-10 py-8 border-t border-border-100 hoves-p1-reg">
+    <div ref={ref} className="flex flex-col bg-bg-white relative overflow-hidden">
+      <motion.div
+        className="absolute top-0 left-10 right-10 h-[1px] z-10 bg-border-100"
+        style={{
+          transformOrigin: "left",
+        }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: isInView ? 1 : 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      />
+      <div className="flex justify-between mx-10 py-8 hoves-p1-reg">
         <p className="text-black">UxLab at a Glance.</p>
-        <p className="text-black underline">hello@uxlab.digital</p>
+        <div className="relative group">
+          <a 
+            href="mailto:hello@uxlab.digital" 
+            className="text-black relative group"
+          >
+            hello@uxlab.digital
+            <span className="absolute bottom-[-3px] left-0 w-0 h-[1px] header-underline underline-animation"></span>
+          </a>
+        </div>
       </div>
       <EmblaCarousel
         autoplaySpeed={3000}
@@ -24,7 +46,16 @@ export default function GlanceSection() {
         slides={slides}
         className="cursor-grab"
       />
-      <div className="flex mx-10 my-20 md:my-40 border-b border-border-100 hoves-p1-reg" />
+      <motion.div
+        className="absolute bottom-0 left-10 right-10 h-[1px] z-10 bg-border-100"
+        style={{
+          transformOrigin: "left",
+        }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: isInView ? 1 : 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+      />
+      <div className="flex mx-10 my-20 md:my-40 hoves-p1-reg" />
     </div>
   );
 }

@@ -150,6 +150,10 @@ export default function Footer() {
         <SplitText
           text="We Make Interfaces"
           className="w-full text-center"
+          style={{
+            fontSize: "clamp(3rem, 12vw, 11rem)",
+            letterSpacing: "-0.04em",
+          }}
           delay={60}
           duration={3}
           ease="power3.out"
