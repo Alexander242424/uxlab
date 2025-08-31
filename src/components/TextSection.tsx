@@ -32,7 +32,7 @@ export default function TextSection({
             fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
             fontWeight: 300,
             fontSize: "clamp(2rem, 8vw, 4.5rem)",
-            lineHeight: "1.06",
+            lineHeight: "1.15",
             letterSpacing: "-0.03em",
           }}
           splitType="lines"
@@ -56,7 +56,7 @@ export default function TextSection({
             fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
             fontWeight: 300,
             fontSize: "clamp(2rem, 8vw, 4.5rem)",
-            lineHeight: "1.06",
+            lineHeight: "1.15",
             letterSpacing: "-0.03em",
           }}
           splitType="lines"

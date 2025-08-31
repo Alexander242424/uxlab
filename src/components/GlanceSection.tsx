@@ -15,7 +15,7 @@ const slides = [
 
 export default function GlanceSection() {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-200px" });
+  const isInView = useInView(ref, { once: true, margin: "-300px" });
 
   return (
     <div ref={ref} className="flex flex-col bg-bg-white relative overflow-hidden">

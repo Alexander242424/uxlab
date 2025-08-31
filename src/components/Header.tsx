@@ -28,14 +28,16 @@ export default function Header() {
   return (
     <header className="bg-transparent min-h-[72px] sticky top-0 z-50">
       <div className="px-4 sm:px-6 lg:px-10 mt-8 mb-4 max-w-[1512px] mx-auto">
-        <div className="flex justify-between items-center h-full">
-          <div className="flex items-center">
+        <div className="w-full flex">
+          {/* Ліва частина - логотип */}
+          <div className="w-1/2 flex items-center">
             <Link href="/">
               <LogoSVG className="header-logo" />
             </Link>
           </div>
 
-          <div className="flex justify-between items-center h-full w-full max-w-[49%]">
+          {/* Права частина - навігація + Book a Call */}
+          <div className="w-1/2 flex justify-between items-center">
             <nav className="hidden md:flex space-x-4 lg:space-x-8 hoves-p2-reg">
               <Link
                 href="/"

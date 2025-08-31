@@ -15,7 +15,7 @@ export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
       setIsVisible(false);
       // Trigger main content rendering when animation starts
       onAnimationStart();
-    }, 1500);
+    }, 1700);
 
     return () => clearTimeout(timer);
   }, [onAnimationStart]);
