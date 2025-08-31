@@ -30,12 +30,20 @@ export default function HeroSection() {
         className="absolute top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
-        <div className="flex flex-col ml-auto max-w-[456px] mr-0 lg:mr-[17.4vw] hoves-p1-reg">
-          <p className="text-text-700 lg:text-right">We unite User Experience</p>
-          <p className="text-text-700" style={{ letterSpacing: "-0.03em" }}>
-            CRO and data-driven design to help digital products convert, scale,
-            and win in competitive markets.
-          </p>
+        <div className="w-full flex px-4 sm:px-6 lg:px-10">
+          {/* Ліва частина - пуста, займає половину екрану */}
+          <div className="hidden lg:block md:w-1/2"></div>
+          
+          {/* Права частина - містить текстовий блок */}
+          <div className="lg:w-1/2 w-full flex justify-start">
+            <div className="flex flex-col max-w-[456px] hoves-p1-reg">
+              <p className="text-text-700 lg:text-right">We unite User Experience</p>
+              <p className="text-text-700" style={{ letterSpacing: "-0.03em" }}>
+                CRO and data-driven design to help digital products convert, scale,
+                and win in competitive markets.
+              </p>
+            </div>
+          </div>
         </div>
       </motion.div>
       <SplitText
@@ -45,7 +53,7 @@ export default function HeroSection() {
           fontSize: "clamp(1.5rem, 12vw, 11rem)",
           letterSpacing: "-0.04em",
         }}
-        delay={60}
+        delay={50}
         duration={2}
         ease="power3.out"
         splitType="words, chars"

@@ -22,6 +22,7 @@ import QuestionSections from "@/components/QuestionSections";
 import ShowreelSection from "@/components/ShowreelSection";
 import ExpandingVideo from "@/components/ExpandingVideo";
 import TextSection from "@/components/TextSection";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 
 const slides = [
   // { icon: <BMWLogo /> },
@@ -43,11 +44,13 @@ export default function Home() {
         <div className="w-full">
           <ShowreelSection />
         </div>
-        <TextSection
-          className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
-          firstText="The design dream team for founders"
-          secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
-        />
+        <ScrollAnimatedSection>
+          <TextSection
+            className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+            firstText="The design dream team for founders"
+            secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
+          />
+        </ScrollAnimatedSection>
         <ServiceItems />
         <OurCases />
       </div>

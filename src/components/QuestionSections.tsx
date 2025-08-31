@@ -44,9 +44,9 @@ export default function QuestionSections() {
   const isInView = useInView(ref, { once: true, margin: "-200px" });
 
   return (
-    <div ref={ref} className="flex flex-col mb-[96px] lg:mb-[160px] lg:flex-row text-black px-4 lg:mx-10 py-4 lg:py-8 relative gap-6 lg:gap-16 xl:gap-[279px]">
+    <div ref={ref} className="flex flex-col mb-[96px] lg:mb-[160px] lg:flex-row text-black px-4 lg:px-10 py-4 lg:py-8 relative">
       <motion.div 
-        className="absolute top-0 left-4 right-4 h-[1px] z-10 bg-border-100"
+        className="absolute top-0 left-4 right-4 lg:left-10 lg:right-10 h-[1px] z-10 bg-border-100"
         style={{
           transformOrigin: "left",
         }}
@@ -54,57 +54,62 @@ export default function QuestionSections() {
         animate={{ scaleX: isInView ? 1 : 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
-      <motion.div 
-        className="flex flex-col justify-between lg:min-w-[30%]"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{
-          duration: 0.6,
-          ease: "easeOut",
-          delay: 0.2,
-        }}
-      >
-        <h3 className="hoves-p1-reg mb-6 lg:mb-0">Frequently Asked Question</h3>
+      
+      <div className="w-full flex flex-col lg:flex-row">
+        {/* Ліва частина - заголовок + картка */}
         <motion.div 
-          className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] xl:h-[340px] xl:self-end"
+          className="w-full lg:w-1/2 flex flex-col justify-between mb-8 lg:mb-0"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{
             duration: 0.6,
             ease: "easeOut",
-            delay: 0.4,
+            delay: 0.2,
           }}
         >
-          <AvatarsSVG />
-          <div className="flex flex-col gap-2.5">
-            <h4 className="hoves-h4-med">Book an intro call</h4>
-            <p className="hoves-p1-reg">
-              Time to get introduced and explore how Uxlab can help
-            </p>
-          </div>
-          <Button
-            variant="secondary"
-            size="lg"
-            iconRight={<ArrowUpRightSVG className="!size-6" />}
-            className="max-w-40 w-full sm:w-auto"
+          <h3 className="hoves-p1-reg mb-6 lg:mb-0">Frequently Asked Question</h3>
+          <motion.div 
+            className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] lg:h-[340px] lg:max-w-[456px]"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: 0.4,
+            }}
           >
-            Book a Call
-          </Button>
+            <AvatarsSVG />
+            <div className="flex flex-col gap-2.5">
+              <h4 className="hoves-h4-med">Book an intro call</h4>
+              <p className="hoves-p1-reg">
+                Time to get introduced and explore how Uxlab can help
+              </p>
+            </div>
+            <Button
+              variant="secondary"
+              size="lg"
+              iconRight={<ArrowUpRightSVG className="!size-6" />}
+              className="max-w-40 w-full sm:w-auto"
+            >
+              Book a Call
+            </Button>
+          </motion.div>
         </motion.div>
-      </motion.div>
-      <motion.div 
-        className="w-full lg:max-w-[60%]"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{
-          duration: 0.6,
-          ease: "easeOut",
-          delay: 0.3,
-        }}
-      >
+        
+        {/* Права частина - акордеон */}
+        <motion.div 
+          className="w-full lg:w-1/2"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.3,
+          }}
+        >
         <Accordion type="single" collapsible>
           {faqData.map((item, index) => (
             <motion.div
@@ -144,7 +149,8 @@ export default function QuestionSections() {
             </motion.div>
           ))}
         </Accordion>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }

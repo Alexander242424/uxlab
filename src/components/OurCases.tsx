@@ -94,13 +94,63 @@ export default function OurCases() {
     const cursorWidth = 200;
     const cursorHeight = 264;
     
+    // Знаходимо елемент зображення для обмеження курсора
+    const imageElements = document.querySelectorAll('img[alt]');
+    const currentImage = imageElements[hoveredIndex] as HTMLElement;
+    
+    if (!currentImage) {
+      // Fallback до вікна браузера якщо зображення не знайдено
+      let left = mousePosition.x - cursorWidth / 2;
+      let top = mousePosition.y - cursorHeight / 2;
+      
+      if (left < 0) left = 0;
+      if (left + cursorWidth > windowSize.width) left = windowSize.width - cursorWidth;
+      if (top < 0) top = 0;
+      if (top + cursorHeight > windowSize.height) top = windowSize.height - cursorHeight;
+      
+      return {
+        left,
+        top,
+        width: `${cursorWidth}px`,
+        height: `${cursorHeight}px`,
+      };
+    }
+    
+    const imageRect = currentImage.getBoundingClientRect();
+    const padding = 40; // Відступ від країв зображення
+    
+    // Отримуємо позицію прокручування
+    const scrollY = window.scrollY;
+    
+    // Обчислюємо абсолютні координати зображення
+    const absoluteImageTop = imageRect.top + scrollY;
+    const absoluteImageBottom = imageRect.bottom + scrollY;
+    
+    // Обчислюємо межі зображення з відступом (відносно viewport)
+    const imageLeft = imageRect.left + padding;
+    const imageTop = Math.max(imageRect.top + padding, 0); // Не менше 0
+    const imageRight = imageRect.right - padding - cursorWidth;
+    const imageBottom = imageRect.bottom - padding - 140;
+    
+    // Логування для дебагу
+    // console.log('Image rect:', imageRect);
+    // console.log('Scroll Y:', scrollY);
+    // console.log('Absolute image coords:', { top: absoluteImageTop, bottom: absoluteImageBottom });
+    // console.log('Cursor dimensions:', { width: cursorWidth, height: cursorHeight });
+    // console.log('Computed boundaries:', { imageLeft, imageTop, imageRight, imageBottom });
+    // console.log('Mouse position:', mousePosition);
+    
+    // Обмежуємо позицію курсора межами зображення
     let left = mousePosition.x - cursorWidth / 2;
     let top = mousePosition.y - cursorHeight / 2;
     
-    if (left < 0) left = 0;
-    if (left + cursorWidth > windowSize.width) left = windowSize.width - cursorWidth;
-    if (top < 0) top = 0;
-    if (top + cursorHeight > windowSize.height) top = windowSize.height - cursorHeight;
+    // Обмеження по горизонталі
+    if (left < imageLeft) left = imageLeft;
+    if (left > imageRight) left = imageRight;
+    
+    // Обмеження по вертикалі
+    if (top < imageTop) top = imageTop;
+    if (top > imageBottom) top = imageBottom;
     
     return {
       left,
@@ -112,25 +162,14 @@ export default function OurCases() {
 
   useEffect(() => {
     if (isHovering && !isMobile && cursorRef.current && cursorStyles && isInitialized) {
-      const cursorWidth = 200;
-      const cursorHeight = 264;
-      
-      let targetLeft = mousePosition.x - cursorWidth / 2;
-      let targetTop = mousePosition.y - cursorHeight / 2;
-      
-      if (targetLeft < 0) targetLeft = 0;
-      if (targetLeft + cursorWidth > windowSize.width) targetLeft = windowSize.width - cursorWidth;
-      if (targetTop < 0) targetTop = 0;
-      if (targetTop + cursorHeight > windowSize.height) targetTop = windowSize.height - cursorHeight;
-      
       gsap.to(cursorRef.current, {
-        left: targetLeft,
-        top: targetTop,
+        left: cursorStyles.left,
+        top: cursorStyles.top,
         duration: 0.6,
         ease: "power1.out"
       });
     }
-  }, [isHovering, isMobile, mousePosition.x, mousePosition.y, windowSize.width, windowSize.height, cursorStyles, isInitialized]);
+  }, [isHovering, isMobile, cursorStyles, isInitialized]);
 
   const handleVideoError = useCallback((index: number) => {
     setVideoError(index);

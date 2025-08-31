@@ -65,13 +65,14 @@ function AccordionContent({
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
-      className="overflow-hidden text-sm transition-all duration-300 ease-in-out"
+      className="overflow-hidden text-sm transition-all duration-700 ease-in-out"
       {...props}
     >
       <div 
         className={cn(
-          "pt-0 pb-8 transition-opacity duration-300 ease-in-out",
-          "data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+          "pt-0 pb-8 transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]",
+          "data-[state=closed]:opacity-0 data-[state=closed]:translate-y-[-4px]",
+          "data-[state=open]:opacity-100 data-[state=open]:translate-y-0",
           className
         )}
       >
