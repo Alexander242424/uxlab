@@ -140,8 +140,8 @@ export default function QuestionSections() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{
-                duration: 0.5,
-                ease: "easeOut",
+                duration: 0.7,
+                ease: "easeInOut",
                 delay: 0.5,
               }}
             >
@@ -152,7 +152,7 @@ export default function QuestionSections() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{
                   duration: 0.8,
-                  ease: "easeOut",
+                  ease: "easeInOut",
                   delay: 0.5,
                 }}
                 style={{ transformOrigin: "left" }}

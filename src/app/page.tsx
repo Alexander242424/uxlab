@@ -1,4 +1,4 @@
-import VideoPlayer from "@/components/VideoPlayer";
+
 import ServiceItems from "@/components/ServiceItems";
 import OurCases from "@/components/OurCases";
 import HeroSection from "@/components/HeroSection";
@@ -11,18 +11,15 @@ import MaskGroup4 from "../assets/logoicons/Mask group-4.svg";
 // import MaskGroup from "../assets/logoicons/Mask group.svg";
 import CalendlyLogo from "../assets/logoicons/calendly-logo-vector 5.svg";
 import UserwayLogo from "../assets/logoicons/userway-org-vector-logo-2022 1.svg";
-import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 
 import InfiniteSlider from "@/components/InfiniteSlider";
 import GlanceSection from "@/components/GlanceSection";
 import HoverSection from "@/components/HoverSection";
-import { Button } from "@/components/ui/button";
 import InsightsSection from "@/components/InsightsSection";
 import QuestionSections from "@/components/QuestionSections";
 import ShowreelSection from "@/components/ShowreelSection";
 import ExpandingVideo from "@/components/ExpandingVideo";
 import TextSection from "@/components/TextSection";
-import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 
 const slides = [
   // { icon: <BMWLogo /> },
@@ -44,13 +41,11 @@ export default function Home() {
         <div className="w-full">
           <ShowreelSection />
         </div>
-        <ScrollAnimatedSection>
           <TextSection
             className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
             firstText="The design dream team for founders"
             secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
           />
-        </ScrollAnimatedSection>
         <ServiceItems />
         <OurCases />
       </div>
