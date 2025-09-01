@@ -41,8 +41,8 @@ export default function GlanceSection() {
         </div>
       </div>
       <EmblaCarousel
-        autoplaySpeed={3000}
-        animationDuration={3000}
+        autoplaySpeed={6000}
+        animationDuration={6000}
         slides={slides}
         className="cursor-grab"
       />

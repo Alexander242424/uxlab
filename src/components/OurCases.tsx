@@ -58,10 +58,38 @@ export default function OurCases() {
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+  const [captionOffset, setCaptionOffset] = useState(0);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
-  }, []);
+    
+    // Обчислюємо зміщення підпису на основі позиції миші
+    if (isHovering && !isMobile && hoveredIndex !== null) {
+      // Знаходимо поточний елемент для обчислення відносної позиції
+      const imageElements = document.querySelectorAll('img[alt]');
+      const currentImage = imageElements[hoveredIndex] as HTMLElement;
+      
+      if (currentImage) {
+        const imageRect = currentImage.getBoundingClientRect();
+        const imageCenterX = imageRect.left + imageRect.width / 2;
+        const normalizedX = (e.clientX - imageCenterX) / (imageRect.width / 2); // Нормалізована позиція відносно центру зображення
+        
+        // Обчислюємо максимальне зміщення на основі ширини блоку відео (200px)
+        const videoBlockWidth = 200;
+        const maxOffset = Math.min(20, (videoBlockWidth - 80) / 2); // Обмежуємо зміщення, щоб текст не виходив за межі блоку
+        
+        const offset = normalizedX * maxOffset;
+        setCaptionOffset(offset);
+      } else {
+        // Fallback до центру екрану
+        const centerX = windowSize.width / 2;
+        const normalizedX = (e.clientX - centerX) / centerX;
+        const offset = normalizedX * 20;
+        setCaptionOffset(offset);
+      }
+    }
+  }, [isHovering, isMobile, hoveredIndex, windowSize.width]);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -119,13 +147,6 @@ export default function OurCases() {
     const imageRect = currentImage.getBoundingClientRect();
     const padding = 40; // Відступ від країв зображення
     
-    // Отримуємо позицію прокручування
-    const scrollY = window.scrollY;
-    
-    // Обчислюємо абсолютні координати зображення
-    const absoluteImageTop = imageRect.top + scrollY;
-    const absoluteImageBottom = imageRect.bottom + scrollY;
-    
     // Обчислюємо межі зображення з відступом (відносно viewport)
     const imageLeft = imageRect.left + padding;
     const imageTop = Math.max(imageRect.top + padding, 0); // Не менше 0
@@ -140,7 +161,7 @@ export default function OurCases() {
     // console.log('Computed boundaries:', { imageLeft, imageTop, imageRight, imageBottom });
     // console.log('Mouse position:', mousePosition);
     
-    // Обмежуємо позицію курсора межами зображення
+    // Обмежуємо позицію курсора межами зображення та вікна
     let left = mousePosition.x - cursorWidth / 2;
     let top = mousePosition.y - cursorHeight / 2;
     
@@ -148,9 +169,15 @@ export default function OurCases() {
     if (left < imageLeft) left = imageLeft;
     if (left > imageRight) left = imageRight;
     
-    // Обмеження по вертикалі
+    // Обмеження по вертикалі з урахуванням скролу
     if (top < imageTop) top = imageTop;
     if (top > imageBottom) top = imageBottom;
+    
+    // Додаткові обмеження для країв вікна
+    if (left < 0) left = 0;
+    if (left + cursorWidth > windowSize.width) left = windowSize.width - cursorWidth;
+    if (top < 0) top = 0;
+    if (top + cursorHeight > windowSize.height) top = windowSize.height - cursorHeight;
     
     return {
       left,
@@ -165,8 +192,8 @@ export default function OurCases() {
       gsap.to(cursorRef.current, {
         left: cursorStyles.left,
         top: cursorStyles.top,
-        duration: 0.6,
-        ease: "power1.out"
+        duration: 0.8,
+        ease: "power2.out"
       });
     }
   }, [isHovering, isMobile, cursorStyles, isInitialized]);
@@ -178,6 +205,18 @@ export default function OurCases() {
   useEffect(() => {
     if (hoveredIndex !== null) {
       setVideoError(null);
+      // Затримка перед показом відео
+      const timer = setTimeout(() => {
+        setShowVideo(true);
+      }, 300);
+      
+      return () => {
+        clearTimeout(timer);
+        setShowVideo(false);
+      };
+    } else {
+      setShowVideo(false);
+      setCaptionOffset(0); // Скидаємо зміщення підпису
     }
   }, [hoveredIndex]);
 
@@ -185,29 +224,29 @@ export default function OurCases() {
     if (isHovering && !isMobile && cursorRef.current) {
       gsap.fromTo(cursorRef.current, 
         { 
-          scale: 0.9, 
+          scale: 0.8, 
           opacity: 0 
         },
         { 
           scale: 1, 
           opacity: 1, 
-          duration: 0.5, 
-          ease: "power2.out" 
+          duration: 0.8, 
+          ease: "power3.out" 
         }
       );
     } else if (!isHovering && cursorRef.current) {
       gsap.to(cursorRef.current, {
-        scale: 0.9,
+        scale: 0.8,
         opacity: 0,
-        duration: 0.4,
-        ease: "power2.in"
+        duration: 0.6,
+        ease: "power3.in"
       });
     }
   }, [isHovering, isMobile]);
 
   return (
     <div className="flex flex-col gap-8 my-[96px] lg:my-[160px] mx-4 lg:mx-10 relative">
-      {isHovering && !isMobile && hoveredIndex !== null && cases[hoveredIndex]?.videoSrc && cursorStyles && isInitialized && (
+      {isHovering && !isMobile && hoveredIndex !== null && cases[hoveredIndex]?.videoSrc && cursorStyles && isInitialized && showVideo && (
         <div
           ref={cursorRef}
           className="video-cursor video-cursor-enter"
@@ -236,11 +275,20 @@ export default function OurCases() {
                 />
               </div>
             )}
-            <div className="video-cursor-content">
-              <p className="text-text-700 hoves-p3-reg text-right">
-                {cases[hoveredIndex].videoTitle}
-              </p>
-            </div>
+                         <div className="video-cursor-content">
+               <motion.p 
+                 className="text-text-700 hoves-p3-reg text-center"
+                 animate={{ 
+                   x: captionOffset,
+                   transition: { 
+                     duration: 0.3, 
+                     ease: "easeOut" 
+                   } 
+                 }}
+               >
+                 {cases[hoveredIndex].videoTitle}
+               </motion.p>
+             </div>
           </div>
         </div>
       )}
@@ -293,7 +341,7 @@ export default function OurCases() {
                 </div>
               )}
             </div>
-            <p className="text-text-500 hoves-p1-reg">{item.title}</p>
+            <p className="text-text-700 hoves-p1-reg">{item.title}</p>
           </div>
         ))}
       </div>

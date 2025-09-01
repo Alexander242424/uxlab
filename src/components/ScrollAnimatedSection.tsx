@@ -15,7 +15,7 @@ export default function ScrollAnimatedSection({
   className = "",
   offset = ["start end", "end start"],
   transformRange = [0, 1],
-  transformValues = [100, -80],
+  transformValues = [-200, 200],
 }: ScrollAnimatedSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -24,7 +24,6 @@ export default function ScrollAnimatedSection({
     offset,
   });
 
-  // Паралакс ефект (повільний рух вниз)
   const animatedY = useTransform(scrollYProgress, transformRange, transformValues);
 
   return (

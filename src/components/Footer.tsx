@@ -24,8 +24,33 @@ export default function Footer() {
     });
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector('footer');
+      const insightsSection = document.querySelector('[data-section="insights"]');
+      
+      if (footer && insightsSection) {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const insightsRect = insightsSection.getBoundingClientRect();
+        const insightsBottom = insightsRect.bottom;
+        
+        // Start parallax only when Footer is already in viewport
+        if (insightsBottom < windowHeight * 0.3) { // Change condition - start later
+          const parallaxOffset = Math.max(0, (windowHeight * 0.3 - insightsBottom) * 0.20); // Reduce coefficient to 0.20
+          footer.style.transform = `translateY(-${parallaxOffset}px)`; // Use negative value for upward movement
+        } else {
+          footer.style.transform = 'translateY(0px)';
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <footer>
+    <footer className="relative z-10 transition-transform duration-300 ease-out">
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -37,7 +62,7 @@ export default function Footer() {
       >
         <div className="px-4 sm:px-6 lg:px-10 pt-10 pb-[48px] md:pb-[70px] max-w-[1512px] mx-auto text-text-700">
           <div className="w-full flex flex-col md:flex-row">
-            {/* Ліва частина - заголовок + контакти + інпут */}
+            {/* Left part - title + contacts + input */}
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <h3 className="hoves-h5-med mb-8">Relax. We&apos;ve Got You.</h3>
               <div className="flex md:gap-8">
@@ -62,7 +87,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Права частина - навігація + соціальні мережі */}
+            {/* Right part - navigation + social networks */}
             <div className="w-full lg:w-1/2 flex md:gap-[154px]">
               <div className="text-nowrap not-md:min-w-1/2 lg:pl-[1px] mb-8 lg:mb-0 lg:min-w-[212px]">
                 <ul className="space-y-4">

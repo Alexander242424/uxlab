@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
 import { useVideoModal } from "@/context/VideoModalContext";
+import ScrollAnimatedSection from "./ScrollAnimatedSection";
 
 export default function ShowreelSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -155,8 +156,10 @@ export default function ShowreelSection() {
         </h2>
       </div>
 
-      <div className="relative cursor-pointer">
-        <VideoPlayer src="/video/reel-short.mp4" />
+      <div className="relative cursor-pointer max-h-[800px] overflow-hidden">
+        <ScrollAnimatedSection>
+          <VideoPlayer src="/video/reel-short.mp4" />
+        </ScrollAnimatedSection>
       </div>
     </div>
   );

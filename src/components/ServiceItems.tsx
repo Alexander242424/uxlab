@@ -137,8 +137,8 @@ export default function ServiceItems() {
                   style={{ transformOrigin: "left" }}
                 />
                 <div className="flex items-center justify-between py-6 lg:py-10">
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between gap-2 lg:gap-3">
+                  <div className="flex flex-col gap-2 w-full">
+                    <div className="flex items-center justify-between">
                       <h3 className="hoves-h5-med text-text-700">
                         {service.title}
                       </h3>
@@ -151,6 +151,20 @@ export default function ServiceItems() {
                     </p>
                   </div>
                 </div>
+                {index === services.length - 1 && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-full h-[1px] bg-border-50"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true, margin: "100px" }}
+                    transition={{
+                      duration: 0.8,
+                      ease: "easeOut",
+                      delay: index * 0.15 + 0.3,
+                    }}
+                    style={{ transformOrigin: "left" }}
+                  />
+                )}
               </motion.div>
             ))}
           </div>

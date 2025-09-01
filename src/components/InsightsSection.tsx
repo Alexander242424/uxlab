@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import Background from "../assets/image/Insights/Background.png";
-import { motion, useScroll, useTransform, useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 
 const insightsData = [
   {
@@ -40,19 +40,12 @@ const insightsData = [
 ];
 
 export default function InsightsSection() {
-  const insightsRef = useRef(null);
   const borderRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: insightsRef,
-    offset: ["start end", "end start"],
-  });
 
-  const y = useTransform(scrollYProgress, [0, 8], [0, 1000]);
   const isInView = useInView(borderRef, { once: true, margin: "-200px" });
 
   return (
-    <motion.div ref={insightsRef} style={{ y }}>
-      <div ref={borderRef} className="flex flex-col bg-bg-white px-4 lg:px-10 mb-40 relative">
+      <div ref={borderRef} data-section="insights" className="flex flex-col bg-bg-white px-4 lg:px-10 mb-40 relative z-20">
         <motion.div
           className="absolute top-0 left-4 right-4 lg:left-10 lg:right-10 h-[1px] bg-border-100"
           style={{
@@ -77,7 +70,7 @@ export default function InsightsSection() {
 
         <div className="flex flex-row gap-8 w-full overflow-x-auto">
           {insightsData.map((insight, index) => (
-            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] lg:min-w-[334px]">
+            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] md:max-w-[calc(25%-32px)] md:min-w-[calc(25%-32px)]">
               <div className="overflow-hidden rounded-lg relative">
                 <Image 
                   src={insight.image} 
@@ -100,6 +93,5 @@ export default function InsightsSection() {
           ))}
         </div>
       </div>
-    </motion.div>
   );
 }
