@@ -146,7 +146,7 @@ export default function QuestionSections() {
               }}
             >
               <motion.div
-                className="absolute bottom-0 left-0 w-full h-[1px] bg-border-100"
+                className="absolute -bottom-3 left-0 w-full h-[1px] bg-border-100"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
