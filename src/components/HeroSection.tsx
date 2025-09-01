@@ -52,6 +52,8 @@ export default function HeroSection() {
         style={{
           fontSize: "clamp(1.5rem, 12vw, 11rem)",
           letterSpacing: "-0.04em",
+          fontFamily: "var(--font-tt-hoves)",
+          fontWeight: "300",
         }}
         delay={50}
         duration={2}
