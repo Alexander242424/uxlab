@@ -67,6 +67,13 @@ export default function QuestionSections() {
             ease: "easeOut",
             delay: 0.2,
           }}
+          animate={{ 
+            y: 0,
+            transition: { 
+              duration: 0.3,
+              ease: "easeOut"
+            } 
+          }}
         >
           <h3 className="hoves-p1-reg mb-6 lg:mb-0">Frequently Asked Question</h3>
           <motion.div 
@@ -78,6 +85,13 @@ export default function QuestionSections() {
               duration: 0.6,
               ease: "easeOut",
               delay: 0.4,
+            }}
+            animate={{ 
+              y: 0,
+              transition: { 
+                duration: 0.3,
+                ease: "easeOut"
+              } 
             }}
           >
             <AvatarsSVG />
@@ -109,6 +123,13 @@ export default function QuestionSections() {
             ease: "easeOut",
             delay: 0.3,
           }}
+          animate={{ 
+            y: 0,
+            transition: { 
+              duration: 0.3,
+              ease: "easeOut"
+            } 
+          }}
         >
         <Accordion type="single" collapsible>
           {faqData.map((item, index) => (
@@ -121,7 +142,7 @@ export default function QuestionSections() {
               transition={{
                 duration: 0.5,
                 ease: "easeOut",
-                delay: 0.5 + index * 0.1,
+                delay: 0.5,
               }}
             >
               <motion.div
@@ -132,7 +153,7 @@ export default function QuestionSections() {
                 transition={{
                   duration: 0.8,
                   ease: "easeOut",
-                  delay: 0.5 + index * 0.1 + 0.3,
+                  delay: 0.5,
                 }}
                 style={{ transformOrigin: "left" }}
               />
