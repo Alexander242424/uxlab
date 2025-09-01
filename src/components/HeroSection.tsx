@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <motion.div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-80px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-170px)] md:min-h-[calc(100vh-72px-80px)]"
       initial={{ opacity: 0, y: -400 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
