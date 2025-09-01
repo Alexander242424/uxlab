@@ -27,7 +27,7 @@ export default function HeroSection() {
       }}
     >
       <motion.div
-        className="absolute top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
+        className="absolute md:-top-[30px] -top-[50px] right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
         <div className="w-full flex px-4 sm:px-6 lg:px-10">
@@ -52,6 +52,8 @@ export default function HeroSection() {
         style={{
           fontSize: "clamp(1.5rem, 12vw, 11rem)",
           letterSpacing: "-0.04em",
+          fontFamily: "var(--font-tt-hoves)",
+          fontWeight: "300",
         }}
         delay={50}
         duration={2}

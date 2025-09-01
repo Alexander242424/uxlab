@@ -37,7 +37,7 @@ export default function Footer() {
         
         // Start parallax only when Footer is already in viewport
         if (insightsBottom < windowHeight * 0.3) { // Change condition - start later
-          const parallaxOffset = Math.max(0, (windowHeight * 0.3 - insightsBottom) * 0.20); // Reduce coefficient to 0.20
+          const parallaxOffset = Math.max(0, (windowHeight * 0.3 - insightsBottom) * 0.12); // Reduce coefficient
           footer.style.transform = `translateY(-${parallaxOffset}px)`; // Use negative value for upward movement
         } else {
           footer.style.transform = 'translateY(0px)';
@@ -188,6 +188,8 @@ export default function Footer() {
             fontSize: "clamp(1.5rem, 12vw, 11rem)",
             letterSpacing: "-0.04em",
             lineHeight: "115%",
+            fontFamily: "var(--font-tt-hoves)",
+            fontWeight: "300",
           }}
           delay={60}
           duration={3}

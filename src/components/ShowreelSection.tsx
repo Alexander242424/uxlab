@@ -6,7 +6,12 @@ import { useVideoModal } from "@/context/VideoModalContext";
 import ScrollAnimatedSection from "./ScrollAnimatedSection";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-export default function ShowreelSection() {
+interface ShowreelSectionProps {
+  mobileSrc: string;
+  desktopSrc: string;
+}
+
+export default function ShowreelSection({ mobileSrc, desktopSrc }: ShowreelSectionProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
@@ -158,7 +163,7 @@ export default function ShowreelSection() {
 
       <div className="relative cursor-pointer max-h-[600px] md:max-h-[800px] overflow-hidden">
         <ScrollAnimatedSection>
-          <VideoPlayer src={isMobile ? "/video/reel-short-mobile.mp4" : "/video/reel-short.mp4"} />
+          <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
         </ScrollAnimatedSection>
       </div>
     </div>

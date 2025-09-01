@@ -33,13 +33,13 @@ const slides = [
   { icon: <UserwayLogo /> },
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col">
       <div className="2xl:max-w-[1512px] 2xl:mx-auto w-full">
         <HeroSection />
         <div className="w-full">
-          <ShowreelSection />
+          <ShowreelSection mobileSrc="/video/reel-short-mobile.mp4" desktopSrc="/video/reel-short.mp4" />
         </div>
           <TextSection
             className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
