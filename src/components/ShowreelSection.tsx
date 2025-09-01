@@ -4,28 +4,28 @@ import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
 import { useVideoModal } from "@/context/VideoModalContext";
 import ScrollAnimatedSection from "./ScrollAnimatedSection";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function ShowreelSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isInitialized, setIsInitialized] = useState(false);
   const { openModal } = useVideoModal();
+  const isMobile = useIsMobile();
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
   }, []);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const checkWindowSize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
+    checkWindowSize();
+    window.addEventListener("resize", checkWindowSize);
     window.addEventListener("mousemove", handleMouseMove);
 
     if (!isInitialized) {
@@ -37,7 +37,7 @@ export default function ShowreelSection() {
     }
 
     return () => {
-      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("resize", checkWindowSize);
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [handleMouseMove, isInitialized]);
@@ -156,9 +156,9 @@ export default function ShowreelSection() {
         </h2>
       </div>
 
-      <div className="relative cursor-pointer max-h-[800px] overflow-hidden">
+      <div className="relative cursor-pointer max-h-[600px] md:max-h-[800px] overflow-hidden">
         <ScrollAnimatedSection>
-          <VideoPlayer src="/video/reel-short.mp4" />
+          <VideoPlayer src={isMobile ? "/video/reel-short-mobile.mp4" : "/video/reel-short.mp4"} />
         </ScrollAnimatedSection>
       </div>
     </div>

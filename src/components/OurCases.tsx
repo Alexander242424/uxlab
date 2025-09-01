@@ -25,7 +25,7 @@ const cases: OurCasesItem[] = [
     alt: "Emma usability audit case study",
     title:
       "+47% Engagement Lift in 1 Month After a 5-Minute Boostra Usability & Accessibility Audit of Emma",
-    videoSrc: "/video/reel-short.mp4",
+    videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Emma usability audit case study",
     logo: <NestpressoLogo />,
   },
@@ -34,7 +34,7 @@ const cases: OurCasesItem[] = [
     alt: "Sapphire analysis case study",
     title:
       "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Sapphire",
-    videoSrc: "/video/reel-short.mp4",
+    videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Sapphire analysis case study", 
     logo: <NestpressoLogo />,
   },
@@ -43,7 +43,7 @@ const cases: OurCasesItem[] = [
     alt: "Forbes Travel Guide analysis case study",
     title:
       "+54% More Hotel Bookings in Just 1 Month After a 5-Minute Boostra Analysis of ForbesTravelGuide.com",
-    videoSrc: "/video/reel-short.mp4",
+    videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Forbes Travel Guide analysis case study",
     logo: <NestpressoLogo />,
   },
@@ -151,7 +151,7 @@ export default function OurCases() {
     const imageLeft = imageRect.left + padding;
     const imageTop = Math.max(imageRect.top + padding, 0); // Не менше 0
     const imageRight = imageRect.right - padding - cursorWidth;
-    const imageBottom = imageRect.bottom - padding - 140;
+    const imageBottom = imageRect.bottom - padding - 330;
     
     // Логування для дебагу
     // console.log('Image rect:', imageRect);
@@ -267,7 +267,7 @@ export default function OurCases() {
                 </div>
               </div>
             ) : (
-              <div className="rounded-[8px] overflow-hidden">
+              <div className="rounded-[8px] overflow-hidden max-h-[300px]">
                 <VideoPlayer
                   src={cases[hoveredIndex].videoSrc!}
                   className="w-full object-cover"
