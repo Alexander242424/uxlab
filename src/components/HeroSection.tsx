@@ -27,7 +27,7 @@ export default function HeroSection() {
       }}
     >
       <motion.div
-        className="absolute md:top-0 -top-[50px] right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
+        className="absolute md:-top-[30px] -top-[50px] right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
         <div className="w-full flex px-4 sm:px-6 lg:px-10">
