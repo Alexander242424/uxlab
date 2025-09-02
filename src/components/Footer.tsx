@@ -92,20 +92,20 @@ export default function Footer() {
               <div className="text-nowrap not-md:min-w-1/2 lg:pl-[1px] mb-8 lg:mb-0 lg:min-w-[212px]">
                 <ul className="space-y-4">
                   <li>
-                    <Link href="/" className={`relative group text-text-700`}>
+                    <Link href="/#" className={`relative group text-text-700`}>
                       Home
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className={`relative group text-text-700`}>
+                    <Link href="/#work" className={`relative group text-text-700`}>
                       Work
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className={`relative group text-text-700`}>
-                      Insights
+                    <Link href="/#services" className={`relative group text-text-700`}>
+                      Services
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                     </Link>
                   </li>

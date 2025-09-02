@@ -45,7 +45,7 @@ export default function InsightsSection() {
   const isInView = useInView(borderRef, { once: true, margin: "-200px" });
 
   return (
-      <div ref={borderRef} data-section="insights" className="flex flex-col bg-bg-white px-4 lg:px-10 mb-40 relative z-20">
+      <div id="insights" ref={borderRef} data-section="insights" className="flex flex-col bg-bg-white px-4 lg:px-10 mb-40 relative z-20">
         <motion.div
           className="absolute top-0 left-4 right-4 lg:left-10 lg:right-10 h-[1px] bg-border-100"
           style={{

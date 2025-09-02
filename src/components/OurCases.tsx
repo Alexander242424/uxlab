@@ -228,7 +228,7 @@ export default function OurCases() {
   }, [hoveredIndex]);
 
   return (
-    <div className="flex flex-col gap-8 my-[96px] lg:my-[160px] mx-4 lg:mx-10 relative">
+    <div id="work" className="flex flex-col gap-8 my-[96px] lg:my-[160px] mx-4 lg:mx-10 relative">
       {isHovering && !isMobile && hoveredIndex !== null && cases[hoveredIndex]?.videoSrc && cursorStyles && isInitialized && showVideo && (
         <div
           ref={cursorRef}
