@@ -161,8 +161,8 @@ export default function ShowreelSection({ mobileSrc, desktopSrc }: ShowreelSecti
         </h2>
       </div>
 
-      <div className="relative cursor-pointer max-h-[600px] md:max-h-[800px] overflow-hidden">
-        <ScrollAnimatedSection>
+      <div className="relative cursor-pointe w-full h-full max-h-[600px] md:max-h-[800px] 2xl:max-h-[2000px] overflow-hidden">
+        <ScrollAnimatedSection className="w-full h-full">
           <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
         </ScrollAnimatedSection>
       </div>

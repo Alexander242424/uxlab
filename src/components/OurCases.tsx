@@ -7,7 +7,10 @@ import VideoPlayer from "./VideoPlayer";
 import OptionImage from "../assets/image/OurCases/Option 22.png";
 import ShapphireImage from "../assets/image/OurCases/Shapphire 5.png";
 import GuideImage from "../assets/image/OurCases/Option 28.png";
-import NestpressoLogo from "../assets/image/OurCases/logo/Group 1820549587.svg";
+import NestpressoLogo from "../assets/image/OurCases/logo/nestpresso.svg";
+import SapphireLogo from "../assets/image/OurCases/logo/sapphire.svg";
+import EmmaLogo from "../assets/image/OurCases/logo/emma.svg";
+import Link from "next/link";
 
 interface OurCasesItem {
   src: StaticImageData;
@@ -17,6 +20,7 @@ interface OurCasesItem {
   videoTitle?: string;
   fallbackImage?: StaticImageData;
   logo?: React.ReactNode;
+  link?: string;
 }
 
 const cases: OurCasesItem[] = [
@@ -27,7 +31,8 @@ const cases: OurCasesItem[] = [
       "+47% Engagement Lift in 1 Month After a 5-Minute Boostra Usability & Accessibility Audit of Emma",
     videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Emma usability audit case study",
-    logo: <NestpressoLogo />,
+    logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
+    link: "/cases",
   },
   {
     src: ShapphireImage,
@@ -36,7 +41,8 @@ const cases: OurCasesItem[] = [
       "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Sapphire",
     videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Sapphire analysis case study", 
-    logo: <NestpressoLogo />,
+    logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
+    link: "/cases",
   },
   {
     src: GuideImage,
@@ -45,7 +51,8 @@ const cases: OurCasesItem[] = [
       "+54% More Hotel Bookings in Just 1 Month After a 5-Minute Boostra Analysis of ForbesTravelGuide.com",
     videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Forbes Travel Guide analysis case study",
-    logo: <NestpressoLogo />,
+    logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
+    link: "/cases",
   },
 ];
 
@@ -220,37 +227,17 @@ export default function OurCases() {
     }
   }, [hoveredIndex]);
 
-  useEffect(() => {
-    if (isHovering && !isMobile && cursorRef.current) {
-      gsap.fromTo(cursorRef.current, 
-        { 
-          scale: 0.8, 
-          opacity: 0 
-        },
-        { 
-          scale: 1, 
-          opacity: 1, 
-          duration: 0.8, 
-          ease: "power3.out" 
-        }
-      );
-    } else if (!isHovering && cursorRef.current) {
-      gsap.to(cursorRef.current, {
-        scale: 0.8,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power3.in"
-      });
-    }
-  }, [isHovering, isMobile]);
-
   return (
     <div className="flex flex-col gap-8 my-[96px] lg:my-[160px] mx-4 lg:mx-10 relative">
       {isHovering && !isMobile && hoveredIndex !== null && cases[hoveredIndex]?.videoSrc && cursorStyles && isInitialized && showVideo && (
         <div
           ref={cursorRef}
           className="video-cursor video-cursor-enter"
-          style={cursorStyles}
+          style={{
+            ...cursorStyles,
+            opacity: 0,
+            transform: 'scale(0.95) translateY(10px)'
+          }}
         >
           <div className="bg-transparent">
             {videoError === hoveredIndex ? (
@@ -306,7 +293,7 @@ export default function OurCases() {
         {cases.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-[21px] w-[268px] h-[453px] lg:w-[456px] lg:h-[677px] flex-shrink-0"
+            className="flex flex-col gap-[21px] flex-shrink-0 w-full h-full not-lg:max-w-[300px] not-lg:max-h-[553px] lg:w-[456px] lg:h-[677px] 2xl:w-full 2xl:h-full 2xl:max-h-[calc(100vh-10vh)] 2xl:max-w-[calc(100vw-60vw)]"
           >
             <div
               className="relative cursor-pointer"
@@ -323,23 +310,25 @@ export default function OurCases() {
                 }
               }}
             >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={400}
-                height={300}
-                className={`w-full h-auto rounded-md image-hover-darken ${
-                  isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"
-                }`}
-              />
-              
-              {item.logo && (
-                <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] lg:mb-[48px] transition-opacity duration-300 ${
-                  isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
-                }`}>
-                  {item.logo}
-                </div>
-              )}
+              <Link href={item.link || "#"}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={400}
+                  height={300}
+                  className={`w-full rounded-md image-hover-darken ${
+                    isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"
+                  }`}
+                />
+                
+                {item.logo && (
+                  <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] lg:mb-[48px] transition-opacity duration-300 ${
+                    isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                  }`}>
+                    {item.logo}
+                  </div>
+                )}
+              </Link>
             </div>
             <p className="text-text-700 hoves-p1-reg">{item.title}</p>
           </div>

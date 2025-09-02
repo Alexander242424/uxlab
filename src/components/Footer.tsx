@@ -60,7 +60,7 @@ export default function Footer() {
           delay: 0.2,
         }}
       >
-        <div className="px-4 sm:px-6 lg:px-10 pt-10 pb-[48px] md:pb-[70px] max-w-[1512px] mx-auto text-text-700">
+        <div className="px-4 sm:px-6 lg:px-10 pt-10 pb-[48px] md:pb-[70px] max-w-[2560px] mx-auto text-text-700 md:min-h-[calc(100dvh-460px)]">
           <div className="w-full flex flex-col md:flex-row">
             {/* Left part - title + contacts + input */}
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
@@ -181,16 +181,21 @@ export default function Footer() {
           </div>
 
         </div>
+        <div className="mx-4 lg:mx-0">
         <SplitText
           text="We Make Interfaces"
-          className="w-full text-center"
-          style={{
-            fontSize: "clamp(1.5rem, 12vw, 11rem)",
-            letterSpacing: "-0.04em",
-            lineHeight: "115%",
-            fontFamily: "var(--font-tt-hoves)",
-            fontWeight: "300",
-          }}
+          className="
+          w-full 
+          text-center 
+          whitespace-nowrap
+          [font-size:clamp(1rem,10.3vw,9rem)]
+          md:[font-size:clamp(1rem,10.2vw,10rem)]
+          lg:[font-size:clamp(1rem,10.6vw,10rem)]
+          2xl:[font-size:clamp(1rem,15vw,16rem)]
+          [-letter-spacing:0.04em] 
+          [font-family:var(--font-tt-hoves)] 
+          font-light
+        "  
           delay={60}
           duration={3}
           ease="power3.out"
@@ -199,6 +204,7 @@ export default function Footer() {
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
         />
+        </div>
       </motion.div>
     </footer>
   );

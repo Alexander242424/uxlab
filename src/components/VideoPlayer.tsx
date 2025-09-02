@@ -34,9 +34,9 @@ export default function VideoPlayer({ src, poster, className = '', onError, cont
 
   return (
     <MediaPlayer
-      className={`w-full ${className}`}
+      className={`w-full h-full ${className}`}
       title="Video Player"
-      aspectRatio="16 / 9"
+      // aspectRatio="16 / 9"
       controls={shouldShowControls}
       src={src}
       poster={poster}
@@ -47,7 +47,7 @@ export default function VideoPlayer({ src, poster, className = '', onError, cont
       onError={onError}
       playsInline={isIOS} // Required for iOS
     >
-      <MediaProvider />
+      <MediaProvider className='w-full h-full video-player-provider' />
     </MediaPlayer>
   );
 }

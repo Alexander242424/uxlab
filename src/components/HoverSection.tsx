@@ -101,7 +101,7 @@ const HoverSection: React.FC = () => {
         {sections.map((section) => (
           <div
             key={section.id}
-            className={`relative border-r border-border-100 last:border-r-0 transition-all duration-1000 ease-in-out hover-section group flex-smooth ${
+            className={`overflow-hidden relative border-r border-border-100 last:border-r-0 transition-all duration-1000 ease-in-out hover-section group flex-smooth ${
               hoveredSection === section.id ? "bg-bg-gray" : "hover:bg-bg-white"
             }`}
             style={{
@@ -110,7 +110,7 @@ const HoverSection: React.FC = () => {
                   ? "50%"
                   : `${100 / sections.length}%`,
               transition:
-                "flex-basis 1s ease-in-out, background-color 0.7s ease-out",
+                "flex-basis 0.6s ease-in-out, background-color 0.7s ease-out",
             }}
             onMouseEnter={() => {
               if (!isMobile) {
@@ -132,27 +132,37 @@ const HoverSection: React.FC = () => {
 
             {/* Контент секції */}
             <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-64 flex flex-col justify-end">
-              <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-4">
+              <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-5">
                 {/* Підпис "UX Analysis" - завжди зліва */}
                 <div className="flex-shrink-0 hoves-h6-med text-black">
                   UX Analysis
                 </div>
 
                 {/* Контент - справа від підпису */}
-                {(showContent === section.id ||
-                  (isMobile && section.content)) &&
-                  section.content && (
-                    <div className="hover-section-content show animate-fade-in-left flex-1">
-                      <div className="flex items-start">
-                        {/* Текст контенту */}
-                        <div className="flex-1">
-                          <p className="text-black hoves-p1-reg">
-                            {section.content}
-                          </p>
-                        </div>
+                {section.content && (
+                  <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-500 delay-0 max-w-[calc(100%-200px)] flex-1">
+                    <div className="flex items-start">
+                      {/* Текст контенту */}
+                      <div className="flex-1">
+                        <p className="text-black hoves-p1-reg">
+                          {section.content}
+                        </p>
                       </div>
                     </div>
-                  )}
+                  </div>
+                )}
+                {section.content && (
+                  <div className="block lg:hidden flex-1">
+                    <div className="flex items-start">
+                      {/* Текст контенту */}
+                      <div className="flex-1">
+                        <p className="text-black hoves-p1-reg">
+                          {section.content}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

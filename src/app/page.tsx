@@ -36,7 +36,7 @@ const slides = [
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      <div className="2xl:max-w-[1512px] 2xl:mx-auto w-full">
+      <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
         <HeroSection />
         <div className="w-full">
           <ShowreelSection mobileSrc="/video/reel-short-mobile.mp4" desktopSrc="/video/reel-short.mp4" />
@@ -50,7 +50,7 @@ export default function HomePage() {
         <OurCases />
       </div>
       <div className="w-full bg-bg-white">
-        <div className="2xl:max-w-[1512px] 2xl:mx-auto w-full">
+        <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
           <InfiniteSlider slides={slides} duration={20} className="py-[90px] lg:py-[173px]" />
           <GlanceSection />
           <TextSection

@@ -70,12 +70,12 @@ export default function InsightsSection() {
 
         <div className="flex flex-row gap-8 w-full overflow-x-auto">
           {insightsData.map((insight, index) => (
-            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] md:max-w-[calc(25%-32px)] md:min-w-[calc(25%-32px)]">
+            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] lg:max-w-[calc(25%-32px)] lg:min-w-[calc(25%-32px)] group">
               <div className="overflow-hidden rounded-lg relative">
                 <Image 
                   src={insight.image} 
                   alt={insight.title}
-                  className="transition-transform duration-300 ease-out hover:scale-110"
+                  className="transition-transform duration-300 ease-out hover:scale-110 min-h-[calc(100vh-90vh)] min-w-[calc(100vw-80vw)] 2xl:min-h-full 2xl:min-w-full hover:cursor-pointer"
                 />
                 <div className="absolute bottom-1 left-1 bg-white/80 backdrop-blur-sm rounded w-fit h-6 px-2 py-1 flex items-center justify-center uppercase">
                   <span className="text-black font-tt-hoves font-medium text-[10px] leading-[16px]">
@@ -84,7 +84,10 @@ export default function InsightsSection() {
                 </div>
               </div>
               <div className="flex flex-col gap-4 lg:gap-6">
-                <p className="text-black hoves-p1-reg">{insight.title}</p>
+                <p className="text-black hoves-p1-reg relative group w-fit">
+                  {insight.title}
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-black underline-animation"></span>
+                </p>
                 <p className="text-black hoves-p3-reg">
                   {insight.author} · {insight.date}
                 </p>
