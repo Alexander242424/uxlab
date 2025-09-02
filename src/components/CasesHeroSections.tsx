@@ -5,6 +5,7 @@ import EmmaLogo from "@/assets/emma-logo.svg";
 import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
 import { useRef } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import TextSection from "./TextSection";
 
 export default function CasesHeroSections() {
   const isMobile = useIsMobile();
@@ -19,16 +20,9 @@ export default function CasesHeroSections() {
   const textBlockY = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
-    <motion.div
+    <div
       ref={containerRef}
       className="flex flex-col relative min-h-[calc(100vh-72px-130px)] md:min-h-[calc(100vh-72px-80px)]"
-      initial={{ opacity: 0, y: -400 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.8,
-        ease: "easeOut",
-        delay: 0.2,
-      }}
     >
       <motion.div
         className="absolute md:-top-[110px] -top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 lg:px-0"
@@ -52,13 +46,13 @@ export default function CasesHeroSections() {
                 lineHeight: "1.15",
                 letterSpacing: "-0.03em",
               }}
-              delay={20}
+              delay={1000}
               duration={2}
               ease="power3.out"
-              splitType="words, chars"
-              from={{ opacity: 0.9, y: -200 }}
+              splitType="lines"
+              from={{ opacity: 0, y: 100 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
+              threshold={0.01}
               textAlign="left"
             />
             <SplitText
@@ -70,13 +64,13 @@ export default function CasesHeroSections() {
                 lineHeight: "1.15",
                 letterSpacing: "-0.03em",
               }}
-              delay={50}
+              delay={1000}
               duration={2}
               ease="power3.out"
-              splitType="words, chars"
-              from={{ opacity: 0.9, y: -200 }}
+              splitType="lines"
+              from={{ opacity: 0, y: 100 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
+              threshold={0.01}
               textAlign="left"
             />
           </div>
@@ -100,23 +94,6 @@ export default function CasesHeroSections() {
           </div>
         </div>
       </div>
-      {/* <SplitText
-          text="We Make Interfaces"
-          className="w-full text-center mt-auto text-nowrap"
-          style={{
-            fontSize: "clamp(1.5rem, 12vw, 11rem)",
-            letterSpacing: "-0.04em",
-            fontFamily: "var(--font-tt-hoves)",
-            fontWeight: "300",
-          }}
-          delay={50}
-          duration={2}
-          ease="power3.out"
-          splitType="words, chars"
-          from={{ opacity: 0.9, y: -200 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-        /> */}
-    </motion.div>
+    </div>
   );
 }

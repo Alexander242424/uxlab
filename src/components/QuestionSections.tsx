@@ -75,7 +75,7 @@ export default function QuestionSections() {
             } 
           }}
         >
-          <h3 className="hoves-p1-reg mb-6 lg:mb-0">Frequently Asked Question</h3>
+          <h3 className="hoves-p1-reg mb-4 lg:mb-6">Frequently Asked Question</h3>
           <motion.div 
             className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] lg:h-[340px] lg:max-w-[456px]"
             initial={{ opacity: 0, y: 100 }}
@@ -114,7 +114,7 @@ export default function QuestionSections() {
         
         {/* Права частина - акордеон */}
         <motion.div 
-          className="w-full lg:w-1/2"
+          className="w-full lg:w-1/2 lg:mt-6"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

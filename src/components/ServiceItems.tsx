@@ -29,7 +29,7 @@ const services: ServiceItem[] = [
 
 export default function ServiceItems() {
   return (
-    <section className="bg-bg-black mx-4 lg:mx-10 pt-10 lg:pt-20 relative overflow-hidden">
+    <section id="services" className="bg-bg-black mx-4 lg:mx-10 pt-10 lg:pt-20 relative overflow-hidden">
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
         style={{

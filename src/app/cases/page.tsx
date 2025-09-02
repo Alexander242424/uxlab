@@ -6,9 +6,9 @@ import TextSection from "@/components/TextSection";
 export default function CasesPage() {
   return (
     <div className="flex flex-col">
-      <div className="2xl:max-w-[1512px] 2xl:mx-auto w-full">
+      <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
         <CasesHeroSections />
-      <div className="w-full">
+        <div className="w-full">
           <ShowreelSection mobileSrc="/video/reel-short-mobile.mp4" desktopSrc="/video/reel-short.mp4" />
         </div>
       <TextSection

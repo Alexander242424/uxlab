@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="bg-transparent min-h-[72px] sticky top-0 z-50">
-      <div className="px-4 sm:px-6 lg:px-10 mt-8 mb-4 max-w-[1512px] mx-auto">
+      <div className="px-4 sm:px-6 lg:px-10 mt-8 mb-4 max-w-[2560px] mx-auto">
         <div className="w-full flex">
           {/* Ліва частина - логотип */}
           <div className="w-1/2 flex items-center">
@@ -40,7 +40,7 @@ export default function Header() {
           <div className="w-1/2 flex justify-between items-center">
             <nav className="hidden md:flex space-x-4 lg:space-x-8 hoves-p2-reg">
               <Link
-                href="/"
+                href="/#"
                 className={`relative group header-text ${
                   pathname === "/" ? "header-text-active" : ""
                 }`}
@@ -49,27 +49,27 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
               </Link>
               <Link
-                href="/work"
+                href="/#services"
                 className={`relative group header-text ${
-                  pathname === "/work" ? "header-text-active" : ""
-                }`}
-              >
-                Work
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-              </Link>
-              <Link
-                href="/services"
-                className={`relative group header-text ${
-                  pathname === "/services" ? "header-text-active" : ""
+                  pathname === "/" && window.location.hash === "#services" ? "header-text-active" : ""
                 }`}
               >
                 Services
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
               </Link>
               <Link
-                href="/insights"
+                href="/#work"
                 className={`relative group header-text ${
-                  pathname === "/insights" ? "header-text-active" : ""
+                  pathname === "/" && window.location.hash === "#work" ? "header-text-active" : ""
+                }`}
+              >
+                Work
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
+              </Link>
+              <Link
+                href="/#insights"
+                className={`relative group header-text ${
+                  pathname === "/" && window.location.hash === "#insights" ? "header-text-active" : ""
                 }`}
               >
                 Insights
