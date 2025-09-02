@@ -22,10 +22,10 @@ export default function CasesHeroSections() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] md:min-h-[calc(100vh-72px-80px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] md:min-h-[calc(100vh-72px-80px)] 2xl:min-h-[calc(100vh-72px-200px)]"
     >
       <motion.div
-        className="absolute md:-top-[110px] -top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 lg:px-0"
+        className="absolute md:-top-[110px] -top-[200px] 2xl:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 lg:px-0"
         style={{ y: textBlockY }}
       >
         <div className="w-full flex flex-col md:flex-row px-4 sm:px-6 lg:px-10">

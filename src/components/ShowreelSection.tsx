@@ -9,9 +9,10 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 interface ShowreelSectionProps {
   mobileSrc: string;
   desktopSrc: string;
+  isDefault?: boolean;
 }
 
-export default function ShowreelSection({ mobileSrc, desktopSrc }: ShowreelSectionProps) {
+export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = false }: ShowreelSectionProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
@@ -104,68 +105,78 @@ export default function ShowreelSection({ mobileSrc, desktopSrc }: ShowreelSecti
   }, [isHovering, isMobile]);
 
   return (
-    <div
-      className="relative w-full"
-      onMouseEnter={() => {
-        if (!isMobile) {
-          setIsHovering(true);
-        }
-      }}
-      onMouseLeave={() => {
-        if (!isMobile) {
-          setIsHovering(false);
-        }
-      }}
-      onMouseMove={(e) => {
-        if (!isMobile && isHovering) {
-          setMousePosition({ x: e.clientX, y: e.clientY });
-        }
-      }}
-      onClick={() => openModal("/video/reel-short.mp4")}
-    >
-      {isHovering && !isMobile && (
+    <>
+      {isDefault ? (
+        <div className="relative w-full h-full max-h-[600px] md:max-h-[800px] 2xl:max-h-[2000px] overflow-hidden">
+          <ScrollAnimatedSection className="w-full h-full">
+            <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
+          </ScrollAnimatedSection>
+        </div>
+      ) : (
         <div
-          ref={cursorRef}
-          className="showreel-cursor"
-          style={{
-            position: "fixed",
-            left: mousePosition.x + 5,
-            top: mousePosition.y + 5,
-            width: "120px",
-            height: "40px",
+          className="relative w-full"
+          onMouseEnter={() => {
+            if (!isMobile) {
+              setIsHovering(true);
+            }
           }}
+          onMouseLeave={() => {
+            if (!isMobile) {
+              setIsHovering(false);
+            }
+          }}
+          onMouseMove={(e) => {
+            if (!isMobile && isHovering) {
+              setMousePosition({ x: e.clientX, y: e.clientY });
+            }
+          }}
+          onClick={() => openModal("/video/reel-short.mp4")}
         >
-          <div className="flex items-center justify-center gap-2">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="flex-shrink-0"
+          {isHovering && !isMobile && (
+            <div
+              ref={cursorRef}
+              className="showreel-cursor"
+              style={{
+                position: "fixed",
+                left: mousePosition.x + 5,
+                top: mousePosition.y + 5,
+                width: "120px",
+                height: "40px",
+              }}
             >
-              <path
-                d="M8 5L19 12L8 19V5Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span className="text-white hoves-p2-reg header-text">Play Reel</span>
+              <div className="flex items-center justify-center gap-2">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    d="M8 5L19 12L8 19V5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span className="text-white hoves-p2-reg header-text">Play Reel</span>
+              </div>
+            </div>
+          )}
+
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <h2 className="hoves-h3-med text-text-700 relative group select-none">
+              Showreel
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+            </h2>
+          </div>
+
+          <div className="relative cursor-pointer w-full h-full max-h-[600px] md:max-h-[800px] 2xl:max-h-[2000px] overflow-hidden">
+            <ScrollAnimatedSection className="w-full h-full">
+              <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
+            </ScrollAnimatedSection>
           </div>
         </div>
       )}
-
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <h2 className="hoves-h3-med text-text-700 relative group select-none">
-          Showreel
-          <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-        </h2>
-      </div>
-
-      <div className="relative cursor-pointe w-full h-full max-h-[600px] md:max-h-[800px] 2xl:max-h-[2000px] overflow-hidden">
-        <ScrollAnimatedSection className="w-full h-full">
-          <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
-        </ScrollAnimatedSection>
-      </div>
-    </div>
+    </>
   );
 }
