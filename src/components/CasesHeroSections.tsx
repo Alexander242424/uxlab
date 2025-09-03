@@ -13,13 +13,13 @@ interface CasesHeroSectionsProps {
   deliverables: string;
 }
 
-export default function CasesHeroSections({ 
-  logo, 
-  logoMobile, 
-  text, 
+export default function CasesHeroSections({
+  logo,
+  logoMobile,
+  text,
   companyName,
-  year, 
-  deliverables 
+  year,
+  deliverables,
 }: CasesHeroSectionsProps) {
   const isMobile = useIsMobile();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,7 +35,7 @@ export default function CasesHeroSections({
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] md:min-h-[calc(100vh-72px-80px)] 2xl:min-h-[calc(100vh-72px-200px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] md:min-h-[calc(100vh-72px-120px)] 2xl:min-h-[calc(100vh-72px-200px)]"
     >
       <motion.div
         className="absolute md:-top-[110px] -top-[200px] 2xl:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 lg:px-0"
@@ -59,8 +59,8 @@ export default function CasesHeroSections({
                 lineHeight: "1.15",
                 letterSpacing: "-0.03em",
               }}
-              delay={1000}
-              duration={2}
+              delay={40}
+              duration={0.8}
               ease="power3.out"
               splitType="lines"
               from={{ opacity: 0, y: 100 }}
@@ -83,9 +83,7 @@ export default function CasesHeroSections({
           </div>
           <div className="flex flex-col gap-2">
             <p className="text-text-500 hoves-p2-reg">Deliverables</p>
-            <p className="text-text-700 hoves-p2-reg">
-              {deliverables}
-            </p>
+            <p className="text-text-700 hoves-p2-reg">{deliverables}</p>
           </div>
         </div>
       </div>

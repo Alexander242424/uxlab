@@ -19,7 +19,7 @@ export default function HeroSection() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-170px)] md:min-h-[calc(100vh-72px-80px)] 2xl:min-h-[calc(100vh-72px-140px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-170px)] md:min-h-[calc(100vh-72px-120px)] 2xl:min-h-[calc(100vh-72px-140px)]"
     >
       <motion.div
         className="absolute md:-top-[30px] -top-[50px] 2xl:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
@@ -28,11 +28,11 @@ export default function HeroSection() {
         <div className="w-full flex sm:px-6 lg:px-10">
           {/* Ліва частина - пуста, займає половину екрану */}
           <div className="hidden lg:block md:w-1/2"></div>
-          
+
           {/* Права частина - містить текстовий блок */}
           <div className="lg:w-1/2 w-full flex justify-start">
             <div className="flex flex-col max-w-[456px] 2xl:max-w-[1100px]">
-            {/* <SplitText
+              {/* <SplitText
               className="hoves-p1-reg 2xl:text-[50px]! 2xl:leading-[60px]!"
               text="We unite User Experience"
               delay={500}
@@ -57,10 +57,12 @@ export default function HeroSection() {
                 threshold={0.01}
                 textAlign="left"
             /> */}
-              <p className="text-text-700 hoves-p1-reg lg:text-right 2xl:text-[50px]! 2xl:leading-[60px]!">We unite User Experience</p>
+              <p className="text-text-700 hoves-p1-reg lg:text-right 2xl:text-[50px]! 2xl:leading-[60px]!">
+                We unite User Experience
+              </p>
               <p className="text-text-700 hoves-p1-reg 2xl:text-[50px]! 2xl:leading-[60px]!">
-                CRO and data-driven design to help digital products convert, scale,
-                and win in competitive markets.
+                CRO and data-driven design to help digital products convert,
+                scale, and win in competitive markets.
               </p>
             </div>
           </div>
@@ -80,9 +82,9 @@ export default function HeroSection() {
           [-letter-spacing:0.04em] 
           [font-family:var(--font-tt-hoves)] 
           font-light
-        "        
-          delay={50}
-          duration={2}
+        "
+          delay={30}
+          duration={1}
           ease="power3.out"
           splitType="words, chars"
           from={{ opacity: 0.9, y: -200 }}

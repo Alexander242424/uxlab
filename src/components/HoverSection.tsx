@@ -131,7 +131,7 @@ const HoverSection: React.FC = () => {
             </div>
 
             {/* Контент секції */}
-            <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-64 flex flex-col justify-end">
+            <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-72 flex flex-col justify-end">
               <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-5">
                 {/* Підпис "UX Analysis" - завжди зліва */}
                 <div className="flex-shrink-0 hoves-h6-med text-black">

@@ -45,10 +45,10 @@ function AccordionTrigger({
       >
         {children}
 
-        <div className="block plus hover:bg-bg-gray rounded-full">
+        <div className="block plus hover:bg-bg-gray rounded-full cursor-pointer">
           <PlusIcon />
         </div>
-        <div className="hidden minus hover:bg-bg-gray rounded-full">
+        <div className="hidden minus hover:bg-bg-gray rounded-full cursor-pointer">
           <MinusIcon />
         </div>
       </AccordionPrimitive.Trigger>
@@ -67,14 +67,7 @@ function AccordionContent({
       className="AccordionContent overflow-hidden text-sm"
       {...props}
     >
-      <div 
-        className={cn(
-          "pt-0 pb-3",
-          className
-        )}
-      >
-        {children}
-      </div>
+      <div className={cn("pt-0 pb-3", className)}>{children}</div>
     </AccordionPrimitive.Content>
   );
 }

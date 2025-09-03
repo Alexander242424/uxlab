@@ -1,4 +1,3 @@
-
 import ServiceItems from "@/components/ServiceItems";
 import OurCases from "@/components/OurCases";
 import HeroSection from "@/components/HeroSection";
@@ -18,8 +17,8 @@ import HoverSection from "@/components/HoverSection";
 import InsightsSection from "@/components/InsightsSection";
 import QuestionSections from "@/components/QuestionSections";
 import ShowreelSection from "@/components/ShowreelSection";
-import ExpandingVideo from "@/components/ExpandingVideo";
 import TextSection from "@/components/TextSection";
+import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 
 const slides = [
   // { icon: <BMWLogo /> },
@@ -39,19 +38,26 @@ export default function HomePage() {
       <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
         <HeroSection />
         <div className="w-full">
-          <ShowreelSection mobileSrc="/video/reel-short-mobile.mp4" desktopSrc="/video/reel-short.mp4" />
-        </div>
-          <TextSection
-            className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
-            firstText="The design dream team for founders"
-            secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
+          <ShowreelSection
+            mobileSrc="/video/reel-short-mobile.mp4"
+            desktopSrc="/video/reel-short.mp4"
           />
+        </div>
+        <TextSection
+          className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+          firstText="The design dream team for founders"
+          secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
+        />
         <ServiceItems />
         <OurCases />
       </div>
       <div className="w-full bg-bg-white">
         <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
-          <InfiniteSlider slides={slides} duration={20} className="py-[90px] lg:py-[173px]" />
+          <InfiniteSlider
+            slides={slides}
+            duration={20}
+            className="py-[90px] lg:py-[173px]"
+          />
           <GlanceSection />
           <TextSection
             className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
@@ -61,7 +67,10 @@ export default function HomePage() {
           />
           <HoverSection />
           <div className="w-full px-4 lg:px-10 mt-[56px] lg:mt-40 mb-[96px] lg:mb-[161px]">
-            <ExpandingVideo src="/video/reel-short.mp4" />
+            <OverviewCaseVideoSection
+              className="!p-0 !m-0"
+              src="/video/reel-short.mp4"
+            />
           </div>
           <QuestionSections />
           <TextSection
@@ -70,8 +79,6 @@ export default function HomePage() {
             showButton={true}
             textColor="text-black"
             className="mb-[96px] lg:pb-[161px] px-4 lg:px-10"
-            rootMargin="-1000px"
-            threshold={0.5}
           />
           <InsightsSection />
         </div>
