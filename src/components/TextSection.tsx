@@ -12,6 +12,8 @@ interface TextSectionProps {
   buttonText?: string;
   className?: string;
   textColor?: string;
+  rootMargin?: string;
+  threshold?: number;
 }
 
 export default function TextSection({
@@ -21,6 +23,8 @@ export default function TextSection({
   buttonText = "Book a Call",
   className = "",
   textColor = "text-text-700",
+  rootMargin = "-100px",
+  threshold = 0.3,
 }: TextSectionProps) {
 
   const isMobile = useIsMobile();
@@ -44,8 +48,8 @@ export default function TextSection({
           ease="power3.out"
           from={{ opacity: 0, y: 100 }}
           to={{ opacity: 1, y: 0 }}
-          threshold={0.01}
-          rootMargin="50px"
+          threshold={threshold}
+          rootMargin={rootMargin}
           textAlign="left"
         />
       </div>) : (
@@ -68,8 +72,8 @@ export default function TextSection({
               ease="power3.out"
               from={{ opacity: 0, y: 100 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0.01}
-              rootMargin="50px"
+              threshold={threshold}
+              rootMargin={rootMargin}
               textAlign="left"
             />
           </div>
@@ -92,8 +96,8 @@ export default function TextSection({
               ease="power3.out"
               from={{ opacity: 0, y: 100 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0.01}
-              rootMargin="50px"
+              threshold={threshold}
+              rootMargin={rootMargin}
               textAlign="left"
             />
           </div>
