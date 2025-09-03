@@ -70,6 +70,8 @@ export default function HomePage() {
             showButton={true}
             textColor="text-black"
             className="mb-[96px] lg:pb-[161px] px-4 lg:px-10"
+            rootMargin="-1000px"
+            threshold={0.5}
           />
           <InsightsSection />
         </div>

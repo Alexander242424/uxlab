@@ -54,7 +54,7 @@ export default function CasesOutcome() {
             textAlign="left"
           />
         </div>
-        <div className="flex flex-col w-full lg:w-2/3 gap-10 lg:gap-20">
+        <div className="flex flex-col w-full lg:w-1/2 gap-10 lg:gap-20">
           {outcomes.map((outcome, index) => (
             <motion.div
               key={index}
