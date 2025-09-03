@@ -65,7 +65,7 @@ export default function EmmaPage() {
           authorText="Felix Focken, CEO (Emma Sleep)"
         />
         <InfoBlock
-          className="lg:pt-20! lg:pb-[120px]!"
+          className="lg:py-20!"
           title="To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub. "
           description="Solution: Transforming the app into a personalized educational hub"
         />

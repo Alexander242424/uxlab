@@ -140,7 +140,7 @@ const HoverSection: React.FC = () => {
 
                 {/* Контент - справа від підпису */}
                 {section.content && (
-                  <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-500 delay-0 max-w-[calc(100%-200px)] flex-1">
+                  <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-510 delay-0 max-w-[calc(100%-200px)] flex-1">
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
