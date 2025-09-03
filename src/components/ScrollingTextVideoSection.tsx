@@ -1,9 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import VideoPlayer from "./VideoPlayer";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-export default function ScrollingTextVideoSection() {
+interface ScrollingTextVideoSectionProps {
+  videoSrc: string;
+  poster: string;
+}
+
+export default function ScrollingTextVideoSection({ videoSrc, poster }: ScrollingTextVideoSectionProps) {
   const textRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
@@ -101,8 +105,8 @@ export default function ScrollingTextVideoSection() {
           {/* Video with custom autoplay logic */}
           <video 
             ref={videoRef}
-            src="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
-            poster="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+            src={videoSrc}
+            poster={poster}
             className="w-full h-full object-cover"
             muted
             playsInline

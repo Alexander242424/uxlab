@@ -32,7 +32,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Emma usability audit case study",
     logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
-    link: "/cases",
+    link: "/emma",
   },
   {
     src: ShapphireImage,
@@ -52,7 +52,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Forbes Travel Guide analysis case study",
     logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
-    link: "/cases",
+    link: "/nespresso",
   },
 ];
 
