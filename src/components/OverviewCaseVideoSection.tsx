@@ -1,5 +1,8 @@
+"use client";
 import VideoPlayer from "@/components/VideoPlayer";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useRef } from "react";
 
 export default function OverviewCaseVideoSection({
   className,
@@ -8,14 +11,29 @@ export default function OverviewCaseVideoSection({
   className?: string;
   src: string;
 }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const clipPath = useTransform(
+    scrollYProgress,
+    [0, 0.3, 1],
+    ["inset(0% 50% 0% 50%)", "inset(0% 0% 0% 0%)", "inset(0% 0% 0% 0%)"]
+  );
+
   return (
-    <div
+    <motion.div
+      ref={containerRef}
       className={cn(
         "w-full px-4 pt-4 pb-4 lg:px-10 lg:pt-10 lg:pb-10",
         className
       )}
+      style={{ clipPath }}
     >
       <VideoPlayer src={src} />
-    </div>
+    </motion.div>
   );
 }

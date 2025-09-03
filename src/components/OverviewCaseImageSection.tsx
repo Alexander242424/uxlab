@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
 import { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface OverviewCaseImageSectionProps {
   className?: string;
@@ -22,16 +26,31 @@ export default function OverviewCaseImageSection({
   imageClassName,
   videoClassName,
 }: OverviewCaseImageSectionProps) {
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+    rootMargin: "-100px",
+  });
+
   return (
     <div
+      ref={ref}
       className={cn(
-        "w-full px-4 pt-4 pb-4 lg:px-10 lg:pt-10 lg:pb-10 flex flex-col lg:flex-row gap-4 lg:gap-8 overflow-hidden",
+        "w-full px-4 pt-4 pb-4 lg:px-10 lg:pt-10 lg:pb-10 flex flex-col lg:flex-row gap-4 lg:gap-8",
         iSvideoPositionLeft && "lg:flex-row-reverse",
         className
       )}
     >
-      <div
+      <motion.div
+        initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
+        animate={
+          inView
+            ? { clipPath: "inset(0% 0% 0% 0%)" }
+            : { clipPath: "inset(0% 0% 100% 0%)" }
+        }
+        transition={{ duration: 0.5, ease: [0.7, 0, 0.3, 1] }}
         className={cn(
+          "overflow-hidden",
           !iSvideoPositionLeft
             ? "lg:min-w-[calc(50% - 32px)]"
             : "lg:min-w-1/2 lg:max-w-1/2 lg:pl-[1px]"
@@ -42,9 +61,17 @@ export default function OverviewCaseImageSection({
           src={imageSrc}
           alt={imageAlt}
         />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
+        animate={
+          inView
+            ? { clipPath: "inset(0% 0% 0% 0%)" }
+            : { clipPath: "inset(0% 0% 100% 0%)" }
+        }
+        transition={{ duration: 0.5, ease: [0.7, 0, 0.3, 1] }}
         className={cn(
+          "overflow-hidden",
           !iSvideoPositionLeft
             ? "lg:min-w-1/2 lg:max-w-1/2 lg:pl-[1px]"
             : "lg:min-w-[calc(50% - 32px)]"
@@ -54,7 +81,7 @@ export default function OverviewCaseImageSection({
           className={cn("w-full h-full object-cover", videoClassName)}
           src={videoSrc}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
