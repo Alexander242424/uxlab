@@ -26,7 +26,7 @@ export default function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const footerParallax = document.querySelector('footer .transition-transform');
+      const footerParallax = document.querySelector('footer .transition-transform') as HTMLElement;
       const insightsSection = document.querySelector('[data-section="insights"]');
       
       if (footerParallax && insightsSection) {
