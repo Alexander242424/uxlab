@@ -7,7 +7,10 @@ interface ScrollingTextVideoSectionProps {
   poster: string;
 }
 
-export default function ScrollingTextVideoSection({ videoSrc, poster }: ScrollingTextVideoSectionProps) {
+export default function ScrollingTextVideoSection({
+  videoSrc,
+  poster,
+}: ScrollingTextVideoSectionProps) {
   const textRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
@@ -24,12 +27,12 @@ export default function ScrollingTextVideoSection({ videoSrc, poster }: Scrollin
     const animate = () => {
       position -= 2; // Змінюємо на негативне значення для руху справа наліво
       textElement.style.transform = `translateX(${position}px)`;
-      
+
       // Скидаємо позицію коли текст повністю вийшов зліва
       if (position <= -textElement.offsetWidth / 2) {
         position = 0;
       }
-      
+
       animationId = requestAnimationFrame(animate);
     };
 
@@ -66,28 +69,34 @@ export default function ScrollingTextVideoSection({ videoSrc, poster }: Scrollin
   };
 
   return (
-    <div className="relative w-full h-[720px] overflow-hidden">
+    <div className="relative w-full h-[390px] md:h-[840px] overflow-hidden">
       {/* Scrolling text background */}
       <div className="absolute inset-0 flex items-center">
-        <div 
+        <div
           ref={textRef}
           className="tt-hoves font-light text-text-700 select-none whitespace-nowrap"
-          style={{ 
-            transform: 'translateX(0px)',
-            willChange: 'transform',
-            fontSize: 'clamp(60px, 15vw, 175px)', // Адаптивний розмір шрифту
-            lineHeight: 'clamp(30px, 8vw, 80px)', // Адаптивна висота рядка
-            letterSpacing: '-0.04em',
-            verticalAlign: 'middle'
+          style={{
+            transform: "translateX(0px)",
+            willChange: "transform",
+            fontSize: "clamp(60px, 15vw, 175px)",
+            lineHeight: "clamp(30px, 8vw, 80px)",
+            letterSpacing: "-0.04em",
+            verticalAlign: "middle",
           }}
         >
-          View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case    View Next Case
+          {Array(20)
+            .fill("View Next Case")
+            .map((text, i) => (
+              <span key={i} style={{ marginRight: "0.5em" }}>
+                {text}
+              </span>
+            ))}
         </div>
       </div>
 
       {/* Centered video block */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div 
+        <div
           className="w-[280px] h-[360px] sm:w-[400px] sm:h-[500px] md:w-[560px] md:h-[720px] rounded-xl overflow-hidden relative"
           onMouseEnter={() => {
             if (!isMobile) {
@@ -100,10 +109,10 @@ export default function ScrollingTextVideoSection({ videoSrc, poster }: Scrollin
             }
           }}
           onMouseMove={handleMouseMove}
-          style={{ cursor: isHovering && !isMobile ? 'none' : 'default' }}
+          style={{ cursor: isHovering && !isMobile ? "none" : "default" }}
         >
           {/* Video with custom autoplay logic */}
-          <video 
+          <video
             ref={videoRef}
             src={videoSrc}
             poster={poster}
@@ -112,7 +121,7 @@ export default function ScrollingTextVideoSection({ videoSrc, poster }: Scrollin
             playsInline
             loop
           />
-          
+
           {/* Custom cursor overlay - positioned relative to viewport */}
           {isHovering && !isMobile && (
             <div
