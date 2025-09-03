@@ -69,24 +69,52 @@ export default function CasesOutcome() {
               }}
             >
               <div className="flex w-full gap-2">
-                <p
+                <SplitText
+                  text={outcome.title}
                   className="font-[300] text-[104px] leading-[104px] lg:text-[168px] lg:leading-[144px]"
+                  splitType="chars"
+                  delay={100 + index * 150}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="100px"
+                  textAlign="left"
                   style={{
                     letterSpacing: "-3%",
                   }}
-                >
-                  {outcome.title}
-                </p>
-                <p
+                />
+                <SplitText
+                  text="+"
                   className="font-[300] text-[48px] leading-[44px]"
+                  splitType="chars"
+                  delay={100 + index * 150}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="100px"
+                  textAlign="left"
                   style={{
                     letterSpacing: "-3%",
                   }}
-                >
-                  +
-                </p>
+                />
               </div>
-              <p className="hoves-p1-reg text-text-500">{outcome.subtitle}</p>
+              <SplitText
+                text={outcome.subtitle}
+                className="hoves-p1-reg text-text-500"
+                splitType="lines"
+                delay={200 + index * 150}
+                duration={0.8}
+                ease="power3.out"
+                from={{ opacity: 0, y: 50 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="100px"
+                textAlign="left"
+              />
             </motion.div>
           ))}
         </div>
