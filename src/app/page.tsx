@@ -46,7 +46,7 @@ export default function HomePage() {
         <TextSection
           className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
           firstText="The design dream team for founders"
-          secondText="obsessed with speed and efficiency, clients raised over $600M+ in 2024 alone."
+          secondText={["obsessed with speed and efficiency, clients", "raised over $600M+ in 2024 alone."]}
         />
         <ServiceItems />
         <OurCases />
@@ -62,7 +62,7 @@ export default function HomePage() {
           <TextSection
             className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
             firstText="After shipping hundreds of products,"
-            secondText="there are a few key things we've learned are needed to do the best work"
+            secondText={["there are a few key things we've learned", "are needed to do the best work"]}
             textColor="text-black"
           />
           <HoverSection />
@@ -75,7 +75,7 @@ export default function HomePage() {
           <QuestionSections />
           <TextSection
             firstText="Work seamlessly with a creative"
-            secondText={"team that's built to match your pace & exceed your expectations."}
+            secondText={["team that's built to match your pace and","exceed your expectations."]}
             showButton={true}
             textColor="text-black"
             className="mb-[96px] lg:pb-[161px] px-4 lg:px-10"

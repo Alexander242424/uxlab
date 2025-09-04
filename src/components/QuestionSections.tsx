@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import AvatarsSVG from "@/assets/avatars.svg";
 import { motion, useInView } from "motion/react";
+import SplitText from "./SplitText";
 import {
   Accordion,
   AccordionContent,
@@ -79,9 +80,21 @@ export default function QuestionSections() {
             },
           }}
         >
-          <h3 className="hoves-p1-reg mb-4 lg:mb-20">
-            Frequently Asked Question
-          </h3>
+          <div className="mb-4 lg:mb-20">
+            <SplitText
+              text="Frequently Asked Question"
+              className="hoves-p1-reg"
+              splitType="lines"
+              delay={100}
+              duration={0.5}
+              ease="power3.out"
+              from={{ opacity: 0, y: 50 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="0px"
+              textAlign="left"
+            />
+          </div>
           <motion.div
             className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] lg:h-[340px] lg:max-w-[456px]"
             initial={{ opacity: 0, y: 100 }}
