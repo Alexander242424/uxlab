@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface TextSectionProps {
   firstText: string;
-  secondText: string;
+  secondText: string | string[];
   showButton?: boolean;
   buttonText?: string;
   className?: string;
@@ -28,30 +28,39 @@ export default function TextSection({
 }: TextSectionProps) {
   const isMobile = useIsMobile();
 
+  // Convert secondText to array if it's a string
+  const secondTextArray = Array.isArray(secondText) ? secondText : [secondText];
+
+  // Create combined array for mobile: firstText + secondTextArray
+  const mobileTextArray = [firstText, ...secondTextArray];
+
   return (
     <div className={`flex flex-col w-full ${className}`}>
       {isMobile ? (
         <div>
-          <SplitText
-            text={firstText + " " + secondText}
-            className={textColor}
-            style={{
-              fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-              fontWeight: 300,
-              fontSize: "clamp(2rem, 8vw, 7.5rem)",
-              lineHeight: "1.10",
-              letterSpacing: "-0.03em",
-            }}
-            splitType="auto-lines"
-            delay={200}
-            duration={1.2}
-            ease="power3.out"
-            from={{ opacity: 0, y: 100 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={threshold}
-            rootMargin={rootMargin}
-            textAlign="left"
-          />
+          {mobileTextArray.map((text, index) => (
+            <SplitText
+              key={index}
+              text={text}
+              className={textColor}
+              style={{
+                fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
+                fontWeight: 300,
+                fontSize: "clamp(2rem, 8vw, 7.5rem)",
+                lineHeight: "1.10",
+                letterSpacing: "-0.03em",
+              }}
+              splitType="lines"
+              delay={100 + index * 300} // Staggered delay for each line
+              duration={1.2}
+              ease="power3.out"
+              from={{ opacity: 0, y: 100 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={threshold}
+              rootMargin={rootMargin}
+              textAlign="left"
+            />
+          ))}
         </div>
       ) : (
         <>
@@ -67,8 +76,8 @@ export default function TextSection({
                 lineHeight: "1.10",
                 letterSpacing: "-0.03em",
               }}
-              splitType="auto-lines"
-              delay={200}
+              splitType="lines"
+              delay={100}
               duration={1.2}
               ease="power3.out"
               from={{ opacity: 0, y: 100 }}
@@ -79,28 +88,31 @@ export default function TextSection({
             />
           </div>
 
-          {/* Second text with SplitText animation */}
+          {/* Second text with SplitText animation - each line as separate SplitText */}
           <div>
-            <SplitText
-              text={secondText}
-              className={textColor}
-              style={{
-                fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                fontWeight: 300,
-                fontSize: "clamp(2rem, 5vw, 7.5rem)",
-                lineHeight: "1.10",
-                letterSpacing: "-0.03em",
-              }}
-              splitType="auto-lines"
-              delay={200}
-              duration={1.2}
-              ease="power3.out"
-              from={{ opacity: 0, y: 100 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={threshold}
-              rootMargin={rootMargin}
-              textAlign="left"
-            />
+            {secondTextArray.map((text, index) => (
+              <SplitText
+                key={index}
+                text={text}
+                className={textColor}
+                style={{
+                  fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
+                  fontWeight: 300,
+                  fontSize: "clamp(2rem, 5vw, 7.5rem)",
+                  lineHeight: "1.10",
+                  letterSpacing: "-0.03em",
+                }}
+                splitType="lines"
+                delay={200 + index * 300} // Staggered delay for each line
+                duration={1.2}
+                ease="power3.out"
+                from={{ opacity: 0, y: 100 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={threshold}
+                rootMargin={rootMargin}
+                textAlign="left"
+              />
+            ))}
           </div>
         </>
       )}

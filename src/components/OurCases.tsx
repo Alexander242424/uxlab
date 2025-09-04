@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { gsap } from "gsap";
 import VideoPlayer from "./VideoPlayer";
+import SplitText from "./SplitText";
 import OptionImage from "../assets/image/OurCases/Option 22.png";
 import ShapphireImage from "../assets/image/OurCases/Shapphire 5.png";
 import GuideImage from "../assets/image/OurCases/Option 28.png";
@@ -280,16 +281,29 @@ export default function OurCases() {
         </div>
       )}
 
-      <motion.h2
-        className="hoves-p1-reg text-text-700"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+      <div className="hoves-p1-reg text-text-700">
+        <SplitText
+          text="Our Cases"
+          className="hoves-p1-reg text-text-700"
+          splitType="lines"
+          delay={100}
+          duration={0.5}
+          ease="power3.out"
+          from={{ opacity: 0, y: 50 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="0px"
+          textAlign="left"
+        />
+      </div>
+      
+      <div 
+        className="flex gap-2 lg:gap-8 overflow-x-auto"
+        style={{
+          scrollbarWidth: 'none', // Firefox
+          msOverflowStyle: 'none', // IE and Edge
+        }}
       >
-        Our Cases
-      </motion.h2>
-      <div className="flex gap-2 lg:gap-8 overflow-x-auto">
         {cases.map((item, index) => (
           <div
             key={index}

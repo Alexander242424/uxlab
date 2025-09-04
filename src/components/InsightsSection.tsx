@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Background from "../assets/image/Insights/Background.png";
 import { motion, useInView } from "motion/react";
+import SplitText from "./SplitText";
 
 const insightsData = [
   {
@@ -55,18 +56,23 @@ export default function InsightsSection() {
           animate={{ scaleX: isInView ? 1 : 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
-        <motion.div
+        <div
           className="flex py-4 lg:py-8 hoves-p1-reg"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{
-            duration: 0.6,
-            ease: "easeOut",
-          }}
         >
-          <p className="text-black">Insights, Inspirations</p>
-        </motion.div>
+          <SplitText
+              text="Insights, Inspirations"
+              className="hoves-p1-reg text-black"
+              splitType="lines"
+              delay={100}
+              duration={0.5}
+              ease="power3.out"
+              from={{ opacity: 0, y: 50 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="0px"
+              textAlign="left"
+            />
+        </div>
 
         <div className="flex flex-row gap-8 w-full overflow-x-auto">
           {insightsData.map((insight, index) => (

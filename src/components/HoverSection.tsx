@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useCallback } from "react";
 
 interface SectionData {
@@ -12,12 +13,15 @@ const sections: SectionData[] = [
   {
     id: 1,
     title: "01",
-    content: "",
+    content:
+      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
   },
   {
     id: 2,
     title: "02",
-    content: "",
+    content:
+      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+
   },
   {
     id: 3,
@@ -34,7 +38,9 @@ const sections: SectionData[] = [
   {
     id: 5,
     title: "05",
-    content: "",
+    content:
+      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+
   },
 ];
 
@@ -71,7 +77,7 @@ const HoverSection: React.FC = () => {
     if (hoveredSection) {
       const timer = setTimeout(() => {
         setShowContent(hoveredSection);
-      }, 800);
+      }, 400); // Зменшено з 800ms до 400ms
 
       return () => {
         clearTimeout(timer);
@@ -98,11 +104,11 @@ const HoverSection: React.FC = () => {
       )}
 
       <div className="flex flex-col md:flex-row">
-        {sections.map((section) => (
+        {sections.map((section, index) => (
           <div
             key={section.id}
             className={`overflow-hidden relative border-r border-border-100 last:border-r-0 transition-all duration-1000 ease-in-out hover-section group flex-smooth ${
-              hoveredSection === section.id ? "bg-bg-gray" : "hover:bg-bg-white"
+              index === 0 ? 'lg:border-l lg:border-border-100' : ''
             }`}
             style={{
               flexBasis:
@@ -110,7 +116,7 @@ const HoverSection: React.FC = () => {
                   ? "50%"
                   : `${100 / sections.length}%`,
               transition:
-                "flex-basis 0.6s ease-in-out, background-color 0.7s ease-out",
+                "flex-basis 0.3s ease-in-out, background-color 0.3s ease-out",
             }}
             onMouseEnter={() => {
               if (!isMobile) {
@@ -132,15 +138,19 @@ const HoverSection: React.FC = () => {
 
             {/* Контент секції */}
             <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-72 flex flex-col justify-end">
-              <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-5">
+              <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-0">
                 {/* Підпис "UX Analysis" - завжди зліва */}
-                <div className="flex-shrink-0 hoves-h6-med text-black">
+                <div className={cn("flex-shrink-0 hoves-h6-med text-black", isMobile ? "hoves-p1-reg" : "hoves-h6-med")}
+                style={{
+                  minWidth: `${(100 / sections.length)-2}dvw`,
+                }}>
                   UX Analysis
                 </div>
 
                 {/* Контент - справа від підпису */}
                 {section.content && (
-                  <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-510 delay-0 max-w-[calc(100%-200px)] flex-1">
+                  // <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-200 delay-0 max-w-[calc(100%-200px)] flex-1">
+                  <div className="hidden lg:flex transition-all duration-300 max-h-[35dvh] min-w-[35dvh] md:pr-[5%]">
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
@@ -156,7 +166,7 @@ const HoverSection: React.FC = () => {
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
-                        <p className="text-black hoves-p1-reg">
+                        <p className="text-black hoves-p2-reg">
                           {section.content}
                         </p>
                       </div>

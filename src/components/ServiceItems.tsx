@@ -28,6 +28,17 @@ const services: ServiceItem[] = [
 ];
 
 export default function ServiceItems() {
+  // Define text arrays for SplitText components
+  const firstParagraph = [
+    "Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
+  ];
+  
+  const secondParagraph = [
+    "UXLab is the design partner teams turn to when speed",
+    "and quality matter most. Our approach is fast and",
+    "flexible - purpose built for startup speed."
+  ];
+
   return (
     <section
       id="services"
@@ -61,11 +72,35 @@ export default function ServiceItems() {
               textAlign="left"
             />
             <div className="block lg:hidden w-full">
+              {firstParagraph.map((text, index) => (
+                <SplitText
+                  key={index}
+                  text={text}
+                  className="text-text-700 hoves-p1-reg"
+                  splitType="lines"
+                  delay={100 + index * 200}
+                  duration={0.5}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-200px"
+                  textAlign="left"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-7 flex flex-col">
+          <div className="space-y-6 mb-20 max-w-[456px] not-lg:hidden">
+            {firstParagraph.map((text, index) => (
               <SplitText
-                text="Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
-                className="text-text-700 hoves-p1-reg"
+                key={index}
+                text={text}
+                className="text-text-700 leading-relaxed hoves-p1-reg"
                 splitType="lines"
-                delay={100}
+                delay={100 + index * 200}
                 duration={0.5}
                 ease="power3.out"
                 from={{ opacity: 0, y: 50 }}
@@ -74,38 +109,25 @@ export default function ServiceItems() {
                 rootMargin="-200px"
                 textAlign="left"
               />
+            ))}
+            <div>
+            {secondParagraph.map((text, index) => (
+              <SplitText
+                key={`second-${index}`}
+                text={text}
+                className="text-text-700 leading-relaxed hoves-p1-reg"
+                splitType="lines"
+                delay={100 + (firstParagraph.length + index) * 200}
+                duration={0.5}
+                ease="power3.out"
+                from={{ opacity: 0, y: 50 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-200px"
+                textAlign="left"
+              />
+            ))}
             </div>
-          </div>
-        </div>
-
-        <div className="lg:col-span-7 flex flex-col">
-          <div className="space-y-6 mb-20 max-w-[456px] not-lg:hidden">
-            <SplitText
-              text="Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
-              className="text-text-700 leading-relaxed hoves-p1-reg"
-              splitType="lines"
-              delay={100}
-              duration={0.5}
-              ease="power3.out"
-              from={{ opacity: 0, y: 50 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-200px"
-              textAlign="left"
-            />
-            <SplitText
-              text="UXLab is the design partner teams turn to when speed and quality matter most. Our approach is fast and flexible - purpose built for startup speed."
-              className="text-text-700 leading-relaxed hoves-p1-reg"
-              splitType="lines"
-              delay={100}
-              duration={0.5}
-              ease="power3.out"
-              from={{ opacity: 0, y: 50 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-200px"
-              textAlign="left"
-            />
           </div>
 
           <div className="space-y-0">
