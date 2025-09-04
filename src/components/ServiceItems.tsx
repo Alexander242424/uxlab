@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import SplitText from "./SplitText";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface ServiceItem {
   title: string;
@@ -27,18 +28,20 @@ const services: ServiceItem[] = [
   },
 ];
 
-export default function ServiceItems() {
-  // Define text arrays for SplitText components
-  const firstParagraph = [
-    "Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
-  ];
-  
-  const secondParagraph = [
-    "UXLab is the design partner teams turn to when speed",
-    "and quality matter most. Our approach is fast and",
-    "flexible - purpose built for startup speed."
-  ];
+// Define text arrays for SplitText components
+const firstParagraph = [
+  "Over 10 years grinding alongside founders with a chip",
+  "on their shoulder and a story that needs telling.",
+];
 
+const secondParagraph = [
+  "UXLab is the design partner teams turn to when speed",
+  "and quality matter most. Our approach is fast and",
+  "flexible - purpose built for startup speed.",
+];
+
+export default function ServiceItems() {
+  const isMobile = useIsMobile();
   return (
     <section
       id="services"
@@ -63,28 +66,29 @@ export default function ServiceItems() {
               className="text-text-700 hoves-p1-reg"
               splitType="lines"
               delay={100}
-              duration={0.5}
+              duration={0.8}
               ease="power3.out"
               from={{ opacity: 0, y: 50 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0}
-              rootMargin="-200px"
+              threshold={0.1}
+              rootMargin={isMobile ? "-100px" : "-200px"}
               textAlign="left"
             />
-            <div className="block lg:hidden w-full">
+            <div className="flex flex-col lg:hidden w-full">
               {firstParagraph.map((text, index) => (
                 <SplitText
                   key={index}
                   text={text}
                   className="text-text-700 hoves-p1-reg"
+                  globalIndex={1 + index} // Продовжуємо після заголовка
                   splitType="lines"
-                  delay={100 + index * 200}
-                  duration={0.5}
+                  delay={100}
+                  duration={0.8}
                   ease="power3.out"
                   from={{ opacity: 0, y: 50 }}
                   to={{ opacity: 1, y: 0 }}
-                  threshold={0}
-                  rootMargin="-200px"
+                  threshold={0.1}
+                  rootMargin="100px"
                   textAlign="left"
                 />
               ))}
@@ -94,39 +98,44 @@ export default function ServiceItems() {
 
         <div className="lg:col-span-7 flex flex-col">
           <div className="space-y-6 mb-20 max-w-[456px] not-lg:hidden">
-            {firstParagraph.map((text, index) => (
-              <SplitText
-                key={index}
-                text={text}
-                className="text-text-700 leading-relaxed hoves-p1-reg"
-                splitType="lines"
-                delay={100 + index * 200}
-                duration={0.5}
-                ease="power3.out"
-                from={{ opacity: 0, y: 50 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={0}
-                rootMargin="-200px"
-                textAlign="left"
-              />
-            ))}
-            <div>
-            {secondParagraph.map((text, index) => (
-              <SplitText
-                key={`second-${index}`}
-                text={text}
-                className="text-text-700 leading-relaxed hoves-p1-reg"
-                splitType="lines"
-                delay={100 + (firstParagraph.length + index) * 200}
-                duration={0.5}
-                ease="power3.out"
-                from={{ opacity: 0, y: 50 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={0}
-                rootMargin="-200px"
-                textAlign="left"
-              />
-            ))}
+            <div className="flex flex-col">
+              {firstParagraph.map((text, index) => (
+                <SplitText
+                  key={index}
+                  text={text}
+                  className="text-text-700 leading-relaxed hoves-p1-reg"
+                  globalIndex={1 + index} // Продовжуємо після заголовка
+                  splitType="lines"
+                  delay={100}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="100px"
+                  textAlign="left"
+                />
+              ))}
+            </div>
+
+            <div className="flex flex-col">
+              {secondParagraph.map((text, index) => (
+                <SplitText
+                  key={`second-${index}`}
+                  text={text}
+                  className="text-text-700 leading-relaxed hoves-p1-reg"
+                  globalIndex={1 + firstParagraph.length + index} // Продовжуємо після першого абзацу
+                  splitType="lines"
+                  delay={100}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="100px"
+                  textAlign="left"
+                />
+              ))}
             </div>
           </div>
 
