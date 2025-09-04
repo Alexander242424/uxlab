@@ -24,7 +24,7 @@ export default function TextSection({
   className = "",
   textColor = "text-text-700",
   rootMargin = "-100px",
-  threshold = 0.3,
+  threshold = 0.6,
 }: TextSectionProps) {
   const isMobile = useIsMobile();
 
@@ -43,6 +43,7 @@ export default function TextSection({
               key={index}
               text={text}
               className={textColor}
+              globalIndex={index} // Додаємо глобальний індекс
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
@@ -51,7 +52,7 @@ export default function TextSection({
                 letterSpacing: "-0.03em",
               }}
               splitType="lines"
-              delay={100 + index * 300} // Staggered delay for each line
+              delay={100}
               duration={1.2}
               ease="power3.out"
               from={{ opacity: 0, y: 100 }}
@@ -69,6 +70,7 @@ export default function TextSection({
             <SplitText
               text={firstText}
               className={textColor}
+              globalIndex={0} // Перший елемент
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
@@ -95,6 +97,7 @@ export default function TextSection({
                 key={index}
                 text={text}
                 className={textColor}
+                globalIndex={1 + index} // Продовжуємо нумерацію після першого тексту
                 style={{
                   fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                   fontWeight: 300,
@@ -103,7 +106,7 @@ export default function TextSection({
                   letterSpacing: "-0.03em",
                 }}
                 splitType="lines"
-                delay={200 + index * 300} // Staggered delay for each line
+                delay={200}
                 duration={1.2}
                 ease="power3.out"
                 from={{ opacity: 0, y: 100 }}
