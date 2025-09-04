@@ -42,7 +42,7 @@ export default function TextSection({
               lineHeight: "1.10",
               letterSpacing: "-0.03em",
             }}
-            splitType="auto-lines"
+            splitType="lines"
             delay={200}
             duration={1.2}
             ease="power3.out"
@@ -67,7 +67,7 @@ export default function TextSection({
                 lineHeight: "1.10",
                 letterSpacing: "-0.03em",
               }}
-              splitType="auto-lines"
+              splitType="lines"
               delay={200}
               duration={1.2}
               ease="power3.out"
@@ -91,7 +91,7 @@ export default function TextSection({
                 lineHeight: "1.10",
                 letterSpacing: "-0.03em",
               }}
-              splitType="auto-lines"
+              splitType="lines"
               delay={200}
               duration={1.2}
               ease="power3.out"
