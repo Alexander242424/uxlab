@@ -26,33 +26,34 @@ export default function TextSection({
   rootMargin = "-100px",
   threshold = 0.3,
 }: TextSectionProps) {
-
   const isMobile = useIsMobile();
 
   return (
     <div className={`flex flex-col w-full ${className}`}>
-      {isMobile ? (<div>
-        <SplitText
-          text={firstText + " " + secondText}
-          className={textColor}
-          style={{
-            fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(2rem, 8vw, 7.5rem)",
-            lineHeight: "1.15",
-            letterSpacing: "-0.03em",
-          }}
-          splitType="lines"
-          delay={200}
-          duration={1.2}
-          ease="power3.out"
-          from={{ opacity: 0, y: 100 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={threshold}
-          rootMargin={rootMargin}
-          textAlign="left"
-        />
-      </div>) : (
+      {isMobile ? (
+        <div>
+          <SplitText
+            text={firstText + " " + secondText}
+            className={textColor}
+            style={{
+              fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
+              fontWeight: 300,
+              fontSize: "clamp(2rem, 8vw, 7.5rem)",
+              lineHeight: "1.10",
+              letterSpacing: "-0.03em",
+            }}
+            splitType="lines"
+            delay={200}
+            duration={1.2}
+            ease="power3.out"
+            from={{ opacity: 0, y: 100 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={threshold}
+            rootMargin={rootMargin}
+            textAlign="left"
+          />
+        </div>
+      ) : (
         <>
           {/* First text with SplitText animation */}
           <div className="flex justify-start md:justify-start lg:justify-end">
@@ -63,7 +64,7 @@ export default function TextSection({
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
                 fontSize: "clamp(2rem, 5vw, 7.5rem)",
-                lineHeight: "1.15",
+                lineHeight: "1.10",
                 letterSpacing: "-0.03em",
               }}
               splitType="lines"
@@ -87,7 +88,7 @@ export default function TextSection({
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
                 fontSize: "clamp(2rem, 5vw, 7.5rem)",
-                lineHeight: "1.15",
+                lineHeight: "1.10",
                 letterSpacing: "-0.03em",
               }}
               splitType="lines"

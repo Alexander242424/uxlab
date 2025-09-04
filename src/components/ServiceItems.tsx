@@ -29,7 +29,10 @@ const services: ServiceItem[] = [
 
 export default function ServiceItems() {
   return (
-    <section id="services" className="bg-bg-black mx-4 lg:mx-10 pt-10 lg:pt-20 relative overflow-hidden">
+    <section
+      id="services"
+      className="bg-bg-black mx-4 lg:mx-10 pt-10 lg:pt-20 relative overflow-hidden"
+    >
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
         style={{
@@ -42,22 +45,19 @@ export default function ServiceItems() {
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-12">
-        <div
-          className="lg:col-span-3 flex items-start"
-
-        >
+        <div className="lg:col-span-3 flex items-start">
           <div className="grid not-lg:grid-cols-2 not-lg:gap-8 w-full">
             <SplitText
               text="Your Grow Starts Here"
               className="text-text-700 hoves-p1-reg"
               splitType="lines"
               delay={100}
-              duration={0.8}
+              duration={0.5}
               ease="power3.out"
               from={{ opacity: 0, y: 50 }}
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
-              rootMargin="100px"
+              rootMargin="-200px"
               textAlign="left"
             />
             <div className="block lg:hidden w-full">
@@ -66,12 +66,12 @@ export default function ServiceItems() {
                 className="text-text-700 hoves-p1-reg"
                 splitType="lines"
                 delay={100}
-                duration={0.8}
+                duration={0.5}
                 ease="power3.out"
                 from={{ opacity: 0, y: 50 }}
                 to={{ opacity: 1, y: 0 }}
                 threshold={0.1}
-                rootMargin="100px"
+                rootMargin="-200px"
                 textAlign="left"
               />
             </div>
@@ -79,20 +79,18 @@ export default function ServiceItems() {
         </div>
 
         <div className="lg:col-span-7 flex flex-col">
-          <div
-            className="space-y-6 mb-20 max-w-[456px] not-lg:hidden"
-          >
+          <div className="space-y-6 mb-20 max-w-[456px] not-lg:hidden">
             <SplitText
               text="Over 10 years grinding alongside founders with a chip on their shoulder and a story that needs telling."
               className="text-text-700 leading-relaxed hoves-p1-reg"
               splitType="lines"
               delay={100}
-              duration={0.8}
+              duration={0.5}
               ease="power3.out"
               from={{ opacity: 0, y: 50 }}
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
-              rootMargin="100px"
+              rootMargin="-200px"
               textAlign="left"
             />
             <SplitText
@@ -100,12 +98,12 @@ export default function ServiceItems() {
               className="text-text-700 leading-relaxed hoves-p1-reg"
               splitType="lines"
               delay={100}
-              duration={0.8}
+              duration={0.5}
               ease="power3.out"
               from={{ opacity: 0, y: 50 }}
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
-              rootMargin="100px"
+              rootMargin="-200px"
               textAlign="left"
             />
           </div>

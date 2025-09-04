@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import ArrowRightSVG from "@/assets/arrow-right.svg";
-import SplitText from "@/components/SplitText";
+import WeMakeInterfacesSVG from "@/assets/We Make Interfaces";
 import { motion } from "motion/react";
 
 export default function Footer() {
@@ -188,28 +188,7 @@ export default function Footer() {
 
       {/* Фіксована частина без паралаксу */}
       <div className="mx-4 lg:mx-0">
-        <SplitText
-          text="We Make Interfaces"
-          className="
-          w-full 
-          text-center 
-          whitespace-nowrap
-          [font-size:clamp(1rem,10.3vw,9rem)]
-          md:[font-size:clamp(1rem,10.2vw,10rem)]
-          lg:[font-size:clamp(1rem,10.6vw,10rem)]
-          2xl:[font-size:clamp(1rem,15vw,16rem)]
-          [-letter-spacing:0.04em] 
-          [font-family:var(--font-tt-hoves)] 
-          font-light
-        "  
-          delay={30}
-          duration={1}
-          ease="power3.out"
-          splitType="words, chars"
-          from={{ opacity: 0.9, y: -200 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-        />
+        <WeMakeInterfacesSVG />
       </div>
     </footer>
   );
