@@ -75,7 +75,7 @@ export default function HomePage() {
           <QuestionSections />
           <TextSection
             firstText="Work seamlessly with a creative"
-            secondText="team that's built to match your pace and exceed your expectations."
+            secondText={"team that's built to match your pace & exceed your expectations."}
             showButton={true}
             textColor="text-black"
             className="mb-[96px] lg:pb-[161px] px-4 lg:px-10"
