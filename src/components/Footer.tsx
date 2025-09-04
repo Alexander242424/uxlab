@@ -187,7 +187,7 @@ export default function Footer() {
       </div>
 
       {/* Фіксована частина без паралаксу */}
-      <div className="mx-4 lg:mx-0">
+      <div className="mx-4 pb-4 lg:mx-10 lg:pb-10">
         <WeMakeInterfacesSVG />
       </div>
     </footer>

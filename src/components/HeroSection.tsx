@@ -68,7 +68,7 @@ export default function HeroSection() {
           </div>
         </div>
       </motion.div>
-      <div className="mt-auto px-4 lg:px-10">
+      <div className="mt-auto pb-4 px-4 lg:px-10 lg:pb-10">
         <WeMakeInterfacesSVG />
       </div>
     </div>
