@@ -17,6 +17,7 @@ export interface SplitTextProps {
   rootMargin?: string;
   textAlign?: React.CSSProperties["textAlign"];
   onLetterAnimationComplete?: () => void;
+  globalIndex?: number; // Додаємо глобальний індекс
 }
 
 // Типи для різних частин тексту
@@ -44,6 +45,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   rootMargin = "-100px",
   textAlign = "center",
   onLetterAnimationComplete,
+  globalIndex = 0, // По замовчуванню 0
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -172,7 +174,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               animate={inView ? to : from}
               transition={{
                 duration,
-                delay: (delay / 1000) * index,
+                delay: (delay / 1000) + (globalIndex * 0.3) + (index * 0.1), // Використовуємо globalIndex
                 ease: framerEase,
               }}
               onAnimationComplete={() => {
@@ -200,7 +202,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               animate={inView ? to : from}
               transition={{
                 duration,
-                delay: (delay / 1000) * index,
+                delay: (delay / 1000) + (globalIndex * 0.3) + (index * 0.1), // Використовуємо globalIndex
                 ease: framerEase,
               }}
               onAnimationComplete={() => {
@@ -233,7 +235,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               animate={inView ? to : from}
               transition={{
                 duration,
-                delay: (delay / 1000) * part.index,
+                delay: (delay / 1000) + (globalIndex * 0.3) + (part.index * 0.05), // Використовуємо globalIndex
                 ease: framerEase,
               }}
               onAnimationComplete={() => {
@@ -264,7 +266,7 @@ const SplitText: React.FC<SplitTextProps> = ({
             animate={inView ? to : from}
             transition={{
               duration,
-              delay: (delay / 1000) * index,
+              delay: (delay / 1000) + (globalIndex * 0.3) + (index * 0.05), // Використовуємо globalIndex
               ease: framerEase,
             }}
             onAnimationComplete={() => {
