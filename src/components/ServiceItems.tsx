@@ -67,7 +67,7 @@ export default function ServiceItems() {
               ease="power3.out"
               from={{ opacity: 0, y: 50 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
+              threshold={0}
               rootMargin="-200px"
               textAlign="left"
             />
@@ -83,7 +83,7 @@ export default function ServiceItems() {
                   ease="power3.out"
                   from={{ opacity: 0, y: 50 }}
                   to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
+                  threshold={0}
                   rootMargin="-200px"
                   textAlign="left"
                 />
@@ -105,7 +105,7 @@ export default function ServiceItems() {
                 ease="power3.out"
                 from={{ opacity: 0, y: 50 }}
                 to={{ opacity: 1, y: 0 }}
-                threshold={0.1}
+                threshold={0}
                 rootMargin="-200px"
                 textAlign="left"
               />
@@ -122,7 +122,7 @@ export default function ServiceItems() {
                 ease="power3.out"
                 from={{ opacity: 0, y: 50 }}
                 to={{ opacity: 1, y: 0 }}
-                threshold={0.1}
+                threshold={0}
                 rootMargin="-200px"
                 textAlign="left"
               />

@@ -57,7 +57,7 @@ export default function TextSection({
               ease="power3.out"
               from={{ opacity: 0, y: 100 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={threshold}
+              threshold={0}
               rootMargin={rootMargin}
               textAlign="left"
             />
@@ -80,7 +80,7 @@ export default function TextSection({
               }}
               splitType="lines"
               delay={100}
-              duration={1.2}
+              duration={1}
               ease="power3.out"
               from={{ opacity: 0, y: 100 }}
               to={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function TextSection({
                 }}
                 splitType="lines"
                 delay={200}
-                duration={1.2}
+                duration={1}
                 ease="power3.out"
                 from={{ opacity: 0, y: 100 }}
                 to={{ opacity: 1, y: 0 }}
