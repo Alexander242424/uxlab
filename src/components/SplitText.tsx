@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -10,7 +10,7 @@ export interface SplitTextProps {
   delay?: number;
   duration?: number;
   ease?: string;
-  splitType?: "chars" | "words" | "lines" | "words, chars";
+  splitType?: "chars" | "words" | "lines" | "words, chars" | "auto-lines";
   from?: { opacity: number; y: number };
   to?: { opacity: number; y: number };
   threshold?: number;
@@ -41,6 +41,9 @@ const SplitText: React.FC<SplitTextProps> = ({
   onLetterAnimationComplete,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const measureRef = useRef<HTMLDivElement>(null);
+  const [detectedLines, setDetectedLines] = useState<string[]>([]);
+  const [isMeasuring, setIsMeasuring] = useState(false);
   
   // Використовуємо useInView для визначення, коли елемент видимий
   const [inViewRef, inView] = useInView({
@@ -48,6 +51,77 @@ const SplitText: React.FC<SplitTextProps> = ({
     rootMargin,
     triggerOnce: true, // Анімація виконується тільки один раз
   });
+
+  // Функція для визначення рядків
+  const detectLines = () => {
+    if (!measureRef.current || splitType !== "auto-lines") return;
+    
+    setIsMeasuring(true);
+    
+    // Створюємо невидимий елемент для вимірювання
+    const measureElement = measureRef.current;
+    const words = text.split(' ');
+    const lines: string[] = [];
+    let currentLine = '';
+    
+    // Вимірюємо кожне слово
+    words.forEach((word, index) => {
+      const testLine = currentLine + (currentLine ? ' ' : '') + word;
+      const testSpan = document.createElement('span');
+      testSpan.textContent = testLine;
+      testSpan.style.visibility = 'hidden';
+      testSpan.style.position = 'absolute';
+      testSpan.style.whiteSpace = 'nowrap';
+      testSpan.style.font = window.getComputedStyle(measureElement).font;
+      testSpan.style.fontSize = window.getComputedStyle(measureElement).fontSize;
+      testSpan.style.fontFamily = window.getComputedStyle(measureElement).fontFamily;
+      testSpan.style.fontWeight = window.getComputedStyle(measureElement).fontWeight;
+      testSpan.style.letterSpacing = window.getComputedStyle(measureElement).letterSpacing;
+      testSpan.style.lineHeight = window.getComputedStyle(measureElement).lineHeight;
+      
+      document.body.appendChild(testSpan);
+      const testWidth = testSpan.offsetWidth;
+      document.body.removeChild(testSpan);
+      
+      if (testWidth <= measureElement.offsetWidth) {
+        currentLine = testLine;
+      } else {
+        if (currentLine) {
+          lines.push(currentLine);
+          currentLine = word;
+        } else {
+          lines.push(word);
+        }
+      }
+    });
+    
+    if (currentLine) {
+      lines.push(currentLine);
+    }
+    
+    setDetectedLines(lines);
+    setIsMeasuring(false);
+  };
+
+  // Вимірюємо рядки при зміні тексту або розміру
+  useEffect(() => {
+    if (splitType === "auto-lines") {
+      const timeoutId = setTimeout(detectLines, 100);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [text, splitType]);
+
+  // Вимірюємо при зміні розміру вікна
+  useEffect(() => {
+    if (splitType === "auto-lines") {
+      const handleResize = () => {
+        detectLines();
+      };
+      
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [splitType]);
 
   // Функція для розбиття тексту на частини
   const splitText = (text: string, type: string): (CharPart | WordPart | LinePart | WordCharPart)[] => {
@@ -65,6 +139,12 @@ const SplitText: React.FC<SplitTextProps> = ({
       case "lines":
         // Для ліній використовуємо <br> як роздільник
         return text.split("\n").map((line, index) => ({
+          line,
+          index,
+        } as LinePart));
+      case "auto-lines":
+        // Використовуємо виявлені рядки
+        return detectedLines.map((line, index) => ({
           line,
           index,
         } as LinePart));
@@ -142,9 +222,32 @@ const SplitText: React.FC<SplitTextProps> = ({
 
   // Рендеримо текст залежно від типу розбиття
   const renderText = () => {
-    if (splitType === "lines") {
+    if (splitType === "lines" || splitType === "auto-lines") {
+      // Для auto-lines показуємо текст тільки після вимірювання
+      if (splitType === "auto-lines" && (isMeasuring || detectedLines.length === 0)) {
+        return (
+          <div
+            ref={measureRef}
+            style={{
+              ...style,
+              visibility: 'hidden',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+            }}
+          >
+            {text}
+          </div>
+        );
+      }
+
       return textParts.map((part, index) => {
         if ('line' in part) {
+          // Для рядків: кожен наступний рядок чекає завершення попереднього
+          // Затримка = попередні рядки * (тривалість + затримка між рядками)
+          const lineDelay = index * (duration * 0.15 + (delay / 1000));
+          
           return (
             <motion.span
               key={index}
@@ -152,7 +255,7 @@ const SplitText: React.FC<SplitTextProps> = ({
               animate={inView ? to : from}
               transition={{
                 duration,
-                delay: (delay / 1000) * index,
+                delay: lineDelay,
                 ease: framerEase,
               }}
               onAnimationComplete={() => {
