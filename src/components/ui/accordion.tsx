@@ -36,7 +36,7 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-md lg:pt-8 py-5 pb-3 text-left text-sm font-medium transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
+          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-md lg:pt-10 py-5 pb-5 text-left text-sm font-medium transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
           "[&[data-state=open]>.plus]:hidden",
           "[&[data-state=open]>.minus]:block",
           className
@@ -67,7 +67,7 @@ function AccordionContent({
       className="AccordionContent overflow-hidden text-sm"
       {...props}
     >
-      <div className={cn("pt-0 pb-3", className)}>{children}</div>
+      <div className={cn("pt-0 pb-5", className)}>{children}</div>
     </AccordionPrimitive.Content>
   );
 }

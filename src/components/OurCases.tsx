@@ -297,7 +297,13 @@ export default function OurCases() {
         />
       </div>
       
-      <div className="flex gap-2 lg:gap-8 overflow-x-auto">
+      <div 
+        className="flex gap-2 lg:gap-8 overflow-x-auto"
+        style={{
+          scrollbarWidth: 'none', // Firefox
+          msOverflowStyle: 'none', // IE and Edge
+        }}
+      >
         {cases.map((item, index) => (
           <div
             key={index}

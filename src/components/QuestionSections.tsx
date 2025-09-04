@@ -80,7 +80,7 @@ export default function QuestionSections() {
             },
           }}
         >
-          <div className="mb-4 lg:mb-20">
+          <div className="mb-4 lg:mb-28">
             <SplitText
               text="Frequently Asked Question"
               className="hoves-p1-reg"
@@ -150,7 +150,7 @@ export default function QuestionSections() {
             },
           }}
         >
-          <Accordion type="single" collapsible>
+          <Accordion type="single" collapsible defaultValue="item-1">
             {faqData.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -180,7 +180,7 @@ export default function QuestionSections() {
                   <AccordionTrigger className="hoves-p1-reg text-left">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="hoves-p2-reg">
+                  <AccordionContent className="hoves-p2-reg max-w-[90%]">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
