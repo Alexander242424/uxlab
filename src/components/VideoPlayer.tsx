@@ -45,7 +45,7 @@ export default function VideoPlayer({ src, poster, className = '', onError, cont
       muted={shouldMute}
       loop={loop}
       onError={onError}
-      playsInline={isIOS} // Required for iOS
+      playsInline={true} // Prevent fullscreen on all devices
     >
       <MediaProvider className='w-full h-full video-player-provider' />
     </MediaPlayer>

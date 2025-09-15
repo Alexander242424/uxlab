@@ -2,7 +2,7 @@ import TextSection from "@/components/TextSection";
 
 interface OverviewCaseTestimonialSectionProps {
   firstText: string;
-  secondText: string;
+  secondText: string | string[];
   authorText: string;
 }
 
