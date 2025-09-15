@@ -31,38 +31,15 @@ export default function HeroSection() {
 
           {/* Права частина - містить текстовий блок */}
           <div className="lg:w-1/2 w-full flex justify-start">
-            <div className="flex flex-col max-w-[456px] 2xl:max-w-[1100px]">
-              {/* <SplitText
-              className="hoves-p1-reg 2xl:text-[50px]! 2xl:leading-[60px]!"
-              text="We unite User Experience"
-              delay={500}
-              duration={1}
-              ease="power3.out"
-              splitType="lines"
-              from={{ opacity: 0, y: 100 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.01}
-              textAlign={isMobile ? "left" : "right"}
-            />
-            <SplitText
-              className="hoves-p1-reg 2xl:text-[50px]! 2xl:leading-[60px]!"
-              text="CRO and data-driven design to help digital products convert, scale,
-                and win in competitive markets."
-                delay={1000}
-                duration={2}
-                ease="power3.out"
-                splitType="lines"
-                from={{ opacity: 0, y: 100 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={0.01}
-                textAlign="left"
-            /> */}
-              <p className="text-text-700 hoves-p1-reg lg:text-right 2xl:text-[50px]! 2xl:leading-[60px]!">
-                We unite User Experience
+            <div className="flex flex-col">
+              <p className="text-text-700 hoves-p1-reg lg:text-right md:text-nowrap">
+                We unite User Experience,
               </p>
-              <p className="text-text-700 hoves-p1-reg 2xl:text-[50px]! 2xl:leading-[60px]!">
-                CRO and data-driven design to help digital products convert,
-                scale, and win in competitive markets.
+              <p className="text-text-700 hoves-p1-reg md:text-nowrap">
+                conversions and data-driven design to help digital products,             
+              </p>
+              <p className="text-text-700 hoves-p1-reg md:text-nowrap">
+                products convert, scale, and win in competitive markets.
               </p>
             </div>
           </div>

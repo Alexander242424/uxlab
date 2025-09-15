@@ -1,17 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
-import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { gsap } from "gsap";
-import VideoPlayer from "./VideoPlayer";
-import SplitText from "./SplitText";
-import OptionImage from "../assets/image/OurCases/Option 22.png";
-import ShapphireImage from "../assets/image/OurCases/Shapphire 5.png";
-import GuideImage from "../assets/image/OurCases/Option 28.png";
-import NestpressoLogo from "../assets/image/OurCases/logo/nestpresso.svg";
-import SapphireLogo from "../assets/image/OurCases/logo/sapphire.svg";
-import EmmaLogo from "../assets/image/OurCases/logo/emma.svg";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import OptionImage from "../assets/image/OurCases/Option 22.png";
+import GuideImage from "../assets/image/OurCases/Option 28.png";
+import ShapphireImage from "../assets/image/OurCases/Shapphire 5.png";
+import EmmaLogo from "../assets/image/OurCases/logo/emma.svg";
+import NestpressoLogo from "../assets/image/OurCases/logo/nestpresso.svg";
+import SplitText from "./SplitText";
+import VideoPlayer from "./VideoPlayer";
 
 interface OurCasesItem {
   src: StaticImageData;

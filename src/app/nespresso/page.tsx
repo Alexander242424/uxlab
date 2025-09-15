@@ -1,23 +1,21 @@
-import CasesHeroSections from "@/components/CasesHeroSections";
-import CasesOutcome from "@/components/CasesOutcome";
-import ShowreelSection from "@/components/ShowreelSection";
-import TextSection from "@/components/TextSection";
-import InfoBlock from "@/components/InfoBlock";
-import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
-import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
-import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
-import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
-import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import NespressoLogo from "@/assets/Nespresso Logo.svg";
 import NespressoLogoMobile from "@/assets/Nespresso Logo mobile.svg";
+import NespressoLogo from "@/assets/Nespresso Logo.svg";
+import NespressoCase3 from "@/assets/Nespresso/60GnuqXyzpsH5lC1nnnABRg5Yz8.avif";
 import NespressoCase1 from "@/assets/Nespresso/nR82XOWawuWAy8GHMZeeFWJ3k0.avif";
 import NespressoCase2 from "@/assets/Nespresso/uF1xvIpJ073LZGEw4CqEsTGFg.avif";
-import NespressoCase3 from "@/assets/Nespresso/60GnuqXyzpsH5lC1nnnABRg5Yz8.avif";
+import CasesHeroSections from "@/components/CasesHeroSections";
+import InfoBlock from "@/components/InfoBlock";
+import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
+import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
+import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
+import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
+import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
+import ShowreelSection from "@/components/ShowreelSection";
 
 export default function NespressoPage() {
   return (
     <div className="flex flex-col">
-      <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
+      <div className="w-full">
         <CasesHeroSections
           logo={<NespressoLogo />}
           logoMobile={<NespressoLogoMobile />}

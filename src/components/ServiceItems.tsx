@@ -97,13 +97,13 @@ export default function ServiceItems() {
         </div>
 
         <div className="lg:col-span-7 flex flex-col">
-          <div className="space-y-6 mb-20 max-w-[456px] not-lg:hidden">
+          <div className="space-y-6 mb-20 w-full not-lg:hidden">
             <div className="flex flex-col">
               {firstParagraph.map((text, index) => (
                 <SplitText
                   key={index}
                   text={text}
-                  className="text-text-700 leading-relaxed hoves-p1-reg"
+                  className="text-text-700 hoves-p1-reg"
                   globalIndex={1 + index} // Продовжуємо після заголовка
                   splitType="lines"
                   delay={100}
