@@ -47,7 +47,7 @@ export default function TextSection({
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
-                fontSize: "clamp(2rem, 8vw, 7.5rem)",
+                fontSize: "clamp(1rem, 5vw, 7.5rem)",
                 lineHeight: "1.10",
                 letterSpacing: "-0.03em",
               }}
