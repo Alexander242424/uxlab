@@ -25,7 +25,7 @@ export default function HeroSection() {
         className="absolute md:-top-[30px] -top-[50px] 2xl:top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
-        <div className="w-full flex sm:px-6 lg:px-10">
+        <div className="w-full flex">
           {/* Ліва частина - пуста, займає половину екрану */}
           <div className="hidden lg:block md:w-1/2"></div>
 

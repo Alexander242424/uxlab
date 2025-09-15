@@ -1,7 +1,6 @@
 'use client';
 
 import { MediaPlayer, MediaProvider } from '@vidstack/react';
-import { useIsMobile } from '@/hooks/useIsMobile';
 
 interface VideoPlayerProps {
   src: string;
@@ -15,7 +14,6 @@ interface VideoPlayerProps {
 }
 
 export default function VideoPlayer({ src, poster, className = '', onError, controls = false, loop = true, muted = true, autoPlay = true }: VideoPlayerProps) {
-  const isMobile = useIsMobile();
   
   // Detect iOS Safari
   const isIOSSafari = () => {
