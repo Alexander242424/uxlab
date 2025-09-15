@@ -13,7 +13,7 @@ export default function HeroSection() {
     offset: ["start end", "end start"],
   });
 
-  // Паралакс ефект для текстового блоку (повільний рух вниз)
+  // Parallax effect for the text block (slow down motion)
   const textBlockY = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
@@ -26,12 +26,12 @@ export default function HeroSection() {
         style={{ y: textBlockY }}
       >
         <div className="w-full flex">
-          {/* Ліва частина - пуста, займає половину екрану */}
+          {/* Left part - empty, takes half of the screen */}
           <div className="hidden lg:block md:w-1/2"></div>
 
-          {/* Права частина - містить текстовий блок */}
+          {/* Right part - contains the text block */}
           <div className="lg:w-1/2 w-full flex justify-start">
-            <div className="flex flex-col">
+            <div className="hidden flex-col sm:flex">
               <p className="text-text-700 hoves-p1-reg lg:text-right md:text-nowrap">
                 We unite User Experience,
               </p>
@@ -39,7 +39,21 @@ export default function HeroSection() {
                 conversions and data-driven design to help digital products,             
               </p>
               <p className="text-text-700 hoves-p1-reg md:text-nowrap">
-                products convert, scale, and win in competitive markets.
+                convert, scale, and win in competitive markets.
+              </p>
+            </div>
+            <div className="flex flex-col sm:hidden">
+              <p className="text-text-700 hoves-p1-reg lg:text-right md:text-nowrap">
+                We unite User Experience,
+              </p>
+              <p className="text-text-700 hoves-p1-reg md:text-nowrap">
+                conversions and data-driven design to help digital             
+              </p>
+              <p className="text-text-700 hoves-p1-reg md:text-nowrap">
+                products, convert, scale, and win in competitive
+              </p>
+              <p className="text-text-700 hoves-p1-reg md:text-nowrap">
+                markets.
               </p>
             </div>
           </div>

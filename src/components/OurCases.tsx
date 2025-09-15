@@ -343,7 +343,11 @@ export default function OurCases() {
                 )}
               </Link>
             </div>
-            <p className="text-text-700 hoves-p1-reg">{item.title}</p>
+            <p className={`text-text-700 hoves-p1-reg transition-all duration-300 ${
+              isHovering && hoveredIndex === index ? "underline cursor-pointer" : ""
+            }`}>
+              {item.title}
+            </p>
           </div>
         ))}
       </div>
