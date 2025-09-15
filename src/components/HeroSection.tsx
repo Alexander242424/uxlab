@@ -22,7 +22,7 @@ export default function HeroSection() {
       className="flex flex-col relative min-h-[calc(100vh-72px-170px)] md:min-h-[calc(100vh-72px-120px)] 2xl:min-h-[calc(100vh-72px-140px)]"
     >
       <motion.div
-        className="absolute md:-top-[30px] -top-[50px] 2xl:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
+        className="absolute md:-top-[30px] -top-[50px] 2xl:top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
         <div className="w-full flex sm:px-6 lg:px-10">
