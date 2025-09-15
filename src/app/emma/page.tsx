@@ -34,7 +34,7 @@ export default function EmmaPage() {
         <TextSection
           className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
           firstText="By fostering healthy sleep habits,"
-          secondText="Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines."
+          secondText={["Emma Sleep builds trust, encouraging them", "to download the app and integrate it into", "their daily routines."]}
         />
         <CasesOutcome />
         <OverviewCaseImageSection
@@ -61,7 +61,7 @@ export default function EmmaPage() {
         />
         <OverviewCaseTestimonialSection
           firstText="I'm consistently amazed at the quality of"
-          secondText="work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly."
+          secondText={["work Alex produces. From day one Alex just,", "got our brand, created some stunning", "designs, and ensured the whole process", " ran smoothly." ]}
           authorText="Felix Focken, CEO (Emma Sleep)"
         />
         <InfoBlock
