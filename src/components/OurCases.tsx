@@ -298,7 +298,7 @@ export default function OurCases() {
       </div>
       
       <div 
-        className="flex gap-2 lg:gap-8 overflow-x-auto"
+        className="flex gap-2 lg:gap-8 overflow-x-auto lg:overflow-x-visible"
         style={{
           scrollbarWidth: 'none', // Firefox
           msOverflowStyle: 'none', // IE and Edge
@@ -307,7 +307,7 @@ export default function OurCases() {
         {cases.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-[21px] flex-shrink-0 w-full h-full not-lg:max-w-[300px] not-lg:max-h-[553px] lg:w-[456px] lg:h-[677px] 2xl:w-full 2xl:h-full 2xl:max-h-[calc(100vh-10vh)] 2xl:max-w-[calc(100vw-60vw)]"
+            className="flex flex-col gap-[21px] flex-shrink-0 w-full h-full not-lg:max-w-[300px] not-lg:max-h-[553px] lg:flex-1 lg:max-w-none lg:aspect-[456/677]"
           >
             <div
               className="relative cursor-pointer"
