@@ -113,7 +113,9 @@ export default function QuestionSections() {
               },
             }}
           >
-            <AvatarsSVG />
+            <div className="min-h-14">
+              <AvatarsSVG />
+            </div>
             <div className="flex flex-col gap-2.5">
               <h4 className="hoves-h4-med">Book an intro call</h4>
               <p className="hoves-p1-reg">
