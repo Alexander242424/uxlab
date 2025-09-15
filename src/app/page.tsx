@@ -45,10 +45,10 @@ export default function HomePage() {
         </div>
         <TextSection
           className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
-          firstText="The design dream team for founders"
+          firstText="Design for founders who care about"
           secondText={[
-            "obsessed with speed and efficiency, clients",
-            "raised over $600M+ in 2024 alone.",
+            "conversions, revenue, acquisition, and",
+            "the metrics that drive growth.",
           ]}
         />
         <ServiceItems />

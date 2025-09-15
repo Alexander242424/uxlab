@@ -40,6 +40,22 @@ const secondParagraph = [
   "flexible - purpose built for startup speed.",
 ];
 
+const firstParagraphMobile = [
+  "Over 10 years grinding alongside",
+  "founders with a chip on their",
+  "shoulder and a story that needs",
+  "telling.",
+];
+
+const secondParagraphMobile = [
+  "UXLab is the design partner ",
+  "teams turn to when speed ",
+  "and quality matter most. ",
+  "Our approach is fast and ",
+  "flexible - purpose built for ",
+  "startup speed.",
+];
+
 export default function ServiceItems() {
   const isMobile = useIsMobile();
   return (
@@ -60,7 +76,7 @@ export default function ServiceItems() {
 
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-12">
         <div className="lg:col-span-3 flex items-start">
-          <div className="grid not-lg:grid-cols-2 not-lg:gap-8 w-full">
+          <div className="grid not-lg:flex not-lg:gap-8 w-full">
             <SplitText
               text="Your Grow Starts Here"
               className="text-text-700 hoves-p1-reg"
@@ -74,8 +90,9 @@ export default function ServiceItems() {
               rootMargin={isMobile ? "-100px" : "-200px"}
               textAlign="left"
             />
-            <div className="flex flex-col lg:hidden w-full">
-              {firstParagraph.map((text, index) => (
+            <div className="flex flex-col lg:hidden w-full gap-4">
+              <div>
+              {firstParagraphMobile.map((text, index) => (
                 <SplitText
                   key={index}
                   text={text}
@@ -92,6 +109,26 @@ export default function ServiceItems() {
                   textAlign="left"
                 />
               ))}
+              </div>
+              <div>
+              {secondParagraphMobile.map((text, index) => (
+                <SplitText
+                  key={`second-${index}`}
+                  text={text}
+                  className="text-text-700 leading-relaxed hoves-p1-reg"
+                  globalIndex={1 + firstParagraph.length + index}
+                  splitType="lines"
+                  delay={100}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="100px"
+                  textAlign="left"
+                />
+              ))}
+              </div>
             </div>
           </div>
         </div>
