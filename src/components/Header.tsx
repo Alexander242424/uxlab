@@ -107,42 +107,93 @@ export default function Header() {
           {/* Права частина - навігація + Book a Call */}
           <div className="w-1/2 flex justify-between items-center">
             <nav className="hidden md:flex space-x-4 lg:space-x-8 hoves-p2-reg">
-              <button
-                onClick={() => scrollToSection("")}
-                className={`relative group header-text cursor-pointer ${
-                  pathname === "/" && activeSection === "" ? "header-text-active" : ""
-                }`}
-              >
-                Home
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className={`relative group header-text cursor-pointer ${
-                  pathname === "/" && activeSection === "services" ? "header-text-active" : ""
-                }`}
-              >
-                Services
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-              </button>
-              <button
-                onClick={() => scrollToSection("work")}
-                className={`relative group header-text cursor-pointer ${
-                  pathname === "/" && activeSection === "work" ? "header-text-active" : ""
-                }`}
-              >
-                Work
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-              </button>
-              <button
-                onClick={() => scrollToSection("insights")}
-                className={`relative group header-text cursor-pointer ${
-                  pathname === "/" && activeSection === "insights" ? "header-text-active" : ""
-                }`}
-              >
-                Insights
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-              </button>
+              {pathname === "/" ? (
+                <button
+                  onClick={() => scrollToSection("")}
+                  className={`relative group header-text cursor-pointer ${
+                    activeSection === "" ? "header-text-active" : ""
+                  }`}
+                >
+                  Home
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </button>
+              ) : (
+                <Link
+                  href="/"
+                  className={`relative group header-text cursor-pointer ${
+                    pathname === "/" ? "header-text-active" : ""
+                  }`}
+                >
+                  Home
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+              )}
+              
+              {pathname === "/" ? (
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className={`relative group header-text cursor-pointer ${
+                    activeSection === "services" ? "header-text-active" : ""
+                  }`}
+                >
+                  Services
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </button>
+              ) : (
+                <Link
+                  href="/#services"
+                  className={`relative group header-text cursor-pointer ${
+                    pathname === "/" && activeSection === "services" ? "header-text-active" : ""
+                  }`}
+                >
+                  Services
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+              )}
+              
+              {pathname === "/" ? (
+                <button
+                  onClick={() => scrollToSection("work")}
+                  className={`relative group header-text cursor-pointer ${
+                    activeSection === "work" ? "header-text-active" : ""
+                  }`}
+                >
+                  Work
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </button>
+              ) : (
+                <Link
+                  href="/#work"
+                  className={`relative group header-text cursor-pointer ${
+                    pathname === "/" && activeSection === "work" ? "header-text-active" : ""
+                  }`}
+                >
+                  Work
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+              )}
+              
+              {pathname === "/" ? (
+                <button
+                  onClick={() => scrollToSection("insights")}
+                  className={`relative group header-text cursor-pointer ${
+                    activeSection === "insights" ? "header-text-active" : ""
+                  }`}
+                >
+                  Insights
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </button>
+              ) : (
+                <Link
+                  href="/#insights"
+                  className={`relative group header-text cursor-pointer ${
+                    pathname === "/" && activeSection === "insights" ? "header-text-active" : ""
+                  }`}
+                >
+                  Insights
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+              )}
             </nav>
             <div className="flex items-center ml-auto">
               <Link
