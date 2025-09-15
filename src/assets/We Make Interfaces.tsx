@@ -30,12 +30,12 @@ export default function WeMakeInterfacesSVG() {
   return (
     <svg
       ref={ref}
-      width="1417"
-      height="126"
+      width="100%"
+      height="auto"
       viewBox="0 0 1417 126"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full text-center whitespace-nowrap [font-size:clamp(1rem,10.3vw,9rem)] md:[font-size:clamp(1rem,10.2vw,10rem)] lg:[font-size:clamp(1rem,10.6vw,10rem)] 2xl:[font-size:clamp(1rem,15vw,16rem)] [-letter-spacing:0.04em] [font-family:var(--font-tt-hoves)] font-light"
+      className="w-full"
     >
       {paths.map((path, index) => (
         <motion.path

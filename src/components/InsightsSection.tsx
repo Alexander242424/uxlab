@@ -38,6 +38,14 @@ const insightsData = [
     date: "12 November 2024",
     badgeText: "Product",
   },
+  {
+    id: 5,
+    image: Background,
+    title: "Thinking in Product",
+    author: "Sarah Wilson",
+    date: "12 November 2024",
+    badgeText: "Product",
+  },
 ];
 
 export default function InsightsSection() {
@@ -74,14 +82,14 @@ export default function InsightsSection() {
             />
         </div>
 
-        <div className="flex flex-row gap-8 w-full overflow-x-auto">
+        <div className="flex flex-row gap-8 w-full overflow-x-auto lg:overflow-x-visible">
           {insightsData.map((insight, index) => (
-            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] lg:max-w-[calc(25%-32px)] lg:min-w-[calc(25%-32px)] group">
+            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] lg:flex-1 lg:min-w-0 group">
               <div className="overflow-hidden rounded-lg relative">
                 <Image 
                   src={insight.image} 
                   alt={insight.title}
-                  className="transition-transform duration-300 ease-out hover:scale-110 min-h-[calc(100vh-90vh)] min-w-[calc(100vw-80vw)] 2xl:min-h-full 2xl:min-w-full hover:cursor-pointer"
+                  className="transition-transform duration-300 ease-out hover:scale-110 w-full h-auto aspect-[4/3] hover:cursor-pointer"
                 />
                 <div className="absolute bottom-1 left-1 bg-white/80 backdrop-blur-sm rounded w-fit h-6 px-2 py-1 flex items-center justify-center uppercase">
                   <span className="text-black font-tt-hoves font-medium text-[10px] leading-[16px]">
