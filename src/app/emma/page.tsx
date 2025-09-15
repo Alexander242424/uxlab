@@ -15,7 +15,7 @@ import EmmaCase1 from "@/assets/Emma/XkNQu7DYidbcrVSHQNflhh0MA.avif";
 export default function EmmaPage() {
   return (
     <div className="flex flex-col">
-      <div className="2xl:max-w-[2560px] 2xl:mx-auto w-full">
+      <div className="w-full">
         <CasesHeroSections
           logo={<EmmaLogo />}
           logoMobile={<EmmaLogoMobile />}
