@@ -168,8 +168,9 @@ export default function ServiceItems() {
                 <div className="flex items-center justify-between py-6 lg:py-10">
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex items-center justify-between">
-                      <h3 className="hoves-h5-med text-text-700">
+                      <h3 className="hoves-h5-med text-text-700 relative group/title">
                         {service.title}
+                        <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                       </h3>
                       <div className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
                         <ArrowUpRightSVG className="w-6 h-6 text-text-700" />

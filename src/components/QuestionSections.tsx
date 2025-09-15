@@ -61,7 +61,7 @@ export default function QuestionSections() {
       />
 
       <div className="w-full flex flex-col lg:flex-row">
-        {/* Ліва частина - заголовок + картка */}
+        {/* Left part - title + card */}
         <motion.div
           className="w-full lg:w-1/2 flex flex-col justify-between mb-8 lg:mb-0"
           initial={{ opacity: 0, y: 100 }}
@@ -133,7 +133,7 @@ export default function QuestionSections() {
           </motion.div>
         </motion.div>
 
-        {/* Права частина - акордеон */}
+        {/* Right part - accordion */}
         <motion.div
           className="w-full lg:w-1/2 lg:-mt-[32px]"
           initial={{ opacity: 0, y: 100 }}
