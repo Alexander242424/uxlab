@@ -140,7 +140,7 @@ const HoverSection: React.FC = () => {
             <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-72 flex flex-col justify-end">
               <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-0">
                 {/* Підпис "UX Analysis" - завжди зліва */}
-                <div className={cn("flex-shrink-0 hoves-h6-med text-black", isMobile ? "hoves-p1-reg" : "hoves-h6-med")}
+                <div className={cn("flex-shrink-0 text-black", isMobile ? "hoves-h4-med" : "hoves-h6-med")}
                 style={{
                   minWidth: `${(100 / sections.length)-2}dvw`,
                 }}>
@@ -154,7 +154,7 @@ const HoverSection: React.FC = () => {
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
-                        <p className="text-black hoves-p1-reg">
+                        <p className="text-black hoves-p1-med !font-[400]">
                           {section.content}
                         </p>
                       </div>
@@ -166,7 +166,7 @@ const HoverSection: React.FC = () => {
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
-                        <p className="text-black hoves-p2-reg">
+                        <p className="text-black hoves-p1-med !font-[400]">
                           {section.content}
                         </p>
                       </div>
