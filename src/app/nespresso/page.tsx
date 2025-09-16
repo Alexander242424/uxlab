@@ -34,6 +34,8 @@ export default function NespressoPage() {
         <OverviewCaseTestimonialSection
           firstText="Creating a standout digital experience for"
           secondText={["one of the world`s most renowned brands,", "we teamed up with Nespresso to redefine", "their online presence, enhancing brand", "engagement through a product-driven", "approach."]}
+          mobileText={["Creating a standout digital experience for", "one of the world`s most renowned brands,", "we teamed up with Nespresso to redefine", "their online presence, enhancing brand", "engagement through a product-driven", "approach."]}
+
           authorText="Introduction"
         />
         <OverviewCaseVideoSection src="/video/nespressso/Q6DtR9oTjf95E7uLqWai4ngPUA.mp4" />
@@ -68,6 +70,7 @@ export default function NespressoPage() {
         <OverviewCaseTestimonialSection
           firstText="A streamlined interface lets the"
           secondText={["unique storytelling of each product take", "center stage while adhering to eCommerce", "best practices."]}
+          mobileText={["A streamlined interface lets the", "unique storytelling of each product take", "center stage while adhering to eCommerce", "best practices."]}
           authorText="Improvements focused on product features and functionalities"
         />
         <OverviewCaseImageSection
@@ -97,6 +100,7 @@ export default function NespressoPage() {
         <OverviewCaseTestimonialSection
           firstText="What if loyalty involved presenting"
           secondText={["brand enthusiasts with a refined and", "exclusive assortment of member benefits", "and branded identity merchandise?"]}
+          mobileText={["What if loyalty involved presenting", "brand enthusiasts with a refined and", "exclusive assortment of member benefits", "and branded identity merchandise?"]}
           authorText="Loyalty"
         />
         <OverviewCaseVideoSection src="/video/nespressso/ozQmpxgVh0h8ImZ4FFkvEIsYTXs.mp4" />
