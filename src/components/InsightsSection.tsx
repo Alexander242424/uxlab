@@ -30,22 +30,22 @@ const insightsData = [
     date: "15 November 2024",
     badgeText: "Strategy",
   },
-  {
-    id: 4,
-    image: Background,
-    title: "Thinking in Product",
-    author: "Sarah Wilson",
-    date: "12 November 2024",
-    badgeText: "Product",
-  },
-  {
-    id: 5,
-    image: Background,
-    title: "Thinking in Product",
-    author: "Sarah Wilson",
-    date: "12 November 2024",
-    badgeText: "Product",
-  },
+  // {
+  //   id: 4,
+  //   image: Background,
+  //   title: "Thinking in Product",
+  //   author: "Sarah Wilson",
+  //   date: "12 November 2024",
+  //   badgeText: "Product",
+  // },
+  // {
+  //   id: 5,
+  //   image: Background,
+  //   title: "Thinking in Product",
+  //   author: "Sarah Wilson",
+  //   date: "12 November 2024",
+  //   badgeText: "Product",
+  // },
 ];
 
 export default function InsightsSection() {
@@ -89,7 +89,7 @@ export default function InsightsSection() {
                 <Image 
                   src={insight.image} 
                   alt={insight.title}
-                  className="transition-transform duration-300 ease-out hover:scale-110 w-full h-auto aspect-[4/3] hover:cursor-pointer"
+                  className="transition-transform duration-300 ease-out hover:scale-110 w-full h-auto aspect-[6/3] hover:cursor-pointer"
                 />
                 <div className="absolute bottom-1 left-1 bg-white/80 backdrop-blur-sm rounded w-fit h-6 px-2 py-1 flex items-center justify-center uppercase">
                   <span className="text-black font-tt-hoves font-medium text-[10px] leading-[16px]">
