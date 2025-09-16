@@ -8,6 +8,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 interface TextSectionProps {
   firstText: string;
   secondText: string | string[];
+  mobileText?: string | string[];
   showButton?: boolean;
   buttonText?: string;
   className?: string;
@@ -19,6 +20,7 @@ interface TextSectionProps {
 export default function TextSection({
   firstText,
   secondText,
+  mobileText,
   showButton = false,
   buttonText = "Book a Call",
   className = "",
@@ -31,8 +33,8 @@ export default function TextSection({
   // Convert secondText to array if it's a string
   const secondTextArray = Array.isArray(secondText) ? secondText : [secondText];
 
-  // Create combined array for mobile: firstText + secondTextArray
-  const mobileTextArray = [firstText, ...secondTextArray];
+  // Create combined array for mobile
+  const mobileTextArray = Array.isArray(mobileText) ? mobileText : [mobileText];
 
   return (
     <div className={`flex flex-col w-full ${className}`}>
@@ -41,14 +43,14 @@ export default function TextSection({
           {mobileTextArray.map((text, index) => (
             <SplitText
               key={index}
-              text={text}
+              text={text || ""}
               className={textColor}
               globalIndex={index} // Додаємо глобальний індекс
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
-                fontSize: "clamp(1.3rem, 5vw, 7.5rem)",
-                lineHeight: "1.10",
+                fontSize: "clamp(1.3rem, 8.8vw, 7.5rem)",
+                lineHeight: "0.8",
                 letterSpacing: "-0.03em",
               }}
               splitType="lines"
