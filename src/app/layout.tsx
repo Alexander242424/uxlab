@@ -44,10 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <title>Boostra - Website UX, Speed, Content &amp; Conversion Tool</title>
+      <title>UXLAB | We Make Interfaces</title>
       <meta
         name="description"
-        content="Boostra tool analyzes UX, speed, content, and user behavior to uncover drop-off points and boost conversions through clear, data-driven website improvements"
+        content="UXLab is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
       />
       <link rel="icon" href="/meta/64 x 66.jpg" />
 
@@ -56,11 +56,11 @@ export default function RootLayout({
       <meta property="og:type" content="website" />
       <meta
         property="og:title"
-        content="Boostra - Website UX, Speed, Content &amp; Conversion Tool"
+        content="UXLab is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
       />
       <meta
         property="og:description"
-        content="Boostra tool analyzes UX, speed, content, and user behavior to uncover drop-off points and boost conversions through clear, data-driven website improvements"
+        content="UXLab is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
       />
       <meta property="og:url" content="https://uxlab.digital/" />
       <meta property="og:site_name" content="Boostra" />
