@@ -70,7 +70,10 @@ export default function Footer() {
                 <div className="flex md:gap-8">
                   <div className="not-md:min-w-1/2">
                     <p className="hoves-p2-reg">Contact us:</p>
-                    <p className="hoves-p2-reg">hello@uxlab.com</p>
+                    <Link href="mailto:hello@uxlab.com" className="relative group text-text-700 hoves-p2-reg">
+                      hello@uxlab.com
+                      <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                    </Link>
                   </div>
                   <div className="not-md:min-w-1/2">
                     <p className="hoves-p2-reg">Terms of use</p>

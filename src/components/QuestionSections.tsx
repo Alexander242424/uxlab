@@ -118,7 +118,7 @@ export default function QuestionSections() {
             </div>
             <div className="flex flex-col gap-2.5">
               <h4 className="hoves-h4-med">Book an intro call</h4>
-              <p className="hoves-p1-reg">
+              <p className="hoves-p1-med !font-[400]">
                 Time to get introduced and explore how Uxlab can help
               </p>
             </div>
