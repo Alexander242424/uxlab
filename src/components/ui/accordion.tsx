@@ -46,10 +46,10 @@ function AccordionTrigger({
         {children}
 
         <div className="block plus hover:bg-bg-gray rounded-full cursor-pointer">
-          <PlusIcon />
+          <PlusIcon className="2xl:scale-[160%]" />
         </div>
         <div className="hidden minus hover:bg-bg-gray rounded-full cursor-pointer">
-          <MinusIcon />
+          <MinusIcon className="2xl:scale-[160%]" />
         </div>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
