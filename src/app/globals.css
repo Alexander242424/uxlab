@@ -224,8 +224,8 @@
 .hoves-h4-med {
   font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 2.5rem;
-  line-height: 3rem;
+  font-size: clamp(1rem, 2.7vw, 3.5rem);
+  line-height: 1;
   letter-spacing: -0.03em;
 }
 

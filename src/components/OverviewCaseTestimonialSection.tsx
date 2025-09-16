@@ -3,12 +3,14 @@ import TextSection from "@/components/TextSection";
 interface OverviewCaseTestimonialSectionProps {
   firstText: string;
   secondText: string | string[];
+  mobileText: string | string[];
   authorText: string;
 }
 
 export default function OverviewCaseTestimonialSection({ 
   firstText, 
   secondText, 
+  mobileText,
   authorText 
 }: OverviewCaseTestimonialSectionProps) {
   return (
@@ -16,6 +18,7 @@ export default function OverviewCaseTestimonialSection({
       <TextSection
         firstText={firstText}
         secondText={secondText}
+        mobileText={mobileText}
       />
       <p className="text-text-500 hoves-p1-reg">
         {authorText}
