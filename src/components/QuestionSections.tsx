@@ -51,7 +51,7 @@ export default function QuestionSections() {
       className="flex flex-col mb-[96px] lg:mb-[160px] lg:flex-row text-black px-4 lg:px-10 py-4 lg:py-8 relative"
     >
       <motion.div
-        className="absolute top-0 left-4 right-4 lg:left-10 lg:right-10 h-[1px] z-10 bg-border-100"
+        className="absolute top-0 left-4 right-4 lg:left-10 lg:right-10 h-[1px] z-10 bg-border-100 hidden lg:block"
         style={{
           transformOrigin: "left",
         }}
@@ -80,7 +80,7 @@ export default function QuestionSections() {
             },
           }}
         >
-          <div className="mb-4 lg:mb-28">
+          <div className="mb-4 lg:mb-28 hidden lg:block">
             <SplitText
               text="Frequently Asked Question"
               className="hoves-p1-reg"
@@ -133,6 +133,32 @@ export default function QuestionSections() {
           </motion.div>
         </motion.div>
 
+        <motion.div
+          className="mb-4 h-[1px] z-10 bg-border-100 block lg:hidden"
+          style={{
+            transformOrigin: "left",
+          }}
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: isInView ? 1 : 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        />
+
+        <div className="block lg:hidden -mb-8">
+          <SplitText
+            text="Frequently Asked Question"
+            className="hoves-p1-reg"
+            splitType="lines"
+            delay={100}
+            duration={0.5}
+            ease="power3.out"
+            from={{ opacity: 0, y: 50 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="0px"
+            textAlign="left"
+          />
+        </div>
+
         {/* Right part - accordion */}
         <motion.div
           className="w-full lg:w-1/2 lg:-mt-[32px]"
@@ -170,7 +196,7 @@ export default function QuestionSections() {
                   className="absolute -bottom-3 left-0 w-full h-[1px] bg-border-100"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, }}
                   transition={{
                     duration: 0.8,
                     ease: "easeInOut",
