@@ -82,7 +82,7 @@ export default function InsightsSection() {
             />
         </div>
 
-        <div className="flex flex-row gap-8 w-full overflow-x-auto lg:overflow-x-visible">
+        <div className="flex flex-row gap-2 lg:gap-8 w-full overflow-x-auto lg:overflow-x-visible">
           {insightsData.map((insight, index) => (
             <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] lg:flex-1 lg:min-w-0 group">
               <div className="overflow-hidden rounded-lg relative">
