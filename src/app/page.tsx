@@ -50,6 +50,13 @@ export default function HomePage() {
             "conversions, revenue, acquisition, and",
             "the metrics that drive growth.",
           ]}
+          mobileText={[
+            "Design for founders who",
+            "care about conversions,",
+            "revenue, acquisition, and",
+            "the metrics that drive",
+            "growth.",
+          ]}
         />
         <ServiceItems />
         <OurCases />
@@ -69,6 +76,13 @@ export default function HomePage() {
               "there are a few key things we've learned",
               "are needed to do the best work",
             ]}
+            mobileText={[
+              "After shipping hundreds",
+              "of products, we've",
+              "learned a few key things",
+              "that help us do our best",
+              "works."
+            ]}
             textColor="text-black"
           />
           <HoverSection />
@@ -84,6 +98,13 @@ export default function HomePage() {
             secondText={[
               "team that's built to match your pace and",
               "exceed your expectations.",
+            ]}
+            mobileText={[
+              "Work seamlessly with a",
+              "creative team that's built",
+              "to match your pace and",
+              "exceed your",
+              "expectations.",
             ]}
             showButton={true}
             textColor="text-black"

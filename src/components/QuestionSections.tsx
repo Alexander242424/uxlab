@@ -127,6 +127,7 @@ export default function QuestionSections() {
               size="lg"
               iconRight={<ArrowUpRightSVG className="!size-6" />}
               className="max-w-40 w-full sm:w-auto"
+              onClick={() => window.open('https://cal.com/eugene.orehov/30min?overlayCalendar=true', '_blank')}
             >
               Book a Call
             </Button>

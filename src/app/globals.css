@@ -343,7 +343,7 @@
 
 /* TEXT_MOBILE */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .hoves-h1-med {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 300;
