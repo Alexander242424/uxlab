@@ -19,7 +19,7 @@ export default function EmmaPage() {
         <CasesHeroSections
           logo={<EmmaLogo />}
           logoMobile={<EmmaLogoMobile />}
-          text="Innovating Personalized Sleep Worldwide"
+          text={["Innovating Personalized", "Sleep Worldwide"]}
           companyName="Emma Sleep"
           year="2022 - 2024"
           deliverables="Guidelines and Portals · Digital Asset Management · Templates"

@@ -19,7 +19,7 @@ export default function NespressoPage() {
         <CasesHeroSections
           logo={<NespressoLogo />}
           logoMobile={<NespressoLogoMobile />}
-          text="Seamless Coffee E-Commerce Coffee Experience"
+          text={["Seamless Coffee", "E-Commerce Coffee Experience"]}
           companyName="Nespresso"
           year="2022 - 2023"
           deliverables="Design Strategy · UX · Design System · Branding"

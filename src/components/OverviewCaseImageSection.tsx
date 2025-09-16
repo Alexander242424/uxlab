@@ -27,7 +27,7 @@ export default function OverviewCaseImageSection({
   videoClassName,
 }: OverviewCaseImageSectionProps) {
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     triggerOnce: true,
     rootMargin: "-100px",
   });
@@ -48,7 +48,7 @@ export default function OverviewCaseImageSection({
             ? { clipPath: "inset(0% 0% 0% 0%)" }
             : { clipPath: "inset(0% 0% 100% 0%)" }
         }
-        transition={{ duration: 0.5, ease: [0.7, 0, 0.3, 1] }}
+        transition={{ duration: 1, ease: [0.7, 0, 0.3, 1] }}
         className={cn(
           "overflow-hidden",
           !iSvideoPositionLeft
