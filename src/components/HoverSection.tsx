@@ -103,7 +103,7 @@ const HoverSection: React.FC = () => {
         </div>
       )}
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col lg:flex-row">
         {sections.map((section, index) => (
           <div
             key={section.id}
@@ -150,7 +150,7 @@ const HoverSection: React.FC = () => {
                 {/* Контент - справа від підпису */}
                 {section.content && (
                   // <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-200 delay-0 max-w-[calc(100%-200px)] flex-1">
-                  <div className="hidden lg:flex transition-all duration-300 max-h-[35dvh] min-w-[35dvh] md:pr-[5%]">
+                  <div className="hidden lg:flex transition-all duration-300 max-h-[35dvh] min-w-[35dvh] lg:pr-[5%]">
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
