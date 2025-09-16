@@ -138,7 +138,7 @@ export default function TextSection({
             variant="secondary"
             size="lg"
             iconRight={<ArrowUpRightSVG className="!size-6" />}
-            className="max-w-40 mt-10"
+            className="w-full max-w-40 mt-10 scale-100 2xl:scale-[180%]"
             onClick={() => window.open('https://cal.com/eugene.orehov/30min?overlayCalendar=true', '_blank')}
           >
             {buttonText}
