@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 interface CasesHeroSectionsProps {
   logo: React.ReactNode;
   logoMobile: React.ReactNode;
-  text: string;
+  text: string | string[];
   companyName: string;
   year: string;
   deliverables: string;
@@ -32,6 +32,8 @@ export default function CasesHeroSections({
   // Паралакс ефект для текстового блоку (повільний рух вниз)
   const textBlockY = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
+  const textArray = Array.isArray(text) ? text : [text];
+
   return (
     <div
       ref={containerRef}
@@ -50,13 +52,17 @@ export default function CasesHeroSections({
             <p className="block md:hidden text-text-500 hoves-p2-reg pb-4">
               Emma Sleep
             </p>
+            {textArray.map((text, index) => (
             <SplitText
-              text={text}
+              key={index}
+              globalIndex={index}
+              text={text || ""}
+              className="!text-nowrap"
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
-                fontSize: "clamp(2rem, 8vw, 4.5rem)",
-                lineHeight: "1.15",
+                fontSize: "clamp(2rem, 4vw, 4.5rem)",
+                lineHeight: "1.1",
                 letterSpacing: "-0.03em",
               }}
               delay={40}
@@ -67,7 +73,9 @@ export default function CasesHeroSections({
               to={{ opacity: 1, y: 0 }}
               threshold={0.01}
               textAlign="left"
-            />
+              />
+            ))}
+            
           </div>
         </div>
       </motion.div>
