@@ -197,7 +197,7 @@ export default function Header() {
             </nav>
             <div className="flex items-center ml-auto">
               <Link
-                href="https://cal.com/eugene.orehov/30min"
+                href="https://cal.com/eugene.orehov/30min?overlayCalendar=true"
                 className="header-text flex items-center gap-1 relative group"
               >
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
