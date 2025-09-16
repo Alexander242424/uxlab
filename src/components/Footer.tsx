@@ -93,7 +93,7 @@ export default function Footer() {
               </div>
 
               {/* Right part - navigation + social networks */}
-              <div className="w-full lg:w-1/2 flex md:gap-[154px]">
+              <div className="w-full lg:w-1/2 flex xl:gap-[154px]">
                 <div className="text-nowrap not-md:min-w-1/2 lg:pl-[1px] mb-8 lg:mb-0 lg:min-w-[212px]">
                   <ul className="space-y-4">
                     <li>

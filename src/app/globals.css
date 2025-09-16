@@ -296,7 +296,7 @@
 .hoves-p3-reg {
   font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: clamp(0.9rem, 0.9vw, 2.25rem);
   line-height: 1.25rem;
   letter-spacing: -0.03em;
 }

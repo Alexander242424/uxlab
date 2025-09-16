@@ -127,7 +127,12 @@ export default function QuestionSections() {
               size="lg"
               iconRight={<ArrowUpRightSVG className="!size-6" />}
               className="max-w-40 w-full sm:w-auto"
-              onClick={() => window.open('https://cal.com/eugene.orehov/30min?overlayCalendar=true', '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://cal.com/eugene.orehov/30min?overlayCalendar=true",
+                  "_blank"
+                )
+              }
             >
               Book a Call
             </Button>
@@ -135,7 +140,7 @@ export default function QuestionSections() {
         </motion.div>
 
         <motion.div
-          className="mb-4 h-[1px] z-10 bg-border-100 block lg:hidden"
+          className="mb-4 h-[1px] bg-border-100 inset-0 block lg:hidden"
           style={{
             transformOrigin: "left",
           }}
@@ -197,7 +202,7 @@ export default function QuestionSections() {
                   className="absolute -bottom-3 left-0 w-full h-[1px] bg-border-100"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true, }}
+                  viewport={{ once: true }}
                   transition={{
                     duration: 0.8,
                     ease: "easeInOut",
