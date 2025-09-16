@@ -144,7 +144,7 @@ export default function QuestionSections() {
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
 
-        <div className="block lg:hidden -mb-8">
+        <div className="block lg:hidden -mb-4">
           <SplitText
             text="Frequently Asked Question"
             className="hoves-p1-reg"
