@@ -74,8 +74,8 @@ export default function ServiceItems() {
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-10 gap-12">
-        <div className="lg:col-span-3 flex items-start">
+      <div className="flex flex-col lg:flex-row gap-12">
+        <div className="lg:w-[47%] flex items-start">
           <div className="grid not-lg:flex not-lg:gap-8 w-full">
             <SplitText
               text="Your Grow Starts Here"
@@ -133,7 +133,7 @@ export default function ServiceItems() {
           </div>
         </div>
 
-        <div className="lg:col-span-7 flex flex-col">
+        <div className="w-full flex flex-col">
           <div className="space-y-6 mb-20 w-full not-lg:hidden">
             <div className="flex flex-col">
               {firstParagraph.map((text, index) => (
