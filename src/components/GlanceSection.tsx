@@ -23,7 +23,7 @@ export default function GlanceSection() {
   return (
     <div ref={ref} className="flex flex-col bg-bg-white relative overflow-hidden">
       <motion.div
-        className="absolute top-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100"
+        className="absolute top-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100 block lg:block"
         style={{
           transformOrigin: "left",
         }}
@@ -77,7 +77,7 @@ export default function GlanceSection() {
         className="cursor-grab"
       />
       <motion.div
-        className="absolute bottom-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100"
+        className="absolute bottom-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100 block lg:block"
         style={{
           transformOrigin: "left",
         }}
