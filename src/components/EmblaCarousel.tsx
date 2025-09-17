@@ -26,10 +26,11 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
   const [animationId, setAnimationId] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [initialPosition, setInitialPosition] = useState(0);
+  const [isInitialized, setIsInitialized] = useState(false);
   const [lastFrameTime, setLastFrameTime] = useState(0);
 
-  // Створюємо достатньо дублікатів для плавного руху (2 копії достатньо)
-  const duplicatedSlides = [...slides, ...slides];
+  // Створюємо багато дублікатів для справжньої безкінечності
+  const duplicatedSlides = [...slides, ...slides, ...slides, ...slides, ...slides, ...slides];
 
   // Функція для плавного руху
   const animate = (currentTime: number = 0) => {
@@ -65,10 +66,13 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     
     const newX = currentX - finalStepSize;
 
-    // Якщо досягли кінця першого набору слайдів, скидаємо позицію
+    // Безкінечний цикл - коли досягаємо кінця одного набору слайдів, 
+    // переміщуємося на початок наступного набору
     if (Math.abs(newX) >= totalWidth) {
-      track.style.transform = `translateX(0px)`;
-      setInitialPosition(0);
+      // Переміщуємося на початок наступного набору слайдів
+      const resetX = newX + totalWidth;
+      track.style.transform = `translateX(${resetX}px)`;
+      setInitialPosition(resetX);
     } else {
       track.style.transform = `translateX(${newX}px)`;
       setInitialPosition(newX);
@@ -105,6 +109,21 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     }
   }, [isPaused, isDragging, isHovered, speed]);
 
+  // Ініціалізація початкової позиції
+  useEffect(() => {
+    if (!isInitialized && trackRef.current) {
+      const slideWidth = trackRef.current.children[0]?.clientWidth || 0;
+      const totalSlides = slides.length;
+      const totalWidth = slideWidth * totalSlides;
+      
+      // Починаємо з середини (3-й набір слайдів)
+      const startPosition = -totalWidth * 2;
+      trackRef.current.style.transform = `translateX(${startPosition}px)`;
+      setInitialPosition(startPosition);
+      setIsInitialized(true);
+    }
+  }, [isInitialized, slides.length]);
+
   // Cleanup при unmount
   useEffect(() => {
     return () => {
@@ -130,7 +149,24 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     const x = e.pageX - trackRef.current.offsetLeft;
     const walk = (x - startX) * 2;
     const newTransform = scrollLeft + walk;
-    trackRef.current.style.transform = `translateX(${newTransform}px)`;
+    
+    // Обробляємо безкінечність при ручному прокручуванні
+    const slideWidth = trackRef.current.children[0]?.clientWidth || 0;
+    const totalSlides = slides.length;
+    const totalWidth = slideWidth * totalSlides;
+    
+    let finalTransform = newTransform;
+    
+    // Якщо прокрутили занадто далеко вліво, переміщуємося на початок наступного набору
+    if (newTransform > 0) {
+      finalTransform = newTransform - totalWidth;
+    }
+    // Якщо прокрутили занадто далеко вправо, переміщуємося на кінець попереднього набору
+    else if (newTransform < -totalWidth * 4) { // 4 набори слайдів
+      finalTransform = newTransform + totalWidth;
+    }
+    
+    trackRef.current.style.transform = `translateX(${finalTransform}px)`;
   };
 
   const handleMouseUp = () => {
@@ -185,7 +221,24 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     const x = e.touches[0].pageX - trackRef.current.offsetLeft;
     const walk = (x - startX) * 2;
     const newTransform = scrollLeft + walk;
-    trackRef.current.style.transform = `translateX(${newTransform}px)`;
+    
+    // Обробляємо безкінечність при touch прокручуванні
+    const slideWidth = trackRef.current.children[0]?.clientWidth || 0;
+    const totalSlides = slides.length;
+    const totalWidth = slideWidth * totalSlides;
+    
+    let finalTransform = newTransform;
+    
+    // Якщо прокрутили занадто далеко вліво, переміщуємося на початок наступного набору
+    if (newTransform > 0) {
+      finalTransform = newTransform - totalWidth;
+    }
+    // Якщо прокрутили занадто далеко вправо, переміщуємося на кінець попереднього набору
+    else if (newTransform < -totalWidth * 4) { // 4 набори слайдів
+      finalTransform = newTransform + totalWidth;
+    }
+    
+    trackRef.current.style.transform = `translateX(${finalTransform}px)`;
   };
 
   const handleTouchEnd = () => {
