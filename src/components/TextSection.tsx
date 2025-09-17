@@ -39,7 +39,7 @@ export default function TextSection({
   return (
     <div className={`flex flex-col w-full ${className}`}>
       {isMobile ? (
-        <div>
+        <div className="flex flex-col">
           {mobileTextArray.map((text, index) => (
             <SplitText
               key={index}
