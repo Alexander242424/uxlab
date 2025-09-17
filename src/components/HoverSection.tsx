@@ -154,7 +154,7 @@ const HoverSection: React.FC = () => {
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
-                        <p className="text-black hoves-p1-med !font-[400]">
+                        <p className="text-black hoves-p2-reg">
                           {section.content}
                         </p>
                       </div>
