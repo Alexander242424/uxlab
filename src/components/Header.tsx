@@ -95,7 +95,7 @@ export default function Header() {
 
   return (
     <header className="bg-transparent min-h-[72px] sticky top-0 z-50">
-      <div className="px-4 lg:px-10 mt-8 mb-4">
+      <div className="px-4 md:px-10 mt-8 mb-4">
         <div className="w-full flex">
           {/* Ліва частина - логотип */}
           <div className="w-1/2 flex items-center">
@@ -106,7 +106,7 @@ export default function Header() {
 
           {/* Права частина - навігація + Book a Call */}
           <div className="w-1/2 flex justify-between items-center">
-            <nav className="hidden md:flex space-x-8 hoves-p2-reg">
+            <nav className="hidden sm:flex space-x-8 hoves-p2-reg">
               {pathname === "/" ? (
                 <button
                   onClick={() => scrollToSection("")}
