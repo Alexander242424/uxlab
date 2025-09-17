@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useCallback } from "react";
 import SplitText from "./SplitText";
+import { motion } from "motion/react";
 
 interface SectionData {
   id: number;
@@ -140,7 +141,7 @@ const HoverSection: React.FC = () => {
   }, [hoveredSection]);
 
   return (
-    <section className="w-full bg-white px-4 md:px-10">
+    <section className="w-full bg-white px-4 md:px-10 relative">
       {isHovering && !isMobile && (
         <div
           className="hover-cursor hoves-p3-reg"
@@ -153,6 +154,20 @@ const HoverSection: React.FC = () => {
           Hover
         </div>
       )}
+      <div className="relative">
+        <motion.div
+          className="absolute -top-3 left-0 w-full h-[1px] bg-border-100"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
+          style={{ transformOrigin: "left" }}
+        />
+      </div>
 
       <div className="flex flex-col md:flex-row">
         {sections.map((section, index) => (
