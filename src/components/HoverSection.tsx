@@ -156,7 +156,7 @@ const HoverSection: React.FC = () => {
       )}
       <div className="relative">
         <motion.div
-          className="absolute -top-3 left-0 w-full h-[1px] bg-border-100"
+          className="absolute -top-3 left-0 w-full h-[1px] bg-border-100 md:hidden"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -212,7 +212,7 @@ const HoverSection: React.FC = () => {
                     isMobile ? "hoves-h4-med" : "hoves-h6-med"
                   )}
                   style={{
-                    minWidth: `${100 / sections.length - 2}dvw`,
+                    minWidth: `${105 / sections.length - 2}dvw`,
                   }}
                 >
                   UX Analysis
@@ -221,13 +221,20 @@ const HoverSection: React.FC = () => {
                 {/* Контент - справа від підпису */}
                 {section.content && (
                   // <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-200 delay-0 max-w-[calc(100%-200px)] flex-1">
-                  <div className="hidden md:flex transition-all duration-300 max-h-[35dvh] min-w-[35dvh] lg:pr-[5%]">
+                  <div className="hidden md:flex max-h-[33dvh] w-full max-w-[34dvh] lg:pr-[5%]">
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
-                        <p className="text-black hoves-p2-reg">
-                          {section.content}
-                        </p>
+                        {section.content.split(' ').reduce((acc: string[][], word: string, index: number) => {
+                          const groupIndex = Math.floor(index / 4);
+                          if (!acc[groupIndex]) acc[groupIndex] = [];
+                          acc[groupIndex].push(word);
+                          return acc;
+                        }, []).map((wordGroup: string[], index: number) => (
+                          <p key={index} className="text-black hoves-p2-reg !font-[400] !text-nowrap">
+                            {wordGroup.join(' ')}
+                          </p>
+                        ))}
                       </div>
                     </div>
                   </div>
