@@ -256,7 +256,7 @@ const HoverSection: React.FC = () => {
                             <SplitText
                               key={index}
                               text={text}
-                              className="leading-relaxed hoves-p1-med !font-[400] text-black !text-nowrap"
+                              className="leading-relaxed hoves-p2-reg text-black !text-nowrap"
                               globalIndex={index}
                               splitType="lines"
                               delay={100}
