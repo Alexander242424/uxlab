@@ -68,7 +68,7 @@ export default function TextSection({
       ) : (
         <>
           {/* First text with SplitText animation */}
-          <div className="flex justify-start md:justify-start lg:justify-end">
+          <div className="flex justify-start sm:justify-start md:justify-end">
             <SplitText
               text={firstText}
               className={textColor}

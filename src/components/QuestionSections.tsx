@@ -49,10 +49,10 @@ export default function QuestionSections() {
   return (
     <div
       ref={ref}
-      className="flex flex-col mb-[96px] lg:mb-[160px] lg:flex-row text-black px-4 lg:px-10 py-4 lg:py-8 relative"
+      className="flex flex-col mb-[96px] md:mb-[160px] md:flex-row text-black px-4 md:px-10 py-4 md:py-8 relative"
     >
       <motion.div
-        className="absolute top-0 left-4 right-4 lg:left-10 lg:right-10 h-[1px] z-10 bg-border-100 hidden lg:block"
+        className="absolute top-0 left-4 right-4 md:left-10 md:right-10 h-[1px] z-10 bg-border-100 hidden md:block"
         style={{
           transformOrigin: "left",
         }}
@@ -61,10 +61,10 @@ export default function QuestionSections() {
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
 
-      <div className="w-full flex flex-col lg:flex-row">
+      <div className="w-full flex flex-col md:flex-row">
         {/* Left part - title + card */}
         <motion.div
-          className="w-full lg:w-1/2 flex flex-col justify-between mb-8 lg:mb-0"
+          className="w-full md:w-1/2 flex flex-col justify-between mb-8 md:mb-0"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -81,7 +81,7 @@ export default function QuestionSections() {
             },
           }}
         >
-          <div className="mb-4 lg:mb-28 hidden lg:block">
+          <div className="mb-4 md:mb-28 hidden md:block">
             <SplitText
               text="Frequently Asked Question"
               className="hoves-p1-reg"
@@ -97,7 +97,7 @@ export default function QuestionSections() {
             />
           </div>
           <motion.div
-            className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] lg:h-[340px] lg:max-w-[456px] 2xl:h-[400px]"
+            className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] md:h-[340px] md:max-w-[456px] lg:h-[400px]"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -127,7 +127,7 @@ export default function QuestionSections() {
               variant="secondary"
               size="lg"
               iconRight={<ArrowUpRightSVG className="!size-6" />}
-              className="max-w-40 w-full sm:w-auto 2xl:scale-[150%] 2xl:ml-10 2xl:mt-10"
+              className="max-w-40 w-full xs:w-auto 2xl:scale-[150%] 2xl:ml-10 2xl:mt-10"
               onClick={() =>
                 window.open(
                   "https://cal.com/eugene.orehov/30min?overlayCalendar=true",
@@ -141,7 +141,7 @@ export default function QuestionSections() {
         </motion.div>
 
         <motion.div
-          className="mb-4 h-[1px] bg-border-100 left-4 right-4 block lg:hidden"
+          className="mb-4 h-[1px] bg-border-100 left-4 right-4 block md:hidden"
           style={{
             transformOrigin: "left",
           }}
@@ -150,7 +150,7 @@ export default function QuestionSections() {
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
 
-        <div className="block lg:hidden -mb-4">
+        <div className="block md:hidden -mb-4">
           <SplitText
             text="Frequently Asked Question"
             className="hoves-p1-reg"
@@ -168,7 +168,7 @@ export default function QuestionSections() {
 
         {/* Right part - accordion */}
         <motion.div
-          className="w-full lg:w-1/2 lg:-mt-[32px]"
+          className="w-full md:w-1/2 lg:-mt-[32px]"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

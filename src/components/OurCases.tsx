@@ -228,7 +228,7 @@ export default function OurCases() {
   }, [hoveredIndex]);
 
   return (
-    <div id="work" className="flex flex-col gap-8 my-[96px] lg:my-[160px] mx-4 lg:mx-10 relative">
+    <div id="work" className="flex flex-col gap-8 my-[96px] md:my-[160px] mx-4 md:mx-10 relative">
       {isHovering && !isMobile && hoveredIndex !== null && cases[hoveredIndex]?.videoSrc && cursorStyles && isInitialized && showVideo && (
         <div
           ref={cursorRef}
@@ -297,7 +297,7 @@ export default function OurCases() {
       </div>
       
       <div 
-        className="flex gap-2 lg:gap-8 overflow-x-auto lg:overflow-x-visible"
+        className="flex gap-2 md:gap-8 overflow-x-auto md:overflow-x-visible"
         style={{
           scrollbarWidth: 'none', // Firefox
           msOverflowStyle: 'none', // IE and Edge
@@ -306,7 +306,7 @@ export default function OurCases() {
         {cases.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-[21px] flex-shrink-0 w-full h-full not-lg:max-w-[300px] not-lg:max-h-[553px] lg:flex-1 lg:max-w-none lg:aspect-[456/677]"
+            className="flex flex-col gap-[21px] flex-shrink-0 w-full h-full not-md:max-w-[300px] not-md:max-h-[553px] md:flex-1 md:max-w-none md:aspect-[456/677]"
           >
             <div
               className="relative cursor-pointer"
@@ -335,7 +335,7 @@ export default function OurCases() {
                 />
                 
                 {item.logo && (
-                  <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] lg:mb-[48px] transition-opacity duration-300 ${
+                  <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] md:mb-[48px] transition-opacity duration-300 ${
                     isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
                   }`}>
                     {item.logo}

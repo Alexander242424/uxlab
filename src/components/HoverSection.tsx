@@ -89,7 +89,7 @@ const HoverSection: React.FC = () => {
   }, [hoveredSection]);
 
   return (
-    <section className="w-full bg-white px-4 lg:px-10">
+    <section className="w-full bg-white px-4 md:px-10">
       {isHovering && !isMobile && (
         <div
           className="hover-cursor hoves-p3-reg"
@@ -103,7 +103,7 @@ const HoverSection: React.FC = () => {
         </div>
       )}
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col md:flex-row">
         {sections.map((section, index) => (
           <div
             key={section.id}
@@ -132,13 +132,13 @@ const HoverSection: React.FC = () => {
             }}
           >
             {/* Номер секції */}
-            <div className="absolute top-[20px] lg:top-4 left-0 lg:left-4 hoves-p3-reg text-black transition-opacity duration-300">
+            <div className="absolute top-[20px] lg:top-4 left-0 md:left-4 hoves-p3-reg text-black transition-opacity duration-300">
               {section.title}
             </div>
 
             {/* Контент секції */}
-            <div className="lg:pt-16 pb-5 lg:pb-8 lg:px-4 h-[180px] lg:h-72 flex flex-col justify-end">
-              <div className="flex flex-col lg:flex-row lg:items-end gap-3 lg:gap-0">
+            <div className="md:pt-16 pb-5 md:pb-8 md:px-4 h-[180px] md:h-72 flex flex-col justify-end">
+              <div className="flex flex-col md:flex-row md:items-end gap-3 md:gap-0">
                 {/* Підпис "UX Analysis" - завжди зліва */}
                 <div className={cn("flex-shrink-0 text-black", isMobile ? "hoves-h4-med" : "hoves-h6-med")}
                 style={{
@@ -150,7 +150,7 @@ const HoverSection: React.FC = () => {
                 {/* Контент - справа від підпису */}
                 {section.content && (
                   // <div className="hidden lg:flex absolute right-4 bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-120 group-hover:delay-200 delay-0 max-w-[calc(100%-200px)] flex-1">
-                  <div className="hidden lg:flex transition-all duration-300 max-h-[35dvh] min-w-[35dvh] lg:pr-[5%]">
+                  <div className="hidden md:flex transition-all duration-300 max-h-[35dvh] min-w-[35dvh] lg:pr-[5%]">
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
@@ -162,7 +162,7 @@ const HoverSection: React.FC = () => {
                   </div>
                 )}
                 {section.content && (
-                  <div className="block lg:hidden flex-1">
+                  <div className="block md:hidden flex-1">
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
