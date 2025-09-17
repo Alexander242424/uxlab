@@ -106,7 +106,7 @@ export default function Header() {
 
           {/* Права частина - навігація + Book a Call */}
           <div className="w-1/2 flex justify-between items-center">
-            <nav className="hidden sm:flex space-x-8 hoves-p2-reg">
+            <nav className="hidden sm:flex space-x-4 md:space-x-8 hoves-p2-reg">
               {pathname === "/" ? (
                 <button
                   onClick={() => scrollToSection("")}
