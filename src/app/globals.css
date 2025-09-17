@@ -941,7 +941,7 @@
 }
 
 /* Мобільні стилі для секцій */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .flex-smooth {
     flex-basis: 100% !important;
     border-right: none !important;
