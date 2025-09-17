@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 
 const faqData = [
   {
@@ -116,7 +117,7 @@ export default function QuestionSections() {
             <div className="min-h-14">
               <AvatarsSVG />
             </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-3.5">
               <h4 className="hoves-h4-med">Book an intro call</h4>
               <p className="hoves-p1-med !font-[400]">
                 Time to get introduced and explore how Uxlab can help
@@ -211,7 +212,7 @@ export default function QuestionSections() {
                   style={{ transformOrigin: "left" }}
                 />
                 <AccordionItem value={item.id} className="border-b-0">
-                  <AccordionTrigger className="hoves-p1-reg text-left">
+                  <AccordionTrigger className={cn("hoves-p1-reg text-left", index === 0 && "pt-8")}>
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="hoves-p2-reg max-w-[90%]">
