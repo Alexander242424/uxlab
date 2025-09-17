@@ -119,7 +119,7 @@ export default function QuestionSections() {
             </div>
             <div className="flex flex-col gap-3.5">
               <h4 className="hoves-h4-med">Book an intro call</h4>
-              <p className="hoves-p1-med !font-[400]">
+              <p className="hoves-p2-reg">
                 Time to get introduced and explore how Uxlab can help
               </p>
             </div>
@@ -220,7 +220,7 @@ export default function QuestionSections() {
                   <AccordionTrigger
                     className={cn(
                       "hoves-p1-big text-left",
-                      index === 0 && "md:!pt-0 lg:!pt-8"
+                      index === 0 && "md:!pt-0 lg:!pt-10"
                     )}
                   >
                     {item.question}
