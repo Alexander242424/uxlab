@@ -12,7 +12,7 @@ import CalendlyLogo from "../assets/logoicons/calendly-logo-vector 5.svg";
 import UserwayLogo from "../assets/logoicons/userway-org-vector-logo-2022 1.svg";
 
 import InfiniteSlider from "@/components/InfiniteSlider";
-import GlanceSection from "@/components/GlanceSection";
+import GlanceSection from "@/components/glance-section/GlanceSection";
 import HoverSection from "@/components/HoverSection";
 import InsightsSection from "@/components/InsightsSection";
 import QuestionSections from "@/components/QuestionSections";
