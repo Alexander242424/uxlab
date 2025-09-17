@@ -62,25 +62,25 @@ export default function Footer() {
             delay: 0.2,
           }}
         >
-          <div className="px-4 sm:px-6 lg:px-10 pt-10 pb-[48px] md:pb-[70px] text-text-700 md:min-h-[calc(100dvh-400px)]">
-            <div className="w-full flex flex-col md:flex-row md:mt-2">
+          <div className="px-4 xs:px-6 md:px-10 pt-10 pb-[48px] sm:pb-[70px] text-text-700 sm:min-h-[calc(100dvh-400px)]">
+            <div className="w-full flex flex-col md:flex-row sm:mt-2">
               {/* Left part - title + contacts + input */}
-              <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+              <div className="w-full md:w-1/2 mb-8 md:mb-0">
                 <h3 className="hoves-h5-med mb-8">Relax. We&apos;ve Got You.</h3>
-                <div className="flex md:gap-8">
-                  <div className="not-md:min-w-1/2">
+                <div className="flex sm:gap-8">
+                  <div className="not-sm:min-w-1/2">
                     <p className="hoves-p2-reg">Contact us:</p>
                     <Link href="mailto:hello@uxlab.com" className="relative group text-text-700 hoves-p2-reg">
                       hello@uxlab.com
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                     </Link>
                   </div>
-                  <div className="not-md:min-w-1/2">
+                  <div className="not-sm:min-w-1/2">
                     <p className="hoves-p2-reg">Terms of use</p>
                     <p className="hoves-p2-reg">©13—25</p>
                   </div>
                 </div>
-                <div className="hidden md:flex flex-col md:mt-32 gap-5 max-w-[420px]">
+                <div className="hidden sm:flex flex-col sm:mt-32 gap-5 max-w-[420px]">
                   <p className="hoves-p2-reg">Sign up for our newsletter</p>
                   <div className="relative">
                     <input
@@ -93,8 +93,8 @@ export default function Footer() {
               </div>
 
               {/* Right part - navigation + social networks */}
-              <div className="w-full lg:w-1/2 flex xl:gap-[154px]">
-                <div className="text-nowrap not-md:min-w-1/2 lg:pl-[1px] mb-8 lg:mb-0 lg:min-w-[212px]">
+              <div className="w-full md:w-1/2 flex xl:gap-[154px]">
+                <div className="text-nowrap not-sm:min-w-1/2 md:pl-[1px] mb-8 md:mb-0 md:min-w-[212px]">
                   <ul className="space-y-4">
                     <li>
                       <Link href="/#" className={`relative group text-text-700 hoves-p2-reg`}>
@@ -117,7 +117,7 @@ export default function Footer() {
                   </ul>
                 </div>
 
-                <div className="text-nowrap lg:min-w-[212px] not-md:min-w-1/2">
+                <div className="text-nowrap md:min-w-[212px] not-sm:min-w-1/2">
                   <ul className="space-y-4">
                     <li>
                       <Link
@@ -173,7 +173,7 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div className="flex flex-col md:hidden mt-[180px]">
+              <div className="flex flex-col sm:hidden mt-[180px]">
                 <p className="hoves-p2-reg">Sign up for our newsletter</p>
                 <div className="relative">
                   <input
@@ -190,7 +190,7 @@ export default function Footer() {
       </div>
 
       {/* Фіксована частина без паралаксу */}
-      <div className="mx-4 pb-4 lg:mx-10 lg:pb-10">
+      <div className="mx-4 pb-4 md:mx-10 md:pb-10">
         <WeMakeInterfacesSVG />
       </div>
     </footer>

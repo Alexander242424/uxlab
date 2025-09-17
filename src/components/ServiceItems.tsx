@@ -61,7 +61,7 @@ export default function ServiceItems() {
   return (
     <section
       id="services"
-      className="bg-bg-black mx-4 lg:mx-10 pt-10 lg:pt-20 relative overflow-hidden"
+      className="bg-bg-black mx-4 md:mx-10 pt-10 md:pt-20 relative overflow-hidden"
     >
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
@@ -74,9 +74,9 @@ export default function ServiceItems() {
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
 
-      <div className="flex flex-col md:flex-row gap-12">
-        <div className="md:w-[47%] flex items-start">
-          <div className="grid not-md:flex not-md:gap-8 w-full">
+      <div className="flex flex-col sm:flex-row gap-12">
+        <div className="sm:w-[47%] flex items-start">
+          <div className="grid not-sm:flex not-sm:gap-8 w-full">
             <SplitText
               text="Your Grow Starts Here"
               className="text-text-700 hoves-p1-reg"
@@ -90,7 +90,7 @@ export default function ServiceItems() {
               rootMargin={isMobile ? "-100px" : "-200px"}
               textAlign="left"
             />
-            <div className="flex flex-col md:hidden gap-4">
+            <div className="flex flex-col sm:hidden gap-4">
               <div className="flex flex-col">
               {firstParagraphMobile.map((text, index) => (
                 <SplitText
@@ -134,7 +134,7 @@ export default function ServiceItems() {
         </div>
 
         <div className="w-full flex flex-col">
-          <div className="space-y-6 mb-20 w-full not-md:hidden">
+          <div className="space-y-6 mb-20 w-full not-sm:hidden">
             <div className="flex flex-col">
               {firstParagraph.map((text, index) => (
                 <SplitText
@@ -202,7 +202,7 @@ export default function ServiceItems() {
                   }}
                   style={{ transformOrigin: "left" }}
                 />
-                <div className="flex items-center justify-between py-6 md:py-10">
+                <div className="flex items-center justify-between py-6 sm:py-10">
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex items-center justify-between">
                       <h3 className="hoves-h5-med text-text-700 relative group/title">

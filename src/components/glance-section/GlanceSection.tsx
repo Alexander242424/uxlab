@@ -25,7 +25,7 @@ export default function GlanceSection() {
   return (
     <div ref={ref} className="flex flex-col bg-bg-white relative overflow-hidden">
       <motion.div
-        className="absolute top-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100 block lg:block"
+        className="absolute top-0 left-4 md:left-10 right-4 md:right-10 h-[1px] z-10 bg-border-100 block md:block"
         style={{
           transformOrigin: "left",
         }}
@@ -33,7 +33,7 @@ export default function GlanceSection() {
         animate={{ scaleX: isInView ? 1 : 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
-      <div className="flex justify-between mx-4 lg:mx-10 lg:py-8 py-4 hoves-p1-reg">
+      <div className="flex justify-between mx-4 md:mx-10 md:py-8 py-4 hoves-p1-reg">
         <div>
           <SplitText
             text="UxLab at a Glance."
@@ -78,7 +78,7 @@ export default function GlanceSection() {
         className="cursor-grab"
       />
       <motion.div
-        className="absolute bottom-0 left-4 lg:left-10 right-4 lg:right-10 h-[1px] z-10 bg-border-100 block lg:block"
+        className="absolute bottom-0 left-4 md:left-10 right-4 md:right-10 h-[1px] z-10 bg-border-100 block md:block"
         style={{
           transformOrigin: "left",
         }}
@@ -86,7 +86,7 @@ export default function GlanceSection() {
         animate={{ scaleX: isInView ? 1 : 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
-      <div className="flex mx-4 lg:mx-10 my-[96px] lg:my-40 hoves-p1-reg" />
+      <div className="flex mx-4 md:mx-10 my-[96px] md:my-40 hoves-p1-reg" />
     </div>
   );
 }

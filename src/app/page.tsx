@@ -44,7 +44,7 @@ export default function HomePage() {
           />
         </div>
         <TextSection
-          className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+          className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
           firstText="Design for founders who care about"
           secondText={[
             "conversions, revenue, acquisition, and",
@@ -66,11 +66,11 @@ export default function HomePage() {
           <InfiniteSlider
             slides={slides}
             duration={20}
-            className="py-[90px] lg:py-[173px]"
+            className="py-[90px] md:py-[173px]"
           />
           <GlanceSection />
           <TextSection
-            className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+            className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
             firstText="After shipping hundreds of products,"
             secondText={[
               "there are a few key things we've learned",
@@ -86,7 +86,7 @@ export default function HomePage() {
             textColor="text-black"
           />
           <HoverSection />
-          <div className="w-full px-4 lg:px-10 mt-[56px] lg:mt-40 mb-[96px] lg:mb-[161px]">
+          <div className="w-full px-4 md:px-10 mt-[56px] md:mt-40 mb-[96px] md:mb-[161px]">
             <OverviewCaseVideoSection
               className="!p-0 !m-0"
               src="/video/reel-short.mp4"
@@ -108,7 +108,7 @@ export default function HomePage() {
             ]}
             showButton={true}
             textColor="text-black"
-            className="mb-[96px] lg:pb-[161px] px-4 lg:px-10"
+            className="mb-[96px] md:pb-[161px] px-4 md:px-10"
           />
           <InsightsSection />
         </div>
