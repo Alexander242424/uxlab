@@ -395,9 +395,9 @@
   .hoves-p1-reg {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.1rem;
-    letter-spacing: -0.03em;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p1-med {
@@ -405,7 +405,7 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.375rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p1-semibold {
@@ -413,7 +413,7 @@
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.375rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p2-reg {
@@ -421,7 +421,7 @@
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p2-med {
@@ -429,7 +429,7 @@
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p2-semibold {
@@ -437,7 +437,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p3-reg {
@@ -445,7 +445,7 @@
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1.625rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p3-med {
@@ -453,7 +453,7 @@
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 1rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-p3-semibold {
@@ -461,7 +461,7 @@
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-s1-reg {
@@ -469,7 +469,7 @@
     font-weight: 400;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-s1-med {
@@ -477,7 +477,7 @@
     font-weight: 500;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 
   .hoves-s1-semibold {
@@ -485,7 +485,7 @@
     font-weight: 600;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
   }
 }
 

@@ -47,13 +47,13 @@ export default function HeroSection() {
                 We unite User Experience,
               </p>
               <p className="text-text-700 hoves-p1-reg md:text-nowrap">
-                conversions and data-driven design to help digital             
+                conversions and data-driven design             
               </p>
               <p className="text-text-700 hoves-p1-reg md:text-nowrap">
-                products, convert, scale, and win in competitive
+                to help digital products, convert, scale,
               </p>
               <p className="text-text-700 hoves-p1-reg md:text-nowrap">
-                markets.
+              and win in competitive markets.
               </p>
             </div>
           </div>
