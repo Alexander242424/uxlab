@@ -2,11 +2,14 @@
 
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useCallback } from "react";
+import SplitText from "./SplitText";
 
 interface SectionData {
   id: number;
   title: string;
   content: string;
+  contentMobile: string[];
+  contentTablet: string[];
 }
 
 const sections: SectionData[] = [
@@ -15,32 +18,80 @@ const sections: SectionData[] = [
     title: "01",
     content:
       "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+    contentMobile: [
+      "Boostra drove an 18% conversion lift",
+      "and paid for itself in hours. No more",
+      "wasting budget on overpriced",
+      " CRO or UX teams.",
+    ],
+    contentTablet: [
+      "Boostra drove an 18% conversion lift and paid for itself in hours.",
+      "No more wasting budget on overpriced CRO or UX teams.",
+    ],
   },
   {
     id: 2,
     title: "02",
     content:
       "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
-
+    contentMobile: [
+      "Boostra drove an 18% conversion lift",
+      "and paid for itself in hours. No more",
+      "wasting budget on overpriced",
+      " CRO or UX teams.",
+    ],
+    contentTablet: [
+      "Boostra drove an 18% conversion lift and paid for itself in hours.",
+      "No more wasting budget on overpriced CRO or UX teams.",
+    ],
   },
   {
     id: 3,
     title: "03",
     content:
       "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+    contentMobile: [
+      "Boostra drove an 18% conversion lift",
+      "and paid for itself in hours. No more",
+      "wasting budget on overpriced",
+      " CRO or UX teams.",
+    ],
+    contentTablet: [
+      "Boostra drove an 18% conversion lift and paid for itself in hours.",
+      "No more wasting budget on overpriced CRO or UX teams.",
+    ],
   },
   {
     id: 4,
     title: "04",
     content:
       "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+    contentMobile: [
+      "Boostra drove an 18% conversion lift",
+      "and paid for itself in hours. No more",
+      "wasting budget on overpriced",
+      " CRO or UX teams.",
+    ],
+    contentTablet: [
+      "Boostra drove an 18% conversion lift and paid for itself in hours.",
+      "No more wasting budget on overpriced CRO or UX teams.",
+    ],
   },
   {
     id: 5,
     title: "05",
     content:
       "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
-
+    contentMobile: [
+      "Boostra drove an 18% conversion lift",
+      "and paid for itself in hours. No more",
+      "wasting budget on overpriced",
+      " CRO or UX teams.",
+    ],
+    contentTablet: [
+      "Boostra drove an 18% conversion lift and paid for itself in hours.",
+      "No more wasting budget on overpriced CRO or UX teams.",
+    ],
   },
 ];
 
@@ -108,7 +159,7 @@ const HoverSection: React.FC = () => {
           <div
             key={section.id}
             className={`overflow-hidden relative border-r border-border-100 last:border-r-0 transition-all duration-1000 ease-in-out hover-section group flex-smooth ${
-              index === 0 ? 'lg:border-l lg:border-border-100' : ''
+              index === 0 ? "md:border-l md:border-border-100" : ""
             }`}
             style={{
               flexBasis:
@@ -137,13 +188,18 @@ const HoverSection: React.FC = () => {
             </div>
 
             {/* Контент секції */}
-            <div className="md:pt-16 pb-5 md:pb-8 md:px-4 h-[180px] md:h-72 flex flex-col justify-end">
+            <div className="md:pt-16 pb-5 md:pb-8 md:px-4 h-[240px] sm:h-[150px] md:h-72 flex flex-col justify-end">
               <div className="flex flex-col md:flex-row md:items-end gap-3 md:gap-0">
                 {/* Підпис "UX Analysis" - завжди зліва */}
-                <div className={cn("flex-shrink-0 text-black", isMobile ? "hoves-h4-med" : "hoves-h6-med")}
-                style={{
-                  minWidth: `${(100 / sections.length)-2}dvw`,
-                }}>
+                <div
+                  className={cn(
+                    "flex-shrink-0 text-black",
+                    isMobile ? "hoves-h4-med" : "hoves-h6-med"
+                  )}
+                  style={{
+                    minWidth: `${100 / sections.length - 2}dvw`,
+                  }}
+                >
                   UX Analysis
                 </div>
 
@@ -161,14 +217,58 @@ const HoverSection: React.FC = () => {
                     </div>
                   </div>
                 )}
-                {section.content && (
-                  <div className="block md:hidden flex-1">
+
+                {section.contentMobile && (
+                  <div className="block sm:hidden flex-1">
                     <div className="flex items-start">
                       {/* Текст контенту */}
-                      <div className="flex-1">
-                        <p className="text-black hoves-p1-med !font-[400]">
-                          {section.content}
-                        </p>
+                      <div className="flex-1 flex flex-col gap-0">
+                        {Array.isArray(section.contentMobile) &&
+                          section.contentMobile.map((text, index) => (
+                            <SplitText
+                              key={index}
+                              text={text}
+                              className="leading-relaxed hoves-p1-med !font-[400] text-black !text-nowrap"
+                              globalIndex={index}
+                              splitType="lines"
+                              delay={100}
+                              duration={0.8}
+                              ease="power3.out"
+                              from={{ opacity: 0, y: 50 }}
+                              to={{ opacity: 1, y: 0 }}
+                              threshold={0.1}
+                              rootMargin="100px"
+                              textAlign="left"
+                            />
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {section.contentTablet && (
+                  <div className="block not-sm:hidden md:hidden flex-1">
+                    <div className="flex items-start">
+                      {/* Текст контенту */}
+                      <div className="flex-1 flex flex-col gap-0">
+                        {Array.isArray(section.contentTablet) &&
+                          section.contentTablet.map((text, index) => (
+                            <SplitText
+                              key={index}
+                              text={text}
+                              className="leading-relaxed hoves-p1-med !font-[400] text-black !text-nowrap"
+                              globalIndex={index}
+                              splitType="lines"
+                              delay={100}
+                              duration={0.8}
+                              ease="power3.out"
+                              from={{ opacity: 0, y: 50 }}
+                              to={{ opacity: 1, y: 0 }}
+                              threshold={0.1}
+                              rootMargin="100px"
+                              textAlign="left"
+                            />
+                          ))}
                       </div>
                     </div>
                   </div>
