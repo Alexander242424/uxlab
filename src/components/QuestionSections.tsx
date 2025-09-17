@@ -140,29 +140,34 @@ export default function QuestionSections() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="mb-4 h-[1px] bg-border-100 left-4 right-4 block md:hidden"
-          style={{
-            transformOrigin: "left",
-          }}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: isInView ? 1 : 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        />
+        <div className="relative block md:hidden">
+          <div className="block mb-4">
+            <SplitText
+              text="Frequently Asked Question"
+              className="hoves-p1-reg"
+              splitType="lines"
+              delay={100}
+              duration={0.5}
+              ease="power3.out"
+              from={{ opacity: 0, y: 50 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="0px"
+              textAlign="left"
+            />
+          </div>
 
-        <div className="block md:hidden -mb-4">
-          <SplitText
-            text="Frequently Asked Question"
-            className="hoves-p1-reg"
-            splitType="lines"
-            delay={100}
-            duration={0.5}
-            ease="power3.out"
-            from={{ opacity: 0, y: 50 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="0px"
-            textAlign="left"
+          <motion.div
+            className="absolute -bottom-3 left-0 w-full h-[1px] bg-border-100"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+            style={{ transformOrigin: "left" }}
           />
         </div>
 
@@ -212,7 +217,12 @@ export default function QuestionSections() {
                   style={{ transformOrigin: "left" }}
                 />
                 <AccordionItem value={item.id} className="border-b-0">
-                  <AccordionTrigger className={cn("hoves-p1-reg text-left", index === 0 && "pt-8")}>
+                  <AccordionTrigger
+                    className={cn(
+                      "hoves-p1-big text-left",
+                      index === 0 && "md:!pt-0 lg:!pt-8"
+                    )}
+                  >
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="hoves-p2-reg max-w-[90%]">
