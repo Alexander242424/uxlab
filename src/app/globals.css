@@ -258,6 +258,14 @@
     line-height: 2rem;
     letter-spacing: -0.03em;
   }
+
+  .hoves-p1-big {
+    font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: clamp(1.7rem, 1.5vw, 2.3rem);
+    line-height: 1.3rem;
+    letter-spacing: -0.02em;
+  }
   
   .hoves-p1-reg {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
@@ -404,6 +412,14 @@
     font-size: 1.5rem;
     line-height: 2rem;
     letter-spacing: -0.03em;
+  }
+
+  .hoves-p1-big {
+    font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 2.3rem);
+    line-height: 1.3rem;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p1-reg {
@@ -553,6 +569,14 @@
     letter-spacing: -0.03em;
   }
 
+  .hoves-p1-big {
+    font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.02em;
+  }
+
   .hoves-p1-reg {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 400;
@@ -698,6 +722,14 @@
     font-size: 1rem;
     line-height: 1.375rem;
     letter-spacing: -0.03em;
+  }
+
+  .hoves-p1-big {
+    font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p1-reg {
