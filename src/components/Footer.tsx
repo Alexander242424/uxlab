@@ -62,7 +62,7 @@ export default function Footer() {
             delay: 0.2,
           }}
         >
-          <div className="px-4 xs:px-6 md:px-10 pt-10 pb-[48px] sm:pb-[70px] text-text-700 sm:min-h-[calc(100dvh-400px)]">
+          <div className="mx-4 md:mx-10 md:pb-10 pt-10 pb-[48px] sm:pb-[70px] text-text-700 sm:min-h-[calc(100dvh-400px)]">
             <div className="w-full flex flex-col md:flex-row sm:mt-2">
               {/* Left part - title + contacts + input */}
               <div className="w-full md:w-1/2 mb-8 md:mb-0">

@@ -7,13 +7,13 @@
 @custom-variant lg (@media (min-width: 1920px));
 @custom-variant md (@media (min-width: 1024px));
 @custom-variant sm (@media (min-width: 768px));
-@custom-variant xs (@media (min-width: 320px));
+@custom-variant xs (@media (min-width: 275px));
 
 /* Not breakpoint variants */
 @custom-variant not-lg (@media (max-width: 1919px));
 @custom-variant not-md (@media (max-width: 1023px));
 @custom-variant not-sm (@media (max-width: 767px));
-@custom-variant not-xs (@media (max-width: 319px));
+@custom-variant not-xs (@media (max-width: 274px));
 
 
 .AccordionContent[data-state="open"] {
@@ -264,7 +264,7 @@
     font-weight: 400;
     font-size: clamp(1rem, 1.4vw, 2.3rem);
     line-height: 1.3;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p1-med {
@@ -272,7 +272,7 @@
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p1-semibold {
@@ -280,7 +280,7 @@
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p2-reg {
@@ -288,7 +288,7 @@
     font-weight: 400;
     font-size: clamp(0rem, 1.1vw, 2.3rem);
     line-height: 1.35;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p2-med {
@@ -296,7 +296,7 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p2-semibold {
@@ -304,7 +304,7 @@
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p3-reg {
@@ -312,7 +312,7 @@
     font-weight: 400;
     font-size: clamp(0.9rem, 0.9vw, 2.25rem);
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p3-med {
@@ -320,7 +320,7 @@
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p3-semibold {
@@ -328,7 +328,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-s1-reg {
@@ -409,9 +409,9 @@
   .hoves-p1-reg {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: clamp(1rem, 1.4vw, 2.3rem);
+    font-size: clamp(1rem, 1.3vw, 2.3rem);
     line-height: 1.3;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p1-med {
@@ -419,7 +419,7 @@
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p1-semibold {
@@ -427,7 +427,7 @@
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p2-reg {
@@ -435,7 +435,7 @@
     font-weight: 400;
     font-size: clamp(0rem, 1.1vw, 2.3rem);
     line-height: 1.35;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p2-med {
@@ -443,7 +443,7 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p2-semibold {
@@ -451,7 +451,7 @@
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p3-reg {
@@ -459,7 +459,7 @@
     font-weight: 400;
     font-size: clamp(0.9rem, 0.9vw, 2.25rem);
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p3-med {
@@ -467,7 +467,7 @@
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-p3-semibold {
@@ -475,7 +475,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   
   .hoves-s1-reg {
@@ -556,9 +556,9 @@
   .hoves-p1-reg {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    letter-spacing: -0.01em;
+    font-size: clamp(0.8rem, 1.7vw, 2.3rem);
+    line-height: 1.1rem;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p1-med {
@@ -566,7 +566,7 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.375rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p1-semibold {
@@ -574,7 +574,7 @@
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.375rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p2-reg {
@@ -582,7 +582,7 @@
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p2-med {
@@ -590,7 +590,7 @@
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p2-semibold {
@@ -598,7 +598,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p3-reg {
@@ -606,7 +606,7 @@
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1.625rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p3-med {
@@ -614,7 +614,7 @@
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p3-semibold {
@@ -622,7 +622,7 @@
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-s1-reg {
@@ -630,7 +630,7 @@
     font-weight: 400;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-s1-med {
@@ -638,7 +638,7 @@
     font-weight: 500;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-s1-semibold {
@@ -646,12 +646,12 @@
     font-weight: 600;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 }
 
 /* TEXT_(320-767) */
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 275px) and (max-width: 767px) {
   .hoves-h1-med {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 300;
@@ -703,9 +703,9 @@
   .hoves-p1-reg {
     font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    letter-spacing: -0.01em;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p1-med {
@@ -713,7 +713,7 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.375rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p1-semibold {
@@ -721,7 +721,7 @@
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.375rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p2-reg {
@@ -729,7 +729,7 @@
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p2-med {
@@ -737,7 +737,7 @@
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p2-semibold {
@@ -745,7 +745,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p3-reg {
@@ -753,7 +753,7 @@
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1.625rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p3-med {
@@ -761,7 +761,7 @@
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-p3-semibold {
@@ -769,7 +769,7 @@
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-s1-reg {
@@ -777,7 +777,7 @@
     font-weight: 400;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-s1-med {
@@ -785,7 +785,7 @@
     font-weight: 500;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .hoves-s1-semibold {
@@ -793,9 +793,11 @@
     font-weight: 600;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 }
+
+
 
 /* Анімація для підкреслення */
 @keyframes underlineIn {

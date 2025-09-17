@@ -25,12 +25,12 @@ export default function HeroSection() {
         className="absolute sm:-top-[30px] -top-[50px] 2xl:top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
-        <div className="w-full flex">
+        <div className="w-full flex min-h-[300px]">
           {/* Left part - empty, takes half of the screen */}
           <div className="hidden sm:block sm:w-1/2"></div>
 
           {/* Right part - contains the text block */}
-          <div className="md:w-1/2 w-full flex justify-start">
+          <div className="sm:w-1/2 w-full flex justify-start">
             <div className="hidden flex-col sm:flex">
               <p className="text-text-700 hoves-p1-reg md:text-right !text-nowrap">
                 We unite User Experience,
