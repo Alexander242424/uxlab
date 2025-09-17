@@ -50,7 +50,7 @@ export default function TextSection({
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
                 fontSize: "clamp(1.3rem, 8.8vw, 3rem)",
-                lineHeight: "0.9",
+                lineHeight: "1.1",
                 letterSpacing: "-0.03em",
               }}
               splitType="lines"
