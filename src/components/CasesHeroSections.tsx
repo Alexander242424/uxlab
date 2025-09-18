@@ -37,19 +37,19 @@ export default function CasesHeroSections({
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] md:min-h-[calc(100vh-72px-120px)] 2xl:min-h-[calc(100vh-72px-200px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]"
     >
       <motion.div
-        className="absolute md:-top-[110px] -top-[200px] 2xl:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 lg:px-0"
+        className="absolute sm:-top-[110px] -top-[200px] lg:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
         style={{ y: textBlockY }}
       >
-        <div className="w-full flex flex-col md:flex-row px-4 sm:px-6 lg:px-10">
-          <div className="mb-[48px] mt-[40px] md:mt-0 md:mb-0 md:w-1/3">
+        <div className="w-full flex flex-col sm:flex-row px-4 sm:px-6 md:px-10">
+          <div className="mb-[48px] mt-[40px] sm:mt-0 sm:mb-0 sm:w-1/3">
             {isMobile ? logoMobile : logo}
           </div>
 
-          <div className="w-full md:w-2/3 flex flex-col">
-            <p className="block md:hidden text-text-500 hoves-p2-reg pb-4">
+          <div className="w-full sm:w-2/3 flex flex-col">
+            <p className="block sm:hidden text-text-500 hoves-p2-reg pb-4">
               Emma Sleep
             </p>
             {textArray.map((text, index) => (
@@ -79,13 +79,13 @@ export default function CasesHeroSections({
           </div>
         </div>
       </motion.div>
-      <div className="w-full mt-auto px-4 lg:px-10 flex mb-10">
-        <div className="md:w-1/3 hidden md:block">
+      <div className="w-full mt-auto px-4 md:px-10 flex mb-10">
+        <div className="sm:w-1/3 hidden sm:block">
           <p className="text-text-500 hoves-p2-reg">{companyName}</p>
         </div>
 
-        <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-8">
-          <div className="flex flex-col gap-2 md:min-w-[212px]">
+        <div className="w-full sm:w-2/3 flex flex-col sm:flex-row gap-8">
+          <div className="flex flex-col gap-2 sm:min-w-[212px]">
             <p className="text-text-500 hoves-p2-reg">Year</p>
             <p className="text-text-700 hoves-p2-reg">{year}</p>
           </div>

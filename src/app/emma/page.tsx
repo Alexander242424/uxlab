@@ -32,7 +32,7 @@ export default function EmmaPage() {
           />
         </div>
         <TextSection
-          className="px-4 pt-8 pb-12 lg:px-10 lg:pt-12 lg:pb-20"
+          className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
           firstText="By fostering healthy sleep habits,"
           secondText={["Emma Sleep builds trust, encouraging them", "to download the app and integrate it into", "their daily routines."]}
           mobileText={["By fostering healthy","sleep habits,", "Emma Sleep builds trust,", "encouraging them", "to download the app", "and integrate it into their", "daily routines."]}
@@ -45,14 +45,14 @@ export default function EmmaPage() {
           imageClassName="min-h-[700px]"
         />
         <InfoBlock
-          className="lg:pt-[120px]! lg:pb-20!"
+          className="md:pt-[120px]! md:pb-20!"
           title={["Challenge: Low daily engagement and", "limited value for app users"]}
           description={["Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing", "experience offered limited value beyond basic sleep tracking."]}
           mobileTitle={["Challenge: Low daily engagement and", "limited value for app users"]}
           mobileDescription={["Emma Sleep wanted users to engage with its","mobile app on a daily basis, but the existing", "experience offered limited value", "beyond basic sleep tracking."]}
         />
         <InfoBlock
-          className="lg:pt-20! lg:pb-[120px]!"
+          className="md:pt-20! md:pb-[120px]!"
           title={["Solution: Transforming the app", "into a personalized educational hub"]}
           description={["To increase daily engagement and provide meaningful value, Emma Sleep adopted a", "product-focused approach, redesigning the app to offer", "a comprehensive educational hub. "]}
           mobileTitle={["Solution: Transforming the app", "into a personalized educational hub"]}
@@ -71,7 +71,7 @@ export default function EmmaPage() {
           authorText="Felix Focken, CEO (Emma Sleep)"
         />
         <InfoBlock
-          className="lg:py-20!"
+          className="md:py-20!"
           title={["To increase daily engagement and provide ","meaningful value, Emma Sleep adopted a","product-focused approach, redesigning the","app to offer a comprehensive", "educational hub."]}
           description={["Solution: Transforming the app into a personalized educational hub"]}
           mobileTitle={["To increase daily engagement and","provide meaningful value, Emma Sleep","adopted a product-focused approach,","redesigning the app to offer a", "comprehensive educational hub."]}
@@ -79,7 +79,7 @@ export default function EmmaPage() {
         />
         <OverviewCaseVideoSection src="/video/kX7KGpaqnCXw1cVoWgL7iiBKs.mp4" />
         <InfoBlock
-          className="lg:py-20!"
+          className="md:py-20!"
           title={["By fostering healthy sleep habits, ","Emma Sleep builds trust with users,"," encouraging them to download the app and","integrate it into their daily routines."]}
           description={["A Call to Habits"]}
           mobileTitle={["By fostering healthy sleep habits, ","Emma Sleep builds trust with users,"," encouraging them to download the","app and integrate it into their","daily routines."]}
@@ -89,10 +89,10 @@ export default function EmmaPage() {
           videoSrc="/video/oL41OoO8XddHIxMfWdQaPy1yITI.mp4"
           firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can't I sleep? How do I find more energy after sleep?"
           secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
-          videoClassName="lg:min-w-2/3 lg:max-w-2/3 lg:pr-8"
+          videoClassName="md:min-w-2/3 md:max-w-2/3 md:pr-8"
         />
         <InfoBlock
-          className="lg:py-20!"
+          className="md:py-20!"
           title={["By fostering healthy sleep habits, ","Emma Sleep builds trust with users,"," encouraging them to download the app and","integrate it into their daily routines."]}
           description={["A Call to Habits"]}
           mobileTitle={["By fostering healthy sleep habits, ","Emma Sleep builds trust with users,"," encouraging them to download the","app and integrate it into their","daily routines."]}

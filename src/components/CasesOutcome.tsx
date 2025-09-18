@@ -27,7 +27,7 @@ const outcomes: OutcomeItem[] = [
 
 export default function CasesOutcome() {
   return (
-    <div className="bg-bg-black mx-4 lg:mx-10 pb-[64px] lg:pb-[120px] pt-8 lg:pt-10 relative overflow-hidden">
+    <div className="bg-bg-black mx-4 md:mx-10 pb-[64px] md:pb-[120px] pt-8 md:pt-10 relative overflow-hidden">
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
         style={{
@@ -38,8 +38,8 @@ export default function CasesOutcome() {
         viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
-      <div className="flex flex-col lg:flex-row w-full">
-        <div className="w-full lg:w-1/2">
+      <div className="flex flex-col md:flex-row w-full">
+        <div className="w-full md:w-1/2">
           <SplitText
             text="Outcomes"
             className="text-text-700 hoves-p1-reg mb-10"
@@ -54,11 +54,11 @@ export default function CasesOutcome() {
             textAlign="left"
           />
         </div>
-        <div className="flex flex-col w-full lg:w-1/2 gap-10 lg:gap-20">
+        <div className="flex flex-col w-full md:w-1/2 gap-10 md:gap-20">
           {outcomes.map((outcome, index) => (
             <motion.div
               key={index}
-              className="flex flex-col gap-2 lg:gap-8"
+              className="flex flex-col gap-2 md:gap-8"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "100px" }}
@@ -71,7 +71,7 @@ export default function CasesOutcome() {
               <div className="flex w-full gap-2">
                 <SplitText
                   text={outcome.title}
-                  className="font-[300] text-[104px] leading-[104px] lg:text-[168px] lg:leading-[144px]"
+                  className="font-[300] text-[104px] leading-[104px] md:text-[168px] md:leading-[144px]"
                   splitType="chars"
                   delay={100 + index * 150}
                   duration={0.8}

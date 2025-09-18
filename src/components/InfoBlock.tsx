@@ -42,7 +42,7 @@ export default function InfoBlock({
   return (
     <div
       className={cn(
-        "flex flex-col px-4 py-16 max-w-[400px] not-lg:mx-auto lg:max-w-none lg:pl-[406px] lg:pr-[284px] lg:py-20",
+        "flex flex-col px-4 py-16 max-w-[400px] not-md:mx-auto md:max-w-none md:pl-[406px] md:pr-[284px] md:py-20",
         className
       )}
     >
