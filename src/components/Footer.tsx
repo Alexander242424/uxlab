@@ -1,12 +1,56 @@
 "use client";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import ArrowRightSVG from "@/assets/arrow-right.svg";
 import WeMakeInterfacesSVG from "@/assets/We Make Interfaces";
 import { motion } from "motion/react";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || isSubmitting) return;
+
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setMessage("Successfully subscribed!");
+        setEmail("");
+      } else {
+        // Handle specific error codes
+        if (data.code === "MEMBER_EXISTS") {
+          setMessage("This email is already subscribed to our newsletter");
+        } else if (data.code === "INVALID_EMAIL") {
+          setMessage("Please enter a valid email address");
+        } else if (data.code === "API_ERROR") {
+          setMessage("Service temporarily unavailable. Please try again later.");
+        } else {
+          setMessage(data.error || "Something went wrong. Please try again.");
+        }
+      }
+    } catch (error) {
+      setMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   useEffect(() => {
     const groups = document.querySelectorAll(".group");
 
@@ -82,13 +126,29 @@ export default function Footer() {
                 </div>
                 <div className="hidden sm:flex flex-col sm:mt-32 gap-5 max-w-[420px]">
                   <p className="hoves-p2-reg">Sign up for our newsletter</p>
-                  <div className="relative">
+                  <form onSubmit={handleSubmit} className="relative">
                     <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="hoves-p2-reg pb-8 border-b border-border-50 w-full bg-transparent outline-none appearance-none"
                       placeholder="Email Address"
+                      required
+                      disabled={isSubmitting}
                     />
-                    <ArrowRightSVG className="absolute right-0 top-0" />
-                  </div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="absolute right-0 top-0 cursor-pointer disabled:opacity-50"
+                    >
+                      <ArrowRightSVG />
+                    </button>
+                  </form>
+                  {message && (
+                    <p className={`hoves-p2-reg text-sm mt-2 ${message.includes("Success") ? "text-green-600" : "text-red-500"}`}>
+                      {message}
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -175,13 +235,29 @@ export default function Footer() {
               </div>
               <div className="flex flex-col sm:hidden mt-[180px]">
                 <p className="hoves-p2-reg">Sign up for our newsletter</p>
-                <div className="relative">
+                <form onSubmit={handleSubmit} className="relative">
                   <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="hoves-p2-reg pb-8 border-b border-border-50 w-full bg-transparent outline-none appearance-none"
                     placeholder="Email Address"
+                    required
+                    disabled={isSubmitting}
                   />
-                  <ArrowRightSVG className="absolute right-0 top-0" />
-                </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="absolute right-0 top-0 cursor-pointer disabled:opacity-50"
+                  >
+                    <ArrowRightSVG />
+                  </button>
+                </form>
+                {message && (
+                  <p className={`hoves-p2-reg text-sm mt-2 ${message.includes("Success") ? "text-green-600" : "text-red-500"}`}>
+                    {message}
+                  </p>
+                )}
               </div>
             </div>
 
