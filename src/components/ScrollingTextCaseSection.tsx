@@ -11,7 +11,6 @@ interface ScrollingTextCaseSectionProps {
   videoSrc: string;
   imageSrc: string;
   imageAlt: string;
-  title: string;
   videoTitle: string;
   logo?: React.ReactNode;
   link?: string;
@@ -21,7 +20,6 @@ export default function ScrollingTextCaseSection({
   videoSrc,
   imageSrc,
   imageAlt,
-  title,
   videoTitle,
   logo,
   link = "#",
@@ -221,7 +219,7 @@ export default function ScrollingTextCaseSection({
   }, [isHovering, isMobile]);
 
   return (
-    <div className="relative w-full h-[390px] sm:h-[840px] overflow-hidden">
+    <div className="relative w-full h-[600px] md:h-[840px] overflow-hidden">
       {/* Scrolling text background (from ScrollingTextVideoSection) */}
       <div className="absolute inset-0 flex items-center">
         <div
@@ -248,7 +246,7 @@ export default function ScrollingTextCaseSection({
 
       {/* Centered case card (from OurCases) */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex flex-col gap-[21px] w-full max-w-[300px] sm:max-w-[456px] h-full max-h-[553px] sm:max-h-[677px]">
+        <div className="flex flex-col gap-[21px] w-full max-w-[283px] md:max-w-[500px] h-full max-h-[360px] md:max-h-[720px]">
           <div
             className="relative cursor-pointer"
             onMouseEnter={() => {
@@ -282,11 +280,11 @@ export default function ScrollingTextCaseSection({
               )}
             </Link>
           </div>
-          <p className={`text-text-700 hoves-p1-reg transition-all duration-300 ${
+          {/* <p className={`text-text-700 hoves-p1-reg transition-all duration-300 ${
             isHovering ? "opacity-75" : "opacity-100"
           }`}>
             {title}
-          </p>
+          </p> */}
         </div>
       </div>
 

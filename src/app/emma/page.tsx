@@ -33,7 +33,7 @@ export default function EmmaPage() {
           />
         </div>
         <TextSection
-          className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
+          className="px-4 pb-12 md:px-10 md:py-20"
           firstText="By fostering healthy sleep habits,"
           secondText={[
             "Emma Sleep builds trust, encouraging them",
@@ -203,7 +203,6 @@ export default function EmmaPage() {
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
           imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
           imageAlt="Case study description"
-          title="Your case study title"
           videoTitle="Video title for cursor"
           logo={<EmmaLogo />}
           link="/your-link"
