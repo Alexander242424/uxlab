@@ -36,8 +36,8 @@ export default function OverviewCaseImageSection({
     <div
       ref={ref}
       className={cn(
-        "w-full px-4 pt-4 pb-4 lg:px-10 lg:pt-10 lg:pb-10 flex flex-col lg:flex-row gap-4 lg:gap-8",
-        iSvideoPositionLeft && "lg:flex-row-reverse",
+        "w-full px-4 pt-4 pb-4 md:px-10 md:pt-10 md:pb-10 flex flex-col md:flex-row gap-4 md:gap-8",
+        iSvideoPositionLeft && "md:flex-row-reverse",
         className
       )}
     >
@@ -52,8 +52,8 @@ export default function OverviewCaseImageSection({
         className={cn(
           "overflow-hidden",
           !iSvideoPositionLeft
-            ? "lg:min-w-[calc(50% - 32px)]"
-            : "lg:min-w-1/2 lg:max-w-1/2 lg:pl-[1px]"
+            ? "md:min-w-[calc(50% - 32px)]"
+            : "md:min-w-1/2 md:max-w-1/2 md:pl-[1px]"
         )}
       >
         <Image
@@ -73,8 +73,8 @@ export default function OverviewCaseImageSection({
         className={cn(
           "overflow-hidden",
           !iSvideoPositionLeft
-            ? "lg:min-w-1/2 lg:max-w-1/2 lg:pl-[1px]"
-            : "lg:min-w-[calc(50% - 32px)]"
+            ? "md:min-w-1/2 md:max-w-1/2 md:pl-[1px]"
+            : "md:min-w-[calc(50% - 32px)]"
         )}
       >
         <VideoPlayer

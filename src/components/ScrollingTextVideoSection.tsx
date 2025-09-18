@@ -69,7 +69,7 @@ export default function ScrollingTextVideoSection({
   };
 
   return (
-    <div className="relative w-full h-[390px] md:h-[840px] overflow-hidden">
+    <div className="relative w-full h-[390px] sm:h-[840px] overflow-hidden">
       {/* Scrolling text background */}
       <div className="absolute inset-0 flex items-center">
         <div
@@ -97,7 +97,7 @@ export default function ScrollingTextVideoSection({
       {/* Centered video block */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div
-          className="w-[280px] h-[360px] sm:w-[400px] sm:h-[500px] md:w-[560px] md:h-[720px] rounded-xl overflow-hidden relative"
+          className="w-[280px] h-[360px] xs:w-[400px] xs:h-[500px] sm:w-[560px] sm:h-[720px] rounded-xl overflow-hidden relative"
           onMouseEnter={() => {
             if (!isMobile) {
               setIsHovering(true);

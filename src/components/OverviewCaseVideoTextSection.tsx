@@ -17,7 +17,7 @@ export default function OverviewCaseVideoTextSection({
   videoSrc,
   firstText,
   secondText,
-  videoClassName = "lg:min-w-1/2 lg:max-w-1/2 lg:pr-8",
+  videoClassName = "md:min-w-1/2 md:max-w-1/2 md:pr-8",
   textMaxWidth = "max-w-[456px]",
 }: OverviewCaseVideoTextSectionProps) {
   const [ref, inView] = useInView({
@@ -29,7 +29,7 @@ export default function OverviewCaseVideoTextSection({
   return (
     <div
       ref={ref}
-      className="w-full px-4 pb-4 lg:px-10 lg:pb-10 flex flex-col lg:flex-row gap-6 lg:gap-0"
+      className="w-full px-4 pb-4 md:px-10 md:pb-10 flex flex-col md:flex-row gap-6 md:gap-0"
     >
       <motion.div
         initial={{ clipPath: "inset(0% 0% 100% 0%)" }}

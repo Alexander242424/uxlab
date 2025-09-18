@@ -40,12 +40,12 @@ export default function NespressoPage() {
         />
         <OverviewCaseVideoSection src="/video/nespressso/Q6DtR9oTjf95E7uLqWai4ngPUA.mp4" />
         <InfoBlock
-          className="lg:pt-[120px]! lg:pb-20!"
+          className="md:pt-[120px]! md:pb-20!"
           title="Challenge"
           description="Not enough enhances brand engagement, poor user experience, and just another website which is selling coffee products"
         />
         <InfoBlock
-          className="lg:pt-20! lg:pb-[120px]!"
+          className="md:pt-20! md:pb-[120px]!"
           title="Solution"
           description="Designing an innovative digital platform for a globally recognized brand, we partnered with Nespresso to transform their online experience, creating a seamless, user-centered journey that strengthens brand connection and elevates product engagement with exceptional conversion rate."
         />
@@ -54,10 +54,10 @@ export default function NespressoPage() {
           imageAlt="Nespresso case study"
           videoSrc="/video/nespressso/K4xdYvP5VrJ66kjBBQZ0fSXonFw.mp4"
           iSvideoPositionLeft={true}
-          imageClassName="lg:max-h-[450px]"
+          imageClassName="md:max-h-[450px]"
         />
         <InfoBlock
-          className="lg:py-20!"
+          className="md:py-20!"
           title="The vision"
           description="Create a responsive platform that effortlessly integrates brand storytelling with a seamless shopping experience."
         />
@@ -74,20 +74,20 @@ export default function NespressoPage() {
           authorText="Improvements focused on product features and functionalities"
         />
         <OverviewCaseImageSection
-          className="lg:pb-0"
+          className="md:pb-0"
           imageSrc={NespressoCase2}
           imageAlt="Nespresso case study"
           videoSrc="/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4"
           iSvideoPositionLeft={true}
-          imageClassName="lg:max-h-[600px]"
-          videoClassName="lg:max-h-[600px]"
+          imageClassName="md:max-h-[600px]"
+          videoClassName="md:max-h-[600px]"
         />
         <OverviewCaseVideoSection
-          className="lg:pt-8"
+          className="md:pt-8"
           src="/video/nespressso/JW9tBsFi0Xm6810KHjTgnbuBo.mp4"
         />
         <InfoBlock
-          className="lg:py-20!"
+          className="md:py-20!"
           title="In the specifics."
           description="Nespresso’s revamped design system, Holistic, enhances efficiency and delivers consistent experiences across all platforms at scale."
         />
@@ -110,21 +110,21 @@ export default function NespressoPage() {
           secondText=""
         />
         <InfoBlock
-          className="lg:py-20!"
+          className="md:py-20!"
           title="Branding"
           description="The intersection of user experience (UX) and branding is essential in today's digital landscape, where a cohesive brand identity extends beyond logos and visuals to encompass the entire user journey. Consistency across touchpoints fosters trust and recognition, while emotional connections built through personalized experiences enhance brand loyalty."
         />
         <OverviewCaseVideoSection
-          className="lg:pb-8"
+          className="md:pb-8"
           src="/video/nespressso/iBewqx3CIxQdNYTE587gLEtR7c.mp4"
         />
         <OverviewCaseImageSection
-          className="lg:pt-0"
+          className="md:pt-0"
           imageSrc={NespressoCase3}
           imageAlt="Nespresso case study"
           videoSrc="/video/nespressso/mCdY9OzHmaET5UX1WFZ1LaFww.mp4"
           iSvideoPositionLeft={true}
-          imageClassName="lg:max-h-[651px]"
+          imageClassName="md:max-h-[651px]"
         />
         <ScrollingTextVideoSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"

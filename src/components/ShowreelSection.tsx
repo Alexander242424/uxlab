@@ -107,7 +107,7 @@ export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = fal
   return (
     <>
       {isDefault ? (
-        <div className="relative w-full h-full max-h-[600px] sm:max-h-[800px] lg:max-h-[2000px] overflow-hidden">
+        <div className="relative w-full h-full max-h-[600px] xs:max-h-[800px] md:max-h-[2000px] overflow-hidden">
           <ScrollAnimatedSection className="w-full h-full">
             <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
           </ScrollAnimatedSection>
@@ -170,7 +170,7 @@ export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = fal
             </h2>
           </div>
 
-          <div className="relative cursor-pointer w-full h-full max-h-[600px] sm:max-h-[800px] lg:max-h-[2000px] overflow-hidden">
+          <div className="relative cursor-pointer w-full h-full max-h-[600px] xs:max-h-[800px] md:max-h-[2000px] overflow-hidden">
             <ScrollAnimatedSection className="w-full h-full">
               <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
             </ScrollAnimatedSection>
