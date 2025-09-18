@@ -165,7 +165,6 @@ export default function NespressoPage() {
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
           imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
           imageAlt="Case study description"
-          title="Your case study title"
           videoTitle="Video title for cursor"
           logo={<NespressoLogo />}
           link="/your-link"

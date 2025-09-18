@@ -14,7 +14,7 @@ export default function OverviewCaseTestimonialSection({
   authorText 
 }: OverviewCaseTestimonialSectionProps) {
   return (
-    <div className="px-4 pb-4 md:px-10 md:pb-10 gap-4 flex flex-col">
+    <div className="px-4 py-[64px] md:px-10 md:pb-20 md:pt-[160px] gap-4 flex flex-col">
       <TextSection
         firstText={firstText}
         secondText={secondText}
