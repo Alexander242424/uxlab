@@ -52,7 +52,7 @@ export default function OverviewCaseImageSection({
         className={cn(
           "overflow-hidden",
           !iSvideoPositionLeft
-            ? "md:min-w-[calc(50% - 32px)]"
+            ? "w-full md:min-w-[calc(50% - 32px)]"
             : "md:min-w-1/2 md:max-w-1/2 md:pl-[1px]"
         )}
       >
@@ -74,7 +74,7 @@ export default function OverviewCaseImageSection({
           "overflow-hidden",
           !iSvideoPositionLeft
             ? "md:min-w-1/2 md:max-w-1/2 md:pl-[1px]"
-            : "md:min-w-[calc(50% - 32px)]"
+            : "w-full md:min-w-[calc(50% - 32px)]"
         )}
       >
         <VideoPlayer
