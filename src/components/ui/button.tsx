@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         secondary:
-          "bg-bg-black text-text-700 hover:bg-bg-black/80 hoves-p2-med !font-[400]",
+          "group bg-bg-black text-text-700 hover:bg-bg-black/90 hoves-p2-med !font-[400]",
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
@@ -62,8 +62,23 @@ function Button({
       {...props}
     >
       {iconLeft}
-      {children}
-      {iconRight}
+      {iconRight ? (
+        <span className="relative">
+          {/* Icon on the right (visible by default) */}
+          <span className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0">
+            {iconRight}
+          </span>
+          {/* Icon on the left (visible on hover) */}
+          <span className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1">
+            {iconRight}
+          </span>
+          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300">
+            {children}
+          </span>
+        </span>
+      ) : (
+        children
+      )}
     </Comp>
   );
 }
