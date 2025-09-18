@@ -9,6 +9,7 @@ import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
+import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
 import ShowreelSection from "@/components/ShowreelSection";
 
@@ -33,9 +34,21 @@ export default function NespressoPage() {
         </div>
         <OverviewCaseTestimonialSection
           firstText="Creating a standout digital experience for"
-          secondText={["one of the world`s most renowned brands,", "we teamed up with Nespresso to redefine", "their online presence, enhancing brand", "engagement through a product-driven", "approach."]}
-          mobileText={["Creating a standout digital experience for", "one of the world`s most renowned brands,", "we teamed up with Nespresso to redefine", "their online presence, enhancing brand", "engagement through a product-driven", "approach."]}
-
+          secondText={[
+            "one of the world`s most renowned brands,",
+            "we teamed up with Nespresso to redefine",
+            "their online presence, enhancing brand",
+            "engagement through a product-driven",
+            "approach.",
+          ]}
+          mobileText={[
+            "Creating a standout digital experience for",
+            "one of the world`s most renowned brands,",
+            "we teamed up with Nespresso to redefine",
+            "their online presence, enhancing brand",
+            "engagement through a product-driven",
+            "approach.",
+          ]}
           authorText="Introduction"
         />
         <OverviewCaseVideoSection src="/video/nespressso/Q6DtR9oTjf95E7uLqWai4ngPUA.mp4" />
@@ -69,8 +82,17 @@ export default function NespressoPage() {
         />
         <OverviewCaseTestimonialSection
           firstText="A streamlined interface lets the"
-          secondText={["unique storytelling of each product take", "center stage while adhering to eCommerce", "best practices."]}
-          mobileText={["A streamlined interface lets the", "unique storytelling of each product take", "center stage while adhering to eCommerce", "best practices."]}
+          secondText={[
+            "unique storytelling of each product take",
+            "center stage while adhering to eCommerce",
+            "best practices.",
+          ]}
+          mobileText={[
+            "A streamlined interface lets the",
+            "unique storytelling of each product take",
+            "center stage while adhering to eCommerce",
+            "best practices.",
+          ]}
           authorText="Improvements focused on product features and functionalities"
         />
         <OverviewCaseImageSection
@@ -99,8 +121,17 @@ export default function NespressoPage() {
         />
         <OverviewCaseTestimonialSection
           firstText="What if loyalty involved presenting"
-          secondText={["brand enthusiasts with a refined and", "exclusive assortment of member benefits", "and branded identity merchandise?"]}
-          mobileText={["What if loyalty involved presenting", "brand enthusiasts with a refined and", "exclusive assortment of member benefits", "and branded identity merchandise?"]}
+          secondText={[
+            "brand enthusiasts with a refined and",
+            "exclusive assortment of member benefits",
+            "and branded identity merchandise?",
+          ]}
+          mobileText={[
+            "What if loyalty involved presenting",
+            "brand enthusiasts with a refined and",
+            "exclusive assortment of member benefits",
+            "and branded identity merchandise?",
+          ]}
           authorText="Loyalty"
         />
         <OverviewCaseVideoSection src="/video/nespressso/ozQmpxgVh0h8ImZ4FFkvEIsYTXs.mp4" />
@@ -126,9 +157,18 @@ export default function NespressoPage() {
           iSvideoPositionLeft={true}
           imageClassName="md:max-h-[651px]"
         />
-        <ScrollingTextVideoSection
+        {/* <ScrollingTextVideoSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
           poster="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+        /> */}
+        <ScrollingTextCaseSection
+          videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
+          imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+          imageAlt="Case study description"
+          title="Your case study title"
+          videoTitle="Video title for cursor"
+          logo={<NespressoLogo />}
+          link="/your-link"
         />
       </div>
     </div>

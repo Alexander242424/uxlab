@@ -100,7 +100,7 @@ export default function InsightsSection() {
               <div className="flex flex-col gap-4 md:gap-6">
                 <p className="text-black hoves-p1-big relative group w-fit">
                   {insight.title}
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-black underline-animation"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black underline-animation"></span>
                 </p>
                 <p className="text-black hoves-p3-reg">
                   {insight.author} · {insight.date}
