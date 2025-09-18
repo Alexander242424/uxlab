@@ -210,7 +210,7 @@ export default function ServiceItems() {
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                       </h3>
                       <div className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                        <ArrowUpRightSVG className="w-6 h-6 text-text-700 2xl:scale-[180%]" />
+                        <ArrowUpRightSVG className="w-6 h-6 text-text-700 lg:scale-[130%]" />
                       </div>
                     </div>
                     <p className="text-text-500 hoves-p1-reg">

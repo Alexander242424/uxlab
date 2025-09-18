@@ -97,7 +97,7 @@ export default function QuestionSections() {
             />
           </div>
           <motion.div
-            className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] md:h-[340px] md:max-w-[456px] lg:h-[400px]"
+            className="flex flex-col p-8 bg-bg-gray gap-6 rounded-[8px] md:h-[340px] md:max-w-[456px] lg:h-[350px] lg:scale-[130%] lg:ml-16"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -127,7 +127,7 @@ export default function QuestionSections() {
               variant="secondary"
               size="lg"
               iconRight={<ArrowUpRightSVG className="!size-6" />}
-              className="max-w-40 w-full xs:w-auto 2xl:scale-[150%] 2xl:ml-10 2xl:mt-10"
+              className="max-w-40 w-full xs:w-auto"
               onClick={() =>
                 window.open(
                   "https://cal.com/eugene.orehov/30min?overlayCalendar=true",
