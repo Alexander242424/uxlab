@@ -66,7 +66,7 @@ export default function RootLayout({
       <meta property="og:site_name" content="Boostra" />
       <meta
         property="og:image"
-        content="https://uxlab.digital/meta/thumbnail.jpg"
+        content="https://uxlab.digital/meta/thumbnail.jpg?v=2"
       />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
@@ -76,7 +76,7 @@ export default function RootLayout({
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
-        content="https://uxlab.digital/meta/thumbnail.jpg"
+        content="https://uxlab.digital/meta/thumbnail.jpg?v=2"
       />
       <body
         className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
