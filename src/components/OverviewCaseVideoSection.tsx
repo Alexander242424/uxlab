@@ -3,13 +3,19 @@ import VideoPlayer from "@/components/VideoPlayer";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useRef } from "react";
+import {StaticImageData } from "next/image";
+import Image from "next/image";
 
 export default function OverviewCaseVideoSection({
   className,
   src,
+  imageSrc,
+  imageAlt,
 }: {
   className?: string;
-  src: string;
+  src?: string;
+  imageSrc?: string | StaticImageData;
+  imageAlt?: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -33,7 +39,11 @@ export default function OverviewCaseVideoSection({
       )}
       style={{ clipPath }}
     >
-      <VideoPlayer src={src} />
+      {src ? (
+        <VideoPlayer src={src} />
+      ) : (
+        <Image src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+      )}
     </motion.div>
   );
 }
