@@ -76,7 +76,7 @@ const ArticleNavigation = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-[450px]">
       {navigationItems.map((item, index) => (
         <div
           key={index}

@@ -50,7 +50,7 @@ const ArticleSubscribeBlock = () => {
     }
   };
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 h-[450px]">
       <div className="flex flex-col bg-bg-black px-5 py-4 gap-4">
         <div className="flex flex-row justify-between">
           <p className="hoves-p1-reg text-white text-wrap max-w-[70%]">

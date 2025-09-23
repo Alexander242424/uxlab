@@ -15,7 +15,7 @@ const ArticlePage = () => {
       if (keepDoorOpenSection) {
         const rect = keepDoorOpenSection.getBoundingClientRect();
         // Коли секція "keep-the-door-open" досягає верху екрану (з урахуванням відступу)
-        setIsKeepDoorOpenInView(rect.top <= 100);
+        setIsKeepDoorOpenInView(rect.top <= 430);
       }
     };
 
