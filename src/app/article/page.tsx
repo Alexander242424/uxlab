@@ -2,16 +2,20 @@ import AlexIcon from "@/assets/alex.svg";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import ArticleNavigation from "@/components/ArticleNavigation";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
+import InsightsSection from "@/components/InsightsSection";
 
 const ArticlePage = () => {
   return (
-    <div className="flex flex-col bg-white text-black">
+    <div className="relative flex flex-col bg-white text-black">
       {/* Fixed side components */}
-      <ArticleNavigation />
-      <ArticleSubscribeBlock />
-
+      <div className="fixed left-[40px] top-72.5 w-fit not-xl:hidden">
+        <ArticleNavigation />
+      </div>
+      <div className="fixed right-[40px] top-72.5 w-[290px] not-xl:hidden">
+        <ArticleSubscribeBlock />
+      </div>
       {/* Main content with exact positioning */}
-      <div className="flex flex-row pt-[48px] ml-[360px] mr-[360px] w-[750px]">
+      <div className="flex flex-row pt-4 md:pt-[48px] pb-[92px] md:pb-[158px] xl:ml-[400px] xl:mr-[400px] w-full] px-4 xl:px-0">
         <div className="flex flex-col w-full gap-10">
           <div className="flex flex-col">
             <div className="flex flex-col gap-5">
@@ -52,8 +56,9 @@ const ArticlePage = () => {
             <p className="hoves-p1-reg">
               Most often, out there, in the real world. In the messy, vivid,
               ever-shifting territory of culture. Because the truth is, to
-              create work that resonates — that really resonates — design can't
-              happen in a vacuum. You have to stay close to the pulse.
+              create work that resonates — that really resonates — design
+              can&apos;t happen in a vacuum. You have to stay close to the
+              pulse.
             </p>
             <p className="hoves-p1-reg">
               Culture is much more than a moodboard. It&apos;s not a hashtag, a
@@ -74,7 +79,7 @@ const ArticlePage = () => {
               in the world — not just behind it
             </p>
           </div>
-          <div className="flex flex-col gap-4">
+          <div id="being-in-the-world" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">
               Being in the world — not just behind it
             </h5>
@@ -99,7 +104,7 @@ const ArticlePage = () => {
               Letting things happen. And, most of all, letting things matter.
             </p>
           </div>
-          <div className="flex flex-col gap-4">
+          <div id="output-follows-input" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Output follows input</h5>
             <p className="hoves-p1-reg">
               Originality always comes from great inputs. From consuming the
@@ -117,7 +122,14 @@ const ArticlePage = () => {
             </p>
           </div>
           {/* BigTextSection */}
-          <div className="flex flex-col gap-4">
+          <h4 className="hoves-h4-med">
+            Those things stick. They feed your taste. They sharpen your
+            intuition. And when the time comes to design something — to give
+            shape to an interface, an identity, an experience — those fragments
+            come back. Not as references, but as raw material. As instincts. As
+            ideas.
+          </h4>
+          <div id="taste-and-intuition" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Taste and intuition are cumulative</h5>
             <p className="hoves-p1-reg">
               We often talk about creativity as this magical thing — a spark, a
@@ -136,7 +148,7 @@ const ArticlePage = () => {
               patience, generosity, openness.
             </p>
           </div>
-          <div className="flex flex-col gap-4">
+          <div id="sharing-we-make-culture" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Sharing, we make culture</h5>
             <p className="hoves-p1-reg">
               Culture isn&apos;t something any one person owns, of course.
@@ -157,11 +169,11 @@ const ArticlePage = () => {
               already out there.
             </p>
           </div>
-          <div className="flex flex-col gap-4">
+          <div id="keep-the-door-open" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Keep the door open</h5>
-            <ol className="hoves-p1-reg">
+            <ul className="hoves-p1-reg list-disc list-inside pl-2">
               <li>
-                Let curiosity lead — even when it doesn&apos;t feel “useful” at
+                Let curiosity lead — even when it doesn&apos;t feel "useful" at
                 first.
               </li>
               <li>
@@ -177,15 +189,19 @@ const ArticlePage = () => {
                 Be present, wherever you are. Culture is everywhere, if
                 you&apos;re open to it.
               </li>
-            </ol>
+            </ul>
             <p className="hoves-p1-reg">
-              Because in the end, culture isn&apos;t just something we react to. It&apos;s
-              something we live in. Something we shape — and are shaped by.
-              Culture matters. So, let&apos;s stay close to it.
+              Because in the end, culture isn&apos;t just something we react to.
+              It&apos;s something we live in. Something we shape — and are
+              shaped by. Culture matters. So, let&apos;s stay close to it.
             </p>
+          </div>
+          <div className="xl:hidden">
+            <ArticleSubscribeBlock />
           </div>
         </div>
       </div>
+      <InsightsSection />
     </div>
   );
 };
