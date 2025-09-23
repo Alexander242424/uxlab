@@ -204,7 +204,7 @@ const ArticlePage = () => {
             <h5 className="hoves-h5-med">Keep the door open</h5>
             <ul className="hoves-p1-reg list-disc list-inside pl-2">
               <li>
-                Let curiosity lead — even when it doesn&apos;t feel "useful" at
+                Let curiosity lead — even when it doesn&apos;t feel &quot;useful&quot; at
                 first.
               </li>
               <li>

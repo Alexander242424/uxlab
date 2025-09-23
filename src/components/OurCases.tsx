@@ -42,7 +42,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/reel-short-mobile.mp4",
     videoTitle: "Sapphire analysis case study", 
     logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
-    link: "/cases",
+    link: "/next-cases",
   },
   {
     src: GuideImage,
