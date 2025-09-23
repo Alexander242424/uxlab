@@ -1,17 +1,48 @@
+"use client";
 import AlexIcon from "@/assets/alex.svg";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import ArticleNavigation from "@/components/ArticleNavigation";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
 import InsightsSection from "@/components/InsightsSection";
+import { useEffect, useState } from "react";
 
 const ArticlePage = () => {
+  const [isKeepDoorOpenInView, setIsKeepDoorOpenInView] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const keepDoorOpenSection = document.getElementById('keep-the-door-open');
+      if (keepDoorOpenSection) {
+        const rect = keepDoorOpenSection.getBoundingClientRect();
+        // Коли секція "keep-the-door-open" досягає верху екрану (з урахуванням відступу)
+        setIsKeepDoorOpenInView(rect.top <= 100);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Перевіряємо початковий стан
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className="relative flex flex-col bg-white text-black">
-      {/* Fixed side components */}
-      <div className="fixed left-[40px] top-72.5 w-fit not-xl:hidden">
+      {/* Side components that stop at keep-the-door-open section */}
+      <div 
+        className={`${isKeepDoorOpenInView ? 'absolute' : 'fixed'} left-[40px] w-fit not-xl:hidden z-10 transition-all duration-300`}
+        style={{ 
+          top: isKeepDoorOpenInView ? 'auto' : '337px',
+          bottom: isKeepDoorOpenInView ? '650px' : 'auto'
+        }}
+      >
         <ArticleNavigation />
       </div>
-      <div className="fixed right-[40px] top-72.5 w-[290px] not-xl:hidden">
+      <div 
+        className={`${isKeepDoorOpenInView ? 'absolute' : 'fixed'} right-[40px] w-[290px] not-xl:hidden z-10 transition-all duration-300`}
+        style={{ 
+          top: isKeepDoorOpenInView ? 'auto' : '337px',
+          bottom: isKeepDoorOpenInView ? '650px' : 'auto'
+        }}
+      >
         <ArticleSubscribeBlock />
       </div>
       {/* Main content with exact positioning */}
