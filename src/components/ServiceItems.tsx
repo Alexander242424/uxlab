@@ -3,28 +3,41 @@ import { motion } from "framer-motion";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import SplitText from "./SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
+import Image1 from "@/assets/image/OurCases/image/Shapphire 5.png";
 
 interface ServiceItem {
   title: string;
   subtitle: string;
+  imageSrc: string | StaticImageData;
+  time: string;
 }
 
 const services: ServiceItem[] = [
   {
     title: "Conversion-Centered Design",
     subtitle: "Elevate Your Brand. Outpace The Competition.",
+    imageSrc: Image1,
+    time: "3 weeks",
   },
   {
     title: "User Experience Research",
     subtitle: "Elevate Your Brand. Outpace The Competition.",
+    imageSrc: Image1,
+    time: "3 weeks",
   },
   {
     title: "Brand Identity Design",
     subtitle: "Elevate Your Brand. Outpace The Competition.",
+    imageSrc: Image1,
+    time: "3 weeks",
   },
   {
     title: "Product Strategy",
     subtitle: "Elevate Your Brand. Outpace The Competition.",
+    imageSrc: Image1,
+    time: "3 weeks",
   },
 ];
 
@@ -92,42 +105,42 @@ export default function ServiceItems() {
             />
             <div className="flex flex-col sm:hidden gap-4">
               <div className="flex flex-col">
-              {firstParagraphMobile.map((text, index) => (
-                <SplitText
-                  key={index}
-                  text={text}
-                  className="text-text-700 hoves-p1-reg !text-nowrap"
-                  globalIndex={1 + index} // Продовжуємо після заголовка
-                  splitType="lines"
-                  delay={100}
-                  duration={0.8}
-                  ease="power3.out"
-                  from={{ opacity: 0, y: 50 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  rootMargin="100px"
-                  textAlign="left"
-                />
-              ))}
+                {firstParagraphMobile.map((text, index) => (
+                  <SplitText
+                    key={index}
+                    text={text}
+                    className="text-text-700 hoves-p1-reg !text-nowrap"
+                    globalIndex={1 + index} // Продовжуємо після заголовка
+                    splitType="lines"
+                    delay={100}
+                    duration={0.8}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 50 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="100px"
+                    textAlign="left"
+                  />
+                ))}
               </div>
               <div className="flex flex-col">
-              {secondParagraphMobile.map((text, index) => (
-                <SplitText
-                  key={`second-${index}`}
-                  text={text}
-                  className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                  globalIndex={1 + firstParagraph.length + index}
-                  splitType="lines"
-                  delay={100}
-                  duration={0.8}
-                  ease="power3.out"
-                  from={{ opacity: 0, y: 50 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  rootMargin="100px"
-                  textAlign="left"
-                />
-              ))}
+                {secondParagraphMobile.map((text, index) => (
+                  <SplitText
+                    key={`second-${index}`}
+                    text={text}
+                    className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                    globalIndex={1 + firstParagraph.length + index}
+                    splitType="lines"
+                    delay={100}
+                    duration={0.8}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 50 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="100px"
+                    textAlign="left"
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -213,9 +226,20 @@ export default function ServiceItems() {
                         <ArrowUpRightSVG className="w-6 h-6 text-text-700 lg:scale-[130%]" />
                       </div>
                     </div>
+                    <div className="w-full h-full flex items-end justify-end pr-30">
+                       <div className="group-hover:max-h-[200px] group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out">
+                         <Image
+                           src={service.imageSrc}
+                           alt={service.title}
+                           width={270}
+                           height={180}
+                         />
+                       </div>
+                    </div>
                     <p className="text-text-500 hoves-p1-reg">
                       {service.subtitle}
                     </p>
+                    <p className="text-text-500 hoves-p1-reg">{service.time}</p>
                   </div>
                 </div>
                 {index === services.length - 1 && (

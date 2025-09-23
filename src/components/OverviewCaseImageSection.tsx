@@ -11,9 +11,12 @@ interface OverviewCaseImageSectionProps {
   className?: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
-  videoSrc: string;
+  imageSrc2?: string | StaticImageData;
+  imageAlt2?: string;
+  videoSrc?: string;
   iSvideoPositionLeft?: boolean;
   imageClassName?: string;
+  imageClassName2?: string;
   videoClassName?: string;
 }
 
@@ -21,9 +24,12 @@ export default function OverviewCaseImageSection({
   className,
   imageSrc,
   imageAlt,
+  imageSrc2,
+  imageAlt2,
   videoSrc,
   iSvideoPositionLeft = false,
   imageClassName,
+  imageClassName2,
   videoClassName,
 }: OverviewCaseImageSectionProps) {
   const [ref, inView] = useInView({
@@ -77,10 +83,19 @@ export default function OverviewCaseImageSection({
             : "w-full md:min-w-[calc(50% - 32px)]"
         )}
       >
+      {videoSrc ? (
         <VideoPlayer
           className={cn("w-full h-full object-cover", videoClassName)}
           src={videoSrc}
         />
+      ) : (
+        <Image
+          className={cn("w-full h-full object-cover", imageClassName2)}
+          src={imageSrc2 || ""
+          }
+          alt={imageAlt2 || ""}
+        />
+      )}
       </motion.div>
     </div>
   );

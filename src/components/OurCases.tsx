@@ -6,7 +6,7 @@ import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import OptionImage from "../assets/image/OurCases/Option 22.png";
 import GuideImage from "../assets/image/OurCases/Option 28.png";
-import ShapphireImage from "../assets/image/OurCases/Shapphire 5.png";
+import ShapphireImage from "../assets/image/OurCases/Frame 1820549645.png";
 import EmmaLogo from "../assets/image/OurCases/logo/emma.svg";
 import NestpressoLogo from "../assets/image/OurCases/logo/nestpresso.svg";
 import SplitText from "./SplitText";
@@ -73,8 +73,8 @@ export default function OurCases() {
     
     // Обчислюємо зміщення підпису на основі позиції миші
     if (isHovering && !isMobile && hoveredIndex !== null) {
-      // Знаходимо поточний елемент для обчислення відносної позиції
-      const imageElements = document.querySelectorAll('img[alt]');
+      // Знаходимо поточний елемент для обчислення відносної позиції (тільки в секції OurCases)
+      const imageElements = document.querySelectorAll('#work img[alt]');
       const currentImage = imageElements[hoveredIndex] as HTMLElement;
       
       if (currentImage) {
@@ -129,8 +129,8 @@ export default function OurCases() {
     const cursorWidth = 200;
     const cursorHeight = 264;
     
-    // Знаходимо елемент зображення для обмеження курсора
-    const imageElements = document.querySelectorAll('img[alt]');
+    // Знаходимо елемент зображення для обмеження курсора (тільки в секції OurCases)
+    const imageElements = document.querySelectorAll('#work img[alt]');
     const currentImage = imageElements[hoveredIndex] as HTMLElement;
     
     if (!currentImage) {

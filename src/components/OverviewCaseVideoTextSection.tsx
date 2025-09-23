@@ -1,12 +1,15 @@
 "use client";
 
 import VideoPlayer from "@/components/VideoPlayer";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 
 interface OverviewCaseVideoTextSectionProps {
-  videoSrc: string;
+  videoSrc?: string;
+  imageSrc?: string | StaticImageData;
+  imageAlt?: string;
   firstText: string;
   secondText: string;
   videoClassName?: string;
@@ -15,6 +18,8 @@ interface OverviewCaseVideoTextSectionProps {
 
 export default function OverviewCaseVideoTextSection({
   videoSrc,
+  imageSrc,
+  imageAlt,
   firstText,
   secondText,
   videoClassName = "md:min-w-1/2 md:max-w-1/2 md:pr-8",
@@ -41,7 +46,11 @@ export default function OverviewCaseVideoTextSection({
         transition={{ duration: 0.5, ease: [0.7, 0, 0.3, 1] }}
         className={cn("overflow-hidden", videoClassName)}
       >
-        <VideoPlayer className="w-full h-full object-cover" src={videoSrc} />
+        {videoSrc ? (
+          <VideoPlayer className="w-full h-full object-cover" src={videoSrc} />
+        ) : (
+          <Image src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+        )}
       </motion.div>
       <div className={`flex flex-col gap-4 ${textMaxWidth}`}>
         <p className="text-text-500 hoves-p1-reg">{firstText}</p>
