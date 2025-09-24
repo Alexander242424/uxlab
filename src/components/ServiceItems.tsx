@@ -215,7 +215,7 @@ export default function ServiceItems() {
                   }}
                   style={{ transformOrigin: "left" }}
                 />
-                <div className="flex items-center justify-between py-6 sm:py-10">
+                <a href={"https://cal.com/eugene.orehov/30min?overlayCalendar=true"} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-6 sm:py-10">
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex w-full justify-between">
                       <div className="flex flex-col -mt-3">
@@ -245,7 +245,7 @@ export default function ServiceItems() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
                 {index === services.length - 1 && (
                   <motion.div
                     className="absolute bottom-0 left-0 w-full h-[1px] bg-border-50"

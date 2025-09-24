@@ -13,6 +13,7 @@ import EmmaLogo from "@/assets/emma-logo.svg";
 import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
 import EmmaCase1 from "@/assets/Emma/XkNQu7DYidbcrVSHQNflhh0MA.avif";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
+import OptionImage from "@/assets/image/OurCases/Option 22.jpg";
 
 export default function EmmaPage() {
   return (
@@ -203,7 +204,7 @@ export default function EmmaPage() {
         /> */}
         <ScrollingTextCaseSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
-          imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+          imageSrc={OptionImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
           logo={<EmmaLogo />}

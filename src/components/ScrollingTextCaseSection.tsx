@@ -8,8 +8,9 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import VideoPlayer from "./VideoPlayer";
 
 interface ScrollingTextCaseSectionProps {
-  videoSrc: string;
+  videoSrc?: string;
   imageSrc: string | StaticImageData;
+  smallImageSrc?: string | StaticImageData;
   imageAlt: string;
   videoTitle: string;
   logo?: React.ReactNode;
@@ -18,6 +19,7 @@ interface ScrollingTextCaseSectionProps {
 
 export default function ScrollingTextCaseSection({
   videoSrc,
+  smallImageSrc,
   imageSrc,
   imageAlt,
   videoTitle,
@@ -288,8 +290,8 @@ export default function ScrollingTextCaseSection({
         </div>
       </div>
 
-      {/* Custom cursor with video (from OurCases) */}
-      {isHovering && !isMobile && cursorStyles && isInitialized && showVideo && (
+      {/* Custom cursor with video or image (from OurCases) */}
+      {isHovering && !isMobile && (videoSrc || smallImageSrc) && cursorStyles && isInitialized && showVideo && (
         <div
           ref={cursorRef}
           className="video-cursor video-cursor-enter"
@@ -300,27 +302,39 @@ export default function ScrollingTextCaseSection({
           }}
         >
           <div className="bg-transparent">
-            {videoError ? (
-              <div className="w-full h-[200px] bg-gray-100 flex items-center justify-center rounded-lg">
-                <div className="text-center">
-                  <p className="text-gray-500 hoves-p1-reg text-xs">Video unavailable</p>
-                  <Image
-                    src={imageSrc}
-                    alt={imageAlt}
-                    width={200}
-                    height={150}
-                    className="w-full h-auto object-cover mt-2 rounded-lg"
-                  />
-                </div>
-              </div>
-            ) : (
-              <div className="rounded-[8px] overflow-hidden max-h-[300px]">
-                <VideoPlayer
-                  src={videoSrc}
-                  className="w-full object-cover"
-                  onError={handleVideoError}
+            {smallImageSrc ? (
+              <div className="rounded-[8px] overflow-hidden h-full max-h-[300px]">
+                <Image
+                  src={smallImageSrc}
+                  alt={imageAlt}
+                  width={200}
+                  height={150}
+                  className="w-full h-auto object-cover"
                 />
               </div>
+            ) : (
+              videoError ? (
+                <div className="w-full h-[200px] bg-gray-100 flex items-center justify-center rounded-lg">
+                  <div className="text-center">
+                    <p className="text-gray-500 hoves-p1-reg text-xs">Video unavailable</p>
+                    <Image
+                      src={imageSrc}
+                      alt={imageAlt}
+                      width={200}
+                      height={150}
+                      className="w-full h-auto object-cover mt-2 rounded-lg"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="rounded-[8px] overflow-hidden max-h-[300px]">
+                  <VideoPlayer
+                    src={videoSrc!}
+                    className="w-full object-cover"
+                    onError={handleVideoError}
+                  />
+                </div>
+              )
             )}
             <div className="video-cursor-content">
               <motion.p 

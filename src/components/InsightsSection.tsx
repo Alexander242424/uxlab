@@ -4,6 +4,7 @@ import Image from "next/image";
 import Background from "../assets/image/Insights/Background.png";
 import { motion, useInView } from "motion/react";
 import SplitText from "./SplitText";
+import Link from "next/link";
 
 const insightsData = [
   {
@@ -84,7 +85,7 @@ export default function InsightsSection() {
 
         <div className="flex flex-row gap-2 md:gap-8 w-full overflow-x-auto md:overflow-x-visible">
           {insightsData.map((insight, index) => (
-            <div key={insight.id} className="flex flex-col gap-3 min-w-[268px] sm:flex-1 sm:min-w-0 group">
+            <Link href={`/article`} key={insight.id} className="flex flex-col gap-3 min-w-[268px] sm:flex-1 sm:min-w-0 group">
               <div className="overflow-hidden rounded-lg relative">
                 <Image 
                   src={insight.image} 
@@ -106,7 +107,7 @@ export default function InsightsSection() {
                   {insight.author} · {insight.date}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

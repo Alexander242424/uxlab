@@ -13,6 +13,7 @@ import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
 import ShowreelSection from "@/components/ShowreelSection";
 import HeroImage from "@/assets/Nespresso/Nespresso.jpg";
+import GuideImage from "@/assets/image/OurCases/Option 28.png";
 
 export default function NespressoPage() {
   return (
@@ -165,7 +166,7 @@ export default function NespressoPage() {
         /> */}
         <ScrollingTextCaseSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
-          imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+          imageSrc={GuideImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
           logo={<NespressoLogo />}
