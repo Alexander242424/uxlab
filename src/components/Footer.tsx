@@ -146,7 +146,11 @@ export default function Footer() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="hoves-p2-reg pb-8 border-b border-border-50 w-full bg-transparent outline-none appearance-none"
+                      className={`hoves-p2-reg pb-4 border-b w-full bg-transparent outline-none appearance-none ${
+                        message && !message.includes("Success")
+                          ? "border-red-500"
+                          : "border-border-50"
+                      }`}
                       placeholder="Email Address"
                       required
                       disabled={isSubmitting}
@@ -158,8 +162,7 @@ export default function Footer() {
                     >
                       <ArrowRightSVG />
                     </button>
-                  </form>
-                  {message && (
+                    {message && (
                     <p
                       className={`hoves-p2-reg text-sm mt-2 ${
                         message.includes("Success")
@@ -170,6 +173,7 @@ export default function Footer() {
                       {message}
                     </p>
                   )}
+                  </form>
                 </div>
               </div>
 
@@ -276,7 +280,11 @@ export default function Footer() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="hoves-p2-reg pb-8 border-b border-border-50 w-full bg-transparent outline-none appearance-none"
+                    className={`hoves-p2-reg pb-8 border-b w-full bg-transparent outline-none appearance-none ${
+                      message && !message.includes("Success")
+                        ? "border-red-500"
+                        : "border-border-50"
+                    }`}
                     placeholder="Email Address"
                     required
                     disabled={isSubmitting}
@@ -288,18 +296,18 @@ export default function Footer() {
                   >
                     <ArrowRightSVG />
                   </button>
+                  {message && (
+                    <p
+                      className={`hoves-p2-reg text-sm mt-2 ${
+                        message.includes("Success")
+                          ? "text-green-600"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {message}
+                    </p>
+                  )}
                 </form>
-                {message && (
-                  <p
-                    className={`hoves-p2-reg text-sm mt-2 ${
-                      message.includes("Success")
-                        ? "text-green-600"
-                        : "text-red-500"
-                    }`}
-                  >
-                    {message}
-                  </p>
-                )}
               </div>
             </div>
           </div>
