@@ -63,7 +63,7 @@ export default function RootLayout({
         content="UXLAB is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
       />
       <meta property="og:url" content="https://uxlab.digital/" />
-      <meta property="og:site_name" content="Boostra" />
+      <meta property="og:site_name" content="UXLAB" />
       <meta
         property="og:image"
         content="https://uxlab.digital/meta/thumbnail.jpg?v=2"
