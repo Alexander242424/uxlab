@@ -10,6 +10,9 @@ const ArticlePage = () => {
   const [isKeepDoorOpenInView, setIsKeepDoorOpenInView] = useState(false);
 
   useEffect(() => {
+    // Set data-page attribute for article page styling
+    document.body.setAttribute('data-page', 'article');
+    
     const handleScroll = () => {
       const keepDoorOpenSection = document.getElementById('keep-the-door-open');
       if (keepDoorOpenSection) {
@@ -22,7 +25,11 @@ const ArticlePage = () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Перевіряємо початковий стан
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      // Clean up the data-page attribute when component unmounts
+      document.body.removeAttribute('data-page');
+    };
   }, []);
   return (
     <div className="relative flex flex-col bg-white text-black">
