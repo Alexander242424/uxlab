@@ -218,15 +218,15 @@ export default function ServiceItems() {
                 <div className="flex items-center justify-between py-6 sm:py-10">
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex w-full justify-between">
-                      <div className="flex flex-col gap-2 -mt-3">
+                      <div className="flex flex-col -mt-3">
                         <h3 className="hoves-h5-med text-text-700 relative group/title max-w-fit">
                           {service.title}
                           <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                         </h3>
-                        <p className="text-text-500 hoves-p1-reg">
+                        <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3">
                           {service.subtitle}
                         </p>
-                        <p className="text-text-500 hoves-p1-reg">
+                        <p className="text-text-500 hoves-p1-reg pt-4 md:pt-6">
                           {service.time}
                         </p>
                       </div>
