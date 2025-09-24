@@ -104,7 +104,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative z-10">
+    <footer className="relative z-10 bg-black">
       {/* Частина з паралаксом */}
       <div className="transition-transform duration-300 ease-out">
         <motion.div
