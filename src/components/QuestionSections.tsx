@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
+import { useCalModal } from "@/context/CalModalContext";
 
 const faqData = [
   {
@@ -45,6 +46,11 @@ const faqData = [
 export default function QuestionSections() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-200px" });
+  const { openModal } = useCalModal();
+
+  const handleCalClick = () => {
+    openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
+  };
 
   return (
     <div
@@ -128,12 +134,7 @@ export default function QuestionSections() {
               size="lg"
               iconRight={<ArrowUpRightSVG className="!size-6" />}
               className="max-w-40 w-full xs:w-auto"
-              onClick={() =>
-                window.open(
-                  "https://cal.com/eugene.orehov/30min?overlayCalendar=true",
-                  "_blank"
-                )
-              }
+              onClick={handleCalClick}
             >
               Book a Call
             </Button>
