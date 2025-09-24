@@ -17,57 +17,64 @@ interface ServiceItem {
 
 const services: ServiceItem[] = [
   {
-    title: "Conversion-Centered Design",
-    subtitle: "Elevate Your Brand. Outpace The Competition.",
+    title: "Ship new products from zero-to-one",
+    subtitle:
+      "When you need to design MVP from the ground up with a high-powered product team.",
     imageSrc: Image1,
-    time: "3 weeks",
+    time: "4 - 8 weeks",
   },
   {
-    title: "User Experience Research",
-    subtitle: "Elevate Your Brand. Outpace The Competition.",
+    title: "Set the bar for category defining design",
+    subtitle:
+      "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
     imageSrc: Image1,
-    time: "3 weeks",
+    time: "8-12 weeks",
   },
   {
-    title: "Brand Identity Design",
-    subtitle: "Elevate Your Brand. Outpace The Competition.",
+    title: "Day-to-day exceptional design support",
+    subtitle:
+      "Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
     imageSrc: Image1,
-    time: "3 weeks",
+    time: "Starting from 4 weeks",
   },
   {
-    title: "Product Strategy",
-    subtitle: "Elevate Your Brand. Outpace The Competition.",
+    title: "Conversion Rate Optimization (CRO)",
+    subtitle:
+      "We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
     imageSrc: Image1,
-    time: "3 weeks",
+    time: "4 - 12 weeks",
   },
 ];
 
 // Define text arrays for SplitText components
 const firstParagraph = [
-  "Over 10 years grinding alongside founders with a chip",
-  "on their shoulder and a story that needs telling.",
+  "Since 2012, we've helped the most innovative",
+  "startups and reputable brands design and launch",
+  "digital products people talk about loudly.",
 ];
 
 const secondParagraph = [
-  "UXLab is the design partner teams turn to when speed",
-  "and quality matter most. Our approach is fast and",
-  "flexible - purpose built for startup speed.",
+  "UXLAB moves as fast as your roadmap; we don't design",
+  "screens, we design revenue. Working shoulder-to",
+  "shoulder with founders and your product team to ",
+  "deliver fast.",
 ];
 
 const firstParagraphMobile = [
-  "Over 10 years grinding alongside",
-  "founders with a chip on their",
-  "shoulder and a story that needs",
-  "telling.",
+  "Since 2012, we've helped",
+  "the most innovative startups and",
+  "reputable brands design and launch",
+  "digital products people",
+  "talk about loudly.",
 ];
 
 const secondParagraphMobile = [
-  "UXLab is the design partner ",
-  "teams turn to when speed ",
-  "and quality matter most. ",
-  "Our approach is fast and ",
-  "flexible - purpose built for ",
-  "startup speed.",
+  "UXLAB moves as fast as ",
+  "your roadmap; we don't design ",
+  "screens, we design revenue.",
+  "Working shoulder-to shoulder",
+  "with founders and your product",
+  "team to deliver fast.",
 ];
 
 export default function ServiceItems() {
@@ -228,7 +235,7 @@ export default function ServiceItems() {
                 >
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex w-full justify-between">
-                      <div className="flex flex-col -mt-3">
+                      <div className="flex flex-col -mt-3 md:max-w-[55%]">
                         <h3 className="hoves-h5-med text-text-700 relative group/title max-w-fit">
                           {service.title}
                           <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>

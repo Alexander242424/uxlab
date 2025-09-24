@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 interface SectionData {
   id: number;
   title: string;
+  subtitle: string;
   content: string;
   contentMobile: string[];
   contentTablet: string[];
@@ -17,81 +18,88 @@ const sections: SectionData[] = [
   {
     id: 1,
     title: "01",
+    subtitle: "User-first approach",
     content:
-      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+      "We don't just make interfaces look good, we rather optimize every flow for conversions, retention, and revenue. UX is treated as your strongest growth lever, not decoration.",
     contentMobile: [
-      "Boostra drove an 18% conversion lift",
-      "and paid for itself in hours. No more",
-      "wasting budget on overpriced",
-      " CRO or UX teams.",
+      "We don't just make interfaces",
+      "look good, we rather optimize",
+      "every flow for conversions,",
+      "retention, and revenue.",
+      "UX is treated as your strongest",
+      "growth lever, not decoration.",
     ],
     contentTablet: [
-      "Boostra drove an 18% conversion lift and paid for itself in hours.",
-      "No more wasting budget on overpriced CRO or UX teams.",
+      "We don't just make interfaces look good, we rather optimize every flow for conversions, retention, and revenue.",
+      "UX is treated as your strongest growth lever, not decoration.",
     ],
   },
   {
     id: 2,
     title: "02",
+    subtitle: "Co-Founder Mindset",
     content:
-      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+      "We think like founders, not vendors. Every design decision is tied to business outcomes, helping you scale faster and impress investors.",
     contentMobile: [
-      "Boostra drove an 18% conversion lift",
-      "and paid for itself in hours. No more",
-      "wasting budget on overpriced",
-      " CRO or UX teams.",
+      "We think like founders, not vendors.",
+      "Every design decision is tied to",
+      "business outcomes, helping you scale",
+      "faster and impress investors.",
     ],
     contentTablet: [
-      "Boostra drove an 18% conversion lift and paid for itself in hours.",
-      "No more wasting budget on overpriced CRO or UX teams.",
+      "We think like founders, not vendors. Every design decision is tied to business outcomes,",
+      "helping you scale faster and impress investors.",
     ],
   },
   {
     id: 3,
     title: "03",
+    subtitle: "Proven Track Record",
     content:
-      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+      "From SaaS dashboards to eCommerce checkouts, our work has delivered measurable results: +18% transactions, +27% activations, +22% DAUs.",
     contentMobile: [
-      "Boostra drove an 18% conversion lift",
-      "and paid for itself in hours. No more",
-      "wasting budget on overpriced",
-      " CRO or UX teams.",
+      "From SaaS dashboards to eCommerce",
+      "checkouts, our work has delivered",
+      "measurable results: +18% transactions,",
+      "+27% activations, +22% DAUs."
     ],
     contentTablet: [
-      "Boostra drove an 18% conversion lift and paid for itself in hours.",
-      "No more wasting budget on overpriced CRO or UX teams.",
+      "From SaaS dashboards to eCommerce checkouts, our work has delivered",
+      "measurable results: +18% transactions, +27% activations, +22% DAUs."
     ],
   },
   {
     id: 4,
     title: "04",
+    subtitle: "Partner Mentality",
     content:
-      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+      "We embed into your product team as a growth unit, prioritizing with you, iterating fast, and delivering outcomes without the overhead of hiring.",
     contentMobile: [
-      "Boostra drove an 18% conversion lift",
-      "and paid for itself in hours. No more",
-      "wasting budget on overpriced",
-      " CRO or UX teams.",
+      "We embed into your product team as a",
+      "growth unit, prioritizing with you,",
+      "iterating fast, and delivering outcomes",
+      "without the overhead of hiring."
     ],
     contentTablet: [
-      "Boostra drove an 18% conversion lift and paid for itself in hours.",
-      "No more wasting budget on overpriced CRO or UX teams.",
+      "We embed into your product team as a growth unit, prioritizing with you, iterating fast,",
+      "and delivering outcomes without the overhead of hiring."
     ],
   },
   {
     id: 5,
     title: "05",
+    subtitle: "Startup Vibe",
     content:
-      "Boostra drove an 18% conversion lift and paid for itself in hours. No more wasting budget on overpriced CRO or UX teams.",
+      "No bloated processes, no agency drag. We move at startup speed so design never slows down feature launches or fundraising momentum.",
     contentMobile: [
-      "Boostra drove an 18% conversion lift",
-      "and paid for itself in hours. No more",
-      "wasting budget on overpriced",
-      " CRO or UX teams.",
+      "No bloated processes, no agency drag.",
+      "We move at startup speed so design",
+      "never slows down feature launches",
+      "or fundraising momentum."
     ],
     contentTablet: [
-      "Boostra drove an 18% conversion lift and paid for itself in hours.",
-      "No more wasting budget on overpriced CRO or UX teams.",
+      "No bloated processes, no agency drag. We move at startup speed so design",
+      "never slows down feature launches or fundraising momentum."
     ],
   },
 ];
@@ -215,7 +223,7 @@ const HoverSection: React.FC = () => {
                     minWidth: `${105 / sections.length - 2}dvw`,
                   }}
                 >
-                  UX Analysis
+                  {section.subtitle}
                 </div>
 
                 {/* Контент - справа від підпису */}
@@ -225,16 +233,25 @@ const HoverSection: React.FC = () => {
                     <div className="flex items-start">
                       {/* Текст контенту */}
                       <div className="flex-1">
-                        {section.content.split(' ').reduce((acc: string[][], word: string, index: number) => {
-                          const groupIndex = Math.floor(index / 4);
-                          if (!acc[groupIndex]) acc[groupIndex] = [];
-                          acc[groupIndex].push(word);
-                          return acc;
-                        }, []).map((wordGroup: string[], index: number) => (
-                          <p key={index} className="text-black hoves-p2-reg !font-[400] !text-nowrap">
-                            {wordGroup.join(' ')}
-                          </p>
-                        ))}
+                        {section.content
+                          .split(" ")
+                          .reduce(
+                            (acc: string[][], word: string, index: number) => {
+                              const groupIndex = Math.floor(index / 3);
+                              if (!acc[groupIndex]) acc[groupIndex] = [];
+                              acc[groupIndex].push(word);
+                              return acc;
+                            },
+                            []
+                          )
+                          .map((wordGroup: string[], index: number) => (
+                            <p
+                              key={index}
+                              className="text-black hoves-p2-reg !font-[400] !text-nowrap"
+                            >
+                              {wordGroup.join(" ")}
+                            </p>
+                          ))}
                       </div>
                     </div>
                   </div>
