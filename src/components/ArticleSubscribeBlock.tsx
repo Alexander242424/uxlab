@@ -64,7 +64,9 @@ const ArticleSubscribeBlock = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`hoves-p3-reg pb-3 border-b ${message.includes("Success") ? "border-border-50" : "border-red-400"} w-full bg-transparent outline-none appearance-none text-white placeholder-white/70`}
+            className={`hoves-p3-reg pb-3 border-b w-full bg-transparent outline-none appearance-none text-white placeholder-white/70 ${
+              message && !message.includes("Success") ? "border-red-400" : "border-border-50"
+            }`}
             placeholder="Email Address"
             required
             disabled={isSubmitting}
