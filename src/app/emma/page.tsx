@@ -11,6 +11,7 @@ import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonial
 import HeroImage from "@/assets/Emma/Emma.jpg";
 import EmmaLogo from "@/assets/emma-logo.svg";
 import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
+import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
 import EmmaCase1 from "@/assets/Emma/XkNQu7DYidbcrVSHQNflhh0MA.avif";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import OptionImage from "@/assets/image/OurCases/Option 22.jpg";
@@ -207,7 +208,7 @@ export default function EmmaPage() {
           imageSrc={OptionImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<EmmaLogo />}
+          logo={<EmmaLogoScrollingText />}
           link="/your-link"
         />
       </div>

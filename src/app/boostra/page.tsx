@@ -9,6 +9,7 @@ import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
 import BoostraLogo from "@/assets/boostra-logo.svg";
+import BoostraLogoScrollingText from "@/assets/image/OurCases/logo/logo-main.svg";
 import BoostraLogoMobile from "@/assets/boostra-logo-mobile.svg";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import HeroImage from "@/assets/Boostra/Boostra.jpg";
@@ -258,7 +259,7 @@ export default function NextCasesPage() {
           smallImageSrc={BoostraSmallImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<BoostraLogo />}
+          logo={<BoostraLogoScrollingText />}
           link="/your-link"
         />
       </div>
