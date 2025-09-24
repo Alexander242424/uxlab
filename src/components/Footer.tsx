@@ -39,7 +39,9 @@ export default function Footer() {
         } else if (data.code === "INVALID_EMAIL") {
           setMessage("Please enter a valid email address");
         } else if (data.code === "API_ERROR") {
-          setMessage("Service temporarily unavailable. Please try again later.");
+          setMessage(
+            "Service temporarily unavailable. Please try again later."
+          );
         } else {
           setMessage(data.error || "Something went wrong. Please try again.");
         }
@@ -70,27 +72,35 @@ export default function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const footerParallax = document.querySelector('footer .transition-transform') as HTMLElement;
-      const insightsSection = document.querySelector('[data-section="insights"]');
-      
+      const footerParallax = document.querySelector(
+        "footer .transition-transform"
+      ) as HTMLElement;
+      const insightsSection = document.querySelector(
+        '[data-section="insights"]'
+      );
+
       if (footerParallax && insightsSection) {
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         const insightsRect = insightsSection.getBoundingClientRect();
         const insightsBottom = insightsRect.bottom;
-        
+
         // Start parallax only when Footer is already in viewport
-        if (insightsBottom < windowHeight * 0.3) { // Change condition - start later
-          const parallaxOffset = Math.max(0, (windowHeight * 0.3 - insightsBottom) * 0.10); // Зменшено з 0.12 до 0.06
+        if (insightsBottom < windowHeight * 0.3) {
+          // Change condition - start later
+          const parallaxOffset = Math.max(
+            0,
+            (windowHeight * 0.3 - insightsBottom) * 0.1
+          ); // Зменшено з 0.12 до 0.06
           footerParallax.style.transform = `translateY(-${parallaxOffset}px)`; // Use negative value for upward movement
         } else {
-          footerParallax.style.transform = 'translateY(0px)';
+          footerParallax.style.transform = "translateY(0px)";
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -110,11 +120,16 @@ export default function Footer() {
             <div className="w-full flex flex-col md:flex-row sm:mt-2">
               {/* Left part - title + contacts + input */}
               <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <h3 className="hoves-h5-med mb-8">Relax. We&apos;ve Got You.</h3>
+                <h3 className="hoves-h5-med mb-8">
+                  Relax. We&apos;ve Got You.
+                </h3>
                 <div className="flex sm:gap-8">
                   <div className="not-sm:min-w-1/2">
                     <p className="hoves-p2-reg">Contact us:</p>
-                    <Link href="mailto:hello@uxlab.com" className="relative group text-text-700 hoves-p2-reg">
+                    <Link
+                      href="mailto:hello@uxlab.com"
+                      className="relative group text-text-700 hoves-p2-reg"
+                    >
                       hello@uxlab.com
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                     </Link>
@@ -145,7 +160,13 @@ export default function Footer() {
                     </button>
                   </form>
                   {message && (
-                    <p className={`hoves-p2-reg text-sm mt-2 ${message.includes("Success") ? "text-green-600" : "text-red-500"}`}>
+                    <p
+                      className={`hoves-p2-reg text-sm mt-2 ${
+                        message.includes("Success")
+                          ? "text-green-600"
+                          : "text-red-500"
+                      }`}
+                    >
                       {message}
                     </p>
                   )}
@@ -156,21 +177,36 @@ export default function Footer() {
               <div className="w-full md:w-1/2 flex xl:gap-[154px]">
                 <div className="text-nowrap not-sm:min-w-1/2 md:pl-[1px] mb-8 md:mb-0 md:min-w-[212px]">
                   <ul className="space-y-4">
-                    <li>
+                    {/* <li>
                       <Link href="/#" className={`relative group text-text-700 hoves-p2-reg`}>
                         Home
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                       </Link>
+                    </li> */}
+                    <li>
+                      <Link
+                        href="/#services"
+                        className={`relative group text-text-700 hoves-p2-reg`}
+                      >
+                        Services
+                        <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/#work" className={`relative group text-text-700 hoves-p2-reg`}>
+                      <Link
+                        href="/#work"
+                        className={`relative group text-text-700 hoves-p2-reg`}
+                      >
                         Work
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#services" className={`relative group text-text-700 hoves-p2-reg`}>
-                        Services
+                      <Link
+                        href="/#insights"
+                        className={`relative group text-text-700 hoves-p2-reg`}
+                      >
+                        Insights
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                       </Link>
                     </li>
@@ -254,13 +290,18 @@ export default function Footer() {
                   </button>
                 </form>
                 {message && (
-                  <p className={`hoves-p2-reg text-sm mt-2 ${message.includes("Success") ? "text-green-600" : "text-red-500"}`}>
+                  <p
+                    className={`hoves-p2-reg text-sm mt-2 ${
+                      message.includes("Success")
+                        ? "text-green-600"
+                        : "text-red-500"
+                    }`}
+                  >
                     {message}
                   </p>
                 )}
               </div>
             </div>
-
           </div>
         </motion.div>
       </div>

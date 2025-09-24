@@ -107,7 +107,7 @@ export default function Header() {
           {/* Права частина - навігація + Book a Call */}
           <div className="w-1/2 flex justify-between items-center">
             <nav className="hidden sm:flex space-x-4 md:space-x-8 hoves-p2-reg">
-              {pathname === "/" ? (
+              {/* {pathname === "/" ? (
                 <button
                   onClick={() => scrollToSection("")}
                   className={`relative group header-text cursor-pointer ${
@@ -127,7 +127,7 @@ export default function Header() {
                   Home
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </Link>
-              )}
+              )} */}
               
               {pathname === "/" ? (
                 <button
