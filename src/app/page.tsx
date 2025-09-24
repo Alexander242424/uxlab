@@ -45,17 +45,17 @@ export default function HomePage() {
         </div>
         <TextSection
           className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
-          firstText="Design for founders who care about"
+          firstText="Trusted by founders who"
           secondText={[
-            "conversions, revenue, acquisition, and",
-            "the metrics that drive growth.",
+            "need design decisions backed by evidences,",
+            "not guesswork when the stakes are highest.",
           ]}
           mobileText={[
-            "Design for founders who",
-            "care about conversions,",
-            "revenue, acquisition, and",
-            "the metrics that drive",
-            "growth.",
+            "Trusted by founders who",
+            "need design decisions",
+            "backed by evidences,",
+            "not guesswork when",
+            "the stakes are highest.",
           ]}
         />
         <ServiceItems />
@@ -71,17 +71,17 @@ export default function HomePage() {
           <GlanceSection />
           <TextSection
             className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
-            firstText="After shipping hundreds of products,"
+            firstText="After releasing hundreds of products"
             secondText={[
-              "there are a few key things we've learned",
-              "are needed to do the best work",
+              "we really know how to deliver best experience",
+              "fast and effectively.",
             ]}
             mobileText={[
-              "After shipping hundreds",
-              "of products, we've",
-              "learned a few key things",
-              "that help us do our best",
-              "works."
+              "After releasing hundreds",
+              "of products we really",
+              "know how to deliver",
+              "best experience fast",
+              "and effectively."
             ]}
             textColor="text-black"
           />

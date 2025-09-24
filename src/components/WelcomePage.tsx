@@ -20,7 +20,7 @@ export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
     return () => clearTimeout(timer);
   }, [onAnimationStart]);
 
-  const words = ["Welcome", "to", "UXLab"];
+  const words = ["Welcome", "to", "UXLAB"];
 
   return (
     <AnimatePresence>
