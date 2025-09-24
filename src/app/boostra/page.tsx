@@ -8,37 +8,40 @@ import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import EmmaLogo from "@/assets/emma-logo.svg";
-import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
+import BoostraLogo from "@/assets/boostra-logo.svg";
+import BoostraLogoMobile from "@/assets/boostra-logo-mobile.svg";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
-import FirstBlockImage1 from "@/assets/NextCases/firstblockimage1.webp";
-import FirstBlockImage2 from "@/assets/NextCases/firstblockimage2.webp";
-import BigImage1 from "@/assets/NextCases/bigImage1.webp";
-import SmallImage1 from "@/assets/NextCases/smallImage1.webp";
-import BigImage2 from "@/assets/NextCases/bigImage2.webp";
-import SmallImage2 from "@/assets/NextCases/smallImage2.webp";
-import BigImage3 from "@/assets/NextCases/bigImage3.webp";
-import BigImage4 from "@/assets/NextCases/bigImage4.webp";
+import HeroImage from "@/assets/Boostra/Boostra.jpg";
+import FirstBlockImage1 from "@/assets/Boostra/firstblockimage1.webp";
+import FirstBlockImage2 from "@/assets/Boostra/firstblockimage2.webp";
+import BigImage1 from "@/assets/Boostra/bigImage1.webp";
+import SmallImage1 from "@/assets/Boostra/smallImage1.webp";
+import BigImage2 from "@/assets/Boostra/bigImage2.webp";
+import SmallImage2 from "@/assets/Boostra/smallImage2.webp";
+import BigImage3 from "@/assets/Boostra/bigImage3.webp";
+import BigImage4 from "@/assets/Boostra/bigImage4.webp";
+import CaseSectionBoostraImage from "@/assets/image/OurCases/Frame 1820549645.png";
 
 export default function NextCasesPage() {
   return (
     <div className="flex flex-col">
       <div className="w-full">
         <CasesHeroSections
-          logo={<EmmaLogo />}
-          logoMobile={<EmmaLogoMobile />}
+          logo={<BoostraLogo />}
+          logoMobile={<BoostraLogoMobile />}
           text={["Innovating Personalized", "Sleep Worldwide"]}
-          companyName="Emma Sleep"
+          companyName="Boostra"
           year="2022 - 2024"
           deliverables="Guidelines and Portals · Digital Asset Management · Templates"
         />
-        <div className="w-full">
+        {/* <div className="w-full">
           <ShowreelSection
             isDefault={true}
             mobileSrc="/video/reel-short-mobile.mp4"
             desktopSrc="/video/reel-short.mp4"
           />
-        </div>
+        </div> */}
+        <OverviewCaseVideoSection className="!p-0" imageSrc={HeroImage} imageAlt="Emma Sleep case study" />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
           firstText="By fostering healthy sleep habits,"
@@ -251,10 +254,10 @@ export default function NextCasesPage() {
         <OverviewCaseVideoSection imageSrc={BigImage4} imageAlt="Emma Sleep case study" />
         <ScrollingTextCaseSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
-          imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+          imageSrc={CaseSectionBoostraImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<EmmaLogo />}
+          logo={<BoostraLogo />}
           link="/your-link"
         />
       </div>

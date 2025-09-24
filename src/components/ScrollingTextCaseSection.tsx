@@ -2,14 +2,14 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import VideoPlayer from "./VideoPlayer";
 
 interface ScrollingTextCaseSectionProps {
   videoSrc: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   imageAlt: string;
   videoTitle: string;
   logo?: React.ReactNode;
@@ -237,7 +237,7 @@ export default function ScrollingTextCaseSection({
           {Array(20)
             .fill("View Next Case")
             .map((text, i) => (
-              <span key={i} style={{ marginRight: "0.5em" }}>
+              <span key={i} style={{ marginRight: "1em" }}>
                 {text}
               </span>
             ))}
