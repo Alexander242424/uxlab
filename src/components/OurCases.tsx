@@ -173,7 +173,7 @@ export default function OurCases() {
     const imageLeft = imageRect.left + padding;
     const imageTop = Math.max(imageRect.top + padding, 0); // Не менше 0
     const imageRight = imageRect.right - padding - cursorWidth;
-    const imageBottom = imageRect.bottom - padding - 330;
+    const imageBottom = imageRect.bottom - padding - 290;
 
     // Логування для дебагу
     // console.log('Image rect:', imageRect);
@@ -281,13 +281,13 @@ export default function OurCases() {
           >
             <div className="bg-transparent">
               {cases[hoveredIndex].ImageSrc ? (
-                <div className="rounded-[8px] overflow-hidden h-full min-w-[220px] max-h-[300px]">
+                <div className="rounded-[8px] overflow-hidden">
                   <Image
                     src={cases[hoveredIndex].ImageSrc}
                     alt={cases[hoveredIndex].alt}
                     width={200}
                     height={150}
-                    className="w-full h-auto object-cover"
+                    className="w-full object-cover"
                   />
                 </div>
               ) : (
@@ -307,7 +307,7 @@ export default function OurCases() {
                     </div>
                   </div>
                 ) : (
-                  <div className="rounded-[8px] overflow-hidden max-h-[300px]">
+                  <div className="rounded-[8px] overflow-hidden">
                     <VideoPlayer
                       src={cases[hoveredIndex].videoSrc!}
                       className="w-full object-cover"
