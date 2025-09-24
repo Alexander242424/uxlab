@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { VideoModalProvider } from "@/context/VideoModalContext";
 import VideoModal from "@/components/VideoModal";
+import { CalModalProvider } from "@/context/CalModalContext";
+import CalModal from "@/components/CalModal";
 import AppWrapper from "@/components/AppWrapper";
 
 const ttHoves = localFont({
@@ -82,17 +84,20 @@ export default function RootLayout({
         className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
       >
         <VideoModalProvider>
-          <AppWrapper>
-            <div
-              className="min-h-screen flex flex-col"
-              style={{ scrollBehavior: "smooth" }}
-            >
-              <Header />
-              <main className="flex-1 overflow-x-hidden ">{children}</main>
-              <Footer />
-            </div>
-          </AppWrapper>
-          <VideoModal />
+          <CalModalProvider>
+            <AppWrapper>
+              <div
+                className="min-h-screen flex flex-col"
+                style={{ scrollBehavior: "smooth" }}
+              >
+                <Header />
+                <main className="flex-1 overflow-x-hidden ">{children}</main>
+                <Footer />
+              </div>
+            </AppWrapper>
+            <VideoModal />
+            <CalModal />
+          </CalModalProvider>
         </VideoModalProvider>
       </body>
     </html>

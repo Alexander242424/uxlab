@@ -1,9 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
-import { motion } from "motion/react";
 import SplitText from "./SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useCalModal } from "@/context/CalModalContext";
 
 interface TextSectionProps {
   firstText: string;
@@ -29,6 +29,11 @@ export default function TextSection({
   threshold = 0.6,
 }: TextSectionProps) {
   const isMobile = useIsMobile();
+  const { openModal } = useCalModal();
+
+  const handleCalClick = () => {
+    openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
+  };
 
   // Convert secondText to array if it's a string
   const secondTextArray = Array.isArray(secondText) ? secondText : [secondText];
@@ -37,7 +42,7 @@ export default function TextSection({
   const mobileTextArray = Array.isArray(mobileText) ? mobileText : [mobileText];
 
   return (
-    <div className={`flex flex-col w-full ${className}`}>
+    <section className={`py-20 md:py-32 ${className}`}>
       {isMobile ? (
         <div className="flex flex-col">
           {mobileTextArray.map((text, index) => (
@@ -123,28 +128,18 @@ export default function TextSection({
       )}
 
       {showButton && (
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            delay: 0.6,
-          }}
-          className="flex justify-center"
-        >
+        <div className="flex justify-center">
           <Button
             variant="secondary"
             size="lg"
             iconRight={<ArrowUpRightSVG className="!size-6" />}
             className="w-full max-w-40 mt-10 scale-100 lg:scale-[130%]"
-            onClick={() => window.open('https://cal.com/eugene.orehov/30min?overlayCalendar=true', '_blank')}
+            onClick={handleCalClick}
           >
             {buttonText}
           </Button>
-        </motion.div>
+        </div>
       )}
-    </div>
+    </section>
   );
 }

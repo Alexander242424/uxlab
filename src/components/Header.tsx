@@ -4,10 +4,16 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import LogoSVG from "@/assets/logo.svg";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
+import { useCalModal } from "@/context/CalModalContext";
 
 export default function Header() {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("");
+  const { openModal } = useCalModal();
+
+  const handleCalClick = () => {
+    openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
+  };
 
   useEffect(() => {
     // Перевіряємо, чи window існує (клієнтська сторона)
@@ -195,9 +201,9 @@ export default function Header() {
                 </Link>
               )}
             </nav>
-            <div className="flex items-center ml-auto">
-              <Link
-                href="https://cal.com/eugene.orehov/30min?overlayCalendar=true"
+            <div className="flex items-center ml-auto cursor-pointer">
+              <div
+                onClick={handleCalClick}
                 className="header-text flex items-center gap-1 relative group"
               >
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
@@ -210,7 +216,7 @@ export default function Header() {
                     Book a Call
                   </span>
                 </span>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

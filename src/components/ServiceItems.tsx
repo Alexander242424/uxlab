@@ -6,6 +6,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Image1 from "@/assets/image/OurCases/image/Shapphire 5.png";
+import { useCalModal } from "@/context/CalModalContext";
 
 interface ServiceItem {
   title: string;
@@ -71,6 +72,12 @@ const secondParagraphMobile = [
 
 export default function ServiceItems() {
   const isMobile = useIsMobile();
+  const { openModal } = useCalModal();
+
+  const handleCalClick = () => {
+    openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
+  };
+
   return (
     <section
       id="services"
@@ -215,7 +222,10 @@ export default function ServiceItems() {
                   }}
                   style={{ transformOrigin: "left" }}
                 />
-                <a href={"https://cal.com/eugene.orehov/30min?overlayCalendar=true"} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-6 sm:py-10">
+                <div
+                  className="flex items-center justify-between py-6 sm:py-10"
+                  onClick={handleCalClick}
+                >
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex w-full justify-between">
                       <div className="flex flex-col -mt-3">
@@ -230,22 +240,24 @@ export default function ServiceItems() {
                           {service.time}
                         </p>
                       </div>
-                      <div className="flex items-end justify-center">
-                        <div className="group-hover:max-h-[200px] group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out">
-                          <Image
-                            src={service.imageSrc}
-                            alt={service.title}
-                            width={270}
-                            height={180}
-                          />
+                      {!isMobile && (
+                        <div className="flex items-end justify-center">
+                          <div className="group-hover:max-h-[200px] group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out">
+                            <Image
+                              src={service.imageSrc}
+                              alt={service.title}
+                              width={270}
+                              height={180}
+                            />
+                          </div>
                         </div>
-                      </div>
+                      )}
                       <div className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
                         <ArrowUpRightSVG className="w-6 h-6 text-text-700 lg:scale-[130%]" />
                       </div>
                     </div>
                   </div>
-                </a>
+                </div>
                 {index === services.length - 1 && (
                   <motion.div
                     className="absolute bottom-0 left-0 w-full h-[1px] bg-border-50"
