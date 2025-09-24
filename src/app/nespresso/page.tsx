@@ -1,5 +1,6 @@
 import NespressoLogoMobile from "@/assets/Nespresso Logo mobile.svg";
 import NespressoLogo from "@/assets/Nespresso Logo.svg";
+import NespressoLogoScrollingText from "@/assets/image/OurCases/logo/Vector.svg";
 import NespressoCase3 from "@/assets/Nespresso/60GnuqXyzpsH5lC1nnnABRg5Yz8.avif";
 import NespressoCase1 from "@/assets/Nespresso/nR82XOWawuWAy8GHMZeeFWJ3k0.avif";
 import NespressoCase2 from "@/assets/Nespresso/uF1xvIpJ073LZGEw4CqEsTGFg.avif";
@@ -13,6 +14,7 @@ import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
 import ShowreelSection from "@/components/ShowreelSection";
 import HeroImage from "@/assets/Nespresso/Nespresso.jpg";
+import GuideImage from "@/assets/image/OurCases/Option 28.png";
 
 export default function NespressoPage() {
   return (
@@ -165,10 +167,10 @@ export default function NespressoPage() {
         /> */}
         <ScrollingTextCaseSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
-          imageSrc="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
+          imageSrc={GuideImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<NespressoLogo />}
+          logo={<NespressoLogoScrollingText />}
           link="/your-link"
         />
       </div>

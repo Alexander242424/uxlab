@@ -9,6 +9,7 @@ import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
 import BoostraLogo from "@/assets/boostra-logo.svg";
+import BoostraLogoScrollingText from "@/assets/image/OurCases/logo/logo-main.svg";
 import BoostraLogoMobile from "@/assets/boostra-logo-mobile.svg";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import HeroImage from "@/assets/Boostra/Boostra.jpg";
@@ -20,7 +21,8 @@ import BigImage2 from "@/assets/Boostra/bigImage2.webp";
 import SmallImage2 from "@/assets/Boostra/smallImage2.webp";
 import BigImage3 from "@/assets/Boostra/bigImage3.webp";
 import BigImage4 from "@/assets/Boostra/bigImage4.webp";
-import CaseSectionBoostraImage from "@/assets/image/OurCases/Frame 1820549645.png";
+import BoostraImage from "@/assets/image/OurCases/Option23.jpg";
+import BoostraSmallImage from "@/assets/image/OurCases/4.png";
 
 export default function NextCasesPage() {
   return (
@@ -253,11 +255,11 @@ export default function NextCasesPage() {
         />
         <OverviewCaseVideoSection imageSrc={BigImage4} imageAlt="Emma Sleep case study" />
         <ScrollingTextCaseSection
-          videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
-          imageSrc={CaseSectionBoostraImage}
+          imageSrc={BoostraImage}
+          smallImageSrc={BoostraSmallImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<BoostraLogo />}
+          logo={<BoostraLogoScrollingText />}
           link="/your-link"
         />
       </div>
