@@ -12,6 +12,7 @@ import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSect
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
 import ShowreelSection from "@/components/ShowreelSection";
+import HeroImage from "@/assets/Nespresso/Nespresso.jpg";
 
 export default function NespressoPage() {
   return (
@@ -25,13 +26,14 @@ export default function NespressoPage() {
           year="2022 - 2023"
           deliverables="Design Strategy · UX · Design System · Branding"
         />
-        <div className="w-full">
+        {/* <div className="w-full">
           <ShowreelSection
             isDefault={true}
             mobileSrc="/video/reel-short-mobile.mp4"
             desktopSrc="/video/reel-short.mp4"
           />
-        </div>
+        </div> */}
+        <OverviewCaseVideoSection className="!p-0" imageSrc={HeroImage} imageAlt="Emma Sleep case study" />
         <OverviewCaseTestimonialSection
           firstText="Creating a standout digital experience for"
           secondText={[

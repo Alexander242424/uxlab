@@ -8,6 +8,7 @@ import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
+import HeroImage from "@/assets/Emma/Emma.jpg";
 import EmmaLogo from "@/assets/emma-logo.svg";
 import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
 import EmmaCase1 from "@/assets/Emma/XkNQu7DYidbcrVSHQNflhh0MA.avif";
@@ -25,13 +26,14 @@ export default function EmmaPage() {
           year="2022 - 2024"
           deliverables="Guidelines and Portals · Digital Asset Management · Templates"
         />
-        <div className="w-full">
+        {/* <div className="w-full">
           <ShowreelSection
             isDefault={true}
             mobileSrc="/video/reel-short-mobile.mp4"
             desktopSrc="/video/reel-short.mp4"
           />
-        </div>
+        </div> */}
+        <OverviewCaseVideoSection className="!p-0" imageSrc={HeroImage} imageAlt="Emma Sleep case study" />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
           firstText="By fostering healthy sleep habits,"

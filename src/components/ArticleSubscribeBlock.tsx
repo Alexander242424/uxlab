@@ -51,7 +51,7 @@ const ArticleSubscribeBlock = () => {
   };
   return (
     <div className="flex flex-col gap-10 h-[450px]">
-      <div className="flex flex-col bg-bg-black px-5 py-4 gap-4">
+      <div className="flex flex-col bg-bg-black px-5 py-4 gap-4 rounded-[4px]">
         <div className="flex flex-row justify-between">
           <p className="hoves-p1-reg text-white text-wrap max-w-[70%]">
             Subscribe to stay informed about our latest work, projects and
@@ -64,7 +64,7 @@ const ArticleSubscribeBlock = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="hoves-p2-reg pb-3 border-b border-border-50 w-full bg-transparent outline-none appearance-none text-white placeholder-white/70"
+            className={`hoves-p3-reg pb-3 border-b ${message.includes("Success") ? "border-border-50" : "border-red-400"} w-full bg-transparent outline-none appearance-none text-white placeholder-white/70`}
             placeholder="Email Address"
             required
             disabled={isSubmitting}
@@ -76,12 +76,12 @@ const ArticleSubscribeBlock = () => {
           >
             <ArrowRightSVG className="min-w-[20px] min-h-[20px] text-white!" />
           </button>
-        </form>
-        {message && (
-          <p className={`hoves-p2-reg text-sm mt-2 ${message.includes("Success") ? "text-green-400" : "text-red-400"}`}>
+          {message && (
+          <p className={`hoves-p3-reg text-sm mt-2 ${message.includes("Success") ? "text-green-400" : "text-red-400"}`}>
             {message}
           </p>
         )}
+        </form>
       </div>
       <div className="flex flex-col">
         <p className="hoves-p3-reg text-[#5C5C5C] border-b border-b-[#E5E5E5] py-2">

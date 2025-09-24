@@ -30,7 +30,7 @@ const ArticlePage = () => {
       <div 
         className={`${isKeepDoorOpenInView ? 'absolute' : 'fixed'} left-[40px] w-fit not-xl:hidden z-10 transition-all duration-300`}
         style={{ 
-          top: isKeepDoorOpenInView ? 'auto' : '337px',
+          top: isKeepDoorOpenInView ? 'auto' : '135px',
           bottom: isKeepDoorOpenInView ? '650px' : 'auto'
         }}
       >
@@ -39,7 +39,7 @@ const ArticlePage = () => {
       <div 
         className={`${isKeepDoorOpenInView ? 'absolute' : 'fixed'} right-[40px] w-[290px] not-xl:hidden z-10 transition-all duration-300`}
         style={{ 
-          top: isKeepDoorOpenInView ? 'auto' : '337px',
+          top: isKeepDoorOpenInView ? 'auto' : '135px',
           bottom: isKeepDoorOpenInView ? '650px' : 'auto'
         }}
       >
@@ -47,7 +47,7 @@ const ArticlePage = () => {
       </div>
       {/* Main content with exact positioning */}
       <div className="flex flex-row pt-4 md:pt-[48px] pb-[92px] md:pb-[158px] xl:ml-[400px] xl:mr-[400px] w-full] px-4 xl:px-0">
-        <div className="flex flex-col w-full gap-10">
+        <div className="flex flex-col w-full xl:gap-10 gap-8">
           <div className="flex flex-col">
             <div className="flex flex-col gap-5">
               <h3 className="hoves-h3-med">
@@ -56,7 +56,7 @@ const ArticlePage = () => {
               </h3>
               <div className="flex flex-row gap-6 items-center">
                 <div className="flex gap-4 items-center">
-                  <AlexIcon />
+                  <AlexIcon className="min-w-[45px] min-h-[45px]" />
                   <div className="flex flex-col">
                     <p className="hoves-p2-med">Alex Tyshchenko</p>
                     <p className="hoves-p3-reg text-[#5C5C5C]">Designer</p>

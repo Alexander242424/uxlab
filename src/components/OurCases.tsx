@@ -6,9 +6,10 @@ import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import OptionImage from "../assets/image/OurCases/Option 22.png";
 import GuideImage from "../assets/image/OurCases/Option 28.png";
-import ShapphireImage from "../assets/image/OurCases/Frame 1820549645.png";
+import BoostraImage from "../assets/image/OurCases/Frame 1820549645.png";
 import EmmaLogo from "../assets/image/OurCases/logo/emma.svg";
 import NestpressoLogo from "../assets/image/OurCases/logo/nestpresso.svg";
+import BoostraLogo from "../assets/boostra-logo.svg";
 import SplitText from "./SplitText";
 import VideoPlayer from "./VideoPlayer";
 
@@ -35,14 +36,14 @@ const cases: OurCasesItem[] = [
     link: "/emma",
   },
   {
-    src: ShapphireImage,
-    alt: "Sapphire analysis case study",
+    src: BoostraImage,
+    alt: "Boostra analysis case study",
     title:
       "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Sapphire",
     videoSrc: "/video/reel-short-mobile.mp4",
-    videoTitle: "Sapphire analysis case study", 
-    logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
-    link: "/next-cases",
+    videoTitle: "Boostra analysis case study", 
+    logo: <BoostraLogo className="not-md:scale-[0.8]!" />,
+    link: "/boostra",
   },
   {
     src: GuideImage,
@@ -335,7 +336,7 @@ export default function OurCases() {
                 />
                 
                 {item.logo && (
-                  <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] md:mb-[48px] transition-opacity duration-300 ${
+                  <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${
                     isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
                   }`}>
                     {item.logo}
