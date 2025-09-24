@@ -204,7 +204,7 @@ export default function EmmaPage() {
           poster="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
         /> */}
         <ScrollingTextCaseSection
-          videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
+          videoSrc="/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4"
           imageSrc={OptionImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"

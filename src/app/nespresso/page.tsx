@@ -166,7 +166,7 @@ export default function NespressoPage() {
           poster="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
         /> */}
         <ScrollingTextCaseSection
-          videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
+          videoSrc="/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4"
           imageSrc={GuideImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"

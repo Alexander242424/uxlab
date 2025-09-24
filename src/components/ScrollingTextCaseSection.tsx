@@ -303,7 +303,7 @@ export default function ScrollingTextCaseSection({
         >
           <div className="bg-transparent">
             {smallImageSrc ? (
-              <div className="rounded-[8px] overflow-hidden h-full max-h-[300px]">
+              <div className="rounded-[8px] overflow-hidden">
                 <Image
                   src={smallImageSrc}
                   alt={imageAlt}
@@ -327,7 +327,7 @@ export default function ScrollingTextCaseSection({
                   </div>
                 </div>
               ) : (
-                <div className="rounded-[8px] overflow-hidden max-h-[300px]">
+                <div className="rounded-[8px] overflow-hidden">
                   <VideoPlayer
                     src={videoSrc!}
                     className="w-full object-cover"
