@@ -54,7 +54,7 @@ export default function InfoBlock({
               <SplitText
                 key={`mobile-title-${index}`}
                 text={text || ""}
-                className="text-text-700 hoves-h4-med !text-nowrap"
+                className="text-text-500 hoves-p1-reg !text-nowrap"
                 globalIndex={index}
                 splitType="lines"
                 delay={100}
@@ -74,7 +74,7 @@ export default function InfoBlock({
               <SplitText
                 key={`mobile-description-${index}`}
                 text={text || ""}
-                className="text-text-500 hoves-p1-reg !text-nowrap"
+                className="text-text-700 hoves-h4-med !text-nowrap"
                 globalIndex={mobileTitleArray.length + index}
                 splitType="lines"
                 delay={200}
@@ -97,7 +97,7 @@ export default function InfoBlock({
               <SplitText
                 key={`desktop-title-${index}`}
                 text={text}
-                className="text-text-700 hoves-h4-med !text-nowrap"
+                className="text-text-500 hoves-p1-reg !text-nowrap"
                 globalIndex={index}
                 splitType="lines"
                 delay={100}
@@ -117,7 +117,7 @@ export default function InfoBlock({
               <SplitText
                 key={`desktop-description-${index}`}
                 text={text}
-                className="text-text-500 hoves-p1-reg !text-nowrap"
+                className="text-text-700 hoves-h4-med !text-nowrap"
                 globalIndex={titleArray.length + index}
                 splitType="lines"
                 delay={200}

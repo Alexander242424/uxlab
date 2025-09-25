@@ -35,22 +35,32 @@ export default function NespressoPage() {
             desktopSrc="/video/reel-short.mp4"
           />
         </div> */}
-        <OverviewCaseVideoSection className="!p-0" imageSrc={HeroImage} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          className="!p-0"
+          imageSrc={HeroImage}
+          imageAlt="Emma Sleep case study"
+        />
         <OverviewCaseTestimonialSection
-          firstText="Creating a standout digital experience for"
+          firstText=""
           secondText={[
-            "one of the world`s most renowned brands,",
+            "Creating a standout digital experience",
+            "for one of the world`s most renowned brands,",
             "we teamed up with Nespresso to redefine",
             "their online presence, enhancing brand",
             "engagement through a product-driven",
             "approach.",
           ]}
           mobileText={[
-            "Creating a standout digital experience for",
-            "one of the world`s most renowned brands,",
-            "we teamed up with Nespresso to redefine",
-            "their online presence, enhancing brand",
-            "engagement through a product-driven",
+            "Creating a standout",
+            "digital experience for",
+            "for one of the world`s",
+            "most renowned brands,",
+            "we teamed up with",
+            "Nespresso to redefine",
+            "their online presence,",
+            "enhancing brand",
+            "engagement through",
+            "a product-driven",
             "approach.",
           ]}
           authorText="Introduction"
@@ -59,12 +69,47 @@ export default function NespressoPage() {
         <InfoBlock
           className="md:pt-[120px]! md:pb-20!"
           title="Challenge"
-          description="Not enough enhances brand engagement, poor user experience, and just another website which is selling coffee products"
+          description={[
+            "Not enough enhances brand",
+            "engagement, poor user experience,",
+            "and just another website which is",
+            "selling coffee products",
+          ]}
+          mobileTitle="Challenge"
+          mobileDescription={[
+            "Not enough enhances brand",
+            "engagement, poor user experience,",
+            "and just another website which is",
+            "selling coffee products",
+          ]}
         />
         <InfoBlock
           className="md:pt-20! md:pb-[120px]!"
           title="Solution"
-          description="Designing an innovative digital platform for a globally recognized brand, we partnered with Nespresso to transform their online experience, creating a seamless, user-centered journey that strengthens brand connection and elevates product engagement with exceptional conversion rate."
+          description={[
+            "Designing an innovative digital",
+            "platform for a globally recognized",
+            "brand, we partnered with Nespresso",
+            "to transform their online experience,",
+            "creating a seamless, user-centered",
+            "journey that strengthens brand",
+            "connection and elevates product",
+            "engagement with exceptional",
+            "conversion rate.",
+          ]}
+          mobileTitle="Solution"
+          mobileDescription={[
+            "Designing an innovative digital",
+            "platform for a globally recognized",
+            "brand, we partnered with",
+            "Nespresso to transform their",
+            "online experience, creating a",
+            "seamless, user-centered journey",
+            "that strengthens brand",
+            "connection and elevates product",
+            "engagement with exceptional",
+            "conversion rate.",
+          ]}
         />
         <OverviewCaseImageSection
           imageSrc={NespressoCase1}
@@ -76,7 +121,17 @@ export default function NespressoPage() {
         <InfoBlock
           className="md:py-20!"
           title="The vision"
-          description="Create a responsive platform that effortlessly integrates brand storytelling with a seamless shopping experience."
+          description={[
+            "Create a responsive platform that",
+            "effortlessly integrates brand storytelling with a",
+            "seamless shopping experience.",
+          ]}
+          mobileTitle="The vision"
+          mobileDescription={[
+            "Create a responsive platform that",
+            "effortlessly integrates brand storytelling with a",
+            "seamless shopping experience.",
+          ]}
         />
         <OverviewCaseVideoSection src="/video/nespressso/KAd7i5wQV7Vl9SQimeRdzNcYFyo.mp4" />
         <OverviewCaseVideoTextSection
@@ -84,20 +139,25 @@ export default function NespressoPage() {
           firstText="This vibrant, brand-focused destination showcases personality while providing a smooth, effortless shopping experience."
           secondText="Close-up of the mobile Nespresso shopping website. As part of a broader initiative to elevate and enhance Nespresso's digital experience, we redesigned each product detail page in both design and functionality. Our goal was to integrate more editorial elements while highlighting details and tools that drive conversion."
         />
-        <OverviewCaseTestimonialSection
-          firstText="A streamlined interface lets the"
-          secondText={[
-            "unique storytelling of each product take",
-            "center stage while adhering to eCommerce",
-            "best practices.",
-          ]}
-          mobileText={[
+        <InfoBlock
+          title="Improvements focused on product features and functionalities"
+          description={[
             "A streamlined interface lets the",
-            "unique storytelling of each product take",
-            "center stage while adhering to eCommerce",
-            "best practices.",
+            "unique storytelling of each product",
+            "take center stage while adhering to",
+            "eCommerce best practices.",
           ]}
-          authorText="Improvements focused on product features and functionalities"
+          mobileTitle={[
+            "Improvements focused on product",
+            "features and functionalities",
+          ]}
+          mobileDescription={[
+            "A streamlined interface lets",
+            "the unique storytelling of each",
+            "product take center stage while",
+            "adhering to eCommerce best",
+            "practices.",
+          ]}
         />
         <OverviewCaseImageSection
           className="md:pb-0"
@@ -115,39 +175,83 @@ export default function NespressoPage() {
         <InfoBlock
           className="md:py-20!"
           title="In the specifics."
-          description="Nespresso’s revamped design system, Holistic, enhances efficiency and delivers consistent experiences across all platforms at scale."
+          description={[
+            "Nespressos revamped design",
+            "system, Holistic, enhances efficiency",
+            "and delivers consistent experiences",
+            "across all platforms at scale.",
+          ]}
+          mobileTitle="In the specifics."
+          mobileDescription={[
+            "Nespressos revamped",
+            "design system, Holistic, enhances",
+            "efficiency and delivers consistent",
+            "experiences across all platforms at",
+            "scale.",
+          ]}
         />
         <OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4" />
         <OverviewCaseVideoTextSection
           videoSrc="/video/nespressso/4ALrxbTLDmy6Ghe3xMIIiXDLS8.mp4"
-          firstText="We aimed to develop a design system for Nespresso to guarantee consistency and optimal performance at scale."
-          secondText="The navigation emerged as our primary focus, utilizing a blend of functional and expressive motion to create an innovative wayfinding solution that directs and engages users effectively."
+          firstText="We aimed to develop a design system for Nespresso to guarantee consistency and optimal performance at scale. The navigation emerged as our primary focus, utilizing a blend of functional and expressive motion to create an innovative wayfinding solution that directs and engages users effectively."
+          secondText=""
         />
-        <OverviewCaseTestimonialSection
-          firstText="What if loyalty involved presenting"
-          secondText={[
-            "brand enthusiasts with a refined and",
-            "exclusive assortment of member benefits",
-            "and branded identity merchandise?",
-          ]}
-          mobileText={[
+        <InfoBlock
+          className="md:py-20!"
+          title="Loyalty"
+          description={[
             "What if loyalty involved presenting",
             "brand enthusiasts with a refined and",
-            "exclusive assortment of member benefits",
-            "and branded identity merchandise?",
+            "exclusive assortment of member",
+            "benefits and branded identity",
+            "merchandise?"
           ]}
-          authorText="Loyalty"
+          mobileTitle="Loyalty"
+          mobileDescription={[
+            "What if loyalty involved presenting",
+            "brand enthusiasts with a refined",
+            "and exclusive assortment of",
+            "member benefits and branded",
+            "identity merchandise?"
+          ]}
         />
         <OverviewCaseVideoSection src="/video/nespressso/ozQmpxgVh0h8ImZ4FFkvEIsYTXs.mp4" />
         <OverviewCaseVideoTextSection
           videoSrc="/video/nespressso/yVkkXjiOC41qMKPX0rQeZ50wqh0.mp4"
-          firstText="To enhance the newly elevated digital experience, our team imagined the future of loyalty with Nespresso, drawing inspiration from the intimacy of close relationships and branding it as `The Fold.`"
+          firstText = {`To enhance the newly elevated digital experience, our team imagined the future of loyalty with Nespresso, drawing inspiration from the intimacy of close relationships and branding it as "The Fold."`}
           secondText=""
         />
         <InfoBlock
           className="md:py-20!"
           title="Branding"
-          description="The intersection of user experience (UX) and branding is essential in today's digital landscape, where a cohesive brand identity extends beyond logos and visuals to encompass the entire user journey. Consistency across touchpoints fosters trust and recognition, while emotional connections built through personalized experiences enhance brand loyalty."
+          description={[
+            "The intersection of user experience",
+            "(UX) and branding is essential in",
+            "today's digital landscape, where a",
+            "cohesive brand identity extends",
+            "beyond logos and visuals to",
+            "encompass the entire user journey.",
+            "Consistency across touchpoints",
+            "fosters trust and recognition, while",
+            "emotional connections built through",
+            "personalized experiences enhance",
+            "brand loyalty."
+          ]}
+          mobileTitle="Branding"
+          mobileDescription={[
+            "The intersection of user",
+            "experience (UX) and branding",
+            "is essential in today's digital",
+            "landscape, where a cohesive",
+            "brand identity extends beyond",
+            "logos and visuals to encompass",
+            "the entire user journey.",
+            "Consistency across touchpoints",
+            "fosters trust and recognition, while",
+            "emotional connections built through",
+            "personalized experiences enhance",
+            "brand loyalty."
+          ]}
         />
         <OverviewCaseVideoSection
           className="md:pb-8"
