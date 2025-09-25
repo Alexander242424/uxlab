@@ -35,23 +35,33 @@ export default function EmmaPage() {
             desktopSrc="/video/reel-short.mp4"
           />
         </div> */}
-        <OverviewCaseVideoSection className="!p-0" imageSrc={HeroImage} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          className="!p-0"
+          imageSrc={HeroImage}
+          imageAlt="Emma Sleep case study"
+        />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
-          firstText="By fostering healthy sleep habits,"
+          firstText="We have a rich history with Emma Sleep,"
           secondText={[
-            "Emma Sleep builds trust, encouraging them",
-            "to download the app and integrate it into",
-            "their daily routines.",
+            "having collaborated closely over the years.",
+            "As their team focused on growth in the",
+            "early days, we helped them move beyond",
+            "just the sleep experience and elevate",
+            "how they engage with their users.",
           ]}
           mobileText={[
-            "By fostering healthy",
-            "sleep habits,",
-            "Emma Sleep builds trust,",
-            "encouraging them",
-            "to download the app",
-            "and integrate it into their",
-            "daily routines.",
+            "We have a rich history",
+            "with Emma Sleep,",
+            "having collaborated",
+            "closely over the years.",
+            "As their team focused",
+            "on growth in the early",
+            "days, we helped them",
+            "move beyond just the",
+            "sleep experience and",
+            "elevate how they",
+            "engage with their users.",
           ]}
         />
         <CasesOutcome />
@@ -63,67 +73,55 @@ export default function EmmaPage() {
         />
         <InfoBlock
           className="md:pt-[120px]! md:pb-20!"
-          title={[
-            "Challenge: Low daily engagement and",
-            "limited value for app users",
-          ]}
+          title={["Challenge"]}
           description={[
-            "Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing",
-            "experience offered limited value beyond basic sleep tracking.",
+            "Not enough value for users to use mobile",
+            "app on a daily basis.",
           ]}
-          mobileTitle={[
-            "Challenge: Low daily engagement and",
-            "limited value for app users",
-          ]}
+          mobileTitle={["Challenge"]}
           mobileDescription={[
-            "Emma Sleep wanted users to engage with its",
-            "mobile app on a daily basis, but the existing",
-            "experience offered limited value",
-            "beyond basic sleep tracking.",
+            "Not enough value for users",
+            "to use mobile app on a daily basis.",
           ]}
         />
         <InfoBlock
           className="md:pt-20! md:pb-[120px]!"
-          title={[
-            "Solution: Transforming the app",
-            "into a personalized educational hub",
-          ]}
+          title={["Solution"]}
           description={[
-            "To increase daily engagement and provide meaningful value, Emma Sleep adopted a",
-            "product-focused approach, redesigning the app to offer",
-            "a comprehensive educational hub. ",
+            "Bring a product mindset to take",
+            "Emma Sleep from a simple mobile app",
+            "to an educational hub with personalised",
+            "tracking and recommending experience.",
           ]}
-          mobileTitle={[
-            "Solution: Transforming the app",
-            "into a personalized educational hub",
-          ]}
+          mobileTitle={["Solution"]}
           mobileDescription={[
-            "To increase daily engagement and provide",
-            "meaningful value, Emma Sleep adopted a",
-            "product-focused approach, redesigning the",
-            "app to offer a comprehensive educational hub. ",
+            "Bring a product mindset to take",
+            "Emma Sleep from a simple",
+            "mobile app to an educational hub",
+            "with personalised tracking",
+            "and recommending experience.",
           ]}
         />
         <OverviewCaseVideoSection src="/video/qAqiq3kj5RDlGq0v3MWZfWRsTzM.mp4" />
         <OverviewCaseVideoTextSection
           videoSrc="/video/H6iWyylK8inEPxBJ6F1FDM8eqs.mp4"
-          firstText="We used playful colours, engaging illustrations, and micro-interactions to weave the brand through the experience and draw visitors in."
-          secondText="The new site feels multi-dimensional — much like the mind."
+          firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can’t I sleep? How do I find more energy after sleep? etc."
+          secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
         />
         <OverviewCaseTestimonialSection
           firstText="I'm consistently amazed at the quality of"
           secondText={[
-            "work Alex produces. From day one Alex just,",
-            "got our brand, created some stunning",
+            "work UXLAB produces. From day one, they",
+            "just got our brand, created some stunning",
             "designs, and ensured the whole process",
-            " ran smoothly.",
+            "ran smoothly.",
           ]}
           mobileText={[
             "I'm consistently amazed",
-            " at the quality of work",
-            "Alex produces. From day",
-            "one Alex just got our",
-            "brand, created some",
+            "at the quality of work",
+            "UXLAB produces. From",
+            "day one, they just got",
+            "our brand, created some",
             "stunning designs, and",
             "ensured the whole",
             "process ran smoothly.",
@@ -132,72 +130,83 @@ export default function EmmaPage() {
         />
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "To increase daily engagement and provide ",
-            "meaningful value, Emma Sleep adopted a",
-            "product-focused approach, redesigning the",
-            "app to offer a comprehensive",
-            "educational hub.",
-          ]}
+          title={["Bringing Sleep Challenges"]}
           description={[
-            "Solution: Transforming the app into a personalized educational hub",
+            "Yeah, it was a game changer - bring",
+            "Sleep Habits as a feature which is",
+            "training user behaviors on a daily",
+            "basis.",
           ]}
-          mobileTitle={[
-            "To increase daily engagement and",
-            "provide meaningful value, Emma Sleep",
-            "adopted a product-focused approach,",
-            "redesigning the app to offer a",
-            "comprehensive educational hub.",
-          ]}
+          mobileTitle={["Bringing Sleep Habits"]}
           mobileDescription={[
-            "Solution: Transforming the app into a",
-            "personalized educational hub",
+            "Yeah, it was a game",
+            "changer - bring Sleep Habits",
+            "as a feature which is training",
+            "user behaviors on a daily basis.",
           ]}
         />
         <OverviewCaseVideoSection src="/video/kX7KGpaqnCXw1cVoWgL7iiBKs.mp4" />
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the app and",
-            "integrate it into their daily routines.",
+          title={["Sleep Reports Creating"]}
+          description={[
+            "Sleep Reports on a daily basis helping",
+            "users to make sure everything is going well",
+            "or they have to change something",
+            "in their daily routine",
           ]}
-          description={["A Call to Habits"]}
-          mobileTitle={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the",
-            "app and integrate it into their",
-            "daily routines.",
+          mobileTitle={["Sleep Reports Creating"]}
+          mobileDescription={[
+            "Sleep Reports on a daily basis",
+            "helping users to make sure",
+            "everything is going well or",
+            "they have to change something",
+            "in their daily routine",
           ]}
-          mobileDescription={["A Call to Habits"]}
         />
         <OverviewCaseVideoTextSection
           videoSrc="/video/oL41OoO8XddHIxMfWdQaPy1yITI.mp4"
-          firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can't I sleep? How do I find more energy after sleep?"
-          secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
+          firstText="Everything started with breathing analysis, as it was the quickest and most useful solution for users."
+          secondText="Presenting the data in a playful UI helps users interpret it in an understandable way, and even when something isn't clear, the AI assistant is there to help."
           videoClassName="md:min-w-2/3 md:max-w-2/3 md:pr-8"
         />
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the app and",
-            "integrate it into their daily routines.",
+          title={["AI Assistant"]}
+          description={[
+            "Yeah, an AI assistant—nothing special",
+            "these days. However, this one uses a",
+            "unique training model based on",
+            "merging several other machine",
+            "learning models.",
           ]}
-          description={["A Call to Habits"]}
-          mobileTitle={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the",
-            "app and integrate it into their",
-            "daily routines.",
+          mobileTitle={["AI Assistant"]}
+          mobileDescription={[
+            "Yeah, an AI assistant—nothing",
+            "special these days. However,",
+            "this one uses a unique training",
+            "model based on merging several",
+            "other machine learning models.",
           ]}
-          mobileDescription={["A Call to Habits"]}
         />
         <OverviewCaseVideoSection src="/video/xJynanDYFmryappCCsF92K6Zp4.mp4" />
+        <InfoBlock
+          className="md:py-20!"
+          title={["A design system crafted for efficiency and scalability."]}
+          description={[
+            "A collection of top-tier systems and",
+            "components designed to ensure",
+            "long-term success and global",
+            "scalability.",
+          ]}
+          mobileTitle={["A design system crafted", "for efficiency and scalability."]}
+          mobileDescription={[
+            "A collection of top-tier systems",
+            "and components designed",
+            "to ensure long-term success",
+            "and global scalability.",
+          ]}
+        />
         <OverviewCaseVideoSection src="/video/EdiJoO5jSxPlVzZJJJcbCDtezic.mp4" />
         {/* <ScrollingTextVideoSection
           videoSrc="/video/qI5xtJcNFInMI16VcJte84bgto.mp4"
