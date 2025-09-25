@@ -109,8 +109,9 @@ export default function EmmaPage() {
           secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
         />
         <OverviewCaseTestimonialSection
-          firstText="I'm consistently amazed at the quality of"
+          firstText=""
           secondText={[
+            "I'm consistently amazed at the quality of",
             "work UXLAB produces. From day one, they",
             "just got our brand, created some stunning",
             "designs, and ensured the whole process",
