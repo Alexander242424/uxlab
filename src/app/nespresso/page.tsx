@@ -1,9 +1,11 @@
 import NespressoLogoMobile from "@/assets/Nespresso Logo mobile.svg";
 import NespressoLogo from "@/assets/Nespresso Logo.svg";
-import NespressoLogoScrollingText from "@/assets/image/OurCases/logo/Vector.svg";
 import NespressoCase3 from "@/assets/Nespresso/60GnuqXyzpsH5lC1nnnABRg5Yz8.avif";
+import HeroImage from "@/assets/Nespresso/Nespresso.jpg";
 import NespressoCase1 from "@/assets/Nespresso/nR82XOWawuWAy8GHMZeeFWJ3k0.avif";
 import NespressoCase2 from "@/assets/Nespresso/uF1xvIpJ073LZGEw4CqEsTGFg.avif";
+import OptionImage from "@/assets/image/OurCases/Option 22.jpg";
+import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
 import CasesHeroSections from "@/components/CasesHeroSections";
 import InfoBlock from "@/components/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
@@ -11,10 +13,6 @@ import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonial
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
-import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
-import ShowreelSection from "@/components/ShowreelSection";
-import HeroImage from "@/assets/Nespresso/Nespresso.jpg";
-import GuideImage from "@/assets/image/OurCases/Option 28.png";
 
 export default function NespressoPage() {
   return (
@@ -39,6 +37,7 @@ export default function NespressoPage() {
           className="!p-0"
           imageSrc={HeroImage}
           imageAlt="Emma Sleep case study"
+          isAnimated={false}
         />
         <OverviewCaseTestimonialSection
           firstText=""
@@ -72,15 +71,15 @@ export default function NespressoPage() {
           description={[
             "Not enough enhances brand",
             "engagement, poor user experience,",
-            "and just another website which is",
-            "selling coffee products",
+            "and just another website that",
+            "sells coffee products",
           ]}
           mobileTitle="Challenge"
           mobileDescription={[
             "Not enough enhances brand",
             "engagement, poor user experience,",
-            "and just another website which is",
-            "selling coffee products",
+            "and just another website that",
+            "sells coffee products",
           ]}
         />
         <InfoBlock
@@ -204,7 +203,7 @@ export default function NespressoPage() {
             "brand enthusiasts with a refined and",
             "exclusive assortment of member",
             "benefits and branded identity",
-            "merchandise?"
+            "merchandise?",
           ]}
           mobileTitle="Loyalty"
           mobileDescription={[
@@ -212,13 +211,13 @@ export default function NespressoPage() {
             "brand enthusiasts with a refined",
             "and exclusive assortment of",
             "member benefits and branded",
-            "identity merchandise?"
+            "identity merchandise?",
           ]}
         />
         <OverviewCaseVideoSection src="/video/nespressso/ozQmpxgVh0h8ImZ4FFkvEIsYTXs.mp4" />
         <OverviewCaseVideoTextSection
           videoSrc="/video/nespressso/yVkkXjiOC41qMKPX0rQeZ50wqh0.mp4"
-          firstText = {`To enhance the newly elevated digital experience, our team imagined the future of loyalty with Nespresso, drawing inspiration from the intimacy of close relationships and branding it as "The Fold."`}
+          firstText={`To enhance the newly elevated digital experience, our team imagined the future of loyalty with Nespresso, drawing inspiration from the intimacy of close relationships and branding it as "The Fold."`}
           secondText=""
         />
         <InfoBlock
@@ -235,7 +234,7 @@ export default function NespressoPage() {
             "fosters trust and recognition, while",
             "emotional connections built through",
             "personalized experiences enhance",
-            "brand loyalty."
+            "brand loyalty.",
           ]}
           mobileTitle="Branding"
           mobileDescription={[
@@ -250,7 +249,7 @@ export default function NespressoPage() {
             "fosters trust and recognition, while",
             "emotional connections built through",
             "personalized experiences enhance",
-            "brand loyalty."
+            "brand loyalty.",
           ]}
         />
         <OverviewCaseVideoSection
@@ -270,12 +269,12 @@ export default function NespressoPage() {
           poster="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
         /> */}
         <ScrollingTextCaseSection
-          videoSrc="/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4"
-          imageSrc={GuideImage}
+          videoSrc="/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4"
+          imageSrc={OptionImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<NespressoLogoScrollingText />}
-          link="/your-link"
+          logo={<EmmaLogoScrollingText />}
+          link="/emma"
         />
       </div>
     </div>

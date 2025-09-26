@@ -198,10 +198,10 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/#work"
+                        href="/#cases"
                         className={`relative group text-text-700 hoves-p2-reg`}
                       >
-                        Work
+                        Cases
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                       </Link>
                     </li>

@@ -87,7 +87,7 @@ export default function QuestionSections() {
             },
           }}
         >
-          <div className="mb-4 md:mb-28 hidden md:block">
+          <div className="mb-4 md:mb-[130px] hidden md:block">
             <SplitText
               text="Frequently Asked Question"
               className="hoves-p1-reg"
@@ -126,7 +126,8 @@ export default function QuestionSections() {
             <div className="flex flex-col gap-3.5">
               <h4 className="hoves-h4-med">Book an intro call</h4>
               <p className="hoves-p2-reg">
-                Time to get introduced and explore how Uxlab can help
+                Tell us about your project your timelime and budget. Expect a
+                message from us in 12 hours.
               </p>
             </div>
             <Button
