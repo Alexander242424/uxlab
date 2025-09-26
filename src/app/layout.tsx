@@ -7,6 +7,7 @@ import VideoModal from "@/components/VideoModal";
 import { CalModalProvider } from "@/context/CalModalContext";
 import CalModal from "@/components/CalModal";
 import AppWrapper from "@/components/AppWrapper";
+import { Metadata } from "next";
 
 const ttHoves = localFont({
   src: [
@@ -39,6 +40,36 @@ const systemMono = {
   variable: "--font-system-mono",
 };
 
+export const metadata: Metadata = {
+  title: "UXLAB | We Make Interfaces",
+  description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+  openGraph: {
+    locale: "en_US",
+    type: "website",
+    title: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    url: "https://uxlab.digital/",
+    siteName: "UXLAB",
+    images: [
+      {
+        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        width: 1200,
+        height: 630,
+        alt: "UXLAB - We Make Interfaces",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UXLAB | We Make Interfaces",
+    description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+  },
+  icons: {
+    icon: "/meta/64 x 66.jpg",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,40 +77,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <title>UXLAB | We Make Interfaces</title>
-      <meta
-        name="description"
-        content="UXLAB is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
-      />
-      <link rel="icon" href="/meta/64 x 66.jpg" />
-
-      {/* Open Graph */}
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:type" content="website" />
-      <meta
-        property="og:title"
-        content="UXLAB is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
-      />
-      <meta
-        property="og:description"
-        content="UXLAB is a UX &amp; UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates."
-      />
-      <meta property="og:url" content="https://uxlab.digital/" />
-      <meta property="og:site_name" content="UXLAB" />
-      <meta
-        property="og:image"
-        content="https://uxlab.digital/meta/thumbnail.jpg?v=2"
-      />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:image"
-        content="https://uxlab.digital/meta/thumbnail.jpg?v=2"
-      />
       <body
         className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
       >

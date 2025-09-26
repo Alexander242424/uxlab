@@ -14,6 +14,34 @@ import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import TextSection from "@/components/TextSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Emma Sleep Case Study | UXLAB",
+  description: "Explore how UXLAB transformed Emma Sleep's mobile app into a comprehensive educational hub with personalized tracking and AI assistance. Case study from 2022-2024.",
+  openGraph: {
+    title: "Emma Sleep Case Study | UXLAB",
+    description: "Explore how UXLAB transformed Emma Sleep's mobile app into a comprehensive educational hub with personalized tracking and AI assistance. Case study from 2022-2024.",
+    url: "https://uxlab.digital/emma",
+    siteName: "UXLAB",
+    images: [
+      {
+        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        width: 1200,
+        height: 630,
+        alt: "Emma Sleep Case Study - UXLAB",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emma Sleep Case Study | UXLAB",
+    description: "Explore how UXLAB transformed Emma Sleep's mobile app into a comprehensive educational hub with personalized tracking and AI assistance. Case study from 2022-2024.",
+    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+  },
+};
 
 export default function EmmaPage() {
   return (
