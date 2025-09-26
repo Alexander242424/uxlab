@@ -16,11 +16,11 @@ import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nespresso Case Study | UXLAB",
-  description: "Discover how UXLAB redesigned Nespresso's digital experience with seamless coffee e-commerce. Explore our design strategy, UX improvements, and branding work from 2022-2023.",
+  title: "Next-level e-commerce experience for Nespresso",
+  description: "Explore how UXLAB redesigned Nespresso's online store, boosting e-commerce conversion rate with smooth UX, strategic design, and stronger branding.",
   openGraph: {
-    title: "Nespresso Case Study | UXLAB",
-    description: "Discover how UXLAB redesigned Nespresso's digital experience with seamless coffee e-commerce. Explore our design strategy, UX improvements, and branding work from 2022-2023.",
+    title: "Next-level e-commerce experience for Nespresso",
+    description: "Explore how UXLAB redesigned Nespresso's online store, boosting e-commerce conversion rate with smooth UX, strategic design, and stronger branding.",
     url: "https://uxlab.digital/nespresso",
     siteName: "UXLAB",
     images: [
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nespresso Case Study | UXLAB",
-    description: "Discover how UXLAB redesigned Nespresso's digital experience with seamless coffee e-commerce. Explore our design strategy, UX improvements, and branding work from 2022-2023.",
+    title: "Next-level e-commerce experience for Nespresso",
+    description: "Explore how UXLAB redesigned Nespresso’s online store, boosting e-commerce conversion rate with smooth UX, strategic design, and stronger branding..",
     images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
   },
 };

@@ -17,11 +17,11 @@ import TextSection from "@/components/TextSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Emma Sleep Case Study | UXLAB",
-  description: "Explore how UXLAB transformed Emma Sleep's mobile app into a comprehensive educational hub with personalized tracking and AI assistance. Case study from 2022-2024.",
+  title: "AI Mobile App Assistant Design by UXLAB",
+  description: "Discover how UXLAB revamped Emma Sleep's mobile app with AI assistance and personalized learning and reached Today's Picks in the App Store.",
   openGraph: {
-    title: "Emma Sleep Case Study | UXLAB",
-    description: "Explore how UXLAB transformed Emma Sleep's mobile app into a comprehensive educational hub with personalized tracking and AI assistance. Case study from 2022-2024.",
+    title: "AI Mobile App Assistant Design by UXLAB",
+    description: "Discover how UXLAB revamped Emma Sleep's mobile app with AI assistance and personalized learning and reached Today's Picks in the App Store.",
     url: "https://uxlab.digital/emma",
     siteName: "UXLAB",
     images: [
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emma Sleep Case Study | UXLAB",
-    description: "Explore how UXLAB transformed Emma Sleep's mobile app into a comprehensive educational hub with personalized tracking and AI assistance. Case study from 2022-2024.",
+    title: "AI Mobile App Assistant Design by UXLAB",
+    description: "Discover how UXLAB revamped Emma Sleep's mobile app with AI assistance and personalized learning and reached Today's Picks in the App Store.",
     images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
   },
 };
