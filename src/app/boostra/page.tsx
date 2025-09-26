@@ -24,10 +24,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "From zero-to-one:  AI SaaS Tool for better conversions",
-  description: "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
+  description:
+    "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
   openGraph: {
     title: "From zero-to-one:  AI SaaS Tool for better conversions",
-    description: "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
+    description:
+      "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
     url: "https://uxlab.digital/boostra",
     siteName: "UXLAB",
     images: [
@@ -44,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "From zero-to-one:  AI SaaS Tool for better conversions",
-    description: "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
+    description:
+      "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
     images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
   },
 };
@@ -56,10 +59,15 @@ export default function NextCasesPage() {
         <CasesHeroSections
           logo={<BoostraLogo />}
           logoMobile={<BoostraLogoMobile />}
-          text={["Innovating Personalized", "Sleep Worldwide"]}
+          text={[
+            "From MVP",
+            "to Growth Platform → +47%",
+            "conversion uplift & powerful",
+            "referral growth.",
+          ]}
           companyName="Boostra"
           year="2022 - 2024"
-          deliverables="Guidelines and Portals · Digital Asset Management · Templates"
+          deliverables="UX Strategy · Wireframes · Data-Driven Design"
         />
         {/* <div className="w-full">
           <ShowreelSection
@@ -76,20 +84,25 @@ export default function NextCasesPage() {
         />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
-          firstText="By fostering healthy sleep habits,"
+          firstText="Starting from our MVP launch and initial"
           secondText={[
-            "Emma Sleep builds trust, encouraging them",
-            "to download the app and integrate it into",
-            "their daily routines.",
+            "user base, we partnered with GetBoostra to",
+            "scale their SaaS platform beyond MVP,",
+            "driving conversion growth at key touchpoints",
+            "and crafting a modular growth system.",
           ]}
           mobileText={[
-            "By fostering healthy",
-            "sleep habits,",
-            "Emma Sleep builds trust,",
-            "encouraging them",
-            "to download the app",
-            "and integrate it into their",
-            "daily routines.",
+            "Starting from our MVP",
+            "launch and initial",
+            "user base, we partnered",
+            "with GetBoostra to scale",
+            "their SaaS platform",
+            "beyond MVP,",
+            "driving conversion",
+            "growth at key",
+            "touchpoints and crafting",
+            "a modular growth",
+            "growth system.",
           ]}
         />
         <CasesOutcome />
@@ -103,45 +116,56 @@ export default function NextCasesPage() {
         />
         <InfoBlock
           className="md:pt-[120px]! md:pb-20!"
-          title={[
-            "Challenge: Low daily engagement and",
-            "limited value for app users",
-          ]}
+          title={["Challenge: Early traction,", "but friction blocked growth"]}
           description={[
-            "Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing",
-            "experience offered limited value beyond basic sleep tracking.",
+            "Boostra's MVP attracted interest, but raw",
+            "UX limited its potential. Users were",
+            "dropping off after registration, payments",
+            "stalled at checkout, and there was no",
+            "referral loop or systematic experimentation",
+            "to drive engagement.",
           ]}
           mobileTitle={[
-            "Challenge: Low daily engagement and",
-            "limited value for app users",
+            "Challenge: Early traction,",
+            "but friction blocked growth",
           ]}
           mobileDescription={[
-            "Emma Sleep wanted users to engage with its",
-            "mobile app on a daily basis, but the existing",
-            "experience offered limited value",
-            "beyond basic sleep tracking.",
+            "Boostra's MVP attracted interest,",
+            "but raw UX limited its potential.",
+            "Users were dropping off after",
+            "registration, payments stalled",
+            "at checkout, and there was",
+            "no referral loop or systematic",
+            "experimentation to",
+            "drive engagement.",
           ]}
         />
         <InfoBlock
           className="md:pt-20! md:pb-[120px]!"
-          title={[
-            "Solution: Transforming the app",
-            "into a personalized educational hub",
-          ]}
+          title={["Solution: Streamlined flows and", "growth-driven design"]}
           description={[
-            "To increase daily engagement and provide meaningful value, Emma Sleep adopted a",
-            "product-focused approach, redesigning the app to offer",
-            "a comprehensive educational hub. ",
+            "By redesigning onboarding, we reduced",
+            "drop-offs by 20% and boosted payment",
+            "completion by 15% through checkout",
+            "optimization. A referral program drove",
+            "25% of new users organically, while",
+            "ongoing A/B testing of CTAs, copy,",
+            "and UI lifted conversions by 10%.",
           ]}
           mobileTitle={[
             "Solution: Transforming the app",
             "into a personalized educational hub",
           ]}
           mobileDescription={[
-            "To increase daily engagement and provide",
-            "meaningful value, Emma Sleep adopted a",
-            "product-focused approach, redesigning the",
-            "app to offer a comprehensive educational hub. ",
+            "By redesigning onboarding,",
+            "we reduced drop-offs by 20%",
+            "and boosted payment completion",
+            "by 15% through checkout",
+            "optimization. A referral program",
+            "drove 25% of new users organically,",
+            "while ongoing A/B testing of CTAs,",
+            "copy, and UI lifted conversions",
+            "by 10%.",
           ]}
         />
         <OverviewCaseVideoSection
@@ -151,10 +175,10 @@ export default function NextCasesPage() {
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage1}
           imageAlt="Emma Sleep case study"
-          firstText="We used playful colours, engaging illustrations, and micro-interactions to weave the brand through the experience and draw visitors in."
-          secondText="The new site feels multi-dimensional — much like the mind."
+          firstText="Most founders don't realize how much revenue slips through the cracks until Boostra shows them."
+          secondText="Imagine having a CRO expert inside your product 24/7, spotting drop-offs, learning from real user behavior, and fixing friction before it costs you. Boostra doesn't wait weeks for results; it highlights instant solutions that lift conversions by 35-47%."
         />
-        <OverviewCaseTestimonialSection
+        {/* <OverviewCaseTestimonialSection
           firstText="I'm consistently amazed at the quality of"
           secondText={[
             "work Alex produces. From day one Alex just,",
@@ -173,29 +197,28 @@ export default function NextCasesPage() {
             "process ran smoothly.",
           ]}
           authorText="Felix Focken, CEO (Emma Sleep)"
-        />
+        /> */}
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "To increase daily engagement and provide ",
-            "meaningful value, Emma Sleep adopted a",
-            "product-focused approach, redesigning the",
-            "app to offer a comprehensive",
-            "educational hub.",
-          ]}
+          title={["Solution: Turning users into growth partners"]}
           description={[
-            "Solution: Transforming the app into a personalized educational hub",
+            "Boostra introduced a simple “invite and earn”",
+            "feature that encouraged users to share the",
+            "product with friends. What started as a",
+            "small reward mechanic quickly grew into",
+            "a steady stream of new users — all without",
+            "extra ad spend.",
           ]}
-          mobileTitle={[
-            "To increase daily engagement and",
-            "provide meaningful value, Emma Sleep",
-            "adopted a product-focused approach,",
-            "redesigning the app to offer a",
-            "comprehensive educational hub.",
-          ]}
+          mobileTitle={["Solution: Turning users", "into growth partners"]}
           mobileDescription={[
-            "Solution: Transforming the app into a",
-            "personalized educational hub",
+            "Boostra introduced a simple",
+            "“invite and earn” feature that",
+            "encouraged users to share the",
+            "product with friends.",
+            "What started as a small reward",
+            "mechanic quickly grew into",
+            "a steady stream of new users — all",
+            "without extra ad spend.",
           ]}
         />
         <OverviewCaseVideoSection
@@ -204,46 +227,46 @@ export default function NextCasesPage() {
         />
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the app and",
-            "integrate it into their daily routines.",
+          title={["Solution: Streamlined checkout flow"]}
+          description={[
+            "Through UX refinements in the checkout",
+            "process, Boostra unlocked higher payment",
+            "completions, proving that smoother flows",
+            "directly drive bottom-line growth.",
           ]}
-          description={["A Call to Habits"]}
-          mobileTitle={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the",
-            "app and integrate it into their",
-            "daily routines.",
+          mobileTitle={["Solution: Streamlined checkout flow"]}
+          mobileDescription={[
+            "Through UX refinements in",
+            "the checkout process, Boostra",
+            "unlocked higher payment",
+            "completions, proving that",
+            "smoother flows directly drive",
+            "bottom-line growth.",
           ]}
-          mobileDescription={["A Call to Habits"]}
         />
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage2}
           imageAlt="Emma Sleep case study"
-          firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can't I sleep? How do I find more energy after sleep?"
-          secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
+          firstText="A $1 trial was launched to lower the entry barrier, with the next package priced at $59 for five page conversion reviews. It allows users to experience meaningful results upfront, proving the ROI from day one."
+          secondText=""
           videoClassName="md:min-w-2/3 md:max-w-2/3 md:pr-8"
         />
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the app and",
-            "integrate it into their daily routines.",
+          title={["A/B testing implementation"]}
+          description={[
+            "As part of this product strategy,",
+            "the team established a continuous",
+            "A/B testing cycle, cutting the",
+            "time-to-learn in half.",
           ]}
-          description={["A Call to Habits"]}
-          mobileTitle={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the",
-            "app and integrate it into their",
-            "daily routines.",
+          mobileTitle={["A/B testing implementation"]}
+          mobileDescription={[
+            "As part of this product strategy,",
+            "the team established a continuous",
+            "A/B testing cycle, cutting the",
+            "time-to-learn in half.",
           ]}
-          mobileDescription={["A Call to Habits"]}
         />
         <OverviewCaseVideoSection
           imageSrc={BigImage3}
@@ -251,46 +274,54 @@ export default function NextCasesPage() {
         />
         <InfoBlock
           className="md:py-20!"
-          title={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the app and",
-            "integrate it into their daily routines.",
+          title={["Quick Wins Feature"]}
+          description={[
+            "Through multiple iterations of our",
+            "AI CRO SaaS, we discovered that",
+            "customers respond best when they",
+            "see results immediately. That's",
+            "why we placed Quick Wins at the",
+            "top - a prioritized list of high-impact",
+            "fixes that deliver measurable improvements",
+            "from day one. By surfacing clear,",
+            "actionable changes first, users build",
+            "trust in the product, unlock fast ROI,",
+            "and stay engaged for the long run.",
           ]}
-          description={["A Call to Habits"]}
-          mobileTitle={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the",
-            "app and integrate it into their",
-            "daily routines.",
+          mobileTitle={["Quick Wins Feature"]}
+          mobileDescription={[
+            "Through multiple iterations",
+            "of our AI CRO SaaS, we discovered",
+            "that customers respond best",
+            "when they see results immediately.",
+            "That's why we placed Quick Wins",
+            "at the top - a prioritized list",
+            "of high-impact fixes that deliver",
+            "measurable improvements from",
+            "day one. By surfacing clear,",
+            "actionable changes first, users",
+            "build trust in the product, unlock",
+            "fast ROI, and stay engaged for the",
+            "long run.",
           ]}
-          mobileDescription={["A Call to Habits"]}
         />
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage2}
           imageAlt="Emma Sleep case study"
-          firstText="We used playful colours, engaging illustrations, and micro-interactions to weave the brand through the experience and draw visitors in."
-          secondText="The new site feels multi-dimensional — much like the mind."
+          firstText="Boostra goes beyond CRO by analyzing accessibility at levels A, AA, and AAA. The result: a product that removes friction, expands your market, and builds trust with every user."
+          secondText=""
           videoClassName="md:min-w-2/3 md:max-w-2/3 md:pr-8"
         />
         <InfoBlock
           className="md:py-20!"
           title={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the app and",
-            "integrate it into their daily routines.",
+            "A Call to Habits",
           ]}
-          description={["A Call to Habits"]}
+          description={["Want similar results?", "Book a Free Product Audit"]}
           mobileTitle={[
-            "By fostering healthy sleep habits, ",
-            "Emma Sleep builds trust with users,",
-            " encouraging them to download the",
-            "app and integrate it into their",
-            "daily routines.",
+            "A Call to Habits",
           ]}
-          mobileDescription={["A Call to Habits"]}
+          mobileDescription={["Want similar results?", "Book a Free Product Audit"]}
         />
         <OverviewCaseVideoSection
           imageSrc={BigImage4}
