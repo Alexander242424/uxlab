@@ -17,29 +17,39 @@ import { useCalModal } from "@/context/CalModalContext";
 const faqData = [
   {
     id: "item-1",
-    question: "How will UXLab learn about my business?",
+    question: "What sets UXLAB apart from the rest of the design agencies?",
     answer:
-      "We combine startup speed with proven efficiency. Our clients raised over $600M+ in 2024 alone, powered in part by our design execution.",
+      "In a crowded market of UX and branding agencies, UXLAB stands out by forging trusted, long-term partnerships where our client's success drives our own. Combining cross-disciplinary design and product expertise, we deliver scalable, future-proof experiences that strengthen brands and drive measurable growth.",
   },
   {
     id: "item-2",
-    question: "What do you require before starting a project?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    question: "What makes a client a great fit for UXLAB?",
+    answer:
+      "We partner with clients who understand that brand and design are more than aesthetics - they're powerful drivers of business growth. Our ideal partners embrace collaboration, prioritize leadership alignment, and welcome strategic thinking. By actively engaging in the process and supporting our structured approach, they allow us to transform ideas into meaningful, measurable outcomes that deliver lasting impact.",
   },
   {
     id: "item-3",
     question: "How much input will I have during the process?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    answer:
+      "By involving clients throughout the process, we make sure every decision reflects your vision. Continuous feedback allows us to fine-tune solutions that truly resonate with your goals.",
   },
   {
     id: "item-4",
-    question: "Can you assist in redesigning B2B/Enterprise apps?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    question: "What size companies does UXLAB work with?",
+    answer:
+      "We partner with B2B companies worldwide—from early-stage startups gearing up for funding to billion-dollar enterprises preparing for IPOs, including private equity-backed tech companies managing rapid growth through acquisitions. No matter your size or stage, we believe a strong, strategic brand drives measurable business impact, and we’re ready to help you achieve it.",
   },
   {
     id: "item-5",
+    question: "How much does it cost to hire you for the design project?",
+    answer:
+      "At UXLAB, we prioritize flexibility and tailored support for our partners. We offer three engagement models - time & materials, fixed fee, and retainer - and work closely with clients to recommend the best fit based on budget and project needs. After discovery conversations, we provide a customized proposal with timeline and estimated costs. Our goal is to deliver solutions that align with both your objectives and financial constraints, whether through a full-service approach or a tailored, strategic engagement.",
+  },
+  {
+    id: "item-6",
     question: "What if I don't like the initial concepts?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    answer:
+      "We follow a collaborative process with continuous feedback loops to keep every project aligned with your vision. When initial concepts don’t hit the mark, we actively discuss your input and refine our approach to deliver a successful, results-driven outcome.",
   },
 ];
 
@@ -87,7 +97,7 @@ export default function QuestionSections() {
             },
           }}
         >
-          <div className="mb-4 md:mb-[130px] hidden md:block">
+          <div className="mb-4 md:mb-[175px] hidden md:block">
             <SplitText
               text="Frequently Asked Question"
               className="hoves-p1-reg"

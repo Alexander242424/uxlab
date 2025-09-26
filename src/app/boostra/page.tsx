@@ -23,11 +23,11 @@ import TextSection from "@/components/TextSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Boostra Case Study | UXLAB",
-  description: "Discover how UXLAB helped Boostra innovate personalized sleep solutions worldwide. Explore our design process, deliverables, and outcomes from 2022-2024.",
+  title: "From zero-to-one:  AI SaaS Tool for better conversions",
+  description: "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
   openGraph: {
-    title: "Boostra Case Study | UXLAB",
-    description: "Discover how UXLAB helped Boostra innovate personalized sleep solutions worldwide. Explore our design process, deliverables, and outcomes from 2022-2024.",
+    title: "From zero-to-one:  AI SaaS Tool for better conversions",
+    description: "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
     url: "https://uxlab.digital/boostra",
     siteName: "UXLAB",
     images: [
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Boostra Case Study | UXLAB",
-    description: "Discover how UXLAB helped Boostra innovate personalized sleep solutions worldwide. Explore our design process, deliverables, and outcomes from 2022-2024.",
+    title: "From zero-to-one:  AI SaaS Tool for better conversions",
+    description: "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
     images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
   },
 };
