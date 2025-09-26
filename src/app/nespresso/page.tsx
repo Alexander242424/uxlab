@@ -13,6 +13,34 @@ import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonial
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nespresso Case Study | UXLAB",
+  description: "Discover how UXLAB redesigned Nespresso's digital experience with seamless coffee e-commerce. Explore our design strategy, UX improvements, and branding work from 2022-2023.",
+  openGraph: {
+    title: "Nespresso Case Study | UXLAB",
+    description: "Discover how UXLAB redesigned Nespresso's digital experience with seamless coffee e-commerce. Explore our design strategy, UX improvements, and branding work from 2022-2023.",
+    url: "https://uxlab.digital/nespresso",
+    siteName: "UXLAB",
+    images: [
+      {
+        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        width: 1200,
+        height: 630,
+        alt: "Nespresso Case Study - UXLAB",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nespresso Case Study | UXLAB",
+    description: "Discover how UXLAB redesigned Nespresso's digital experience with seamless coffee e-commerce. Explore our design strategy, UX improvements, and branding work from 2022-2023.",
+    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+  },
+};
 
 export default function NespressoPage() {
   return (

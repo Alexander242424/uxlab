@@ -20,6 +20,34 @@ import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import TextSection from "@/components/TextSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Boostra Case Study | UXLAB",
+  description: "Discover how UXLAB helped Boostra innovate personalized sleep solutions worldwide. Explore our design process, deliverables, and outcomes from 2022-2024.",
+  openGraph: {
+    title: "Boostra Case Study | UXLAB",
+    description: "Discover how UXLAB helped Boostra innovate personalized sleep solutions worldwide. Explore our design process, deliverables, and outcomes from 2022-2024.",
+    url: "https://uxlab.digital/boostra",
+    siteName: "UXLAB",
+    images: [
+      {
+        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        width: 1200,
+        height: 630,
+        alt: "Boostra Case Study - UXLAB",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Boostra Case Study | UXLAB",
+    description: "Discover how UXLAB helped Boostra innovate personalized sleep solutions worldwide. Explore our design process, deliverables, and outcomes from 2022-2024.",
+    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+  },
+};
 
 export default function NextCasesPage() {
   return (
