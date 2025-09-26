@@ -86,7 +86,7 @@ export default function OurCases() {
       // Обчислюємо зміщення підпису на основі позиції миші
       if (isHovering && !isMobile && hoveredIndex !== null) {
         // Знаходимо поточний елемент для обчислення відносної позиції (тільки в секції OurCases)
-        const currentImage = document.querySelector(`#work .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement;
+        const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement;
 
         if (currentImage) {
           const imageRect = currentImage.getBoundingClientRect();
@@ -144,7 +144,7 @@ export default function OurCases() {
     const cursorHeight = 264;
 
     // Знаходимо елемент зображення для обмеження курсора (тільки в секції OurCases)
-    const currentImage = document.querySelector(`#work .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement;
+    const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement;
 
     if (!currentImage) {
       // Fallback до вікна браузера якщо зображення не знайдено
@@ -260,7 +260,7 @@ export default function OurCases() {
 
   return (
     <div
-      id="work"
+      id="cases"
       className="flex flex-col gap-8 my-[96px] md:my-[160px] mx-4 md:mx-10 relative"
     >
       {isHovering &&

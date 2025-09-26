@@ -1,20 +1,19 @@
+import HeroImage from "@/assets/Emma/Emma.jpg";
+import EmmaCase1 from "@/assets/Emma/XkNQu7DYidbcrVSHQNflhh0MA.avif";
+import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
+import EmmaLogo from "@/assets/emma-logo.svg";
+import BoostraSmallImage from "@/assets/image/OurCases/4.png";
+import BoostraImage from "@/assets/image/OurCases/Option23.jpg";
+import BoostraLogoScrollingText from "@/assets/image/OurCases/logo/logo-main.svg";
 import CasesHeroSections from "@/components/CasesHeroSections";
 import CasesOutcome from "@/components/CasesOutcome";
-import ShowreelSection from "@/components/ShowreelSection";
-import TextSection from "@/components/TextSection";
 import InfoBlock from "@/components/InfoBlock";
-import ScrollingTextVideoSection from "@/components/ScrollingTextVideoSection";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
+import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
-import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import HeroImage from "@/assets/Emma/Emma.jpg";
-import EmmaLogo from "@/assets/emma-logo.svg";
-import EmmaLogoMobile from "@/assets/emma-logo-mobile.svg";
-import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
-import EmmaCase1 from "@/assets/Emma/XkNQu7DYidbcrVSHQNflhh0MA.avif";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
-import OptionImage from "@/assets/image/OurCases/Option 22.jpg";
+import TextSection from "@/components/TextSection";
 
 export default function EmmaPage() {
   return (
@@ -39,6 +38,7 @@ export default function EmmaPage() {
           className="!p-0"
           imageSrc={HeroImage}
           imageAlt="Emma Sleep case study"
+          isAnimated={false}
         />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
@@ -214,12 +214,12 @@ export default function EmmaPage() {
           poster="/E4qit3QgMPs7XD5VTnapxch4aQ.avif"
         /> */}
         <ScrollingTextCaseSection
-          videoSrc="/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4"
-          imageSrc={OptionImage}
+          imageSrc={BoostraImage}
+          smallImageSrc={BoostraSmallImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<EmmaLogoScrollingText />}
-          link="/your-link"
+          logo={<BoostraLogoScrollingText />}
+          link="/boostra"
         />
       </div>
     </div>

@@ -159,22 +159,22 @@ export default function Header() {
               
               {pathname === "/" ? (
                 <button
-                  onClick={() => scrollToSection("work")}
+                  onClick={() => scrollToSection("cases")}
                   className={`relative group header-text cursor-pointer ${
                     activeSection === "work" ? "header-text-active" : ""
                   }`}
                 >
-                  Work
+                  Cases
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </button>
               ) : (
                 <Link
-                  href="/#work"
+                  href="/#cases"
                   className={`relative group header-text cursor-pointer ${
                     pathname === "/" && activeSection === "work" ? "header-text-active" : ""
                   }`}
                 >
-                  Work
+                  Cases
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </Link>
               )}

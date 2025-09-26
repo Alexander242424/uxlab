@@ -1,28 +1,25 @@
-
-import CasesHeroSections from "@/components/CasesHeroSections";
-import CasesOutcome from "@/components/CasesOutcome";
-import ShowreelSection from "@/components/ShowreelSection";
-import TextSection from "@/components/TextSection";
-import InfoBlock from "@/components/InfoBlock";
-import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
-import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
-import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
-import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import BoostraLogo from "@/assets/boostra-logo.svg";
-import BoostraLogoScrollingText from "@/assets/image/OurCases/logo/logo-main.svg";
-import BoostraLogoMobile from "@/assets/boostra-logo-mobile.svg";
-import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import HeroImage from "@/assets/Boostra/Boostra.jpg";
-import FirstBlockImage1 from "@/assets/Boostra/firstblockimage1.webp";
-import FirstBlockImage2 from "@/assets/Boostra/firstblockimage2.webp";
 import BigImage1 from "@/assets/Boostra/bigImage1.webp";
-import SmallImage1 from "@/assets/Boostra/smallImage1.webp";
 import BigImage2 from "@/assets/Boostra/bigImage2.webp";
-import SmallImage2 from "@/assets/Boostra/smallImage2.webp";
 import BigImage3 from "@/assets/Boostra/bigImage3.webp";
 import BigImage4 from "@/assets/Boostra/bigImage4.webp";
-import BoostraImage from "@/assets/image/OurCases/Option23.jpg";
-import BoostraSmallImage from "@/assets/image/OurCases/4.png";
+import FirstBlockImage1 from "@/assets/Boostra/firstblockimage1.webp";
+import FirstBlockImage2 from "@/assets/Boostra/firstblockimage2.webp";
+import SmallImage1 from "@/assets/Boostra/smallImage1.webp";
+import SmallImage2 from "@/assets/Boostra/smallImage2.webp";
+import BoostraLogoMobile from "@/assets/boostra-logo-mobile.svg";
+import BoostraLogo from "@/assets/boostra-logo.svg";
+import GuideImage from "@/assets/image/OurCases/Option 28.png";
+import NespressoLogoScrollingText from "@/assets/image/OurCases/logo/Vector.svg";
+import CasesHeroSections from "@/components/CasesHeroSections";
+import CasesOutcome from "@/components/CasesOutcome";
+import InfoBlock from "@/components/InfoBlock";
+import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
+import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
+import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
+import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
+import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
+import TextSection from "@/components/TextSection";
 
 export default function NextCasesPage() {
   return (
@@ -43,7 +40,12 @@ export default function NextCasesPage() {
             desktopSrc="/video/reel-short.mp4"
           />
         </div> */}
-        <OverviewCaseVideoSection className="!p-0" imageSrc={HeroImage} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          className="!p-0"
+          imageSrc={HeroImage}
+          imageAlt="Emma Sleep case study"
+          isAnimated={false}
+        />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
           firstText="By fostering healthy sleep habits,"
@@ -114,7 +116,10 @@ export default function NextCasesPage() {
             "app to offer a comprehensive educational hub. ",
           ]}
         />
-        <OverviewCaseVideoSection imageSrc={BigImage1} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          imageSrc={BigImage1}
+          imageAlt="Emma Sleep case study"
+        />
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage1}
           imageAlt="Emma Sleep case study"
@@ -165,7 +170,10 @@ export default function NextCasesPage() {
             "personalized educational hub",
           ]}
         />
-        <OverviewCaseVideoSection imageSrc={BigImage2} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          imageSrc={BigImage2}
+          imageAlt="Emma Sleep case study"
+        />
         <InfoBlock
           className="md:py-20!"
           title={[
@@ -209,7 +217,10 @@ export default function NextCasesPage() {
           ]}
           mobileDescription={["A Call to Habits"]}
         />
-        <OverviewCaseVideoSection imageSrc={BigImage3} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          imageSrc={BigImage3}
+          imageAlt="Emma Sleep case study"
+        />
         <InfoBlock
           className="md:py-20!"
           title={[
@@ -253,14 +264,17 @@ export default function NextCasesPage() {
           ]}
           mobileDescription={["A Call to Habits"]}
         />
-        <OverviewCaseVideoSection imageSrc={BigImage4} imageAlt="Emma Sleep case study" />
+        <OverviewCaseVideoSection
+          imageSrc={BigImage4}
+          imageAlt="Emma Sleep case study"
+        />
         <ScrollingTextCaseSection
-          imageSrc={BoostraImage}
-          smallImageSrc={BoostraSmallImage}
+          videoSrc="/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4"
+          imageSrc={GuideImage}
           imageAlt="Case study description"
           videoTitle="Video title for cursor"
-          logo={<BoostraLogoScrollingText />}
-          link="/your-link"
+          logo={<NespressoLogoScrollingText />}
+          link="/nespresso"
         />
       </div>
     </div>

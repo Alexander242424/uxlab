@@ -3,15 +3,13 @@ import { motion } from "framer-motion";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import SplitText from "./SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
-import Image1 from "@/assets/image/OurCases/image/Shapphire 5.png";
 import { useCalModal } from "@/context/CalModalContext";
+import VideoPlayer from "./VideoPlayer";
 
 interface ServiceItem {
   title: string;
   subtitle: string;
-  imageSrc: string | StaticImageData;
+  videoSrc: string;
   time: string;
 }
 
@@ -20,28 +18,28 @@ const services: ServiceItem[] = [
     title: "Ship new products from zero-to-one",
     subtitle:
       "When you need to design MVP from the ground up with a high-powered product team.",
-    imageSrc: Image1,
+    videoSrc: "/ServiceItemVideo/landnq.mp4",
     time: "4 - 8 weeks",
   },
   {
     title: "Set the bar for category defining design",
     subtitle:
       "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
-    imageSrc: Image1,
+    videoSrc: "/ServiceItemVideo/pinance.mp4",
     time: "8-12 weeks",
   },
   {
     title: "Day-to-day exceptional design support",
     subtitle:
       "Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
-    imageSrc: Image1,
+    videoSrc: "/ServiceItemVideo/paydesk.mp4",
     time: "Starting from 4 weeks",
   },
   {
     title: "Conversion Rate Optimization (CRO)",
     subtitle:
       "We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
-    imageSrc: Image1,
+    videoSrc: "/ServiceItemVideo/seviceBell.mp4",
     time: "4 - 12 weeks",
   },
 ];
@@ -250,12 +248,13 @@ export default function ServiceItems() {
                       {!isMobile && (
                         <div className="flex items-end justify-center">
                           <div className="group-hover:max-h-[200px] group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out">
-                            <Image
+                            {/* <Image
                               src={service.imageSrc}
                               alt={service.title}
                               width={270}
                               height={180}
-                            />
+                            /> */}
+                            <VideoPlayer src={service.videoSrc} className="w-full h-full max-h-[180px] max-w-[270px] object-cover" />
                           </div>
                         </div>
                       )}

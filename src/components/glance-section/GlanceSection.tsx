@@ -63,7 +63,7 @@ export default function GlanceSection() {
         <div className="flex justify-between mx-4 md:mx-10 md:py-8 py-4 hoves-p1-reg">
           <div>
             <SplitText
-              text="UxLab at a Glance."
+              text="UXLAB at a Glance."
               className="hoves-p1-reg text-black"
               splitType="lines"
               delay={100}
