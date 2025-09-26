@@ -21,13 +21,11 @@ import TextSection from "@/components/TextSection";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 
 const slides = [
-  // { icon: <BMWLogo /> },
   { icon: <ForbesLogo /> },
   { icon: <MaskGroup1 /> },
   { icon: <MaskGroup2 /> },
   { icon: <MaskGroup3 /> },
   { icon: <MaskGroup4 /> },
-  // { icon: <MaskGroup /> },
   { icon: <CalendlyLogo /> },
   { icon: <UserwayLogo /> },
 ];

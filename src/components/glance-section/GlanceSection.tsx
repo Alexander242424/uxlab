@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import SplitText from "../SplitText";
 import EmblaCarousel from "../EmblaCarousel";
@@ -8,7 +7,6 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import VideoCard from "./VideoCard";
 
 // Logos
-import ForbesAvatar from "@/assets/Glance/Ellipse 3316.svg";
 import CalendlyLogo from "@/assets/Glance/Logo for cases/calendly.svg";
 import ArhiveLogo from "@/assets/Glance/Logo for cases/archive.svg";
 import EasyjetLogo from "@/assets/Glance/Logo for cases/easyjet.svg";
@@ -29,6 +27,12 @@ import RoyalQueenImage from "../../assets/Glance/Images/Royal queen seeds.jpg";
 import ScheiderImage from "../../assets/Glance/Images/Scheider.jpg";
 import ToyotaImage from "../../assets/Glance/Images/Toyota.jpg";
 import WellowImage from "../../assets/Glance/Images/Wellow.jpg";
+
+//Avatars
+import PaulBenigeriAvatar from "@/assets/Glance/Avatars/Paul Benigeri.svg";
+import GerhardMarringerAvatar from "@/assets/Glance/Avatars/Gerhard Marringer.svg";
+import SteliosHajiIoannouAvatar from "@/assets/Glance/Avatars/Stelios Haji-Ioannou.svg";
+import NickAveAvatar from "@/assets/Glance/Avatars/Nick Ave.svg";
 
 const slides = [
   {
@@ -68,7 +72,7 @@ const slides = [
         descriptionText="Next-level experience for booking boutique apartments online."
         logo={<NumaLogo />}
         withAuthor={false}
-        videoSrc={"/glance-section-video/numa.mp4"}
+        // videoSrc={"/glance-section-video/numa.mp4"}
       />
     ),
   },
@@ -82,7 +86,6 @@ const slides = [
         descriptionText="They helped us to launch and scal 4 new products from zero-to-one and reach 50k paid users in less than 12 months."
         authorText="Gerhard Marringer"
         logo={<ForbesLogo />}
-        avatar={<ForbesAvatar />}
         isForbes={true}
         videoSrc={"/glance-section-video/forbes.mp4"}
       />
@@ -98,7 +101,7 @@ const slides = [
         descriptionText="They helped us revolutionize our creator tracking tools, particularly by launching the Social Flirting product within our Archive ecosystem. Before UXLAB, we had 1 client and after their deep dive, we secured 10 long-term clients in less than 3 months."
         authorText="Paul Benigeri"
         logo={<ArhiveLogo />}
-        avatar={<ForbesAvatar />}
+        avatar={<PaulBenigeriAvatar />}
       />
     ),
   },
@@ -112,7 +115,7 @@ const slides = [
         descriptionText="UXLAB helped us launch 3 new ecommerce apps that attracted 1m new MAU."
         authorText="Stelios Haji-Ioannou"
         logo={<EasyjetLogo />}
-        avatar={<ForbesAvatar />}
+        avatar={<SteliosHajiIoannouAvatar />}
         videoSrc={"/glance-section-video/easyjet.mp4"}
       />
     ),
@@ -127,7 +130,7 @@ const slides = [
         descriptionText="Launched a new brand from Zero-To-One in just 3 months with exceptional design partnership. They helped us to convert website visitors to customers within 2 hours of soft website launch."
         authorText="Gerhard Marringer"
         logo={<WellowLogo />}
-        avatar={<ForbesAvatar />}
+        avatar={<GerhardMarringerAvatar />}
         videoSrc={"/glance-section-video/wellow.mp4"}
       />
     ),
@@ -142,7 +145,7 @@ const slides = [
         descriptionText="UXLAB increased the conversion score from 3.2% to 4% while increasing revenue by 17.8%. We value our day-to-day cooperation with them like partners."
         authorText="Nick Ave"
         logo={<RoyalQueenLogo />}
-        avatar={<ForbesAvatar />}
+        avatar={<NickAveAvatar />}
       />
     ),
   },
@@ -156,7 +159,7 @@ const slides = [
         descriptionText="The new Vehicle Management System (VLS) boosted our revenue by 9% and increased car shipment speed by 30%."
         authorText="Gerhard Marringer"
         logo={<ToyotaLogo />}
-        avatar={<ForbesAvatar />}
+        avatar={<GerhardMarringerAvatar />}
       />
     ),
   },
