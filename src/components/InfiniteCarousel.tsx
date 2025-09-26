@@ -18,8 +18,8 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   slideSpacing = 16,
   speed = 20,
 }) => {
-  // Створюємо дублікати для безкінечності
-  const duplicatedSlides = [...slides, ...slides];
+  // Створюємо багато дублікатів для справжньої безкінечності
+  const duplicatedSlides = [...slides, ...slides, ...slides, ...slides, ...slides, ...slides];
 
   return (
     <>
@@ -29,7 +29,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-16.666%);
           }
         }
         
