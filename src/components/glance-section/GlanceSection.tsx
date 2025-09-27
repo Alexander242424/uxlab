@@ -38,8 +38,8 @@ const slides = [
   {
     element: (
       <VideoCard
-      classNames="max-w-[456px] min-h-[305px] text-black"
-      containerClassName="min-h-[305px]"
+      classNames="max-w-[280px] sm:max-w-[456px] min-h-[280px] sm:min-h-[305px] text-black"
+      containerClassName="min-h-[280px] sm:min-h-[305px]"
       badgetText="saas"
       imageSrc={CalendlyImage}
       descriptionText="Calendly's clear vision definition prduct roadmap and feature positioning for the future."
@@ -52,8 +52,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={ScheiderImage}
-        classNames="max-w-[456px] min-h-[305px]"
-        containerClassName="min-h-[305px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[280px] sm:min-h-[305px]"
+        containerClassName="min-h-[280px] sm:min-h-[305px]"
         badgetText="IOT"
         descriptionText="Helped Schneider Electric achieve a 22% revenue uplift by optimizing the ordering funnel for EV charging wallbox systems."
         logo={<ScheiderLogo />}
@@ -66,8 +66,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={NumaImage}
-        classNames="max-w-[456px] min-h-[482px] text-black"
-        containerClassName="min-h-[482px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[350px] sm:min-h-[482px] text-black"
+        containerClassName="min-h-[350px] sm:min-h-[482px]"
         badgetText="Travel"
         descriptionText="Next-level experience for booking boutique apartments online."
         logo={<NumaLogo />}
@@ -80,8 +80,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={ForbesImage}
-        classNames="max-w-[456px] min-h-[440px]"
-        containerClassName="min-h-[440px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[320px] sm:min-h-[440px]"
+        containerClassName="min-h-[320px] sm:min-h-[440px]"
         badgetText="Marketplaces"
         descriptionText="They helped us to launch and scal 4 new products from zero-to-one and reach 50k paid users in less than 12 months."
         authorText="Gerhard Marringer"
@@ -95,8 +95,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={ArhiveImage}
-        classNames="max-w-[456px] min-h-[440px]"
-        containerClassName="min-h-[440px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[320px] sm:min-h-[440px]"
+        containerClassName="min-h-[320px] sm:min-h-[440px]"
         badgetText="SaaS | AI"
         descriptionText="They helped us revolutionize our creator tracking tools, particularly by launching the Social Flirting product within our Archive ecosystem. Before UXLAB, we had 1 client and after their deep dive, we secured 10 long-term clients in less than 3 months."
         authorText="Paul Benigeri"
@@ -109,8 +109,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={EasyjetImage}
-        classNames="max-w-[456px] min-h-[305px]"
-        containerClassName="min-h-[305px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[280px] sm:min-h-[305px]"
+        containerClassName="min-h-[280px] sm:min-h-[305px]"
         badgetText="e-commerce | Airlines"
         descriptionText="UXLAB helped us launch 3 new ecommerce apps that attracted 1m new MAU."
         authorText="Stelios Haji-Ioannou"
@@ -124,8 +124,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={WellowImage}
-        classNames="max-w-[456px] min-h-[549px]"
-        containerClassName="min-h-[549px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[400px] sm:min-h-[549px]"
+        containerClassName="min-h-[400px] sm:min-h-[549px]"
         badgetText="e-commerce"
         descriptionText="Launched a new brand from Zero-To-One in just 3 months with exceptional design partnership. They helped us to convert website visitors to customers within 2 hours of soft website launch."
         authorText="Gerhard Marringer"
@@ -139,8 +139,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={RoyalQueenImage}
-        classNames="max-w-[456px] min-h-[440px]"
-        containerClassName="min-h-[440px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[320px] sm:min-h-[440px]"
+        containerClassName="min-h-[320px] sm:min-h-[440px]"
         badgetText="e-commerce"
         descriptionText="UXLAB increased the conversion score from 3.2% to 4% while increasing revenue by 17.8%. We value our day-to-day cooperation with them like partners."
         authorText="Nick Ave"
@@ -153,8 +153,8 @@ const slides = [
     element: (
       <VideoCard
         imageSrc={ToyotaImage}
-        classNames="max-w-[456px] min-h-[305px]"
-        containerClassName="min-h-[305px]"
+        classNames="max-w-[280px] sm:max-w-[456px] min-h-[280px] sm:min-h-[305px]"
+        containerClassName="min-h-[280px] sm:min-h-[305px]"
         badgetText="Automotive | Logistics"
         descriptionText="The new Vehicle Management System (VLS) boosted our revenue by 9% and increased car shipment speed by 30%."
         authorText="Gerhard Marringer"

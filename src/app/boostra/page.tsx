@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NextCasesPage() {
+export default function BoostraPage() {
   return (
     <div className="flex flex-col">
       <div className="w-full">
