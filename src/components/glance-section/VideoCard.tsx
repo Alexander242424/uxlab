@@ -14,6 +14,7 @@ interface VideoCardProps {
   logo: React.ReactNode;
   avatar?: React.ReactNode;
   classNames?: string;
+  url?: string;
   containerClassName?: string;
 }
 
@@ -27,6 +28,7 @@ export default function VideoCard({
   isForbes = false,
   logo,
   avatar,
+  url,
   classNames,
   containerClassName,
 }: VideoCardProps) {
@@ -92,7 +94,9 @@ export default function VideoCard({
             {avatar}
             <div className="flex flex-col gap-[6px]">
               <p className="hoves-p2-reg">{authorText}</p>
-              <LinkedInIcon />
+              <a className="cursor-pointer" href={url || ""} target="_blank" rel="noopener noreferrer">
+               <LinkedInIcon />
+              </a>
             </div>
           </div>
           )
