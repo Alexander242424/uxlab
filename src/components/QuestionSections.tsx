@@ -43,7 +43,7 @@ const faqData = [
     id: "item-5",
     question: "How much does it cost to hire you for the design project?",
     answer:
-      "At UXLAB, we prioritize flexibility and tailored support for our partners. We offer three engagement models - time & materials, fixed fee, and retainer - and work closely with clients to recommend the best fit based on budget and project needs. After discovery conversations, we provide a customized proposal with timeline and estimated costs. Our goal is to deliver solutions that align with both your objectives and financial constraints, whether through a full-service approach or a tailored, strategic engagement.",
+    "Let's discuss more details about your project, scope, timeline and then we will have a better understanding of what the costs could be."
   },
   {
     id: "item-6",

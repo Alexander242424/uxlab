@@ -116,7 +116,7 @@ export default function BoostraPage() {
         />
         <InfoBlock
           className="md:pt-[120px]! md:pb-20!"
-          title={["Challenge: Early traction,", "but friction blocked growth"]}
+          title={["Challenge: Early traction, but friction blocked growth"]}
           description={[
             "Boostra's MVP attracted interest, but raw",
             "UX limited its potential. Users were",
@@ -142,7 +142,7 @@ export default function BoostraPage() {
         />
         <InfoBlock
           className="md:pt-20! md:pb-[120px]!"
-          title={["Solution: Streamlined flows and", "growth-driven design"]}
+          title={["Solution: Streamlined flows and growth-driven design"]}
           description={[
             "By redesigning onboarding, we reduced",
             "drop-offs by 20% and boosted payment",
@@ -315,11 +315,11 @@ export default function BoostraPage() {
         <InfoBlock
           className="md:py-20!"
           title={[
-            "A Call to Habits",
+            "",
           ]}
           description={["Want similar results?", "Book a Free Product Audit"]}
           mobileTitle={[
-            "A Call to Habits",
+            "",
           ]}
           mobileDescription={["Want similar results?", "Book a Free Product Audit"]}
         />

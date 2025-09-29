@@ -75,6 +75,21 @@ const secondParagraphMobile = [
   "team to deliver fast.",
 ];
 
+const thirdParagraph = [
+  "Beyond client work, we've launched our own SaaS products —",
+  "Boostra → to boost conversions with AI, and Tapmy.store →",
+  "to power mobile ecommerce for influencers with built-in payments.",
+];
+
+const thirdParagraphMobile = [
+  "Beyond client work, we've launched",
+  "our own SaaS products — Boostra →",
+  "to boost conversions with AI, and",
+  "Tapmy.store → to power mobile",
+  "ecommerce for influencers with",
+  "built-in payments.",
+];
+
 export default function ServiceItems() {
   const isMobile = useIsMobile();
   const { openModal } = useCalModal();
@@ -154,6 +169,25 @@ export default function ServiceItems() {
                   />
                 ))}
               </div>
+              <div className="flex flex-col">
+                {thirdParagraphMobile.map((text, index) => (
+                  <SplitText
+                    key={`third-${index}`}
+                    text={text}
+                    className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                    globalIndex={1 + firstParagraph.length + secondParagraph.length + index}
+                    splitType="lines"
+                    delay={100}
+                    duration={0.8}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 50 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="100px"
+                    textAlign="left"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -187,6 +221,26 @@ export default function ServiceItems() {
                   text={text}
                   className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
                   globalIndex={1 + firstParagraph.length + index} // Продовжуємо після першого абзацу
+                  splitType="lines"
+                  delay={100}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="100px"
+                  textAlign="left"
+                />
+              ))}
+            </div>
+
+            <div className="flex flex-col">
+              {thirdParagraph.map((text, index) => (
+                <SplitText
+                  key={`third-${index}`}
+                  text={text}
+                  className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                  globalIndex={1 + firstParagraph.length + secondParagraph.length + index} // Продовжуємо після другого абзацу
                   splitType="lines"
                   delay={100}
                   duration={0.8}
