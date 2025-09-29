@@ -91,7 +91,9 @@ export default function VideoCard({
             </div>
           ) : (
           <div className="flex gap-3">
+            <div className="min-w-fit">
             {avatar}
+            </div>
             <div className="flex flex-col gap-[6px]">
               <p className="hoves-p2-reg">{authorText}</p>
               <a className="cursor-pointer" href={url || ""} target="_blank" rel="noopener noreferrer">

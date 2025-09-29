@@ -38,7 +38,12 @@ export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
         >
           <div className="text-center overflow-hidden">
             <div
-              className="text-black flex flex-wrap justify-center gap-2 hoves-h5-med"
+              className="text-black flex flex-wrap justify-center gap-2 font-tt-hoves text-[2.1rem] leading-[6.6938rem] tracking-[-0.0315rem] text-center"
+              // font-size: 2.1rem;
+              // font-style: normal;
+              // letter-spacing: -.0315rem;
+              // line-height: 6.6938rem;
+              // text-align: center;
             >
               {words.map((word, index) => (
                 <motion.span
