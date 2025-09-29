@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { useCalModal } from "@/context/CalModalContext";
+import WhatAppSVG from "@/assets/whatapp.svg";
 
 const faqData = [
   {
@@ -43,7 +44,7 @@ const faqData = [
     id: "item-5",
     question: "How much does it cost to hire you for the design project?",
     answer:
-    "Let's discuss more details about your project, scope, timeline and then we will have a better understanding of what the costs could be."
+      "Let's discuss more details about your project, scope, timeline and then we will have a better understanding of what the costs could be.",
   },
   {
     id: "item-6",
@@ -140,15 +141,21 @@ export default function QuestionSections() {
                 message from us in 12 hours.
               </p>
             </div>
-            <Button
-              variant="secondary"
-              size="lg"
-              iconRight={<ArrowUpRightSVG className="!size-6" />}
-              className="max-w-40 w-full xs:w-auto"
-              onClick={handleCalClick}
-            >
-              Book a Call
-            </Button>
+            <div className="flex gap-2 items-center">
+              <Button
+                variant="secondary"
+                size="lg"
+                iconRight={<ArrowUpRightSVG className="!size-6" />}
+                className="max-w-40 w-full xs:w-auto"
+                onClick={handleCalClick}
+              >
+                Book a Call
+              </Button>
+              <a href="https://wa.me/qr/AI6ZRCL4ZECGM1" target="_blank" className="flex items-center justify-center rounded-full w-[56px] h-[55px] bg-[#0000000F] cursor-pointer"
+              >
+                <WhatAppSVG />
+              </a>
+            </div>
           </motion.div>
         </motion.div>
 
