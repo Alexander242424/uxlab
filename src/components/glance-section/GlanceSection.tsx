@@ -45,6 +45,7 @@ const slides = [
       descriptionText="Calendly's clear vision definition prduct roadmap and feature positioning for the future."
       logo={<CalendlyLogo />}
       withAuthor={false}
+      url=""
     />
     ),
   },
@@ -59,6 +60,7 @@ const slides = [
         logo={<ScheiderLogo />}
         withAuthor={false}
         videoSrc={"/glance-section-video/schneider.mp4"}
+        url=""
       />
     ),
   },
@@ -72,6 +74,7 @@ const slides = [
         descriptionText="Next-level experience for booking boutique apartments online."
         logo={<NumaLogo />}
         withAuthor={false}
+        url=""
         // videoSrc={"/glance-section-video/numa.mp4"}
       />
     ),
@@ -87,6 +90,7 @@ const slides = [
         authorText="Gerhard Marringer"
         logo={<ForbesLogo />}
         isForbes={true}
+        url=""
         videoSrc={"/glance-section-video/forbes.mp4"}
       />
     ),
@@ -99,9 +103,10 @@ const slides = [
         containerClassName="min-h-[320px] sm:min-h-[440px]"
         badgetText="SaaS | AI"
         descriptionText="They helped us revolutionize our creator tracking tools, particularly by launching the Social Flirting product within our Archive ecosystem. Before UXLAB, we had 1 client and after their deep dive, we secured 10 long-term clients in less than 3 months."
-        authorText="Paul Benigeri"
+        authorText="Paul Benigeri - Co-Founder & CEO at Archive"
         logo={<ArhiveLogo />}
         avatar={<PaulBenigeriAvatar />}
+        url="https://www.linkedin.com/in/benigeri/"
       />
     ),
   },
@@ -117,6 +122,7 @@ const slides = [
         logo={<EasyjetLogo />}
         avatar={<SteliosHajiIoannouAvatar />}
         videoSrc={"/glance-section-video/easyjet.mp4"}
+        url="https://www.linkedin.com/in/stelios-haji-ioannou/"
       />
     ),
   },
@@ -127,11 +133,11 @@ const slides = [
         classNames="max-w-[280px] sm:max-w-[456px] min-h-[400px] sm:min-h-[549px]"
         containerClassName="min-h-[400px] sm:min-h-[549px]"
         badgetText="e-commerce"
+        withAuthor={false}
         descriptionText="Launched a new brand from Zero-To-One in just 3 months with exceptional design partnership. They helped us to convert website visitors to customers within 2 hours of soft website launch."
-        authorText="Gerhard Marringer"
         logo={<WellowLogo />}
-        avatar={<GerhardMarringerAvatar />}
         videoSrc={"/glance-section-video/wellow.mp4"}
+        url=""
       />
     ),
   },
@@ -146,6 +152,7 @@ const slides = [
         authorText="Nick Ave"
         logo={<RoyalQueenLogo />}
         avatar={<NickAveAvatar />}
+        url="https://www.linkedin.com/in/nick-ave-08a31b198/"
       />
     ),
   },
@@ -157,9 +164,9 @@ const slides = [
         containerClassName="min-h-[280px] sm:min-h-[305px]"
         badgetText="Automotive | Logistics"
         descriptionText="The new Vehicle Management System (VLS) boosted our revenue by 9% and increased car shipment speed by 30%."
-        authorText="Gerhard Marringer"
         logo={<ToyotaLogo />}
-        avatar={<GerhardMarringerAvatar />}
+        withAuthor={false}
+        url=""
       />
     ),
   },
