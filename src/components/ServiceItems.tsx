@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import SplitText from "./SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -12,6 +13,126 @@ interface ServiceItem {
   videoSrc: string;
   time: string;
 }
+
+// Кастомний компонент для рендерингу тексту з посиланнями
+const TextWithLinks = ({ 
+  text, 
+  className, 
+  globalIndex, 
+  delay = 100, 
+  duration = 0.8, 
+  ease = "power3.out",
+  from = { opacity: 0, y: 50 },
+  to = { opacity: 1, y: 0 },
+  threshold = 0.1,
+  rootMargin = "100px"
+}: {
+  text: string;
+  className: string;
+  globalIndex: number;
+  delay?: number;
+  duration?: number;
+  ease?: string;
+  from?: { opacity: number; y: number };
+  to?: { opacity: number; y: number };
+  threshold?: number;
+  rootMargin?: string;
+}) => {
+  const isMobile = useIsMobile();
+  
+  // Функція для розбиття тексту на частини з посиланнями
+  const parseTextWithLinks = (text: string) => {
+    const parts: Array<{ type: 'text' | 'link'; content: string; href?: string }> = [];
+    
+    // Знаходимо всі посилання в тексті
+    const linkPatterns = [
+      { pattern: /Boostra →/g, href: 'http://getboostra.com' },
+      { pattern: /Tapmy\.store →/g, href: 'https://app.tapmy.store/get-started' }
+    ];
+    
+    // Збираємо всі знайдені посилання з їх позиціями
+    const allMatches: Array<{ content: string; href: string; index: number }> = [];
+    linkPatterns.forEach(({ pattern, href }) => {
+      let match;
+      while ((match = pattern.exec(text)) !== null) {
+        allMatches.push({
+          content: match[0],
+          href,
+          index: match.index
+        });
+      }
+    });
+    
+    // Сортуємо за позицією
+    allMatches.sort((a, b) => a.index - b.index);
+    
+    if (allMatches.length === 0) {
+      parts.push({ type: 'text', content: text });
+    } else {
+      let lastIndex = 0;
+      
+      allMatches.forEach((match) => {
+        // Додаємо текст перед посиланням
+        if (match.index > lastIndex) {
+          const beforeText = text.substring(lastIndex, match.index);
+          if (beforeText) {
+            parts.push({ type: 'text', content: beforeText });
+          }
+        }
+        
+        // Додаємо посилання
+        parts.push({ type: 'link', content: match.content, href: match.href });
+        lastIndex = match.index + match.content.length;
+      });
+      
+      // Додаємо текст після останнього посилання
+      if (lastIndex < text.length) {
+        const afterText = text.substring(lastIndex);
+        if (afterText) {
+          parts.push({ type: 'text', content: afterText });
+        }
+      }
+    }
+    
+    return parts;
+  };
+
+  const textParts = parseTextWithLinks(text);
+
+  return (
+    <motion.span
+      className="inline-block"
+      initial={from}
+      whileInView={to}
+      viewport={{ once: true, margin: rootMargin }}
+      transition={{
+        duration,
+        delay: (delay / 1000) + (globalIndex * 0.3),
+        ease: ease === "power3.out" ? [0.25, 0.46, 0.45, 0.94] : "easeOut",
+      }}
+    >
+      {textParts.map((part, index) => {
+        if (part.type === 'link' && part.href) {
+          return (
+            <Link
+              key={index}
+              href={part.href}
+              className={`${className} inline relative group`}
+            >
+              {part.content}
+              <span className="absolute -bottom-0.5 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+            </Link>
+          );
+        }
+        return (
+          <span key={index} className={className}>
+            {part.content}
+          </span>
+        );
+      })}
+    </motion.span>
+  );
+};
 
 const services: ServiceItem[] = [
   {
@@ -170,23 +291,43 @@ export default function ServiceItems() {
                 ))}
               </div>
               <div className="flex flex-col">
-                {thirdParagraphMobile.map((text, index) => (
-                  <SplitText
-                    key={`third-${index}`}
-                    text={text}
-                    className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                    globalIndex={1 + firstParagraph.length + secondParagraph.length + index}
-                    splitType="lines"
-                    delay={100}
-                    duration={0.8}
-                    ease="power3.out"
-                    from={{ opacity: 0, y: 50 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={0.1}
-                    rootMargin="100px"
-                    textAlign="left"
-                  />
-                ))}
+                {thirdParagraphMobile.map((text, index) => {
+                  const globalIndex = 1 + firstParagraph.length + secondParagraph.length + index;
+                  if (text.includes("Boostra →") || text.includes("Tapmy.store →")) {
+                    return (
+                      <TextWithLinks
+                        key={`third-${index}`}
+                        text={text}
+                        className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                        globalIndex={globalIndex}
+                        delay={100}
+                        duration={0.8}
+                        ease="power3.out"
+                        from={{ opacity: 0, y: 50 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        rootMargin="100px"
+                      />
+                    );
+                  }
+                  return (
+                    <SplitText
+                      key={`third-${index}`}
+                      text={text}
+                      className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                      globalIndex={globalIndex}
+                      splitType="lines"
+                      delay={100}
+                      duration={0.8}
+                      ease="power3.out"
+                      from={{ opacity: 0, y: 50 }}
+                      to={{ opacity: 1, y: 0 }}
+                      threshold={0.1}
+                      rootMargin="100px"
+                      textAlign="left"
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -235,23 +376,43 @@ export default function ServiceItems() {
             </div>
 
             <div className="flex flex-col">
-              {thirdParagraph.map((text, index) => (
-                <SplitText
-                  key={`third-${index}`}
-                  text={text}
-                  className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                  globalIndex={1 + firstParagraph.length + secondParagraph.length + index} // Продовжуємо після другого абзацу
-                  splitType="lines"
-                  delay={100}
-                  duration={0.8}
-                  ease="power3.out"
-                  from={{ opacity: 0, y: 50 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  rootMargin="100px"
-                  textAlign="left"
-                />
-              ))}
+              {thirdParagraph.map((text, index) => {
+                const globalIndex = 1 + firstParagraph.length + secondParagraph.length + index;
+                if (text.includes("Boostra →") || text.includes("Tapmy.store →")) {
+                  return (
+                    <TextWithLinks
+                      key={`third-${index}`}
+                      text={text}
+                      className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                      globalIndex={globalIndex}
+                      delay={100}
+                      duration={0.8}
+                      ease="power3.out"
+                      from={{ opacity: 0, y: 50 }}
+                      to={{ opacity: 1, y: 0 }}
+                      threshold={0.1}
+                      rootMargin="100px"
+                    />
+                  );
+                }
+                return (
+                  <SplitText
+                    key={`third-${index}`}
+                    text={text}
+                    className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                    globalIndex={globalIndex}
+                    splitType="lines"
+                    delay={100}
+                    duration={0.8}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 50 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="100px"
+                    textAlign="left"
+                  />
+                );
+              })}
             </div>
           </div>
 
