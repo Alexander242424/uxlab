@@ -45,13 +45,13 @@ export default function HomePage() {
           className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
           firstText="Trusted by founders who"
           secondText={[
-            "need design decisions backed by evidences,",
+            "need design decisions backed by evidence,",
             "not guesswork when the stakes are highest.",
           ]}
           mobileText={[
             "Trusted by founders who",
             "need design decisions",
-            "backed by evidences,",
+            "backed by evidence,",
             "not guesswork when",
             "the stakes are highest.",
           ]}

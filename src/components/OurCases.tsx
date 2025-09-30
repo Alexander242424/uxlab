@@ -336,7 +336,7 @@ export default function OurCases() {
 
       <div className="hoves-p1-reg text-text-700">
         <SplitText
-          text="Our Cases"
+          text="Case Studies"
           className="hoves-p1-reg text-text-700"
           splitType="lines"
           delay={100}

@@ -238,7 +238,7 @@ export default function GlanceSection() {
         <EmblaCarousel
           slides={slides}
           slideSpacing={isMobile ? 8 : 32}
-          speed={40}
+          speed={80}
           className="cursor-grab"
         />
         <div className="flex mx-4 md:mx-10 my-[96px] md:my-40 hoves-p1-reg" />

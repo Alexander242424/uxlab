@@ -62,7 +62,7 @@ export default function BoostraPage() {
           text={[
             "From MVP",
             "to Growth Platform → +47%",
-            "conversion uplift & powerful",
+            "Conversion Uplift & powerful",
             "referral growth.",
           ]}
           companyName="Boostra"
@@ -79,7 +79,7 @@ export default function BoostraPage() {
         <OverviewCaseVideoSection
           className="!p-0"
           imageSrc={HeroImage}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
           isAnimated={false}
         />
         <TextSection
@@ -108,9 +108,9 @@ export default function BoostraPage() {
         <CasesOutcome />
         <OverviewCaseImageSection
           imageSrc={FirstBlockImage1}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
           imageSrc2={FirstBlockImage2}
-          imageAlt2="Emma Sleep case study"
+          imageAlt2="Boostra Case Study"
           imageClassName="min-h-[700px]"
           imageClassName2="max-h-[400px]"
         />
@@ -170,11 +170,11 @@ export default function BoostraPage() {
         />
         <OverviewCaseVideoSection
           imageSrc={BigImage1}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
         />
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage1}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
           firstText="Most founders don't realize how much revenue slips through the cracks until Boostra shows them."
           secondText="Imagine having a CRO expert inside your product 24/7, spotting drop-offs, learning from real user behavior, and fixing friction before it costs you. Boostra doesn't wait weeks for results; it highlights instant solutions that lift conversions by 35-47%."
         />
@@ -223,7 +223,7 @@ export default function BoostraPage() {
         />
         <OverviewCaseVideoSection
           imageSrc={BigImage2}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
         />
         <InfoBlock
           className="md:py-20!"
@@ -246,8 +246,8 @@ export default function BoostraPage() {
         />
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage2}
-          imageAlt="Emma Sleep case study"
-          firstText="A $1 trial was launched to lower the entry barrier, with the next package priced at $59 for five page conversion reviews. It allows users to experience meaningful results upfront, proving the ROI from day one."
+          imageAlt="Boostra Case Study"
+          firstText="A $1 trial was launched to lower the entry barrier, with the next package priced at $59 for five page conversion reviews. This allowed users to see value immediately. Proving the ROI from day one."
           secondText=""
           videoClassName="md:min-w-2/3 md:max-w-2/3 md:pr-8"
         />
@@ -270,7 +270,7 @@ export default function BoostraPage() {
         />
         <OverviewCaseVideoSection
           imageSrc={BigImage3}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
         />
         <InfoBlock
           className="md:py-20!"
@@ -307,7 +307,7 @@ export default function BoostraPage() {
         />
         <OverviewCaseVideoTextSection
           imageSrc={SmallImage2}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
           firstText="Boostra goes beyond CRO by analyzing accessibility at levels A, AA, and AAA. The result: a product that removes friction, expands your market, and builds trust with every user."
           secondText=""
           videoClassName="md:min-w-2/3 md:max-w-2/3 md:pr-8"
@@ -325,7 +325,7 @@ export default function BoostraPage() {
         />
         <OverviewCaseVideoSection
           imageSrc={BigImage4}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Boostra Case Study"
         />
         <ScrollingTextCaseSection
           videoSrc="/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4"

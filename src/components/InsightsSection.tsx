@@ -9,6 +9,7 @@ import Link from "next/link";
 const insightsData = [
   {
     id: 1,
+    href: "/how-to-design-an-ai-agent",
     image: Background,
     title: "Improving User Retention",
     author: "John Doe",
@@ -17,6 +18,7 @@ const insightsData = [
   },
   {
     id: 2,
+    href: "/mastering-design-systems",
     image: Background,
     title: "The Future ",
     author: "Jane Smith",
@@ -25,6 +27,7 @@ const insightsData = [
   },
   {
     id: 3,
+    href: "/conversion-rate-optimization-ecommerce-saas",
     image: Background,
     title: "Through UX Design",
     author: "Mike Johnson",
@@ -85,10 +88,10 @@ export default function InsightsSection() {
 
         <div className="flex flex-row gap-2 md:gap-8 w-full overflow-x-auto md:overflow-x-visible">
           {insightsData.map((insight, index) => (
-            <Link href={`/article`} key={insight.id} className="flex flex-col gap-3 min-w-[268px] sm:flex-1 sm:min-w-0 group">
+            <Link href={insight.href} key={insight.id} className="flex flex-col gap-3 min-w-[268px] sm:flex-1 sm:min-w-0 group">
               <div className="overflow-hidden rounded-lg relative">
                 <Image 
-                  src={insight.image} 
+                  src={insight.image}
                   alt={insight.title}
                   className="transition-transform duration-300 ease-out hover:scale-110 w-full h-auto aspect-[5/3] hover:cursor-pointer"
                 />

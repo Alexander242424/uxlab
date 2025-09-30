@@ -2,29 +2,14 @@
 
 import { useState, useEffect } from "react";
 
-const ArticleNavigation = () => {
-  const navigationItems = [
-    {
-      title: "Being in the world — not just behind it",
-      id: "being-in-the-world",
-    },
-    {
-      title: "Output follows input",
-      id: "output-follows-input",
-    },
-    {
-      title: "Taste and intuition are cumulative",
-      id: "taste-and-intuition",
-    },
-    {
-      title: "Sharing, we make culture",
-      id: "sharing-we-make-culture",
-    },
-    {
-      title: "Keep the door open",
-      id: "keep-the-door-open",
-    },
-  ];
+export interface ArticleNavigationProps {
+  navigationItems: {
+    title: string;
+    id: string;
+  }[];
+}
+
+const ArticleNavigation = ({ navigationItems }: ArticleNavigationProps) => {
 
   const [activeSection, setActiveSection] = useState("");
 
@@ -86,9 +71,10 @@ const ArticleNavigation = () => {
           onClick={() => scrollToSection(item.id)}
         >
           <p
-            className={`hoves-p2-reg transition-colors duration-200 ${
+            className={`hoves-p2-reg transition-colors duration-200 truncate max-w-[300px] ${
               activeSection === item.id ? "text-black" : "text-[#5C5C5C]"
             }`}
+            title={item.title}
           >
             {item.title}
           </p>

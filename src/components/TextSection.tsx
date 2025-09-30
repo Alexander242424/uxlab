@@ -50,7 +50,7 @@ export default function TextSection({
               key={index}
               text={text || ""}
               className={textColor}
-              globalIndex={index} // Додаємо глобальний індекс
+              globalIndex={index}
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
@@ -77,7 +77,7 @@ export default function TextSection({
             <SplitText
               text={firstText}
               className={textColor}
-              globalIndex={0} // Перший елемент
+              globalIndex={0}
               style={{
                 fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                 fontWeight: 300,
@@ -104,7 +104,7 @@ export default function TextSection({
                 key={index}
                 text={text}
                 className={textColor}
-                globalIndex={1 + index} // Продовжуємо нумерацію після першого тексту
+                globalIndex={1 + index}
                 style={{
                   fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                   fontWeight: 300,
