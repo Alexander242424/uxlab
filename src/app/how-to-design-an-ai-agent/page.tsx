@@ -191,7 +191,7 @@ const HowToDesignAnAIAgentPage = () => {
             </ul>
             <p className="hoves-p1-reg">
               Here&apos;s the difference: one version replies, &quot;Here is the vacation
-              policy." Another version checks your balance, knows your manager,
+              policy.&quot; Another version checks your balance, knows your manager,
               and suggests which days are open. The second one? That&apos;s when
               people start trusting it like a colleague.
             </p>
