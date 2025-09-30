@@ -163,7 +163,7 @@ const ConversionRateOptimizationPage = () => {
               5%.
             </p>
             <p className="hoves-p1-reg">
-              It's a simple metric, but one with enormous business impact. A
+              It&apos;s a simple metric, but one with enormous business impact. A
               small lift in conversion rate can translate into thousands (or
               millions) in additional revenue without spending a single dollar
               more on ads
@@ -191,7 +191,7 @@ const ConversionRateOptimizationPage = () => {
               <li>Helpful trial flows = more upgrades to paid</li>
             </ul>
             <p className="hoves-p1-reg">
-              If your site or app has traffic but conversions remain low, it's a
+              If your site or app has traffic but conversions remain low, it&apos;s a
               sign of friction. Visitors are interested enough to click through
               but not convinced enough to commit. Fixing that gap is what CRO is
               all about.
@@ -208,7 +208,7 @@ const ConversionRateOptimizationPage = () => {
                 complete sign-up.
               </li>
               <li>
-                Weak value proposition - Visitors don't clearly see why your
+                Weak value proposition - Visitors don&apos;t clearly see why your
                 product is better.
               </li>
               <li>
@@ -239,7 +239,7 @@ const ConversionRateOptimizationPage = () => {
             </h5>
             <p className="hoves-p1-reg">
               E-commerce businesses often lose customers at the very last step:
-              checkout. Here's how to minimize that and maximize sales:
+              checkout. Here&apos;s how to minimize that and maximize sales:
             </p>
             <ul className="hoves-p1-reg list-disc list-inside pl-2">
               <li>
@@ -265,7 +265,7 @@ const ConversionRateOptimizationPage = () => {
             </ul>
             <p className="hoves-p1-reg">
               Imagine lifting your checkout completion rate from 2% to 3%.
-              That's a 50% revenue increase with the same traffic.
+              That&apos;s a 50% revenue increase with the same traffic.
             </p>
           </div>
           <div id="saas-conversion" className="flex flex-col gap-4">
@@ -274,7 +274,7 @@ const ConversionRateOptimizationPage = () => {
             </h5>
             <p className="hoves-p1-reg">
               For SaaS platforms and apps, the challenge is slightly different.
-              The conversion journey doesn't stop at sign-up; it continues
+              The conversion journey doesn&apos;t stop at sign-up; it continues
               through onboarding and activation. Key optimization tactics
               include:
             </p>
@@ -306,8 +306,8 @@ const ConversionRateOptimizationPage = () => {
             </ul>
             <p className="hoves-p1-reg">
               Successful SaaS companies like Slack, Dropbox, and Notion obsess
-              over onboarding because it's where conversions truly happen. If
-              users don't see value fast, they churn before upgrading.
+              over onboarding because it&apos;s where conversions truly happen. If
+              users don&apos;t see value fast, they churn before upgrading.
             </p>
           </div>
           <div id="universal-cro-techniques" className="flex flex-col gap-4">
@@ -324,7 +324,7 @@ const ConversionRateOptimizationPage = () => {
               </li>
               <li>
                 Mobile Optimization With over 60% of web traffic on mobile, a
-                responsive design isn't optional.
+                responsive design isn&apos;t optional.
               </li>
               <li>
                 Page Speed Every extra second of load time decreases
@@ -367,8 +367,8 @@ const ConversionRateOptimizationPage = () => {
               </li>
             </ul>
             <p className="hoves-p1-reg">
-              The key is consistency. Don't just look at the numbers — tie them
-              to experiments and changes you're making.
+              The key is consistency. Don&apos;t just look at the numbers — tie them
+              to experiments and changes you&apos;re making.
             </p>
           </div>
           <div id="compounding-power" className="flex flex-col gap-4">
@@ -397,7 +397,7 @@ const ConversionRateOptimizationPage = () => {
           <div id="keep-the-door-open" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Final Thoughts</h5>
             <p className="hoves-p1-reg">
-              Conversion Rate Optimization isn't just about numbers — it's about
+              Conversion Rate Optimization isn&apos;t just about numbers — it&apos;s about
               understanding your users, removing friction, and delivering value
               in the simplest way possible.
             </p>
@@ -413,11 +413,11 @@ const ConversionRateOptimizationPage = () => {
             </p>
             <p className="hoves-p1-reg">
               Need help improving your checkout flow or SaaS sign-up funnel?
-              Let's talk.
+              Let&apos;s talk.
             </p>
             <p className="hoves-p1-reg">
-              By investing in CRO today, you're not just chasing higher numbers
-              — you're building a stronger, more scalable business tomorrow.
+              By investing in CRO today, you&apos;re not just chasing higher numbers
+              — you&apos;re building a stronger, more scalable business tomorrow.
             </p>
           </div>
           <div className="xl:hidden">

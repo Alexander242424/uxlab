@@ -138,7 +138,7 @@ export default function QuestionSections() {
               <h4 className="hoves-h4-med">Book a Call</h4>
               <p className="hoves-p2-reg">
                 Tell us about your project, your timeline, and budget. 
-                We'll get back to you within 12 hours.
+                We&apos;ll get back to you within 12 hours.
               </p>
             </div>
             <div className="flex gap-2 items-center">

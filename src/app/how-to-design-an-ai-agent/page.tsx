@@ -83,15 +83,15 @@ const HowToDesignAnAIAgentPage = () => {
           />
           <h6 className="hoves-h6-med">
             Artificial intelligence is no longer a shiny demo tucked away in
-            labs. It's inside the tools we use daily — customer support portals,
-            HR dashboards, even Slack. And yet, there's a gap: many AI
+            labs. It&apos;s inside the tools we use daily — customer support portals,
+            HR dashboards, even Slack. And yet, there&apos;s a gap: many AI
             assistants impress in presentations but fade in real use. To matter,
             an assistant has to solve a real problem immediately.
           </h6>
           <div className="flex flex-col gap-4">
             <p className="hoves-p1-reg">
-              This guide takes you through how to design an AI agent that isn't
-              just clever — it's trusted, practical, and genuinely helpful
+              This guide takes you through how to design an AI agent that isn&apos;t
+              just clever — it&apos;s trusted, practical, and genuinely helpful
             </p>
           </div>
           <div id="being-in-the-world" className="flex flex-col gap-4">
@@ -100,7 +100,7 @@ const HowToDesignAnAIAgentPage = () => {
             </h5>
             <p className="hoves-p1-reg">
               Think of the last chatbot you tried. Did it feel like talking to a
-              genius, or did it just get in the way? Most companies don't need a
+              genius, or did it just get in the way? Most companies don&apos;t need a
               digital all-knowing oracle. What they need is something more
               grounded: a tool that smooths out everyday friction.
             </p>
@@ -108,8 +108,8 @@ const HowToDesignAnAIAgentPage = () => {
               In practice, that means: fewer repetitive questions landing in
               support inboxes, managers getting data without begging for
               reports, and employees handling HR requests without hunting
-              through portals. The assistant's job isn't to mimic intelligence —
-              it's to make work easier.
+              through portals. The assistant&apos;s job isn&apos;t to mimic intelligence —
+              it&apos;s to make work easier.
             </p>
           </div>
           <div id="output-follows-input" className="flex flex-col gap-4">
@@ -132,7 +132,7 @@ const HowToDesignAnAIAgentPage = () => {
             <p className="hoves-p1-reg">
               Why? Because fixing a single bottleneck visibly builds confidence.
               The assistant becomes the tool people actually talk about in
-              meetings: "That bot saved me an hour yesterday." That's when
+              meetings: "That bot saved me an hour yesterday." That&apos;s when
               adoption spreads.
             </p>
           </div>
@@ -153,7 +153,7 @@ const HowToDesignAnAIAgentPage = () => {
             </p>
             <p className="hoves-p1-reg">
               A common trap is designing assistants that rely on long free-form
-              conversations. Reality check: users don't want to chat endlessly.
+              conversations. Reality check: users don&apos;t want to chat endlessly.
               They want a quick button, a single answer, or a short path to
               escalate to a person.
             </p>
@@ -170,7 +170,7 @@ const HowToDesignAnAIAgentPage = () => {
             <p className="hoves-p1-reg">Guess which one gets used?</p>
             <p className="hoves-p1-reg">
               The minimum viable assistant (MVA) is not about cutting corners;
-              it's about starting small and iterating. Templates, lightweight
+              it&apos;s about starting small and iterating. Templates, lightweight
               document lookups, a narrow scope. With every use, feedback shapes
               the next improvement.
             </p>
@@ -187,12 +187,12 @@ const HowToDesignAnAIAgentPage = () => {
               <li>Ground it with company documentation and FAQs.</li>
               <li>Let it talk to your HR or CRM system.</li>
               <li>Add memory, so it recalls who asked what.</li>
-              <li>Personalize answers depending on who's asking.</li>
+              <li>Personalize answers depending on who&apos;s asking.</li>
             </ul>
             <p className="hoves-p1-reg">
-              Here's the difference: one version replies, "Here is the vacation
+              Here&apos;s the difference: one version replies, "Here is the vacation
               policy." Another version checks your balance, knows your manager,
-              and suggests which days are open. The second one? That's when
+              and suggests which days are open. The second one? That&apos;s when
               people start trusting it like a colleague.
             </p>
           </div>
@@ -201,7 +201,7 @@ const HowToDesignAnAIAgentPage = () => {
               Improvement Is Ongoing, Not Optional
             </h5>
             <p className="hoves-p1-reg">
-              Unlike traditional software launches, an AI assistant isn't
+              Unlike traditional software launches, an AI assistant isn&apos;t
               finished when it goes live. Think of it as a living product.
             </p>
             <p className="hoves-p1-reg">Keep asking:</p>
@@ -248,7 +248,7 @@ const HowToDesignAnAIAgentPage = () => {
           <div id="future-ready" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Keeping It Future-Ready</h5>
             <p className="hoves-p1-reg">
-              AI will keep evolving. But the principles don't change: clarity,
+              AI will keep evolving. But the principles don&apos;t change: clarity,
               focus, and measurable value. Regular updates to the knowledge
               base, integrations that keep pace with other systems, and cautious
               testing of new models ensure the assistant stays relevant.
@@ -260,14 +260,14 @@ const HowToDesignAnAIAgentPage = () => {
           <div id="closing-thought" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Closing Thought</h5>
             <p className="hoves-p1-reg">
-              The assistants that survive aren't futuristic experiments. They're
+              The assistants that survive aren&apos;t futuristic experiments. They&apos;re
               practical, small at first, and built to solve a single pressing
               problem. From there, they grow naturally.
             </p>
             <p className="hoves-p1-reg">
               Choose one use case. Place it where work already happens. Start
               lean, add intelligence slowly, and refine constantly. Do this, and
-              your assistant won't just impress in a demo. It will be the tool
+              your assistant won&apos;t just impress in a demo. It will be the tool
               everyone quietly relies on, day after day.
             </p>
           </div>
