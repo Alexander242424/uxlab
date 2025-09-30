@@ -120,9 +120,9 @@ const MasteringDesignSystemsPage = () => {
             src="/video/reel-short.mp4"
           />
           <h6 className="hoves-h6-med">
-            In today's fast-paced digital world, where user experiences define
+            In today&apos;s fast-paced digital world, where user experiences define
             success, design systems have emerged as a cornerstone for efficient
-            product development. Whether you're a startup scaling your app or an
+            product development. Whether you&apos;re a startup scaling your app or an
             enterprise managing multiple platforms, understanding design systems
             can transform how your teams collaborate and innovate. This
             comprehensive guide explores what a design system is, its key
@@ -155,7 +155,7 @@ const MasteringDesignSystemsPage = () => {
             </p>
             <p className="hoves-p1-reg">
               As design expert Nathan Curtis aptly puts it, "A design system
-              isn't a project. It's a product serving products." This mindset
+              isn&apos;t a project. It&apos;s a product serving products." This mindset
               shifts it from a one-time effort to an ongoing asset that evolves
               with your brand.
             </p>
@@ -194,13 +194,13 @@ const MasteringDesignSystemsPage = () => {
               The Evolution of Design Systems: Not a New Idea
             </h5>
             <p className="hoves-p1-reg">
-              Design systems aren't a modern invention; their roots trace back
-              to early style guides. For instance, NASA's 1975 graphics
+              Design systems aren&apos;t a modern invention; their roots trace back
+              to early style guides. For instance, NASA&apos;s 1975 graphics
               standards manual provided unified branding guidelines, setting a
               precedent for consistency in visual communication.
             </p>
             <p className="hoves-p1-reg">
-              What's evolved is the "atomic" methodology, breaking interfaces
+              What&apos;s evolved is the "atomic" methodology, breaking interfaces
               into granular, responsive components adaptable to various devices
               and screen sizes. Modern tools enable dynamic updates via
               cloud-based platforms, turning static documents into living
@@ -217,7 +217,7 @@ const MasteringDesignSystemsPage = () => {
               Design Systems vs. Pattern Libraries and Style Guides
             </h5>
             <p className="hoves-p1-reg">
-              It's common to confuse these terms, but they differ in scope and
+              It&apos;s common to confuse these terms, but they differ in scope and
               application. Style guides are primarily static references for
               branding elements like logos, colors, and fonts, often aimed at
               marketing or design teams.
@@ -229,7 +229,7 @@ const MasteringDesignSystemsPage = () => {
             </p>
             <p className="hoves-p1-reg">
               A design system integrates both, adding layers like design
-              principles, code snippets, toolkits, and real-world examples. It's
+              principles, code snippets, toolkits, and real-world examples. It&apos;s
               dynamic and collaborative, often linking directly to production
               code for developers. As Alla Kholmatova notes in her book on
               design systems, "Without a shared design language and practices,
@@ -267,7 +267,7 @@ const MasteringDesignSystemsPage = () => {
               evolution.
             </p>
             <p className="hoves-p1-reg">
-              Remember, design systems are perpetual; they're refined as new
+              Remember, design systems are perpetual; they&apos;re refined as new
               patterns emerge. Starting with shared principles helps sustain a
               cohesive language, preventing fragmentation over time.
             </p>
@@ -368,10 +368,10 @@ const MasteringDesignSystemsPage = () => {
               paving the way for sustainable growth.
             </p>
             <p className="hoves-p1-reg">
-              In summary, embracing a design system isn't just about tools—it's
+              In summary, embracing a design system isn&apos;t just about tools—it&apos;s
               a cultural shift toward efficiency and excellence in digital
               product design. Start small, audit your current setup, and watch
-              your team's productivity soar.
+              your team&apos;s productivity soar.
             </p>
           </div>
           <div className="xl:hidden">
