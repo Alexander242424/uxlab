@@ -274,7 +274,7 @@ const MasteringDesignSystemsPage = () => {
             <p className="hoves-p1-reg">
               As Drew Bridewell from InVision emphasizes, &quot;A design system acts
               as the connective tissue that holds together your entire
-              platform."
+              platform.&quot;
             </p>
           </div>
           <div id="measurement-frequency" className="flex flex-col gap-4">
