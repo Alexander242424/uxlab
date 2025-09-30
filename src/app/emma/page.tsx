@@ -50,7 +50,7 @@ export default function EmmaPage() {
         <CasesHeroSections
           logo={<EmmaLogo />}
           logoMobile={<EmmaLogoMobile />}
-          text={["Innovating Personalized", "Sleep Worldwide"]}
+          text={["Innovating Personalized Sleep", "Experiences Worldwide"]}
           companyName="Emma Sleep"
           year="2022 - 2024"
           deliverables="Guidelines and Portals · Digital Asset Management · Templates"
@@ -116,18 +116,20 @@ export default function EmmaPage() {
           className="md:pt-20! md:pb-[120px]!"
           title={["Solution"]}
           description={[
-            "Bring a product mindset to take",
-            "Emma Sleep from a simple mobile app",
-            "to an educational hub with personalised",
-            "tracking and recommending experience.",
+            "We introduced a product mindset",
+            "to transform Emma Sleep from",
+            "a simple mobile app to an",
+            "educational hub with",
+            "personalised tracking and",
+            "recommendation experience."
           ]}
           mobileTitle={["Solution"]}
           mobileDescription={[
-            "Bring a product mindset to take",
-            "Emma Sleep from a simple",
+            "We introduced a product mindset to",
+            "transform Emma Sleep from a simple",
             "mobile app to an educational hub",
-            "with personalised tracking",
-            "and recommending experience.",
+            "with personalised tracking and",
+            "recommendation experience."
           ]}
         />
         <OverviewCaseVideoSection src="/video/qAqiq3kj5RDlGq0v3MWZfWRsTzM.mp4" />
@@ -163,7 +165,7 @@ export default function EmmaPage() {
           description={[
             "Yeah, it was a game changer - bring",
             "Sleep Habits as a feature which is",
-            "training user behaviors on a daily",
+            "guiding user habits on a daily",
             "basis.",
           ]}
           mobileTitle={["Bringing Sleep Habits"]}
@@ -171,7 +173,7 @@ export default function EmmaPage() {
             "Yeah, it was a game",
             "changer - bring Sleep Habits",
             "as a feature which is training",
-            "user behaviors on a daily basis.",
+            "guiding user habits on a daily basis.",
           ]}
         />
         <OverviewCaseVideoSection src="/video/kX7KGpaqnCXw1cVoWgL7iiBKs.mp4" />
@@ -180,17 +182,15 @@ export default function EmmaPage() {
           title={["Sleep Reports Creating"]}
           description={[
             "Sleep Reports on a daily basis helping",
-            "users to make sure everything is going well",
-            "or they have to change something",
-            "in their daily routine",
+            "users to stay on track or fine-tune",
+            "their daily routine when needed.",
           ]}
           mobileTitle={["Sleep Reports Creating"]}
           mobileDescription={[
             "Sleep Reports on a daily basis",
-            "helping users to make sure",
-            "everything is going well or",
-            "they have to change something",
-            "in their daily routine",
+            "helping users to stay on track or",
+            "fine-tune their daily routine when",
+            "needed.",
           ]}
         />
         <OverviewCaseVideoTextSection

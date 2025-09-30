@@ -100,7 +100,7 @@ export default function QuestionSections() {
         >
           <div className="mb-4 md:mb-[175px] hidden md:block">
             <SplitText
-              text="Frequently Asked Question"
+              text="Frequently Asked Questions"
               className="hoves-p1-reg"
               splitType="lines"
               delay={100}
@@ -135,10 +135,10 @@ export default function QuestionSections() {
               <AvatarsSVG />
             </div>
             <div className="flex flex-col gap-3.5">
-              <h4 className="hoves-h4-med">Book an intro call</h4>
+              <h4 className="hoves-h4-med">Book a Call</h4>
               <p className="hoves-p2-reg">
-                Tell us about your project your timelime and budget. Expect a
-                message from us in 12 hours.
+                Tell us about your project, your timeline, and budget. 
+                We'll get back to you within 12 hours.
               </p>
             </div>
             <div className="flex gap-2 items-center">
@@ -162,7 +162,7 @@ export default function QuestionSections() {
         <div className="relative block md:hidden">
           <div className="block mb-4">
             <SplitText
-              text="Frequently Asked Question"
+              text="Frequently Asked Questions"
               className="hoves-p1-reg"
               splitType="lines"
               delay={100}

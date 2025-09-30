@@ -26,7 +26,7 @@ const services: ServiceItem[] = [
     subtitle:
       "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
     videoSrc: "/ServiceItemVideo/pinance.mp4",
-    time: "8-12 weeks",
+    time: "8 - 12 weeks",
   },
   {
     title: "Day-to-day exceptional design support",
@@ -52,10 +52,10 @@ const firstParagraph = [
 ];
 
 const secondParagraph = [
-  "UXLAB moves as fast as your roadmap; we don't design",
-  "screens, we design revenue. Working shoulder-to",
-  "shoulder with founders and your product team to ",
-  "deliver fast.",
+  "UXLAB moves at the speed of your roadmap;",
+  "we don't design screens, we design revenue.",
+  "Working shoulder-to shoulder with founders ",
+  "and your product team to deliver fast.",
 ];
 
 const firstParagraphMobile = [
@@ -67,7 +67,7 @@ const firstParagraphMobile = [
 ];
 
 const secondParagraphMobile = [
-  "UXLAB moves as fast as ",
+  "UXLAB moves at the speed of",
   "your roadmap; we don't design ",
   "screens, we design revenue.",
   "Working shoulder-to shoulder",
@@ -118,7 +118,7 @@ export default function ServiceItems() {
         <div className="sm:w-[47%] flex items-start">
           <div className="grid not-sm:flex not-sm:gap-8 w-full">
             <SplitText
-              text="Your Grow Starts Here"
+              text="Your Growth Starts Here."
               className="text-text-700 hoves-p1-reg"
               splitType="lines"
               delay={100}

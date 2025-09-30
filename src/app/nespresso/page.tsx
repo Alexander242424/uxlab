@@ -49,7 +49,7 @@ export default function NespressoPage() {
         <CasesHeroSections
           logo={<NespressoLogo />}
           logoMobile={<NespressoLogoMobile />}
-          text={["Seamless Coffee", "E-Commerce Coffee Experience"]}
+          text={["Seamless Coffee", "E-Commerce Experience"]}
           companyName="Nespresso"
           year="2022 - 2023"
           deliverables="Design Strategy · UX · Design System · Branding"
@@ -64,7 +64,7 @@ export default function NespressoPage() {
         <OverviewCaseVideoSection
           className="!p-0"
           imageSrc={HeroImage}
-          imageAlt="Emma Sleep case study"
+          imageAlt="Nespresso Case Study"
           isAnimated={false}
         />
         <OverviewCaseTestimonialSection
@@ -97,15 +97,15 @@ export default function NespressoPage() {
           className="md:pt-[120px]! md:pb-20!"
           title="Challenge"
           description={[
-            "Not enough enhances brand",
-            "engagement, poor user experience,",
+            "Low brand engagement,",
+            "poor user experience",
             "and just another website that",
             "sells coffee products",
           ]}
           mobileTitle="Challenge"
           mobileDescription={[
-            "Not enough enhances brand",
-            "engagement, poor user experience,",
+            "Low brand engagement,",
+            "poor user experience",
             "and just another website that",
             "sells coffee products",
           ]}
@@ -121,7 +121,7 @@ export default function NespressoPage() {
             "creating a seamless, user-centered",
             "journey that strengthens brand",
             "connection and elevates product",
-            "engagement with exceptional",
+            "engagement with an exceptional",
             "conversion rate.",
           ]}
           mobileTitle="Solution"
@@ -134,7 +134,7 @@ export default function NespressoPage() {
             "seamless, user-centered journey",
             "that strengthens brand",
             "connection and elevates product",
-            "engagement with exceptional",
+            "engagement with an exceptional",
             "conversion rate.",
           ]}
         />
@@ -201,14 +201,14 @@ export default function NespressoPage() {
         />
         <InfoBlock
           className="md:py-20!"
-          title="In the specifics."
+          title="Under the hood."
           description={[
             "Nespressos revamped design",
             "system, Holistic, enhances efficiency",
             "and delivers consistent experiences",
             "across all platforms at scale.",
           ]}
-          mobileTitle="In the specifics."
+          mobileTitle="Under the hood."
           mobileDescription={[
             "Nespressos revamped",
             "design system, Holistic, enhances",
