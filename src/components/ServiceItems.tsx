@@ -120,7 +120,7 @@ const TextWithLinks = ({
               className={`${className} inline relative group`}
             >
               {part.content}
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+              <span className="absolute -bottom-0.5 left-0 w-0 h-[1px] header-underline underline-animation"></span>
             </Link>
           );
         }
