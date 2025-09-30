@@ -149,13 +149,13 @@ const MasteringDesignSystemsPage = () => {
             <p className="hoves-p1-reg">
               Design systems typically encompass a style guide outlining visual
               standards like color palettes, typography hierarchies, spacing
-              rules, and grid systems. By serving as a "single source of truth,"
+              rules, and grid systems. By serving as a &quot;single source of truth,&quot;
               they align everyone in the organization, from designers to
               stakeholders, reducing miscommunication and redundant work.
             </p>
             <p className="hoves-p1-reg">
-              As design expert Nathan Curtis aptly puts it, "A design system
-              isn&apos;t a project. It&apos;s a product serving products." This mindset
+              As design expert Nathan Curtis aptly puts it, &quot;A design system
+              isn&apos;t a project. It&apos;s a product serving products.&quot; This mindset
               shifts it from a one-time effort to an ongoing asset that evolves
               with your brand.
             </p>
@@ -183,7 +183,7 @@ const MasteringDesignSystemsPage = () => {
             </p>
             <p className="hoves-p1-reg">
               Moreover, in decentralized setups, design systems cut down on
-              "busywork," boosting productivity and morale. They act as a bridge
+              &quot;busywork,&quot; boosting productivity and morale. They act as a bridge
               between design and development, ensuring faster handoffs and fewer
               revisions, ultimately accelerating time-to-market for new
               features.
@@ -200,7 +200,7 @@ const MasteringDesignSystemsPage = () => {
               precedent for consistency in visual communication.
             </p>
             <p className="hoves-p1-reg">
-              What&apos;s evolved is the "atomic" methodology, breaking interfaces
+              What&apos;s evolved is the &quot;atomic&quot; methodology, breaking interfaces
               into granular, responsive components adaptable to various devices
               and screen sizes. Modern tools enable dynamic updates via
               cloud-based platforms, turning static documents into living
@@ -232,8 +232,8 @@ const MasteringDesignSystemsPage = () => {
               principles, code snippets, toolkits, and real-world examples. It&apos;s
               dynamic and collaborative, often linking directly to production
               code for developers. As Alla Kholmatova notes in her book on
-              design systems, "Without a shared design language and practices,
-              collaboration is difficult." This holistic approach makes design
+              design systems, &quot;Without a shared design language and practices,
+              collaboration is difficult.&quot; This holistic approach makes design
               systems indispensable for cross-functional teams.
             </p>
           </div>
@@ -272,7 +272,7 @@ const MasteringDesignSystemsPage = () => {
               cohesive language, preventing fragmentation over time.
             </p>
             <p className="hoves-p1-reg">
-              As Drew Bridewell from InVision emphasizes, "A design system acts
+              As Drew Bridewell from InVision emphasizes, &quot;A design system acts
               as the connective tissue that holds together your entire
               platform."
             </p>

@@ -96,7 +96,7 @@ const HowToDesignAnAIAgentPage = () => {
           </div>
           <div id="being-in-the-world" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">
-              Why a Practical Assistant Matters More Than a "Smart" One
+              Why a Practical Assistant Matters More Than a &quot;Smart&quot; One
             </h5>
             <p className="hoves-p1-reg">
               Think of the last chatbot you tried. Did it feel like talking to a
@@ -132,7 +132,7 @@ const HowToDesignAnAIAgentPage = () => {
             <p className="hoves-p1-reg">
               Why? Because fixing a single bottleneck visibly builds confidence.
               The assistant becomes the tool people actually talk about in
-              meetings: "That bot saved me an hour yesterday." That&apos;s when
+              meetings: &quot;That bot saved me an hour yesterday.&quot; That&apos;s when
               adoption spreads.
             </p>
           </div>
@@ -141,7 +141,7 @@ const HowToDesignAnAIAgentPage = () => {
               Meeting People Where They Already Work
             </h5>
             <p className="hoves-p1-reg">
-              Nobody wakes up wanting to install "yet another tool." The easiest
+              Nobody wakes up wanting to install &quot;yet another tool.&quot; The easiest
               way to encourage adoption is to put your assistant directly into
               existing workflows.
             </p>
@@ -162,7 +162,7 @@ const HowToDesignAnAIAgentPage = () => {
             <h5 className="hoves-h5-med">Lean First, Fancy Later</h5>
             <p className="hoves-p1-reg">
               Picture two approaches. In one, a team spends six months building
-              a "sophisticated" assistant, complete with natural language
+              a &quot;sophisticated&quot; assistant, complete with natural language
               models, integrations everywhere, and polished UIs. In the other,
               they launch a simple version in four weeks — one that handles 20%
               of questions but handles them well.
@@ -181,7 +181,7 @@ const HowToDesignAnAIAgentPage = () => {
             </h5>
             <p className="hoves-p1-reg">
               Once the assistant has found its footing, you can layer in
-              context. This is where it moves from "helpful" to "essential."
+              context. This is where it moves from &quot;helpful&quot; to &quot;essential.&quot;
             </p>
             <ul className="hoves-p1-reg list-disc list-inside pl-2">
               <li>Ground it with company documentation and FAQs.</li>
@@ -190,7 +190,7 @@ const HowToDesignAnAIAgentPage = () => {
               <li>Personalize answers depending on who&apos;s asking.</li>
             </ul>
             <p className="hoves-p1-reg">
-              Here&apos;s the difference: one version replies, "Here is the vacation
+              Here&apos;s the difference: one version replies, &quot;Here is the vacation
               policy." Another version checks your balance, knows your manager,
               and suggests which days are open. The second one? That&apos;s when
               people start trusting it like a colleague.
@@ -219,7 +219,7 @@ const HowToDesignAnAIAgentPage = () => {
           <div id="mistakes-sink-assistants" className="flex flex-col gap-4">
             <h5 className="hoves-h5-med">Mistakes That Sink Assistants</h5>
             <p className="hoves-p1-reg">
-              There are patterns worth avoiding: chasing "general intelligence"
+              There are patterns worth avoiding: chasing &quot;general intelligence&quot;
               that nobody needs, piling on features that distract from the core,
               forgetting to offer a human fallback, or skipping measurement
               entirely.

@@ -247,8 +247,8 @@ const ConversionRateOptimizationPage = () => {
                 provide multiple payment options.
               </li>
               <li>
-                Show trust signals: Display reviews, ratings, and "secure
-                checkout" icons.
+                Show trust signals: Display reviews, ratings, and &quot;secure
+                checkout&quot; icons.
               </li>
               <li>
                 Use urgency & scarcity: Highlight low stock levels or
@@ -285,7 +285,7 @@ const ConversionRateOptimizationPage = () => {
               </li>
               <li>
                 Clear onboarding flow: Guide users step by step to their first
-                "aha" moment.
+                &quot;aha&quot; moment.
               </li>
               <li>
                 Communicate value quickly: Use headlines and CTAs that show
@@ -331,8 +331,8 @@ const ConversionRateOptimizationPage = () => {
                 conversions. Compress images, use CDNs, and optimize code.
               </li>
               <li>
-                Compelling CTAs Use action-oriented language: "Start Free
-                Trial," "Add to Cart," "Get My Plan."
+                Compelling CTAs Use action-oriented language: &quot;Start Free
+                Trial,&quot; &quot;Add to Cart,&quot; &quot;Get My Plan.&quot;
               </li>
               <li>
                 Personalization Tailor recommendations, content, and offers
@@ -390,7 +390,7 @@ const ConversionRateOptimizationPage = () => {
               ads.
             </p>
             <p className="hoves-p1-reg">
-              This is why CRO is often called the "secret growth lever" that top
+              This is why CRO is often called the &quot;secret growth lever&quot; that top
               businesses rely on.
             </p>
           </div>
