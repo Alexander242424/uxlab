@@ -20,13 +20,13 @@ const faqData = [
     id: "item-1",
     question: "What sets UXLAB apart from the rest of the design agencies?",
     answer:
-      "In a crowded market of UX and branding agencies, UXLAB stands out by forging trusted, long-term partnerships where our client's success drives our own. Combining cross-disciplinary design and product expertise, we deliver scalable, future-proof experiences that strengthen brands and drive measurable growth.",
+      "In a crowded market of UX and branding agencies, UXLAB stands out by forging trusted, long-term partnerships where our client&apos;s success drives our own. Combining cross-disciplinary design and product expertise, we deliver scalable, future-proof experiences that strengthen brands and drive measurable growth.",
   },
   {
     id: "item-2",
     question: "What makes a client a great fit for UXLAB?",
     answer:
-      "We partner with clients who understand that brand and design are more than aesthetics - they're powerful drivers of business growth. Our ideal partners embrace collaboration, prioritize leadership alignment, and welcome strategic thinking. By actively engaging in the process and supporting our structured approach, they allow us to transform ideas into meaningful, measurable outcomes that deliver lasting impact.",
+      "We partner with clients who understand that brand and design are more than aesthetics - they&apos;re powerful drivers of business growth. Our ideal partners embrace collaboration, prioritize leadership alignment, and welcome strategic thinking. By actively engaging in the process and supporting our structured approach, they allow us to transform ideas into meaningful, measurable outcomes that deliver lasting impact.",
   },
   {
     id: "item-3",
@@ -44,11 +44,11 @@ const faqData = [
     id: "item-5",
     question: "How much does it cost to hire you for the design project?",
     answer:
-      "Let's discuss more details about your project, scope, timeline and then we will have a better understanding of what the costs could be.",
+      "Let&apos;s discuss more details about your project, scope, timeline and then we will have a better understanding of what the costs could be.",
   },
   {
     id: "item-6",
-    question: "What if I don't like the initial concepts?",
+    question: "What if I don&apos;t like the initial concepts?",
     answer:
       "We follow a collaborative process with continuous feedback loops to keep every project aligned with your vision. When initial concepts don’t hit the mark, we actively discuss your input and refine our approach to deliver a successful, results-driven outcome.",
   },
@@ -138,7 +138,7 @@ export default function QuestionSections() {
               <h4 className="hoves-h4-med">Book a Call</h4>
               <p className="hoves-p2-reg">
                 Tell us about your project, your timeline, and budget. 
-                We'll get back to you within 12 hours.
+                We&apos;ll get back to you within 12 hours.
               </p>
             </div>
             <div className="flex gap-2 items-center">
