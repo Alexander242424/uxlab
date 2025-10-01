@@ -285,6 +285,7 @@ export default function OurCases() {
                   <Image
                     src={cases[hoveredIndex].ImageSrc}
                     alt={cases[hoveredIndex].alt}
+                    loading={"lazy"}
                     width={200}
                     height={150}
                     className="w-full object-cover"
@@ -300,6 +301,7 @@ export default function OurCases() {
                       <Image
                         src={cases[hoveredIndex].src}
                         alt={cases[hoveredIndex].alt}
+                        loading={"lazy"}
                         width={200}
                         height={150}
                         className="w-full h-auto object-cover mt-2 rounded-lg"
@@ -381,6 +383,7 @@ export default function OurCases() {
                 <Image
                   src={item.src}
                   alt={item.alt}
+                  loading={"lazy"}
                   width={400}
                   height={300}
                   data-index={index}

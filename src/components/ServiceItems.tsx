@@ -237,7 +237,7 @@ export default function ServiceItems() {
 
       <div className="flex flex-col sm:flex-row gap-12">
         <div className="sm:w-[47%] flex items-start">
-          <div className="grid not-sm:flex not-sm:gap-8 w-full">
+          <div className="grid not-sm:flex-col not-sm:gap-8 w-full">
             <SplitText
               text="Your Growth Starts Here."
               className="text-text-700 hoves-p1-reg"
@@ -448,7 +448,7 @@ export default function ServiceItems() {
                 >
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex w-full justify-between">
-                      <div className="flex flex-col -mt-3 md:max-w-[55%]">
+                      <div className="flex flex-col md:-mt-3 md:max-w-[55%]">
                         <h3 className="hoves-h5-med text-text-700 relative group/title max-w-fit">
                           {service.title}
                           <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>

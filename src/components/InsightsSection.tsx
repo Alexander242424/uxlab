@@ -13,7 +13,7 @@ const insightsData = [
     id: 1,
     href: "/how-to-design-an-ai-agent",
     image: AIAgentImage,
-    title: "How to Design an Agentic AI For Business Impact",
+    title: ["How to Design an Agentic AI","For Business Impact"],
     author: "John Doe",
     date: "20 November 2024",
     badgeText: "UX Design",
@@ -22,7 +22,7 @@ const insightsData = [
     id: 2,
     href: "/conversion-rate-optimization-ecommerce-saas",
     image: ConversionRateOptimizationImage,
-    title: "The Ultimate Guide for Scalable Digital Products",
+    title: ["The Ultimate Guide for", "Scalable Digital Products"],
     author: "Mike Johnson",
     date: "15 November 2024",
     badgeText: "Strategy",
@@ -31,7 +31,7 @@ const insightsData = [
     id: 3,
     href: "/mastering-design-systems",
     image: DesignSystemsImage,
-    title: "How to Improve Website Conversion for E-Commerce",
+    title: ["How to Improve Website", "Conversion for E-Commerce"],
     author: "Jane Smith",
     date: "18 November 2024",
     badgeText: "Research",
@@ -78,7 +78,8 @@ export default function InsightsSection() {
               <div className="overflow-hidden rounded-lg relative">
                 <Image 
                   src={insight.image}
-                  alt={insight.title}
+                  alt={""}
+                  loading={"lazy"}
                   className="transition-transform duration-300 ease-out hover:scale-110 w-full h-auto aspect-[5/3] hover:cursor-pointer"
                 />
                 <div className="absolute bottom-1 left-1 bg-white/80 backdrop-blur-sm rounded w-fit h-6 px-2 py-1 flex items-center justify-center uppercase">
@@ -88,10 +89,14 @@ export default function InsightsSection() {
                 </div>
               </div>
               <div className="flex flex-col gap-4 md:gap-6">
-                <p className="text-black hoves-p1-big relative group w-fit">
-                  {insight.title}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black underline-animation"></span>
-                </p>
+                <div className="flex flex-col gap-1 md:gap-2">
+                  {insight.title.map((line, lineIndex) => (
+                    <p key={lineIndex} className="text-black hoves-p1-big relative group w-fit">
+                      {line}
+                      <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black underline-animation"></span>
+                    </p>
+                  ))}
+                </div>
                 <p className="text-black hoves-p3-reg">
                   {insight.author} · {insight.date}
                 </p>

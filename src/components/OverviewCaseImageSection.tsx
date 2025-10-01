@@ -64,6 +64,7 @@ export default function OverviewCaseImageSection({
       >
         <Image
           className={cn("w-full h-full object-cover", imageClassName)}
+          loading={"lazy"}
           src={imageSrc}
           alt={imageAlt}
         />
@@ -91,6 +92,7 @@ export default function OverviewCaseImageSection({
       ) : (
         <Image
           className={cn("w-full h-full object-cover", imageClassName2)}
+          loading={"lazy"}
           src={imageSrc2 || ""
           }
           alt={imageAlt2 || ""}

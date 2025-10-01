@@ -266,6 +266,7 @@ export default function ScrollingTextCaseSection({
               <Image
                 src={imageSrc}
                 alt={imageAlt}
+                loading={"lazy"}
                 width={400}
                 height={300}
                 className={`w-full rounded-md image-hover-darken ${
@@ -306,6 +307,7 @@ export default function ScrollingTextCaseSection({
               <div className="rounded-[8px] overflow-hidden">
                 <Image
                   src={smallImageSrc}
+                  loading={"lazy"}
                   alt={imageAlt}
                   width={200}
                   height={150}
@@ -319,6 +321,7 @@ export default function ScrollingTextCaseSection({
                     <p className="text-gray-500 hoves-p1-reg text-xs">Video unavailable</p>
                     <Image
                       src={imageSrc}
+                      loading={"lazy"}
                       alt={imageAlt}
                       width={200}
                       height={150}

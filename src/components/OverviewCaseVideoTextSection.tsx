@@ -49,7 +49,7 @@ export default function OverviewCaseVideoTextSection({
         {videoSrc ? (
           <VideoPlayer className="w-full h-full object-cover" src={videoSrc} />
         ) : (
-          <Image src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+          <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
         )}
       </motion.div>
       <div className={`flex flex-col gap-4 ${textMaxWidth}`}>

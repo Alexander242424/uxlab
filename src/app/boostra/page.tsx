@@ -60,10 +60,11 @@ export default function BoostraPage() {
           logo={<BoostraLogo />}
           logoMobile={<BoostraLogoMobile />}
           text={[
-            "From MVP",
-            "to Growth Platform → +47%",
-            "Conversion Uplift & powerful",
-            "referral growth.",
+            "From MVP to",
+            "Growth Platform → +47%",
+            "Conversion Uplift",
+            "& powerful referral",
+            "growth."
           ]}
           companyName="Boostra"
           year="2022 - 2024"
