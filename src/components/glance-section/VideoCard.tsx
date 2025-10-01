@@ -57,6 +57,7 @@ export default function VideoCard({
         src={imageSrc}
         alt=""
         fill
+        loading={"lazy"}
         className={`object-cover w-full h-full transition-opacity duration-300 pointer-events-none ${
           videoSrc ? 'opacity-100 group-hover:opacity-0' : 'opacity-100'
         }`}

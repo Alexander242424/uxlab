@@ -45,7 +45,7 @@ export default function OverviewCaseVideoSection({
       {src ? (
         <VideoPlayer src={src} />
       ) : (
-        <Image src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+        <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
       )}
     </motion.div>
     ) : (
@@ -53,7 +53,7 @@ export default function OverviewCaseVideoSection({
         {src ? (
           <VideoPlayer src={src} />
         ) : (
-          <Image src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+          <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
         )}
       </div>
     )
