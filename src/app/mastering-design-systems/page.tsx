@@ -106,7 +106,7 @@ const MasteringDesignSystemsPage = () => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-[2px]">
-                  <p className="hoves-p3-reg">Jul 26, 2025</p>
+                  <p className="hoves-p3-reg">29 August 2025</p>
                   <p className="hoves-p3-reg text-[#5C5C5C]">Release</p>
                 </div>
                 <div className="flex flex-col gap-[2px]">

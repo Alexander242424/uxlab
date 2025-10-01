@@ -46,8 +46,8 @@ const TextWithLinks = ({
     
     // Знаходимо всі посилання в тексті
     const linkPatterns = [
-      { pattern: /Boostra →/g, href: 'http://getboostra.com' },
-      { pattern: /Tapmy\.store →/g, href: 'https://app.tapmy.store/get-started' }
+      { pattern: /Boostra/g, href: 'http://getboostra.com' },
+      { pattern: /Tapmy\.store/g, href: 'https://app.tapmy.store/get-started' }
     ];
     
     // Збираємо всі знайдені посилання з їх позиціями
@@ -198,15 +198,15 @@ const secondParagraphMobile = [
 
 const thirdParagraph = [
   "Beyond client work, we've launched our own SaaS products —",
-  "Boostra → to boost conversions with AI, and Tapmy.store →",
+  "Boostra to boost conversions with AI, and Tapmy.store",
   "to power mobile ecommerce for influencers with built-in payments.",
 ];
 
 const thirdParagraphMobile = [
   "Beyond client work, we've launched",
-  "our own SaaS products — Boostra →",
+  "our own SaaS products — Boostra",
   "to boost conversions with AI, and",
-  "Tapmy.store → to power mobile",
+  "Tapmy.store to power mobile",
   "ecommerce for influencers with",
   "built-in payments.",
 ];
@@ -293,7 +293,7 @@ export default function ServiceItems() {
               <div className="flex flex-col">
                 {thirdParagraphMobile.map((text, index) => {
                   const globalIndex = 1 + firstParagraph.length + secondParagraph.length + index;
-                  if (text.includes("Boostra →") || text.includes("Tapmy.store →")) {
+                  if (text.includes("Boostra") || text.includes("Tapmy.store")) {
                     return (
                       <TextWithLinks
                         key={`third-${index}`}
@@ -378,7 +378,7 @@ export default function ServiceItems() {
             <div className="flex flex-col">
               {thirdParagraph.map((text, index) => {
                 const globalIndex = 1 + firstParagraph.length + secondParagraph.length + index;
-                if (text.includes("Boostra →") || text.includes("Tapmy.store →")) {
+                if (text.includes("Boostra") || text.includes("Tapmy.store")) {
                   return (
                     <TextWithLinks
                       key={`third-${index}`}
