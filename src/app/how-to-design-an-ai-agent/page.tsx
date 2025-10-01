@@ -3,6 +3,43 @@ import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
 import InsightsSection from "@/components/InsightsSection";
 import ArticlePageWrapper from "@/components/ArticlePageWrapper";
+import AIAgentImage from "@/assets/Article/AI Agents.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "How to Design an AI Assistant That Delivers Real Business Impact",
+  description:
+    "Learn how to design practical AI assistants that reduce workload, improve efficiency, and become trusted daily tools — not just impressive demos.",
+  keywords:
+    "AI assistant design, AI agent development, AI automation strategy, minimum viable AI, conversational AI design, AI customer support, HR automation with AI, SaaS AI assistant, AI workflow optimization",
+  openGraph: {
+    title:
+      "How to Design an AI Assistant That Delivers Real Business Impact",
+    description:
+      "Learn how to design practical AI assistants that reduce workload, improve efficiency, and become trusted daily tools — not just impressive demos.",
+    url: "https://uxlab.digital/mastering-design-systems",
+    siteName: "UXLAB",
+    images: [
+      {
+        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        width: 1200,
+        height: 630,
+        alt: "Mastering Design Systems - UXLAB",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "How to Design an AI Assistant That Delivers Real Business Impact",
+    description:
+      "Learn how to design practical AI assistants that reduce workload, improve efficiency, and become trusted daily tools — not just impressive demos.",
+    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+  },
+};
 
 const HowToDesignAnAIAgentPage = () => {
   const navigationItems = [
@@ -79,7 +116,8 @@ const HowToDesignAnAIAgentPage = () => {
           </div>
           <OverviewCaseVideoSection
             className="!p-0 !m-0"
-            src="/video/reel-short.mp4"
+            imageSrc={AIAgentImage}
+            imageAlt="AI Agents"
           />
           <h6 className="hoves-h6-med">
             Artificial intelligence is no longer a shiny demo tucked away in

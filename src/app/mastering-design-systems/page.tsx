@@ -1,9 +1,10 @@
+import { Metadata } from "next";
 import AlexIcon from "@/assets/alex.svg";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
 import InsightsSection from "@/components/InsightsSection";
 import ArticlePageWrapper from "@/components/ArticlePageWrapper";
-import { Metadata } from "next";
+import DesignSystemsImage from "@/assets/Article/Design System.png";
 
 export const metadata: Metadata = {
   title:
@@ -117,7 +118,8 @@ const MasteringDesignSystemsPage = () => {
           </div>
           <OverviewCaseVideoSection
             className="!p-0 !m-0"
-            src="/video/reel-short.mp4"
+            imageSrc={DesignSystemsImage}
+            imageAlt="Design Systems"
           />
           <h6 className="hoves-h6-med">
             In today&apos;s fast-paced digital world, where user experiences define

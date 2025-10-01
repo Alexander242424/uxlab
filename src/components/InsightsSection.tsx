@@ -1,7 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import Background from "../assets/image/Insights/Background.png";
+import AIAgentImage from "@/assets/Article/AI Agents.png";
+import DesignSystemsImage from "@/assets/Article/Design System.png";
+import ConversionRateOptimizationImage from "@/assets/Article/Conversion Rate Optimization.png";
 import { motion, useInView } from "motion/react";
 import SplitText from "./SplitText";
 import Link from "next/link";
@@ -10,46 +12,30 @@ const insightsData = [
   {
     id: 1,
     href: "/how-to-design-an-ai-agent",
-    image: Background,
-    title: "Improving User Retention",
+    image: AIAgentImage,
+    title: "How to Design an Agentic AI For Business Impact",
     author: "John Doe",
     date: "20 November 2024",
     badgeText: "UX Design",
   },
   {
     id: 2,
-    href: "/mastering-design-systems",
-    image: Background,
-    title: "The Future ",
-    author: "Jane Smith",
-    date: "18 November 2024",
-    badgeText: "Research",
-  },
-  {
-    id: 3,
     href: "/conversion-rate-optimization-ecommerce-saas",
-    image: Background,
-    title: "Through UX Design",
+    image: ConversionRateOptimizationImage,
+    title: "The Ultimate Guide for Scalable Digital Products",
     author: "Mike Johnson",
     date: "15 November 2024",
     badgeText: "Strategy",
   },
-  // {
-  //   id: 4,
-  //   image: Background,
-  //   title: "Thinking in Product",
-  //   author: "Sarah Wilson",
-  //   date: "12 November 2024",
-  //   badgeText: "Product",
-  // },
-  // {
-  //   id: 5,
-  //   image: Background,
-  //   title: "Thinking in Product",
-  //   author: "Sarah Wilson",
-  //   date: "12 November 2024",
-  //   badgeText: "Product",
-  // },
+  {
+    id: 3,
+    href: "/mastering-design-systems",
+    image: DesignSystemsImage,
+    title: "How to Improve Website Conversion for E-Commerce",
+    author: "Jane Smith",
+    date: "18 November 2024",
+    badgeText: "Research",
+  },
 ];
 
 export default function InsightsSection() {
