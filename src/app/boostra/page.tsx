@@ -142,7 +142,7 @@ export default function BoostraPage() {
         />
         <InfoBlock
           className="md:pt-20! md:pb-[120px]!"
-          title={["Solution: Streamlined flows and growth-driven design"]}
+          title={["Solution"]}
           description={[
             "By redesigning onboarding, we reduced",
             "drop-offs by 20% and boosted payment",
@@ -153,8 +153,7 @@ export default function BoostraPage() {
             "and UI lifted conversions by 10%.",
           ]}
           mobileTitle={[
-            "Solution: Transforming the app",
-            "into a personalized educational hub",
+            "Solution",
           ]}
           mobileDescription={[
             "By redesigning onboarding,",
@@ -200,7 +199,7 @@ export default function BoostraPage() {
         /> */}
         <InfoBlock
           className="md:py-20!"
-          title={["Solution: Turning users into growth partners"]}
+          title={["Solution"]}
           description={[
             "Boostra introduced a simple “invite and earn”",
             "feature that encouraged users to share the",
@@ -209,7 +208,7 @@ export default function BoostraPage() {
             "a steady stream of new users — all without",
             "extra ad spend.",
           ]}
-          mobileTitle={["Solution: Turning users", "into growth partners"]}
+          mobileTitle={["Solution"]}
           mobileDescription={[
             "Boostra introduced a simple",
             "“invite and earn” feature that",
@@ -227,14 +226,14 @@ export default function BoostraPage() {
         />
         <InfoBlock
           className="md:py-20!"
-          title={["Solution: Streamlined checkout flow"]}
+          title={["Solution"]}
           description={[
             "Through UX refinements in the checkout",
             "process, Boostra unlocked higher payment",
             "completions, proving that smoother flows",
             "directly drive bottom-line growth.",
           ]}
-          mobileTitle={["Solution: Streamlined checkout flow"]}
+          mobileTitle={["Solution"]}
           mobileDescription={[
             "Through UX refinements in",
             "the checkout process, Boostra",

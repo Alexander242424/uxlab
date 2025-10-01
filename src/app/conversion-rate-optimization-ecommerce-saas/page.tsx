@@ -1,9 +1,10 @@
+import { Metadata } from "next";
 import AlexIcon from "@/assets/alex.svg";
 import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
 import InsightsSection from "@/components/InsightsSection";
 import ArticlePageWrapper from "@/components/ArticlePageWrapper";
-import { Metadata } from "next";
+import ConversionRateOptimizationImage from "@/assets/Article/Conversion Rate Optimization.png";
 
 export const metadata: Metadata = {
   title:
@@ -112,7 +113,8 @@ const ConversionRateOptimizationPage = () => {
           </div>
           <OverviewCaseVideoSection
             className="!p-0 !m-0"
-            src="/video/reel-short.mp4"
+            imageSrc={ConversionRateOptimizationImage}
+            imageAlt="Conversion Rate Optimization"
           />
           <h6 className="hoves-h6-med">
             The ultimate canvas is out there — as opposed to what&apos;s
