@@ -9,6 +9,7 @@ interface VideoCardProps {
   imageSrc: string | StaticImageData;
   descriptionText: string;
   withAuthor?: boolean;
+  companyText?: string;
   authorText?: string;
   isForbes?: boolean;
   logo: React.ReactNode;
@@ -26,6 +27,7 @@ export default function VideoCard({
   descriptionText,
   authorText,
   isForbes = false,
+  companyText,
   logo,
   avatar,
   url,
@@ -59,7 +61,7 @@ export default function VideoCard({
         fill
         loading={"lazy"}
         className={`object-cover w-full h-full transition-opacity duration-300 pointer-events-none ${
-          videoSrc ? 'opacity-100 group-hover:opacity-0' : 'opacity-100'
+          videoSrc ? "opacity-100 group-hover:opacity-0" : "opacity-100"
         }`}
       />
 
@@ -76,7 +78,9 @@ export default function VideoCard({
       )}
 
       {/* Content */}
-      <div className={`relative z-10 p-8 flex flex-1 flex-col gap-5 ${containerClassName}`}>
+      <div
+        className={`relative z-10 p-8 flex flex-1 flex-col gap-5 ${containerClassName}`}
+      >
         <div className="flex items-center justify-center bg-[#0000002E] rounded-lg py-[4px] px-[8px] w-fit backdrop-blur-[4px]">
           <p className="font-tt-hoves font-medium text-[12px] uppercase">
             {badgetText}
@@ -85,25 +89,32 @@ export default function VideoCard({
         <div className="flex flex-col gap-2">
           <h6 className=" hoves-h6-med">{descriptionText}</h6>
         </div>
-        {withAuthor && (
-          isForbes ? (
+        {withAuthor &&
+          (isForbes ? (
             <div className="flex gap-3">
-              <p className="hoves-p2-reg">Todd Arnold, Board Member <br /> @ Forbes Travel Guide</p>
+              <p className="hoves-p2-reg">
+                Todd Arnold, Board Member <br /> @ Forbes Travel Guide
+              </p>
             </div>
           ) : (
-          <div className="flex gap-3">
-            <div className="min-w-fit">
-            {avatar}
+            <div className="flex gap-3">
+              <div className="min-w-fit">{avatar}</div>
+              <div className="flex flex-col gap-[2px] justify-center">
+                <div className="flex items-center gap-2">
+                  <p className="hoves-p2-reg">{authorText}</p>
+                  <a
+                    className="cursor-pointer"
+                    href={url || ""}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </div>
+                <p className="hoves-p2-reg text-text-500">{companyText}</p>
+              </div>
             </div>
-            <div className="flex flex-col gap-[6px]">
-              <p className="hoves-p2-reg">{authorText}</p>
-              <a className="cursor-pointer" href={url || ""} target="_blank" rel="noopener noreferrer">
-               <LinkedInIcon />
-              </a>
-            </div>
-          </div>
-          )
-        )}
+          ))}
         <div className="flex items-end justify-end mt-auto">{logo}</div>
       </div>
     </div>
