@@ -1158,6 +1158,14 @@ header {
   -ms-overflow-style: none;
 }
 
+.hero-section-text {
+  top: -140px;
+  @media (min-width: 400px) {
+    top: -30px;
+  }
+}
+
+
 /* Hide scrollbar globally for all browsers */
 html {
   scrollbar-width: none; /* Firefox */
