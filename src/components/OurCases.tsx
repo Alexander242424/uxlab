@@ -39,7 +39,7 @@ const cases: OurCasesItem[] = [
     src: OptionImage,
     alt: "Emma usability audit case study",
     title:
-      "+47% Engagement Lift in 1 Month After a 5-Minute Boostra Usability & Accessibility Audit of Emma",
+      "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
     videoSrc: "/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4",
     videoTitle: "Emma usability audit case study",
     logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
@@ -50,7 +50,7 @@ const cases: OurCasesItem[] = [
     alt: "Boostra analysis case study",
     ImageSrc: BoostraSmallImage,
     title:
-      "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Sapphire",
+      "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoTitle: "Boostra analysis case study",
     logo: <BoostraLogo className="not-md:scale-[0.8]!" />,
     link: "/boostra",
@@ -59,7 +59,7 @@ const cases: OurCasesItem[] = [
     src: GuideImage,
     alt: "Nespresso case study",
     title:
-      "+54% More Hotel Bookings in Just 1 Month After a 5-Minute Boostra Analysis of ForbesTravelGuide.com",
+      "Redesigned Coffee Shopping into a High-Voltage Brand Experience",
     videoSrc: "/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4",
     videoTitle: "Nespresso case study",
     logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,

@@ -19,10 +19,10 @@ export default function HeroSection() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-170px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-140px)]"
+      className="flex flex-col relative min-h-[calc(100vh-72px-230px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-140px)]"
     >
       <motion.div
-        className="absolute sm:-top-[30px] -top-[50px] 2xl:top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
+        className="absolute hero-section-text 2xl:top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
         style={{ y: textBlockY }}
       >
         <div className="w-full flex min-h-[300px]">

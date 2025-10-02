@@ -14,8 +14,8 @@ const insightsData = [
     href: "/how-to-design-an-ai-agent",
     image: AIAgentImage,
     title: ["How to Design an Agentic AI"],
-    author: "John Doe",
-    date: "20 November 2024",
+    author: "Alex Tyshchenko",
+    date: "1 October 2025",
     badgeText: "UX Design",
   },
   {
@@ -23,8 +23,8 @@ const insightsData = [
     href: "/conversion-rate-optimization-ecommerce-saas",
     image: ConversionRateOptimizationImage,
     title: ["The Ultimate Design System Guide"],
-    author: "Mike Johnson",
-    date: "15 November 2024",
+    author: "Alex Tyshchenko",
+    date: "15 September 2025",
     badgeText: "Strategy",
   },
   {
@@ -32,8 +32,8 @@ const insightsData = [
     href: "/mastering-design-systems",
     image: DesignSystemsImage,
     title: ["How to Improve Website Conversions"],
-    author: "Jane Smith",
-    date: "18 November 2024",
+    author: "Alex Tyshchenko",
+    date: "29 August 2025",
     badgeText: "Research",
   },
 ];
