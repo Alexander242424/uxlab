@@ -24,13 +24,13 @@ export default function CasesHeroSections({
   const isMobile = useIsMobile();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: containerRef,
+  //   offset: ["start end", "end start"],
+  // });
 
-  // Паралакс ефект для текстового блоку (повільний рух вниз)
-  const textBlockY = useTransform(scrollYProgress, [0, 1], [0, 400]);
+  // // Паралакс ефект для текстового блоку (повільний рух вниз)
+  // const textBlockY = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   const textArray = Array.isArray(text) ? text : [text];
 
@@ -40,8 +40,9 @@ export default function CasesHeroSections({
       className="flex flex-col relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]"
     >
       <motion.div
-        className="absolute sm:-top-[110px] -top-[200px] lg:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
-        style={{ y: textBlockY }}
+        className="absolute -top-[120px] sm:top-[90px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
+        // className="absolute sm:-top-[110px] -top-[200px] lg:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
+        // style={{ y: textBlockY }}
       >
         <div className="w-full flex flex-col sm:flex-row px-4 sm:px-6 md:px-10">
           <div className="mb-[48px] mt-[40px] sm:mt-0 sm:mb-0 sm:w-1/3">

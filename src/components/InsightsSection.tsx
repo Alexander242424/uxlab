@@ -20,21 +20,21 @@ const insightsData = [
   },
   {
     id: 2,
-    href: "/conversion-rate-optimization-ecommerce-saas",
-    image: DesignSystemsImage,
-    title: ["The Ultimate Design System Guide"],
-    author: "Alex Tyshchenko",
-    date: "15 September 2025",
-    badgeText: "Strategy",
-  },
-  {
-    id: 3,
     href: "/mastering-design-systems",
-    image: ConversionRateOptimizationImage,
+    image: DesignSystemsImage,
     title: ["How to Improve Website Conversions"],
     author: "Alex Tyshchenko",
     date: "29 August 2025",
     badgeText: "Research",
+  },
+  {
+    id: 3,
+    href: "/conversion-rate-optimization-ecommerce-saas",
+    image: ConversionRateOptimizationImage,
+    title: ["The Ultimate Design System Guide"],
+    author: "Alex Tyshchenko",
+    date: "15 September 2025",
+    badgeText: "Strategy",
   },
 ];
 
