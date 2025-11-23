@@ -10,9 +10,7 @@ type Props = {
 const LenisProvider: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     const lenis = new Lenis({
-      smooth: true,
       lerp: 0.05, // 0–1, чем меньше — тем более "вязкий" скролл
-      
     });
 
     let frameId: number;
