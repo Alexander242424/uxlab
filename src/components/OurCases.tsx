@@ -275,8 +275,8 @@ export default function OurCases() {
             className="video-cursor video-cursor-enter"
             style={{
               ...cursorStyles,
-              opacity: 1,
-              transform: "scale(0) translateY(10px)",
+              opacity: 0,
+              transform: "scale(0.95) translateY(10px)",
             }}
           >
             <div className="bg-transparent">
@@ -318,7 +318,9 @@ export default function OurCases() {
                   </div>
                 )
               )}
-              <div className="video-cursor-content">
+              
+            </div>
+            <div className="video-cursor-content">
                 <motion.p
                   className="text-text-700 hoves-p3-reg text-center"
                   animate={{
@@ -332,7 +334,6 @@ export default function OurCases() {
                   {cases[hoveredIndex].videoTitle}
                 </motion.p>
               </div>
-            </div>
           </div>
         )}
 
