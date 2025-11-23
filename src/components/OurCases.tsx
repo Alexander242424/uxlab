@@ -275,8 +275,8 @@ export default function OurCases() {
             className="video-cursor video-cursor-enter"
             style={{
               ...cursorStyles,
-              opacity: 0,
-              transform: "scale(0.95) translateY(10px)",
+              opacity: 1,
+              transform: "scale(0) translateY(10px)",
             }}
           >
             <div className="bg-transparent">

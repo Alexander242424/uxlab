@@ -8,7 +8,7 @@ import { CalModalProvider } from "@/context/CalModalContext";
 import CalModal from "@/components/CalModal";
 import AppWrapper from "@/components/AppWrapper";
 import { Metadata } from "next";
-import LenisProvider from "@/context/LenisProvider";
+import LenisProvider from "@/components/ui/LenisProvider";
 const ttHoves = localFont({
   src: [
     {
