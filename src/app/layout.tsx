@@ -8,7 +8,7 @@ import { CalModalProvider } from "@/context/CalModalContext";
 import CalModal from "@/components/CalModal";
 import AppWrapper from "@/components/AppWrapper";
 import { Metadata } from "next";
-
+import LenisProvider from "@/context/LenisProvider";
 const ttHoves = localFont({
   src: [
     {
@@ -80,22 +80,24 @@ export default function RootLayout({
       <body
         className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
       >
-        <VideoModalProvider>
-          <CalModalProvider>
-            <AppWrapper>
-              <div
-                className="min-h-screen flex flex-col"
-                style={{ scrollBehavior: "smooth" }}
-              >
-                <Header />
-                <main className="flex-1 overflow-x-hidden ">{children}</main>
-                <Footer />
-              </div>
-            </AppWrapper>
-            <VideoModal />
-            <CalModal />
-          </CalModalProvider>
-        </VideoModalProvider>
+        <LenisProvider>
+          <VideoModalProvider>
+            <CalModalProvider>
+              <AppWrapper>
+                <div
+                  className="min-h-screen flex flex-col"
+                  style={{ scrollBehavior: "smooth" }}
+                >
+                  <Header />
+                  <main className="flex-1 overflow-x-hidden ">{children}</main>
+                  <Footer />
+                </div>
+              </AppWrapper>
+              <VideoModal />
+              <CalModal />
+            </CalModalProvider>
+          </VideoModalProvider>
+        </LenisProvider>
       </body>
     </html>
   );

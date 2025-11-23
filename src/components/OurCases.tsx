@@ -246,7 +246,7 @@ export default function OurCases() {
       // Затримка перед показом відео
       const timer = setTimeout(() => {
         setShowVideo(true);
-      }, 300);
+      }, 0);
 
       return () => {
         clearTimeout(timer);

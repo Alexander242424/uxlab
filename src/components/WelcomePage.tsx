@@ -46,7 +46,7 @@ export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{
-                    duration: 1.0,
+                    duration: 1.2,
                     ease: "easeInOut",
                     delay: 0.5 + index * 0.2,
                   }}

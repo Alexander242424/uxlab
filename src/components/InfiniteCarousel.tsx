@@ -32,18 +32,6 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
           animation: `infiniteScroll ${speed}s linear infinite`,
         } as React.CSSProperties}
       >
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            @keyframes infiniteScroll {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-16.666%);
-              }
-            }
-          `
-        }} />
         {duplicatedSlides.map((slide, index) => (
           <div
             key={index}
