@@ -1,0 +1,70 @@
+/* Анімації для HoverSection */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.5s ease-out forwards;
+}
+
+.hover-section-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease-out;
+}
+
+.hover-section-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Анімація для збільшення секції */
+.section-expand {
+  transition: flex-basis 1s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.7s ease-out;
+}
+
+.section-collapse {
+  transition: flex-basis 1s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.7s ease-out;
+}
+
+/* Плавна анімація для flex-basis */
+.flex-smooth {
+  transition: flex-basis 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Мобільні стилі для секцій */
+@media (max-width: 1024px) {
+  .flex-smooth {
+    flex-basis: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .flex-smooth:last-child {
+    border-bottom: none !important;
+  }
+}

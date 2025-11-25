@@ -1,0 +1,7 @@
+.hero-section-text {
+  top: -140px;
+
+  @media (min-width: 400px) {
+    top: -30px;
+  }
+}

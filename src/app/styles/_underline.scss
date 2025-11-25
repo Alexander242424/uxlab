@@ -1,0 +1,38 @@
+/* Анімація для підкреслення */
+@keyframes underlineIn {
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes underlineOut {
+  from {
+    width: 100%;
+    left: 0;
+  }
+  to {
+    width: 0;
+    left: 100%;
+  }
+}
+
+/* Початковий стан - підкреслення невидиме */
+.underline-animation {
+  width: 0;
+  left: 0;
+}
+
+/* Анімація тільки при hover */
+.group:hover .underline-animation {
+  animation: underlineIn 0.3s ease-out forwards;
+}
+
+/* Анімація тільки якщо елемент був в стані hover */
+.group.has-hovered:not(:hover) .underline-animation {
+  animation: underlineOut 0.3s ease-out forwards;
+}

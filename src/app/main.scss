@@ -1,0 +1,18 @@
+@import "tailwindcss";
+// @import "tw-animate-css";
+
+// Базовые вещи: кастомные варианты, theme, :root, .dark, base layer и шрифты
+@import "./styles/base/tailwind";
+// Типографика по брейкпоинтам
+@import "./styles/base/typography";
+
+// Компонентные штуки
+@import "./styles/accordion";
+@import "./styles/underline";
+@import "./styles/carousel";
+@import "./styles/hover-section";
+@import "./styles/custom-cursor";
+@import "./styles/header";
+@import "./styles/video-cursor";
+@import "./styles/scrollbar";
+@import "./styles/hero";

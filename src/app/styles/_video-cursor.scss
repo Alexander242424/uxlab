@@ -1,0 +1,83 @@
+/* Кастомний курсор з відео для OurCases */
+.video-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: left, top, transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transition: opacity 0.3s, transform 0.3s,
+    clip-path 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Кастомний курсор для Showreel */
+.showreel-cursor {
+  position: fixed !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+  will-change: left, top, transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transition: opacity 0.4s ease-in-out;
+  background: transparent !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+
+.video-cursor-container {
+  overflow: hidden;
+}
+
+.video-cursor-content {
+  padding-top: 12px;
+}
+
+.video-cursor-content p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  position: relative;
+  z-index: 1;
+}
+
+/* Плавна анімація появи/зникнення */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    clip-path: inset(40%);
+    border-radius: 20px;
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0%);
+    border-radius: 20px;
+  }
+}
+
+.video-cursor-enter {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+/* Стилі для затемнення зображень при наведенні */
+.image-hover-darken {
+  transition: filter 0.3s ease-in-out;
+}
+
+.image-hover-darken:hover {
+  filter: brightness(0.5);
+}
+
+.video-player-provider {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}

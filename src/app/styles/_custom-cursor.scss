@@ -1,0 +1,25 @@
+/* Кастомний курсор для hover секцій */
+.hover-section {
+  cursor: pointer;
+}
+
+.hover-section:hover {
+  cursor: none;
+}
+
+.hover-cursor {
+  position: fixed;
+  width: 86px;
+  height: 86px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}

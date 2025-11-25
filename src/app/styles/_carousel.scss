@@ -1,0 +1,43 @@
+.embla {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.embla__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  position: relative;
+}
+
+/* Infinite carousel styles */
+.infinite-carousel {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  user-select: none;
+}
+
+.infinite-carousel:active {
+  cursor: grabbing;
+}
+
+.infinite-carousel__track {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  will-change: transform;
+}
+
+.infinite-carousel__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  position: relative;
+}
