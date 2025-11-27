@@ -6,26 +6,29 @@ import SplitText from "./SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useCalModal } from "@/context/CalModalContext";
 import VideoPlayer from "./VideoPlayer";
-
+import CountUp from "react-countup";
+import dynamic from "next/dynamic";
 interface ServiceItem {
   title: string;
   subtitle: string;
   videoSrc: string;
   time: string;
 }
-
+const CountUp = dynamic(() => import("react-countup"), {
+  ssr: false,
+});
 // Кастомний компонент для рендерингу тексту з посиланнями
-const TextWithLinks = ({ 
-  text, 
-  className, 
-  globalIndex, 
-  delay = 100, 
-  duration = 0.8, 
+const TextWithLinks = ({
+  text,
+  className,
+  globalIndex,
+  delay = 100,
+  duration = 0.8,
   ease = "power3.out",
   from = { opacity: 0, y: 50 },
   to = { opacity: 1, y: 0 },
   threshold = 0.1,
-  rootMargin = "100px"
+  rootMargin = "100px",
 }: {
   text: string;
   className: string;
@@ -39,17 +42,17 @@ const TextWithLinks = ({
   rootMargin?: string;
 }) => {
   const isMobile = useIsMobile();
-  
+
   // Функція для розбиття тексту на частини з посиланнями
   const parseTextWithLinks = (text: string) => {
-    const parts: Array<{ type: 'text' | 'link'; content: string; href?: string }> = [];
-    
+    const parts: Array<{ type: "text" | "link"; content: string; href?: string }> = [];
+
     // Знаходимо всі посилання в тексті
     const linkPatterns = [
-      { pattern: /Boostra/g, href: 'http://getboostra.com' },
-      { pattern: /Tapmy\.store/g, href: 'https://app.tapmy.store/get-started' }
+      { pattern: /Boostra/g, href: "http://getboostra.com" },
+      { pattern: /Tapmy\.store/g, href: "https://app.tapmy.store/get-started" },
     ];
-    
+
     // Збираємо всі знайдені посилання з їх позиціями
     const allMatches: Array<{ content: string; href: string; index: number }> = [];
     linkPatterns.forEach(({ pattern, href }) => {
@@ -58,42 +61,42 @@ const TextWithLinks = ({
         allMatches.push({
           content: match[0],
           href,
-          index: match.index
+          index: match.index,
         });
       }
     });
-    
+
     // Сортуємо за позицією
     allMatches.sort((a, b) => a.index - b.index);
-    
+
     if (allMatches.length === 0) {
-      parts.push({ type: 'text', content: text });
+      parts.push({ type: "text", content: text });
     } else {
       let lastIndex = 0;
-      
+
       allMatches.forEach((match) => {
         // Додаємо текст перед посиланням
         if (match.index > lastIndex) {
           const beforeText = text.substring(lastIndex, match.index);
           if (beforeText) {
-            parts.push({ type: 'text', content: beforeText });
+            parts.push({ type: "text", content: beforeText });
           }
         }
-        
+
         // Додаємо посилання
-        parts.push({ type: 'link', content: match.content, href: match.href });
+        parts.push({ type: "link", content: match.content, href: match.href });
         lastIndex = match.index + match.content.length;
       });
-      
+
       // Додаємо текст після останнього посилання
       if (lastIndex < text.length) {
         const afterText = text.substring(lastIndex);
         if (afterText) {
-          parts.push({ type: 'text', content: afterText });
+          parts.push({ type: "text", content: afterText });
         }
       }
     }
-    
+
     return parts;
   };
 
@@ -107,18 +110,14 @@ const TextWithLinks = ({
       viewport={{ once: true, margin: rootMargin }}
       transition={{
         duration,
-        delay: (delay / 1000) + (globalIndex * 0.3),
+        delay: delay / 1000 + globalIndex * 0.3,
         ease: ease === "power3.out" ? [0.25, 0.46, 0.45, 0.94] : "easeOut",
       }}
     >
       {textParts.map((part, index) => {
-        if (part.type === 'link' && part.href) {
+        if (part.type === "link" && part.href) {
           return (
-            <Link
-              key={index}
-              href={part.href}
-              className={`${className} inline relative group`}
-            >
+            <Link key={index} href={part.href} className={`${className} inline relative group`}>
               {part.content}
               <span className="absolute -bottom-0.5 left-0 w-0 h-[1px] header-underline underline-animation"></span>
             </Link>
@@ -137,29 +136,25 @@ const TextWithLinks = ({
 const services: ServiceItem[] = [
   {
     title: "Ship new products from zero-to-one",
-    subtitle:
-      "When you need to design MVP from the ground up with a high-powered product team.",
+    subtitle: "When you need to design MVP from the ground up with a high-powered product team.",
     videoSrc: "/ServiceItemVideo/landnq.mp4",
     time: "4 - 8 weeks",
   },
   {
     title: "Set the bar for category defining design",
-    subtitle:
-      "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
+    subtitle: "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
     videoSrc: "/ServiceItemVideo/pinance.mp4",
     time: "8 - 12 weeks",
   },
   {
     title: "Day-to-day exceptional design support",
-    subtitle:
-      "Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
+    subtitle: "Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
     videoSrc: "/ServiceItemVideo/paydesk.mp4",
     time: "Starting from 4 weeks",
   },
   {
     title: "Conversion Rate Optimization (CRO)",
-    subtitle:
-      "We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
+    subtitle: "We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
     videoSrc: "/ServiceItemVideo/seviceBell.mp4",
     time: "4 - 12 weeks",
   },
@@ -210,6 +205,11 @@ const thirdParagraphMobile = [
   "ecommerce for influencers with",
   "built-in payments.",
 ];
+const quantsList = [
+  { value: 2.2, suffix: "B", label: "Global users reached" },
+  { value: 138, suffix: "", label: "Brands uplifted" },
+  { value: 2, suffix: "", label: "Product sprint" },
+];
 
 export default function ServiceItems() {
   const isMobile = useIsMobile();
@@ -220,10 +220,7 @@ export default function ServiceItems() {
   };
 
   return (
-    <section
-      id="services"
-      className="bg-bg-black mx-4 md:mx-10 pt-10 md:pt-20 relative overflow-hidden"
-    >
+    <section id="services" className="bg-bg-black mx-4 md:mx-10 pt-10 md:pt-20 relative overflow-hidden">
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
         style={{
@@ -415,8 +412,26 @@ export default function ServiceItems() {
               })}
             </div>
           </div>
+          <div className="flex quants_row">
+            {quantsList.map((quant, index) => (
+              <div key={index} className="flex flex-col mr-8 last:mr-0 quant">
+                <span className="hoves-h3-med text-text-700 main_text">
+                  <CountUp
+                    start={0}
+                    end={quant.value}
+                    duration={3}
+                    decimals={Number.isInteger(quant.value) ? 0 : 1} // 2.2 -> 1 знак
+                    enableScrollSpy // стартует, когда элемент попал в viewport
+                    // scrollSpyOnce
+                  />
+                  {quant.suffix}
+                </span>
+                <span className="text-text-500 hoves-p1-reg mt-2">{quant.label}</span>
+              </div>
+            ))}
+          </div>
 
-          <div className="space-y-0">
+         {/* <div className="space-y-0">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -442,10 +457,7 @@ export default function ServiceItems() {
                   }}
                   style={{ transformOrigin: "left" }}
                 />
-                <div
-                  className="flex items-center justify-between py-6 sm:py-10"
-                  onClick={handleCalClick}
-                >
+                <div className="flex items-center justify-between py-6 sm:py-10" onClick={handleCalClick}>
                   <div className="flex flex-col gap-2 w-full">
                     <div className="flex w-full justify-between">
                       <div className="flex flex-col md:-mt-3 md:max-w-[55%]">
@@ -453,22 +465,12 @@ export default function ServiceItems() {
                           {service.title}
                           <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                         </h3>
-                        <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3">
-                          {service.subtitle}
-                        </p>
-                        <p className="text-text-500 hoves-p1-reg pt-4 md:pt-6">
-                          {service.time}
-                        </p>
+                        <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3">{service.subtitle}</p>
+                        <p className="text-text-500 hoves-p1-reg pt-4 md:pt-6">{service.time}</p>
                       </div>
                       {!isMobile && (
                         <div className="flex items-end justify-center">
                           <div className="group-hover:max-h-[200px] group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out">
-                            {/* <Image
-                              src={service.imageSrc}
-                              alt={service.title}
-                              width={270}
-                              height={180}
-                            /> */}
                             <VideoPlayer src={service.videoSrc} className="w-full h-full max-h-[180px] max-w-[270px] object-cover" />
                           </div>
                         </div>
@@ -495,7 +497,7 @@ export default function ServiceItems() {
                 )}
               </motion.div>
             ))}
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>

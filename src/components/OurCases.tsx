@@ -36,7 +36,7 @@ const cases: OurCasesItem[] = [
     alt: "Emma usability audit case study",
     title: "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
     videoSrc: "/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4",
-    videoTitle: "Emma usability audit case study",
+    videoTitle: "Emma usability audit\ncase study",
     logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
     link: "/emma",
   },
@@ -77,37 +77,61 @@ export default function OurCases() {
   const [isInitialized, setIsInitialized] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [captionOffset, setCaptionOffset] = useState(0);
-
+const captionRef = useRef<HTMLSpanElement | null>(null);
   // === смещение текста по X в пределах ширины карточки ===
   const handleMouseMove = useCallback(
-    (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+  (e: MouseEvent) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
 
-      if (!isHovering || isMobile || hoveredIndex === null) return;
+    if (!isHovering || isMobile || hoveredIndex === null) return;
 
-      const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement | null;
+    const currentImage = document.querySelector(
+      `#cases .cursor-pointer img[data-index="${hoveredIndex}"]`
+    ) as HTMLElement | null;
 
-      if (!currentImage) {
-        setCaptionOffset(0);
-        return;
-      }
+    if (!currentImage) {
+      setCaptionOffset(0);
+      return;
+    }
 
-      const imageRect = currentImage.getBoundingClientRect();
+    const imageRect = currentImage.getBoundingClientRect();
 
-      // 0..1 по ширине исходной картинки
-      const relativeX = (e.clientX - imageRect.left) / imageRect.width;
-      // -1..1 (левый → центр → правый)
-      const normalizedX = relativeX * 2 - 1;
+    // 0..1 по ширине исходной картинки
+    const relativeX = (e.clientX - imageRect.left) / imageRect.width;
+    // -1..1 (лево → центр → право)
+    const normalizedX = relativeX * 2 - 1;
 
-      // Внутренняя ширина с учётом паддинга по 40px
-      const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
-      const maxOffset = Math.max(0, innerWidth / 2); // центр ± (innerWidth/2)
+    // внутренняя ширина с учётом паддинга
+    const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
 
-      const offset = normalizedX * maxOffset;
-      setCaptionOffset(offset);
-    },
-    [isHovering, isMobile, hoveredIndex]
-  );
+    // реальная ширина текста
+    const captionWidth = captionRef.current
+      ? captionRef.current.getBoundingClientRect().width
+      : 0;
+
+    // сколько свободного места остаётся вокруг текста
+    const freeSpace = Math.max(0, innerWidth - captionWidth);
+
+    // максимум, насколько можно сдвинуть от центра, чтобы текст не вылез
+    const maxOffset = freeSpace / 2;
+
+    // если текст шире, чем innerWidth — просто не двигаем
+    if (maxOffset === 0) {
+      setCaptionOffset(0);
+      return;
+    }
+
+    let offset = normalizedX * maxOffset;
+
+    // на всякий случай кламп
+    if (offset > maxOffset) offset = maxOffset;
+    if (offset < -maxOffset) offset = -maxOffset;
+
+    setCaptionOffset(offset);
+  },
+  [isHovering, isMobile, hoveredIndex]
+);
+
 
   // === resize + mousemove ===
   useEffect(() => {
@@ -286,11 +310,15 @@ export default function OurCases() {
               </div>
             </div>
 
-            {/* Текст: fade-in по opacity + движение по X, с учётом паддинга 40 */}
-            <span className="anime__wrapper">
+            <span
+              className="anime__wrapper block"
+              style={{
+                width: PREVIEW_WIDTH,
+              }}
+            >
               <motion.span
                 key={hoveredIndex}
-                className="hoves-p3-reg text-text-700 whitespace-nowrap"
+                className="hoves-p3-reg text-text-700 whitespace-nowrap block"
                 style={{ x: captionOffset }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, x: captionOffset }}
@@ -327,9 +355,9 @@ export default function OurCases() {
           msOverflowStyle: "none",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 w-full">
           {cases.map((item, index) => (
-            <div key={index} className="flex flex-col gap-[21px] w-full h-full">
+            <div key={index} className="flex flex-col gap-[21px] w-full case_box">
               <div
                 className="relative cursor-pointer"
                 onMouseEnter={() => {

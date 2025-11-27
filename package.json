@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-     "dev": "set WATCHPACK_POLLING=true&& next dev",
+    "dev": "set WATCHPACK_POLLING=true&& next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -23,6 +23,7 @@
     "motion": "^12.23.12",
     "next": "15.5.0",
     "react": "19.1.0",
+    "react-countup": "^6.5.3",
     "react-dom": "19.1.0",
     "react-intersection-observer": "^9.16.0",
     "sass": "^1.94.2",

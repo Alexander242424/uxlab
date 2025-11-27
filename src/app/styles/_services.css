@@ -1,0 +1,14 @@
+.quants_row {
+    border: none;
+}
+.quants_row .main_text {
+   font-family: var(--font-tt-hoves), system-ui, sans-serif;
+   font-weight: 300;
+   font-size: clamp(2rem, 5vw, 7.5rem);
+}
+.quant {
+    border: none;
+    border-left: 1px solid #FFFFFF29;
+    padding-left: 32px;
+    width: 100%;
+}

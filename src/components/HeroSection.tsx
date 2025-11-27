@@ -32,7 +32,7 @@ export default function HeroSection() {
           {/* Right part - contains the text block */}
           <div className="sm:w-1/2 w-full flex justify-start  hero_text_block">
             <div className="flex-col flex">
-              <p className="text-text-700 hoves-p1-reg md:text-right !text-nowrap ">
+              <p className="text-text-700 hoves-p1-reg sm:text-right !text-nowrap ">
                 Work with eCommerce bands
               </p>
               <p className="text-text-700 hoves-p1-reg !text-nowrap">

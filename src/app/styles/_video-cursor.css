@@ -49,12 +49,12 @@
 
 .hover-image .anime__wrapper {
   display: block;
-  margin-top: 8px;        
+  margin-top: 8px;
 }
 
 .hover-image .anime__wrapper span {
-  display: inline-block;
-  white-space: nowrap;
+  display: block;
+  text-align: center;
 }
 
 
@@ -78,4 +78,13 @@
     clip-path: inset(0%);
     border-radius: 8px;
   }
+}
+.case_box:nth-child(odd) .cursor-pointer{
+  max-height: 741px;
+}
+.case_box:nth-child(even) .cursor-pointer{
+  max-height: 885px;
+}
+.case_box img{
+  height: 100%;
 }
