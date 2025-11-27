@@ -63,8 +63,8 @@ const cases: OurCasesItem[] = [
 // === Константы превью-курсор карточки ===
 const PREVIEW_WIDTH = 220;
 const PREVIEW_HEIGHT = 264;
-const PREVIEW_PADDING_X = 40; // паддинг для текста внутри
-const BOUNDARY_PADDING = 40; // отступ от краёв большой карточки
+const PREVIEW_PADDING_X = 0; // паддинг для текста внутри
+const BOUNDARY_PADDING = 80; // отступ от краёв большой карточки
 
 export default function OurCases() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

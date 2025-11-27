@@ -162,17 +162,23 @@ const services: ServiceItem[] = [
 
 // Define text arrays for SplitText components
 const firstParagraph = [
-  "Since 2012, we've helped the most innovative",
-  "startups and reputable brands design and launch",
-  "digital products people talk about loudly.",
+  "Since 2012, we helped the most innovative and",
+  "reputable brands design, improve and ship the most",
+  "effective experiences.",
 ];
 
 const secondParagraph = [
-  "UXLAB moves at the speed of your roadmap;",
-  "we don't design screens, we design revenue.",
-  "Working shoulder-to shoulder with founders ",
-  "and your product team to deliver fast.",
+  "Consistent results are delivered through our unique,",
+  "DesignOps Framework and flexible collaboration",
+  "model.",
 ];
+
+
+// const thirdParagraph = [
+//   "Beyond client work, we've launched our own SaaS products —",
+//   "Boostra to boost conversions with AI, and Tapmy.store",
+//   "to power mobile ecommerce for influencers with built-in payments.",
+// ];
 
 const firstParagraphMobile = [
   "Since 2012, we've helped",
@@ -191,20 +197,14 @@ const secondParagraphMobile = [
   "team to deliver fast.",
 ];
 
-const thirdParagraph = [
-  "Beyond client work, we've launched our own SaaS products —",
-  "Boostra to boost conversions with AI, and Tapmy.store",
-  "to power mobile ecommerce for influencers with built-in payments.",
-];
-
-const thirdParagraphMobile = [
-  "Beyond client work, we've launched",
-  "our own SaaS products — Boostra",
-  "to boost conversions with AI, and",
-  "Tapmy.store to power mobile",
-  "ecommerce for influencers with",
-  "built-in payments.",
-];
+// const thirdParagraphMobile = [
+//   "Beyond client work, we've launched",
+//   "our own SaaS products — Boostra",
+//   "to boost conversions with AI, and",
+//   "Tapmy.store to power mobile",
+//   "ecommerce for influencers with",
+//   "built-in payments.",
+// ];
 const quantsList = [
   { value: 2.2, suffix: "B", label: "Global users reached" },
   { value: 138, suffix: "", label: "Brands uplifted" },
@@ -287,45 +287,7 @@ export default function ServiceItems() {
                   />
                 ))}
               </div>
-              <div className="flex flex-col">
-                {thirdParagraphMobile.map((text, index) => {
-                  const globalIndex = 1 + firstParagraph.length + secondParagraph.length + index;
-                  if (text.includes("Boostra") || text.includes("Tapmy.store")) {
-                    return (
-                      <TextWithLinks
-                        key={`third-${index}`}
-                        text={text}
-                        className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                        globalIndex={globalIndex}
-                        delay={100}
-                        duration={0.8}
-                        ease="power3.out"
-                        from={{ opacity: 0, y: 50 }}
-                        to={{ opacity: 1, y: 0 }}
-                        threshold={0.1}
-                        rootMargin="100px"
-                      />
-                    );
-                  }
-                  return (
-                    <SplitText
-                      key={`third-${index}`}
-                      text={text}
-                      className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                      globalIndex={globalIndex}
-                      splitType="lines"
-                      delay={100}
-                      duration={0.8}
-                      ease="power3.out"
-                      from={{ opacity: 0, y: 50 }}
-                      to={{ opacity: 1, y: 0 }}
-                      threshold={0.1}
-                      rootMargin="100px"
-                      textAlign="left"
-                    />
-                  );
-                })}
-              </div>
+              
             </div>
           </div>
         </div>
@@ -370,46 +332,6 @@ export default function ServiceItems() {
                   textAlign="left"
                 />
               ))}
-            </div>
-
-            <div className="flex flex-col">
-              {thirdParagraph.map((text, index) => {
-                const globalIndex = 1 + firstParagraph.length + secondParagraph.length + index;
-                if (text.includes("Boostra") || text.includes("Tapmy.store")) {
-                  return (
-                    <TextWithLinks
-                      key={`third-${index}`}
-                      text={text}
-                      className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                      globalIndex={globalIndex}
-                      delay={100}
-                      duration={0.8}
-                      ease="power3.out"
-                      from={{ opacity: 0, y: 50 }}
-                      to={{ opacity: 1, y: 0 }}
-                      threshold={0.1}
-                      rootMargin="100px"
-                    />
-                  );
-                }
-                return (
-                  <SplitText
-                    key={`third-${index}`}
-                    text={text}
-                    className="text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-                    globalIndex={globalIndex}
-                    splitType="lines"
-                    delay={100}
-                    duration={0.8}
-                    ease="power3.out"
-                    from={{ opacity: 0, y: 50 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={0.1}
-                    rootMargin="100px"
-                    textAlign="left"
-                  />
-                );
-              })}
             </div>
           </div>
           <div className="flex quants_row">
