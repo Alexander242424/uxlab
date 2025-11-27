@@ -1,0 +1,6 @@
+@media (max-width: 786px) and (min-width: 768px) {
+  .hero_text_block {
+    position: relative;
+    left: -50px;
+  }
+}

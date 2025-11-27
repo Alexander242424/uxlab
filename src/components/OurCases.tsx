@@ -1,15 +1,11 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+
 import OptionImage from "../assets/image/OurCases/Option 22.jpg";
 import GuideImage from "../assets/image/OurCases/Option 28.png";
 import BoostraImage from "../assets/image/OurCases/Option23.jpg";
@@ -38,8 +34,7 @@ const cases: OurCasesItem[] = [
   {
     src: OptionImage,
     alt: "Emma usability audit case study",
-    title:
-      "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
+    title: "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
     videoSrc: "/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4",
     videoTitle: "Emma usability audit case study",
     logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
@@ -49,8 +44,7 @@ const cases: OurCasesItem[] = [
     src: BoostraImage,
     alt: "Boostra analysis case study",
     ImageSrc: BoostraSmallImage,
-    title:
-      "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    title: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoTitle: "Boostra analysis case study",
     logo: <BoostraLogo className="not-md:scale-[0.8]!" />,
     link: "/boostra",
@@ -58,14 +52,19 @@ const cases: OurCasesItem[] = [
   {
     src: GuideImage,
     alt: "Nespresso case study",
-    title:
-      "Redesigned Coffee Shopping into a High-Voltage Brand Experience",
+    title: "Redesigned Coffee Shopping into a High-Voltage Brand Experience",
     videoSrc: "/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4",
     videoTitle: "Nespresso case study",
     logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
     link: "/nespresso",
   },
 ];
+
+// === Константы превью-курсор карточки ===
+const PREVIEW_WIDTH = 220;
+const PREVIEW_HEIGHT = 264;
+const PREVIEW_PADDING_X = 40; // паддинг для текста внутри
+const BOUNDARY_PADDING = 40; // отступ от краёв большой карточки
 
 export default function OurCases() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -79,48 +78,49 @@ export default function OurCases() {
   const [showVideo, setShowVideo] = useState(false);
   const [captionOffset, setCaptionOffset] = useState(0);
 
+  // === смещение текста по X в пределах ширины карточки ===
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
 
-      // Обчислюємо зміщення підпису на основі позиції миші
-      if (isHovering && !isMobile && hoveredIndex !== null) {
-        // Знаходимо поточний елемент для обчислення відносної позиції (тільки в секції OurCases)
-        const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement;
+      if (!isHovering || isMobile || hoveredIndex === null) return;
 
-        if (currentImage) {
-          const imageRect = currentImage.getBoundingClientRect();
-          const imageCenterX = imageRect.left + imageRect.width / 2;
-          const normalizedX =
-            (e.clientX - imageCenterX) / (imageRect.width / 2); // Нормалізована позиція відносно центру зображення
+      const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement | null;
 
-          // Обчислюємо максимальне зміщення на основі ширини блоку відео (200px)
-          const videoBlockWidth = 200;
-          const maxOffset = Math.min(20, (videoBlockWidth - 80) / 2); // Обмежуємо зміщення, щоб текст не виходив за межі блоку
-
-          const offset = normalizedX * maxOffset;
-          setCaptionOffset(offset);
-        } else {
-          // Fallback до центру екрану
-          const centerX = windowSize.width / 2;
-          const normalizedX = (e.clientX - centerX) / centerX;
-          const offset = normalizedX * 20;
-          setCaptionOffset(offset);
-        }
+      if (!currentImage) {
+        setCaptionOffset(0);
+        return;
       }
+
+      const imageRect = currentImage.getBoundingClientRect();
+
+      // 0..1 по ширине исходной картинки
+      const relativeX = (e.clientX - imageRect.left) / imageRect.width;
+      // -1..1 (левый → центр → правый)
+      const normalizedX = relativeX * 2 - 1;
+
+      // Внутренняя ширина с учётом паддинга по 40px
+      const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
+      const maxOffset = Math.max(0, innerWidth / 2); // центр ± (innerWidth/2)
+
+      const offset = normalizedX * maxOffset;
+      setCaptionOffset(offset);
     },
-    [isHovering, isMobile, hoveredIndex, windowSize.width]
+    [isHovering, isMobile, hoveredIndex]
   );
 
+  // === resize + mousemove ===
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
 
     checkMobile();
     window.addEventListener("resize", checkMobile);
-
     window.addEventListener("mousemove", handleMouseMove);
 
     if (!isInitialized) {
@@ -137,96 +137,71 @@ export default function OurCases() {
     };
   }, [handleMouseMove, isInitialized]);
 
+  // === позиция/размер hover-превью (как курсор) ===
   const cursorStyles = useMemo(() => {
     if (!isHovering || isMobile || hoveredIndex === null) return null;
 
-    const cursorWidth = 200;
-    const cursorHeight = 264;
+    const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement | null;
 
-    // Знаходимо елемент зображення для обмеження курсора (тільки в секції OurCases)
-    const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement;
-
+    // если не нашли картинку — ограничиваем окном
     if (!currentImage) {
-      // Fallback до вікна браузера якщо зображення не знайдено
-      let left = mousePosition.x - cursorWidth / 2;
-      let top = mousePosition.y - cursorHeight / 2;
+      let left = mousePosition.x - PREVIEW_WIDTH / 2;
+      let top = mousePosition.y - PREVIEW_HEIGHT / 2;
 
       if (left < 0) left = 0;
-      if (left + cursorWidth > windowSize.width)
-        left = windowSize.width - cursorWidth;
+      if (left + PREVIEW_WIDTH > windowSize.width) left = windowSize.width - PREVIEW_WIDTH;
       if (top < 0) top = 0;
-      if (top + cursorHeight > windowSize.height)
-        top = windowSize.height - cursorHeight;
+      if (top + PREVIEW_HEIGHT > windowSize.height) top = windowSize.height - PREVIEW_HEIGHT;
 
       return {
         left,
         top,
-        width: `${cursorWidth}px`,
-        height: `${cursorHeight}px`,
+        width: `${PREVIEW_WIDTH}px`,
+        height: `${PREVIEW_HEIGHT}px`,
       };
     }
 
     const imageRect = currentImage.getBoundingClientRect();
-    const padding = 40; // Відступ від країв зображення
 
-    // Обчислюємо межі зображення з відступом (відносно viewport)
-    const imageLeft = imageRect.left + padding;
-    const imageTop = Math.max(imageRect.top + padding, 0); // Не менше 0
-    const imageRight = imageRect.right - padding - cursorWidth;
-    const imageBottom = imageRect.bottom - padding - 290;
+    let left = mousePosition.x - PREVIEW_WIDTH / 2;
+    let top = mousePosition.y - PREVIEW_HEIGHT / 2;
 
-    // Логування для дебагу
-    // console.log('Image rect:', imageRect);
-    // console.log('Scroll Y:', scrollY);
-    // console.log('Absolute image coords:', { top: absoluteImageTop, bottom: absoluteImageBottom });
-    // console.log('Cursor dimensions:', { width: cursorWidth, height: cursorHeight });
-    // console.log('Computed boundaries:', { imageLeft, imageTop, imageRight, imageBottom });
-    // console.log('Mouse position:', mousePosition);
+    // Границы с учётом BOUNDARY_PADDING
+    let minLeft = imageRect.left + BOUNDARY_PADDING;
+    let maxLeft = imageRect.right - BOUNDARY_PADDING - PREVIEW_WIDTH;
+    let minTop = imageRect.top + BOUNDARY_PADDING;
+    let maxTop = imageRect.bottom - BOUNDARY_PADDING - PREVIEW_HEIGHT;
 
-    // Обмежуємо позицію курсора межами зображення та вікна
-    let left = mousePosition.x - cursorWidth / 2;
-    let top = mousePosition.y - cursorHeight / 2;
+    // если карточка слишком маленькая / узкая — фоллбек без паддинга
+    if (maxLeft < minLeft) {
+      minLeft = imageRect.left;
+      maxLeft = imageRect.right - PREVIEW_WIDTH;
+    }
+    if (maxTop < minTop) {
+      minTop = imageRect.top;
+      maxTop = imageRect.bottom - PREVIEW_HEIGHT;
+    }
 
-    // Обмеження по горизонталі
-    if (left < imageLeft) left = imageLeft;
-    if (left > imageRight) left = imageRight;
+    left = Math.min(Math.max(left, minLeft), maxLeft);
+    top = Math.min(Math.max(top, minTop), maxTop);
 
-    // Обмеження по вертикалі з урахуванням скролу
-    if (top < imageTop) top = imageTop;
-    if (top > imageBottom) top = imageBottom;
-
-    // Додаткові обмеження для країв вікна
+    // подстраховка границ окна
     if (left < 0) left = 0;
-    if (left + cursorWidth > windowSize.width)
-      left = windowSize.width - cursorWidth;
+    if (left + PREVIEW_WIDTH > windowSize.width) left = windowSize.width - PREVIEW_WIDTH;
     if (top < 0) top = 0;
-    if (top + cursorHeight > windowSize.height)
-      top = windowSize.height - cursorHeight;
+    if (top + PREVIEW_HEIGHT > windowSize.height) top = windowSize.height - PREVIEW_HEIGHT;
 
     return {
       left,
       top,
-      width: `${cursorWidth}px`,
-      height: `${cursorHeight}px`,
+      width: `${PREVIEW_WIDTH}px`,
+      height: `${PREVIEW_HEIGHT}px`,
     };
-  }, [
-    isHovering,
-    isMobile,
-    hoveredIndex,
-    mousePosition.x,
-    mousePosition.y,
-    windowSize.width,
-    windowSize.height,
-  ]);
+  }, [isHovering, isMobile, hoveredIndex, mousePosition.x, mousePosition.y, windowSize.width, windowSize.height]);
 
+  // === gsap: плавное перемещение превью-курcора ===
   useEffect(() => {
-    if (
-      isHovering &&
-      !isMobile &&
-      cursorRef.current &&
-      cursorStyles &&
-      isInitialized
-    ) {
+    if (isHovering && !isMobile && cursorRef.current && cursorStyles && isInitialized) {
       gsap.to(cursorRef.current, {
         left: cursorStyles.left,
         top: cursorStyles.top,
@@ -240,10 +215,10 @@ export default function OurCases() {
     setVideoError(index);
   }, []);
 
+  // === включаем/выключаем превью ===
   useEffect(() => {
     if (hoveredIndex !== null) {
       setVideoError(null);
-      // Затримка перед показом відео
       const timer = setTimeout(() => {
         setShowVideo(true);
       }, 0);
@@ -254,15 +229,13 @@ export default function OurCases() {
       };
     } else {
       setShowVideo(false);
-      setCaptionOffset(0); // Скидаємо зміщення підпису
+      setCaptionOffset(0);
     }
   }, [hoveredIndex]);
 
   return (
-    <div
-      id="cases"
-      className="flex flex-col gap-8 my-[96px] md:my-[160px] mx-4 md:mx-10 relative"
-    >
+    <div id="cases" className="flex flex-col gap-8 my-[96px] md:my-[160px] mx-4 md:mx-10 relative">
+      {/* ===== HOVER-ПРЕВЬЮ ===== */}
       {isHovering &&
         !isMobile &&
         hoveredIndex !== null &&
@@ -272,71 +245,64 @@ export default function OurCases() {
         showVideo && (
           <div
             ref={cursorRef}
-            className="video-cursor video-cursor-enter"
+            className="video-cursor hover-image"
             style={{
               ...cursorStyles,
-              opacity: 0,
-              transform: "scale(0.95) translateY(10px)",
             }}
           >
-            <div className="bg-transparent">
-              {cases[hoveredIndex].ImageSrc ? (
-                <div className="rounded-[8px] overflow-hidden">
+            {/* Картинка/видео: появляется через fadeInScale (CSS) */}
+            <div className="image__wrapper">
+              <div className="media cover">
+                {cases[hoveredIndex].ImageSrc ? (
                   <Image
                     src={cases[hoveredIndex].ImageSrc}
                     alt={cases[hoveredIndex].alt}
-                    loading={"lazy"}
-                    width={200}
-                    height={150}
-                    className="w-full object-cover"
+                    loading="lazy"
+                    width={PREVIEW_WIDTH}
+                    height={160}
+                    className="w-full h-full object-cover"
                   />
-                </div>
-              ) : (
-                videoError === hoveredIndex ? (
-                  <div className="w-full h-[200px] bg-gray-100 flex items-center justify-center rounded-lg">
-                    <div className="text-center">
-                      <p className="text-gray-500 hoves-p1-reg text-xs">
-                        Video unavailable
-                      </p>
+                ) : videoError === hoveredIndex ? (
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center rounded-lg">
+                    <div className="text-center px-2">
+                      <p className="text-gray-500 hoves-p1-reg text-xs">Video unavailable</p>
                       <Image
                         src={cases[hoveredIndex].src}
                         alt={cases[hoveredIndex].alt}
-                        loading={"lazy"}
-                        width={200}
-                        height={150}
+                        loading="lazy"
+                        width={PREVIEW_WIDTH}
+                        height={160}
                         className="w-full h-auto object-cover mt-2 rounded-lg"
                       />
                     </div>
                   </div>
                 ) : (
-                  <div className="rounded-[8px] overflow-hidden">
-                    <VideoPlayer
-                      src={cases[hoveredIndex].videoSrc!}
-                      className="w-full object-cover"
-                      onError={() => handleVideoError(hoveredIndex)}
-                    />
-                  </div>
-                )
-              )}
-              
-            </div>
-            <div className="video-cursor-content">
-                <motion.p
-                  className="text-text-700 hoves-p3-reg text-center"
-                  animate={{
-                    x: captionOffset,
-                    transition: {
-                      duration: 0.3,
-                      ease: "easeOut",
-                    },
-                  }}
-                >
-                  {cases[hoveredIndex].videoTitle}
-                </motion.p>
+                  <VideoPlayer
+                    src={cases[hoveredIndex].videoSrc!}
+                    className="w-full h-full object-cover"
+                    onError={() => handleVideoError(hoveredIndex)}
+                  />
+                )}
               </div>
+            </div>
+
+            {/* Текст: fade-in по opacity + движение по X, с учётом паддинга 40 */}
+            <span className="anime__wrapper">
+              <motion.span
+                key={hoveredIndex}
+                className="hoves-p3-reg text-text-700 whitespace-nowrap"
+                style={{ x: captionOffset }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, x: captionOffset }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                {cases[hoveredIndex].videoTitle}
+              </motion.span>
+            </span>
           </div>
         )}
 
+      {/* Заголовок */}
       <div className="hoves-p1-reg text-text-700">
         <SplitText
           text="Case Studies"
@@ -353,72 +319,65 @@ export default function OurCases() {
         />
       </div>
 
+      {/* Карточки кейсов */}
       <div
         className="flex gap-2 md:gap-8 overflow-x-auto md:overflow-x-visible"
         style={{
-          scrollbarWidth: "none", // Firefox
-          msOverflowStyle: "none", // IE and Edge
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
         }}
       >
-        {cases.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col gap-[21px] flex-shrink-0 w-full h-full not-md:max-w-[300px] not-md:max-h-[553px] md:flex-1 md:max-w-none md:aspect-[456/677]"
-          >
-            <div
-              className="relative cursor-pointer"
-              onMouseEnter={() => {
-                if (!isMobile) {
-                  setHoveredIndex(index);
-                  setIsHovering(true);
-                }
-              }}
-              onMouseLeave={() => {
-                if (!isMobile) {
-                  setHoveredIndex(null);
-                  setIsHovering(false);
-                }
-              }}
-            >
-              <Link href={item.link || "#"}>
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  loading={"lazy"}
-                  width={400}
-                  height={300}
-                  data-index={index}
-                  className={`w-full rounded-md image-hover-darken ${
-                    isHovering && hoveredIndex === index
-                      ? "brightness-50"
-                      : "brightness-100"
-                  }`}
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+          {cases.map((item, index) => (
+            <div key={index} className="flex flex-col gap-[21px] w-full h-full">
+              <div
+                className="relative cursor-pointer"
+                onMouseEnter={() => {
+                  if (!isMobile) {
+                    setHoveredIndex(index);
+                    setIsHovering(true);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isMobile) {
+                    setHoveredIndex(null);
+                    setIsHovering(false);
+                  }
+                }}
+              >
+                <Link href={item.link || "#"}>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    width={400}
+                    height={300}
+                    data-index={index}
+                    className={`w-full rounded-md image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
+                  />
 
-                {item.logo && (
-                  <div
-                    className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${
-                      isHovering && hoveredIndex === index
-                        ? "opacity-0"
-                        : "opacity-100"
-                    }`}
-                  >
-                    {item.logo}
-                  </div>
-                )}
-              </Link>
+                  {item.logo && (
+                    <div
+                      className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${
+                        isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                      }`}
+                    >
+                      {item.logo}
+                    </div>
+                  )}
+                </Link>
+              </div>
+
+              <p
+                className={`text-text-700 hoves-p1-reg transition-all duration-300 ${
+                  isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
+                }`}
+              >
+                {item.title}
+              </p>
             </div>
-            <p
-              className={`text-text-700 hoves-p1-reg transition-all duration-300 ${
-                isHovering && hoveredIndex === index
-                  ? "opacity-75"
-                  : "opacity-100"
-              }`}
-            >
-              {item.title}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

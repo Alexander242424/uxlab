@@ -1094,7 +1094,7 @@ header {
 }
 
 .video-cursor-container {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .video-cursor-content {
@@ -1104,7 +1104,7 @@ header {
 }
 
 .video-cursor-content p {
-  overflow: hidden;
+  /* overflow: hidden; */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;

@@ -30,30 +30,16 @@ export default function HeroSection() {
           <div className="hidden sm:block sm:w-1/2"></div>
 
           {/* Right part - contains the text block */}
-          <div className="sm:w-1/2 w-full flex justify-start">
-            <div className="hidden flex-col sm:flex">
-              <p className="text-text-700 hoves-p1-reg md:text-right !text-nowrap">
-                We unite User Experience,
+          <div className="sm:w-1/2 w-full flex justify-start  hero_text_block">
+            <div className="flex-col flex">
+              <p className="text-text-700 hoves-p1-reg md:text-right !text-nowrap ">
+                Work with eCommerce bands
               </p>
               <p className="text-text-700 hoves-p1-reg !text-nowrap">
-                conversions, and data-driven design to help digital             
+                to uplift CR, AOV, LTV, ATC, Checkout rate, Retention,
               </p>
               <p className="text-text-700 hoves-p1-reg !text-nowrap">
-                products convert, scale, and win in competitive markets.
-              </p>
-            </div>
-            <div className="flex flex-col sm:hidden">
-              <p className="text-text-700 hoves-p1-reg md:text-right !text-nowrap">
-                We unite User Experience,
-              </p>
-              <p className="text-text-700 hoves-p1-reg !text-nowrap">
-                conversions, and data-driven design             
-              </p>
-              <p className="text-text-700 hoves-p1-reg !text-nowrap">
-                to help digital products convert, scale,
-              </p>
-              <p className="text-text-700 hoves-p1-reg !text-nowrap">
-              and win in competitive markets.
+                 and more metrics to unlock revenue grow.   
               </p>
             </div>
           </div>

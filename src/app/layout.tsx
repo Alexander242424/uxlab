@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import 'tw-animate-css';
-import "./main.scss";
+import "./styles/tailwind.css";
+import "./main.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { VideoModalProvider } from "@/context/VideoModalContext";

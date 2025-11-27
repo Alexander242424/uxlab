@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@import "./styles/base/_tailwind";
+/* // Типографика по брейкпоинтам */
+@import "./styles/base/_typography";
+
+/* // Компонентные штуки */
+@import "./styles/_accordion";
+@import "./styles/_underline";
+@import "./styles/_carousel";
+@import "./styles/_hover-section";
+@import "./styles/_custom-cursor";
+@import "./styles/_header";
+@import "./styles/_video-cursor";
+@import "./styles/_scrollbar";
+@import "./styles/_hero";
+@import "./styles/_media";
