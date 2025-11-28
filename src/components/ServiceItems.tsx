@@ -6,7 +6,6 @@ import SplitText from "./SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useCalModal } from "@/context/CalModalContext";
 import VideoPlayer from "./VideoPlayer";
-import CountUp from "react-countup";
 import dynamic from "next/dynamic";
 interface ServiceItem {
   title: string;
