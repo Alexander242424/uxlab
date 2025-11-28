@@ -106,55 +106,33 @@ export default function Header() {
           {/* Ліва частина - логотип */}
           <div className="w-1/2 flex items-center">
             <Link href="/">
-              <LogoSVG className="header-logo" />
-            </Link>
-          </div>
+            <LogoSVG className="header-logo" />
+          </Link>
+        </div>
 
           {/* Права частина - навігація + Book a Call */}
-          <div className="w-1/2 flex justify-between items-center">
-            <nav className="hidden sm:flex space-x-4 md:space-x-8 hoves-p2-reg">
-              {/* {pathname === "/" ? (
-                <button
-                  onClick={() => scrollToSection("")}
-                  className={`relative group header-text cursor-pointer ${
-                    activeSection === "" ? "header-text-active" : ""
-                  }`}
-                >
-                  Home
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </button>
+        <div className="w-1/2 flex justify-between items-center">
+          <nav className="hidden sm:flex space-x-4 md:space-x-8 hoves-p2-reg">
+            {pathname === "/" ? (
+              <button
+                onClick={() => scrollToSection("services")}
+                className={`relative group header-text cursor-pointer ${
+                  activeSection === "services" ? "header-text-active" : ""
+                }`}
+              >
+                Services
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+              </button>
               ) : (
-                <Link
-                  href="/"
-                  className={`relative group header-text cursor-pointer ${
-                    pathname === "/" ? "header-text-active" : ""
-                  }`}
-                >
-                  Home
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
-              )} */}
-              
-              {pathname === "/" ? (
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className={`relative group header-text cursor-pointer ${
-                    activeSection === "services" ? "header-text-active" : ""
-                  }`}
-                >
-                  Services
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </button>
-              ) : (
-                <Link
-                  href="/#services"
-                  className={`relative group header-text cursor-pointer ${
-                    pathname === "/" && activeSection === "services" ? "header-text-active" : ""
-                  }`}
-                >
-                  Services
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
+              <Link
+                href="/#services"
+                className={`relative group header-text cursor-pointer ${
+                  pathname === "/" && activeSection === "services" ? "header-text-active" : ""
+                }`}
+              >
+                Services
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+              </Link>
               )}
               
               {pathname === "/" ? (
@@ -167,7 +145,7 @@ export default function Header() {
                   Cases
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </button>
-              ) : (
+                ) : (
                 <Link
                   href="/#cases"
                   className={`relative group header-text cursor-pointer ${
@@ -177,50 +155,50 @@ export default function Header() {
                   Cases
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </Link>
-              )}
-              
-              {pathname === "/" ? (
-                <button
-                  onClick={() => scrollToSection("insights")}
-                  className={`relative group header-text cursor-pointer ${
-                    activeSection === "insights" ? "header-text-active" : ""
-                  }`}
-                >
-                  Insights
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </button>
-              ) : (
-                <Link
-                  href="/#insights"
-                  className={`relative group header-text cursor-pointer ${
-                    pathname === "/" && activeSection === "insights" ? "header-text-active" : ""
-                  }`}
-                >
-                  Insights
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
-              )}
-            </nav>
-            <div className="flex items-center ml-auto cursor-pointer">
-              <div
-                onClick={handleCalClick}
-                className="header-text flex items-center gap-1 relative group"
-              >
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-                <span className="relative">
+                )}
+                
+                {pathname === "/" ? (
+                  <button
+                    onClick={() => scrollToSection("insights")}
+                    className={`relative group header-text cursor-pointer ${
+                      activeSection === "insights" ? "header-text-active" : ""
+                    }`}
+                  >
+                    Insights
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                  </button>
+                  ) : (
+                  <Link
+                    href="/#insights"
+                    className={`relative group header-text cursor-pointer ${
+                      pathname === "/" && activeSection === "insights" ? "header-text-active" : ""
+                    }`}
+                  >
+                    Insights
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                  </Link>
+                  )}
+                </nav>
+                <div className="flex items-center ml-auto cursor-pointer">
+                  <div
+                    onClick={handleCalClick}
+                    className="header-text flex items-center gap-1 relative group"
+                  >
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
+                      <span className="relative">
                   {/* Icon on the right (visible by default) */}
-                  <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0 header-icon md:scale-[120%] lg:scale-[140%]" />
+                        <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0 header-icon md:scale-[120%] lg:scale-[140%]" />
                   {/* Icon on the left (visible on hover) */}
-                  <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1 header-icon md:scale-[120%] lg:scale-[140%]" />
-                  <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 hoves-p2-reg">
-                    Book a Call
-                  </span>
-                </span>
+                        <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1 header-icon md:scale-[120%] lg:scale-[140%]" />
+                        <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 hoves-p2-reg">
+                          Book a Call
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+          </header>
+          );
 }

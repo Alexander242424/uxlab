@@ -1,22 +1,15 @@
-"use client";
-import { useState } from "react";
-import WelcomePage from "./WelcomePage";
+import type { ReactNode } from "react";
+import WelcomeOverlay from "./WelcomeOverlay";
 
 interface AppWrapperProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function AppWrapper({ children }: AppWrapperProps) {
-  const [shouldRenderContent, setShouldRenderContent] = useState(false);
-
-  const handleAnimationStart = () => {
-    setShouldRenderContent(true);
-  };
-
   return (
     <>
-      <WelcomePage onAnimationStart={handleAnimationStart} />
-      {shouldRenderContent && children}
+      <WelcomeOverlay />
+      {children}
     </>
   );
 }
