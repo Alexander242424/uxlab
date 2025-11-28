@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import AlexIcon from "@/assets/alex.svg";
-import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
+import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
-import InsightsSection from "@/components/InsightsSection";
+import InsightsSection from "@/components/home_page/InsightsSection";
 import ArticlePageWrapper from "@/components/ArticlePageWrapper";
 import ConversionRateOptimizationImage from "@/assets/Article/Conversion Rate Optimization.png";
 

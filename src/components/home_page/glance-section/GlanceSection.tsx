@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import SplitText from "../SplitText";
-import EmblaCarousel from "../EmblaCarousel";
+import SplitText from "../../SplitText";
+import EmblaCarousel from "../../EmblaCarousel";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import VideoCard from "./VideoCard";
 
@@ -18,15 +18,15 @@ import ToyotaLogo from "@/assets/Glance/Logo for cases/Toyota_Logo 1.svg";
 import WellowLogo from "@/assets/Glance/Logo for cases/wellow.svg";
 
 // Images
-import CalendlyImage from "../../assets/Glance/Images/Calendly.jpg";
-import ArhiveImage from "../../assets/Glance/Images/Archive.jpg";
-import EasyjetImage from "../../assets/Glance/Images/Easyjet.jpg";
-import ForbesImage from "../../assets/Glance/Images/Forbes.jpg";
-import NumaImage from "../../assets/Glance/Images/Numa.jpg";
-import RoyalQueenImage from "../../assets/Glance/Images/Royal queen seeds.jpg";
-import ScheiderImage from "../../assets/Glance/Images/Scheider.jpg";
-import ToyotaImage from "../../assets/Glance/Images/Toyota.jpg";
-import WellowImage from "../../assets/Glance/Images/Wellow.jpg";
+import CalendlyImage from "../../../assets/Glance/Images/Calendly.jpg";
+import ArhiveImage from "../../../assets/Glance/Images/Archive.jpg";
+import EasyjetImage from "../../../assets/Glance/Images/Easyjet.jpg";
+import ForbesImage from "../../../assets/Glance/Images/Forbes.jpg";
+import NumaImage from "../../../assets/Glance/Images/Numa.jpg";
+import RoyalQueenImage from "../../../assets/Glance/Images/Royal queen seeds.jpg";
+import ScheiderImage from "../../../assets/Glance/Images/Scheider.jpg";
+import ToyotaImage from "../../../assets/Glance/Images/Toyota.jpg";
+import WellowImage from "../../../assets/Glance/Images/Wellow.jpg";
 
 //Avatars
 import PaulBenigeriAvatar from "@/assets/Glance/Avatars/Paul Benigeri.svg";

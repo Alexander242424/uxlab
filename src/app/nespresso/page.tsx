@@ -10,7 +10,7 @@ import CasesHeroSections from "@/components/CasesHeroSections";
 import InfoBlock from "@/components/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
+import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import { Metadata } from "next";

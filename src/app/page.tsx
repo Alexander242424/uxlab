@@ -1,6 +1,19 @@
-import ServiceItems from "@/components/ServiceItems";
-import OurCases from "@/components/OurCases";
-import HeroSection from "@/components/HeroSection";
+"use client";
+import HeroSection from "@/components/home_page/HeroSection";
+import ShowreelSection from "@/components/home_page/ShowreelSection";
+import TextSection from "@/components/home_page/TextSection";
+import ServiceItems from "@/components/home_page/ServiceItems";
+import DesignOptionSection from "@/components/home_page/DesignOptionSection";
+import OurCases from "@/components/home_page/OurCases";
+import AnimatedTextByLetters from "@/components/AnimatedTextByLetters";
+import InfiniteSlider from "@/components/home_page/InfiniteSlider";
+import GlanceSection from "@/components/home_page/glance-section/GlanceSection";
+import HoverSection from "@/components/home_page/HoverSection";
+import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
+import QuestionSections from "@/components/home_page/QuestionSections";
+import InsightsSection from "@/components/home_page/InsightsSection";
+
+
 // import BMWLogo from "../assets/logoicons/BMW_logo_(gray) 1.svg";
 import ForbesLogo from "../assets/logoicons/Forbes_logo 1.svg";
 import MaskGroup1 from "../assets/logoicons/Mask group-1.svg";
@@ -11,14 +24,7 @@ import MaskGroup4 from "../assets/logoicons/Mask group-4.svg";
 import CalendlyLogo from "../assets/logoicons/calendly-logo-vector 5.svg";
 import UserwayLogo from "../assets/logoicons/userway-org-vector-logo-2022 1.svg";
 
-import InfiniteSlider from "@/components/InfiniteSlider";
-import GlanceSection from "@/components/glance-section/GlanceSection";
-import HoverSection from "@/components/HoverSection";
-import InsightsSection from "@/components/InsightsSection";
-import QuestionSections from "@/components/QuestionSections";
-import ShowreelSection from "@/components/ShowreelSection";
-import TextSection from "@/components/TextSection";
-import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
+
 
 const slides = [
   { icon: <ForbesLogo /> },
@@ -57,6 +63,13 @@ export default function HomePage() {
           ]}
         />
         <ServiceItems />
+        <DesignOptionSection />
+        <AnimatedTextByLetters
+          text={"Challenges \nWe Solve"}
+          className="font-semibold leading-tight"
+          letterClassName="will-change-transform"
+          delayStep={0.045}
+        />
         <OurCases />
       </div>
       <div className="w-full bg-bg-white">

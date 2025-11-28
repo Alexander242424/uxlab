@@ -4,7 +4,7 @@ import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
 import { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 interface OverviewCaseImageSectionProps {

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
-import SplitText from "./SplitText";
+import SplitText from "../SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useCalModal } from "@/context/CalModalContext";
 
@@ -42,7 +42,7 @@ export default function TextSection({
   const mobileTextArray = Array.isArray(mobileText) ? mobileText : [mobileText];
 
   return (
-    <section className={`py-20 md:py-32 ${className}`}>
+    <section className={`text_section py-20 md:py-32 ${className}`}>
       {isMobile ? (
         <div className="flex flex-col">
           {mobileTextArray.map((text, index) => (

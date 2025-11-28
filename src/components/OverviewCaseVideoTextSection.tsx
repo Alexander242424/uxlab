@@ -2,7 +2,7 @@
 
 import VideoPlayer from "@/components/VideoPlayer";
 import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 

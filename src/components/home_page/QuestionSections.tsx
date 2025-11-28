@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import AvatarsSVG from "@/assets/avatars.svg";
 import { motion, useInView } from "motion/react";
-import SplitText from "./SplitText";
+import SplitText from "../SplitText";
 import {
   Accordion,
   AccordionContent,

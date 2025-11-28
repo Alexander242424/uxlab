@@ -1,11 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
-import SplitText from "./SplitText";
+import SplitText from "../SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useCalModal } from "@/context/CalModalContext";
-import VideoPlayer from "./VideoPlayer";
+import VideoPlayer from "../VideoPlayer";
 import dynamic from "next/dynamic";
 interface ServiceItem {
   title: string;
@@ -172,13 +172,6 @@ const secondParagraph = [
   "model.",
 ];
 
-
-// const thirdParagraph = [
-//   "Beyond client work, we've launched our own SaaS products —",
-//   "Boostra to boost conversions with AI, and Tapmy.store",
-//   "to power mobile ecommerce for influencers with built-in payments.",
-// ];
-
 const firstParagraphMobile = [
   "Since 2012, we've helped",
   "the most innovative startups and",
@@ -196,14 +189,6 @@ const secondParagraphMobile = [
   "team to deliver fast.",
 ];
 
-// const thirdParagraphMobile = [
-//   "Beyond client work, we've launched",
-//   "our own SaaS products — Boostra",
-//   "to boost conversions with AI, and",
-//   "Tapmy.store to power mobile",
-//   "ecommerce for influencers with",
-//   "built-in payments.",
-// ];
 const quantsList = [
   { value: 2.2, suffix: "B", label: "Global users reached" },
   { value: 138, suffix: "", label: "Brands uplifted" },
@@ -232,7 +217,7 @@ export default function ServiceItems() {
       />
 
       <div className="flex flex-col sm:flex-row gap-12">
-        <div className="sm:w-[47%] flex items-start">
+        <div className="sm:w-[47%] hidden md:flex items-start">
           <div className="grid not-sm:flex-col not-sm:gap-8 w-full">
             <SplitText
               text="Your Growth Starts Here."
@@ -342,8 +327,7 @@ export default function ServiceItems() {
                     end={quant.value}
                     duration={3}
                     decimals={Number.isInteger(quant.value) ? 0 : 1} // 2.2 -> 1 знак
-                    enableScrollSpy // стартует, когда элемент попал в viewport
-                    // scrollSpyOnce
+                    enableScrollSpy
                   />
                   {quant.suffix}
                 </span>
@@ -351,74 +335,6 @@ export default function ServiceItems() {
               </div>
             ))}
           </div>
-
-         {/* <div className="space-y-0">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                className="group cursor-pointer relative"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "100px" }}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                  delay: index * 0.15,
-                }}
-              >
-                <motion.div
-                  className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true, margin: "100px" }}
-                  transition={{
-                    duration: 0.8,
-                    ease: "easeOut",
-                    delay: index * 0.15 + 0.3,
-                  }}
-                  style={{ transformOrigin: "left" }}
-                />
-                <div className="flex items-center justify-between py-6 sm:py-10" onClick={handleCalClick}>
-                  <div className="flex flex-col gap-2 w-full">
-                    <div className="flex w-full justify-between">
-                      <div className="flex flex-col md:-mt-3 md:max-w-[55%]">
-                        <h3 className="hoves-h5-med text-text-700 relative group/title max-w-fit">
-                          {service.title}
-                          <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                        </h3>
-                        <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3">{service.subtitle}</p>
-                        <p className="text-text-500 hoves-p1-reg pt-4 md:pt-6">{service.time}</p>
-                      </div>
-                      {!isMobile && (
-                        <div className="flex items-end justify-center">
-                          <div className="group-hover:max-h-[200px] group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out">
-                            <VideoPlayer src={service.videoSrc} className="w-full h-full max-h-[180px] max-w-[270px] object-cover" />
-                          </div>
-                        </div>
-                      )}
-                      <div className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                        <ArrowUpRightSVG className="w-6 h-6 text-text-700 lg:scale-[130%]" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {index === services.length - 1 && (
-                  <motion.div
-                    className="absolute bottom-0 left-0 w-full h-[1px] bg-border-50"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true, margin: "100px" }}
-                    transition={{
-                      duration: 0.8,
-                      ease: "easeOut",
-                      delay: index * 0.15 + 0.3,
-                    }}
-                    style={{ transformOrigin: "left" }}
-                  />
-                )}
-              </motion.div>
-            ))}
-          </div>*/}
         </div>
       </div>
     </section>

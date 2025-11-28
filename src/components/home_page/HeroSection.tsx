@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import WeMakeInterfacesSVG from "@/assets/We Make Interfaces";
+import WeMakeInterfacesSVG from "@/assets/We_Make_Interfaces";
 import { useRef } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -46,7 +46,7 @@ export default function HeroSection() {
         </div>
       </motion.div>
       <div className="mt-auto pb-4 px-4 md:px-10 md:pb-10">
-        <WeMakeInterfacesSVG />
+        <WeMakeInterfacesSVG  word="interfaces" />
       </div>
     </div>
   );

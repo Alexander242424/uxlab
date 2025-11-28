@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useCallback } from "react";
-import SplitText from "./SplitText";
+import SplitText from "../SplitText";
 import { motion } from "motion/react";
 
 interface SectionData {

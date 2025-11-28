@@ -5,7 +5,7 @@ import AIAgentImage from "@/assets/Article/AI Agents.png";
 import DesignSystemsImage from "@/assets/Article/Design System.png";
 import ConversionRateOptimizationImage from "@/assets/Article/Conversion Rate Optimization.png";
 import { motion, useInView } from "motion/react";
-import SplitText from "./SplitText";
+import SplitText from "../SplitText";
 import Link from "next/link";
 
 const insightsData = [

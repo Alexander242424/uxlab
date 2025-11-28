@@ -1,4 +1,4 @@
-import TextSection from "@/components/TextSection";
+import TextSection from "@/components/home_page/TextSection";
 
 interface OverviewCaseTestimonialSectionProps {
   firstText: string;

@@ -10,10 +10,10 @@ import CasesOutcome from "@/components/CasesOutcome";
 import InfoBlock from "@/components/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import OverviewCaseVideoSection from "@/components/OverviewCaseVideoSection";
+import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
-import TextSection from "@/components/TextSection";
+import TextSection from "@/components/home_page/TextSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

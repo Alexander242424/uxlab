@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import ArrowRightSVG from "@/assets/arrow-right.svg";
-import WeMakeInterfacesSVG from "@/assets/We Make Interfaces";
+import WeMakeInterfacesSVG from "@/assets/We_Make_Interfaces";
 import { motion } from "motion/react";
 
 export default function Footer() {
@@ -316,7 +316,7 @@ export default function Footer() {
 
       {/* Фіксована частина без паралаксу */}
       <div className="mx-4 pb-4 md:mx-10 md:pb-10">
-        <WeMakeInterfacesSVG />
+        <WeMakeInterfacesSVG  word="interfaces" />
       </div>
     </footer>
   );

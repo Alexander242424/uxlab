@@ -1,22 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { gsap } from "gsap";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import OptionImage from "../assets/image/OurCases/Option 22.jpg";
-import GuideImage from "../assets/image/OurCases/Option 28.png";
-import BoostraImage from "../assets/image/OurCases/Option23.jpg";
+import OptionImage from "../../assets/image/OurCases/Option 22.jpg";
+import GuideImage from "../../assets/image/OurCases/Option 28.png";
+import BoostraImage from "../../assets/image/OurCases/Option23.jpg";
 
-import EmmaLogo from "../assets/image/OurCases/logo/emma-logo.svg";
-import NestpressoLogo from "../assets/image/OurCases/logo/Vector.svg";
-import BoostraLogo from "../assets/image/OurCases/logo/logo-main.svg";
+import EmmaLogo from "../../assets/image/OurCases/logo/emma-logo.svg";
+import NestpressoLogo from "../../assets/image/OurCases/logo/Vector.svg";
+import BoostraLogo from "../../assets/image/OurCases/logo/logo-main.svg";
 
-import BoostraSmallImage from "../assets/image/OurCases/4.png";
-import SplitText from "./SplitText";
-import VideoPlayer from "./VideoPlayer";
+import BoostraSmallImage from "../../assets/image/OurCases/4.png";
+import SplitText from "../SplitText";
+import VideoPlayer from "../VideoPlayer";
 
 interface OurCasesItem {
   src: StaticImageData;
@@ -30,41 +30,39 @@ interface OurCasesItem {
   link?: string;
 }
 
-const cases: OurCasesItem[] = [
-  {
-    src: OptionImage,
-    alt: "Emma usability audit case study",
-    title: "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
-    videoSrc: "/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4",
-    videoTitle: "Emma usability audit\ncase study",
-    logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
-    link: "/emma",
-  },
-  {
-    src: BoostraImage,
-    alt: "Boostra analysis case study",
-    ImageSrc: BoostraSmallImage,
-    title: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
-    videoTitle: "Boostra analysis case study",
-    logo: <BoostraLogo className="not-md:scale-[0.8]!" />,
-    link: "/boostra",
-  },
-  {
-    src: GuideImage,
-    alt: "Nespresso case study",
-    title: "Redesigned Coffee Shopping into a High-Voltage Brand Experience",
-    videoSrc: "/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4",
-    videoTitle: "Nespresso case study",
-    logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
-    link: "/nespresso",
-  },
+const cases: OurCasesItem[] = [{
+  src: OptionImage,
+  alt: "Emma usability audit case study",
+  title: "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
+  videoSrc: "/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4",
+  videoTitle: "Emma usability audit\ncase study",
+  logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
+  link: "/emma",
+},
+{
+  src: BoostraImage,
+  alt: "Boostra analysis case study",
+  ImageSrc: BoostraSmallImage,
+  title: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+  videoTitle: "Boostra analysis case study",
+  logo: <BoostraLogo className="not-md:scale-[0.8]!" />,
+  link: "/boostra",
+},
+{
+  src: GuideImage,
+  alt: "Nespresso case study",
+  title: "Redesigned Coffee Shopping into a High-Voltage Brand Experience",
+  videoSrc: "/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4",
+  videoTitle: "Nespresso case study",
+  logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
+  link: "/nespresso",
+},
 ];
 
-// === Константы превью-курсор карточки ===
-const PREVIEW_WIDTH = 220;
+const PREVIEW_WIDTH = 200;
 const PREVIEW_HEIGHT = 264;
-const PREVIEW_PADDING_X = 0; // паддинг для текста внутри
-const BOUNDARY_PADDING = 80; // отступ от краёв большой карточки
+const PREVIEW_PADDING_X = 0;
+const BOUNDARY_PADDING = 80;
 
 export default function OurCases() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -77,60 +75,49 @@ export default function OurCases() {
   const [isInitialized, setIsInitialized] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [captionOffset, setCaptionOffset] = useState(0);
-const captionRef = useRef<HTMLSpanElement | null>(null);
-  // === смещение текста по X в пределах ширины карточки ===
+  const captionRef = useRef<HTMLSpanElement | null>(null);
+  
+
   const handleMouseMove = useCallback(
-  (e: MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+    (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
 
-    if (!isHovering || isMobile || hoveredIndex === null) return;
+      if (!isHovering || isMobile || hoveredIndex === null) return;
 
-    const currentImage = document.querySelector(
-      `#cases .cursor-pointer img[data-index="${hoveredIndex}"]`
-    ) as HTMLElement | null;
+      const currentImage = document.querySelector(
+        `#cases .cursor-pointer img[data-index="${hoveredIndex}"]`
+      ) as HTMLElement | null;
 
-    if (!currentImage) {
-      setCaptionOffset(0);
-      return;
-    }
+      if (!currentImage || !captionRef.current) {
+        setCaptionOffset(0);
+        return;
+      }
 
-    const imageRect = currentImage.getBoundingClientRect();
+      const imageRect = currentImage.getBoundingClientRect();
 
-    // 0..1 по ширине исходной картинки
-    const relativeX = (e.clientX - imageRect.left) / imageRect.width;
-    // -1..1 (лево → центр → право)
-    const normalizedX = relativeX * 2 - 1;
+      // положение мыши по ширине картинки: 0..1
+      const relativeX = (e.clientX - imageRect.left) / imageRect.width;
+      const clampedRelativeX = Math.min(Math.max(relativeX, 0), 1);
 
-    // внутренняя ширина с учётом паддинга
-    const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
+      const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
+      const captionWidth = captionRef.current.getBoundingClientRect().width;
 
-    // реальная ширина текста
-    const captionWidth = captionRef.current
-      ? captionRef.current.getBoundingClientRect().width
-      : 0;
+      // если текст шире, чем область — просто ставим по центру, без движения
+      if (captionWidth >= innerWidth) {
+        setCaptionOffset((innerWidth - captionWidth) / 2);
+        return;
+      }
 
-    // сколько свободного места остаётся вокруг текста
-    const freeSpace = Math.max(0, innerWidth - captionWidth);
+      // сколько свободного места от края до края, где может кататься текст
+      const freeSpace = innerWidth + 20 - captionWidth; // >= 0
 
-    // максимум, насколько можно сдвинуть от центра, чтобы текст не вылез
-    const maxOffset = freeSpace / 2;
+      // двигаем от 0 (левый край) до freeSpace (правый край)
+      const offset = freeSpace * clampedRelativeX;
+      setCaptionOffset(offset);
+    },
+    [isHovering, isMobile, hoveredIndex]
+  );
 
-    // если текст шире, чем innerWidth — просто не двигаем
-    if (maxOffset === 0) {
-      setCaptionOffset(0);
-      return;
-    }
-
-    let offset = normalizedX * maxOffset;
-
-    // на всякий случай кламп
-    if (offset > maxOffset) offset = maxOffset;
-    if (offset < -maxOffset) offset = -maxOffset;
-
-    setCaptionOffset(offset);
-  },
-  [isHovering, isMobile, hoveredIndex]
-);
 
 
   // === resize + mousemove ===
@@ -259,7 +246,7 @@ const captionRef = useRef<HTMLSpanElement | null>(null);
 
   return (
     <div id="cases" className="flex flex-col gap-8 my-[96px] md:my-[160px] mx-4 md:mx-10 relative">
-      {/* ===== HOVER-ПРЕВЬЮ ===== */}
+
       {isHovering &&
         !isMobile &&
         hoveredIndex !== null &&
@@ -274,7 +261,7 @@ const captionRef = useRef<HTMLSpanElement | null>(null);
               ...cursorStyles,
             }}
           >
-            {/* Картинка/видео: появляется через fadeInScale (CSS) */}
+
             <div className="image__wrapper">
               <div className="media cover">
                 {cases[hoveredIndex].ImageSrc ? (
@@ -313,12 +300,16 @@ const captionRef = useRef<HTMLSpanElement | null>(null);
             <span
               className="anime__wrapper block"
               style={{
-                width: PREVIEW_WIDTH,
+                width: PREVIEW_WIDTH - 20,
+                paddingLeft: PREVIEW_PADDING_X,
+                paddingRight: PREVIEW_PADDING_X,
+                boxSizing: "border-box",
               }}
             >
               <motion.span
+                ref={captionRef}
                 key={hoveredIndex}
-                className="hoves-p3-reg text-text-700 whitespace-nowrap block"
+                className="hoves-p3-reg text-text-700 inline-block"
                 style={{ x: captionOffset }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, x: captionOffset }}
@@ -327,6 +318,7 @@ const captionRef = useRef<HTMLSpanElement | null>(null);
                 {cases[hoveredIndex].videoTitle}
               </motion.span>
             </span>
+
           </div>
         )}
 
@@ -386,9 +378,8 @@ const captionRef = useRef<HTMLSpanElement | null>(null);
 
                   {item.logo && (
                     <div
-                      className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${
-                        isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
-                      }`}
+                      className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                        }`}
                     >
                       {item.logo}
                     </div>
@@ -396,9 +387,7 @@ const captionRef = useRef<HTMLSpanElement | null>(null);
                 </Link>
               </div>
 
-              <p
-                className={`text-text-700 hoves-p1-reg transition-all duration-300 ${
-                  isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
+              <p className={`text-text-700 hoves-p1-reg transition-all duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
                 }`}
               >
                 {item.title}

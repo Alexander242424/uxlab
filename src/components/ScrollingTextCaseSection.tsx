@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { gsap } from "gsap";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";

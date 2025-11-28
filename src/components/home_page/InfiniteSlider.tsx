@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import InfiniteCarousel from "./InfiniteCarousel";
+import InfiniteCarousel from "../InfiniteCarousel";
 
 interface SlideItem {
   icon: React.ReactNode;

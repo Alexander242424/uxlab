@@ -4,3 +4,32 @@
     left: -50px;
   }
 }
+
+@media (max-width: 767px) {
+  .quants_row {
+    flex-wrap: wrap;
+  }
+
+  .quants_row .quant {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .design_container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .design_section_image_shape {
+    max-width: 176px;
+  }
+}
+@media (max-width: 767px) {
+  .design_container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .design_section_image_shape {
+    max-width: 120px;
+  }
+}

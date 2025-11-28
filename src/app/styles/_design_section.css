@@ -1,0 +1,24 @@
+.design_section_image_shape {
+    max-width: 240px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animated_text_3d {
+    display: inline-block;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.animated_letter {
+    text-align: center;
+    font-family: var(--font-tt-hoves), system-ui, sans-serif;
+    font-weight: 300;
+    font-size: clamp(10rem, 17.22vw, 18rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    opacity: 1;
+    will-change: transform, opacity;
+}

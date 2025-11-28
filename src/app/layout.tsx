@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import 'tw-animate-css';
-import "./styles/tailwind.css";
 import "./main.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

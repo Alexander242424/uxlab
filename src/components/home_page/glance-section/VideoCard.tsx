@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import LinkedInIcon from "../../assets/Glance/LinkedIn.svg";
+import LinkedInIcon from "../../../assets/Glance/LinkedIn.svg";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 

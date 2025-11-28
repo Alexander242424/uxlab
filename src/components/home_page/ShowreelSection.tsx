@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { gsap } from "gsap";
-import VideoPlayer from "./VideoPlayer";
+import VideoPlayer from "../VideoPlayer";
 import { useVideoModal } from "@/context/VideoModalContext";
-import ScrollAnimatedSection from "./ScrollAnimatedSection";
+import ScrollAnimatedSection from "../ScrollAnimatedSection";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface ShowreelSectionProps {
