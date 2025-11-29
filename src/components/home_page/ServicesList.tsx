@@ -13,7 +13,6 @@ export type ServiceItem = {
 
 type ServicesListProps = {
   services?: ServiceItem[]; // опционально
-  isMobile: boolean;
   onServiceClick?: (service: ServiceItem, index: number) => void;
   baseDelay?: number;
   viewportMargin?: string;
@@ -44,8 +43,7 @@ const DEFAULT_SERVICES: ServiceItem[] = [
 ];
 
 export default function ServicesList({
-  services = DEFAULT_SERVICES, // 👈 дефолт
-  isMobile,
+  services = DEFAULT_SERVICES, 
   onServiceClick,
   baseDelay = 0.15,
   viewportMargin = "100px",
@@ -94,16 +92,14 @@ export default function ServicesList({
                   {service.subtitle}
                 </p>
               </div>
-              {!isMobile && (
-                <div className="flex w-[100%] not-sm:mt-[20px] sm:w-[50%] ml-auto justify-center">
-                  <div className="group-hover:max-h-[468px] flex justify-center group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-1000 ease-out video_box">
-                    <VideoPlayer
-                      src={service.videoSrc}
-                      className="w-full h-full  w-full sm:max-w-[468px] object-cover"
-                    />
-                  </div>
+              <div className="flex w-[100%] not-sm:mt-[20px] sm:w-[50%] ml-auto justify-center">
+                <div className="group-hover:max-h-[468px] flex justify-center group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-1000 ease-out video_box">
+                  <VideoPlayer
+                    src={service.videoSrc}
+                    className="w-full h-full  w-full sm:max-w-[468px] object-cover"
+                  />
                 </div>
-              )}
+              </div>
               <p className="text-text-500 w-[20%] hidden md:block hoves-p1-reg pt-2 md:pt-3">
                 {service.subtitle}
               </p>
