@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import SplitText from "../SplitText";
 import { Button } from "../ui/button";
 import { useCalModal } from "@/context/CalModalContext";
@@ -9,6 +9,9 @@ import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import WhatAppSVG from "@/assets/whatapp.svg";
 import designImage from "@/assets/design_section_image.png";
 import designShape from "@/assets/desing_section_shape.png";
+
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 type DesignOpsSectionProps = {
   title?: string;
@@ -42,6 +45,16 @@ export default function DesignOpsSection({
     openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
   };
 
+  // 🔹 ПАРАЛЛАКС: реф и привязка скролла к правому блоку
+  const imageContainerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: imageContainerRef,
+    offset: ["start end", "end start"], // когда блок входит и выходит из вьюпорта
+  });
+
+  // designImage будет слегка двигаться вверх/вниз
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-45%", "45%"]);
+
   return (
     <section className="bg-bg-black mx-4 md:mx-10 my-16 md:my-24">
       <div className="w-full">
@@ -54,7 +67,6 @@ export default function DesignOpsSection({
               </p>
             )}
 
-            {/* Визуальный заголовок через SplitText */}
             <div className="flex justify-start">
               <SplitText
                 text={title}
@@ -66,7 +78,6 @@ export default function DesignOpsSection({
                   fontSize: "clamp(2rem, 5vw, 7.5rem)",
                   lineHeight: "1.10",
                   letterSpacing: "-0.03em",
-                //   whiteSpace: "pre-line",
                 }}
                 splitType="lines"
                 delay={100}
@@ -108,20 +119,33 @@ export default function DesignOpsSection({
             </div>
           </div>
 
-          {/* Правая колонка с картинкой */}
-          <div className="w-full md:w-2/3">
+          {/* Правая колонка с параллаксом */}
+          <div className="w-full md:w-2/3" ref={imageContainerRef}>
             <div className="relative w-full overflow-hidden rounded-[4px] bg-black design_section_image_container">
-              <Image
-                src={designImage}
-                alt={typeof title === "string" ? title.replace(/\n/g, " ") : "DesignOps image"}
-                className="w-full h-full object-cover"
-                priority={false}
-              />
-              <Image
-                src={designShape}
-                alt="Design shape"
-                className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none design_section_image_shape"
-              />
+              <motion.div
+                style={{ y: parallaxY }}
+                className="relative w-full h-full"
+              >
+                <Image
+                  src={designImage}
+                  alt={
+                    typeof title === "string"
+                      ? title.replace(/\n/g, " ")
+                      : "DesignOps image"
+                  }
+                  className="w-full h-full object-cover"
+                  priority={false}
+                />
+              </motion.div>
+
+              <div className="pointer-events-none  inset-0 flex items-center justify-center">
+                <Image
+                  src={designShape}
+                  alt="Design shape"
+                  className="max-w-[70%] h-auto absolute object-contain design_section_image_shape"
+                  priority={false}
+                />
+              </div>
             </div>
           </div>
         </div>

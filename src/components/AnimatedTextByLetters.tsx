@@ -5,67 +5,73 @@ import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedTextByLettersProps = {
-    text: string;
-    className?: string;         // стили для всего текста
-    letterClassName?: string;   // стили для каждой буквы
-    delayStep?: number;         // шаг задержки между буквами
-    duration?: number;          // длительность анимации одной буквы
+  text: string;
+  className?: string;
+  letterClassName?: string;
+  delayStep?: number;
+  duration?: number;
 };
 
 export default function AnimatedTextByLetters({
-    text,
-    className,
-    letterClassName,
-    delayStep = 0.045, // как в твоих path'ах
-    duration = .5,
+  text,
+  className,
+  letterClassName,
+  delayStep = 0.045,
+  duration = 0.5,
 }: AnimatedTextByLettersProps) {
-    const { ref, inView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
 
-    // Array.from, чтобы корректно работать с emoji/диакритикой
-    const letters = React.useMemo(() => Array.from(text), [text]);
+  const letters = React.useMemo(() => Array.from(text), [text]);
 
-    return (
-        <span
-            ref={ref}
-            className={className}
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        display: "block",
+        overflow: "hidden",
+        textAlign: "center",
+      }}
+    >
+      {letters.map((char, index) => {
+        // 🔹 если это перевод строки — рендерим брейк и выходим
+        if (char === "\n") {
+          return <br key={`br-${index}`} />;
+        }
+
+        return (
+          <motion.span
+            key={`${char}-${index}`}
+            className={`${letterClassName ?? ""} animated_letter hoves-h2`}
             style={{
-                display: "inline-block",
-                overflow: "hidden",
-                textAlign: "center",
+              display: "inline-block",
+              whiteSpace: char === " " ? "pre" : "normal",
+              transformOrigin: "50% 100%",
+              textAlign: "center",
             }}
-        >
-            {letters.map((char, index) => (
-                <motion.span
-                    key={`${char}-${index}`}
-                    className={`${letterClassName ?? ""} animated_letter`}
-                    style={{
-                        display: "inline-block",
-                        whiteSpace: char === " " ? "pre" : "normal",
-                        transformOrigin: "50% 100%",
-                    }}
-                    initial={{
-                        opacity: 0,
-                        y: 200,
-                        rotateX: -90,
-                    }}
-                    animate={
-                        inView
-                            ? { opacity: 1, y: 0, rotateX: 0 }
-                            : { opacity: 0, y: 200, rotateX: -90 }
-                    }
-                    transition={{
-                        duration,
-                        ease: "easeOut",
-                        delay: index * delayStep,
-                    }}
-                >
-                    {char === " " ? "\u00A0" : char}
-                </motion.span>
-
-            ))}
-        </span>
-    );
+            initial={{
+              opacity: 0,
+              y: 200,
+              rotateX: -100,
+            }}
+            animate={
+              inView
+                ? { opacity: 1, y: 0, rotateX: 0 }
+                : { opacity: 0, y: 200, rotateX: -100 }
+            }
+            transition={{
+              duration,
+              ease: [0.16, 1, 0.3, 1],
+              delay: index * delayStep,
+            }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        );
+      })}
+    </div>
+  );
 }

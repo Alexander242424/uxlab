@@ -12,13 +12,17 @@
     transform-style: preserve-3d;
 }
 
-.animated_letter {
-    text-align: center;
-    font-family: var(--font-tt-hoves), system-ui, sans-serif;
-    font-weight: 300;
-    font-size: clamp(10rem, 17.22vw, 18rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    opacity: 1;
-    will-change: transform, opacity;
+/* services section  */
+.services_row {
+    padding-top: 110px;
+    padding-bottom: 48px;
+}
+.services_row h3 {
+    white-space: pre-line;
+}
+.video_box video{
+    height: 320px;
+}
+.video_box {
+    margin-right: 20px;
 }

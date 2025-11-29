@@ -6,22 +6,28 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import OptionImage from "../../assets/image/OurCases/Option 22.jpg";
+
 import GuideImage from "../../assets/image/OurCases/Option 28.png";
-import BoostraImage from "../../assets/image/OurCases/Option23.jpg";
+import Foundrae_main from "../../assets/image/OurCases/Foundrae.jpg";
+import MacDuggal from "../../assets/image/OurCases/Mac Duggal.jpg";
+import Valyou from "../../assets/image/OurCases/Valyou.jpg";
+import Wellow from "../../assets/image/OurCases/Wellow.jpg";
+import Royal from "../../assets/image/OurCases/Royal Queen Seeds.jpg";
 
-import EmmaLogo from "../../assets/image/OurCases/logo/emma-logo.svg";
 import NestpressoLogo from "../../assets/image/OurCases/logo/Vector.svg";
-import BoostraLogo from "../../assets/image/OurCases/logo/logo-main.svg";
+import Foundrae_logo from "../../assets/image/OurCases/logo/Foundrae_logo.svg";
+import MacDuggal_logo from "../../assets/image/OurCases/logo/Mac_duggal.svg";
+import Valyou_logo from "../../assets/image/OurCases/logo/Valyou_logo.svg";
+import Wellow_logo from "../../assets/image/OurCases/logo/Wellow.svg";
+import Royal_logo from "../../assets/image/OurCases/logo/Royal Queen Seeds.svg";
 
-import BoostraSmallImage from "../../assets/image/OurCases/4.png";
-import SplitText from "../SplitText";
 import VideoPlayer from "../VideoPlayer";
 
 interface OurCasesItem {
   src: StaticImageData;
   alt: string;
   title: string;
+  description: string;
   ImageSrc?: string | StaticImageData;
   videoSrc?: string;
   videoTitle?: string;
@@ -30,33 +36,68 @@ interface OurCasesItem {
   link?: string;
 }
 
-const cases: OurCasesItem[] = [{
-  src: OptionImage,
-  alt: "Emma usability audit case study",
-  title: "Scaling Emma Sleep from Utility App to AI-Driven Lifestyle Platform",
-  videoSrc: "/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4",
-  videoTitle: "Emma usability audit\ncase study",
-  logo: <EmmaLogo className="not-md:scale-[0.8]!" />,
-  link: "/emma",
-},
-{
-  src: BoostraImage,
-  alt: "Boostra analysis case study",
-  ImageSrc: BoostraSmallImage,
-  title: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
-  videoTitle: "Boostra analysis case study",
-  logo: <BoostraLogo className="not-md:scale-[0.8]!" />,
-  link: "/boostra",
-},
-{
-  src: GuideImage,
-  alt: "Nespresso case study",
-  title: "Redesigned Coffee Shopping into a High-Voltage Brand Experience",
-  videoSrc: "/video/nespressso/1RrLHJkvBJzSxSMJgpCTlVSsrs.mp4",
-  videoTitle: "Nespresso case study",
-  logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
-  link: "/nespresso",
-},
+const cases: OurCasesItem[] = [
+  {
+    src: GuideImage,
+    alt: "Nespresso case study",
+    title: "Nespresso",
+    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    videoSrc: "/video/our_cases/Nespresso.mp4",
+    videoTitle: "Nespresso case study",
+    logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
+    link: "/nespresso",
+  },
+  {
+    src: Foundrae_main,
+    alt: "Emma usability audit case study",
+    title: "Foundrae",
+    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    videoSrc: "/video/our_cases/Foundrae.mp4",
+    videoTitle: "Emma usability audit\ncase study",
+    logo: <Foundrae_logo className="not-md:scale-[0.8]!" />,
+    link: "/emma",
+  },
+  {
+    src: MacDuggal,
+    alt: "Boostra analysis case study",
+    title: "Mac Duggal",
+    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    videoSrc: "/video/our_cases/Mac_Duggal.mp4",
+    videoTitle: "Boostra analysis case study",
+    logo: <MacDuggal_logo className="not-md:scale-[0.8]!" />,
+    link: "/boostra",
+  },
+  {
+    src: Valyou,
+    alt: "Boostra analysis case study",
+    title: "Tapmy Store",
+    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
+    videoTitle: "Boostra analysis case study",
+    logo: <Wellow_logo className="not-md:scale-[0.8]!" />,
+    link: "/boostra",
+  },
+  {
+    src: Wellow,
+    alt: "Boostra analysis case study",
+    title: "Valyou Furniture",
+    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    videoSrc: "/video/our_cases/Wellow_Socks.mp4",
+    videoTitle: "Boostra analysis case study",
+    logo: <Valyou_logo className="not-md:scale-[0.8]!" />,
+    link: "/boostra",
+  },
+  {
+    src: Royal,
+    alt: "Boostra analysis case study",
+    title: "Royal Queen Seeds",
+    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
+    videoTitle: "Boostra analysis case study",
+    logo: <Royal_logo className="not-md:scale-[0.8]!" />,
+    link: "/boostra",
+  },
+
 ];
 
 const PREVIEW_WIDTH = 200;
@@ -76,7 +117,7 @@ export default function OurCases() {
   const [showVideo, setShowVideo] = useState(false);
   const [captionOffset, setCaptionOffset] = useState(0);
   const captionRef = useRef<HTMLSpanElement | null>(null);
-  
+
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
@@ -322,23 +363,6 @@ export default function OurCases() {
           </div>
         )}
 
-      {/* Заголовок */}
-      <div className="hoves-p1-reg text-text-700">
-        <SplitText
-          text="Case Studies"
-          className="hoves-p1-reg text-text-700"
-          splitType="lines"
-          delay={100}
-          duration={0.5}
-          ease="power3.out"
-          from={{ opacity: 0, y: 50 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="0px"
-          textAlign="left"
-        />
-      </div>
-
       {/* Карточки кейсов */}
       <div
         className="flex gap-2 md:gap-8 overflow-x-auto md:overflow-x-visible"
@@ -347,7 +371,7 @@ export default function OurCases() {
           msOverflowStyle: "none",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full">
           {cases.map((item, index) => (
             <div key={index} className="flex flex-col gap-[21px] w-full case_box">
               <div
@@ -386,12 +410,14 @@ export default function OurCases() {
                   )}
                 </Link>
               </div>
-
-              <p className={`text-text-700 hoves-p1-reg transition-all duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
-                }`}
-              >
-                {item.title}
-              </p>
+              <div className="flex justify-between items-center w-full">
+                <p className={`text-text-700 hoves-p1-reg transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
+                  }`}
+                >
+                  {item.title}
+                </p>
+                <p className=" hoves-p1-reg transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>

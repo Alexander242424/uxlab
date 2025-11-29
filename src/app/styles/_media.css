@@ -20,16 +20,36 @@
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
+
   .design_section_image_shape {
     max-width: 176px;
   }
+  .services_row h3 {
+    width: 100%;
+    flex: unset;
+  }
+  .services_row .flex.ml-auto.justify-center {
+    
+  }
+  .services_row p {
+    width: 95%;
+    margin-top: 8px;
+  }
 }
+
 @media (max-width: 767px) {
   .design_container {
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
+
   .design_section_image_shape {
     max-width: 120px;
+  }
+
+  .case_box:nth-child(2) .cursor-pointer,
+  .case_box:nth-child(3) .cursor-pointer,
+  .case_box:nth-child(5) .cursor-pointer {
+    max-height: 741px;
   }
 }

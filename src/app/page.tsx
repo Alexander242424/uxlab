@@ -1,10 +1,10 @@
-"use client";
 import HeroSection from "@/components/home_page/HeroSection";
 import ShowreelSection from "@/components/home_page/ShowreelSection";
 import TextSection from "@/components/home_page/TextSection";
 import ServiceItems from "@/components/home_page/ServiceItems";
 import DesignOptionSection from "@/components/home_page/DesignOptionSection";
 import OurCases from "@/components/home_page/OurCases";
+import ServicesList from "@/components/home_page/ServicesList";
 import AnimatedTextByLetters from "@/components/AnimatedTextByLetters";
 import InfiniteSlider from "@/components/home_page/InfiniteSlider";
 import GlanceSection from "@/components/home_page/glance-section/GlanceSection";
@@ -65,12 +65,19 @@ export default function HomePage() {
         <ServiceItems />
         <DesignOptionSection />
         <AnimatedTextByLetters
-          text={"Challenges \nWe Solve"}
+          text={"Selected\nResults"}
           className="font-semibold leading-tight"
           letterClassName="will-change-transform"
           delayStep={0.045}
         />
         <OurCases />
+        <AnimatedTextByLetters
+          text={"Challenges\nWe Solve"}
+          className="font-semibold leading-tight"
+          letterClassName="will-change-transform"
+          delayStep={0.045}
+        />
+        <ServicesList />
       </div>
       <div className="w-full bg-bg-white">
         <div className="w-full">
