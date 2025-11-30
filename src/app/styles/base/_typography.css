@@ -14,7 +14,7 @@
 
 .hoves-big {
   font-weight: 300;
-  /* BIG: clamp(4.5rem, ... , 14rem) / 88% */
+
   font-size: clamp(4.5rem, 15.5vw, 14rem);
   line-height: 0.88;
   letter-spacing: -0.03em;
@@ -22,7 +22,7 @@
 
 .hoves-h1 {
   font-weight: 300;
-  /* H1: тот же размер, но line-height 100% */
+
   font-size: clamp(4.5rem, 15.5vw, 14rem);
   line-height: 1;
   letter-spacing: -0.03em;
@@ -30,7 +30,7 @@
 
 .hoves-h2 {
   font-weight: 300;
-  /* H2: такая же формула размера, line-height 125% */
+
   font-size: clamp(4.5rem, 15.5vw, 14rem);
   line-height: 1.25;
   letter-spacing: -0.03em;
@@ -38,97 +38,89 @@
 
 .hoves-h3 {
   font-weight: 300;
-  /* H3: такая же формула размера, line-height 125% */
+
   font-size: clamp(4.5rem, 15.5vw, 14rem);
   line-height: 1.25;
   letter-spacing: -0.03em;
 }
 
-/* --------------------------------
-   BODY TEXT: P1, P2, S1
-   Сетка L / M / S из таблицы
-   L: ≥1920px
-   M: 1024–1919px
-   S: 275–1023px
-----------------------------------*/
 
-/* S (mobile / small): 275–1023px */
 @media screen and (min-width: 275px) and (max-width: 1023px) {
-  /* P1: 1rem (16px) / 1.375rem (22px) */
+
   .hoves-p1 {
     font-weight: 400;
-    font-size: 1rem; /* 16px */
-    line-height: 1.375rem; /* 22px */
+    font-size: 1rem;
+    line-height: 1.375rem;
     letter-spacing: -0.02em;
   }
 
-  /* P2: 0.875rem (14px) / 1.25rem (20px) */
+
   .hoves-p2 {
     font-weight: 400;
-    font-size: 0.875rem; /* 14px */
-    line-height: 1.25rem; /* 20px */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     letter-spacing: -0.02em;
   }
 
-  /* S1: 0.625rem (10px) / 0.75rem (12px) */
+
   .hoves-s1 {
     font-weight: 400;
-    font-size: 0.625rem; /* 10px */
-    line-height: 0.75rem; /* 12px */
+    font-size: 0.625rem;
+    line-height: 0.75rem;
     letter-spacing: -0.02em;
   }
 }
 
-/* M (medium / desktop): 1024–1919px */
+
 @media screen and (min-width: 1024px) and (max-width: 1919px) {
-  /* P1: 1rem (16px) / 1.375rem (22px) */
+
   .hoves-p1 {
     font-weight: 400;
-    font-size: 1rem; /* 16px */
-    line-height: 1.375rem; /* 22px */
+    font-size: 1rem;
+    line-height: 1.375rem;
     letter-spacing: -0.02em;
   }
 
-  /* P2: 1rem (16px) / 1.375rem (22px) */
+
   .hoves-p2 {
     font-weight: 400;
-    font-size: 1rem; /* 16px */
-    line-height: 1.375rem; /* 22px */
+    font-size: 1rem;
+    line-height: 1.375rem;
     letter-spacing: -0.02em;
   }
 
-  /* S1: 0.625rem (10px) / 0.75rem (12px) */
+
   .hoves-s1 {
     font-weight: 400;
-    font-size: 0.625rem; /* 10px */
-    line-height: 0.75rem; /* 12px */
+    font-size: 0.625rem;
+    line-height: 0.75rem;
     letter-spacing: -0.02em;
   }
 }
 
-/* L (large desktop): ≥1920px */
+
 @media screen and (min-width: 1920px) {
-  /* P1: 1.25rem (20px) / 1.75rem (28px) */
+
   .hoves-p1 {
     font-weight: 400;
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     letter-spacing: -0.02em;
   }
 
-  /* P2: 1rem (16px) / 1.375rem (22px) */
+
   .hoves-p2 {
     font-weight: 400;
-    font-size: 1rem; /* 16px */
-    line-height: 1.375rem; /* 22px */
+    font-size: 1rem;
+    line-height: 1.375rem;
     letter-spacing: -0.02em;
   }
 
-  /* S1: 0.625rem (10px) / 0.75rem (12px) */
+
   .hoves-s1 {
     font-weight: 400;
-    font-size: 0.625rem; /* 10px */
-    line-height: 0.75rem; /* 12px */
+    font-size: 0.625rem;
+    line-height: 0.75rem;
     letter-spacing: -0.02em;
   }
 }
@@ -137,6 +129,6 @@
 .hoves-40px-fluid {
   @extend %hoves-font;
 
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem); 
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   line-height: 1.25;
 }

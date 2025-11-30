@@ -5,6 +5,7 @@ import ServiceItems from "@/components/home_page/ServiceItems";
 import DesignOptionSection from "@/components/home_page/DesignOptionSection";
 import OurCases from "@/components/home_page/OurCases";
 import ServicesList from "@/components/home_page/ServicesList";
+import OneModelSection from "@/components/home_page/OneModelSection";
 import AnimatedTextByLetters from "@/components/AnimatedTextByLetters";
 import InfiniteSlider from "@/components/home_page/InfiniteSlider";
 import GlanceSection from "@/components/home_page/glance-section/GlanceSection";
@@ -23,6 +24,7 @@ import MaskGroup4 from "../assets/logoicons/Mask group-4.svg";
 // import MaskGroup from "../assets/logoicons/Mask group.svg";
 import CalendlyLogo from "../assets/logoicons/calendly-logo-vector 5.svg";
 import UserwayLogo from "../assets/logoicons/userway-org-vector-logo-2022 1.svg";
+import designImage from "@/assets/design_section_image.png";
 
 
 
@@ -49,8 +51,8 @@ export default function HomePage() {
         </div>
         <TextSection
           className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
-          firstText="Trusted by founders who"
-          secondText={[
+          text={[
+            "Trusted by founders who",
             "need design decisions backed by evidence,",
             "not guesswork when the stakes are highest.",
           ]}
@@ -79,7 +81,17 @@ export default function HomePage() {
         />
         <ServicesList />
       </div>
-      <div className="w-full bg-bg-white">
+      <div className="w-full pt-[120px] bg-bg-white">
+        <AnimatedTextByLetters
+          text={"One\nModel"}
+          className="font-semibold leading-tight animated_text_by_letters text-black"
+          letterClassName="will-change-transform"
+          delayStep={0.045}
+        />
+
+        <div className="w-full mx-4">
+          <OneModelSection bannerImage={designImage} />
+        </div>
         <div className="w-full">
           <InfiniteSlider
             slides={slides}
@@ -89,9 +101,8 @@ export default function HomePage() {
           <GlanceSection />
           <TextSection
             className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
-            firstText="After releasing hundreds of products"
-            secondText={[
-              "we really know how to deliver best experience",
+            text={[
+              "After releasing hundreds of products we really know how to deliver best experience",
               "fast and effectively.",
             ]}
             mobileText={[
