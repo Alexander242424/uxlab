@@ -37,7 +37,7 @@ export default function AnimatedTextByLetters({
       }}
     >
       {letters.map((char, index) => {
-        // 🔹 если это перевод строки — рендерим брейк и выходим
+        
         if (char === "\n") {
           return <br key={`br-${index}`} />;
         }

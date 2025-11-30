@@ -46,7 +46,7 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
         slides={carouselSlides}
         slideSpacing={slideSpacing}
         speed={duration}
-        className="cursor-none pointer-events-none"
+        className="cursor-none pointer-events-none logos_carousel"
       />
     </div>
   );

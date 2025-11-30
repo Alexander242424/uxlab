@@ -136,23 +136,23 @@ export default function OurCases() {
 
       const imageRect = currentImage.getBoundingClientRect();
 
-      // положение мыши по ширине картинки: 0..1
+      
       const relativeX = (e.clientX - imageRect.left) / imageRect.width;
       const clampedRelativeX = Math.min(Math.max(relativeX, 0), 1);
 
       const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
       const captionWidth = captionRef.current.getBoundingClientRect().width;
 
-      // если текст шире, чем область — просто ставим по центру, без движения
+      
       if (captionWidth >= innerWidth) {
         setCaptionOffset((innerWidth - captionWidth) / 2);
         return;
       }
 
-      // сколько свободного места от края до края, где может кататься текст
-      const freeSpace = innerWidth + 20 - captionWidth; // >= 0
+      
+      
 
-      // двигаем от 0 (левый край) до freeSpace (правый край)
+      
       const offset = freeSpace * clampedRelativeX;
       setCaptionOffset(offset);
     },
@@ -161,7 +161,7 @@ export default function OurCases() {
 
 
 
-  // === resize + mousemove ===
+  
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -189,13 +189,13 @@ export default function OurCases() {
     };
   }, [handleMouseMove, isInitialized]);
 
-  // === позиция/размер hover-превью (как курсор) ===
+  
   const cursorStyles = useMemo(() => {
     if (!isHovering || isMobile || hoveredIndex === null) return null;
 
     const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement | null;
 
-    // если не нашли картинку — ограничиваем окном
+    
     if (!currentImage) {
       let left = mousePosition.x - PREVIEW_WIDTH / 2;
       let top = mousePosition.y - PREVIEW_HEIGHT / 2;
@@ -218,13 +218,13 @@ export default function OurCases() {
     let left = mousePosition.x - PREVIEW_WIDTH / 2;
     let top = mousePosition.y - PREVIEW_HEIGHT / 2;
 
-    // Границы с учётом BOUNDARY_PADDING
+    
     let minLeft = imageRect.left + BOUNDARY_PADDING;
     let maxLeft = imageRect.right - BOUNDARY_PADDING - PREVIEW_WIDTH;
     let minTop = imageRect.top + BOUNDARY_PADDING;
     let maxTop = imageRect.bottom - BOUNDARY_PADDING - PREVIEW_HEIGHT;
 
-    // если карточка слишком маленькая / узкая — фоллбек без паддинга
+    
     if (maxLeft < minLeft) {
       minLeft = imageRect.left;
       maxLeft = imageRect.right - PREVIEW_WIDTH;
@@ -237,7 +237,7 @@ export default function OurCases() {
     left = Math.min(Math.max(left, minLeft), maxLeft);
     top = Math.min(Math.max(top, minTop), maxTop);
 
-    // подстраховка границ окна
+    
     if (left < 0) left = 0;
     if (left + PREVIEW_WIDTH > windowSize.width) left = windowSize.width - PREVIEW_WIDTH;
     if (top < 0) top = 0;
@@ -251,7 +251,7 @@ export default function OurCases() {
     };
   }, [isHovering, isMobile, hoveredIndex, mousePosition.x, mousePosition.y, windowSize.width, windowSize.height]);
 
-  // === gsap: плавное перемещение превью-курcора ===
+  
   useEffect(() => {
     if (isHovering && !isMobile && cursorRef.current && cursorStyles && isInitialized) {
       gsap.to(cursorRef.current, {
@@ -267,7 +267,7 @@ export default function OurCases() {
     setVideoError(index);
   }, []);
 
-  // === включаем/выключаем превью ===
+  
   useEffect(() => {
     if (hoveredIndex !== null) {
       setVideoError(null);

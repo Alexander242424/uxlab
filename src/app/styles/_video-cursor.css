@@ -78,12 +78,18 @@
     border-radius: 8px;
   }
 }
-/* Особые */
+.image__wrapper .media .h-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  --player-width: 100% !important;
+  --player-height: 100% !important;
+  --media-width: 100% !important;
+  --media-height: 100% !important;
+}
 .case_box:nth-child(3n + 1) .cursor-pointer {
   max-height: 741px;
 }
-
-/* Остальные */
 .case_box .cursor-pointer {
   max-height: 885px;
 }
