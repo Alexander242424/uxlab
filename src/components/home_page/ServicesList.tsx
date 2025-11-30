@@ -49,7 +49,7 @@ export default function ServicesList({
   viewportMargin = "100px",
 }: ServicesListProps) {
   return (
-    <div className="space-y-0">
+    <div className="space-y-0 mx-8">
       {services.map((service, index) => (
         <motion.div
           key={index}
@@ -85,7 +85,7 @@ export default function ServicesList({
           >
             <div className="flex px-10 items-center w-full flex-[3_1_auto] justify-between not-md:flex-wrap services_row">
               <div className="flex-col w-[50%] not-sm:w-full sm:flex-[1]">
-                <h3 className="hoves-40px-fluid w-full text-text-700 relative group/title">
+                <h3 className="hoves-40px-fluid w-full text-text-700 relative group/title tracking-tighter">
                   {service.title}
                 </h3>
                 <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3 hidden not-md:block">
@@ -93,7 +93,7 @@ export default function ServicesList({
                 </p>
               </div>
               <div className="flex w-[100%] not-sm:mt-[20px] sm:w-[50%] ml-auto justify-center">
-                <div className="group-hover:max-h-[468px] flex justify-center group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-1000 ease-out video_box">
+                <div className="group-hover:max-h-[468px] flex justify-center group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-1000 ease-out video_box rounded-[4px]">
                   <VideoPlayer
                     src={service.videoSrc}
                     className="w-full h-full  w-full sm:max-w-[468px] object-cover"

@@ -1,0 +1,39 @@
+/* animated text like rejouise */
+.animated_text_by_letters span {
+    letter-spacing: -1rem;
+    line-height: .9;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* services section  */
+.services_row {
+    padding-top: 110px;
+    padding-bottom: 48px;
+}
+
+.services_row h3 {
+    white-space: pre-line;
+}
+
+.video_box video {
+    height: 320px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.video_box {
+    margin-right: 20px;
+}
+
+/* infinite_slider */
+.logos_carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos_carousel .infinite-carousel__track {
+    padding-left: 0;
+}

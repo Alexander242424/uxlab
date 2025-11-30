@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { useInView } from "react-intersection-observer";
 
 type AnimatedTextByLettersProps = {
   text: string;
@@ -16,28 +15,62 @@ export default function AnimatedTextByLetters({
   text,
   className,
   letterClassName,
-  delayStep = 0.045,
-  duration = 0.5,
+  delayStep = 0.06, 
+  duration = 1,
 }: AnimatedTextByLettersProps) {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
   const letters = React.useMemo(() => Array.from(text), [text]);
 
+  
+  const containerVariants = React.useMemo(
+    () => ({
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: delayStep,
+        },
+      },
+    }),
+    [delayStep]
+  );
+
+  
+  const letterVariants = React.useMemo(
+    () => ({
+      hidden: {
+        opacity: 0,
+        y: "120%",      
+        rotateX: -90,   
+      },
+      visible: {
+        opacity: 1,
+        y: "0%",
+        rotateX: 0,
+        transition: {
+          duration,
+          ease: [0.16, 1, 0.3, 1], 
+        },
+      },
+    }),
+    [duration]
+  );
+
   return (
-    <div
-      ref={ref}
+    <motion.div
       className={className}
       style={{
         display: "block",
         overflow: "hidden",
         textAlign: "center",
       }}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        amount: 0.4, 
+        once: false, 
+      }}
     >
       {letters.map((char, index) => {
-        
         if (char === "\n") {
           return <br key={`br-${index}`} />;
         }
@@ -45,33 +78,19 @@ export default function AnimatedTextByLetters({
         return (
           <motion.span
             key={`${char}-${index}`}
+            variants={letterVariants}
             className={`${letterClassName ?? ""} animated_letter hoves-h2`}
             style={{
               display: "inline-block",
               whiteSpace: char === " " ? "pre" : "normal",
-              transformOrigin: "50% 100%",
+              transformOrigin: "50% 100%", 
               textAlign: "center",
-            }}
-            initial={{
-              opacity: 0,
-              y: 200,
-              rotateX: -100,
-            }}
-            animate={
-              inView
-                ? { opacity: 1, y: 0, rotateX: 0 }
-                : { opacity: 0, y: 200, rotateX: -100 }
-            }
-            transition={{
-              duration,
-              ease: [0.16, 1, 0.3, 1],
-              delay: index * delayStep,
             }}
           >
             {char === " " ? "\u00A0" : char}
           </motion.span>
         );
       })}
-    </div>
+    </motion.div>
   );
 }

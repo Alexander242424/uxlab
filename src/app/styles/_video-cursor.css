@@ -70,22 +70,13 @@
   from {
     opacity: 0;
     clip-path: inset(40%);
-    border-radius: 8px;
+    border-radius: 4px;
   }
   to {
     opacity: 1;
     clip-path: inset(0%);
-    border-radius: 8px;
+    border-radius: 4px;
   }
-}
-.image__wrapper .media .h-full {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  --player-width: 100% !important;
-  --player-height: 100% !important;
-  --media-width: 100% !important;
-  --media-height: 100% !important;
 }
 .case_box:nth-child(3n + 1) .cursor-pointer {
   max-height: 741px;

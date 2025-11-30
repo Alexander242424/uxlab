@@ -372,7 +372,7 @@ export default function OurCases() {
           msOverflowStyle: "none",
         }}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-16 w-full">
           {cases.map((item, index) => (
             <div key={index} className="flex flex-col gap-[21px] w-full case_box">
               <div
@@ -398,7 +398,7 @@ export default function OurCases() {
                     width={400}
                     height={300}
                     data-index={index}
-                    className={`w-full rounded-md image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
+                    className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
                   />
 
                   {item.logo && (

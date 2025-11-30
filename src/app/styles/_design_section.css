@@ -11,28 +11,3 @@
     perspective: 1000px;
     transform-style: preserve-3d;
 }
-
-/* services section  */
-.services_row {
-    padding-top: 110px;
-    padding-bottom: 48px;
-}
-.services_row h3 {
-    white-space: pre-line;
-}
-.video_box video{
-    height: 320px;
-}
-.video_box {
-    margin-right: 20px;
-}
-
-/* infinite_slider */
-.logos_carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logos_carousel .infinite-carousel__track{
-    padding-left: 0;
-}
