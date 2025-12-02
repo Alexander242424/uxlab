@@ -83,9 +83,9 @@ export default function BoostraPage() {
           imageAlt="Boostra Case Study"
           isAnimated={false}
         />
-        {/* <TextSection
+        <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
-         
+          firstText="Starting from our MVP launch and initial"
           secondText={[
             "user base, we partnered with GetBoostra to",
             "scale their SaaS platform beyond MVP,",
@@ -105,7 +105,7 @@ export default function BoostraPage() {
             "a modular growth",
             "growth system.",
           ]}
-        /> */}
+        />
         <CasesOutcome />
         <OverviewCaseImageSection
           imageSrc={FirstBlockImage1}
