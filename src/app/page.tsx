@@ -103,23 +103,6 @@ export default function HomePage() {
               src="/video/nespressso/JW9tBsFi0Xm6810KHjTgnbuBo.mp4"
             />
           </div>
-          <TextSection
-            firstText="Work seamlessly with a creative"
-            secondText={[
-              "team that's built to match your pace and",
-              "exceed your expectations.",
-            ]}
-            mobileText={[
-              "Work seamlessly with a",
-              "creative team that's built",
-              "to match your pace and",
-              "exceed your",
-              "expectations.",
-            ]}
-            showButton={true}
-            textColor="text-black"
-            className="mb-[96px] md:pb-[161px] px-4 md:px-10"
-          />
           <InsightsSection />
         </div>
       </div>

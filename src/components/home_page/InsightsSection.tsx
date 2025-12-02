@@ -36,7 +36,15 @@ const insightsData = [
     date: "29 August 2025",
     badgeText: "Research",
   },
-  
+  {
+    id: 4,
+    href: "/how-to-design-an-ai-agent2",
+    image: AIAgentImage,
+    title: ["How to Design an Agentic AI"],
+    author: "Alex Tyshchenko",
+    date: "1 October 2025",
+    badgeText: "UX Design",
+  },
 ];
 
 export default function InsightsSection() {
