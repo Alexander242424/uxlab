@@ -15,10 +15,14 @@ interface TextSectionProps {
   textColor?: string;
   rootMargin?: string;
   threshold?: number;
+  firstText?: string;
+  secondText?: string[];
 }
 
 export default function TextSection({
   text,
+  firstText,
+  secondText,
   mobileText,
   showButton = false,
   buttonText = "Book a Call",

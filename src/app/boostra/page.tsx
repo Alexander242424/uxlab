@@ -84,8 +84,8 @@ export default function BoostraPage() {
         />
         <TextSection
           className="px-4 pb-12 md:px-10 md:py-20"
-          text={[
-            "Starting from our MVP launch and initial",
+          firstText="Starting from our MVP launch and initial"
+          secondText={[
             "user base, we partnered with GetBoostra to",
             "scale their SaaS platform beyond MVP,",
             "driving conversion growth at key touchpoints",
