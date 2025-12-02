@@ -69,6 +69,7 @@ export default function EmmaPage() {
           isAnimated={false}
         />
         <TextSection
+          text=""
           className="px-4 pb-12 md:px-10 md:py-20"
           firstText="We have a rich history with Emma Sleep,"
           secondText={[

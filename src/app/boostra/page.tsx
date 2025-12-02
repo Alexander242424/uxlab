@@ -83,6 +83,7 @@ export default function BoostraPage() {
           isAnimated={false}
         />
         <TextSection
+          text=""
           className="px-4 pb-12 md:px-10 md:py-20"
           firstText="Starting from our MVP launch and initial"
           secondText={[
