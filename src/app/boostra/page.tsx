@@ -15,7 +15,6 @@ import CasesHeroSections from "@/components/CasesHeroSections";
 import CasesOutcome from "@/components/CasesOutcome";
 import InfoBlock from "@/components/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
-import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
 import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
