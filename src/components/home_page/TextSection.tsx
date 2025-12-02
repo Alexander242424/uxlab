@@ -15,8 +15,6 @@ interface TextSectionProps {
   textColor?: string;
   rootMargin?: string;
   threshold?: number;
-  firstText?: string;
-  secondText?: string[];
 }
 
 export default function TextSection({
