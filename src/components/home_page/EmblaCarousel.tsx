@@ -87,10 +87,11 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
 
 
     const basePxPerSec = totalWidth / speed;
+    // сколько пикселей проезжаем за этот кадр
     const stepSize =
       basePxPerSec * nextFactor * (deltaTime > 0 ? deltaTime / 1000 : 1 / 60);
 
-    let newX = currentX - stepSize;
+    const newX = currentX - stepSize;
 
 
     if (Math.abs(newX) >= totalWidth) {
