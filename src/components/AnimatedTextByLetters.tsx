@@ -78,7 +78,7 @@ export default function AnimatedTextByLetters({
         return (
           <motion.span
             key={`${char}-${index}`}
-            variants={letterVariants}
+            // variants={letterVariants}
             className={`${letterClassName ?? ""} animated_letter hoves-h2`}
             style={{
               display: "inline-block",
