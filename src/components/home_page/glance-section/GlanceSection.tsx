@@ -2,7 +2,7 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import SplitText from "../../SplitText";
-import EmblaCarousel from "../../EmblaCarousel";
+import EmblaCarousel from "../EmblaCarousel";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import VideoCard from "./VideoCard";
 
@@ -246,7 +246,7 @@ export default function GlanceSection() {
         />
         <div className="flex mx-4 md:mx-10 my-[96px] md:my-40 hoves-p1-reg" />
       </div>
-      <div className="relative mx-4 md:mx-10">
+      {/* <div className="relative mx-4 md:mx-10">
           <motion.div
             className="absolute -bottom-3 left-0 w-full h-[1px] bg-border-100"
             initial={{ scaleX: 0 }}
@@ -259,7 +259,7 @@ export default function GlanceSection() {
             }}
             style={{ transformOrigin: "left" }}
           />
-        </div>
+        </div> */}
     </div>
   );
 }

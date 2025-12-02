@@ -29,6 +29,15 @@ const insightsData = [
   },
   {
     id: 3,
+    href: "/mastering-design-systems2",
+    image: DesignSystemsImage,
+    title: ["How to Improve Website Conversions"],
+    author: "Alex Tyshchenko",
+    date: "29 August 2025",
+    badgeText: "Research",
+  },
+  {
+    id: 4,
     href: "/conversion-rate-optimization-ecommerce-saas",
     image: ConversionRateOptimizationImage,
     title: ["The Ultimate Design System Guide"],
@@ -44,7 +53,7 @@ export default function InsightsSection() {
   const isInView = useInView(borderRef, { once: true, margin: "-200px" });
 
   return (
-      <div id="insights" ref={borderRef} data-section="insights" className="flex flex-col bg-bg-white px-4 md:px-10 mb-40 relative z-20">
+      <div id="insights" ref={borderRef} data-section="insights" className="flex flex-col not-sm:flex-wrap bg-bg-white px-4 md:px-10 mb-40 relative z-20">
         <motion.div
           className="absolute top-0 left-4 right-4 md:left-10 md:right-10 h-[1px] bg-border-100"
           style={{

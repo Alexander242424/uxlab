@@ -7,8 +7,8 @@ import Image, { StaticImageData } from "next/image";
 import SplitText from "@/components/SplitText";
 import { Button } from "@/components/ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
-import check from "@/assets/image/check.svg"
-
+import CheckIcon from "@/assets/image/check.svg";
+import smallShape from "@/assets/image/small_shape.png"
 type PackageCardProps = {
   title?: string;
   subtitle?: string;
@@ -27,7 +27,7 @@ export default function PackageCard({
   subtitle = "Specific flow uplift",
   subtitle2 = "Starting from 5,000 USD",
   note,
-  bulletTitle = "",
+  bulletTitle = "Package Includes:",
   bullets = [
     "User Experience Strategy",
     "Analytics tools setup (if needed)",
@@ -52,11 +52,11 @@ export default function PackageCard({
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
     <section
-      className={`mt-[80px] w-full bg-[#f7f7f7] pt-[96px] rounded-[4px] overflow-hidden shadow-sm ${className}`}
+      className={`mt-[80px] w-full bg-[#f7f7f7] pt-[96px] rounded-[4px] overflow-hidden shadow-sm mx-auto ${className}`}
     >
       <div
         ref={cardRef}
@@ -86,8 +86,8 @@ export default function PackageCard({
                 threshold={0.5}
                 rootMargin="-100px"
                 textAlign="left"
-              />
-            )}
+                />
+                )}
 
             <SplitText
               text={title}
@@ -132,8 +132,8 @@ export default function PackageCard({
                 threshold={0.5}
                 rootMargin="-100px"
                 textAlign="left"
-              />
-            )}
+                />
+                )}
           </div>
 
           <div className="mt-4">
@@ -152,15 +152,16 @@ export default function PackageCard({
             <p className="mt-3 text-xs text-neutral-400">
               {note}
             </p>
-          )}
+            )}
         </div>
 
         {/* Правая часть (буллеты) */}
         <div className="md:w-1/2 max-w-[635px] flex flex-col gap-4">
           <motion.p
-            className="text-xs uppercase tracking-[0.18em] text-neutral-400"
+            className="text-xs tracking-[-0.01emem] text-[.5rem] text-black"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            style={{fontSize: "clamp(0.95rem, 1.8vw, 1.05rem)",}}
             viewport={{ amount: 0.4, once: false }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
@@ -171,7 +172,7 @@ export default function PackageCard({
             {bullets.map((item, idx) => (
               <motion.li
                 key={idx}
-                className="flex items-start gap-2"
+                className="flex items-center gap-2 mb-[16px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ amount: 0.4, once: false }}
@@ -181,17 +182,17 @@ export default function PackageCard({
                   delay: idx * 0.05,
                 }}
               >
-                <Image src={check} />
+                <CheckIcon className="bullet h-auto" />
                 <span>{item}</span>
               </motion.li>
-            ))}
+              ))}
           </ul>
         </div>
       </div>
 
       {/* Нижний баннер с параллаксом */}
       <div className="relative w-full h-[76px] md:h-[96px] overflow-hidden">
-        <motion.div style={{ y }} className="w-full h-full">
+        <motion.div style={{ y }} className="w-full h-[200px]">
           <Image
             src={bannerImage}
             alt="DesignOps Framework"
@@ -202,17 +203,20 @@ export default function PackageCard({
           />
         </motion.div>
 
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
-          <div className="flex items-center gap-3 text-white">
-            <div className="flex items-center justify-center w-7 h-7 rounded-sm bg-white/15 backdrop-blur">
-              <span className="text-xs font-semibold">✶</span>
-            </div>
-            <span className="text-sm md:text-base font-medium">
+        <div className="absolute shape_container inset-0 flex items-center justify-center pointer-events-none">
+          <div className="flex items-center gap-3 text-white small_shape">
+            <Image
+              src={smallShape}
+              alt="Small Shape"
+              className="w-full h-full object-cover"
+              priority={false}
+            />
+            <span className="text whitespace-nowrap text-[25px]">
               DesignOps Framework
             </span>
           </div>
         </div>
       </div>
     </section>
-  );
+    );
 }

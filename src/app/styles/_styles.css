@@ -37,3 +37,14 @@
 .logos_carousel .infinite-carousel__track {
     padding-left: 0;
 }
+.bullet {
+    max-width: 28px;
+}
+.small_shape img{
+    width: 48px;
+}
+.shape_container {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

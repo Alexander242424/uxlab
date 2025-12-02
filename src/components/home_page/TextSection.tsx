@@ -7,9 +7,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import { useCalModal } from "@/context/CalModalContext";
 
 interface TextSectionProps {
-  /** Основной текст (одна строка или массив строк) */
   text: string | string[];
-  /** Отдельный текст для мобилки, если нужно */
   mobileText?: string | string[];
   showButton?: boolean;
   buttonText?: string;

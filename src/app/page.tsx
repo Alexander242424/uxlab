@@ -9,9 +9,7 @@ import OneModelSection from "@/components/home_page/OneModelSection";
 import AnimatedTextByLetters from "@/components/AnimatedTextByLetters";
 import InfiniteSlider from "@/components/home_page/InfiniteSlider";
 import GlanceSection from "@/components/home_page/glance-section/GlanceSection";
-import HoverSection from "@/components/home_page/HoverSection";
 import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
-import QuestionSections from "@/components/home_page/QuestionSections";
 import InsightsSection from "@/components/home_page/InsightsSection";
 
 
@@ -89,7 +87,7 @@ export default function HomePage() {
           delayStep={0.045}
         />
 
-        <div className="w-full mx-4">
+        <div className="mx-4">
           <OneModelSection bannerImage={designImage} />
         </div>
         <div className="w-full">
@@ -99,46 +97,12 @@ export default function HomePage() {
             className="py-[90px] md:py-[173px]"
           />
           <GlanceSection />
-          <TextSection
-            className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
-            text={[
-              "After releasing hundreds of products we really know how to deliver best experience",
-              "fast and effectively.",
-            ]}
-            mobileText={[
-              "After releasing hundreds",
-              "of products we really",
-              "know how to deliver",
-              "best experience fast",
-              "and effectively."
-            ]}
-            textColor="text-black"
-          />
-          <HoverSection />
           <div className="w-full px-4 md:px-10 mt-[56px] md:mt-40 mb-[96px] md:mb-[161px]">
             <OverviewCaseVideoSection
               className="!p-0 !m-0"
               src="/video/nespressso/JW9tBsFi0Xm6810KHjTgnbuBo.mp4"
             />
           </div>
-          <QuestionSections />
-          <TextSection
-            firstText="Work seamlessly with a creative"
-            secondText={[
-              "team that's built to match your pace and",
-              "exceed your expectations.",
-            ]}
-            mobileText={[
-              "Work seamlessly with a",
-              "creative team that's built",
-              "to match your pace and",
-              "exceed your",
-              "expectations.",
-            ]}
-            showButton={true}
-            textColor="text-black"
-            className="mb-[96px] md:pb-[161px] px-4 md:px-10"
-          />
           <InsightsSection />
         </div>
       </div>
