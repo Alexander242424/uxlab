@@ -135,25 +135,25 @@ const TextWithLinks = ({
 const services: ServiceItem[] = [
   {
     title: "Ship new products from zero-to-one",
-    subtitle:"When you need to design MVP from the ground up with a high-powered product team.",
+    subtitle: "When you need to design MVP from the ground up with a high-powered product team.",
     videoSrc: "/ServiceItemVideo/landnq.mp4",
     time: "4 - 8 weeks",
   },
   {
     title: "Set the bar for category defining design",
-    subtitle:"If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
+    subtitle: "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
     videoSrc: "/ServiceItemVideo/pinance.mp4",
     time: "8 - 12 weeks",
   },
   {
     title: "Day-to-day exceptional design support",
-    subtitle:"Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
+    subtitle: "Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
     videoSrc: "/ServiceItemVideo/paydesk.mp4",
     time: "Starting from 4 weeks",
   },
   {
     title: "Conversion Rate Optimization (CRO)",
-    subtitle:"We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
+    subtitle: "We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
     videoSrc: "/ServiceItemVideo/seviceBell.mp4",
     time: "4 - 12 weeks",
   },
@@ -209,7 +209,7 @@ const lineVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0, 
+      staggerChildren: 0,
     },
   },
 };
@@ -300,88 +300,89 @@ export default function ServiceItems() {
         viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-4 hidden md:flex items-start">
+            <div className="grid not-sm:flex-col not-sm:gap-8 w-full">
+              {/* Заголовок слева оставляем через SplitText */}
+              <SplitText
+                text="Your Growth Starts Here."
+                className="text-text-700 hoves-p1-reg"
+                splitType="lines"
+                delay={100}
+                duration={0.8}
+                ease="power3.out"
+                from={{ opacity: 0, y: 50 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin={isMobile ? "-100px" : "-200px"}
+                textAlign="left"
+              />
 
-      <div className="flex flex-col sm:flex-row gap-12">
-        <div className="sm:w-[47%] hidden md:flex items-start">
-          <div className="grid not-sm:flex-col not-sm:gap-8 w-full">
-            {/* Заголовок слева оставляем через SplitText */}
-            <SplitText
-              text="Your Growth Starts Here."
-              className="text-text-700 hoves-p1-reg"
-              splitType="lines"
-              delay={100}
-              duration={0.8}
-              ease="power3.out"
-              from={{ opacity: 0, y: 50 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin={isMobile ? "-100px" : "-200px"}
-              textAlign="left"
-            />
-
-            {/* MOBILE ПАРАГРАФЫ (с анимацией по словам) */}
-            <div className="flex flex-col sm:hidden gap-4">
-              <div className="flex flex-col">
-                {renderWordAnimatedParagraph(
-                  firstParagraphMobile,
-                  "clamp(1.3rem, 4.8vw, 2rem)",
-                  "text-text-700 hoves-p1-reg"
-                )}
-              </div>
-              <div className="flex flex-col">
-                {renderWordAnimatedParagraph(
-                  secondParagraphMobile,
-                  "clamp(1.3rem, 4.8vw, 2rem)",
-                  "text-text-700 hoves-p1-reg"
-                )}
+              {/* MOBILE ПАРАГРАФЫ (с анимацией по словам) */}
+              <div className="flex flex-col sm:hidden gap-4">
+                <div className="flex flex-col">
+                  {renderWordAnimatedParagraph(
+                    firstParagraphMobile,
+                    "clamp(1.3rem, 4.8vw, 2rem)",
+                    "text-text-700 hoves-p1-reg"
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  {renderWordAnimatedParagraph(
+                    secondParagraphMobile,
+                    "clamp(1.3rem, 4.8vw, 2rem)",
+                    "text-text-700 hoves-p1-reg"
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* ПРАВАЯ КОЛОНКА + DESKTOP ПАРАГРАФЫ */}
-        <div className="w-full flex flex-col">
-          {/* DESKTOP ПАРАГРАФЫ */}
-          <div className="space-y-6 mb-20 w-full not-sm:hidden">
-            <div className="flex flex-col">
-              {renderWordAnimatedParagraph(
-                firstParagraph,
-                "",
-                "text-text-700 hoves-p1-reg !text-nowrap"
-              )}
-            </div>
-
-            <div className="flex flex-col">
-              {renderWordAnimatedParagraph(
-                secondParagraph,
-                "",
-                "text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
-              )}
-            </div>
-          </div>
-
-          {/* QUANTS */}
-          <div className="flex quants_row">
-            {quantsList.map((quant, index) => (
-              <div
-                key={index}
-                className="flex flex-col mr-8 last:mr-0 quant"
-              >
-                <span className="hoves-h3-med text-text-700 main_text">
-                  <CountUp
-                    start={0}
-                    end={quant.value}
-                    duration={3}
-                    decimals={Number.isInteger(quant.value) ? 0 : 1}
-                    enableScrollSpy
-                  />
-                  {quant.suffix}
-                </span>
-                <span className="text-text-500 hoves-p1-reg mt-2">
-                  {quant.label}
-                </span>
+          {/* ПРАВАЯ КОЛОНКА + DESKTOP ПАРАГРАФЫ */}
+          <div className="col-md-8 flex-col">
+            {/* DESKTOP ПАРАГРАФЫ */}
+            <div className="space-y-6 mb-20 w-full not-sm:hidden">
+              <div className="flex flex-col">
+                {renderWordAnimatedParagraph(
+                  firstParagraph,
+                  "",
+                  "text-text-700 hoves-p1-reg !text-nowrap"
+                )}
               </div>
-            ))}
+
+              <div className="flex flex-col">
+                {renderWordAnimatedParagraph(
+                  secondParagraph,
+                  "",
+                  "text-text-700 leading-relaxed hoves-p1-reg !text-nowrap"
+                )}
+              </div>
+            </div>
+
+            {/* QUANTS */}
+            <div className="flex quants_row">
+              {quantsList.map((quant, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col mr-8 last:mr-0 quant"
+                >
+                  <span className="hoves-h3-med text-text-700 main_text">
+                    <CountUp
+                      start={0}
+                      end={quant.value}
+                      duration={3}
+                      decimals={Number.isInteger(quant.value) ? 0 : 1}
+                      enableScrollSpy
+                    />
+                    {quant.suffix}
+                  </span>
+                  <span className="text-text-500 hoves-p1-reg mt-2">
+                    {quant.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

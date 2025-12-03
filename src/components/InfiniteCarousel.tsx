@@ -15,7 +15,7 @@ interface InfiniteCarouselProps {
 const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   slides,
   className = "",
-  slideSpacing = 16,
+  slideSpacing = 32,
   speed = 20,
 }) => {
   // Створюємо багато дублікатів для справжньої безкінечності

@@ -8,6 +8,7 @@ import { useCalModal } from "@/context/CalModalContext";
 
 interface TextSectionProps {
   text: string | string[];
+   bigText?: string | string[];
   mobileText?: string | string[];
   showButton?: boolean;
   buttonText?: string;
@@ -95,7 +96,6 @@ export default function TextSection({
             className="block"
             style={{
               overflow: "hidden",
-              textAlign: "right", // для десктопа ты и так делаешь text-right
             }}
           >
             {words.map((word, wordIndex) => (
@@ -111,7 +111,6 @@ export default function TextSection({
                   fontSize,
                   lineHeight: 1.1,
                   letterSpacing: "-0.03em",
-                  textAlign: "right",
                 }}
               >
                 <span style={{ display: "inline-block" }}>
@@ -145,7 +144,7 @@ export default function TextSection({
         </motion.div>
       ) : (
         <motion.div
-          className="text-right ml-auto max-w-5xl"
+          className="main_text_section"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -156,7 +155,7 @@ export default function TextSection({
         >
           {renderAnimatedText(
             textArray as string[],
-            "clamp(2.1rem, 3.8vw, 3.4rem)"
+            "min(4.306vw, 82.6666666667px)"
           )}
         </motion.div>
       )}

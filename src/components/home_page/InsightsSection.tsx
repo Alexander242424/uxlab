@@ -53,7 +53,8 @@ export default function InsightsSection() {
   const isInView = useInView(borderRef, { once: true, margin: "-200px" });
 
   return (
-      <div id="insights" ref={borderRef} data-section="insights" className="flex flex-col not-sm:flex-wrap bg-bg-white px-4 md:px-10 mb-40 relative z-20">
+    <div id="insights" ref={borderRef} data-section="insights" className="bg-bg-white  mb-40 relative z-20">
+      <div className="container-fluid">
         <motion.div
           className="absolute top-0 left-4 right-4 md:left-10 md:right-10 h-[1px] bg-border-100"
           style={{
@@ -67,25 +68,25 @@ export default function InsightsSection() {
           className="flex py-4 md:py-8 hoves-p1-reg"
         >
           <SplitText
-              text="Insights, Inspirations"
-              className="hoves-p1-reg text-black"
-              splitType="lines"
-              delay={100}
-              duration={0.5}
-              ease="power3.out"
-              from={{ opacity: 0, y: 50 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="0px"
-              textAlign="left"
-            />
+            text="Insights, Inspirations"
+            className="hoves-p1-reg text-black"
+            splitType="lines"
+            delay={100}
+            duration={0.5}
+            ease="power3.out"
+            from={{ opacity: 0, y: 50 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="0px"
+            textAlign="left"
+          />
         </div>
 
-        <div className="flex flex-row gap-2 md:gap-8 w-full overflow-x-auto md:overflow-x-visible">
+        <div className="row">
           {insightsData.map((insight, index) => (
-            <Link href={insight.href} key={insight.id} className="flex flex-col gap-3 min-w-[268px] sm:flex-1 sm:min-w-0 group">
-              <div className="overflow-hidden rounded-lg relative">
-                <Image 
+            <Link href={insight.href} key={insight.id} className="col-md-3 flex-col gap-3 min-w-[268px] sm:flex-1 sm:min-w-0 group">
+              <div className="overflow-hidden posts_box relative">
+                <Image
                   src={insight.image}
                   alt={""}
                   loading={"lazy"}
@@ -114,5 +115,6 @@ export default function InsightsSection() {
           ))}
         </div>
       </div>
+    </div>
   );
 }

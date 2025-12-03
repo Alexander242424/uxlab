@@ -2,6 +2,7 @@
 header {
   isolation: isolate;
   mix-blend-mode: difference;
+  
 }
 
 .header-text {

@@ -1,8 +1,43 @@
+body {
+    background: #000;
+    color: white;
+}
+
+.main_text_section .block:first-child{
+    text-align: right;
+}
+.main_text_section .block {
+    text-align: left;
+}
+
+.bg-bg-white {
+    background-color: #fff;
+}
+
+.case_box_container .case_box:nth-child(3n + 1) .cursor-pointer {
+  max-height: 741px;
+}
+.case_box_container .case_box .cursor-pointer {
+  max-height: 885px;
+}
+.case_box_container .case_box img{
+  height: 100%;
+}
+.slide_item,.slide_item img,.slide_item .relative.z-10.p-8.flex.flex-1.flex-col {
+    border-radius: 4px;
+}
+.last_video_screen {
+    border-radius: 4px;
+    overflow: hidden;
+}
+.posts_box {
+    border-radius: 4px;
+}
 /* animated text like rejouise */
 .animated_text_by_letters span {
     letter-spacing: -1rem;
     line-height: .9;
-    transform-origin: bottom;
+    transform-origin: 100% 50%;
     transform-style: preserve-3d;
     will-change: transform;
 }

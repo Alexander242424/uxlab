@@ -104,22 +104,22 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative z-10 bg-black">
+    <footer className="px-4 md:px-10 relative z-10 bg-black">
       {/* Частина з паралаксом */}
-      <div className="transition-transform duration-300 ease-out">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
+        className="transition-transform duration-300 ease-out"
           transition={{
             duration: 0.8,
             ease: "easeOut",
             delay: 0.2,
           }}
         >
-          <div className="mx-4 md:mx-10 md:pb-10 pt-10 pb-[48px] sm:pb-[70px] text-text-700 sm:min-h-[calc(100dvh-400px)]">
-            <div className="w-full flex flex-col md:flex-row sm:mt-2">
+          <div className="container-fluid md:pb-10 pt-10 pb-[48px] sm:pb-[70px] text-text-700 sm:min-h-[calc(100dvh-400px)]">
+            <div className="row flex flex-col md:flex-row sm:mt-2">
               {/* Left part - title + contacts + input */}
-              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+              <div className="col-md-6 mb-8 md:mb-0">
                 <h3 className="hoves-h5-med mb-8">
                   Relax. We&apos;ve Got You.
                 </h3>
@@ -178,7 +178,7 @@ export default function Footer() {
               </div>
 
               {/* Right part - navigation + social networks */}
-              <div className="w-full md:w-1/2 flex xl:gap-[154px]">
+              <div className="col-md-6 flex xl:gap-[154px]">
                 <div className="text-nowrap not-sm:min-w-1/2 md:pl-[1px] mb-8 md:mb-0 md:min-w-[212px]">
                   <ul className="space-y-4">
                     {/* <li>
@@ -312,7 +312,6 @@ export default function Footer() {
             </div>
           </div>
         </motion.div>
-      </div>
 
       {/* Фіксована частина без паралаксу */}
       <div className="mx-4 pb-4 md:mx-10 md:pb-10">

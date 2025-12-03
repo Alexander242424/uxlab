@@ -287,7 +287,7 @@ export default function OurCases() {
   }, [hoveredIndex]);
 
   return (
-    <div id="cases" className="flex flex-col gap-8 my-[96px] md:my-[160px] mx-4 md:mx-10 relative">
+    <div id="cases" className="flex flex-col gap-8 my-[96px] md:my-[160px]  relative">
 
       {isHovering &&
         !isMobile &&
@@ -364,65 +364,65 @@ export default function OurCases() {
           </div>
         )}
 
-      {/* Карточки кейсов */}
-      <div
-        className="flex gap-2 md:gap-8 overflow-x-auto md:overflow-x-visible"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-16 w-full">
-          {cases.map((item, index) => (
-            <div key={index} className="flex flex-col gap-[21px] w-full case_box">
-              <div
-                className="relative cursor-pointer"
-                onMouseEnter={() => {
-                  if (!isMobile) {
-                    setHoveredIndex(index);
-                    setIsHovering(true);
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (!isMobile) {
-                    setHoveredIndex(null);
-                    setIsHovering(false);
-                  }
-                }}
-              >
-                <Link href={item.link || "#"}>
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    loading="lazy"
-                    width={400}
-                    height={300}
-                    data-index={index}
-                    className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
-                  />
-
-                  {item.logo && (
-                    <div
-                      className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
-                        }`}
-                    >
-                      {item.logo}
-                    </div>
-                  )}
-                </Link>
-              </div>
-              <div className="flex justify-between items-center w-full">
-                <p className={`text-text-700 hoves-p1-reg transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
-                  }`}
+      <div className="container-fluid">
+        {/* Карточки кейсов */}
+        <div
+          className="row case_box_container"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+            {cases.map((item, index) => (
+              <div key={index} className="col-md-6 flex flex-col gap-[21px] case_box">
+                <div
+                  className="relative cursor-pointer"
+                  onMouseEnter={() => {
+                    if (!isMobile) {
+                      setHoveredIndex(index);
+                      setIsHovering(true);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (!isMobile) {
+                      setHoveredIndex(null);
+                      setIsHovering(false);
+                    }
+                  }}
                 >
-                  {item.title}
-                </p>
-                <p className=" hoves-p1-reg transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
+                  <Link href={item.link || "#"}>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                      width={400}
+                      height={300}
+                      data-index={index}
+                      className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
+                    />
+
+                    {item.logo && (
+                      <div
+                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                          }`}
+                      >
+                        {item.logo}
+                      </div>
+                    )}
+                  </Link>
+                </div>
+                <div className="flex justify-between items-center w-full">
+                  <p className={`text-text-700 hoves-p1-reg transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
+                    }`}
+                  >
+                    {item.title}
+                  </p>
+                  <p className=" hoves-p1-reg transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
     </div>
   );
 }

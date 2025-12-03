@@ -50,7 +50,7 @@ export default function VideoCard({
 
   return (
     <div
-      className={`relative w-full h-full rounded-lg overflow-hidden bg-black group ${classNames}`}
+      className={`relative w-full h-full slide_item overflow-hidden bg-black group ${classNames}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

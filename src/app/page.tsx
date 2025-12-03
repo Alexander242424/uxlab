@@ -49,10 +49,17 @@ export default function HomePage() {
         </div>
         <TextSection
           className="px-4 pt-8 pb-12 md:px-10 md:pt-12 md:pb-20"
+          bigText={[
+            "We help eCommerce",
+            "brands grow with decisions based on data, not guesswork,",
+            "so you win unlock tomorrow’s revenue today."
+          ]}
           text={[
-            "Trusted by founders who",
-            "need design decisions backed by evidence,",
-            "not guesswork when the stakes are highest.",
+            "We help eCommerce",
+            "brands grow with decisions based on data,",
+            "guesswork, so you win unlock tomorrow`s",
+            "not  revenue today."
+
           ]}
           mobileText={[
             "Trusted by founders who",
@@ -96,10 +103,12 @@ export default function HomePage() {
             duration={20}
             className="py-[90px] md:py-[173px]"
           />
+
           <GlanceSection />
-          <div className="w-full px-4 md:px-10 mt-[56px] md:mt-40 mb-[96px] md:mb-[161px]">
+
+          <div className="container-fluid">
             <OverviewCaseVideoSection
-              className="!p-0 !m-0"
+              className="!p-0 !m-0 last_video_screen"
               src="/video/nespressso/JW9tBsFi0Xm6810KHjTgnbuBo.mp4"
             />
           </div>

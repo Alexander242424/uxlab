@@ -37,7 +37,7 @@ export default function OverviewCaseVideoSection({
     <motion.div
       ref={containerRef}
       className={cn(
-        "w-full px-4 pt-4 pb-4 sm:px-10 sm:pt-10 sm:pb-10",
+        "w-full px-4 pt-4 pb-4 sm:px-10 sm:pt-10 sm:pb-",
         className
       )}
       style={{ clipPath }}

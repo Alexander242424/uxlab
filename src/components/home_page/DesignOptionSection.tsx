@@ -57,10 +57,10 @@ export default function DesignOpsSection({
 
   return (
     <section className="bg-bg-black mx-4 md:mx-10 my-16 md:my-24">
-      <div className="w-full">
-        <div className="flex lg:flex-row gap-10 items-end design_container">
+      <div className="container-fluid">
+        <div className="row items-end design_container">
           {/* Левая текстовая колонка */}
-          <div className="w-full md:w-1/3 flex flex-col gap-6">
+          <div className="col-md-4 flex flex-col gap-6">
             {subtitle && (
               <p className="text-text-500 hoves-p1-reg uppercase tracking-[0.12em]">
                 {subtitle}
@@ -120,7 +120,7 @@ export default function DesignOpsSection({
           </div>
 
           {/* Правая колонка с параллаксом */}
-          <div className="w-full md:w-2/3" ref={imageContainerRef}>
+          <div className="col-md-8" ref={imageContainerRef}>
             <div className="relative w-full overflow-hidden rounded-[4px] bg-black design_section_image_container">
               <motion.div
                 style={{ y: parallaxY }}

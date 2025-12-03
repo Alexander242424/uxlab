@@ -14,6 +14,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@types/mailchimp__mailchimp_marketing": "^3.0.21",
     "@vidstack/react": "^1.12.13",
+    "bootstrap": "^5.3.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.6.0",

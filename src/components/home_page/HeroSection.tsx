@@ -17,20 +17,16 @@ export default function HeroSection() {
   const textBlockY = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
-    <div
+    <section
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-230px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-140px)]"
+      className="hero_section flex flex-col relative min-h-[calc(100vh-72px-230px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-140px)]"
     >
       <motion.div
-        className="absolute hero-section-text 2xl:top-0 right-0 flex items-end w-full mb-[160px] mt-0 px-4 lg:px-0"
+        className="container-fluid hero-section-text 2xl:top-0 right-0 w-full mb-[160px] mt-0 "
         style={{ y: textBlockY }}
       >
-        <div className="w-full flex min-h-[300px]">
-          {/* Left part - empty, takes half of the screen */}
-          <div className="hidden sm:block sm:w-1/2"></div>
-
-          {/* Right part - contains the text block */}
-          <div className="sm:w-1/2 w-full flex justify-start  hero_text_block">
+        <div className="row min-h-[300px]">
+          <div className="col-sm-6 col-12 sm:ml-auto flex justify-start  hero_text_block">
             <div className="flex-col flex">
               <p className="text-text-700 hoves-p1-reg sm:text-right !text-nowrap ">
                 Work with eCommerce bands
@@ -48,6 +44,6 @@ export default function HeroSection() {
       <div className="mt-auto pb-4 px-4 md:px-10 md:pb-10">
         <WeMakeInterfacesSVG  word="interfaces" />
       </div>
-    </div>
+    </section>
   );
 }
