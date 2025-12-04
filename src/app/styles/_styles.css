@@ -1,7 +1,22 @@
 body {
     background: #000;
     color: white;
+    font-size: 16px;
 }
+@custom-variant dark (&:is(.dark *));
+
+/* Custom breakpoint variants */
+@custom-variant lg (@media (min-width: 1920px));
+@custom-variant md (@media (min-width: 1024px));
+@custom-variant sm (@media (min-width: 768px));
+@custom-variant xs (@media (min-width: 275px));
+
+/* Not breakpoint variants */
+@custom-variant not-lg (@media (max-width: 1919px));
+@custom-variant not-md (@media (max-width: 1023px));
+@custom-variant not-sm (@media (max-width: 767px));
+@custom-variant not-xs (@media (max-width: 274px));
+
 
 .main_text_section .block:first-child{
     text-align: right;
@@ -13,12 +28,16 @@ body {
 .bg-bg-white {
     background-color: #fff;
 }
-
+/* .case_box_container .case_box:nth-child(2) .cursor-pointer {
+    min-height: 885px;
+} */
 .case_box_container .case_box:nth-child(3n + 1) .cursor-pointer {
   max-height: 741px;
+  
 }
 .case_box_container .case_box .cursor-pointer {
   max-height: 885px;
+  
 }
 .case_box_container .case_box img{
   height: 100%;
@@ -26,12 +45,29 @@ body {
 .slide_item,.slide_item img,.slide_item .relative.z-10.p-8.flex.flex-1.flex-col {
     border-radius: 4px;
 }
+.case_box_container {
+    row-gap: 64px;
+}
 .last_video_screen {
     border-radius: 4px;
     overflow: hidden;
 }
 .posts_box {
     border-radius: 4px;
+}
+.after_row_title {
+    padding-top: 40px;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 52px;
+    margin-bottom: 42px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+.main_text_section {
+    display: flex;
+    flex-wrap: wrap;
 }
 /* animated text like rejouise */
 .animated_text_by_letters span {
@@ -42,6 +78,16 @@ body {
     will-change: transform;
 }
 
+/* our cases */
+.cases_logo {
+    max-width: fit-content;
+}
+.cases_logo svg {
+    width: 100%;
+}
+.cases_text_box {
+    column-gap: 20px;
+}
 /* services section  */
 .services_row {
     padding-top: 110px;
@@ -50,8 +96,11 @@ body {
 
 .services_row h3 {
     white-space: pre-line;
+    font-size: 32px;
 }
-
+.services_row p {
+    font-size: 20px;
+}
 .video_box video {
     height: 320px;
     border-radius: 4px;
@@ -72,8 +121,11 @@ body {
 .logos_carousel .infinite-carousel__track {
     padding-left: 0;
 }
+
 .bullet {
-    max-width: 28px;
+    min-width: 28px;
+    position: relative;
+    top: 4px;
 }
 .small_shape img{
     width: 48px;
@@ -82,4 +134,18 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+.quant_percentage {
+    font-size: 1.5rem;
+}
+.quant_text {
+    font-size: 16px;
+}
+.post_logo svg{
+    max-width: fit-content;
+    width: 100%;
+}
+.post_logo svg path {
+    width: 100%;
 }

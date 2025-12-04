@@ -7,19 +7,13 @@ import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 
-import GuideImage from "../../assets/image/OurCases/Option 28.png";
-import Foundrae_main from "../../assets/image/OurCases/Foundrae.jpg";
-import MacDuggal from "../../assets/image/OurCases/Mac Duggal.jpg";
-import Valyou from "../../assets/image/OurCases/Valyou.jpg";
-import Wellow from "../../assets/image/OurCases/Wellow.jpg";
-import Royal from "../../assets/image/OurCases/Royal Queen Seeds.jpg";
+import GuideImage from "../../assets/image/OurCases/nespresso-min.jpg";
+import Foundrae_main from "../../assets/image/OurCases/foundrae-min.jpg";
+import MacDuggal from "../../assets/image/OurCases/mac-duggal-min.jpg";
+import Valyou from "../../assets/image/OurCases/valyou-min.jpg";
+import Wellow from "../../assets/image/OurCases/wellow-min.jpg";
+import Royal from "../../assets/image/OurCases/royal-min.jpg";
 
-import NestpressoLogo from "../../assets/image/OurCases/logo/Vector.svg";
-import Foundrae_logo from "../../assets/image/OurCases/logo/Foundrae_logo.svg";
-import MacDuggal_logo from "../../assets/image/OurCases/logo/Mac_duggal.svg";
-import Valyou_logo from "../../assets/image/OurCases/logo/Valyou_logo.svg";
-import Wellow_logo from "../../assets/image/OurCases/logo/Wellow.svg";
-import Royal_logo from "../../assets/image/OurCases/logo/Royal Queen Seeds.svg";
 
 import VideoPlayer from "../VideoPlayer";
 
@@ -32,7 +26,7 @@ interface OurCasesItem {
   videoSrc?: string;
   videoTitle?: string;
   fallbackImage?: StaticImageData;
-  logo?: React.ReactNode;
+  logo?: string;
   link?: string;
 }
 
@@ -44,7 +38,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Nespresso.mp4",
     videoTitle: "Nespresso case study",
-    logo: <NestpressoLogo className="not-md:scale-[0.8]!" />,
+    logo: "/image/OurCases/logo/Vector.svg",
     link: "/nespresso",
   },
   {
@@ -54,7 +48,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Foundrae.mp4",
     videoTitle: "Emma usability audit\ncase study",
-    logo: <Foundrae_logo className="not-md:scale-[0.8]!" />,
+    logo: "/image/OurCases/logo/Foundrae_logo.svg",
     link: "/emma",
   },
   {
@@ -64,7 +58,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Mac_Duggal.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: <MacDuggal_logo className="not-md:scale-[0.8]!" />,
+    logo: "/image/OurCases/logo/Mac_duggal.svg",
     link: "/boostra",
   },
   {
@@ -74,7 +68,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: <Wellow_logo className="not-md:scale-[0.8]!" />,
+    logo: "/image/OurCases/logo/Valyou_logo.svg",
     link: "/boostra",
   },
   {
@@ -84,7 +78,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: <Valyou_logo className="not-md:scale-[0.8]!" />,
+    logo: "/image/OurCases/logo/Wellow.svg",
     link: "/boostra",
   },
   {
@@ -94,17 +88,12 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: <Royal_logo className="not-md:scale-[0.8]!" />,
+    logo: "/image/OurCases/logo/Royal_Queen_Seeds.svg",
     link: "/boostra",
   },
 
 ];
 
-
-const PREVIEW_WIDTH = 200;
-const PREVIEW_HEIGHT = 264;
-const PREVIEW_PADDING_X = 0;
-const BOUNDARY_PADDING = 80;
 
 export default function OurCases() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -118,6 +107,62 @@ export default function OurCases() {
   const [showVideo, setShowVideo] = useState(false);
   const [captionOffset, setCaptionOffset] = useState(0);
   const captionRef = useRef<HTMLSpanElement | null>(null);
+
+
+   const [previewConfig, setPreviewConfig] = useState(() => {
+    // на сервере window нет
+    if (typeof window === "undefined") {
+      return {
+        width: 200,
+        height: 264,
+        boundaryPadding: 80,
+      };
+    }
+
+    const windowSize = window.innerWidth;
+    const isTabletOrLess = windowSize <= 1023;
+
+    const wdt = isTabletOrLess ? 150 : 200;
+    const ht = isTabletOrLess ? 200 : 264;
+    const boundary = Math.max(20, Math.min(windowSize * 0.05, 120));
+
+    return {
+      width: wdt,
+      height: ht,
+      boundaryPadding: boundary,
+    };
+  });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleResize = () => {
+      const windowSize = window.innerWidth;
+      const isTabletOrLess = windowSize <= 1023;
+
+      const wdt = isTabletOrLess ? 150 : 200;
+      const ht = isTabletOrLess ? 200 : 264;
+      const boundary = Math.max(20, Math.min(windowSize * 0.05, 120));
+
+      setPreviewConfig({
+        width: wdt,
+        height: ht,
+        boundaryPadding: boundary,
+      });
+    };
+
+    handleResize(); // посчитать сразу при маунте
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+const PREVIEW_WIDTH = previewConfig.width;
+  const PREVIEW_HEIGHT = previewConfig.height;
+  const PREVIEW_PADDING_X = 0;
+  const BOUNDARY_PADDING = previewConfig.boundaryPadding;
 
 
   const handleMouseMove = useCallback(
@@ -137,23 +182,23 @@ export default function OurCases() {
 
       const imageRect = currentImage.getBoundingClientRect();
 
-      // положение мыши по ширине картинки: 0..1
+
       const relativeX = (e.clientX - imageRect.left) / imageRect.width;
       const clampedRelativeX = Math.min(Math.max(relativeX, 0), 1);
 
       const innerWidth = PREVIEW_WIDTH - PREVIEW_PADDING_X * 2;
       const captionWidth = captionRef.current.getBoundingClientRect().width;
 
-      // если текст шире, чем область — просто ставим по центру, без движения
+
       if (captionWidth >= innerWidth) {
         setCaptionOffset((innerWidth - captionWidth) / 2);
         return;
       }
 
-      // сколько свободного места от края до края, где может кататься текст
-      const freeSpace = innerWidth + 20 - captionWidth; // >= 0
 
-      // двигаем от 0 (левый край) до freeSpace (правый край)
+      const freeSpace = innerWidth + 20 - captionWidth;
+
+
       const offset = freeSpace * clampedRelativeX;
       setCaptionOffset(offset);
     },
@@ -162,7 +207,7 @@ export default function OurCases() {
 
 
 
-  // === resize + mousemove ===
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -190,13 +235,13 @@ export default function OurCases() {
     };
   }, [handleMouseMove, isInitialized]);
 
-  // === позиция/размер hover-превью (как курсор) ===
+
   const cursorStyles = useMemo(() => {
     if (!isHovering || isMobile || hoveredIndex === null) return null;
 
     const currentImage = document.querySelector(`#cases .cursor-pointer img[data-index="${hoveredIndex}"]`) as HTMLElement | null;
 
-    // если не нашли картинку — ограничиваем окном
+
     if (!currentImage) {
       let left = mousePosition.x - PREVIEW_WIDTH / 2;
       let top = mousePosition.y - PREVIEW_HEIGHT / 2;
@@ -219,13 +264,13 @@ export default function OurCases() {
     let left = mousePosition.x - PREVIEW_WIDTH / 2;
     let top = mousePosition.y - PREVIEW_HEIGHT / 2;
 
-    // Границы с учётом BOUNDARY_PADDING
+
     let minLeft = imageRect.left + BOUNDARY_PADDING;
     let maxLeft = imageRect.right - BOUNDARY_PADDING - PREVIEW_WIDTH;
     let minTop = imageRect.top + BOUNDARY_PADDING;
     let maxTop = imageRect.bottom - BOUNDARY_PADDING - PREVIEW_HEIGHT;
 
-    // если карточка слишком маленькая / узкая — фоллбек без паддинга
+
     if (maxLeft < minLeft) {
       minLeft = imageRect.left;
       maxLeft = imageRect.right - PREVIEW_WIDTH;
@@ -238,7 +283,7 @@ export default function OurCases() {
     left = Math.min(Math.max(left, minLeft), maxLeft);
     top = Math.min(Math.max(top, minTop), maxTop);
 
-    // подстраховка границ окна
+
     if (left < 0) left = 0;
     if (left + PREVIEW_WIDTH > windowSize.width) left = windowSize.width - PREVIEW_WIDTH;
     if (top < 0) top = 0;
@@ -252,7 +297,7 @@ export default function OurCases() {
     };
   }, [isHovering, isMobile, hoveredIndex, mousePosition.x, mousePosition.y, windowSize.width, windowSize.height]);
 
-  // === gsap: плавное перемещение превью-курcора ===
+
   useEffect(() => {
     if (isHovering && !isMobile && cursorRef.current && cursorStyles && isInitialized) {
       gsap.to(cursorRef.current, {
@@ -268,7 +313,7 @@ export default function OurCases() {
     setVideoError(index);
   }, []);
 
-  // === включаем/выключаем превью ===
+
   useEffect(() => {
     if (hoveredIndex !== null) {
       setVideoError(null);
@@ -373,56 +418,62 @@ export default function OurCases() {
             msOverflowStyle: "none",
           }}
         >
-            {cases.map((item, index) => (
-              <div key={index} className="col-md-6 flex flex-col gap-[21px] case_box">
-                <div
-                  className="relative cursor-pointer"
-                  onMouseEnter={() => {
-                    if (!isMobile) {
-                      setHoveredIndex(index);
-                      setIsHovering(true);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (!isMobile) {
-                      setHoveredIndex(null);
-                      setIsHovering(false);
-                    }
-                  }}
-                >
-                  <Link href={item.link || "#"}>
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      loading="lazy"
-                      width={400}
-                      height={300}
-                      data-index={index}
-                      className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
-                    />
+          {cases.map((item, index) => (
+            <div key={index} className="col-md-6 flex flex-col gap-[21px] case_box">
+              <div
+                className="relative cursor-pointer"
+                onMouseEnter={() => {
+                  if (!isMobile) {
+                    setHoveredIndex(index);
+                    setIsHovering(true);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isMobile) {
+                    setHoveredIndex(null);
+                    setIsHovering(false);
+                  }
+                }}
+              >
+                <Link href={item.link || "#"}>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    width={400}
+                    height={300}
+                    data-index={index}
+                    className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
+                  />
 
-                    {item.logo && (
-                      <div
-                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
-                          }`}
-                      >
-                        {item.logo}
-                      </div>
-                    )}
-                  </Link>
-                </div>
-                <div className="flex justify-between items-center w-full">
-                  <p className={`text-text-700 hoves-p1-reg transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
-                    }`}
-                  >
-                    {item.title}
-                  </p>
-                  <p className=" hoves-p1-reg transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
-                </div>
+                  {item.logo && (
+                    <div
+                      className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                        }`}
+                    >
+                      <Image
+                        src={item.logo}
+                        alt={`${item.title} logo`}
+                        width={147}
+                        height={37}
+                        className="w-auto h-auto max-w-full not-md:scale-[0.8]"
+                      />
+                    </div>
+                  )}
+                </Link>
               </div>
-            ))}
-          </div>
+              <div className="cases_text_box flex justify-between items-center w-full">
+                <p className={`text-text-700 hoves-p1-reg transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
+                  }`}
+                >
+                  {item.title}
+                </p>
+                <p className=" hoves-p1-reg transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ type PackageCardProps = {
   subtitle?: string;
   subtitle2?: string;
   note?: string;
-  bulletTitle?: string;
+  afterRowTitle?: string;
   bullets?: string[];
   ctaLabel?: string;
   onCtaClick?: () => void;
@@ -27,7 +27,7 @@ export default function PackageCard({
   subtitle = "Specific flow uplift",
   subtitle2 = "Starting from 5,000 USD",
   note,
-  bulletTitle = "Package Includes:",
+  afterRowTitle = "For bigger requests (full redesign/rebrand) - let’s talk and find the best custom pricing model for you.",
   bullets = [
     "User Experience Strategy",
     "Analytics tools setup (if needed)",
@@ -56,70 +56,83 @@ export default function PackageCard({
 
   return (
     <section
-      className={`mt-[80px] w-full bg-[#f7f7f7] pt-[96px] rounded-[4px] overflow-hidden shadow-sm mx-auto ${className}`}
+      className={`one_model_section mt-[80px] w-full bg-[#f7f7f7] pt-[96px] rounded-[4px] overflow-hidden shadow-sm mx-auto ${className}`}
     >
-      <div
-        ref={cardRef}
-        className="flex flex-col md:flex-row justify-center items-start gap-10 px-6 md:px-10 pb-10"
-      >
-        {/* Левая часть (текст с анимацией SplitText как в DesignOpsSection) */}
-        <div className="md:w-1/2 max-w-[635px] flex flex-col gap-6">
-          <div className="flex flex-col gap-3 whitespace-pre-line">
-            {subtitle && (
+      <div className="container">
+        <div
+          ref={cardRef}
+          className="row justify-content-center"
+        >
+          {/* Левая часть (текст с анимацией SplitText как в DesignOpsSection) */}
+          <div className="col-md-5 flex flex-col gap-6">
+            <div className="flex flex-col gap-3 whitespace-pre-line">
+              {subtitle && (
+                <SplitText
+                  text={subtitle}
+                  className="text-black"
+                  globalIndex={0}
+                  style={{
+                    fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    lineHeight: "1.1",
+                    letterSpacing: "-0.01em",
+                  }}
+                  splitType="lines"
+                  delay={100}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.5}
+                  rootMargin="-100px"
+                  textAlign="left"
+                />
+              )}
+
               <SplitText
-                text={subtitle}
-                className="text-black"
-                globalIndex={0}
+                text={title}
+                className="text-black hoves-h1"
+                globalIndex={1}
                 style={{
                   fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                  fontWeight: 400,
-                  fontSize: "clamp(0.9rem, 1.6vw, 1rem)",
-                  lineHeight: "1.1",
-                  letterSpacing: "-0.01em",
+                  fontWeight: 300,
+                  fontSize: "clamp(2rem, 5vw, 3.5rem)",
+                  lineHeight: "1.05",
+                  letterSpacing: "-0.04em",
                 }}
                 splitType="lines"
                 delay={100}
                 duration={0.8}
                 ease="power3.out"
-                from={{ opacity: 0, y: 50 }}
+                from={{ opacity: 0, y: 100 }}
                 to={{ opacity: 1, y: 0 }}
                 threshold={0.5}
                 rootMargin="-100px"
                 textAlign="left"
-                />
-                )}
+              />
+            </div>
 
-            <SplitText
-              text={title}
-              className="text-black"
-              globalIndex={1}
-              style={{
-                fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                fontWeight: 300,
-                fontSize: "clamp(2rem, 5vw, 3.5rem)",
-                lineHeight: "1.05",
-                letterSpacing: "-0.04em",
-              }}
-              splitType="lines"
-              delay={100}
-              duration={0.8}
-              ease="power3.out"
-              from={{ opacity: 0, y: 100 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.5}
-              rootMargin="-100px"
-              textAlign="left"
-            />
+            <div className="mt-4">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="rounded-full px-6 py-2 bg-black text-white hover:bg-neutral-900"
+                iconRight={<ArrowUpRightSVG className="!size-5" />}
+                onClick={onCtaClick}
+              >
+                {ctaLabel}
+              </Button>
+            </div>
 
             {subtitle2 && (
               <SplitText
                 text={subtitle2}
-                className="text-neutral-500"
+                className="text-[#959595] not-sm:mb-[24px]"
                 globalIndex={2}
                 style={{
                   fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                   fontWeight: 400,
-                  fontSize: "clamp(0.95rem, 1.8vw, 1.05rem)",
                   lineHeight: "1.4",
                   letterSpacing: "-0.01em",
                 }}
@@ -132,64 +145,44 @@ export default function PackageCard({
                 threshold={0.5}
                 rootMargin="-100px"
                 textAlign="left"
-                />
-                )}
-          </div>
-
-          <div className="mt-4">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="rounded-full px-6 py-2 bg-black text-white hover:bg-neutral-900"
-              iconRight={<ArrowUpRightSVG className="!size-5" />}
-              onClick={onCtaClick}
-            >
-              {ctaLabel}
-            </Button>
-          </div>
-
-          {note && (
-            <p className="mt-3 text-xs text-neutral-400">
-              {note}
-            </p>
+              />
             )}
-        </div>
+            {note && (
+              <p className="mt-3 text-xs text-neutral-400">
+                {note}
+              </p>
+            )}
+          </div>
 
-        {/* Правая часть (буллеты) */}
-        <div className="md:w-1/2 max-w-[635px] flex flex-col gap-4">
-          <motion.p
-            className="text-xs tracking-[-0.01emem] text-[.5rem] text-black"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            style={{fontSize: "clamp(0.95rem, 1.8vw, 1.05rem)",}}
-            viewport={{ amount: 0.4, once: false }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            {bulletTitle}
-          </motion.p>
-
-          <ul className="space-y-2 text-sm text-neutral-700">
-            {bullets.map((item, idx) => (
-              <motion.li
-                key={idx}
-                className="flex items-center gap-2 mb-[16px]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ amount: 0.4, once: false }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeOut",
-                  delay: idx * 0.05,
-                }}
-              >
-                <CheckIcon className="bullet h-auto" />
-                <span>{item}</span>
-              </motion.li>
+          {/* Правая часть (буллеты) */}
+          <div className="col-md-5">
+            <ul className="space-y-2 text-black">
+              {bullets.map((item, idx) => (
+                <motion.li
+                  key={idx}
+                  className="flex items-center mb-[16px]"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ amount: 0.4, once: false }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                    delay: idx * 0.05,
+                  }}
+                >
+                  <CheckIcon className="bullet h-auto" />
+                  <span className="hoves-p1">{item}</span>
+                </motion.li>
               ))}
-          </ul>
+            </ul>
+          </div>
+          <div className="col-lg-12">
+            {afterRowTitle && (
+              <p className="after_row_title hoves-p1 ">{afterRowTitle}</p>
+            )}
+          </div>
         </div>
       </div>
-
       {/* Нижний баннер с параллаксом */}
       <div className="relative w-full h-[76px] md:h-[96px] overflow-hidden">
         <motion.div style={{ y }} className="w-full h-[200px]">
@@ -211,12 +204,12 @@ export default function PackageCard({
               className="w-full h-full object-cover"
               priority={false}
             />
-            <span className="text whitespace-nowrap text-[25px]">
+            <span className="text whitespace-nowrap hoves-p1">
               DesignOps Framework
             </span>
           </div>
         </div>
       </div>
     </section>
-    );
+  );
 }

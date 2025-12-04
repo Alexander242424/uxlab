@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_media.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_video-cursor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_video-cursor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/base/_typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/base/_typography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/image/OurCases/Foundrae.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/image/OurCases/Foundrae.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/image/OurCases/logo/Royal Queen Seeds.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/BMW_logo_(gray) 1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Forbes_logo 1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Mask group-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Mask group-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Mask group-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Mask group-4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Mask group.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/calendly-logo-vector 5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/userway-org-vector-logo-2022 1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InfiniteCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfiniteCarousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/DesignOptionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/DesignOptionSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/OurCases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/OurCases.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/ServicesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/ServicesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/TextSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/TextSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/glance-section/GlanceSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/glance-section/GlanceSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/glance-section/VideoCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/glance-section/VideoCard.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\Program Files\php-8.4.3\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="36O7StoAtrAS9Ol7uRDY8u4lGlt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\project\\uxlab\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
+        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="" />
+      <created>1764865772235</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764865772235</updated>
+      <workItem from="1764865778686" duration="4781000" />
+      <workItem from="1764870989947" duration="2529000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

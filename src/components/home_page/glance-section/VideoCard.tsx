@@ -17,6 +17,7 @@ interface VideoCardProps {
   classNames?: string;
   url?: string;
   containerClassName?: string;
+  persentage?: any[],
 }
 
 export default function VideoCard({
@@ -33,6 +34,8 @@ export default function VideoCard({
   url,
   classNames,
   containerClassName,
+  persentage,
+
 }: VideoCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -79,15 +82,11 @@ export default function VideoCard({
 
       {/* Content */}
       <div
-        className={`relative z-10 p-8 flex flex-1 flex-col gap-5 ${containerClassName}`}
+        className={`relative z-10 p-8 flex flex-1 flex-col gap-5 justify-content-between ${containerClassName}`}
       >
-        <div className="flex items-center justify-center bg-[#0000002E] rounded-lg py-[4px] px-[8px] w-fit backdrop-blur-[4px]">
-          <p className="font-tt-hoves font-medium text-[12px] uppercase">
-            {badgetText}
-          </p>
-        </div>
+
         <div className="flex flex-col gap-2">
-          <h6 className=" hoves-h6-med">{descriptionText}</h6>
+          <h6 className="hoves-p1 w-[75%]">{descriptionText}</h6>
         </div>
         {withAuthor &&
           (isForbes ? (
@@ -115,7 +114,17 @@ export default function VideoCard({
               </div>
             </div>
           ))}
-        <div className="flex items-end justify-end mt-auto">{logo}</div>
+        <div className="row mx-0">
+          <div className="col-8 px-0 flex justify-content-between posts_quants_box">
+          {persentage?.map((item, index) => (
+              <div key={index} className="flex flex-col">
+                <span className="quant_percentage">{item.quant}</span>
+                <span className="quant_text">{item.text}</span>
+              </div>
+          ))}
+          </div>
+          <div className="flex post_logo items-end justify-end mt-auto col-3 ml-auto px-0">{logo}</div>
+        </div>
       </div>
     </div>
   );

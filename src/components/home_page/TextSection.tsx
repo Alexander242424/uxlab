@@ -8,7 +8,7 @@ import { useCalModal } from "@/context/CalModalContext";
 
 interface TextSectionProps {
   text: string | string[];
-   bigText?: string | string[];
+  bigText?: string | string[];
   mobileText?: string | string[];
   showButton?: boolean;
   buttonText?: string;
@@ -22,8 +22,6 @@ interface TextSectionProps {
 
 export default function TextSection({
   text,
-  firstText,
-  secondText,
   mobileText,
   showButton = false,
   buttonText = "Book a Call",
@@ -46,27 +44,27 @@ export default function TextSection({
     ? [mobileText]
     : textArray;
 
-  // === Контейнер: стэггер МЕЖДУ строками ===
+  // контейнер: стэггер между строками
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1, // задержка между строками
+        staggerChildren: 0.1,
       },
     },
   };
 
-  // === Линия: стэггер МЕЖДУ словами внутри строки ===
+  // строка: стэггер между словами
   const lineVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.01, // задержка между словами в строке
+        staggerChildren: 0.01,
       },
     },
   };
 
-  // === Слово ===
+  // слово
   const wordVariants = {
     hidden: {
       opacity: 0,
@@ -93,7 +91,7 @@ export default function TextSection({
           <motion.span
             key={`line-${lineIndex}`}
             variants={lineVariants}
-            className="block"
+            className="inline-block"
             style={{
               overflow: "hidden",
             }}
@@ -105,7 +103,6 @@ export default function TextSection({
                 className={textColor}
                 style={{
                   display: "inline-block",
-                  overflow: "hidden",
                   fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
                   fontWeight: 300,
                   fontSize,
@@ -113,9 +110,7 @@ export default function TextSection({
                   letterSpacing: "-0.03em",
                 }}
               >
-                <span style={{ display: "inline-block" }}>
-                  {word}&nbsp;
-                </span>
+                {word}&nbsp;
               </motion.span>
             ))}
           </motion.span>
@@ -125,16 +120,17 @@ export default function TextSection({
 
   return (
     <section className={`text_section py-20 md:py-32 ${className}`}>
+      <div className="container-fluid">
       {/* ===== ТЕКСТ ===== */}
       {isMobile ? (
         <motion.div
-          className="flex flex-col"
+          className="block"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{
             amount: threshold ?? 0.4,
-            once: true,
+            once: false,
           }}
         >
           {renderAnimatedText(
@@ -150,7 +146,7 @@ export default function TextSection({
           whileInView="visible"
           viewport={{
             amount: threshold ?? 0.5,
-            once: true,
+            once: false,
           }}
         >
           {renderAnimatedText(
@@ -174,6 +170,7 @@ export default function TextSection({
           </Button>
         </div>
       )}
+      </div>
     </section>
   );
 }

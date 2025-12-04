@@ -288,7 +288,7 @@ export default function ServiceItems() {
   return (
     <section
       id="services"
-      className="bg-bg-black mx-4 md:mx-10 pt-10 md:pt-20 relative overflow-hidden"
+      className="bg-bg-black pt-10 md:pt-20 relative overflow-hidden"
     >
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"

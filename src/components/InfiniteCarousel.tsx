@@ -9,7 +9,7 @@ interface InfiniteCarouselProps {
   slides: SlideItem[];
   className?: string;
   slideSpacing?: number;
-  speed?: number; // швидкість руху в секундах для одного циклу
+  speed?: number;
 }
 
 const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
@@ -18,7 +18,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   slideSpacing = 32,
   speed = 20,
 }) => {
-  // Створюємо багато дублікатів для справжньої безкінечності
+
   const duplicatedSlides = [...slides, ...slides, ...slides, ...slides, ...slides, ...slides];
 
   return (

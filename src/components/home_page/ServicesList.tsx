@@ -23,22 +23,22 @@ const DEFAULT_SERVICES: ServiceItem[] = [
   {
     title: "Enhance customer\nexperience",
     subtitle: "When you need to design MVP from the ground up with a high-powered product team.",
-    videoSrc: "/ServiceItemVideo/landnq.mp4",
+    videoSrc: "/video/4th_section/1.mp4",
   },
   {
     title: "Set the bar for category\ndefining brand",
     subtitle: "If you've proven product market fit and want to ensure your user experience is best-in-class, performant, and scalable.",
-    videoSrc: "/ServiceItemVideo/pinance.mp4",
+    videoSrc: "/video/4th_section/2.mp4",
   },
   {
     title: "Sales grow thought\nboosting metrics",
     subtitle: "Working closely every day to support your team effectively and deliver fast design solutions within 24-48 hours.",
-    videoSrc: "/ServiceItemVideo/paydesk.mp4",
+    videoSrc: "/video/4th_section/3.mp4",
   },
   {
     title: "Product and pricing\nexperimentation",
     subtitle: "We run and scale high-velocity A/B testing programs with one goal: increasing conversions and growing revenue.",
-    videoSrc: "/ServiceItemVideo/seviceBell.mp4",
+    videoSrc: "/video/4th_section/4.mp4",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function ServicesList({
   viewportMargin = "100px",
 }: ServicesListProps) {
   return (
-    <div className="space-y-0 mx-8">
+    <div className="services_list_section space-y-0 mx-8">
       {services.map((service, index) => (
         <motion.div
           key={index}
@@ -96,7 +96,7 @@ export default function ServicesList({
                 <div className="group-hover:max-h-[468px] flex justify-center group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-1000 ease-out video_box rounded-[4px]">
                   <VideoPlayer
                     src={service.videoSrc}
-                    className="w-full h-full  w-full sm:max-w-[468px] object-cover"
+                    className="w-full h-full sm:max-w-[468px] object-cover"
                   />
                 </div>
               </div>

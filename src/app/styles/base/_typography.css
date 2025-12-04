@@ -22,7 +22,6 @@
 
 .hoves-h1 {
   font-weight: 300;
-
   font-size: clamp(4.5rem, 15.5vw, 14rem);
   line-height: 1;
   letter-spacing: -0.03em;
