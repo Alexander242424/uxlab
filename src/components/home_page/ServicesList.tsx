@@ -60,7 +60,7 @@ export default function ServicesList({
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true, margin: viewportMargin}}
               transition={{
-                duration: 0.6,
+                duration: 1,
                 ease: "easeOut",
                 delay: index * baseDelay,
               }}

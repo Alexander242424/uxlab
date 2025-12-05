@@ -95,7 +95,7 @@ body {
     font-weight: 300;
     font-size: clamp(4.5rem, 8vw + 3rem, 15.5rem);
     line-height: 88%;
-    letter-spacing: clamp(-0.2rem, -0.8vw, -1rem);
+    letter-spacing: clamp(-1rem, -0.8vw, -1rem);
     text-align: center;
 
 }

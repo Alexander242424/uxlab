@@ -60,21 +60,20 @@ export default function DesignOpsSection({
       <div className="container-fluid">
         <div className="row items-end design_container">
           {/* Левая текстовая колонка */}
-          <div className="col-12 col-md-12 col-lg-4 flex flex-col gap-6">
+          <div className="col-12 col-md-12 col-lg-4 gap-6">
             {subtitle && (
                 <p className="text-text-500 hoves-p1-reg uppercase tracking-[0.12em]">
                   {subtitle}
                 </p>
             )}
 
-            <div className="flex justify-start">
+            <div className="flex justify-start mb-[16px]">
               <SplitText
                   text={title}
                   className={`${textColor} design_title t-h1 xs:text-wrap not-md:!text-nowrap`}
                   globalIndex={0}
                   style={{
                     fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-
                   }}
                   splitType="lines"
                   delay={100}
@@ -88,7 +87,7 @@ export default function DesignOpsSection({
               />
             </div>
 
-            <div className="t-p2">
+            <div className="t-p2 mb-[32px]">
 
               <SplitText
                   text={description}
@@ -101,11 +100,10 @@ export default function DesignOpsSection({
                   threshold={threshold}
                   rootMargin={rootMargin}
                   textAlign="left"
-                  className="t-p2"
+                  className=""
               />
             </div>
 
-            <div className="mt-4">
               <div className="flex gap-2 items-center">
                 <Button
                     variant="secondary"
@@ -126,7 +124,6 @@ export default function DesignOpsSection({
                   <WhatAppSVG/>
                 </a>
               </div>
-            </div>
           </div>
 
           {/* Правая колонка с параллаксом */}

@@ -104,9 +104,7 @@ export default function HomePage() {
                         duration={20}
                         className="py-[160px]"
                     />
-
                     <GlanceSection/>
-
                     <div className="container-fluid">
                         <OverviewCaseVideoSection
                             className="!p-0 !m-0 last_video_screen"

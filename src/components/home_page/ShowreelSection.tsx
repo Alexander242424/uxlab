@@ -164,9 +164,9 @@ export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = fal
           )}
 
           <div className="absolute inset-0 flex items-center justify-center z-10">
-            <h2 className="hoves-h3-med text-text-700 relative group select-none">
+            <h2 className="t-h3 text-black relative group select-none">
               Showreel
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] !bg-black header-underline underline-animation"></span>
             </h2>
           </div>
 
