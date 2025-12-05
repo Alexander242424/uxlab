@@ -196,86 +196,8 @@ const quantsList = [
     {value: 2, suffix: "", label: "Product sprint"},
 ];
 
-
-const wordContainerVariants = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.1,
-        },
-    },
-};
-
-const lineVariants = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0,
-        },
-    },
-};
-
-const wordVariants = {
-    hidden: {
-        opacity: 0,
-        y: "120%",
-    },
-    visible: {
-        opacity: 1,
-        y: "0%",
-        transition: {
-            duration: 0.7,
-            ease: [0.16, 1, 0.3, 1],
-        },
-    },
-};
-
 // Хелпер: рендерим массив строк с анимацией по словам
-function renderWordAnimatedParagraph(
-    lines: string[],
-    fontSize: string,
-    textColor: string
-) {
-    return (
-        <motion.div
-            variants={wordContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{amount: 0.5, once: true}}
-            className="flex flex-col"
-        >
-            {lines.filter(Boolean).map((line, lineIndex) => (
-                <motion.p
-                    key={`line-${lineIndex}`}
-                    variants={lineVariants}
-                    className="inline-block t-p2"
-                    style={{
-                        textAlign: "left",
-                        overflow: "hidden",
-                }}
-                >
-                    {line
-                        .split(" ")
-                        .filter(Boolean)
-                        .map((word, wordIndex) => (
-                            <motion.span
-                                key={`w-${lineIndex}-${wordIndex}-${word}`}
-                                variants={wordVariants}
-                                className={`${textColor} leading-none`}
-                                style={{
-                                    display:"inline-block",
-                                    overflow: "hidden",
-                                    textAlign: "left"
-                                }}
-                            >
-                                {word}&nbsp;
-                            </motion.span>
-                        ))}
-                </motion.p>
-            ))}
-        </motion.div>
-    );
-}
+
 
 export default function ServiceItems() {
     const isMobile = useIsMobile();
@@ -322,18 +244,34 @@ export default function ServiceItems() {
                             {/* MOBILE ПАРАГРАФЫ (с анимацией по словам) */}
                             <div className="flex flex-col sm:hidden gap-4">
                                 <div className="flex flex-col">
-                                    {renderWordAnimatedParagraph(
-                                        firstParagraphMobile,
-                                        "clamp(1.3rem, 4.8vw, 2rem)",
-                                        "t-p2"
-                                    )}
+                                    <SplitText
+                                        text={firstParagraphMobile}
+                                        className=""
+                                        splitType="lines"
+                                        delay={100}
+                                        duration={0.8}
+                                        ease="power3.out"
+                                        from={{opacity: 0, y: 50}}
+                                        to={{opacity: 1, y: 0}}
+                                        threshold={0.1}
+                                        rootMargin={isMobile ? "-100px" : "-200px"}
+                                        textAlign="left"
+                                    />
                                 </div>
                                 <div className="flex flex-col">
-                                    {renderWordAnimatedParagraph(
-                                        secondParagraphMobile,
-                                        "clamp(1.3rem, 4.8vw, 2rem)",
-                                        "t-p2"
-                                    )}
+                                    <SplitText
+                                        text={secondParagraphMobile}
+                                        className=""
+                                        splitType="lines"
+                                        delay={100}
+                                        duration={0.8}
+                                        ease="power3.out"
+                                        from={{opacity: 0, y: 50}}
+                                        to={{opacity: 1, y: 0}}
+                                        threshold={0.1}
+                                        rootMargin={isMobile ? "-100px" : "-200px"}
+                                        textAlign="left"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -343,17 +281,32 @@ export default function ServiceItems() {
                     <div className="col-lg-8 flex-col">
                         {/* DESKTOP ПАРАГРАФЫ */}
                         <div className="services_paragraph space-y-6  w-full not-sm:hidden">
-
-                                {renderWordAnimatedParagraph(
-                                    firstParagraph,
-                                    "",
-                                    "!text-nowrap"
-                                )}
-                                {renderWordAnimatedParagraph(
-                                    secondParagraph,
-                                    "",
-                                    "!text-nowrap"
-                                )}
+                            <SplitText
+                                text={firstParagraph}
+                                className=""
+                                splitType="lines"
+                                delay={100}
+                                duration={0.8}
+                                ease="power3.out"
+                                from={{opacity: 0, y: 50}}
+                                to={{opacity: 1, y: 0}}
+                                threshold={0.1}
+                                rootMargin={isMobile ? "-100px" : "-200px"}
+                                textAlign="left"
+                            />
+                            <SplitText
+                                text={secondParagraph}
+                                className=""
+                                splitType="lines"
+                                delay={100}
+                                duration={0.8}
+                                ease="power3.out"
+                                from={{opacity: 0, y: 50}}
+                                to={{opacity: 1, y: 0}}
+                                threshold={0.1}
+                                rootMargin={isMobile ? "-100px" : "-200px"}
+                                textAlign="left"
+                            />
                         </div>
 
                         {/* QUANTS */}

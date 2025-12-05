@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/base/_typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/base/_typography.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SplitText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SplitText.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/DesignOptionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/DesignOptionSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/HeroSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +61,7 @@
       <updated>1764865772235</updated>
       <workItem from="1764865778686" duration="4781000" />
       <workItem from="1764870989947" duration="17570000" />
-      <workItem from="1764940861693" duration="7690000" />
+      <workItem from="1764940861693" duration="11100000" />
     </task>
     <servers />
   </component>

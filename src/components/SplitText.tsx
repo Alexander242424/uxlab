@@ -4,13 +4,13 @@ import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 export interface SplitTextProps {
-    text: string;
+    text: string | string[];
     className?: string;
     style?: React.CSSProperties;
     delay?: number; // в МИЛЛИСЕКУНДАХ
     duration?: number;
     ease?: string;
-    splitType?: "chars" | "words" | "lines" | "words, chars"; // оставляем для совместимости
+    splitType?: "chars" | "words" | "lines" | "words, chars";
     from?: { opacity?: number; y?: number };
     to?: { opacity?: number; y?: number };
     threshold?: number;
@@ -65,39 +65,39 @@ const SplitText: React.FC<SplitTextProps> = ({
 
     const framerEase = convertEase(ease);
 
-    // строки по \n
+    // 🔥 ВАЖНО: нормализуем text к массиву строк
     const lines = React.useMemo(
-        () => text.split("\n").filter(Boolean),
+        () =>
+            Array.isArray(text)
+                ? text.filter(Boolean)
+                : (text ?? "").split("\n").filter(Boolean),
         [text]
     );
 
-    // как wordContainerVariants
     const containerVariants = React.useMemo(
         () => ({
             hidden: {},
             visible: {
                 transition: {
-                    staggerChildren: 0.1, // стэггер между строками
+                    staggerChildren: 0.1,
                 },
             },
         }),
         []
     );
 
-    // как lineVariants
     const lineVariants = React.useMemo(
         () => ({
             hidden: {},
             visible: {
                 transition: {
-                    staggerChildren: 0, // слова внутри строки — одновременно
+                    staggerChildren: 0,
                 },
             },
         }),
         []
     );
 
-    // как wordVariants
     const wordVariants = React.useMemo(
         () => ({
             hidden: {
@@ -139,7 +139,7 @@ const SplitText: React.FC<SplitTextProps> = ({
                 <motion.p
                     key={`line-${lineIndex}`}
                     variants={lineVariants}
-                    className="inline-block"
+                    className="inline-block t-p2"
                     style={{
                         textAlign,
                         overflow: "hidden",
