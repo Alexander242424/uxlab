@@ -28,10 +28,11 @@ type DesignOpsSectionProps = {
   threshold?: number;
 };
 
+
 export default function DesignOpsSection({
   title = "DesignOps\nFramework",
   subtitle,
-  description = "Our framework integrates behavioral science, quantitative analysis, and systematic UX refinement to reveal friction, model uplift potential, and guide precise interface improvements. The outcome is a predictable, research-backed path to sustainable ecommerce growth.",
+  description = "Our framework integrates behavioral science,\nquantitative analysis, and systematic UX refinement to\nreveal friction, model uplift potential, and guide precise\ninterface improvements. The outcome is a predictable,\nresearch-backed path to sustainable ecommerce growth.",
   ctaLabel = "Contact us",
   ctaHref = "/contact",
   textColor = "text-text-700",
@@ -77,7 +78,7 @@ export default function DesignOpsSection({
                   }}
                   splitType="lines"
                   delay={100}
-                  duration={0.8}
+                  duration={0.7}
                   ease="power3.out"
                   from={{opacity: 0, y: 100}}
                   to={{opacity: 1, y: 0}}
@@ -88,17 +89,19 @@ export default function DesignOpsSection({
             </div>
 
             <div className="t-p2">
+
               <SplitText
                   text={description}
                   splitType="lines"
                   delay={100}
-                  duration={0.8}
+                  duration={0.7}
                   ease="power3.out"
                   from={{opacity: 0, y: 100}}
                   to={{opacity: 1, y: 0}}
                   threshold={threshold}
                   rootMargin={rootMargin}
                   textAlign="left"
+                  className="t-p2"
               />
             </div>
 

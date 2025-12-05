@@ -34,8 +34,16 @@
     }
 }
 
+@media (max-width: 1023px) {
+    #services .col-lg-4 {
+        margin-bottom: 24px;
+    }
 
+}
 @media (max-width: 1023px) and (min-width: 768px) {
+    .design_section .t-p2:first-child{
+        max-width: 50%;
+    }
     .design_container {
         flex-wrap: wrap;
         flex-direction: column-reverse;
