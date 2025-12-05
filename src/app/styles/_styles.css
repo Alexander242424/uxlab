@@ -49,9 +49,9 @@ body {
     margin: 80px 0 0;
     padding-bottom: 160px;
 }
-    /* .case_box_container .case_box:nth-child(2) .cursor-pointer {
-        min-height: 885px;
-    } */
+.services_list_section {
+    margin-bottom: 160px;
+}
 .case_box_container .case_box:nth-child(3n + 1) .cursor-pointer {
   max-height: 741px;
   

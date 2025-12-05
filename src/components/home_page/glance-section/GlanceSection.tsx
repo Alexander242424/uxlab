@@ -215,7 +215,26 @@ export default function GlanceSection() {
                 ref={ref}
                 className="flex flex-col bg-bg-white relative overflow-hidden"
             >
+                <div className="mx-4">
+                    <motion.div
+                        className={`h-[1px]`}
+                        style={{
+                            backgroundColor: "#E5E5E5",
+                            transformOrigin: "left center",
+                        }}
+                        initial={{width: 0}}
+                        whileInView={{width: "100%"}}
+                        viewport={{
+                            once: true,
+                        }}
+                        transition={{
+                            duration: 2.5,
+                            ease: [0.16, 1, 0.3, 1],
+                        }}
+                    />
+                </div>
                 <div className="flex justify-between mx-4 md:mx-10 md:py-8 py-4 hoves-p1-reg">
+
                     <div>
                         <SplitText
                             text="UXLAB at a Glance."

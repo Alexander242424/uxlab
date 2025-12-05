@@ -81,13 +81,13 @@ export default function HomePage() {
                 <OurCases/>
                 <AnimatedTextByLetters
                     text={"Challenges\nWe Solve"}
-                    className="font-semibold leading-tight animated_text_by_letters"
+                    className="font-semibold leading-tight animated_text_by_letters mb-[80px]"
                     letterClassName="will-change-transform"
                     delayStep={0.045}
                 />
                 <ServicesList/>
             </div>
-            <div className="w-full pt-[120px] bg-bg-white">
+            <div className="w-full pt-[160px] bg-bg-white">
                 <AnimatedTextByLetters
                     text={"One\nModel"}
                     className="font-semibold leading-tight animated_text_by_letters text-black"
@@ -102,7 +102,7 @@ export default function HomePage() {
                     <InfiniteSlider
                         slides={slides}
                         duration={20}
-                        className="py-[90px] md:py-[173px]"
+                        className="py-[160px]"
                     />
 
                     <GlanceSection/>
