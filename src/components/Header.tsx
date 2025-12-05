@@ -100,7 +100,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-transparent min-h-[72px] sticky top-0 z-50">
+    <header className="bg-transparent mx-4 min-h-[72px] sticky top-0 z-50">
       <div className="mt-8 mb-4">
         <div className="container-fluid">
           <div className="row">

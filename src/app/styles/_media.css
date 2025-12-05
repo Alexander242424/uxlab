@@ -28,14 +28,6 @@
         padding-right: 15px;
     }
 
-    .services_list_section .services_row h3 {
-        font-size: 24px;
-    }
-
-    .services_list_section .services_row p {
-        font-size: 16px;
-    }
-
     .cases_text_box {
         font-size: 15px;
         align-items: flex-start;
@@ -95,16 +87,17 @@
 
 
 /* Main media  */
-@media (min-width: 1920px) {
+@media (min-width: 1919px) {
     .main_text_section .inline-block:first-child {
         margin-left: auto;
+        flex: 0 0 43%;
     }
 }
 
 @media (max-width: 1919px) and (min-width: 1024px) {
     .main_text_section .inline-block:first-child {
         margin-left: auto;
-
+        flex: 0 0 43%;
     }
 
 }

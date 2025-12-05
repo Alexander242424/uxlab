@@ -43,14 +43,14 @@ export default function HomePage() {
         <div className="flex flex-col">
             <div className="w-full">
                 <HeroSection/>
-                <div className="w-full">
+                <section className="show_reel_section">
                     <ShowreelSection
                         mobileSrc="/video/reel-short-mobile.mp4"
                         desktopSrc="/video/reel-short.mp4"
                     />
-                </div>
+                </section>
                 <TextSection
-                    className="pt-8 pb-12 md:pt-12 md:pb-20"
+                    className=""
                     text={[
                         "We help eCommerce",
                         "brands grow with decisions based on data, not",
@@ -67,7 +67,9 @@ export default function HomePage() {
                         "tomorrow’s revenue",
                         "today.",
                     ]}
+                    showLine={true}
                 />
+
                 <ServiceItems/>
                 <DesignOptionSection/>
                 <AnimatedTextByLetters

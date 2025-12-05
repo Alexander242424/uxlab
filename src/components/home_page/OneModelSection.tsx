@@ -23,7 +23,7 @@ type PackageCardProps = {
 };
 
 export default function PackageCard({
-  title = "2 weeks\nDesign Sprint",
+  title = "2-weeks\nDesign Sprint",
   subtitle = "Specific flow uplift",
   subtitle2 = "Starting from 5,000 USD",
   note,
@@ -66,51 +66,8 @@ export default function PackageCard({
           {/* Левая часть (текст с анимацией SplitText как в DesignOpsSection) */}
           <div className="col-md-5 flex flex-col gap-6">
             <div className="flex flex-col gap-3 whitespace-pre-line">
-              {subtitle && (
-                <SplitText
-                  text={subtitle}
-                  className="text-black"
-                  globalIndex={0}
-                  style={{
-                    fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "20px",
-                    lineHeight: "1.1",
-                    letterSpacing: "-0.01em",
-                  }}
-                  splitType="lines"
-                  delay={100}
-                  duration={0.8}
-                  ease="power3.out"
-                  from={{ opacity: 0, y: 50 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.5}
-                  rootMargin="-100px"
-                  textAlign="left"
-                />
-              )}
-
-              <SplitText
-                text={title}
-                className="text-black hoves-h1"
-                globalIndex={1}
-                style={{
-                  fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                  fontWeight: 300,
-                  fontSize: "clamp(2rem, 5vw, 3.5rem)",
-                  lineHeight: "1.05",
-                  letterSpacing: "-0.04em",
-                }}
-                splitType="lines"
-                delay={100}
-                duration={0.8}
-                ease="power3.out"
-                from={{ opacity: 0, y: 100 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={0.5}
-                rootMargin="-100px"
-                textAlign="left"
-              />
+              <p className="t-p1 text-black font-[400]">{subtitle}</p>
+              <h2 className="text-black t-h1">{title}</h2>
             </div>
 
             <div className="mt-4">
@@ -125,28 +82,7 @@ export default function PackageCard({
               </Button>
             </div>
 
-            {subtitle2 && (
-              <SplitText
-                text={subtitle2}
-                className="text-[#959595] not-sm:mb-[24px]"
-                globalIndex={2}
-                style={{
-                  fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                  fontWeight: 400,
-                  lineHeight: "1.4",
-                  letterSpacing: "-0.01em",
-                }}
-                splitType="lines"
-                delay={150}
-                duration={0.8}
-                ease="power3.out"
-                from={{ opacity: 0, y: 50 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={0.5}
-                rootMargin="-100px"
-                textAlign="left"
-              />
-            )}
+            <p className="text-[#959595] font-[400] not-sm:mb-[24px]">{subtitle2}</p>
             {note && (
               <p className="mt-3 text-xs text-neutral-400">
                 {note}
@@ -158,27 +94,19 @@ export default function PackageCard({
           <div className="col-md-5">
             <ul className="space-y-2 text-black">
               {bullets.map((item, idx) => (
-                <motion.li
+                <li
                   key={idx}
                   className="flex items-center mb-[16px]"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ amount: 0.4, once: false }}
-                  transition={{
-                    duration: 0.5,
-                    ease: "easeOut",
-                    delay: idx * 0.05,
-                  }}
                 >
                   <CheckIcon className="bullet h-auto" />
-                  <span className="hoves-p1">{item}</span>
-                </motion.li>
+                  <span className="t-p1 font-[400]">{item}</span>
+                </li>
               ))}
             </ul>
           </div>
           <div className="col-lg-12">
             {afterRowTitle && (
-              <p className="after_row_title hoves-p1 ">{afterRowTitle}</p>
+              <p className="after_row_title t-p1 font-[400]">{afterRowTitle}</p>
             )}
           </div>
         </div>

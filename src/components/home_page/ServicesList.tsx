@@ -83,9 +83,9 @@ export default function ServicesList({
               onServiceClick?.(service, index);
             }}
           >
-            <div className="flex px-10 items-center w-full flex-[3_1_auto] justify-between not-md:flex-wrap services_row">
+            <div className="flex items-center w-full flex-[3_1_auto] justify-between not-md:flex-wrap services_row">
               <div className="flex-col w-[50%] not-sm:w-full sm:flex-[1]">
-                <h3 className="hoves-40px-fluid w-full text-text-700 relative group/title tracking-tighter">
+                <h3 className="t-h2 w-full text-text-700 relative group/title tracking-tighter">
                   {service.title}
                 </h3>
                 <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3 hidden not-md:block">
@@ -100,7 +100,7 @@ export default function ServicesList({
                   />
                 </div>
               </div>
-              <p className="text-text-500 w-[20%] hidden md:block hoves-p1-reg pt-2 md:pt-3">
+              <p className="text-text-500 w-[20%] hidden md:block t-p2 pt-2 md:pt-3">
                 {service.subtitle}
               </p>
             </div>

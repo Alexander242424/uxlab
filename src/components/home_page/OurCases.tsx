@@ -332,7 +332,7 @@ const PREVIEW_WIDTH = previewConfig.width;
   }, [hoveredIndex]);
 
   return (
-    <div id="cases" className="flex flex-col gap-8 my-[96px] md:my-[160px]  relative">
+    <div id="cases" className="mx-4 flex flex-col gap-8 my-[96px] md:my-[160px]  relative">
 
       {isHovering &&
         !isMobile &&

@@ -1,27 +1,26 @@
 /* BIG */
 .t-big {
-    font-weight: 700;
     font-size: clamp(2.75rem, 6vw, 4.5rem); /* от ~44px до ~72px */
     line-height: 0.88;
 }
 
 /* H1 */
 .t-h1 {
-    font-weight: 700;
+
     font-size: clamp(2.25rem, 4.5vw, 3.5rem); /* ~36–56px */
     line-height: 1; /* 100% */
 }
 
 /* H2 */
 .t-h2 {
-    font-weight: 600;
+
     font-size: clamp(1.75rem, 3.5vw, 2.5rem); /* ~28–40px */
     line-height: 1.25; /* 125% */
 }
 
 /* H3 */
 .t-h3 {
-    font-weight: 600;
+
     font-size: clamp(1.5rem, 3vw, 2rem); /* ~24–32px */
     line-height: 1.25; /* 125% */
 }

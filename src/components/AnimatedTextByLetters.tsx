@@ -67,7 +67,7 @@ export default function AnimatedTextByLetters({
       whileInView="visible"
       viewport={{
         amount: 0.4, 
-        once: true, 
+        once: true,
       }}
     >
       {letters.map((char, index) => {
@@ -78,7 +78,7 @@ export default function AnimatedTextByLetters({
         return (
           <motion.span
             key={`${char}-${index}`}
-            // variants={letterVariants}
+            variants={letterVariants}
             className={`${letterClassName ?? ""} animated_letter hoves-p1-reg`}
             style={{
               display: "inline-block",

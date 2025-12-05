@@ -288,7 +288,7 @@ export default function ServiceItems() {
   return (
     <section
       id="services"
-      className="bg-bg-black pt-10 md:pt-20 relative overflow-hidden"
+      className="bg-bg-black relative overflow-hidden mx-4"
     >
       <motion.div
         className="absolute top-0 left-0 w-full h-[1px] bg-border-50"
@@ -307,7 +307,7 @@ export default function ServiceItems() {
               {/* Заголовок слева оставляем через SplitText */}
               <SplitText
                 text="Your Growth Starts Here."
-                className="text-text-700 hoves-p1-reg"
+                className="t-p2"
                 splitType="lines"
                 delay={100}
                 duration={0.8}
@@ -325,14 +325,14 @@ export default function ServiceItems() {
                   {renderWordAnimatedParagraph(
                     firstParagraphMobile,
                     "clamp(1.3rem, 4.8vw, 2rem)",
-                    "text-text-700 hoves-p1-reg"
+                    "t-p2"
                   )}
                 </div>
                 <div className="flex flex-col">
                   {renderWordAnimatedParagraph(
                     secondParagraphMobile,
                     "clamp(1.3rem, 4.8vw, 2rem)",
-                    "text-text-700 hoves-p1-reg"
+                    "t-p2"
                   )}
                 </div>
               </div>
@@ -342,12 +342,12 @@ export default function ServiceItems() {
           {/* ПРАВАЯ КОЛОНКА + DESKTOP ПАРАГРАФЫ */}
           <div className="col-md-8 flex-col">
             {/* DESKTOP ПАРАГРАФЫ */}
-            <div className="space-y-6 mb-20 w-full not-sm:hidden">
+            <div className="services_paragraph space-y-6  w-full not-sm:hidden">
               <div className="flex flex-col">
                 {renderWordAnimatedParagraph(
                   firstParagraph,
                   "",
-                  "text-text-700 hoves-p1-reg !text-nowrap"
+                  "t-p2 !text-nowrap"
                 )}
               </div>
 

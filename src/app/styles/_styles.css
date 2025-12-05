@@ -1,6 +1,7 @@
 html {
     font-family: 'TT Hoves', sans-serif;
     font-size: 16px;
+    font-weight: 300;
 }
 body {
     background: #000;
@@ -31,9 +32,26 @@ body {
 .bg-bg-white {
     background-color: #fff;
 }
-/* .case_box_container .case_box:nth-child(2) .cursor-pointer {
-    min-height: 885px;
-} */
+
+/*showreel section */
+.show_reel_section {
+    margin-top: 32px;
+    margin-bottom: 80px;
+}
+
+.services_paragraph {
+    margin-bottom: 80px;
+}
+.design_section {
+    margin-bottom: 160px;
+}
+#cases {
+    margin: 80px 0 0;
+    padding-bottom: 160px;
+}
+    /* .case_box_container .case_box:nth-child(2) .cursor-pointer {
+        min-height: 885px;
+    } */
 .case_box_container .case_box:nth-child(3n + 1) .cursor-pointer {
   max-height: 741px;
   
@@ -73,6 +91,14 @@ body {
     flex-wrap: wrap;
 }
 /* animated text like rejouise */
+.animated_text_by_letters {
+    font-weight: 300;
+    font-size: clamp(4.5rem, 8vw + 3rem, 15.5rem);
+    line-height: 88%;
+    letter-spacing: clamp(-0.2rem, -0.8vw, -1rem);
+    text-align: center;
+
+}
 .animated_text_by_letters span {
     transform-origin: 100% 50%;
     transform-style: preserve-3d;
@@ -95,13 +121,6 @@ body {
     padding-bottom: 48px;
 }
 
-.services_row h3 {
-    white-space: pre-line;
-    font-size: 32px;
-}
-.services_row p {
-    font-size: 20px;
-}
 .video_box video {
     height: 320px;
     border-radius: 4px;
