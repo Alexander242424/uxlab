@@ -25,17 +25,17 @@ export default function HeroSection() {
         className="container-fluid hero-section-text 2xl:top-0 right-0 w-full mb-[160px] mt-0 "
         style={{ y: textBlockY }}
       >
-        <div className="row min-h-[300px]">
+        <div className="row mx-0 min-h-[300px]">
           <div className="col-sm-6 col-12 sm:ml-auto flex justify-start  hero_text_block">
             <div className="flex-col flex">
-              <p className="text-text-700 hoves-p1-reg sm:text-right !text-nowrap ">
+              <p className="text-text-700 t-p2 sm:text-right !text-nowrap ">
                 Work with eCommerce bands
               </p>
-              <p className="text-text-700 hoves-p1-reg !text-nowrap">
+              <p className="text-text-700 t-p2 !text-nowrap">
                 to uplift CR, AOV, LTV, ATC, Checkout rate, Retention,
               </p>
-              <p className="text-text-700 hoves-p1-reg !text-nowrap">
-                 and more metrics to unlock revenue grow.   
+              <p className="text-text-700 t-p2 !text-nowrap">
+                and more metrics to unlock revenue grow.
               </p>
             </div>
           </div>

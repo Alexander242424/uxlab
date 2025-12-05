@@ -101,7 +101,7 @@ export default function Header() {
 
   return (
     <header className="bg-transparent min-h-[72px] sticky top-0 z-50">
-      <div className="px-4 md:px-10 mt-8 mb-4">
+      <div className="mt-8 mb-4">
         <div className="container-fluid">
           <div className="row">
             {/* Ліва частина - логотип */}
@@ -113,7 +113,7 @@ export default function Header() {
 
             {/* Права частина - навігація + Book a Call */}
             <div className="col-6 col-md-6  flex justify-between items-center">
-              <nav className="hidden md:flex space-x-4 md:space-x-8 hoves-p2-reg">
+              <nav className="hidden md:flex space-x-4 md:space-x-8 t-p2">
                 {pathname === "/" ? (
                   <button
                     onClick={() => scrollToSection("services")}
@@ -183,7 +183,7 @@ export default function Header() {
                   <span className="relative">
                     <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0 header-icon md:scale-[120%] lg:scale-[140%]" />
                     <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1 header-icon md:scale-[120%] lg:scale-[140%]" />
-                    <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 hoves-p2-reg">
+                    <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p2">
                       Book a Call
                     </span>
                   </span>

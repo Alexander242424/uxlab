@@ -19,11 +19,6 @@
         width: 24px;
     }
 
-    .hero_text_block {
-        position: relative;
-        left: -11%;
-    }
-
     .services_list_section {
         margin: 0;
     }
@@ -109,7 +104,7 @@
 @media (max-width: 1919px) and (min-width: 1024px) {
     .main_text_section .inline-block:first-child {
         margin-left: auto;
-        margin-right: 10%;
+
     }
 
 }

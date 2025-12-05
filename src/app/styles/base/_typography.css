@@ -1,133 +1,89 @@
-%hoves-font {
-  font-family: var(--font-tt-hoves), system-ui, sans-serif !important;
+/* BIG */
+.t-big {
+    font-weight: 700;
+    font-size: clamp(2.75rem, 6vw, 4.5rem); /* от ~44px до ~72px */
+    line-height: 0.88;
 }
 
-.hoves-big,
-.hoves-h1,
-.hoves-h2,
-.hoves-h3,
-.hoves-p1,
-.hoves-p2,
-.hoves-s1 {
-  @extend %hoves-font;
+/* H1 */
+.t-h1 {
+    font-weight: 700;
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem); /* ~36–56px */
+    line-height: 1; /* 100% */
 }
 
-.hoves-big {
-  font-weight: 300;
-
-  font-size: clamp(4.5rem, 15.5vw, 14rem);
-  line-height: 0.88;
-  letter-spacing: -0.03em;
+/* H2 */
+.t-h2 {
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem); /* ~28–40px */
+    line-height: 1.25; /* 125% */
 }
 
-.hoves-h1 {
-  font-weight: 300;
-  font-size: clamp(4.5rem, 15.5vw, 14rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
+/* H3 */
+.t-h3 {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2rem); /* ~24–32px */
+    line-height: 1.25; /* 125% */
 }
 
-.hoves-h2 {
-  font-weight: 300;
+/* ====== База = S (320–767px) ====== */
 
-  font-size: clamp(4.5rem, 15.5vw, 14rem);
-  line-height: 1.25;
-  letter-spacing: -0.03em;
+/* P1 — основной текст покрупнее */
+.t-p1 {
+    font-size: 1rem;         /* 16px */
+    line-height: 1.375rem;   /* 22px */
 }
 
-.hoves-h3 {
-  font-weight: 300;
-
-  font-size: clamp(4.5rem, 15.5vw, 14rem);
-  line-height: 1.25;
-  letter-spacing: -0.03em;
+/* P2 — обычный параграф */
+.t-p2 {
+    font-size: 0.875rem;     /* 14px */
+    line-height: 1.25rem;    /* 20px */
 }
 
-
-@media screen and (min-width: 275px) and (max-width: 1023px) {
-
-  .hoves-p1 {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    letter-spacing: -0.02em;
-  }
-
-
-  .hoves-p2 {
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    letter-spacing: -0.02em;
-  }
-
-
-  .hoves-s1 {
-    font-weight: 400;
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-    letter-spacing: -0.02em;
-  }
+/* S1 — мелкий вспомогательный текст */
+.t-s1 {
+    font-size: 0.625rem;     /* 10px */
+    line-height: 0.75rem;    /* 12px */
 }
 
 
-@media screen and (min-width: 1024px) and (max-width: 1919px) {
+/* ====== M (768–1023px) ====== */
 
-  .hoves-p1 {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    letter-spacing: -0.02em;
-  }
+@media (min-width: 768px) {
+    /* P1 остаётся тем же, что и на S по макету */
+    .t-p1 {
+        font-size: 1rem;       /* 16px */
+        line-height: 1.375rem; /* 22px */
+    }
 
+    .t-p2 {
+        font-size: 1rem;       /* 16px */
+        line-height: 1.375rem; /* 22px */
+    }
 
-  .hoves-p2 {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    letter-spacing: -0.02em;
-  }
-
-
-  .hoves-s1 {
-    font-weight: 400;
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-    letter-spacing: -0.02em;
-  }
+    .t-s1 {
+        font-size: 0.625rem;   /* 10px */
+        line-height: 0.75rem;  /* 12px */
+    }
 }
 
 
-@media screen and (min-width: 1920px) {
+/* ====== L (>=1024px) ====== */
 
-  .hoves-p1 {
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    letter-spacing: -0.02em;
-  }
+@media (min-width: 1024px) {
+    .t-p1 {
+        font-size: 1.25rem;    /* 20px */
+        line-height: 1.75rem;  /* 28px */
+    }
 
+    .t-p2 {
+        font-size: 1rem;       /* 16px */
+        line-height: 1.375rem; /* 22px */
+    }
 
-  .hoves-p2 {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    letter-spacing: -0.02em;
-  }
-
-
-  .hoves-s1 {
-    font-weight: 400;
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-    letter-spacing: -0.02em;
-  }
+    .t-s1 {
+        font-size: 0.625rem;   /* 10px */
+        line-height: 0.75rem;  /* 12px */
+    }
 }
 
-
-.hoves-40px-fluid {
-  @extend %hoves-font;
-
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
-  line-height: 1.25;
-}

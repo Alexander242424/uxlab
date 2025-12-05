@@ -79,7 +79,7 @@ export default function AnimatedTextByLetters({
           <motion.span
             key={`${char}-${index}`}
             // variants={letterVariants}
-            className={`${letterClassName ?? ""} animated_letter hoves-h2`}
+            className={`${letterClassName ?? ""} animated_letter hoves-p1-reg`}
             style={{
               display: "inline-block",
               whiteSpace: char === " " ? "pre" : "normal",

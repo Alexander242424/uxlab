@@ -72,7 +72,7 @@ export default function HomePage() {
                 <DesignOptionSection/>
                 <AnimatedTextByLetters
                     text={"Selected\nResults"}
-                    className="font-semibold leading-tight animated_text_by_letters"
+                    className="animated_text_by_letters"
                     letterClassName="will-change-transform"
                     delayStep={0.045}
                 />

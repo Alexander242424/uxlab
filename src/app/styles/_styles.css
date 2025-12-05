@@ -1,7 +1,10 @@
+html {
+    font-family: 'TT Hoves', sans-serif;
+    font-size: 16px;
+}
 body {
     background: #000;
     color: white;
-    font-size: 16px;
 }
 @custom-variant dark (&:is(.dark *));
 
@@ -71,8 +74,6 @@ body {
 }
 /* animated text like rejouise */
 .animated_text_by_letters span {
-    letter-spacing: -1rem;
-    line-height: .9;
     transform-origin: 100% 50%;
     transform-style: preserve-3d;
     will-change: transform;
