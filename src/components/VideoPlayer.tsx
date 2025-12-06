@@ -24,7 +24,7 @@ export default function VideoPlayer({
                                       loop = true,
                                       muted = true,
                                       autoPlay = true,
-                                      aspectRatio = '16/9', // 👈 дефолт
+                                      aspectRatio = '1', // 👈 дефолт
                                     }: VideoPlayerProps) {
   // Detect iOS Safari
   const isIOSSafari = () => {

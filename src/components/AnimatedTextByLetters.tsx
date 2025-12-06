@@ -67,7 +67,7 @@ export default function AnimatedTextByLetters({
       whileInView="visible"
       viewport={{
         amount: 0.4, 
-        once: true,
+        once: false,
       }}
     >
       {letters.map((char, index) => {

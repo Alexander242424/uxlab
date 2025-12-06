@@ -23,8 +23,6 @@ import Cbd from "@/assets/image/posts/cbd-min.jpg";
 import BecaHome from "@/assets/image/posts/becca_home-min.jpg";
 
 
-
-
 //Avatars
 import PaulBenigeriAvatar from "@/assets/Glance/Avatars/Paul Benigeri.svg";
 import SteliosHajiIoannouAvatar from "@/assets/Glance/Avatars/Stelios Haji-Ioannou.svg";
@@ -233,33 +231,14 @@ export default function GlanceSection() {
                         }}
                     />
                 </div>
-                <div className="flex justify-between mx-4 md:mx-10 md:py-8 py-4 hoves-p1-reg">
-
-                    <div>
-                        <SplitText
-                            text="UXLAB at a Glance."
-                            className="hoves-p1-reg text-black"
-                            splitType="lines"
-                            delay={100}
-                            duration={0.5}
-                            ease="power3.out"
-                            from={{opacity: 0, y: 50}}
-                            to={{opacity: 1, y: 0}}
-                            threshold={0.1}
-                            rootMargin="0px"
-                            textAlign="left"
-                        />
-                    </div>
-                    <div className="relative group">
-                        <a
-                            href="mailto:hello@uxlab.digital"
-                            className="text-black relative group"
-                        >
+                <div className="container-fluid">
+                    <div className="flex justify-between mx-4 md:mx-10 md:py-8 py-4 hoves-p1-reg">
+                        <div>
                             <SplitText
-                                text="hello@uxlab.digital"
-                                className="hoves-p1-reg text-black"
+                                text="UXLAB at a Glance."
+                                className="t-p1 text-black"
                                 splitType="lines"
-                                delay={200}
+                                delay={100}
                                 duration={0.5}
                                 ease="power3.out"
                                 from={{opacity: 0, y: 50}}
@@ -268,9 +247,29 @@ export default function GlanceSection() {
                                 rootMargin="0px"
                                 textAlign="left"
                             />
-                            <span
-                                className="absolute bottom-[-3px] left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                        </a>
+                        </div>
+                        <div className="relative group">
+                            <a
+                                href="mailto:hello@uxlab.digital"
+                                className="text-black relative group"
+                            >
+                                <SplitText
+                                    text="hello@uxlab.digital"
+                                    className="hoves-p1-reg text-black"
+                                    splitType="lines"
+                                    delay={200}
+                                    duration={0.5}
+                                    ease="power3.out"
+                                    from={{opacity: 0, y: 50}}
+                                    to={{opacity: 1, y: 0}}
+                                    threshold={0.1}
+                                    rootMargin="0px"
+                                    textAlign="left"
+                                />
+                                <span
+                                    className="absolute bottom-[-3px] left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <EmblaCarousel

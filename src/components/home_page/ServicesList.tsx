@@ -105,17 +105,17 @@ export default function ServicesList({
                                         }}
                                     />
                                     <div
-                                        className="flex items-center w-full flex-[3_1_auto] justify-between not-md:flex-wrap services_row">
-                                        <div className="flex-col w-[50%] not-sm:w-full sm:flex-[1]">
+                                        className="flex items-center w-full justify-between not-md:flex-wrap services_row">
+                                        <div className="flex-col col-lg-3">
                                             <h3 className="t-h2 w-full text-text-700 relative group/title tracking-tighter">
                                                 {service.title}
                                             </h3>
-                                            <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3 hidden not-md:block">
+                                            <p className="text-text-500 hoves-p1-reg pt-2 md:pt-3 hidden not-md:block mobile_subtitle">
                                                 {service.subtitle}
                                             </p>
                                         </div>
                                         <div
-                                            className="flex w-[100%] not-sm:mt-[20px] sm:w-[50%] ml-auto justify-center">
+                                            className="flex col-lg-6 justify-center">
                                             <div
                                                 className="group-hover:max-h-[468px] flex justify-center group-hover:opacity-100 max-h-0 opacity-0 overflow-hidden transition-all duration-1200 ease video_box rounded-[4px]">
                                                 <VideoPlayer
@@ -124,9 +124,11 @@ export default function ServicesList({
                                                 />
                                             </div>
                                         </div>
-                                        <p className="text-text-500 w-[20%] hidden md:block t-p1 pt-2 md:pt-3">
-                                            {service.subtitle}
-                                        </p>
+                                        <div className="col-lg-3">
+                                            <p className="text-text-500 hidden md:block t-p1 pt-2 md:pt-3">
+                                                {service.subtitle}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
 

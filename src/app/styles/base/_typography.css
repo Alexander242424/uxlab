@@ -7,7 +7,7 @@
 /* H1 */
 .t-h1 {
     font-weight: 300;
-    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    font-size: clamp(2.25rem, 4.5vw, 5rem);
     line-height: 1;
 }
 
@@ -31,7 +31,7 @@
 .t-p1 {
     font-size: 1rem;         /* 16px */
     line-height: 1.375rem;
-    letter-spacing: 0.006rem;
+    letter-spacing: -0.03rem;
 }
 
 /* P2 — обычный параграф */
@@ -44,6 +44,7 @@
 .t-s1 {
     font-size: 0.625rem;     /* 10px */
     line-height: 0.75rem;    /* 12px */
+
 }
 
 

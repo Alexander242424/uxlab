@@ -29,8 +29,8 @@ const SplitText: React.FC<SplitTextProps> = ({
                                                  ease = "power3.out",
                                                  from = { opacity: 0, y: 50 },
                                                  to = { opacity: 1, y: 0 },
-                                                 threshold = 0.1,
-                                                 rootMargin = "0px",
+                                                 threshold = 0.0,
+                                                 rootMargin = "200px" ,
                                                  textAlign = "left",
                                                  onLetterAnimationComplete,
                                                  globalIndex = 0,
@@ -38,7 +38,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     const [ref, inView] = useInView({
         threshold,
         rootMargin,
-        triggerOnce: true,
+        triggerOnce: false,
     });
 
     const convertEase = (gsapEase: string) => {

@@ -4,6 +4,7 @@ import Image from "next/image";
 import SplitText from "../SplitText";
 import { Button } from "../ui/button";
 import { useCalModal } from "@/context/CalModalContext";
+import {useIsMobile} from "@/hooks/useIsMobile";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import WhatAppSVG from "@/assets/whatapp.svg";
 import designImage from "@/assets/design_section_image.png";
@@ -40,7 +41,7 @@ export default function DesignOpsSection({
   threshold = 0.6,
 }: DesignOpsSectionProps) {
   const { openModal } = useCalModal();
-
+  const isMobile = useIsMobile();
   const handleCalClick = () => {
     openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
   };
@@ -71,37 +72,20 @@ export default function DesignOpsSection({
               <SplitText
                   text={title}
                   className={`${textColor} design_title t-h1 xs:text-wrap not-md:!text-nowrap`}
-                  globalIndex={0}
-                  style={{
-                    fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                  }}
                   splitType="lines"
                   delay={100}
-                  duration={0.7}
+                  duration={0.8}
                   ease="power3.out"
-                  from={{opacity: 0, y: 100}}
-                  to={{opacity: 1, y: 0}}
-                  threshold={threshold}
-                  rootMargin={rootMargin}
+                  from={{ opacity: 0, y: 50 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0}
+                  rootMargin={isMobile ? "0px" : "-200px"}
                   textAlign="left"
               />
             </div>
 
             <div className="t-p1 mb-[32px]">
-
-              <SplitText
-                  text={description}
-                  splitType="lines"
-                  delay={100}
-                  duration={0.7}
-                  ease="power3.out"
-                  from={{opacity: 0, y: 100}}
-                  to={{opacity: 1, y: 0}}
-                  threshold={threshold}
-                  rootMargin={rootMargin}
-                  textAlign="left"
-                  className=""
-              />
+              <p>{description}</p>
             </div>
 
               <div className="flex gap-2 items-center">

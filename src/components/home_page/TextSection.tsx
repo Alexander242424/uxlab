@@ -23,15 +23,15 @@ interface TextSectionProps {
 }
 
 export default function TextSection({
- text,
- mobileText,
- showButton = false,
- buttonText = "Book a Call",
- className = "",
-  textColor = "",
- threshold = 1,
- showLine = false,
-}: TextSectionProps) {
+                                        text,
+                                        mobileText,
+                                        showButton = false,
+                                        buttonText = "Book a Call",
+                                        className = "",
+                                        textColor = "",
+                                        threshold = 1,
+                                        showLine = false,
+                                    }: TextSectionProps) {
     const isMobile = useIsMobile();
     const {openModal} = useCalModal();
 
@@ -70,11 +70,9 @@ export default function TextSection({
     // слово
     const wordVariants = {
         hidden: {
-            opacity: 0,
             y: "120%",
         },
         visible: {
-            opacity: 1,
             y: "0%",
             transition: {
                 duration: 1.5,
@@ -84,42 +82,52 @@ export default function TextSection({
     };
 
     // Рендер: строки → контейнер строки → слова
+    // Рендер: один параграф → слова
     const renderAnimatedText = (lines: string[], fontSize: string) => {
-        return lines
+        // склеиваем все строки в один текст, чтобы вёл себя как обычный текст
+        const words = lines
             .filter(Boolean)
-            .map((line, lineIndex) => {
-                const words = line.split(" ").filter(Boolean);
+            .join(" ")
+            .split(" ")
+            .filter(Boolean);
 
-                return (
-                    <motion.p
-                        key={`line-${lineIndex}`}
-                        variants={lineVariants}
-                        className="inline-block"
+        return (
+            <motion.p
+                variants={lineVariants} // тут стэггер по словам
+                className="inline-block"
+                style={{
+                    overflow: "hidden",
+                    lineHeight: "10px"
+                }}
+            >
+                <span className="block_float"></span>
+                {words.map((word, wordIndex) => (
+                    <span
+                        className=""
+                        key={`wrap-${wordIndex}-${word}`}
                         style={{
-                            overflow: "hidden",
+                            display: "inline-block",
+                            overflow: "hidden",        // маска
                         }}
                     >
-                        {words.map((word, wordIndex) => (
-                            <motion.span
-                                key={`w-${lineIndex}-${wordIndex}-${word}`}
-                                variants={wordVariants}
-                                className={`${textColor} inline-block t-h1 text-text-300`}
-                                style={{
-                                    display: "inline-block",
-                                    fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                                    fontWeight: 300,
-                                    fontSize,
-                                    lineHeight: 1.1,
-                                    letterSpacing: "-0.03em",
-                                }}
-                            >
-                                {word}&nbsp;
-                            </motion.span>
-                        ))}
-                    </motion.p>
-                );
-            });
+                    <motion.span
+                        key={`w-${wordIndex}-${word}`}
+                        variants={wordVariants}
+                        className={`${textColor} t-h1 inline-block text-text-300`}
+                        style={{
+                            display: "inline-block",
+                            overflow: "hidden",
+                            textIndent: 0
+                        }}
+                    >
+                        {word}&nbsp;
+                    </motion.span>
+                    </span>
+                ))}
+            </motion.p>
+        );
     };
+
 
     return (
         <section className={` mx-4 text_section ${className}`}>

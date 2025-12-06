@@ -21,22 +21,22 @@ body {
 @custom-variant not-sm (@media (max-width: 767px));
 @custom-variant not-xs (@media (max-width: 274px));
 
-.main_text_section p:first-child {
-    width: 100%;
-}
-.main_text_section p:first-child{
-    text-align: right;
-}
 
 .bg-bg-white {
     background-color: #fff;
 }
-
+.block_float {
+    display: block;
+    float: left;
+    height: 2rem;
+    width: 50%;
+}
 /*showreel section */
 .show_reel_section {
     margin-top: 32px;
     margin-bottom: 80px;
 }
+
 .show_real_video_container video{
     width: 100%;
 }
@@ -77,11 +77,6 @@ body {
     margin-bottom: 42px;
     font-size: 20px;
     color: black;
-}
-
-.main_text_section {
-    display: flex;
-    flex-wrap: wrap;
 }
 .showreal_video video{
     width: 100%;

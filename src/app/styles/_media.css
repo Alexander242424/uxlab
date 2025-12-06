@@ -1,8 +1,17 @@
+@media (max-width: 1348px) and (min-width: 1023px) {
+
+}
 @media (max-width: 786px) and (min-width: 640px) {
 
 }
 
 @media (max-width: 767px) {
+    .services_list_section .video_box {
+        margin-right: 0;
+    }
+    .mobile_subtitle {
+        margin-bottom: 24px;
+    }
     .quants_row {
         flex-wrap: wrap;
     }
@@ -41,7 +50,9 @@
     .main_text_section .inline-block:first-child {
        text-align: left;
     }
-
+    .block_float {
+        display: none;
+    }
 }
 @media (max-width: 1023px) and (min-width: 768px) {
     .design_section .t-p2:first-child{
@@ -107,7 +118,10 @@
 
 /* Main media  */
 @media (min-width: 1919px) {
-
+    .show_reel_section .cursor-pointer,.overview_section .last_video_screen{
+        height: calc(1svh * 100);
+        max-height: unset;
+    }
 }
 
 @media (max-width: 1919px) and (min-width: 1024px) {

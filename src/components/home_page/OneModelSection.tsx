@@ -82,7 +82,7 @@ export default function PackageCard({
               </Button>
             </div>
 
-            <p className="text-[#959595] font-[400] not-sm:mb-[24px]">{subtitle2}</p>
+            <p className="t-p2 text-[#959595] font-[400] not-sm:mb-[24px]">{subtitle2}</p>
             {note && (
               <p className="mt-3 text-xs text-neutral-400">
                 {note}
@@ -134,7 +134,7 @@ export default function PackageCard({
               className="w-full h-full object-cover"
               priority={false}
             />
-            <span className="text whitespace-nowrap hoves-p1">
+            <span className="text whitespace-nowrap t-p1">
               DesignOps Framework
             </span>
           </div>

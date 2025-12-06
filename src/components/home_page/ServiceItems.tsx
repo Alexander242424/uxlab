@@ -242,45 +242,45 @@ export default function ServiceItems() {
                             />
 
                             {/* MOBILE ПАРАГРАФЫ (с анимацией по словам) */}
-                            <div className="flex flex-col sm:hidden gap-4">
-                                <div className="flex flex-col">
-                                    <SplitText
-                                        text={firstParagraphMobile}
-                                        className=""
-                                        splitType="lines"
-                                        delay={100}
-                                        duration={0.8}
-                                        ease="power3.out"
-                                        from={{opacity: 0, y: 50}}
-                                        to={{opacity: 1, y: 0}}
-                                        threshold={0.1}
-                                        rootMargin={isMobile ? "-100px" : "-200px"}
-                                        textAlign="left"
-                                    />
-                                </div>
-                                <div className="flex flex-col">
-                                    <SplitText
-                                        text={secondParagraphMobile}
-                                        className=""
-                                        splitType="lines"
-                                        delay={100}
-                                        duration={0.8}
-                                        ease="power3.out"
-                                        from={{opacity: 0, y: 50}}
-                                        to={{opacity: 1, y: 0}}
-                                        threshold={0.1}
-                                        rootMargin={isMobile ? "-100px" : "-200px"}
-                                        textAlign="left"
-                                    />
-                                </div>
-                            </div>
+                            {/*<div className="flex flex-col sm:hidden gap-4">*/}
+                            {/*    <div className="flex flex-col">*/}
+                            {/*        <SplitText*/}
+                            {/*            text={firstParagraphMobile}*/}
+                            {/*            className=""*/}
+                            {/*            splitType="lines"*/}
+                            {/*            delay={100}*/}
+                            {/*            duration={0.8}*/}
+                            {/*            ease="power3.out"*/}
+                            {/*            from={{opacity: 0, y: 50}}*/}
+                            {/*            to={{opacity: 1, y: 0}}*/}
+                            {/*            threshold={0.1}*/}
+                            {/*            rootMargin={isMobile ? "-100px" : "-200px"}*/}
+                            {/*            textAlign="left"*/}
+                            {/*        />*/}
+                            {/*    </div>*/}
+                            {/*    <div className="flex flex-col">*/}
+                            {/*        <SplitText*/}
+                            {/*            text={secondParagraphMobile}*/}
+                            {/*            className=""*/}
+                            {/*            splitType="lines"*/}
+                            {/*            delay={100}*/}
+                            {/*            duration={0.8}*/}
+                            {/*            ease="power3.out"*/}
+                            {/*            from={{opacity: 0, y: 50}}*/}
+                            {/*            to={{opacity: 1, y: 0}}*/}
+                            {/*            threshold={0.1}*/}
+                            {/*            rootMargin={isMobile ? "-100px" : "-200px"}*/}
+                            {/*            textAlign="left"*/}
+                            {/*        />*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
 
                     {/* ПРАВАЯ КОЛОНКА + DESKTOP ПАРАГРАФЫ */}
                     <div className="col-lg-8 flex-col">
                         {/* DESKTOP ПАРАГРАФЫ */}
-                        <div className="services_paragraph space-y-6  w-full not-sm:hidden">
+                        <div className="services_paragraph space-y-6  w-full ">
                             <SplitText
                                 text={firstParagraph}
                                 className=""
@@ -314,21 +314,21 @@ export default function ServiceItems() {
                             {quantsList.map((quant, index) => (
                                 <div
                                     key={index}
-                                    className="flex flex-col mr-8 last:mr-0 quant"
+                                    className="mr-8 last:mr-0 quant"
                                 >
-                  <span className="hoves-h3-med text-text-700 main_text">
-                    <CountUp
-                        start={0}
-                        end={quant.value}
-                        duration={3}
-                        decimals={Number.isInteger(quant.value) ? 0 : 1}
-                        enableScrollSpy
-                    />
-                      {quant.suffix}
-                  </span>
-                                    <span className="t-p1 text-[#A3A3A3] mt-2">
-                    {quant.label}
-                  </span>
+                                    <div className="hoves-h3-med text-text-700 main_text">
+                                        <CountUp
+                                            start={0}
+                                            end={quant.value}
+                                            duration={3}
+                                            decimals={Number.isInteger(quant.value) ? 0 : 1}
+                                            enableScrollSpy
+                                        />
+                                        {quant.suffix}
+                                    </div>
+                                    <p className="t-p1 text-[#A3A3A3] mt-2">
+                                        {quant.label}
+                                    </p>
                                 </div>
                             ))}
                         </div>
