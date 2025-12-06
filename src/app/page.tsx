@@ -103,7 +103,7 @@ export default function HomePage() {
                 <InfiniteSlider
                     slides={slides}
                     duration={20}
-                    className="py-[160px]"
+                    className="py-[160px] logos_slider"
                 />
                 <GlanceSection/>
                 <section className="overview_section mx-4">

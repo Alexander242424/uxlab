@@ -82,7 +82,7 @@ export default function PackageCard({
               </Button>
             </div>
 
-            <p className="t-p2 text-[#959595] font-[400] not-sm:mb-[24px]">{subtitle2}</p>
+            <p className="t-p2 text-[#959595] font-[400] not-sm:mb-[24px] one_model_section__subtitle">{subtitle2}</p>
             {note && (
               <p className="mt-3 text-xs text-neutral-400">
                 {note}
@@ -92,7 +92,7 @@ export default function PackageCard({
 
           {/* Правая часть (буллеты) */}
           <div className="col-md-5">
-            <ul className="space-y-2 text-black">
+            <ul className="one_model_section__list space-y-2 text-black">
               {bullets.map((item, idx) => (
                 <li
                   key={idx}

@@ -9,6 +9,7 @@
     font-weight: 300;
     font-size: clamp(2.25rem, 4.5vw, 5rem);
     line-height: 1;
+    letter-spacing: -0.03rem;
 }
 
 /* H2 */
@@ -16,6 +17,7 @@
     font-weight: 300;
     font-size: clamp(1.75rem, 3.5vw, 2.5rem); /* ~28–40px */
     line-height: 1.25; /* 125% */
+    letter-spacing: -0.03rem;
 }
 
 /* H3 */
@@ -23,6 +25,7 @@
     font-weight: 300;
     font-size: clamp(1.5rem, 3vw, 2rem); /* ~24–32px */
     line-height: 1.25; /* 125% */
+    letter-spacing: -0.03rem;
 }
 
 /* ====== База = S (320–767px) ====== */

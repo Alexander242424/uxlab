@@ -164,7 +164,7 @@ export default function TextSection({
                 {/* ===== АНИМИРОВАННАЯ ЛИНИЯ ===== */}
                 {showLine && (
                     <motion.div
-                        className={`my-[32px] h-[1px] ${textColor || "text-text-300"}`}
+                        className={`my-[32px] h-[1px] line_animated ${textColor || "text-text-300"}`}
                         style={{
                             backgroundColor: "#FFFFFF29",
                             transformOrigin: "left center",
