@@ -107,7 +107,7 @@ export default function InsightsSection() {
                     </p>
                   ))}
                 </div>
-                <p className="text-black t-p2 mt-[24px]">
+                <p className="author_name text-black t-p2 mt-[24px]">
                   {insight.author} · {insight.date}
                 </p>
               </div>
