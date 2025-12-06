@@ -326,7 +326,7 @@ export default function ServiceItems() {
                     />
                       {quant.suffix}
                   </span>
-                                    <span className="text-text-500 hoves-p1-reg mt-2">
+                                    <span className="t-p1 text-[#A3A3A3] mt-2">
                     {quant.label}
                   </span>
                                 </div>

@@ -86,7 +86,7 @@ export default function VideoCard({
       >
 
         <div className="flex flex-col gap-2">
-          <h6 className="hoves-p1 w-[75%]">{descriptionText}</h6>
+          <h5 className="hoves-p1 w-[75%]">{descriptionText}</h5>
         </div>
         {withAuthor &&
           (isForbes ? (

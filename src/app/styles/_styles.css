@@ -86,6 +86,10 @@ body {
 .showreal_video video{
     width: 100%;
 }
+.overview_section video {
+    width: 100%;
+}
+
 /* animated text like rejouise */
 .animated_text_by_letters {
     font-weight: 300;

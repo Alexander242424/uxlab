@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/ShowreelSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/ShowreelSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/base/_typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/base/_typography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/glance-section/VideoCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/glance-section/VideoCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,20 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/project/uxlab/public/image",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "ts.external.directory.path": "D:\\project\\uxlab\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/project/uxlab/public/image&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\project\\uxlab\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\project\uxlab\public\image" />
@@ -68,6 +72,7 @@
       <workItem from="1764865778686" duration="4781000" />
       <workItem from="1764870989947" duration="17570000" />
       <workItem from="1764940861693" duration="22680000" />
+      <workItem from="1765007074676" duration="3259000" />
     </task>
     <servers />
   </component>

@@ -96,23 +96,25 @@ export default function HomePage() {
                 />
 
                 <div className="mx-4">
+                    <div className="container-fluid">
                     <OneModelSection bannerImage={designImage}/>
+                    </div>
                 </div>
-                <div className="w-full">
-                    <InfiniteSlider
-                        slides={slides}
-                        duration={20}
-                        className="py-[160px]"
-                    />
-                    <GlanceSection/>
+                <InfiniteSlider
+                    slides={slides}
+                    duration={20}
+                    className="py-[160px]"
+                />
+                <GlanceSection/>
+                <section className="overview_section mx-4">
                     <div className="container-fluid">
                         <OverviewCaseVideoSection
                             className="!p-0 !m-0 last_video_screen"
                             src="/video/nespressso/JW9tBsFi0Xm6810KHjTgnbuBo.mp4"
                         />
                     </div>
-                    <InsightsSection/>
-                </div>
+                </section>
+                <InsightsSection/>
             </div>
         </div>
     );

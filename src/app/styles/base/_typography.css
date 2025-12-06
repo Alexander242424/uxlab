@@ -1,14 +1,14 @@
 /* BIG */
 .t-big {
-    font-size: clamp(2.75rem, 6vw, 4.5rem); /* от ~44px до ~72px */
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
     line-height: 0.88;
 }
 
 /* H1 */
 .t-h1 {
     font-weight: 300;
-    font-size: clamp(2.25rem, 4.5vw, 3.5rem); /* ~36–56px */
-    line-height: 1; /* 100% */
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    line-height: 1;
 }
 
 /* H2 */
@@ -30,7 +30,8 @@
 /* P1 — основной текст покрупнее */
 .t-p1 {
     font-size: 1rem;         /* 16px */
-    line-height: 1.375rem;   /* 22px */
+    line-height: 1.375rem;
+    letter-spacing: 0.006rem;
 }
 
 /* P2 — обычный параграф */
@@ -71,7 +72,7 @@
 
 @media (min-width: 1024px) {
     .t-p1 {
-        font-size: 1.25rem;    /* 20px */
+        font-size: 1.125rem;    /* 20px */
         line-height: 1.75rem;  /* 28px */
     }
 
