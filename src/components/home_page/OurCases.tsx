@@ -449,7 +449,7 @@ const PREVIEW_WIDTH = previewConfig.width;
 
                   {item.logo && (
                     <div
-                      className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
+                      className={`absolute bottom-4 mb-[20px] md:mb-[32px] transition-opacity duration-300 ${isHovering && hoveredIndex === index ? "opacity-0" : "opacity-100"
                         }`}
                     >
                       <Image

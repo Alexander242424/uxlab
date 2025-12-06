@@ -83,8 +83,11 @@ body {
 .overview_section video {
     width: 100%;
 }
+.case_box_container .case_box .absolute {
+    left: 50%;
+    transform: translate(-50%, 0%) !important;
+}
 
-/* animated text like rejouise */
 .animated_text_by_letters {
     font-weight: 300;
     font-size: clamp(4.5rem, 8vw + 3rem, 15.5rem);
