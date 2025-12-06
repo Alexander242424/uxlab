@@ -37,8 +37,8 @@
     }
 
     .services_list_section .services_row {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .cases_text_box {
