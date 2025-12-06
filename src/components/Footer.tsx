@@ -104,7 +104,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="px-4 md:px-10 relative z-10 bg-black">
+    <footer className="mx-4 relative z-10 bg-black">
       {/* Частина з паралаксом */}
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -125,28 +125,28 @@ export default function Footer() {
                 </h3>
                 <div className="flex sm:gap-8">
                   <div className="not-sm:min-w-1/2">
-                    <p className="hoves-p2-reg">Contact us:</p>
+                    <p className="t-p1">Contact us:</p>
                     <Link
                       href="mailto:hello@uxlab.com"
-                      className="relative group text-text-700 hoves-p2-reg"
+                      className="relative group text-text-700 t-p1"
                     >
                       hello@uxlab.com
                       <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                     </Link>
                   </div>
                   <div className="not-sm:min-w-1/2">
-                    <p className="hoves-p2-reg">Terms of use</p>
-                    <p className="hoves-p2-reg">©13—25</p>
+                    <p className="t-p1">Terms of use</p>
+                    <p className="t-p1">©13—25</p>
                   </div>
                 </div>
                 <div className="hidden sm:flex flex-col sm:mt-32 gap-5 max-w-[420px]">
-                  <p className="hoves-p2-reg">Sign up for our newsletter</p>
+                  <p className="t-p1">Sign up for our newsletter</p>
                   <form onSubmit={handleSubmit} className="relative">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className={`hoves-p2-reg pb-4 border-b w-full bg-transparent outline-none appearance-none ${
+                      className={`t-p1 pb-4 border-b w-full bg-transparent outline-none appearance-none ${
                         message && !message.includes("Success")
                           ? "border-red-500"
                           : "border-border-50"
@@ -164,7 +164,7 @@ export default function Footer() {
                     </button>
                     {message && (
                     <p
-                      className={`hoves-p2-reg text-sm mt-2 ${
+                      className={`t-p1 text-sm mt-2 ${
                         message.includes("Success")
                           ? "text-green-600"
                           : "text-red-500"
@@ -182,7 +182,7 @@ export default function Footer() {
                 <div className="text-nowrap not-sm:min-w-1/2 md:pl-[1px] mb-8 md:mb-0 md:min-w-[212px]">
                   <ul className="space-y-4">
                     {/* <li>
-                      <Link href="/#" className={`relative group text-text-700 hoves-p2-reg`}>
+                      <Link href="/#" className={`relative group text-text-700 t-p1`}>
                         Home
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                       </Link>
@@ -190,7 +190,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/#services"
-                        className={`relative group text-text-700 hoves-p2-reg`}
+                        className={`relative group text-text-700 t-p1`}
                       >
                         Services
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
@@ -199,7 +199,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/#cases"
-                        className={`relative group text-text-700 hoves-p2-reg`}
+                        className={`relative group text-text-700 t-p1`}
                       >
                         Cases
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
@@ -208,7 +208,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/#insights"
-                        className={`relative group text-text-700 hoves-p2-reg`}
+                        className={`relative group text-text-700 t-p1`}
                       >
                         Insights
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
@@ -230,7 +230,7 @@ export default function Footer() {
                           <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0" />
                           {/* Icon on the left (visible on hover) */}
                           <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1" />
-                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 hoves-p2-reg">
+                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
                             Instagram
                           </span>
                         </span>
@@ -247,7 +247,7 @@ export default function Footer() {
                           <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0" />
                           {/* Icon on the left (visible on hover) */}
                           <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1" />
-                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 hoves-p2-reg">
+                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
                             Linkedin
                           </span>
                         </span>
@@ -264,7 +264,7 @@ export default function Footer() {
                           <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0" />
                           {/* Icon on the left (visible on hover) */}
                           <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1" />
-                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 hoves-p2-reg">
+                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
                             X
                           </span>
                         </span>
@@ -274,13 +274,13 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex flex-col sm:hidden mt-[180px]">
-                <p className="hoves-p2-reg">Sign up for our newsletter</p>
+                <p className="t-p1">Sign up for our newsletter</p>
                 <form onSubmit={handleSubmit} className="relative">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className={`hoves-p2-reg pb-8 border-b w-full bg-transparent outline-none appearance-none ${
+                    className={`t-p1 pb-8 border-b w-full bg-transparent outline-none appearance-none ${
                       message && !message.includes("Success")
                         ? "border-red-500"
                         : "border-border-50"
@@ -298,7 +298,7 @@ export default function Footer() {
                   </button>
                   {message && (
                     <p
-                      className={`hoves-p2-reg text-sm mt-2 ${
+                      className={`t-p1 text-sm mt-2 ${
                         message.includes("Success")
                           ? "text-green-600"
                           : "text-red-500"

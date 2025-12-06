@@ -11,10 +11,21 @@ interface VideoPlayerProps {
   muted?: boolean;
   autoPlay?: boolean;
   onError?: () => void;
+  /** CSS aspect-ratio, например "16/9", "4/3", "9/16" */
+  aspectRatio?: string;
 }
 
-export default function VideoPlayer({ src, poster, className = '', onError, controls = false, loop = true, muted = true, autoPlay = true }: VideoPlayerProps) {
-  
+export default function VideoPlayer({
+                                      src,
+                                      poster,
+                                      className = '',
+                                      onError,
+                                      controls = false,
+                                      loop = true,
+                                      muted = true,
+                                      autoPlay = true,
+                                      aspectRatio = '16/9', // 👈 дефолт
+                                    }: VideoPlayerProps) {
   // Detect iOS Safari
   const isIOSSafari = () => {
     if (typeof window === 'undefined') return false;
@@ -22,30 +33,28 @@ export default function VideoPlayer({ src, poster, className = '', onError, cont
     return /iPad|iPhone|iPod/.test(userAgent) && /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
   };
 
-  // Safari on iOS has restrictions: autoplay only works with muted videos
   const isIOS = isIOSSafari();
-  
-  // Handle iOS Safari restrictions
-  const shouldMute = muted || (isIOS && autoPlay); // Force mute only if autoplay is requested on iOS
-  const shouldAutoPlay = autoPlay; // Keep autoplay as requested, but it won't work on iOS without user interaction
-  const shouldShowControls = controls; // Respect the controls prop - don't force show on iOS
+
+  const shouldMute = muted || (isIOS && autoPlay);
+  const shouldAutoPlay = autoPlay;
+  const shouldShowControls = controls;
 
   return (
-    <MediaPlayer
-      className={`w-full h-full ${className}`}
-      title="Video Player"
-      // aspectRatio="16 / 9"
-      controls={shouldShowControls}
-      src={src}
-      poster={poster}
-      preload="true"
-      autoPlay={shouldAutoPlay}
-      muted={shouldMute}
-      loop={loop}
-      onError={onError}
-      playsInline={true} // Prevent fullscreen on all devices
-    >
-      <MediaProvider className='w-full h-full video-player-provider' />
-    </MediaPlayer>
+      <MediaPlayer
+          className={`w-full h-full ${className}`}
+          title="Video Player"
+          aspectRatio={aspectRatio}        // 👈 сюда из пропса
+          controls={shouldShowControls}
+          src={src}
+          poster={poster}
+          preload="auto"
+          autoPlay={shouldAutoPlay}
+          muted={shouldMute}
+          loop={loop}
+          onError={onError}
+          playsInline
+      >
+        <MediaProvider className="w-full h-full video-player-provider" />
+      </MediaPlayer>
   );
 }

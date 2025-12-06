@@ -50,7 +50,7 @@ export default function CasesHeroSections({
           </div>
 
           <div className="w-full sm:w-2/3 flex flex-col">
-            <p className="block sm:hidden text-text-500 hoves-p2-reg pb-4">
+            <p className="block sm:hidden text-text-500 t-p1 pb-4">
               Emma Sleep
             </p>
             {textArray.map((text, index) => (
@@ -82,17 +82,17 @@ export default function CasesHeroSections({
       </motion.div>
       <div className="w-full mt-auto px-4 md:px-10 flex mb-10">
         <div className="sm:w-1/3 hidden sm:block">
-          <p className="text-text-500 hoves-p2-reg">{companyName}</p>
+          <p className="text-text-500 t-p1">{companyName}</p>
         </div>
 
         <div className="w-full sm:w-2/3 flex flex-col sm:flex-row gap-8">
           <div className="flex flex-col gap-2 sm:min-w-[212px]">
-            <p className="text-text-500 hoves-p2-reg">Year</p>
-            <p className="text-text-700 hoves-p2-reg">{year}</p>
+            <p className="text-text-500 t-p1">Year</p>
+            <p className="text-text-700 t-p1">{year}</p>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-text-500 hoves-p2-reg">Deliverables</p>
-            <p className="text-text-700 hoves-p2-reg">{deliverables}</p>
+            <p className="text-text-500 t-p1">Deliverables</p>
+            <p className="text-text-700 t-p1">{deliverables}</p>
           </div>
         </div>
       </div>

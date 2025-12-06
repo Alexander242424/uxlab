@@ -91,7 +91,7 @@ export default function VideoCard({
         {withAuthor &&
           (isForbes ? (
             <div className="flex gap-3">
-              <p className="hoves-p2-reg">
+              <p className="t-p1">
                 Todd Arnold, Board Member <br /> @ Forbes Travel Guide
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function VideoCard({
               <div className="min-w-fit">{avatar}</div>
               <div className="flex flex-col gap-[2px] justify-center">
                 <div className="flex items-center gap-2">
-                  <p className="hoves-p2-reg">{authorText}</p>
+                  <p className="t-p1">{authorText}</p>
                   <a
                     className="cursor-pointer"
                     href={url || ""}
@@ -110,7 +110,7 @@ export default function VideoCard({
                     <LinkedInIcon />
                   </a>
                 </div>
-                <p className="hoves-p2-reg text-text-500">{companyText}</p>
+                <p className="t-p1 text-text-500">{companyText}</p>
               </div>
             </div>
           ))}

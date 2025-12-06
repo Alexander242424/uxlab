@@ -28,13 +28,13 @@ export default function HeroSection() {
                 <div className="row mx-0 min-h-[300px]">
                     <div className="col-sm-6 col-12 sm:ml-auto flex justify-start  hero_text_block">
                         <div className="flex-col flex">
-                            <p className="t-p2 sm:text-right !text-nowrap ">
+                            <p className="t-p1 sm:text-right !text-nowrap ">
                                 Work with eCommerce bands
                             </p>
-                            <p className="t-p2 !text-nowrap">
+                            <p className="t-p1 !text-nowrap">
                                 to uplift CR, AOV, LTV, ATC, Checkout rate, Retention,
                             </p>
-                            <p className="t-p2 !text-nowrap">
+                            <p className="t-p1 !text-nowrap">
                                 and more metrics to unlock revenue grow.
                             </p>
                         </div>

@@ -107,9 +107,11 @@ export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = fal
   return (
     <>
       {isDefault ? (
-        <div className="relative w-full h-full max-h-[600px] xs:max-h-[800px] md:max-h-[2000px] overflow-hidden">
+        <div className="relative w-full h-full max-h-[600px] xs:max-h-[800px] md:max-h-[2000px] overflow-hidden show_real_video_container">
           <ScrollAnimatedSection className="w-full h-full">
-            <VideoPlayer src={isMobile ? mobileSrc : desktopSrc} />
+            <VideoPlayer
+                src={isMobile ? mobileSrc : desktopSrc}
+            />
           </ScrollAnimatedSection>
         </div>
       ) : (
@@ -158,7 +160,7 @@ export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = fal
                     fill="currentColor"
                   />
                 </svg>
-                <span className="text-white hoves-p2-reg header-text">Play Reel</span>
+                <span className="text-white t-p1 header-text">Play Reel</span>
               </div>
             </div>
           )}

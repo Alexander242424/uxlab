@@ -21,12 +21,11 @@ body {
 @custom-variant not-sm (@media (max-width: 767px));
 @custom-variant not-xs (@media (max-width: 274px));
 
-
-.main_text_section .block:first-child{
-    text-align: right;
+.main_text_section p:first-child {
+    width: 100%;
 }
-.main_text_section .block {
-    text-align: left;
+.main_text_section p:first-child{
+    text-align: right;
 }
 
 .bg-bg-white {
@@ -38,7 +37,9 @@ body {
     margin-top: 32px;
     margin-bottom: 80px;
 }
-
+.show_real_video_container video{
+    width: 100%;
+}
 .services_paragraph {
     margin-bottom: 80px;
 }
@@ -52,14 +53,7 @@ body {
 .services_list_section {
     margin-bottom: 160px;
 }
-.case_box_container .case_box:nth-child(3n + 1) .cursor-pointer {
-  max-height: 741px;
-  
-}
-.case_box_container .case_box .cursor-pointer {
-  max-height: 885px;
-  
-}
+
 .case_box_container .case_box img{
   height: 100%;
 }
@@ -81,7 +75,6 @@ body {
     border-top: 1px solid #E5E5E5;
     margin-top: 52px;
     margin-bottom: 42px;
-    text-align: center;
     font-size: 20px;
     color: black;
 }

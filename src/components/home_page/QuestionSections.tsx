@@ -136,7 +136,7 @@ export default function QuestionSections() {
             </div>
             <div className="flex flex-col gap-3.5">
               <h4 className="hoves-h4-med">Book a Call</h4>
-              <p className="hoves-p2-reg">
+              <p className="t-p1">
                 Tell us about your project, your timeline, and budget. 
                 We&apos;ll get back to you within 12 hours.
               </p>
@@ -238,13 +238,13 @@ export default function QuestionSections() {
                 <AccordionItem value={item.id} className="border-b-0">
                   <AccordionTrigger
                     className={cn(
-                      "hoves-p1-big text-left",
+                      "t-p1 text-left",
                       index === 0 && "md:!pt-0 lg:!pt-10"
                     )}
                   >
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="hoves-p2-reg max-w-[90%]">
+                  <AccordionContent className="t-p1 max-w-[90%]">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

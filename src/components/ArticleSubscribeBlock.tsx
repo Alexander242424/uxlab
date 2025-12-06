@@ -90,21 +90,21 @@ const ArticleSubscribeBlock = () => {
           Article
         </p>
         <a href="#" className="flex justify-between items-center py-4 border-b border-b-[#E5E5E5] group cursor-pointer">
-          <p className="hoves-p2-reg text-[#5C5C5C] relative">
+          <p className="t-p1 text-[#5C5C5C] relative">
             Copy Link
             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#5C5C5C] underline-animation"></span>
           </p>
           <LinkIcon />
         </a>
         <a href="#" className="flex justify-between items-center py-4 border-b border-b-[#E5E5E5] group cursor-pointer">
-          <p className="hoves-p2-reg text-[#5C5C5C] relative">
+          <p className="t-p1 text-[#5C5C5C] relative">
             Post on LinkedIn
             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#5C5C5C] underline-animation"></span>
           </p>
           <ArrowRightUpIcon />
         </a>
         <a href="#" className="flex justify-between items-center py-4 border-b border-b-[#E5E5E5] group cursor-pointer">
-          <p className="hoves-p2-reg text-[#5C5C5C] relative">
+          <p className="t-p1 text-[#5C5C5C] relative">
             Post on X
             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#5C5C5C] underline-animation"></span>
           </p>

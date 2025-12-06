@@ -91,7 +91,7 @@ export default function TextSection({
                 const words = line.split(" ").filter(Boolean);
 
                 return (
-                    <motion.span
+                    <motion.p
                         key={`line-${lineIndex}`}
                         variants={lineVariants}
                         className="inline-block"
@@ -116,7 +116,7 @@ export default function TextSection({
                                 {word}&nbsp;
                             </motion.span>
                         ))}
-                    </motion.span>
+                    </motion.p>
                 );
             });
     };
@@ -146,7 +146,7 @@ export default function TextSection({
                         whileInView="visible"
                         viewport={{
                             amount: threshold ?? 0.5,
-                            once: true,
+                            once: false,
                         }}
                     >
                         {renderAnimatedText(textArray as string[], "")}

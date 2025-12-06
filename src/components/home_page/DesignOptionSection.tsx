@@ -87,7 +87,7 @@ export default function DesignOpsSection({
               />
             </div>
 
-            <div className="t-p2 mb-[32px]">
+            <div className="t-p1 mb-[32px]">
 
               <SplitText
                   text={description}

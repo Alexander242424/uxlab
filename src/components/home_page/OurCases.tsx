@@ -377,6 +377,7 @@ const PREVIEW_WIDTH = previewConfig.width;
                 ) : (
                   <VideoPlayer
                     src={cases[hoveredIndex].videoSrc!}
+                    aspectRatio=""
                     className="w-full h-full object-cover"
                     onError={() => handleVideoError(hoveredIndex)}
                   />
@@ -463,12 +464,12 @@ const PREVIEW_WIDTH = previewConfig.width;
                 </Link>
               </div>
               <div className="cases_text_box flex justify-between items-center w-full">
-                <p className={`text-text-700 hoves-p1-reg transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
+                <p className={`t-p1 transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
                   }`}
                 >
                   {item.title}
                 </p>
-                <p className=" hoves-p1-reg transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
+                <p className=" t-p1 transition-all text-[#A3A3A3] duration-300 mx-auto">{item.description}</p>
               </div>
             </div>
           ))}

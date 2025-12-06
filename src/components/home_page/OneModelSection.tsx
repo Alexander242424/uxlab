@@ -8,7 +8,7 @@ import SplitText from "@/components/SplitText";
 import { Button } from "@/components/ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import CheckIcon from "@/assets/image/check.svg";
-import smallShape from "@/assets/image/small_shape.png"
+
 type PackageCardProps = {
   title?: string;
   subtitle?: string;
@@ -104,7 +104,7 @@ export default function PackageCard({
               ))}
             </ul>
           </div>
-          <div className="col-lg-12">
+          <div className="col-lg-10 mx-auto">
             {afterRowTitle && (
               <p className="after_row_title t-p1 font-[400]">{afterRowTitle}</p>
             )}
@@ -127,7 +127,9 @@ export default function PackageCard({
         <div className="absolute shape_container inset-0 flex items-center justify-center pointer-events-none">
           <div className="flex items-center gap-3 text-white small_shape">
             <Image
-              src={smallShape}
+              src="/image/small_shape.svg"
+              width={20}
+              height={20}
               alt="Small Shape"
               className="w-full h-full object-cover"
               priority={false}

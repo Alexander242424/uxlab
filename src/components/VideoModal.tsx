@@ -228,7 +228,7 @@ export default function VideoModal() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="text-white hoves-p2-reg header-text">Close Reel</span>
+            <span className="text-white t-p1 header-text">Close Reel</span>
           </div>
         </div>
       )}

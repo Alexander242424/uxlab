@@ -38,6 +38,9 @@
     #services .col-lg-4 {
         margin-bottom: 24px;
     }
+    .main_text_section .inline-block:first-child {
+       text-align: left;
+    }
 
 }
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -70,6 +73,10 @@
         width: 95%;
         margin-top: 8px;
     }
+    .mx-4 {
+        margin-left: 24px !important;
+        margin-right: 24px !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -91,22 +98,23 @@
     .animated_text_by_letters span {
         letter-spacing: -0.5rem;
     }
+    .mx-4 {
+        margin-left: 12px !important;
+        margin-right: 12px !important;
+    }
 }
 
 
 /* Main media  */
 @media (min-width: 1919px) {
-    .main_text_section .inline-block:first-child {
-        margin-left: auto;
-        flex: 0 0 43%;
-    }
+
 }
 
 @media (max-width: 1919px) and (min-width: 1024px) {
-    .main_text_section .inline-block:first-child {
-        margin-left: auto;
-        flex: 0 0 43%;
-    }
+    /*.main_text_section .inline-block:first-child {*/
+    /*    margin-left: auto;*/
+    /*    flex: 0 0 43%;*/
+    /*}*/
 
 }
 

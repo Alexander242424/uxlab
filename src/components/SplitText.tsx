@@ -139,7 +139,7 @@ const SplitText: React.FC<SplitTextProps> = ({
                 <motion.p
                     key={`line-${lineIndex}`}
                     variants={lineVariants}
-                    className="inline-block t-p2"
+                    className="inline-block t-p1"
                     style={{
                         textAlign,
                         overflow: "hidden",

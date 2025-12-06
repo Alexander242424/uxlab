@@ -247,7 +247,7 @@ const HoverSection: React.FC = () => {
                           .map((wordGroup: string[], index: number) => (
                             <p
                               key={index}
-                              className="text-black hoves-p2-reg !font-[400] !text-nowrap"
+                              className="text-black t-p1 !font-[400] !text-nowrap"
                             >
                               {wordGroup.join(" ")}
                             </p>
@@ -295,7 +295,7 @@ const HoverSection: React.FC = () => {
                             <SplitText
                               key={index}
                               text={text}
-                              className="leading-relaxed hoves-p2-reg text-black !text-nowrap"
+                              className="leading-relaxed t-p1 text-black !text-nowrap"
                               globalIndex={index}
                               splitType="lines"
                               delay={100}

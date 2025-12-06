@@ -229,7 +229,7 @@ export default function ServiceItems() {
                             {/* Заголовок слева оставляем через SplitText */}
                             <SplitText
                                 text="Your Growth Starts Here."
-                                className="t-p2"
+                                className="t-p1"
                                 splitType="lines"
                                 delay={100}
                                 duration={0.8}

@@ -71,7 +71,7 @@ const ArticleNavigation = ({ navigationItems }: ArticleNavigationProps) => {
           onClick={() => scrollToSection(item.id)}
         >
           <p
-            className={`hoves-p2-reg transition-colors duration-200 truncate max-w-[300px] ${
+            className={`t-p1 transition-colors duration-200 truncate max-w-[300px] ${
               activeSection === item.id ? "text-black" : "text-[#5C5C5C]"
             }`}
             title={item.title}

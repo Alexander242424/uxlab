@@ -98,16 +98,16 @@ export default function InsightsSection() {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col gap-4 md:gap-6">
-                <div className="flex flex-col gap-1 md:gap-2">
+              <div className="flex flex-col">
+                <div className="flex flex-col gap-1 md:gap-2 mt-[12px]">
                   {insight.title.map((line, lineIndex) => (
-                    <p key={lineIndex} className="text-black hoves-p1-big relative group w-fit">
+                    <p key={lineIndex} className="text-black t-p1 relative group w-fit">
                       {line}
                       <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black underline-animation"></span>
                     </p>
                   ))}
                 </div>
-                <p className="text-black hoves-p3-reg">
+                <p className="text-black t-p2 mt-[24px]">
                   {insight.author} · {insight.date}
                 </p>
               </div>
