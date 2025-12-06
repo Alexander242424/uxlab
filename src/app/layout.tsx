@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "UXLAB",
     images: [
       {
-        url: "/placeholder.jpg",
+        url: "https://uxlabdev.netlify.app/placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "UXLAB - We Make Interfaces",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "UXLAB | We Make Interfaces",
     description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
-    images: ["/placeholder.jpg"],
+    images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
   },
   icons: {
     icon: "/favicon.jpg",
