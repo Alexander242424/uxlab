@@ -43,7 +43,7 @@ export default function OverviewCaseVideoSection({
       style={{ clipPath }}
     >
       {src ? (
-        <VideoPlayer src={src} />
+        <VideoPlayer aspectRatio="" src={src} />
       ) : (
         <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
       )}
@@ -51,7 +51,7 @@ export default function OverviewCaseVideoSection({
     ) : (
       <div ref={containerRef} className={cn("w-full px-4 pt-4 pb-4 sm:px-10 sm:pt-10 sm:pb-10", className)}>
         {src ? (
-          <VideoPlayer src={src} />
+          <VideoPlayer aspectRatio="" src={src} />
         ) : (
           <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
         )}

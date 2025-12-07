@@ -111,9 +111,9 @@ export default function ServicesList({
                                         }}
                                     />
 
-                                    <div className="flex items-center w-full justify-between not-md:flex-wrap services_row">
+                                    <div className="flex items-center w-full justify-between not-md:flex-wrap row services_row">
                                         {/* левая колонка */}
-                                        <div className="flex-col col-lg-3">
+                                        <div className="flex-col col-lg-4">
                                             <h3 className="t-h2 w-full text-text-700 relative group/title tracking-tighter whitespace-pre-line">
                                                 {service.title}
                                             </h3>
@@ -123,14 +123,14 @@ export default function ServicesList({
                                         </div>
 
                                         {/* видео */}
-                                        <div className="flex col-lg-6 justify-center">
+                                        <div className="flex col-lg-5 justify-center">
                                             <div
                                                 className={
                                                     isMobile
                                                         ? // 🔥 МОБИЛКА — всегда видно видео
                                                         "flex justify-center max-h-[468px] opacity-100 overflow-hidden transition-all duration-700 ease-out video_box rounded-[4px]"
                                                         : // ДЕСКТОП — как раньше, по hover
-                                                        "group-hover:max-h-[468px] group-hover:opacity-100 flex justify-center max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-out video_box rounded-[4px]"
+                                                        "group-hover:max-h-[320px] group-hover:opacity-100 flex justify-center max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-out video_box rounded-[4px]"
                                                 }
                                             >
                                                 <VideoPlayer

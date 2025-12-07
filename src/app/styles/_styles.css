@@ -80,8 +80,12 @@ body {
 .showreal_video video{
     width: 100%;
 }
+.overview_section {
+    margin-bottom: 160px;
+}
 .overview_section video {
     width: 100%;
+    height: 100%;
 }
 .case_box_container .case_box .absolute {
     left: 50%;
@@ -92,7 +96,7 @@ body {
     font-weight: 300;
     font-size: clamp(4.5rem, 8vw + 3rem, 15.5rem);
     line-height: 88%;
-    letter-spacing: clamp(-1rem, -0.8vw, -1rem);
+    letter-spacing: clamp(-.6rem, -0.8vw, -.6rem);
     text-align: center;
 
 }
@@ -117,7 +121,13 @@ body {
     padding-top: 110px;
     padding-bottom: 48px;
 }
-
+.services_row .video_box {
+    margin-right: 0;
+}
+.services_row .video-player-provider {
+    height: auto;
+    max-height: 320px;
+}
 .video_box video {
     height: 320px;
     border-radius: 4px;
