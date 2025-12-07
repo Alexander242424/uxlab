@@ -7,8 +7,13 @@
 }
 
 @media (max-width: 767px) {
+    .group .flex.flex-col.min-h-\[248px\] {
+        width: 100%;
+        display: block;
+    }
     .services_list_section .video_box {
-        margin-right: 0;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .mobile_subtitle {
@@ -39,6 +44,11 @@
     .services_list_section .services_row {
         padding-left: 0px;
         padding-right: 0px;
+        justify-content: center;
+        margin: 0;
+    }
+    .services_list_section .col-lg-5, .services_list_section .col-lg-4 {
+        padding: 0;
     }
 
     .cases_text_box {
