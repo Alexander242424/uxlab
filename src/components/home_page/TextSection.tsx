@@ -154,7 +154,7 @@ export default function TextSection({
                         whileInView="visible"
                         viewport={{
                             amount: threshold ?? 0.5,
-                            once: false,
+                            once: true,
                         }}
                     >
                         {renderAnimatedText(textArray as string[], "")}

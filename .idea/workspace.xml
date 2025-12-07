@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_services.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_services.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AnimatedTextByLetters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnimatedTextByLetters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/DesignOptionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/DesignOptionSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/EmblaCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/EmblaCarousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/ServiceItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/TextSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/TextSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +83,7 @@
       <workItem from="1764865778686" duration="4781000" />
       <workItem from="1764870989947" duration="17570000" />
       <workItem from="1764940861693" duration="22680000" />
-      <workItem from="1765007074676" duration="30285000" />
+      <workItem from="1765007074676" duration="32604000" />
     </task>
     <servers />
   </component>

@@ -134,7 +134,7 @@ export default function PackageCard({
               className="w-full h-full object-cover"
               priority={false}
             />
-            <span className="text whitespace-nowrap t-p1">
+            <span className="text whitespace-nowrap t-h3">
               DesignOps Framework
             </span>
           </div>

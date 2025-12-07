@@ -316,13 +316,14 @@ export default function ServiceItems() {
                                     key={index}
                                     className="mr-8 last:mr-0 quant"
                                 >
-                                    <div className="hoves-h3-med text-text-700 main_text">
+                                    <div className="hoves-h3-med text-text-700 main_text t-h1">
                                         <CountUp
                                             start={0}
                                             end={quant.value}
                                             duration={3}
                                             decimals={Number.isInteger(quant.value) ? 0 : 1}
                                             enableScrollSpy
+                                            className="t-h1"
                                         />
                                         {quant.suffix}
                                     </div>

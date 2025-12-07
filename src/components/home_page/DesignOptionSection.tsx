@@ -69,19 +69,7 @@ export default function DesignOpsSection({
             )}
 
             <div className="flex justify-start mb-[16px]">
-              <SplitText
-                  text={title}
-                  className={`${textColor} design_title t-h1 xs:text-wrap not-md:!text-nowrap`}
-                  splitType="lines"
-                  delay={100}
-                  duration={0.8}
-                  ease="power3.out"
-                  from={{ opacity: 0, y: 50 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0}
-                  rootMargin={isMobile ? "0px" : "-200px"}
-                  textAlign="left"
-              />
+              <h2 className="design_title t-h1 xs:text-wrap not-md:!text-nowrap">{title}</h2>
             </div>
 
             <div className="t-p1 mb-[32px]">

@@ -266,7 +266,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
           // появление всей секции с transform
           initial={{ opacity: 0, y: 80, scale: 0.96, skewY: 4 }}
           whileInView={{ opacity: 1, y: 0, scale: 1, skewY: 0 }}
-          viewport={{ once: false, margin: "-20% 0px" }}
+          viewport={{ once: true, margin: "-20% 0px" }}
           transition={{
             duration: 0.9,
             ease,
@@ -297,7 +297,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
                     className="w-full"
                     initial={{ opacity: 0, y: 40, scale: 0.9, rotate: -1 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
-                    viewport={{ once: false, margin: "-15% 0px" }}
+                    viewport={{ once: true, margin: "-15% 0px" }}
                     transition={{
                       duration: 0.7,
                       ease,
