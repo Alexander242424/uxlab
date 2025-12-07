@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface SlideItem {
   element: React.ReactNode;
@@ -9,31 +10,30 @@ interface EmblaCarouselProps {
   slides: SlideItem[];
   className?: string;
   slideSpacing?: number;
-
   speed?: number;
 }
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
-  slides,
-  className = "",
-  slideSpacing = 32,
-  speed = 20,
-}) => {
+                                                       slides,
+                                                       className = "",
+                                                       slideSpacing = 32,
+                                                       speed = 20,
+                                                     }) => {
   const trackRef = useRef<HTMLDivElement>(null);
+
   const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [animationId, setAnimationId] = useState<number | null>(null);
-  const [isHovered, setIsHovered] = useState(false);
   const [initialPosition, setInitialPosition] = useState(0);
   const [isInitialized, setIsInitialized] = useState(false);
 
-
   const lastFrameTimeRef = useRef(0);
+
+  // множитель скорости
   const speedFactorRef = useRef(1);
   const targetSpeedFactorRef = useRef(1);
-
 
   const duplicatedSlides = [
     ...slides,
@@ -55,26 +55,22 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     const totalSlides = slides.length;
     const totalWidth = slideWidth * totalSlides;
 
-
     const lastTime = lastFrameTimeRef.current || currentTime;
     const deltaTime = currentTime - lastTime;
     lastFrameTimeRef.current = currentTime;
-
 
     const currentFactor = speedFactorRef.current;
     const targetFactor = targetSpeedFactorRef.current;
     const lerpAmount = 0.08;
     const nextFactor =
-      currentFactor + (targetFactor - currentFactor) * lerpAmount;
+        currentFactor + (targetFactor - currentFactor) * lerpAmount;
     speedFactorRef.current = nextFactor;
-
 
     if (nextFactor < 0.001) {
       const id = requestAnimationFrame(animate);
       setAnimationId(id);
       return;
     }
-
 
     const currentTransform = track.style.transform;
     let currentX = 0;
@@ -85,14 +81,11 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
       currentX = initialPosition;
     }
 
-
     const basePxPerSec = totalWidth / speed;
-    // сколько пикселей проезжаем за этот кадр
     const stepSize =
-      basePxPerSec * nextFactor * (deltaTime > 0 ? deltaTime / 1000 : 1 / 60);
+        basePxPerSec * nextFactor * (deltaTime > 0 ? deltaTime / 1000 : 1 / 60);
 
     const newX = currentX - stepSize;
-
 
     if (Math.abs(newX) >= totalWidth) {
       const resetX = newX + totalWidth;
@@ -106,7 +99,6 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     const id = requestAnimationFrame(animate);
     setAnimationId(id);
   };
-
 
   useEffect(() => {
     if (animationId) {
@@ -125,7 +117,6 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     }
   }, [isPaused, isDragging, speed]);
 
-
   useEffect(() => {
     if (!isInitialized && trackRef.current) {
       const slideWidth = trackRef.current.children[0]?.clientWidth || 0;
@@ -139,14 +130,13 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     }
   }, [isInitialized, slides.length]);
 
-
   useEffect(() => {
     return () => {
       if (animationId) cancelAnimationFrame(animationId);
     };
   }, [animationId]);
 
-
+  // Drag мышью
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!trackRef.current) return;
     setIsDragging(true);
@@ -154,7 +144,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
 
     setStartX(e.pageX - trackRef.current.offsetLeft);
     const currentPos = parseFloat(
-      trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
+        trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
     );
     setScrollLeft(currentPos);
     setInitialPosition(currentPos);
@@ -186,7 +176,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
   const handleMouseUp = () => {
     if (trackRef.current) {
       const currentPos = parseFloat(
-        trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
+          trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
       );
       setInitialPosition(currentPos);
     }
@@ -199,28 +189,26 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     setIsPaused(false);
   };
 
-
+  // Hover контейнера: просто тормозим / ускоряем
   const handleMouseEnterContainer = () => {
-    setIsHovered(true);
-
-    targetSpeedFactorRef.current = 0;
+    // плавно замедляем до 0.1 от нормальной скорости
+    targetSpeedFactorRef.current = 0.1;
   };
 
   const handleMouseLeaveContainer = () => {
-    setIsHovered(false);
-
+    // возвращаем нормальную скорость
     targetSpeedFactorRef.current = 1;
     lastFrameTimeRef.current = 0;
 
     if (trackRef.current) {
       const currentPos = parseFloat(
-        trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
+          trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
       );
       setInitialPosition(currentPos);
     }
   };
 
-
+  // Touch (мобилка)
   const handleTouchStart = (e: React.TouchEvent) => {
     if (!trackRef.current) return;
     setIsDragging(true);
@@ -228,7 +216,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
 
     setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
     const currentPos = parseFloat(
-      trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
+        trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
     );
     setScrollLeft(currentPos);
     setInitialPosition(currentPos);
@@ -260,7 +248,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
   const handleTouchEnd = () => {
     if (trackRef.current) {
       const currentPos = parseFloat(
-        trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
+          trackRef.current.style.transform.match(/-?\d+\.?\d*/)?.[0] || "0"
       );
       setInitialPosition(currentPos);
     }
@@ -268,35 +256,60 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     setIsPaused(false);
   };
 
+  const ease = [0.16, 1, 0.3, 1];
+
   return (
-    <div
-      className={`infinite-carousel ${className}`}
-      onMouseEnter={handleMouseEnterContainer}
-      onMouseLeave={handleMouseLeaveContainer}
-    >
-      <div
-        ref={trackRef}
-        className="infinite-carousel__track"
-        style={{ "--slide-spacing": `${slideSpacing}px` } as React.CSSProperties}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeaveTrack}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+      <motion.div
+          className={`infinite-carousel enter-animation__wrapper ${className}`}
+          onMouseEnter={handleMouseEnterContainer}
+          onMouseLeave={handleMouseLeaveContainer}
+          // появление всей секции с transform
+          initial={{ opacity: 0, y: 80, scale: 0.96, skewY: 4 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1, skewY: 0 }}
+          viewport={{ once: false, margin: "-20% 0px" }}
+          transition={{
+            duration: 0.9,
+            ease,
+          }}
       >
-        {duplicatedSlides.map((slide, index) => (
-          <div
-            key={index}
-            className="infinite-carousel__slide"
-            style={{ paddingRight: `${slideSpacing}px` }}
-          >
-            <div className="w-full">{slide.element}</div>
-          </div>
-        ))}
-      </div>
-    </div>
+        <div
+            ref={trackRef}
+            className="infinite-carousel__track"
+            style={
+              { "--slide-spacing": `${slideSpacing}px` } as React.CSSProperties
+            }
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeaveTrack}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
+          {duplicatedSlides.map((slide, index) => (
+              <div
+                  key={index}
+                  className="infinite-carousel__slide"
+                  style={{ paddingRight: `${slideSpacing}px` }}
+              >
+                {/* появление карточек с transform, не трогая X трека */}
+                <motion.div
+                    className="w-full"
+                    initial={{ opacity: 0, y: 40, scale: 0.9, rotate: -1 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+                    viewport={{ once: false, margin: "-15% 0px" }}
+                    transition={{
+                      duration: 0.7,
+                      ease,
+                      delay: (index % slides.length) * 0.05,
+                    }}
+                >
+                  {slide.element}
+                </motion.div>
+              </div>
+          ))}
+        </div>
+      </motion.div>
   );
 };
 
