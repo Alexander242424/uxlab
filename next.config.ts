@@ -7,7 +7,11 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-
+  compiler: {
+    build: {
+      useWebpack: true,
+    },
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
