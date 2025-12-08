@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "UXLAB",
     images: [
       {
-        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        url: "https://uxlabdev.netlify.app/placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "Mastering Design Systems - UXLAB",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Mastering Design Systems: The Ultimate Guide for Scalable Digital Products",
     description:
       "Discover how design systems streamline UI/UX development with reusable components, consistent branding, and efficient workflows. Learn benefits, tools, and examples from Google, Apple, and Airbnb.",
-    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+    images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
   },
 };
 

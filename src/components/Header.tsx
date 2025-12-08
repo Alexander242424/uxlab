@@ -107,7 +107,7 @@ export default function Header() {
             {/* Ліва частина - логотип */}
             <div className="col-6 col-md-6 flex items-center">
               <Link href="/">
-                <LogoSVG className="header-logo" />
+                <LogoSVG  className="header-logo" />
               </Link>
             </div>
 

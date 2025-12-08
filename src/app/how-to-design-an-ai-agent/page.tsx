@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "UXLAB",
     images: [
       {
-        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        url: "https://uxlabdev.netlify.app/placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "Mastering Design Systems - UXLAB",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "How to Design an AI Assistant That Delivers Real Business Impact",
     description:
       "Learn how to design practical AI assistants that reduce workload, improve efficiency, and become trusted daily tools — not just impressive demos.",
-    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+    images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
   },
 };
 

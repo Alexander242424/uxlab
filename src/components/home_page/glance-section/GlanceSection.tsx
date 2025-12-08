@@ -7,12 +7,12 @@ import {useIsMobile} from "@/hooks/useIsMobile";
 import VideoCard from "./VideoCard";
 
 // Logos
-import CalendlyLogo from "@/assets/Glance/Logo for cases/calendly.svg";
-import ArhiveLogo from "@/assets/Glance/Logo for cases/archive.svg";
-import EasyjetLogo from "@/assets/Glance/Logo for cases/easyjet.svg";
-import ForbesLogo from "@/assets/Glance/Logo for cases/forbes.svg";
-import NumaLogo from "@/assets/Glance/Logo for cases/numa.svg";
-import ScheiderLogo from "@/assets/Glance/Logo for cases/Schneider.svg";
+import ZamnesiaLogo from "@/assets/Glance/logo_for_cases/zamnesia.svg";
+import ArhiveLogo from "@/assets/Glance/logo_for_cases/Wellow.svg";
+import EasyjetLogo from "@/assets/Glance/logo_for_cases/valyou.svg";
+import FormulaPrescotLogo from "@/assets/Glance/logo_for_cases/formulae_prescott.svg";
+import CbdMall from "@/assets/Glance/logo_for_cases/cbd_mall.svg";
+import BecaHomeLogo from "@/assets/Glance/logo_for_cases/beccashome.svg";
 
 
 import Zamnesia from "@/assets/image/posts/zamnesia-min.jpg";
@@ -46,7 +46,7 @@ const slides = [
                 ]}
                 imageSrc={Zamnesia}
                 descriptionText="Boostra drove an 18% conversion lift and paid for itself in hours"
-                logo={<CalendlyLogo className="post-logo__svg"/>}
+                logo={<ZamnesiaLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 url=""
             />
@@ -71,7 +71,7 @@ const slides = [
                 // badgetText="Marketplaces"
                 descriptionText="A stress-free stays tailored to your needs"
                 authorText="Gerhard Marringer"
-                logo={<ForbesLogo className="post-logo__svg"/>}
+                logo={<FormulaPrescotLogo className="post-logo__svg"/>}
                 isForbes={false}
                 withAuthor={false}
                 url=""
@@ -99,7 +99,7 @@ const slides = [
                 descriptionText="Boostra drove an 18% conversion lift and paid for itself in hours"
                 authorText="Paul Benigeri"
                 companyText="Co-Founder & CEO at Archive"
-                logo={<ArhiveLogo className="post-logo__svg"/>}
+                logo={<CbdMall className="post-logo__svg"/>}
                 withAuthor={false}
                 avatar={<PaulBenigeriAvatar/>}
                 url="https://www.linkedin.com/in/benigeri/"
@@ -124,7 +124,7 @@ const slides = [
                 ]}
                 // badgetText="IOT"
                 descriptionText="A stress-free stays tailored to your needs"
-                logo={<ScheiderLogo className="post-logo__svg"/>}
+                logo={<ArhiveLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 videoSrc={""}
                 url=""
@@ -149,7 +149,7 @@ const slides = [
                 ]}
                 // badgetText="Travel"
                 descriptionText="Next-level experience for booking boutique apartments online."
-                logo={<NumaLogo className="post-logo__svg"/>}
+                logo={<BecaHomeLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 url=""
                 // videoSrc={"/glance-section-video/numa.mp4"}

@@ -38,7 +38,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Nespresso.mp4",
     videoTitle: "Nespresso case study",
-    logo: "/image/OurCases/logo/Vector.svg",
+    logo: "/image/OurCases/logo/nespresso.svg",
     link: "/nespresso",
   },
   {
@@ -48,7 +48,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Foundrae.mp4",
     videoTitle: "Emma usability audit\ncase study",
-    logo: "/image/OurCases/logo/Foundrae_logo.svg",
+    logo: "/image/OurCases/logo/foundrae.svg",
     link: "/emma",
   },
   {
@@ -58,7 +58,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Mac_Duggal.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: "/image/OurCases/logo/Mac_duggal.svg",
+    logo: "/image/OurCases/logo/mac_duggal.svg",
     link: "/boostra",
   },
   {
@@ -68,7 +68,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: "/image/OurCases/logo/Valyou_logo.svg",
+    logo: "/image/OurCases/logo/valyou.svg",
     link: "/boostra",
   },
   {
@@ -88,7 +88,7 @@ const cases: OurCasesItem[] = [
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
     videoTitle: "Boostra analysis case study",
-    logo: "/image/OurCases/logo/Royal_Queen_Seeds.svg",
+    logo: "/image/OurCases/logo/rqs_rebranding_logo_header.svg",
     link: "/boostra",
   },
 
@@ -397,7 +397,7 @@ const PREVIEW_WIDTH = previewConfig.width;
               <motion.span
                 ref={captionRef}
                 key={hoveredIndex}
-                className="hoves-p3-reg text-text-700 inline-block"
+                className="t-p2 text-text-700 inline-block"
                 style={{ x: captionOffset }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, x: captionOffset }}

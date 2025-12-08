@@ -329,7 +329,7 @@ export default function Footer() {
 
             {/* Фіксована частина без паралаксу */}
             <div className="container-fluid">
-                <div className="mx-4 pb-4 md:mx-10 md:pb-10">
+                <div className="pb-4 md:pb-10">
                     <WeMakeInterfacesSVG word="interfaces"/>
                 </div>
             </div>

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "UXLAB",
     images: [
       {
-        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        url: "https://uxlabdev.netlify.app/placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "Boostra Case Study - UXLAB",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "From zero-to-one:  AI SaaS Tool for better conversions",
     description:
       "Learn how UXLAB's own SaaS product delivered +25% CR improvement in just 5 minutes of AI analysis for our clients. Explore our design process and outcomes.",
-    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+    images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
   },
 };
 

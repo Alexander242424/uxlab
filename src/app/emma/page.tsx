@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "UXLAB",
     images: [
       {
-        url: "https://uxlab.digital/meta/thumbnail.jpg?v=2",
+        url: "https://uxlabdev.netlify.app/placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "Emma Sleep Case Study - UXLAB",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Mobile App Assistant Design by UXLAB",
     description: "Discover how UXLAB revamped Emma Sleep's mobile app with AI assistance and personalized learning and reached Today's Picks in the App Store.",
-    images: ["https://uxlab.digital/meta/thumbnail.jpg?v=2"],
+    images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
   },
 };
 
