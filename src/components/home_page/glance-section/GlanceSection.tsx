@@ -181,7 +181,7 @@ const slides = [
                 withAuthor={false}
                 logo={<EasyjetLogo className="post-logo__svg"/>}
                 avatar={<SteliosHajiIoannouAvatar/>}
-                videoSrc={"/glance-section-video/easyjet.mp4"}
+                videoSrc={""}
                 url="https://www.linkedin.com/in/stelios-haji-ioannou/"
             />
         ),

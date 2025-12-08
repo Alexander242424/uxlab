@@ -199,10 +199,19 @@ body {
 }
 
 
-
-
 /* cases pages */
-
-.case_hero_section .block_float{
-display: none;
+.case_hero_section {
+    padding-top: 152px;
+}
+.case_hero_section .text_section {
+    margin: 0 !important;
+}
+.case_hero_section .text_section .container-fluid {
+    padding: 0;
+}
+.case_hero__info_row {
+    margin-bottom: 40px;
+}
+.case_hero_section .block_float {
+    display: none;
 }

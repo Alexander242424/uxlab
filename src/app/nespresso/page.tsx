@@ -14,6 +14,7 @@ import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSectio
 import OverviewCaseVideoTextSection from "@/components/cases/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import { Metadata } from "next";
+import TextSection from "@/components/home_page/TextSection";
 
 export const metadata: Metadata = {
   title: "Next-level e-commerce experience for Nespresso",
@@ -50,22 +51,35 @@ export default function NespressoPage() {
           logo={<NespressoLogo />}
           logoMobile={<NespressoLogoMobile />}
           companyName="Nespresso"
-          year="2022 - 2023"
-          deliverables="Design Strategy · UX · Design System · Branding"
+          year="3 × (2-week Design Sprint)"
+          deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
         />
-        {/* <div className="w-full">
-          <ShowreelSection
-            isDefault={true}
-            mobileSrc="/video/reel-short-mobile.mp4"
-            desktopSrc="/video/reel-short.mp4"
-          />
-        </div> */}
         <OverviewCaseVideoSection
           className="!p-0"
           imageSrc={HeroImage}
           imageAlt="Nespresso Case Study"
           isAnimated={false}
         />
+          <TextSection
+              className=""
+              text={[
+                  "We help eCommerce",
+                  "brands grow with decisions based on data, not",
+                  "guesswork, so you win unlock tomorrow`s",
+                  "not  revenue today."
+              ]}
+              mobileText={[
+                  "We help",
+                  "e-commerce brands",
+                  "grow with decisions",
+                  "based on data, not",
+                  "guesswork, so you",
+                  "win unlock",
+                  "tomorrow’s revenue",
+                  "today.",
+              ]}
+              showLine={true}
+          />
         <OverviewCaseTestimonialSection
           firstText=""
           secondText={[

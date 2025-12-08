@@ -128,9 +128,9 @@ export default function ServicesList({
                                                 className={
                                                     isMobile
                                                         ?
-                                                        "flex justify-center max-h-[468px] opacity-100 overflow-hidden transition-all duration-1100 ease-out video_box rounded-[4px]"
+                                                        "flex justify-center max-h-[468px] opacity-100 overflow-hidden transition-all duration-1100 ease video_box rounded-[4px]"
                                                         :
-                                                        "group-hover:max-h-[320px] group-hover:opacity-100 flex justify-center max-h-0 opacity-0 overflow-hidden transition-all duration-1100 ease-out video_box rounded-[4px]"
+                                                        "group-hover:max-h-[320px] group-hover:opacity-100 flex justify-center max-h-0 ease opacity-0 overflow-hidden transition-all duration-1100 video_box rounded-[4px]"
                                                 }
                                             >
                                                 <VideoPlayer
