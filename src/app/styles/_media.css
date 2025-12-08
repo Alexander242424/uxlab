@@ -313,6 +313,9 @@
         height: calc(1svh * 100);
         max-height: unset;
     }
+    footer {
+        padding-top: 20px;
+    }
 }
 
 @media (max-width: 1919px) and (min-width: 1024px) {

@@ -3,10 +3,12 @@ html {
     font-size: 16px;
     font-weight: 400;
 }
+
 body {
     background: #000;
     color: white;
 }
+
 @custom-variant dark (&:is(.dark *));
 
 /* Custom breakpoint variants */
@@ -25,51 +27,63 @@ body {
 .bg-bg-white {
     background-color: #fff;
 }
+
 .block_float {
     display: block;
     float: left;
     height: 2rem;
     width: 50%;
 }
+
 /*showreel section */
 .show_reel_section {
     margin-top: 32px;
     margin-bottom: 80px;
 }
 
-.show_real_video_container video{
+.show_real_video_container video {
     width: 100%;
 }
+
 .services_paragraph {
     margin-bottom: 80px;
 }
+
 .design_section {
     margin-bottom: 160px;
 }
+
 #cases {
     margin: 80px 0 0;
     padding-bottom: 160px;
 }
+
 .services_list_section {
     margin-bottom: 160px;
 }
 
-.case_box_container .case_box img{
-  height: 100%;
+.case_box_container .case_box img {
+    height: 100%;
+    width: 100%;
 }
-.slide_item,.slide_item img,.slide_item .relative.z-10.p-8.flex.flex-1.flex-col {
+
+.slide_item, .slide_item img, .slide_item .relative.z-10.p-8.flex.flex-1.flex-col {
     border-radius: 4px;
 }
+
 .case_box_container {
     row-gap: 64px;
 }
+
 .last_video_screen {
     border-radius: 4px;
     overflow: hidden;
 }
+
 .posts_box {
     border-radius: 4px;
 }
+
 .after_row_title {
     padding-top: 40px;
     border-top: 1px solid #E5E5E5;
@@ -77,17 +91,21 @@ body {
     margin-bottom: 42px;
     color: black;
 }
-.showreal_video video{
+
+.showreal_video video {
     width: 100%;
 }
+
 .overview_section {
     margin-bottom: 160px;
 }
+
 .overview_section video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .case_box_container .case_box .absolute {
     left: 50%;
     transform: translate(-50%, 0%) !important;
@@ -101,6 +119,7 @@ body {
     text-align: center;
 
 }
+
 .animated_text_by_letters span {
     transform-origin: 100% 50%;
     transform-style: preserve-3d;
@@ -111,24 +130,30 @@ body {
 .cases_logo {
     max-width: fit-content;
 }
+
 .cases_logo svg {
     width: 100%;
 }
+
 .cases_text_box {
     column-gap: 20px;
 }
+
 /* services section  */
 .services_row {
     padding-top: 110px;
     padding-bottom: 48px;
 }
+
 .services_row .video_box {
     margin-right: 0;
 }
+
 .services_row .video-player-provider {
     height: auto;
     max-height: 320px;
 }
+
 .video_box video {
     height: 320px;
     border-radius: 4px;
@@ -155,13 +180,15 @@ body {
     position: relative;
     top: 4px;
 }
-.small_shape img{
+
+.small_shape img {
     width: 48px;
 }
+
 .shape_container {
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 

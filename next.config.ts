@@ -2,51 +2,35 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // ВАЖНО: убираем кастомный webpack-конфиг, чтобы не ругалось
+  // webpack(config) {
+  //   return config;
+  // },
+
+  // Turbopack-конфиг (Next 16)
   turbopack: {
     rules: {
-      // 1) *.svg как React-компоненты (SVGR)
+      // 1) По умолчанию все *.svg превращаем в React-компоненты через SVGR
       "*.svg": {
+        condition: {
+          all: [
+            // Не трогаем node_modules — так быстрее
+            { not: "foreign" },
+            // Не трогаем наши "*.url.svg" — они будут картинками
+            { not: { path: "*.url.svg" } },
+          ],
+        },
         loaders: ["@svgr/webpack"],
         as: "*.js",
       },
-      // 2) *.svg?url как обычный файл (URL-строка)
-      "*.svg?url": {
-        loaders: ["file-loader"],
-        as: "*.url",
-      },
+
+      // 2) *.url.svg оставляем Turbopack’у "как есть" (дефолтный loader)
+      //    Тут отдельное правило не нужно: они просто не попадают в верхнее.
     },
   },
 
   typescript: {
     ignoreBuildErrors: true,
-  },
-
-  webpack(config) {
-    // Отключаем дефолтную обработку svg, чтобы не конфликтовать
-    const fileLoaderRule = config.module.rules.find((rule: any) =>
-        rule.test?.test?.(".svg"),
-    );
-
-    if (fileLoaderRule) {
-      fileLoaderRule.exclude = /\.svg$/i;
-    }
-
-    // 1) SVG как React-компонент через SVGR
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      resourceQuery: { not: [/url/] }, // важно: без ?url
-      use: ["@svgr/webpack"],
-    });
-
-    // 2) SVG как файл (URL) через file-loader, если добавлен ?url
-    config.module.rules.push({
-      test: /\.svg$/i,
-      resourceQuery: /url/, // только если ?url в импорте
-      type: "asset/resource",
-    });
-
-    return config;
   },
 };
 
