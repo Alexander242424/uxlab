@@ -86,7 +86,7 @@ export default function VideoCard({
       >
 
         <div className="flex flex-col gap-2">
-          <h5 className="hoves-p1 w-[75%]">{descriptionText}</h5>
+          <h5 className="t-p1 w-[75%]">{descriptionText}</h5>
         </div>
         {withAuthor &&
           (isForbes ? (
@@ -118,8 +118,8 @@ export default function VideoCard({
           <div className="col-8 px-0 flex justify-content-between posts_quants_box">
           {persentage?.map((item, index) => (
               <div key={index} className="flex flex-col">
-                <span className="quant_percentage">{item.quant}</span>
-                <span className="quant_text">{item.text}</span>
+                <span className="t-h3 quant_percentage">{item.quant}</span>
+                <span className="t-p2 quant_text">{item.text}</span>
               </div>
           ))}
           </div>

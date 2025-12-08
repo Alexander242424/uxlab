@@ -46,7 +46,7 @@ const slides = [
                 ]}
                 imageSrc={Zamnesia}
                 descriptionText="Boostra drove an 18% conversion lift and paid for itself in hours"
-                logo={<CalendlyLogo/>}
+                logo={<CalendlyLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 url=""
             />
@@ -56,7 +56,7 @@ const slides = [
         element: (
             <VideoCard
                 imageSrc={Formula}
-                classNames="max-w-[280px] sm:max-w-[496px] min-h-[320px] sm:min-h-[482px]"
+                classNames="max-w-[280px] min-w-[495px] sm:max-w-[496px] min-h-[320px] sm:min-h-[482px]"
                 containerClassName="min-h-[320px] sm:min-h-[482px]"
                 persentage={[
                     {
@@ -71,11 +71,11 @@ const slides = [
                 // badgetText="Marketplaces"
                 descriptionText="A stress-free stays tailored to your needs"
                 authorText="Gerhard Marringer"
-                logo={<ForbesLogo/>}
+                logo={<ForbesLogo className="post-logo__svg"/>}
                 isForbes={false}
                 withAuthor={false}
                 url=""
-                videoSrc={"/glance-section-video/forbes.mp4"}
+                videoSrc={""}
             />
         ),
     },
@@ -99,7 +99,7 @@ const slides = [
                 descriptionText="Boostra drove an 18% conversion lift and paid for itself in hours"
                 authorText="Paul Benigeri"
                 companyText="Co-Founder & CEO at Archive"
-                logo={<ArhiveLogo/>}
+                logo={<ArhiveLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 avatar={<PaulBenigeriAvatar/>}
                 url="https://www.linkedin.com/in/benigeri/"
@@ -110,7 +110,7 @@ const slides = [
         element: (
             <VideoCard
                 imageSrc={Wellow}
-                classNames="max-w-[280px] sm:max-w-[496px] min-h-[280px] sm:min-h-[440px] "
+                classNames="max-w-[280px] min-w-[495px] sm:max-w-[496px] min-h-[280px] sm:min-h-[440px] "
                 containerClassName="min-h-[280px] sm:min-h-[440px]"
                 persentage={[
                     {
@@ -124,9 +124,9 @@ const slides = [
                 ]}
                 // badgetText="IOT"
                 descriptionText="A stress-free stays tailored to your needs"
-                logo={<ScheiderLogo/>}
+                logo={<ScheiderLogo className="post-logo__svg"/>}
                 withAuthor={false}
-                videoSrc={"/glance-section-video/schneider.mp4"}
+                videoSrc={""}
                 url=""
             />
         ),
@@ -149,7 +149,7 @@ const slides = [
                 ]}
                 // badgetText="Travel"
                 descriptionText="Next-level experience for booking boutique apartments online."
-                logo={<NumaLogo/>}
+                logo={<NumaLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 url=""
                 // videoSrc={"/glance-section-video/numa.mp4"}
@@ -162,7 +162,7 @@ const slides = [
         element: (
             <VideoCard
                 imageSrc={BecaHome}
-                classNames="max-w-[280px] sm:max-w-[496px] min-h-[280px] sm:min-h-[305px]"
+                classNames="max-w-[280px] sm:max-w-[496px] min-h-[280px] sm:min-h-[305px] text-black"
                 containerClassName="min-h-[280px] sm:min-h-[305px]"
                 persentage={[
                     {
@@ -179,7 +179,7 @@ const slides = [
                 authorText="Stelios Haji-Ioannou"
                 companyText="Founder at easyGroup"
                 withAuthor={false}
-                logo={<EasyjetLogo/>}
+                logo={<EasyjetLogo className="post-logo__svg"/>}
                 avatar={<SteliosHajiIoannouAvatar/>}
                 videoSrc={"/glance-section-video/easyjet.mp4"}
                 url="https://www.linkedin.com/in/stelios-haji-ioannou/"

@@ -163,16 +163,9 @@ body {
     transform: translate(-50%,-50%);
 }
 
-.quant_percentage {
-    font-size: 1.5rem;
-}
-.quant_text {
-    font-size: 16px;
-}
-.post_logo svg{
-    max-width: fit-content;
-    width: 100%;
-}
-.post_logo svg path {
-    width: 100%;
+
+.post_logo .post-logo__svg {
+    height: 100%;
+    width: auto;
+    display: block;
 }

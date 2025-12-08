@@ -74,7 +74,7 @@ export default function PackageCard({
               <Button
                 variant="secondary"
                 size="lg"
-                className="rounded-full px-6 py-2 bg-black text-white hover:bg-neutral-900"
+                className="rounded-full px-6 py-2 bg-black text-white t-p2 hover:bg-neutral-900"
                 iconRight={<ArrowUpRightSVG className="!size-5" />}
                 onClick={onCtaClick}
               >

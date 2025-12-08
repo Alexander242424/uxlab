@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_media.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/Schneider.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/Schneider.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/archive.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/archive.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/calendly.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/calendly.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/easyjet.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/easyjet.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/forbes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/forbes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/numa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Glance/Logo for cases/numa.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/glance-section/GlanceSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/glance-section/GlanceSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home_page/glance-section/VideoCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/glance-section/VideoCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +86,7 @@
       <workItem from="1764865778686" duration="4781000" />
       <workItem from="1764870989947" duration="17570000" />
       <workItem from="1764940861693" duration="22680000" />
-      <workItem from="1765007074676" duration="35434000" />
+      <workItem from="1765007074676" duration="39719000" />
     </task>
     <servers />
   </component>
