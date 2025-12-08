@@ -16,7 +16,7 @@ export default function AnimatedTextByLetters({
   className,
   letterClassName,
   delayStep = 0.06, 
-  duration = 1,
+  duration = 1.5,
 }: AnimatedTextByLettersProps) {
   const letters = React.useMemo(() => Array.from(text), [text]);
 

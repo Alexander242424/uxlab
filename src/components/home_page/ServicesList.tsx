@@ -127,10 +127,10 @@ export default function ServicesList({
                                             <div
                                                 className={
                                                     isMobile
-                                                        ? // 🔥 МОБИЛКА — всегда видно видео
-                                                        "flex justify-center max-h-[468px] opacity-100 overflow-hidden transition-all duration-700 ease-out video_box rounded-[4px]"
-                                                        : // ДЕСКТОП — как раньше, по hover
-                                                        "group-hover:max-h-[320px] group-hover:opacity-100 flex justify-center max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-out video_box rounded-[4px]"
+                                                        ?
+                                                        "flex justify-center max-h-[468px] opacity-100 overflow-hidden transition-all duration-1100 ease-out video_box rounded-[4px]"
+                                                        :
+                                                        "group-hover:max-h-[320px] group-hover:opacity-100 flex justify-center max-h-0 opacity-0 overflow-hidden transition-all duration-1100 ease-out video_box rounded-[4px]"
                                                 }
                                             >
                                                 <VideoPlayer
