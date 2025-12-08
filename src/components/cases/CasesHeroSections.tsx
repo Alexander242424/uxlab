@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import SplitText from "@/components/SplitText";
+import TextSection from "../home_page/TextSection";
 import { useRef } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -37,12 +37,12 @@ export default function CasesHeroSections({
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]"
+      className="flex case_hero_section flex-col relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]"
     >
       <motion.div
         className="absolute -top-[120px] sm:top-[90px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
-        // className="absolute sm:-top-[110px] -top-[200px] lg:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
-        // style={{ y: textBlockY }}
+      // className="absolute sm:-top-[110px] -top-[200px] lg:top-[200px] right-0 flex items-end w-full mb-[160px] mt-0 px-0 md:px-0"
+      // style={{ y: textBlockY }}
       >
         <div className="w-full flex flex-col sm:flex-row px-4 sm:px-6 md:px-10">
           <div className="mb-[48px] mt-[40px] sm:mt-0 sm:mb-0 sm:w-1/3">
@@ -54,45 +54,35 @@ export default function CasesHeroSections({
               Emma Sleep
             </p>
             {textArray.map((text, index) => (
-            <SplitText
-              key={index}
-              globalIndex={index}
-              text={text || ""}
-              className="!text-nowrap"
-              style={{
-                fontFamily: "var(--font-tt-hoves), system-ui, sans-serif",
-                fontWeight: 300,
-                fontSize: "clamp(2rem, 4vw, 4.5rem)",
-                lineHeight: "1.1",
-                letterSpacing: "-0.03em",
-              }}
-              delay={40}
-              duration={0.8}
-              ease="power3.out"
-              splitType="lines"
-              from={{ opacity: 0, y: 100 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.01}
-              textAlign="left"
+              <TextSection
+                className=""
+                text={[
+                  "Innovating Personalized Sleep Worldwide",
+                ]}
+                mobileText={[
+                  "Innovating Personalized Sleep Worldwide",
+                ]}
+                showLine={false}
               />
             ))}
-            
+
           </div>
         </div>
       </motion.div>
       <div className="w-full mt-auto px-4 md:px-10 flex mb-10">
         <div className="sm:w-1/3 hidden sm:block">
-          <p className="text-text-500 t-p1">{companyName}</p>
+          <p className="t-p2 text-[#A3A3A3]">Year</p>
+          <p className="t-p2">{companyName}</p>
         </div>
 
         <div className="w-full sm:w-2/3 flex flex-col sm:flex-row gap-8">
           <div className="flex flex-col gap-2 sm:min-w-[212px]">
-            <p className="text-text-500 t-p1">Year</p>
-            <p className="text-text-700 t-p1">{year}</p>
+            <p className="t-p2 text-[#A3A3A3]">Year</p>
+            <p className="t-p2">{year}</p>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-text-500 t-p1">Deliverables</p>
-            <p className="text-text-700 t-p1">{deliverables}</p>
+            <p className="t-p2 text-[#A3A3A3]">Deliverables</p>
+            <p className="t-p2">{deliverables}</p>
           </div>
         </div>
       </div>

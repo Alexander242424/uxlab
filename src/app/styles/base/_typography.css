@@ -41,6 +41,7 @@
 .t-p2 {
     font-size: 0.875rem;     /* 14px */
     line-height: 1.25rem;    /* 20px */
+    letter-spacing: -0.03rem;
 }
 
 /* S1 — мелкий вспомогательный текст */

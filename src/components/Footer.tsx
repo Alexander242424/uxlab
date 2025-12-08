@@ -183,20 +183,11 @@ export default function Footer() {
                         <div className="col-md-6 flex xl:gap-[154px]">
                             <div className="text-nowrap not-sm:min-w-1/2 md:pl-[1px] mb-8 md:mb-0 md:min-w-[212px]">
                                 <ul className="space-y-4">
-                                    {/* <li>
-                      <Link href="/#" className={`relative group text-text-700 t-p1`}>
-                        Home
-                        <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
-                      </Link>
-                    </li> */}
+
                                     <li>
-                                        <Link
-                                            href="/#services"
-                                            className={`relative group text-text-700 t-p1`}
-                                        >
-                                            Services
-                                            <span
-                                                className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                        <Link href="/#services" className={`relative group text-text-700 t-p1`}
+                                        > Services
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                                         </Link>
                                     </li>
                                     <li>
@@ -205,8 +196,7 @@ export default function Footer() {
                                             className={`relative group text-text-700 t-p1`}
                                         >
                                             Cases
-                                            <span
-                                                className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                                         </Link>
                                     </li>
                                     <li>
@@ -215,8 +205,7 @@ export default function Footer() {
                                             className={`relative group text-text-700 t-p1`}
                                         >
                                             Insights
-                                            <span
-                                                className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
                                         </Link>
                                     </li>
                                 </ul>
@@ -229,19 +218,14 @@ export default function Footer() {
                                             href="/"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
                                         >
-                                            <span
-                                                className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
-                          {/* Icon on the right (visible by default) */}
-                                                <ArrowUpRightSVG
-                                                    className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
-                                                {/* Icon on the left (visible on hover) */}
-                                                <ArrowUpRightSVG
-                                                    className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
-                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
-                            Instagram
-                          </span>
-                        </span>
+                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
+                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
+                                                  <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
+                                                    Instagram
+                                                  </span>
+                                            </span>
                                         </Link>
                                     </li>
                                     <li>
@@ -249,35 +233,27 @@ export default function Footer() {
                                             href="/"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
                                         >
-                                            <span
-                                                className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
-                          {/* Icon on the right (visible by default) */}
-                                                <ArrowUpRightSVG
-                                                    className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
-                                                {/* Icon on the left (visible on hover) */}
-                                                <ArrowUpRightSVG
-                                                    className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
-                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
-                            Linkedin
-                          </span>
-                        </span>
+
+                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
+                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
+                                              <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
+                                                Linkedin
+                                              </span>
+                                            </span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link
-                                            href="/"
-                                            className="text-text-700 flex items-center gap-1 relative group max-w-fit"
+                                        <Link href="/"
+                                              className="text-text-700 flex items-center gap-1 relative group max-w-fit"
                                         >
-                                            <span
-                                                className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
                           {/* Icon on the right (visible by default) */}
-                                                <ArrowUpRightSVG
-                                                    className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
+                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
                                                 {/* Icon on the left (visible on hover) */}
-                                                <ArrowUpRightSVG
-                                                    className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
+                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
                           <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
                             X
                           </span>

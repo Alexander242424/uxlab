@@ -1,5 +1,5 @@
 import AlexIcon from "@/assets/alex.svg";
-import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
+import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSection";
 import ArticleSubscribeBlock from "@/components/ArticleSubscribeBlock";
 import InsightsSection from "@/components/home_page/InsightsSection";
 import ArticlePageWrapper from "@/components/ArticlePageWrapper";

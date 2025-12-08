@@ -6,12 +6,12 @@ import NespressoCase1 from "@/assets/Nespresso/nR82XOWawuWAy8GHMZeeFWJ3k0.avif";
 import NespressoCase2 from "@/assets/Nespresso/uF1xvIpJ073LZGEw4CqEsTGFg.avif";
 import OptionImage from "@/assets/image/OurCases/Option 22.jpg";
 import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
-import CasesHeroSections from "@/components/CasesHeroSections";
+import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import InfoBlock from "@/components/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
-import OverviewCaseTestimonialSection from "@/components/OverviewCaseTestimonialSection";
-import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
-import OverviewCaseVideoTextSection from "@/components/OverviewCaseVideoTextSection";
+import OverviewCaseTestimonialSection from "@/components/cases/OverviewCaseTestimonialSection";
+import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSection";
+import OverviewCaseVideoTextSection from "@/components/cases/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
 import { Metadata } from "next";
 
@@ -49,7 +49,6 @@ export default function NespressoPage() {
         <CasesHeroSections
           logo={<NespressoLogo />}
           logoMobile={<NespressoLogoMobile />}
-          text={["Seamless Coffee", "E-Commerce Experience"]}
           companyName="Nespresso"
           year="2022 - 2023"
           deliverables="Design Strategy · UX · Design System · Branding"

@@ -197,3 +197,12 @@ body {
     width: auto;
     display: block;
 }
+
+
+
+
+/* cases pages */
+
+.case_hero_section .block_float{
+display: none;
+}

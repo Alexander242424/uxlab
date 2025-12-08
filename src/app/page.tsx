@@ -9,7 +9,7 @@ import OneModelSection from "@/components/home_page/OneModelSection";
 import AnimatedTextByLetters from "@/components/AnimatedTextByLetters";
 import InfiniteSlider from "@/components/home_page/InfiniteSlider";
 import GlanceSection from "@/components/home_page/glance-section/GlanceSection";
-import OverviewCaseVideoSection from "@/components/home_page/OverviewCaseVideoSection";
+import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSection";
 import InsightsSection from "@/components/home_page/InsightsSection";
 
 

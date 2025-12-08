@@ -4,10 +4,10 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 
-import SplitText from "@/components/SplitText";
 import { Button } from "@/components/ui/button";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import CheckIcon from "@/assets/image/check.svg";
+import { useCalModal } from "@/context/CalModalContext";
 
 type PackageCardProps = {
   title?: string;
@@ -45,7 +45,10 @@ export default function PackageCard({
   className = "",
 }: PackageCardProps) {
   const cardRef = useRef<HTMLDivElement | null>(null);
-
+  const { openModal } = useCalModal();
+  const handleCalClick = () => {
+    openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
+  };
   // Параллакс по скроллу (нижний баннер)
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -76,7 +79,7 @@ export default function PackageCard({
                 size="lg"
                 className="rounded-full px-6 py-2 bg-black text-white t-p2 hover:bg-neutral-900"
                 iconRight={<ArrowUpRightSVG className="!size-5" />}
-                onClick={onCtaClick}
+                onClick={handleCalClick}
               >
                 {ctaLabel}
               </Button>
