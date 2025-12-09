@@ -49,7 +49,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/our_cases/Foundrae.mp4",
     videoTitle: "Emma usability audit\ncase study",
     logo: "/image/OurCases/logo/foundrae.svg",
-    link: "/emma",
+    link: "/foundrae",
   },
   {
     src: MacDuggal,
@@ -59,7 +59,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/our_cases/Mac_Duggal.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/mac_duggal.svg",
-    link: "/boostra",
+    link: "/mucduggal",
   },
   {
     src: Valyou,

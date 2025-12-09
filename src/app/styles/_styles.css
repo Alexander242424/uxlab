@@ -203,6 +203,9 @@ body {
 .case_hero_section {
     padding-top: 152px;
 }
+.case_hero_section svg {
+    max-width: 220px;
+}
 .case_hero_section .text_section {
     margin: 0 !important;
 }

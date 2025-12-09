@@ -69,7 +69,7 @@ export default function OverviewCaseVideoTextSection({
                     </motion.div>
 
                     <div className={cn(textColClass)}>
-                        <div className={cn("ms-auto", textMaxWidth)}>
+                        <div className={cn("", textMaxWidth)}>
                             <p className="t-p1 mb-4">{firstText}</p>
                             <p className="t-p1">{secondText}</p>
                         </div>

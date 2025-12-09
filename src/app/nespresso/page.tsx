@@ -53,6 +53,14 @@ export default function NespressoPage() {
                 <CasesHeroSections
                     logo={<NespressoLogo/>}
                     logoMobile={<NespressoLogoMobile/>}
+                    text={[
+                        "Next-level e-commerce experience",
+                        "for a global coffee icon.",
+                    ]}
+                    mobileText={[
+                        "Next-level e-commerce",
+                        "experience for a global coffee icon.",
+                    ]}
                     companyName="Nespresso"
                     year="3 × (2-week Design Sprint)"
                     deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
@@ -111,7 +119,7 @@ export default function NespressoPage() {
                     imageAlt="Nespresso case study"
                     videoSrc="/video/nespressso/K4xdYvP5VrJ66kjBBQZ0fSXonFw.mp4"
                     iSsmallColumn={true}
-                    imageClassName="md:max-h-[450px]"
+                    imageClassName=""
 
                 />
                 <CaseTextBox

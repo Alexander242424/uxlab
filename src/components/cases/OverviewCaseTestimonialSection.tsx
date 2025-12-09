@@ -53,10 +53,14 @@ export default function OverviewCaseTestimonialSection({
         if (!item) return null;
 
         if (typeof item === "string") {
+            const parts = item.split(/\r?\n/); // делим по переносам
+
             return (
-                <p className="t-p1 text-neutral-100 max-w-[640px]">
-                    {item}
-                </p>
+                <div className="t-p1 text-neutral-100 max-w-[640px] space-y-4">
+                    {parts.map((part, i) => (
+                        <p key={`${idx}-p-${i}`}>{part}</p>
+                    ))}
+                </div>
             );
         }
 

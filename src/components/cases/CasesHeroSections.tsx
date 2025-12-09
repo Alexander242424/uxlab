@@ -1,13 +1,15 @@
 "use client";
-import {motion, useScroll, useTransform} from "framer-motion";
+
+import { motion } from "framer-motion";
 import TextSection from "../home_page/TextSection";
-import {useRef} from "react";
-import {useIsMobile} from "@/hooks/useIsMobile";
+import { useRef } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface CasesHeroSectionsProps {
     logo: React.ReactNode;
     logoMobile: React.ReactNode;
     text: string | string[];
+    mobileText?: string | string[]; // <-- новое
     companyName: string;
     year: string;
     deliverables: string;
@@ -17,6 +19,7 @@ export default function CasesHeroSections({
                                               logo,
                                               logoMobile,
                                               text,
+                                              mobileText,
                                               companyName,
                                               year,
                                               deliverables,
@@ -24,36 +27,44 @@ export default function CasesHeroSections({
     const isMobile = useIsMobile();
     const containerRef = useRef<HTMLDivElement>(null);
 
-
     const textArray = Array.isArray(text) ? text : [text];
+    const mobileTextArray = mobileText
+        ? Array.isArray(mobileText)
+            ? mobileText
+            : [mobileText]
+        : textArray;
 
     return (
-        <section ref={containerRef} className="mx-4 case_hero_section flex-col flex relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]">
+        <section
+            ref={containerRef}
+            className="mx-4 case_hero_section flex-col flex relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]"
+        >
             <motion.div className="mt-0 container-fluid">
                 <div className="row">
-                    <div className="mb-[48px] mt-[40px] col-lg-4">
+                    <div className="mb-[48px] col-lg-4" style={
+                        {
+                            marginTop: 10
+                        }
+                    }>
                         {isMobile ? logoMobile : logo}
                     </div>
 
                     <div className="col-lg-8">
+                        {/* mobile label */}
                         <p className="block sm:hidden text-text-500 t-p1 pb-4">
-                            Emma Sleep
+                            {companyName}
                         </p>
 
                         <TextSection
                             className=""
-                            text={[
-                                "Innovating Personalized Sleep Worldwide",
-                            ]}
-                            mobileText={[
-                                "Innovating Personalized Sleep Worldwide",
-                            ]}
+                            text={textArray}
+                            mobileText={mobileTextArray}
                             showLine={false}
                         />
-
                     </div>
                 </div>
             </motion.div>
+
             <div className="mt-0 container-fluid">
                 <div className="row case_hero__info_row mt-auto">
                     <div className="col-lg-4">
