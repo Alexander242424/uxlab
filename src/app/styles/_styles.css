@@ -260,3 +260,6 @@ body {
 .first_case_hero_section .container-fluid .row {
     margin: 0;
 }
+.case_hero_section .mt-0.container-fluid:last-child {
+    margin-top: auto !important;
+}
