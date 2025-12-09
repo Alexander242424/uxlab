@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/boostra/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/boostra/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/emma/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/emma/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/nespresso/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/nespresso/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InfiniteCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/InfiniteCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InfoBlock.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OverviewCaseImageSection.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ScrollingTextCaseSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/ScrollingTextCaseSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cases/CasesHeroSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/CasesHeroSections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cases/OverviewCaseTestimonialSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/OverviewCaseTestimonialSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cases/OverviewCaseVideoSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/OverviewCaseVideoSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cases/OverviewCaseVideoTextSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/OverviewCaseVideoTextSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/InfiniteSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/InfiniteSlider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +82,7 @@
       <workItem from="1764870989947" duration="17570000" />
       <workItem from="1764940861693" duration="22680000" />
       <workItem from="1765007074676" duration="48659000" />
-      <workItem from="1765208027698" duration="29065000" />
+      <workItem from="1765208027698" duration="29346000" />
     </task>
     <servers />
   </component>
