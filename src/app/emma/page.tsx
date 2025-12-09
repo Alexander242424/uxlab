@@ -7,12 +7,12 @@ import BoostraImage from "@/assets/image/OurCases/Option23.jpg";
 import BoostraLogoScrollingText from "@/assets/image/OurCases/logo/logo-main.svg";
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import CasesOutcome from "@/components/CasesOutcome";
-import InfoBlock from "@/components/InfoBlock";
+import InfoBlock from "@/components/cases/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseTestimonialSection from "@/components/cases/OverviewCaseTestimonialSection";
 import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/cases/OverviewCaseVideoTextSection";
-import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
+import ScrollingTextCaseSection from "@/components/cases/ScrollingTextCaseSection";
 import TextSection from "@/components/home_page/TextSection";
 import { Metadata } from "next";
 

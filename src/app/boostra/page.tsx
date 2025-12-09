@@ -13,11 +13,11 @@ import GuideImage from "@/assets/image/OurCases/Option 28.png";
 import NespressoLogoScrollingText from "@/assets/image/OurCases/logo/Vector.svg";
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import CasesOutcome from "@/components/CasesOutcome";
-import InfoBlock from "@/components/InfoBlock";
+import InfoBlock from "@/components/cases/InfoBlock";
 import OverviewCaseImageSection from "@/components/OverviewCaseImageSection";
 import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/cases/OverviewCaseVideoTextSection";
-import ScrollingTextCaseSection from "@/components/ScrollingTextCaseSection";
+import ScrollingTextCaseSection from "@/components/cases/ScrollingTextCaseSection";
 import TextSection from "@/components/home_page/TextSection";
 import { Metadata } from "next";
 

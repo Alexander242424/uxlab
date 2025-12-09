@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React from "react";
-import SplitText from "./SplitText";
+import SplitText from "../SplitText";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface InfoBlockProps {
@@ -40,12 +40,13 @@ export default function InfoBlock({
     : [mobileDescription];
 
   return (
-    <div
+    <section
       className={cn(
-        "flex flex-col px-4 py-16 max-w-[400px] not-md:mx-auto md:max-w-none md:pl-[406px] md:pr-[284px] md:py-20",
+        "info_block_section mx-4",
         className
       )}
     >
+      <div className="container-fluid">
       {isMobile ? (
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
@@ -133,6 +134,7 @@ export default function InfoBlock({
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </section>
   );
 }

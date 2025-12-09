@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import VideoPlayer from "./VideoPlayer";
+import VideoPlayer from "../VideoPlayer";
 
 interface ScrollingTextCaseSectionProps {
   videoSrc?: string;

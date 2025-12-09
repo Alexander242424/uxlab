@@ -215,3 +215,48 @@ body {
 .case_hero_section .block_float {
     display: none;
 }
+.case_text_section .col-lg-8 {
+    margin-bottom: 32px;
+}
+.case_images_section img,.case_images_section video {
+    border-radius: 4px;
+}
+.case_overview_case_image__textbox {
+    margin: 160px 0;
+}
+.case_case__video_section video{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.case_case__video_section img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.case_case__video_section .video-player-provider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overview_case_video_text_section video,.overview_case_video_text_section img {
+    border-radius: 4px;
+}
+.case_case__video_section .row {
+    margin-top: 160px;
+}
+.case_case__video_section .row p {
+    margin-bottom: 30px;
+}
+.first_case_hero_section {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.first_case_hero_section .container-fluid {
+    padding: 0;
+}
+.first_case_hero_section .container-fluid .row {
+    margin: 0;
+}

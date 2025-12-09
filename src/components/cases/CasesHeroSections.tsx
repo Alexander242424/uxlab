@@ -28,8 +28,8 @@ export default function CasesHeroSections({
     const textArray = Array.isArray(text) ? text : [text];
 
     return (
-        <section ref={containerRef} className="px-4 case_hero_section flex-col flex relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]">
-            <motion.div className="mt-0 px-0 md:px-0 container-fluid">
+        <section ref={containerRef} className="mx-4 case_hero_section flex-col flex relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]">
+            <motion.div className="mt-0 container-fluid">
                 <div className="row">
                     <div className="mb-[48px] mt-[40px] col-lg-4">
                         {isMobile ? logoMobile : logo}
@@ -54,20 +54,22 @@ export default function CasesHeroSections({
                     </div>
                 </div>
             </motion.div>
-            <div className="row case_hero__info_row mt-auto">
-                <div className="col-lg-4">
-                    <p className="t-p2 text-[#A3A3A3]">Client</p>
-                    <p className="t-p2">{companyName}</p>
-                </div>
-
-                <div className="col-lg-8 flex flex-col sm:flex-row gap-8">
-                    <div className="flex flex-col gap-2 sm:min-w-[212px]">
-                        <p className="t-p2 text-[#A3A3A3]">Duration</p>
-                        <p className="t-p2">{year}</p>
+            <div className="mt-0 container-fluid">
+                <div className="row case_hero__info_row mt-auto">
+                    <div className="col-lg-4">
+                        <p className="t-p2 text-[#A3A3A3]">Client</p>
+                        <p className="t-p2">{companyName}</p>
                     </div>
-                    <div className="flex flex-col gap-2">
-                        <p className="t-p2 text-[#A3A3A3]">Focus</p>
-                        <p className="t-p2">{deliverables}</p>
+
+                    <div className="col-lg-8 flex flex-col sm:flex-row gap-8">
+                        <div className="flex flex-col gap-2 sm:min-w-[212px]">
+                            <p className="t-p2 text-[#A3A3A3]">Duration</p>
+                            <p className="t-p2">{year}</p>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <p className="t-p2 text-[#A3A3A3]">Focus</p>
+                            <p className="t-p2">{deliverables}</p>
+                        </div>
                     </div>
                 </div>
             </div>
