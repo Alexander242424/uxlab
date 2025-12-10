@@ -11,7 +11,7 @@ import CalModal from "@/components/CalModal";
 import AppWrapper from "@/components/AppWrapper";
 import { Metadata } from "next";
 import LenisProvider from "@/components/ui/LenisProvider";
-import ScrollRestorer from "@/components/ScrollRestorer";
+import ScrollRestorer from "@/hooks/ScrollRestorer";
 const ttHoves = localFont({
   src: [
     {
