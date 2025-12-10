@@ -1,18 +1,17 @@
-import FoundraeLogo from "@/assets/Foundrae/foundrae.svg";
-import HeroImage from "@/assets/Mucduggal/big_img.jpg";
-import MacduggalBigImg1 from "@/assets/Mucduggal/muc-1.jpg";
-import MacduggalBigImg2 from "@/assets/Mucduggal/muc-2.jpg";
-import MacduggalBigVideoImage from "@/assets/Mucduggal/big_video_image.jpg";
-import MacduggalBigVideoImage2 from "@/assets/Mucduggal/big_video_image_2.jpg";
-import MacduggalBigLeftImage from "@/assets/Mucduggal/mucduggal_left_big_image.jpg";
-import BigHeightImage from "@/assets/Mucduggal/big_heigth_img.jpg";
-import BigVideoImage from "@/assets/Mucduggal/big_video_image.jpg";
-import OptionImage from "@/assets/Nespresso/nespresso-last.jpg";
+import MucduggalLogo from "@/assets/Mucduggal/logo.svg";
+import Mucduggal_1 from "@/assets/Mucduggal/muc_1.jpg";
+import Mucduggal_2 from "@/assets/Mucduggal/muc_2.jpg";
+import Mucduggal_3 from "@/assets/Mucduggal/muc_3.jpg";
+import Mucduggal_4 from "@/assets/Mucduggal/muc_4.jpg";
+import Mucduggal_5 from "@/assets/Mucduggal/muc_5.jpg";
+import Mucduggal_6 from "@/assets/Mucduggal/muc_6.jpg";
+import Mucduggal_7 from "@/assets/Mucduggal/muc_7.jpg";
+import Mucduggal_8 from "@/assets/Mucduggal/muc_8.jpg";
+import Mucduggal_9 from "@/assets/Mucduggal/muc_9.jpg";
+import Mucduggal_10 from "@/assets/Mucduggal/muc_10.jpg";
+import Mucduggal_11 from "@/assets/Nespresso/nespresso-last.jpg";
+
 import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
-import MucduggalLeftImage from "@/assets/Mucduggal/left_image.jpg";
-import FoundraeRightBigImage from "@/assets/Mucduggal/right_big_image.jpg";
-
-
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import InfoBlock from "@/components/cases/InfoBlock";
 import CaseTextBox from "@/components/cases/CaseTextBox";
@@ -57,66 +56,62 @@ export default function NespressoPage() {
         <div className="flex flex-col">
             <div className="w-full">
                 <CasesHeroSections
-                    logo={<FoundraeLogo/>}
-                    logoMobile={<FoundraeLogo/>}
+                    logo={<MucduggalLogo/>}
+                    logoMobile={<MucduggalLogo/>}
                     text={[
-                        "Reframing a digital jewelry",
-                        "gallery into a revenue engine",
+                        "Designing confidence for",
+                        "moments that matter",
                     ]}
                     mobileText={[
-                        "Reframing a digital jewelry",
-                        "gallery into a revenue engine",
+                        "Designing confidence for",
+                        "moments that matter",
                     ]}
-                    companyName=""
-                    year="6x(2-Week Design Sprint)"
+                    companyName="Mac Duggal"
+                    year="5x(2-Week Design Sprint)"
                     deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
                 />
                 <OverviewCaseVideoSection
                     className="!p-0 mb-[80px] first_case_hero_section "
-                    imageSrc={HeroImage}
+                    imageSrc={Mucduggal_1}
                     imageAlt="Foundrae Case Study"
                     isAnimated={false}
                 />
                 <TextSection
                     className=""
                     text={[
-                        "Elevating a modern heirloom",
-                        "brand into a high-performing digital flagship.",
+                        "Mac Duggal creates dresses",
+                        "for life’s biggest events - we redesigned the digital experience to match the emotional weight of the purchase. Every detail now removes hesitation, guides intent, and elevates the feeling of choosing the perfect gown.",
                     ]}
                     mobileText={[
-                        "Elevating a modern heirloom",
-                        "brand into a high-performing digital flagship.",
+                        "Mac Duggal creates dresses",
+                        "for life’s biggest events - we redesigned the digital experience to match the emotional weight of the purchase. Every detail now removes hesitation, guides intent, and elevates the feeling of choosing the perfect gown.",
                     ]}
                     showLine={true}
                 />
                 <OverviewCaseTestimonialSection
                     leftColumn={["Goal", "Challenges", "Outcomes"]}
                     rightColumn={[
-                        "Foundrae already felt like a gallery of modern heirlooms. The problem was that the online experience behaved like a gallery too: beautiful, slow, and difficult to shop. Customers were browsing, bookmarking and leaving. The brand story was strong, but the path to purchase was fragile.\n\rWe set one goal: Turn Foundrae’s storytelling into a frictionless, repeatable buying ritual.",
+                        "The goal was simple: remove user friction, and increase Average Order Value with our UX work.",
                         {
                             type: "list",
                             intro:
-                                "The main bottlenecks were:\n",
+                                "",
                             items: [
-                                "Luxury price point + fragile UX made customers hesitate instead of commit.",
-                                "Navigation was complex, especially for first-time visitors discovering the brand.",
-                                "Catalog was organized like a traditional store, not like a symbolic, story-driven brand.",
-                                "Product pages looked premium but didn’t actively answer key trust questions.",
-                                "Checkout experience created uncertainty around duties, shipping, and returns.",
+                                "The luxury price point made users fear making the wrong choice.",
+                                "Catalog layout didn’t reflect the brand’s storytelling potential.",
+                                "Visitors lacked clarity around fit, styling, and delivery — leading to drop-offs.",
+                                "Product pages weren't answering core emotional objections.",
+                                "Checkout caused uncertainty when clarity mattered most.",
                             ],
                         },
                         {
                             type: "metrics",
                             items: [
-                                {value: 27, prefix: "+", suffix: "%", label: "Increase in mobile conversion rate"},
-                                {value: 19, prefix: "+", suffix: "%", label: "Lift in average order value"},
-                                {value: -22, prefix: "", suffix: "%", label: "Drop in checkout abandonment"},
-                                {
-                                    value: 31,
-                                    prefix: "+",
-                                    suffix: "%",
-                                    label: "Growth in repeat purchase rate from existing customers"
-                                },
+                                {value: 26, prefix: "+", suffix: "%", label: "Increase in Conversion Rate"},
+                                {value: 18, prefix: "+", suffix: "%", label: "Increase in Add-to-Cart Rate"},
+                                {value: 22, prefix: "+", suffix: "%", label: "Increase in Average Order Value"},
+                                {value: -17, prefix: "", suffix: "%", label: "Drop in Bounce Rate"},
+                                {value: 34, prefix: "+", suffix: "%", label: "Higher Returning Customer Revenue (LTV)"},
                             ],
                         },
                     ]}
@@ -126,10 +121,10 @@ export default function NespressoPage() {
                 />
 
                 <OverviewCaseImageSection
-                    imageSrc={MacduggalBigImg2}
+                    imageSrc={Mucduggal_3}
                     imageAlt="Mucduggal case study"
                     videoSrc=""
-                    imageSrc2={MacduggalBigImg1}
+                    imageSrc2={Mucduggal_2}
                     iSsmallColumn={false}
                     imageClassName=""
 
@@ -139,33 +134,31 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "A confidence-first luxury journey",
+                            title: "Intent-Based Navigation That Mirrors How Customers Actually Shop",
                             body: [
-                                "Foundrae was already priced and crafted as luxury, but the UX didn’t give customers the same confidence as the pieces themselves. We softened the experience into a calm, deliberate journey: fewer steps, clearer hierarchy, and space for the price to feel justified. Craftsmanship, materials, and guarantees now frame every key decision, so the interface quietly supports commitment instead of hesitation.",
+                                "Customers don’t browse dresses - they shop for a moment, an event, a feeling. The navigation now aligns with that intent instantly, guiding shoppers to the right category without cognitive load. This reduces friction and sharply increases the rate of “first click → relevant product.”",
                             ],
                         },
                     ]}
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "Navigation that welcomes, not overwhelms",
+                            title: "Discovery That Creates Emotional Attachment, Not Just Browsing",
                             body: [
-                                "For first-time visitors, the old navigation felt like walking into a maze.",
-                                "",
-                                "Plain-language labels and guided “start here” paths turn discovery into a guided tour of the brand, not a test of patience.",
+                                "We shifted from a static catalog to an editorial discovery flow built around trends, moods, and occasions. This gives shoppers a reason to explore, compare, and imagine themselves in the product - leading to longer sessions and more add-to-cart actions. Emotion becomes the bridge between interest and conversion.",
                             ],
                         },
                     ]}
                 />
 
-                <OverviewCaseVideoSection imageSrc={MacduggalBigVideoImage}/>
+                <OverviewCaseVideoSection imageSrc={Mucduggal_4}/>
                 <OverviewCaseVideoTextSection
-                    imageSrc={BigHeightImage}
-                    firstText="We stripped the flow down to the bone. Every element that didn't drive the sale was cut. "
-                    secondText="The result is a lean, high-velocity checkout experience that gets the user from 'cart' to 'paid' with zero friction."
+                    imageSrc={Mucduggal_5}
+                    firstText="Every step was stripped down to its essentials, removing anything that could spark doubt or slow momentum."
+                    secondText="The result is a checkout experience that feels fast, transparent, and calm - letting customers finish their purchase without a single moment of friction."
                     textMaxWidth={"col-lg-6"}
                 />
                 <TextSection
@@ -186,7 +179,7 @@ export default function NespressoPage() {
                 />
                 <OverviewCaseVideoSection
                     className=""
-                    imageSrc={MacduggalBigVideoImage2}
+                    imageSrc={Mucduggal_6}
 
                 />
                 <CaseTextBox
@@ -194,19 +187,20 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "A catalog built around meaning, not just merchandise",
+                            title: "Checkout Built for Clarity, Not Guesswork",
                             body: [
-                                "The catalog once behaved like a conventional store, even though the brand is anything but.",
+                                "The new checkout removes all last-minute anxiety around duties, returns, and delivery timing.",
                                 "",
-                                "We elevated symbolism to the front door: customers can now start with meaning -protection, love, identity - and only then refine by metal, type, or price. Each collection opens with a short narrative that frames the pieces as chapters in a story, not just items on a grid."
+                                "Every cost and timeline is transparent, so customers never fear a surprise after clicking “Place Order.” This directly reduces cart abandonment and increases completed payments."
                             ],
                         },
                     ]}
                 />
                 {/*<OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"/>*/}
                 <OverviewCaseVideoTextSection
-                    imageSrc={MacduggalBigLeftImage}
-                    firstText="We aimed to develop a design system for Nespresso to guarantee consistency and optimal performance at scale. The navigation emerged as our primary focus, utilizing a blend of functional and expressive motion to create an innovative wayfinding solution that directs and engages users effectively."
+                    imageSrc={Mucduggal_7}
+                    firstText="Shoppers see curated pairings that feel natural - complementary silhouettes, accessories, and event-appropriate looks."
+                    secondText="Nothing feels forced because recommendations are tied to intent, not upsell pressure. When relevance increases, customers willingly spend more."
                     videoColClass="col-lg-9"
                     textColClass="col-lg-3"
                 />
@@ -215,23 +209,25 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "Product pages that answer the questions no one asks out loud",
+                            title: "Retention That Feels Personal, Not Automated",
                             body: [
-                                "The old pages looked premium but stayed quiet on the details that actually close a high-value sale.",
+                                "Wishlists, event-date reminders, and tailored recommendations turn the brand into a stylist rather than a shop.",
                                 "",
-                                " We rebuilt them as composed, scannable narratives: symbolism, materials, craftsmanship, personalization, sizing, delivery, and returns each have a defined place. Subtle social proof and inline FAQs handle objections next to the CTA, so users feel informed without being pushed."
+                                "Customers return because the experience feels crafted around their tastes and their upcoming moments. This transforms one-time buyers into recurring, high-LTV clients."
                             ],
                         },
                     ]}
                 />
                 <CaseSection3_9
-                    leftImageSrc={MucduggalLeftImage}
+                    leftImageSrc={Mucduggal_8}
                     leftImageAlt="Concept sketch"
                     leftTitle=""
                     leftBody={[
-                        ""
+                        "Dress shopping is high-stakes; uncertainty kills conversions. We added fit information, model height, movement shots, and fabric texture details so customers know exactly what they’re buying.",
+                        "",
+                        "This eliminates hesitation and turns more PDP views into confident purchases."
                     ]}
-                    videoImageSrc={MacduggalBigVideoImage2}
+                    videoImageSrc={Mucduggal_9}
                 />
                 <CaseTextBox
                     className=""
@@ -249,13 +245,13 @@ export default function NespressoPage() {
                 />
                 <OverviewCaseVideoSection
                     className="md:pb-8 not-md:mt-[24px]"
-                    imageSrc={BigVideoImage}
+                    imageSrc={Mucduggal_10}
                     aspectRatio="1"
                 />
 
                 <ScrollingTextCaseSection
                     videoSrc="/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4"
-                    imageSrc={OptionImage}
+                    imageSrc={Mucduggal_11}
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}

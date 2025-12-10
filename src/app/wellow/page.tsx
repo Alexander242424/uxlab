@@ -1,18 +1,17 @@
-import FoundraeLogo from "@/assets/Foundrae/foundrae.svg";
-import HeroImage from "@/assets/Foundrae/big-img.jpg";
-import FoundraeBigImg1 from "@/assets/Foundrae/found-1.jpg";
-import FoundraeBigImg2 from "@/assets/Foundrae/found-2.jpg";
-import FoundraeBigVideoImage from "@/assets/Foundrae/big_video_image.jpg";
-import FoundraeBigVideoImage2 from "@/assets/Foundrae/big_video_image_2.jpg";
-import FoundraeBigLeftImage from "@/assets/Foundrae/foundrae_left_big_image.jpg";
-import BigHeightImage from "@/assets/Foundrae/big_heigth_img.jpg";
-import BigVideoImage from "@/assets/Foundrae/big_video_image.jpg";
-import OptionImage from "@/assets/Nespresso/nespresso-last.jpg";
+import WellowLogo from "@/assets/Wellow/logo.svg";
+import Wellow_1 from "@/assets/Wellow/wal_1.jpg";
+import Wellow_2 from "@/assets/Wellow/wal_2.jpg";
+import Wellow_3 from "@/assets/Wellow/wal_3.jpg";
+import Wellow_4 from "@/assets/Wellow/wal_4.jpg";
+import Wellow_5 from "@/assets/Wellow/wal_5.jpg";
+import Wellow_6 from "@/assets/Wellow/wal_6.jpg";
+import Wellow_7 from "@/assets/Wellow/wal_7.jpg";
+import Wellow_8 from "@/assets/Wellow/wal_8.jpg";
+import Wellow_9 from "@/assets/Wellow/wal_9.jpg";
+import Wellow_10 from "@/assets/Wellow/wal_10.jpg";
+import Wellow_11 from "@/assets/Nespresso/nespresso-last.jpg";
+
 import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
-import FoundraeLeftImage from "@/assets/Foundrae/left_image.jpg";
-import FoundraeRightBigImage from "@/assets/Foundrae/right_big_image.jpg";
-
-
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import InfoBlock from "@/components/cases/InfoBlock";
 import CaseTextBox from "@/components/cases/CaseTextBox";
@@ -57,66 +56,47 @@ export default function NespressoPage() {
         <div className="flex flex-col">
             <div className="w-full">
                 <CasesHeroSections
-                    logo={<FoundraeLogo/>}
-                    logoMobile={<FoundraeLogo/>}
+                    logo={<WellowLogo/>}
+                    logoMobile={<WellowLogo/>}
                     text={[
-                        "Reframing a digital jewelry",
-                        "gallery into a revenue engine",
+                        "Innovating Personalized Sleep ",
+                        "Worldwide",
                     ]}
                     mobileText={[
-                        "Reframing a digital jewelry",
-                        "gallery into a revenue engine",
+                        "Innovating Personalized Sleep ",
+                        "Worldwide",
                     ]}
-                    companyName=""
-                    year="6x(2-Week Design Sprint)"
-                    deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
+                    companyName="Wellow Socks"
+                    year="2022 - 2024"
+                    deliverables="Guidelines and Portals  ·  Digital Asset Management  ·  Templates"
                 />
                 <OverviewCaseVideoSection
                     className="!p-0 mb-[80px] first_case_hero_section "
-                    imageSrc={HeroImage}
+                    imageSrc={Wellow_1}
                     imageAlt="Foundrae Case Study"
                     isAnimated={false}
                 />
                 <TextSection
                     className=""
                     text={[
-                        "Elevating a modern heirloom",
-                        "brand into a high-performing digital flagship.",
+                        "By fostering healthy sleep ",
+                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
                     ]}
                     mobileText={[
-                        "Elevating a modern heirloom",
-                        "brand into a high-performing digital flagship.",
+                        "By fostering healthy sleep ",
+                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
                     ]}
                     showLine={true}
                 />
                 <OverviewCaseTestimonialSection
-                    leftColumn={["Goal", "Challenges", "Outcomes"]}
+                    leftColumn={["Outcomes"]}
                     rightColumn={[
-                        "Foundrae already felt like a gallery of modern heirlooms. The problem was that the online experience behaved like a gallery too: beautiful, slow, and difficult to shop. Customers were browsing, bookmarking and leaving. The brand story was strong, but the path to purchase was fragile.\n\rWe set one goal: Turn Foundrae’s storytelling into a frictionless, repeatable buying ritual.",
-                        {
-                            type: "list",
-                            intro:
-                                "The main bottlenecks were:\n",
-                            items: [
-                                "Luxury price point + fragile UX made customers hesitate instead of commit.",
-                                "Navigation was complex, especially for first-time visitors discovering the brand.",
-                                "Catalog was organized like a traditional store, not like a symbolic, story-driven brand.",
-                                "Product pages looked premium but didn’t actively answer key trust questions.",
-                                "Checkout experience created uncertainty around duties, shipping, and returns.",
-                            ],
-                        },
                         {
                             type: "metrics",
                             items: [
-                                {value: 27, prefix: "+", suffix: "%", label: "Increase in mobile conversion rate"},
-                                {value: 19, prefix: "+", suffix: "%", label: "Lift in average order value"},
-                                {value: -22, prefix: "", suffix: "%", label: "Drop in checkout abandonment"},
-                                {
-                                    value: 31,
-                                    prefix: "+",
-                                    suffix: "%",
-                                    label: "Growth in repeat purchase rate from existing customers"
-                                },
+                                {value: 12, prefix: "", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
+                                {value: 10, prefix: "+", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
+                                {value: 500, prefix: "+", suffix: "", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
                             ],
                         },
                     ]}
@@ -126,10 +106,10 @@ export default function NespressoPage() {
                 />
 
                 <OverviewCaseImageSection
-                    imageSrc={FoundraeBigImg2}
-                    imageAlt="Nespresso case study"
+                    imageSrc={Wellow_3}
+                    imageAlt="Wellow case study"
                     videoSrc=""
-                    imageSrc2={FoundraeBigImg1}
+                    imageSrc2={Wellow_2}
                     iSsmallColumn={false}
                     imageClassName=""
 
@@ -139,39 +119,37 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "A confidence-first luxury journey",
+                            title: "Challenge: Low daily engagement and limited value for app users",
                             body: [
-                                "Foundrae was already priced and crafted as luxury, but the UX didn’t give customers the same confidence as the pieces themselves. We softened the experience into a calm, deliberate journey: fewer steps, clearer hierarchy, and space for the price to feel justified. Craftsmanship, materials, and guarantees now frame every key decision, so the interface quietly supports commitment instead of hesitation.",
+                                "Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing experience offered limited value beyond basic sleep tracking.",
                             ],
                         },
                     ]}
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "Navigation that welcomes, not overwhelms",
+                            title: "Solution: Transforming the app into a personalized educational hub",
                             body: [
-                                "For first-time visitors, the old navigation felt like walking into a maze.",
-                                "",
-                                "Plain-language labels and guided “start here” paths turn discovery into a guided tour of the brand, not a test of patience.",
+                                "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub.",
                             ],
                         },
                     ]}
                 />
 
-                <OverviewCaseVideoSection imageSrc={FoundraeBigVideoImage}/>
+                <OverviewCaseVideoSection imageSrc={Wellow_4}/>
                 <OverviewCaseVideoTextSection
-                    imageSrc={BigHeightImage}
-                    firstText="We stripped the flow down to the bone. Every element that didn't drive the sale was cut. "
-                    secondText="The result is a lean, high-velocity checkout experience that gets the user from 'cart' to 'paid' with zero friction."
+                    imageSrc={Wellow_5}
+                    firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can’t I sleep? How do I find more energy after sleep?"
+                    secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
                     textMaxWidth={"col-lg-6"}
                 />
                 <TextSection
                     className="mt-[200px]"
                     text={[
-                        "I’m consistently amazed at the ",
+                        "I’m consistently amazed at the",
                         "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
                     ]}
                     mobileText={[
@@ -184,29 +162,39 @@ export default function NespressoPage() {
                     title="Felix Focken, CEO (Emma Sleep)"
                     className={"not-md:hidden mt-[32px] mb-[205px]"}
                 />
+                <CaseTextBox
+                    className="pb-0"
+                    colClass="col-lg-6 mx-auto"
+                    blocks={[
+                        {
+                            title: "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub. ",
+                            body: [
+                                "Solution: Transforming the app into a personalized educational hub",
+                            ],
+                        },
+                    ]}
+                />
                 <OverviewCaseVideoSection
                     className=""
-                    imageSrc={FoundraeBigVideoImage2}
-
+                    imageSrc={Wellow_6}
                 />
                 <CaseTextBox
                     className=""
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "A catalog built around meaning, not just merchandise",
+                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
                             body: [
-                                "The catalog once behaved like a conventional store, even though the brand is anything but.",
-                                "",
-                                "We elevated symbolism to the front door: customers can now start with meaning -protection, love, identity - and only then refine by metal, type, or price. Each collection opens with a short narrative that frames the pieces as chapters in a story, not just items on a grid."
+                                "A Call to Habits"
                             ],
                         },
                     ]}
                 />
                 {/*<OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"/>*/}
                 <OverviewCaseVideoTextSection
-                    imageSrc={FoundraeBigLeftImage}
-                    firstText="We aimed to develop a design system for Nespresso to guarantee consistency and optimal performance at scale. The navigation emerged as our primary focus, utilizing a blend of functional and expressive motion to create an innovative wayfinding solution that directs and engages users effectively."
+                    imageSrc={Wellow_7}
+                    firstText="We used playful colours, engaging illustrations, and micro-interactions to weave the brand through the experience and draw visitors in."
+                    secondText="The new site feels multi-dimensional — much like the mind."
                     videoColClass="col-lg-9"
                     textColClass="col-lg-3"
                 />
@@ -215,45 +203,43 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "Product pages that answer the questions no one asks out loud",
+                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
                             body: [
-                                "The old pages looked premium but stayed quiet on the details that actually close a high-value sale.",
-                                "",
-                                " We rebuilt them as composed, scannable narratives: symbolism, materials, craftsmanship, personalization, sizing, delivery, and returns each have a defined place. Subtle social proof and inline FAQs handle objections next to the CTA, so users feel informed without being pushed."
+                                "A Call to Habits"
                             ],
                         },
                     ]}
                 />
                 <CaseSection3_9
-                    leftImageSrc={FoundraeLeftImage}
+                    leftImageSrc={Wellow_8}
                     leftImageAlt="Concept sketch"
                     leftTitle=""
                     leftBody={[
                         ""
                     ]}
-                    videoImageSrc={FoundraeRightBigImage}
+                    videoImageSrc={Wellow_9}
                 />
                 <CaseTextBox
                     className=""
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "Checkout that removes doubt from the final step",
+                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
                             body: [
-                                "At checkout, uncertainty around duties, shipping, and returns was doing more talking than the brand. We redesigned the flow as a single, focused column with everything important stated upfront: delivery expectations, taxes, duties, and return rules. A persistent order summary, gentle error states, and visible access to support turn the last mile from a moment of doubt into a quiet confirmation."
+                                "A Call to Habits"
                             ],
                         },
                     ]}
                 />
                 <OverviewCaseVideoSection
                     className="md:pb-8 not-md:mt-[24px]"
-                    imageSrc={BigVideoImage}
+                    imageSrc={Wellow_10}
                     aspectRatio="1"
                 />
 
                 <ScrollingTextCaseSection
                     videoSrc="/video/47QASZS6PBeoeu2yw7S4PnnZjY.mp4"
-                    imageSrc={OptionImage}
+                    imageSrc={Wellow_11}
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}

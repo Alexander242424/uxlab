@@ -69,7 +69,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/valyou.svg",
-    link: "/boostra",
+    link: "/valyou",
   },
   {
     src: Wellow,
@@ -79,7 +79,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/Wellow.svg",
-    link: "/boostra",
+    link: "/wellow",
   },
   {
     src: Royal,
@@ -89,7 +89,7 @@ const cases: OurCasesItem[] = [
     videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/rqs_rebranding_logo_header.svg",
-    link: "/boostra",
+    link: "/seeds",
   },
 
 ];
