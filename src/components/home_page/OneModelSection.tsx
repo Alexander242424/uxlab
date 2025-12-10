@@ -55,7 +55,7 @@ export default function PackageCard({
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  const y = useTransform(scrollYProgress, [0, 1], [20, -100]);
 
   return (
     <section

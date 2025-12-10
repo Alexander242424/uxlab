@@ -107,7 +107,7 @@ export default function HomePage() {
                 />
                 <GlanceSection/>
                 <section className="overview_section mx-4">
-                    <div className="container-fluid">
+                    <div className="container-fluid px-0">
                         <OverviewCaseVideoSection
                             className="!p-0 !m-0 last_video_screen"
                             src="/video/nespressso/JW9tBsFi0Xm6810KHjTgnbuBo.mp4"

@@ -132,8 +132,7 @@ export default function Footer() {
                                         className="relative group text-text-700 t-p1"
                                     >
                                         hello@uxlab.com
-                                        <span
-                                            className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                        <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#fff] underline-animation"></span>
                                     </Link>
                                 </div>
                                 <div className="not-sm:min-w-1/2">
@@ -187,7 +186,7 @@ export default function Footer() {
                                     <li>
                                         <Link href="/#services" className={`relative group text-text-700 t-p1`}
                                         > Services
-                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#fff] underline-animation"></span>
                                         </Link>
                                     </li>
                                     <li>
@@ -196,7 +195,7 @@ export default function Footer() {
                                             className={`relative group text-text-700 t-p1`}
                                         >
                                             Cases
-                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#fff] underline-animation"></span>
                                         </Link>
                                     </li>
                                     <li>
@@ -205,7 +204,7 @@ export default function Footer() {
                                             className={`relative group text-text-700 t-p1`}
                                         >
                                             Insights
-                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>
+                                            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#fff] underline-animation"></span>
                                         </Link>
                                     </li>
                                 </ul>
