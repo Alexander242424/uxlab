@@ -54,18 +54,14 @@ export default function HomePage() {
                     text={[
                         "We help eCommerce",
                         "brands grow with decisions based on data, not",
-                        "guesswork, so you win unlock tomorrow`s",
-                        "not  revenue today."
+                        "guesswork, so you can unlock tomorrow’s",
+                        "revenue today."
                     ]}
                     mobileText={[
-                        "We help",
-                        "e-commerce brands",
-                        "grow with decisions",
-                        "based on data, not",
-                        "guesswork, so you",
-                        "win unlock",
-                        "tomorrow’s revenue",
-                        "today.",
+                        "We help eCommerce",
+                        "brands grow with decisions based on data, not",
+                        "guesswork, so you can unlock tomorrow’s",
+                        "revenue today."
                     ]}
                     showLine={true}
                 />
