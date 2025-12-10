@@ -1,55 +1,52 @@
 "use client";
 import React from "react";
-import InfiniteCarousel from "./InfiniteCarousel";
 
 interface SlideItem {
-  icon: React.ReactNode;
-  label?: string;
+    icon: React.ReactNode;
+    label?: string;
 }
 
 interface InfiniteSliderProps {
-  slides: SlideItem[];
-  duration?: number;
-  className?: string;
-  slideSpacing?: number;
+    slides: SlideItem[];
+    duration?: number;   // больше не используется, но оставим для совместимости
+    className?: string;
+    slideSpacing?: number;
 }
 
 const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
-  slides,
-  duration = 15,
-  className = "",
-  slideSpacing = 80,
-}) => {
-  // Конвертуємо slides в формат, який очікує InfiniteCarousel
-  const carouselSlides = slides.map((slide, index) => ({
-    element: (
-      <div
-        key={index}
-        className="flex-shrink-0 flex items-center justify-center"
-        style={{ 
-          width: 'auto',
-          minWidth: 'fit-content',
-          maxWidth: 'none',
-          height: '100%'
-        }}
-      >
-        <div className="flex items-center justify-center w-full h-full">
-          {slide.icon}
-        </div>
-      </div>
-    ),
-  }));
-
-  return (
-    <div className={`relative h-full w-full overflow-hidden ${className}`}>
-      <InfiniteCarousel
-        slides={carouselSlides}
-        slideSpacing={slideSpacing}
-        speed={duration}
-        className="cursor-none pointer-events-none logos_carousel"
-      />
-    </div>
-  );
+                                                           slides,
+                                                           className = "",
+                                                           slideSpacing = 80,
+                                                       }) => {
+    return (
+        <section
+            className={`w-full h-full flex md:flex-nowrap items-center ${className}`}
+            style={{columnGap: slideSpacing, rowGap: 24}}
+        >
+            <div className="container-fluid">
+                <div className="row flex-nowrap overflow-hidden">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className="col flex items-center justify-center"
+                            style={{
+                                minWidth: "fit-content",
+                            }}
+                        >
+                            <div className="flex items-center justify-center">
+                                {slide.icon}
+                            </div>
+                            {slide.label && (
+                                <span className="ml-2 t-p2 text-neutral-300">
+                              {slide.label}
+                            </span>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default InfiniteSlider;

@@ -13,29 +13,32 @@ import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSectio
 import InsightsSection from "@/components/home_page/InsightsSection";
 
 
-import BMWLogo from "@/assets/logoicons/BMW_logo.svg";
-import ForbesLogo from "@/assets/logoicons/Forbes_logo_1.svg";
-import Whop from "@/assets/logoicons/whop.svg";
-import RepAi from "@/assets/logoicons/rep_ai.svg";
-import RedBull from "@/assets/logoicons/red_bull.svg";
-import Numa from "@/assets/logoicons/numa.svg";
-import Jasper from "@/assets/logoicons/jasper.svg";
-// import MaskGroup from "@/assets/logoicons/Mask group.svg";
-import CalendlyLogo from "@/assets/logoicons/calendly-logo-vector_5.svg";
-import UserwayLogo from "@/assets/logoicons/userway-org-vector-logo-2022_1.svg";
+import Slidelogo_1 from "@/assets/logoicons/logo_1.svg";
+import Slidelogo_2 from "@/assets/logoicons/logo_2.svg";
+import Slidelogo_3 from "@/assets/logoicons/logo_3.svg";
+import Slidelogo_4 from "@/assets/logoicons/logo_4.svg";
+import Slidelogo_5 from "@/assets/logoicons/logo_5.svg";
+import Slidelogo_6 from "@/assets/logoicons/logo_6.svg";
+import Slidelogo_7 from "@/assets/logoicons/logo_7.svg";
+import Slidelogo_8 from "@/assets/logoicons/logo_8.svg";
+import Slidelogo_9 from "@/assets/logoicons/logo_9.svg";
+import Slidelogo_10 from "@/assets/logoicons/logo_10.svg";
+import Slidelogo_11 from "@/assets/logoicons/logo_11.svg";
+
 import designImage from "@/assets/design_section_image.png";
 
-
 const slides = [
-    {icon: <BMWLogo/>},
-    {icon: <ForbesLogo/>},
-    {icon: <Whop/>},
-    {icon: <RepAi/>},
-    {icon: <RedBull/>},
-    {icon: <Numa/>},
-    {icon: <Jasper/>},
-    {icon: <CalendlyLogo/>},
-    {icon: <UserwayLogo/>},
+    {icon: <Slidelogo_1 />},
+    {icon: <Slidelogo_2 />},
+    {icon: <Slidelogo_3 />},
+    {icon: <Slidelogo_4 />},
+    {icon: <Slidelogo_5 />},
+    {icon: <Slidelogo_6 />},
+    {icon: <Slidelogo_7 />},
+    {icon: <Slidelogo_8 />},
+    {icon: <Slidelogo_9 />},
+    {icon: <Slidelogo_10 />},
+    {icon: <Slidelogo_11 />},
 ];
 
 export default function HomePage() {
