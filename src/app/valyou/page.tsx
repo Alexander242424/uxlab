@@ -163,7 +163,7 @@ export default function NespressoPage() {
                     className={"not-md:hidden mt-[32px] mb-[205px]"}
                 />
                 <CaseTextBox
-                    className="pb-0"
+                    className=""
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {

@@ -93,7 +93,7 @@ export default function OverviewCaseTestimonialSection({
                                 duration={3}
                                 decimals={Number.isInteger(metric.value) ? 0 : 1}
                                 enableScrollSpy
-                                className="not-md:text-[7.5rem] text-[10.5rem]"
+                                className="not-md:text-[7.5rem] text-[10.5rem] big_quants"
                                 prefix={metric.prefix ?? ""}
                                 suffix={metric.suffix ?? ""}
                             />

@@ -6,17 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/mucduggal/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/mucduggal/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seeds/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/seeds/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/base/_typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/base/_typography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/valyou/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/valyou/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/wellow/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/wellow/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/big_heigth_img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/big_img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/big_video_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/big_video_image_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/left_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/muc-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/muc-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Mucduggal/mucduggal_left_big_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/OurCases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/OurCases.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Seeds/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Seeds/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cases/CasesHeroSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/CasesHeroSections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cases/OverviewCaseTestimonialSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/OverviewCaseTestimonialSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,7 @@
       <workItem from="1765007074676" duration="48659000" />
       <workItem from="1765208027698" duration="29570000" />
       <workItem from="1765288304899" duration="16141000" />
-      <workItem from="1765357306857" duration="835000" />
+      <workItem from="1765357306857" duration="4598000" />
     </task>
     <servers />
   </component>

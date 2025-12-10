@@ -37,7 +37,7 @@ export default function CasesHeroSections({
     return (
         <section
             ref={containerRef}
-            className="mx-4 case_hero_section flex-col flex relative min-h-[calc(100vh-72px-130px)] sm:min-h-[calc(100vh-72px-120px)] lg:min-h-[calc(100vh-72px-200px)]"
+            className="mx-4 case_hero_section flex-col flex relative min-h-[400px]"
         >
             <motion.div className="mt-0 container-fluid">
                 <div className="row">
@@ -66,7 +66,7 @@ export default function CasesHeroSections({
             </motion.div>
 
             <div className="mt-0 container-fluid">
-                <div className="row case_hero__info_row mt-auto">
+                <div className="row case_hero__info_row">
                     <div className="col-lg-4">
                         <p className="t-p2 text-[#A3A3A3]">Client</p>
                         <p className="t-p2">{companyName}</p>

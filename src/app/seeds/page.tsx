@@ -160,10 +160,10 @@ export default function NespressoPage() {
                 />
                 <InfoBlock
                     title="Felix Focken, CEO (Emma Sleep)"
-                    className={"not-md:hidden mt-[32px] mb-[205px]"}
+                    className={"not-md:hidden mt-[32px]"}
                 />
                 <CaseTextBox
-                    className="pb-0"
+                    className=""
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {

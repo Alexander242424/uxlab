@@ -214,12 +214,13 @@ body {
 }
 .case_hero__info_row {
     margin-bottom: 40px;
+    margin-top: 80px;
 }
 .case_hero_section .block_float {
     display: none;
 }
 .case_text_section .col-lg-8 {
-    margin-bottom: 32px;
+    margin-bottom: 120px;
 }
 .case_images_section img,.case_images_section video {
     border-radius: 4px;
@@ -265,4 +266,7 @@ body {
 }
 .case_hero_section .mt-0.container-fluid:last-child {
     margin-top: auto !important;
+}
+.big_quants {
+    line-height: 1;
 }
