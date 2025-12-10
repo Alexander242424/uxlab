@@ -175,7 +175,7 @@
     }
 
     .show_reel_section .cursor-pointer, .overview_section .last_video_screen {
-        height: calc(1svh * 110);
+        /*height: calc(1svh * 110);*/
         max-height: unset;
     }
 

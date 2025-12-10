@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/base/_typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/base/_typography.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/OneModelSection.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +82,7 @@
       <workItem from="1765208027698" duration="29570000" />
       <workItem from="1765288304899" duration="16141000" />
       <workItem from="1765357306857" duration="5796000" />
-      <workItem from="1765376924318" duration="1418000" />
+      <workItem from="1765376924318" duration="1590000" />
     </task>
     <servers />
   </component>
