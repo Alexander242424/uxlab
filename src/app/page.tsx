@@ -1,4 +1,3 @@
-"use client";
 import dynamic from "next/dynamic";
 
 import HeroSection from "@/components/home_page/HeroSection";
@@ -21,17 +20,17 @@ import Slidelogo_11 from "@/assets/logoicons/logo_11.svg";
 import designImage from "@/assets/design_section_image.png";
 
 // ВСЁ НИЖЕ — lazy (SSR по умолчанию true; где много client-логики — ставим ssr:false)
-const ServiceItems = dynamic(() => import("@/components/home_page/ServiceItems"), { ssr: false });
-const DesignOptionSection = dynamic(() => import("@/components/home_page/DesignOptionSection"), { ssr: false });
-const AnimatedTextByLetters = dynamic(() => import("@/components/AnimatedTextByLetters"), { ssr: false });
-const OurCases = dynamic(() => import("@/components/home_page/OurCases"), { ssr: false });
-const ServicesList = dynamic(() => import("@/components/home_page/ServicesList"), { ssr: false });
+const ServiceItems = dynamic(() => import("@/components/home_page/ServiceItems"));
+const DesignOptionSection = dynamic(() => import("@/components/home_page/DesignOptionSection"));
+const AnimatedTextByLetters = dynamic(() => import("@/components/AnimatedTextByLetters"));
+const OurCases = dynamic(() => import("@/components/home_page/OurCases"));
+const ServicesList = dynamic(() => import("@/components/home_page/ServicesList"));
 
-const OneModelSection = dynamic(() => import("@/components/home_page/OneModelSection"), { ssr: false });
-const InfiniteSlider = dynamic(() => import("@/components/home_page/InfiniteSlider"), { ssr: false });
-const GlanceSection = dynamic(() => import("@/components/home_page/glance-section/GlanceSection"), { ssr: false });
-const OverviewCaseVideoSection = dynamic(() => import("@/components/cases/OverviewCaseVideoSection"), { ssr: false });
-const InsightsSection = dynamic(() => import("@/components/home_page/InsightsSection"), { ssr: false });
+const OneModelSection = dynamic(() => import("@/components/home_page/OneModelSection"));
+const InfiniteSlider = dynamic(() => import("@/components/home_page/InfiniteSlider"));
+const GlanceSection = dynamic(() => import("@/components/home_page/glance-section/GlanceSection"));
+const OverviewCaseVideoSection = dynamic(() => import("@/components/cases/OverviewCaseVideoSection"));
+const InsightsSection = dynamic(() => import("@/components/home_page/InsightsSection"));
 
 const slides = [
   { icon: <Slidelogo_1 /> },
