@@ -21,20 +21,20 @@ export interface SplitTextProps {
 }
 
 const SplitText: React.FC<SplitTextProps> = ({
-                                                 text,
-                                                 className = "",
-                                                 style = {},
-                                                 delay = 0,
-                                                 duration = 0.7,
-                                                 ease = "power3.out",
-                                                 from = { opacity: 0, y: 50 },
-                                                 to = { opacity: 1, y: 0 },
-                                                 threshold = 0.0,
-                                                 rootMargin = "200px" ,
-                                                 textAlign = "left",
-                                                 onLetterAnimationComplete,
-                                                 globalIndex = 0,
-                                             }) => {
+    text,
+    className = "",
+    style = {},
+    delay = 0,
+    duration = 0.7,
+    ease = "power3.out",
+    from = { opacity: 0, y: 50 },
+    to = { opacity: 1, y: 0 },
+    threshold = 0.0,
+    rootMargin = "200px",
+    textAlign = "left",
+    onLetterAnimationComplete,
+    globalIndex = 0,
+}) => {
     const [ref, inView] = useInView({
         threshold,
         rootMargin,

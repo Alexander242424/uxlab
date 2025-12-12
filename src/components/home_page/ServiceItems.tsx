@@ -5,7 +5,6 @@ import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import SplitText from "../SplitText";
 import {useIsMobile} from "@/hooks/useIsMobile";
 import {useCalModal} from "@/context/CalModalContext";
-import VideoPlayer from "../VideoPlayer";
 import dynamic from "next/dynamic";
 
 interface ServiceItem {
