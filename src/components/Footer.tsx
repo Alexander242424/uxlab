@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import ArrowRightSVG from "@/assets/arrow-right.svg";
 import WeMakeInterfacesSVG from "@/assets/We_Make_Interfaces";
-import {motion} from "motion/react";
+import { motion } from "motion/react";
 
 export default function Footer() {
     const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ export default function Footer() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({email}),
+                body: JSON.stringify({ email }),
             });
 
             const data = await response.json();
@@ -107,8 +107,8 @@ export default function Footer() {
         <footer className="mx-4 relative z-10 bg-black">
             {/* Частина з паралаксом */}
             <motion.div
-                initial={{opacity: 0, y: -100}}
-                animate={{opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
                 className="transition-transform duration-300 ease-out"
                 transition={{
                     duration: 0.8,
@@ -147,11 +147,10 @@ export default function Footer() {
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        className={`t-p1 pb-4 border-b w-full bg-transparent outline-none appearance-none ${
-                                            message && !message.includes("Success")
+                                        className={`t-p1 pb-4 border-b w-full bg-transparent outline-none appearance-none ${message && !message.includes("Success")
                                                 ? "border-red-500"
                                                 : "border-border-50"
-                                        }`}
+                                            }`}
                                         placeholder="Email Address"
                                         required
                                         disabled={isSubmitting}
@@ -161,15 +160,14 @@ export default function Footer() {
                                         disabled={isSubmitting}
                                         className="absolute right-0 top-0 cursor-pointer disabled:opacity-50"
                                     >
-                                        <ArrowRightSVG/>
+                                        <ArrowRightSVG />
                                     </button>
                                     {message && (
                                         <p
-                                            className={`t-p1 text-sm mt-2 ${
-                                                message.includes("Success")
+                                            className={`t-p1 text-sm mt-2 ${message.includes("Success")
                                                     ? "text-green-600"
                                                     : "text-red-500"
-                                            }`}
+                                                }`}
                                         >
                                             {message}
                                         </p>
@@ -214,49 +212,49 @@ export default function Footer() {
                                 <ul className="space-y-4">
                                     <li>
                                         <Link
-                                            href="/"
+                                            href="https://www.instagram.com/uxlab_digital/"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
                                         >
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
-                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
-                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
-                                                  <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
+                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0" />
+                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1" />
+                                                <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
                                                     Instagram
-                                                  </span>
+                                                </span>
                                             </span>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            href="/"
+                                            href="https://www.linkedin.com/company/uxlabdigital/"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
                                         >
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
 
-                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
-                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
-                                              <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
-                                                Linkedin
-                                              </span>
+                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0" />
+                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1" />
+                                                <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
+                                                    Linkedin
+                                                </span>
                                             </span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/"
-                                              className="text-text-700 flex items-center gap-1 relative group max-w-fit"
+                                        <Link href="https://x.com/Uxlab_Digital"
+                                            className="text-text-700 flex items-center gap-1 relative group max-w-fit"
                                         >
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
-                          {/* Icon on the right (visible by default) */}
-                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0"/>
+                                                {/* Icon on the right (visible by default) */}
+                                                <ArrowUpRightSVG className="absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-100 group-hover:opacity-0" />
                                                 {/* Icon on the left (visible on hover) */}
-                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1"/>
-                          <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
-                            X
-                          </span>
-                        </span>
+                                                <ArrowUpRightSVG className="absolute left-0 top-1/2 -translate-y-1/2 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-1" />
+                                                <span className="pr-6 group-hover:pl-6 group-hover:pr-0 transition-all duration-300 t-p1">
+                                                    X
+                                                </span>
+                                            </span>
                                         </Link>
                                     </li>
                                 </ul>
@@ -269,11 +267,10 @@ export default function Footer() {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className={`t-p1 pb-8 border-b w-full bg-transparent outline-none appearance-none ${
-                                        message && !message.includes("Success")
+                                    className={`t-p1 pb-8 border-b w-full bg-transparent outline-none appearance-none ${message && !message.includes("Success")
                                             ? "border-red-500"
                                             : "border-border-50"
-                                    }`}
+                                        }`}
                                     placeholder="Email Address"
                                     required
                                     disabled={isSubmitting}
@@ -283,15 +280,14 @@ export default function Footer() {
                                     disabled={isSubmitting}
                                     className="absolute right-0 top-0 cursor-pointer disabled:opacity-50"
                                 >
-                                    <ArrowRightSVG/>
+                                    <ArrowRightSVG />
                                 </button>
                                 {message && (
                                     <p
-                                        className={`t-p1 text-sm mt-2 ${
-                                            message.includes("Success")
+                                        className={`t-p1 text-sm mt-2 ${message.includes("Success")
                                                 ? "text-green-600"
                                                 : "text-red-500"
-                                        }`}
+                                            }`}
                                     >
                                         {message}
                                     </p>
@@ -305,7 +301,7 @@ export default function Footer() {
             {/* Фіксована частина без паралаксу */}
             <div className="container-fluid">
                 <div className="pb-4 md:pb-10">
-                    <WeMakeInterfacesSVG word="interfaces"/>
+                    <WeMakeInterfacesSVG word="interfaces" />
                 </div>
             </div>
         </footer>

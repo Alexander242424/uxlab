@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc97a57-7130-4530-80a3-99434642cff2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/BMW_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/Forbes_logo_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/calendly-logo-vector_5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/jasper.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/numa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/red_bull.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/rep_ai.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/userway-org-vector-logo-2022_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logoicons/whop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home_page/InfiniteSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home_page/InfiniteSlider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +85,9 @@
       <workItem from="1765208027698" duration="29570000" />
       <workItem from="1765288304899" duration="16141000" />
       <workItem from="1765357306857" duration="5796000" />
-      <workItem from="1765376924318" duration="7715000" />
+      <workItem from="1765376924318" duration="8798000" />
+      <workItem from="1765443447278" duration="4015000" />
+      <workItem from="1765546891604" duration="1231000" />
     </task>
     <servers />
   </component>

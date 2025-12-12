@@ -241,39 +241,6 @@ export default function ServiceItems() {
                                 textAlign="left"
                             />
 
-                            {/* MOBILE ПАРАГРАФЫ (с анимацией по словам) */}
-                            {/*<div className="flex flex-col sm:hidden gap-4">*/}
-                            {/*    <div className="flex flex-col">*/}
-                            {/*        <SplitText*/}
-                            {/*            text={firstParagraphMobile}*/}
-                            {/*            className=""*/}
-                            {/*            splitType="lines"*/}
-                            {/*            delay={100}*/}
-                            {/*            duration={0.8}*/}
-                            {/*            ease="power3.out"*/}
-                            {/*            from={{opacity: 0, y: 50}}*/}
-                            {/*            to={{opacity: 1, y: 0}}*/}
-                            {/*            threshold={0.1}*/}
-                            {/*            rootMargin={isMobile ? "-100px" : "-200px"}*/}
-                            {/*            textAlign="left"*/}
-                            {/*        />*/}
-                            {/*    </div>*/}
-                            {/*    <div className="flex flex-col">*/}
-                            {/*        <SplitText*/}
-                            {/*            text={secondParagraphMobile}*/}
-                            {/*            className=""*/}
-                            {/*            splitType="lines"*/}
-                            {/*            delay={100}*/}
-                            {/*            duration={0.8}*/}
-                            {/*            ease="power3.out"*/}
-                            {/*            from={{opacity: 0, y: 50}}*/}
-                            {/*            to={{opacity: 1, y: 0}}*/}
-                            {/*            threshold={0.1}*/}
-                            {/*            rootMargin={isMobile ? "-100px" : "-200px"}*/}
-                            {/*            textAlign="left"*/}
-                            {/*        />*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
 

@@ -33,7 +33,7 @@ interface OurCasesItem {
 const cases: OurCasesItem[] = [
   {
     src: GuideImage,
-    alt: "Nespresso case study",
+    alt: "Nespresso",
     title: "Nespresso",
     description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
     videoSrc: "/video/our_cases/Nespresso.mp4",
@@ -43,9 +43,9 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Foundrae_main,
-    alt: "Emma usability audit case study",
+    alt: "Foundrae",
     title: "Foundrae",
-    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    description: "Elevating revenue of jewerly online store by additional 23% in 2 months",
     videoSrc: "/video/our_cases/Foundrae.mp4",
     videoTitle: "Emma usability audit\ncase study",
     logo: "/image/OurCases/logo/foundrae.svg",
@@ -53,9 +53,9 @@ const cases: OurCasesItem[] = [
   },
   {
     src: MacDuggal,
-    alt: "Boostra analysis case study",
+    alt: "Mac Duggal",
     title: "Mac Duggal",
-    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    description: "Uplifting Add-to-Cart rate by 33%  for luxury fashion brand with A/B tests in 3 months",
     videoSrc: "/video/our_cases/Mac_Duggal.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/mac_duggal.svg",
@@ -63,9 +63,9 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Valyou,
-    alt: "Boostra analysis case study",
+    alt: "Tapmy Store",
     title: "Tapmy Store",
-    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    description: "Running A/B tests to find the most performing case based on real data",
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/valyou.svg",
@@ -73,9 +73,9 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Wellow,
-    alt: "Boostra analysis case study",
+    alt: "Valyou Furniture",
     title: "Valyou Furniture",
-    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    description: "Transforming brand into niche leader by increasing Conversion Rate",
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/Wellow.svg",
@@ -83,9 +83,9 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Royal,
-    alt: "Boostra analysis case study",
+    alt: "Royal Queen Seeds",
     title: "Royal Queen Seeds",
-    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    description: "Improving Conversion Rate from 3.2% to 4% while increasing AOV from $23 to $54 in 3 months",
     videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
     videoTitle: "Boostra analysis case study",
     logo: "/image/OurCases/logo/rqs_rebranding_logo_header.svg",

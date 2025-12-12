@@ -34,7 +34,7 @@ export default function DesignOpsSection({
   title = "DesignOps\nFramework",
   subtitle,
   description = "Our framework integrates behavioral science,\nquantitative analysis, and systematic UX refinement to\nreveal friction, model uplift potential, and guide precise\ninterface improvements. The outcome is a predictable,\nresearch-backed path to sustainable ecommerce growth.",
-  ctaLabel = "Contact us",
+  ctaLabel = "Let's Talk",
   ctaHref = "/contact",
   textColor = "text-text-700",
   rootMargin = "-100px",
