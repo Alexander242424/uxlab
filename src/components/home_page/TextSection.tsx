@@ -189,6 +189,7 @@ export default function TextSection({
                             variant="secondary"
                             size="lg"
                             iconRight={<ArrowUpRightSVG className="!size-6"/>}
+                            aria-label="Aria Name"
                         >
                             {buttonText}
                         </Button>

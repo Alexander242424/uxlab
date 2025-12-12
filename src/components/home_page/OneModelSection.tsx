@@ -80,6 +80,7 @@ export default function PackageCard({
                 className="rounded-full px-6 py-2 bg-black text-white t-p2 hover:bg-neutral-900"
                 iconRight={<ArrowUpRightSVG className="!size-5" />}
                 onClick={handleCalClick}
+                aria-label="Aria Name"
               >
                 {ctaLabel}
               </Button>

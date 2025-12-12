@@ -282,6 +282,7 @@ export default function Footer() {
                                     type="submit"
                                     disabled={isSubmitting}
                                     className="absolute right-0 top-0 cursor-pointer disabled:opacity-50"
+                                    aria-label="Aria Name"
                                 >
                                     <ArrowRightSVG />
                                 </button>
