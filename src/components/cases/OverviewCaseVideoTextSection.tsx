@@ -19,16 +19,16 @@ interface OverviewCaseVideoTextSectionProps {
 }
 
 export default function OverviewCaseVideoTextSection({
-                                                         videoSrc,
-                                                         imageSrc,
-                                                         imageAlt,
-                                                         firstText,
-                                                         secondText,
-                                                         videoClassName = "",
-                                                         textMaxWidth = "",
-                                                         videoColClass = "col-lg-6",
-                                                         textColClass = "col-lg-6",
-                                                     }: OverviewCaseVideoTextSectionProps) {
+    videoSrc,
+    imageSrc,
+    imageAlt,
+    firstText,
+    secondText,
+    videoClassName = "",
+    textMaxWidth = "",
+    videoColClass = "col-lg-6",
+    textColClass = "col-lg-6",
+}: OverviewCaseVideoTextSectionProps) {
     const [ref, inView] = useInView({
         threshold: 0.3,
         triggerOnce: true,

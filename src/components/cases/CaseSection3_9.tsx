@@ -21,17 +21,17 @@ interface CaseSection3_9Props {
 }
 
 export default function CaseSection3_9({
-                                           className,
-                                           leftImageSrc,
-                                           leftImageAlt,
-                                           leftOverline,
-                                           leftTitle,
-                                           leftBody,
-                                           videoSrc,
-                                           videoImageSrc,
-                                           videoImageAlt,
-                                           isAnimated = true,
-                                       }: CaseSection3_9Props) {
+    className,
+    leftImageSrc,
+    leftImageAlt,
+    leftOverline,
+    leftTitle,
+    leftBody,
+    videoSrc,
+    videoImageSrc,
+    videoImageAlt,
+    isAnimated = true,
+}: CaseSection3_9Props) {
     const hasLeft = leftImageSrc || leftOverline || leftTitle || leftBody;
 
     return (

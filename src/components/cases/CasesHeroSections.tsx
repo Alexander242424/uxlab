@@ -16,14 +16,14 @@ interface CasesHeroSectionsProps {
 }
 
 export default function CasesHeroSections({
-                                              logo,
-                                              logoMobile,
-                                              text,
-                                              mobileText,
-                                              companyName,
-                                              year,
-                                              deliverables,
-                                          }: CasesHeroSectionsProps) {
+    logo,
+    logoMobile,
+    text,
+    mobileText,
+    companyName,
+    year,
+    deliverables,
+}: CasesHeroSectionsProps) {
     const isMobile = useIsMobile();
     const containerRef = useRef<HTMLDivElement>(null);
 

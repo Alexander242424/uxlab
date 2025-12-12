@@ -214,6 +214,7 @@ export default function Footer() {
                                         <Link
                                             href="https://www.instagram.com/uxlab_digital/"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
+                                            target="_blank"
                                         >
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
@@ -229,6 +230,7 @@ export default function Footer() {
                                         <Link
                                             href="https://www.linkedin.com/company/uxlabdigital/"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
+                                            target="_blank"
                                         >
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">
@@ -244,6 +246,7 @@ export default function Footer() {
                                     <li>
                                         <Link href="https://x.com/Uxlab_Digital"
                                             className="text-text-700 flex items-center gap-1 relative group max-w-fit"
+                                            target="_blank"
                                         >
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-text-700 underline-animation"></span>{" "}
                                             <span className="relative">

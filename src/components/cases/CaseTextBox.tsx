@@ -14,10 +14,10 @@ interface CaseTextBoxProps {
 }
 
 export default function CaseTextBox({
-                                        className,
-                                        blocks,
-                                        colClass = "col-lg-8 mx-auto",
-                                    }: CaseTextBoxProps) {
+    className,
+    blocks,
+    colClass = "col-lg-8 mx-auto",
+}: CaseTextBoxProps) {
     if (!blocks || blocks.length === 0) return null;
 
     return (

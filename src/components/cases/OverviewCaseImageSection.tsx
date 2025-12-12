@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
-import {StaticImageData} from "next/image";
-import {cn} from "@/lib/utils";
-import {motion} from "motion/react";
-import {useInView} from "react-intersection-observer";
+import { StaticImageData } from "next/image";
+import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
+import { useInView } from "react-intersection-observer";
 type TextBlock = {
     title: string;
     body: string | string[];
@@ -24,17 +24,17 @@ interface OverviewCaseImageSectionProps {
 }
 
 export default function OverviewCaseImageSection({
-                                                     className,
-                                                     imageSrc,
-                                                     imageAlt,
-                                                     imageSrc2,
-                                                     imageAlt2,
-                                                     videoSrc,
-                                                     iSsmallColumn = false,
-                                                     imageClassName,
-                                                     imageClassName2,
-                                                     videoClassName,
-                                                 }: OverviewCaseImageSectionProps) {
+    className,
+    imageSrc,
+    imageAlt,
+    imageSrc2,
+    imageAlt2,
+    videoSrc,
+    iSsmallColumn = false,
+    imageClassName,
+    imageClassName2,
+    videoClassName,
+}: OverviewCaseImageSectionProps) {
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -53,13 +53,13 @@ export default function OverviewCaseImageSection({
                 <div className="row">
                     <div className={iSsmallColumn ? "col-lg-4" : "col-lg-6"}>
                         <motion.div
-                            initial={{clipPath: "inset(0% 0% 100% 0%)"}}
+                            initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
                             animate={
                                 inView
-                                    ? {clipPath: "inset(0% 0% 0% 0%)"}
-                                    : {clipPath: "inset(0% 0% 100% 0%)"}
+                                    ? { clipPath: "inset(0% 0% 0% 0%)" }
+                                    : { clipPath: "inset(0% 0% 100% 0%)" }
                             }
-                            transition={{duration: 0.5, ease: [0.7, 0, 0.3, 1]}}
+                            transition={{ duration: 0.5, ease: [0.7, 0, 0.3, 1] }}
                             className={cn(
                                 "overflow-hidden",
                                 !iSsmallColumn
@@ -86,13 +86,13 @@ export default function OverviewCaseImageSection({
                     </div>
                     <div className={iSsmallColumn ? "col-lg-8" : "col-lg-6"}>
                         <motion.div
-                            initial={{clipPath: "inset(0% 0% 100% 0%)"}}
+                            initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
                             animate={
                                 inView
-                                    ? {clipPath: "inset(0% 0% 0% 0%)"}
-                                    : {clipPath: "inset(0% 0% 100% 0%)"}
+                                    ? { clipPath: "inset(0% 0% 0% 0%)" }
+                                    : { clipPath: "inset(0% 0% 100% 0%)" }
                             }
-                            transition={{duration: 1, ease: [0.7, 0, 0.3, 1]}}
+                            transition={{ duration: 1, ease: [0.7, 0, 0.3, 1] }}
                             className={cn(
                                 "overflow-hidden",
                                 !iSsmallColumn
