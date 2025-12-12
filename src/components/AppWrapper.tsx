@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WelcomePage from "./WelcomePage";
 
 interface AppWrapperProps {
@@ -7,16 +7,18 @@ interface AppWrapperProps {
 }
 
 export default function AppWrapper({ children }: AppWrapperProps) {
-  const [shouldRenderContent, setShouldRenderContent] = useState(false);
+  const [showPreloader, setShowPreloader] = useState(true);
 
-  const handleAnimationStart = () => {
-    setShouldRenderContent(true);
-  };
+  // Можно убрать прелоадер по таймеру (как у тебя), но контент уже виден под ним
+  useEffect(() => {
+    const t = setTimeout(() => setShowPreloader(false), 1700);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <>
-      <WelcomePage onAnimationStart={handleAnimationStart} />
-      {shouldRenderContent && children}
+      {children}
+      <WelcomePage isVisible={showPreloader} />
     </>
   );
 }

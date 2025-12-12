@@ -1,45 +1,26 @@
 "use client";
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface WelcomePageProps {
-  onAnimationStart: () => void;
+  isVisible: boolean;
 }
 
-export default function WelcomePage({ onAnimationStart }: WelcomePageProps) {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    // Hide the welcome page after 2.5 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      // Trigger main content rendering when animation starts
-      onAnimationStart();
-    }, 1700);
-
-    return () => clearTimeout(timer);
-  }, [onAnimationStart]);
-
+export default function WelcomePage({ isVisible }: WelcomePageProps) {
   const words = ["Welcome", "to", "UXLAB"];
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed inset-0 bg-white z-[999999] flex items-center justify-center"
-          initial={{ opacity: 1 }}
-          exit={{ 
+          className="fixed inset-0 bg-white z-[999999] flex items-center justify-center pointer-events-none"
+          initial={{ opacity: 1, y: 0 }}
+          exit={{
             y: "100%",
-            transition: { 
-              duration: 0.8, 
-              ease: "easeInOut" 
-            }
+            transition: { duration: 0.8, ease: "easeInOut" },
           }}
         >
           <div className="text-center overflow-hidden">
-            <div
-              className="text-black flex flex-wrap justify-center gap-2 font-tt-hoves text-[1.5rem] leading-[3rem] sm:text-[2.1rem] sm:leading-[6.6938rem] tracking-[-0.0315rem] text-center"
-            >
+            <div className="text-black flex flex-wrap justify-center gap-2 font-tt-hoves text-[1.5rem] leading-[3rem] sm:text-[2.1rem] sm:leading-[6.6938rem] tracking-[-0.0315rem]">
               {words.map((word, index) => (
                 <motion.span
                   key={word}
