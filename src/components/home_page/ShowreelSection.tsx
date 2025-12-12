@@ -113,6 +113,7 @@ export default function ShowreelSection({ mobileSrc, desktopSrc, isDefault = fal
                 src={isMobile ? mobileSrc : desktopSrc}
                 className="showreal_video"
                 aspectRatio="1"
+                preload="metadata"
             />
           </ScrollAnimatedSection>
         </div>
