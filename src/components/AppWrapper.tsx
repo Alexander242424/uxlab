@@ -11,7 +11,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 
   // Можно убрать прелоадер по таймеру (как у тебя), но контент уже виден под ним
   useEffect(() => {
-    const t = setTimeout(() => setShowPreloader(false), 1700);
+    const t = setTimeout(() => setShowPreloader(false), 1000);
     return () => clearTimeout(t);
   }, []);
 
