@@ -1,7 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
-@import "../../public/fonts/font-face.css";
 /* // Типографика по брейкпоинтам */
 @import "./styles/base/_typography";
 
