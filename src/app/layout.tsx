@@ -1,7 +1,8 @@
 import localFont from "next/font/local";
-import 'tw-animate-css';
+import "tw-animate-css";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./main.css";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { VideoModalProvider } from "@/context/VideoModalContext";
@@ -12,31 +13,20 @@ import AppWrapper from "@/components/AppWrapper";
 import { Metadata } from "next";
 import LenisProvider from "@/components/ui/LenisProvider";
 import ScrollRestorer from "@/hooks/ScrollRestorer";
+
+// ВАЖНО: path должен указывать на ФАЙЛ в проекте, не "URL из public".
+// Если шрифты реально лежат в /public/fonts, то path обычно такой:
 const ttHoves = localFont({
   src: [
-    {
-      path: "../../public/fonts/TTHoves-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/TTHoves-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/TTHoves-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/TTHoves-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
+    { path: "../../public/fonts/TTHoves-Light.woff2", weight: "300", style: "normal" },
+    { path: "../../public/fonts/TTHoves-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/TTHoves-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/TTHoves-Bold.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-tt-hoves",
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial"],
 });
 
 const systemMono = {
@@ -45,12 +35,15 @@ const systemMono = {
 
 export const metadata: Metadata = {
   title: "UXLAB | We Make Interfaces",
-  description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+  description:
+    "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
   openGraph: {
     locale: "en_US",
     type: "website",
-    title: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
-    description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    title:
+      "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    description:
+      "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
     url: "https://uxlab.digital/",
     siteName: "UXLAB",
     images: [
@@ -65,7 +58,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "UXLAB | We Make Interfaces",
-    description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    description:
+      "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
     images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
   },
   icons: {
@@ -73,27 +67,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${ttHoves.variable} ${systemMono.variable} antialiased`}
-      >
+    <html lang="en" className={`dark ${ttHoves.variable} ${systemMono.variable}`}>
+      <body className="antialiased">
         <LenisProvider>
           <VideoModalProvider>
             <CalModalProvider>
               <AppWrapper>
                 <ScrollRestorer />
-                <div
-                  className="min-h-screen flex flex-col"
-                  style={{ scrollBehavior: "smooth" }}
-                >
+                <div className="min-h-screen flex flex-col" style={{ scrollBehavior: "smooth" }}>
                   <Header />
-                  <main className="flex-1 overflow-x-hidden ">{children}</main>
+                  <main className="flex-1 overflow-x-hidden">{children}</main>
                   <Footer />
                 </div>
               </AppWrapper>
