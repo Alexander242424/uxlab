@@ -92,6 +92,7 @@ export default function DesignOpsSection({
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center justify-center rounded-full w-[56px] h-[55px] hover:bg-[#00000014] bg-[#0000000F] cursor-pointer"
+                    aria-label="Whatsapp btn"
                 >
                   <WhatAppSVG/>
                 </a>

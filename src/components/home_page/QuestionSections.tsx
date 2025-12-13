@@ -152,6 +152,7 @@ export default function QuestionSections() {
                 Book a Call
               </Button>
               <a href="https://wa.me/qr/AI6ZRCL4ZECGM1" target="_blank" className="flex items-center justify-center rounded-full w-[56px] h-[55px] hover:bg-[#00000014] bg-[#0000000F] cursor-pointer"
+              aria-label="Whatsapp btn"
               >
                 <WhatAppSVG />
               </a>
