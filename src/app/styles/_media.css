@@ -238,6 +238,12 @@
         padding-top: 125px;
         padding-bottom: 125px;
     }
+    .logos_slider .row {
+        flex-wrap: wrap !important;
+    }
+    .logos_slider .row .col{
+        flex:  0 0 auto;
+    }
 
     .glanse_section .flex.justify-between.mx-4 {
         padding-top: 32px !important;

@@ -29,7 +29,7 @@ export default function HeroSection() {
                     <div className="col-sm-6 col-12 sm:ml-auto flex justify-start  hero_text_block">
                         <div className="flex-col flex">
                             <p className="t-p1 sm:text-right !text-nowrap ">
-                                Work with eCommerce bands
+                                Work with eCommerce brands
                             </p>
                             <p className="t-p1 !text-nowrap">
                                 to uplift CR, AOV, LTV, ATC, Checkout rate, Retention,

@@ -63,8 +63,8 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Valyou,
-    alt: "Tapmy Store",
-    title: "Tapmy Store",
+    alt: "Valyou Furniture",
+    title: "Valyou Furniture",
     description: "Running A/B tests to find the most performing case based on real data",
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
     videoTitle: "Boostra analysis case study",
@@ -73,8 +73,8 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Wellow,
-    alt: "Valyou Furniture",
-    title: "Valyou Furniture",
+    alt: "Wellow",
+    title: "Wellow",
     description: "Transforming brand into niche leader by increasing Conversion Rate",
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
     videoTitle: "Boostra analysis case study",
