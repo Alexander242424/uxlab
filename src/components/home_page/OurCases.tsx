@@ -35,7 +35,7 @@ const cases: OurCasesItem[] = [
     src: GuideImage,
     alt: "Nespresso",
     title: "Nespresso",
-    description: "Designing an AI SaaS That Turns Drop-Offs into Revenue",
+    description: "Designing a leading online coffee marketplace with a focus on higher CR and LTV",
     videoSrc: "/video/our_cases/Nespresso.mp4",
     videoTitle: "Nespresso case study",
     logo: "/image/OurCases/logo/nespresso.svg",
