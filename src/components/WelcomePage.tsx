@@ -16,7 +16,7 @@ export default function WelcomePage({ isVisible }: WelcomePageProps) {
           initial={{ opacity: 1, y: 0 }}
           exit={{
             y: "100%",
-            transition: { duration: 0.8, ease: "easeInOut" },
+            transition: { duration: .9, ease: "easeInOut" },
           }}
         >
           <div className="text-center overflow-hidden">

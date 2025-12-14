@@ -19,7 +19,7 @@ export default function HeroSection() {
     return (
         <section
             ref={containerRef}
-            className="hero_section mx-4 flex flex-col relative min-h-[calc(100vh-72px-230px)] sm:min-h-[calc(100vh-72px-140px)] lg:min-h-[calc(100vh-72px-140px)]"
+            className="hero_section mx-4 flex flex-col relative min-h-[calc(100dvh - 20%)]"
         >
             <motion.div
                 className="container-fluid hero-section-text 2xl:top-0 right-0 w-full mb-[160px] mt-0 "

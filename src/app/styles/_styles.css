@@ -143,6 +143,9 @@ body {
 .cases_text_box {
     column-gap: 20px;
 }
+.cases_text_box p:first-child {
+    flex: 0 0 20%;
+}
 
 /* services section  */
 .services_row {
