@@ -73,8 +73,8 @@ const cases: OurCasesItem[] = [
   },
   {
     src: Wellow,
-    alt: "Wellow",
-    title: "Wellow",
+    alt: "Wellow Socks",
+    title: "Wellow Socks",
     description: "Transforming brand into niche leader by increasing Conversion Rate",
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
     videoTitle: "Boostra analysis case study",
