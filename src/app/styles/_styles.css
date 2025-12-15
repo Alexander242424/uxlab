@@ -13,7 +13,7 @@ body {
 @custom-variant dark (&:is(.dark *));
 
 /* Custom breakpoint variants */
-@custom-variant lg (@media (min-width: 1920px));
+@custom-variant lg (@media (min-width: 1921px));
 @custom-variant md (@media (min-width: 1024px));
 @custom-variant sm (@media (min-width: 768px));
 @custom-variant xs (@media (min-width: 275px));
