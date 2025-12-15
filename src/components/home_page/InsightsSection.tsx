@@ -1,9 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import AIAgentImage from "@/assets/Article/AI Agents.png";
-import DesignSystemsImage from "@/assets/Article/Design System.png";
-import ConversionRateOptimizationImage from "@/assets/Article/Conversion Rate Optimization.png";
+import AIAgentImage from "@/assets/image/Insights/01.jpg";
+import DesignSystemsImage from "@/assets/image/Insights/02.jpg";
+import ConversionRateOptimizationImage from "@/assets/image/Insights/03.jpg";
 import { motion, useInView } from "motion/react";
 import SplitText from "../SplitText";
 import Link from "next/link";
@@ -30,7 +30,7 @@ const insightsData = [
   {
     id: 3,
     href: "/mastering-design-systems",
-    image: DesignSystemsImage,
+    image: ConversionRateOptimizationImage,
     title: ["How to Improve Website Conversions"],
     author: "Alex Tyshchenko",
     date: "29 August 2025",
