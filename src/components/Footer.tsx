@@ -182,7 +182,7 @@ export default function Footer() {
                                 <ul className="space-y-4">
 
                                     <li>
-                                        <Link href="/#services" className={`relative group text-text-700 t-p1`}
+                                        <Link href="/#cases" className={`relative group text-text-700 t-p1`}
                                         > Services
                                             <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#fff] underline-animation"></span>
                                         </Link>
