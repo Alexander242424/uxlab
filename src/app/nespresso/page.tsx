@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         siteName: "UXLAB",
         images: [
             {
-                url: "https://uxlabdev.netlify.app/placeholder.jpg",
+                url: "https://uxlab.digital/placeholder.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Nespresso Case Study - UXLAB",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Next-level e-commerce experience for Nespresso",
         description: "Explore how UXLAB redesigned Nespresso’s online store, boosting e-commerce conversion rate with smooth UX, strategic design, and stronger branding..",
-        images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
+        images: ["https://uxlab.digital/placeholder.jpg"],
     },
 };
 

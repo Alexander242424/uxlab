@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "UXLAB",
     images: [
       {
-        url: "https://uxlabdev.netlify.app/placeholder.jpg",
+        url: "https://uxlab.digital/placeholder.jpg",
         width: 1200,
         height: 630,
         alt: "Mastering Design Systems - UXLAB",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Conversion Rate Optimization (CRO) for E-commerce & SaaS: Proven Strategies to Boost Conversions",
     description:
       "Learn how to increase website conversions with CRO strategies tailored for e-commerce and SaaS businesses. Improve checkout flows, sign-up funnels, and boost revenue without extra ad spend.",
-    images: ["https://uxlabdev.netlify.app/placeholder.jpg"],
+    images: ["https://uxlab.digital/placeholder.jpg"],
   },
 };
 
