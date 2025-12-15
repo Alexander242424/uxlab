@@ -36,16 +36,16 @@ const slides = [
                 // badgetText="saas"
                 persentage={[
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "+2%",
+                        text: "CR"
                     },
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "+33%",
+                        text: "AOV"
                     }
                 ]}
                 imageSrc={Zamnesia}
-                descriptionText="Boostra drove an 18% conversion lift and paid for itself in hours"
+                descriptionText="Lifted Conversion Rate and Average Order Value by polishing CTA and user flows"
                 logo={<ZamnesiaLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 url=""
@@ -60,16 +60,16 @@ const slides = [
                 containerClassName="min-h-[320px] sm:min-h-[482px]"
                 persentage={[
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "-30%",
+                        text: "Cart abandonment rate"
                     },
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "+27%",
+                        text: "CSAT"
                     }
                 ]}
                 // badgetText="Marketplaces"
-                descriptionText="A stress-free stays tailored to your needs"
+                descriptionText="Reducing user friction resulted into improving Cart Abandonment Rate"
                 authorText="Gerhard Marringer"
                 logo={<FormulaPrescotLogo className="post-logo__svg"/>}
                 isForbes={false}
@@ -87,16 +87,16 @@ const slides = [
                 containerClassName="min-h-[250px] sm:min-h-[305px]"
                 persentage={[
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "+37%",
+                        text: "CLV"
                     },
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "+21%",
+                        text: "Retention Rate"
                     }
                 ]}
                 // badgetText="SaaS | AI"
-                descriptionText="Boostra drove an 18% conversion lift and paid for itself in hours"
+                descriptionText="Increased CLV by adding product subscription"
                 authorText="Paul Benigeri"
                 companyText="Co-Founder & CEO at Archive"
                 logo={<CbdMall className="post-logo__svg"/>}
@@ -114,16 +114,16 @@ const slides = [
                 containerClassName="min-h-[280px] sm:min-h-[440px]"
                 persentage={[
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "+28%",
+                        text: "Add-To-Cart Rate"
                     },
                     {
-                        quant: "18%",
-                        text: "Long Stat Name"
+                        quant: "-11%",
+                        text: "Bounce Rate"
                     }
                 ]}
                 // badgetText="IOT"
-                descriptionText="A stress-free stays tailored to your needs"
+                descriptionText="UXLAB revamped UX positioning to increase add-to-cart rate"
                 logo={<ArhiveLogo className="post-logo__svg"/>}
                 withAuthor={false}
                 videoSrc={""}
@@ -135,8 +135,8 @@ const slides = [
         element: (
             <VideoCard
                 imageSrc={Valouy}
-                classNames="max-w-[280px] sm:max-w-[496px] min-h-[350px] sm:min-h-[482px] text-black"
-                containerClassName="min-h-[350px] sm:min-h-[482px]"
+                classNames="max-w-[280px] sm:max-w-[496px] min-h-[305px] sm:min-h-[305px] text-black"
+                containerClassName="min-h-[305px] sm:min-h-[305px]"
                 persentage={[
                     {
                         quant: "18%",

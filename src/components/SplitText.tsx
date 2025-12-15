@@ -38,7 +38,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     const [ref, inView] = useInView({
         threshold,
         rootMargin,
-        triggerOnce: false,
+        triggerOnce: true,
     });
 
     const convertEase = (gsapEase: string) => {

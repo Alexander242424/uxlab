@@ -8,20 +8,20 @@ interface SlideItem {
 
 interface InfiniteSliderProps {
     slides: SlideItem[];
-    duration?: number;   // больше не используется, но оставим для совместимости
+    duration?: number;   
     className?: string;
     slideSpacing?: number;
 }
 
 const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
-                                                           slides,
-                                                           className = "",
-                                                           slideSpacing = 80,
-                                                       }) => {
+    slides,
+    className = "",
+    slideSpacing = 80,
+}) => {
     return (
         <section
             className={`w-full h-full flex md:flex-nowrap items-center ${className}`}
-            style={{columnGap: slideSpacing, rowGap: 24}}
+            style={{ columnGap: slideSpacing, rowGap: 24 }}
         >
             <div className="container-fluid">
                 <div className="row flex-nowrap overflow-hidden">
@@ -38,8 +38,8 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
                             </div>
                             {slide.label && (
                                 <span className="ml-2 t-p2 text-neutral-300">
-                              {slide.label}
-                            </span>
+                                    {slide.label}
+                                </span>
                             )}
                         </div>
                     ))}

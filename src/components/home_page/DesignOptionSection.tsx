@@ -7,7 +7,7 @@ import { useCalModal } from "@/context/CalModalContext";
 import {useIsMobile} from "@/hooks/useIsMobile";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import WhatAppSVG from "@/assets/whatapp.svg";
-import designImage from "@/assets/design_section_image.png";
+import designImage from "@/assets/design_section_image.jpg";
 import designShape from "@/assets/desing_section_shape.png";
 
 import React, { useRef } from "react";
@@ -81,7 +81,7 @@ export default function DesignOpsSection({
                     variant="secondary"
                     size="lg"
                     iconRight={<ArrowUpRightSVG className="!size-6"/>}
-                    className="max-w-40 w-full xs:w-auto bg-white text-black hover:bg-bg-white"
+                    className="t-p2 max-w-40 w-full xs:w-auto bg-white text-black hover:bg-bg-white"
                     onClick={handleCalClick}
                 >
                   {ctaLabel || "Book a Call"}

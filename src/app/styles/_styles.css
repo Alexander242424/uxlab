@@ -206,6 +206,21 @@ body {
     display: block;
 }
 
+.title_hover_line {
+    bottom: 0px;
+}
+
+.author_name {
+    margin-top: 10px;
+}
+
+#insights .insight_title {
+    line-height: normal !important;
+}
+
+.insight_title .inline-block.t-p1 {
+    display: flex;
+}
 
 /* cases pages */
 .case_hero_section {

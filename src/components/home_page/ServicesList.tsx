@@ -56,7 +56,7 @@ export default function ServicesList({
     const isMobile = useIsMobile();
 
     return (
-        <div className="services_list_section space-y-0 mx-4">
+        <div id="services_list_section" className="services_list_section space-y-0 mx-4">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-12">

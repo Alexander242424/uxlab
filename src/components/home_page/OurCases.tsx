@@ -8,8 +8,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 
 import GuideImage from "../../assets/image/OurCases/nespresso-min.jpg";
-import Foundrae_main from "../../assets/image/OurCases/foundrae-min.jpg";
-import MacDuggal from "../../assets/image/OurCases/mac-duggal-min.jpg";
+import Foundrae_main from "../../assets/image/OurCases/foundrae-min2.jpg";
+import MacDuggal from "../../assets/image/OurCases/Mac Duggal-min.jpg";
 import Valyou from "../../assets/image/OurCases/valyou-min.jpg";
 import Wellow from "../../assets/image/OurCases/wellow-min.jpg";
 import Royal from "../../assets/image/OurCases/royal-min.jpg";
@@ -47,7 +47,7 @@ const cases: OurCasesItem[] = [
     title: "Foundrae",
     description: "Elevating revenue of jewerly online store by additional 23% in 2 months",
     videoSrc: "/video/our_cases/Foundrae.mp4",
-    videoTitle: "Emma usability audit\ncase study",
+    videoTitle: "Foundrae AOV improvement case",
     logo: "/image/OurCases/logo/foundrae.svg",
     link: "/foundrae",
   },
@@ -57,7 +57,7 @@ const cases: OurCasesItem[] = [
     title: "Mac Duggal",
     description: "Uplifting Add-to-Cart rate by 33%  for luxury fashion brand with A/B tests in 3 months",
     videoSrc: "/video/our_cases/Mac_Duggal.mp4",
-    videoTitle: "Boostra analysis case study",
+    videoTitle: "Luxury Fashion Brand A/B testing",
     logo: "/image/OurCases/logo/mac_duggal.svg",
     link: "/mucduggal",
   },
@@ -67,7 +67,7 @@ const cases: OurCasesItem[] = [
     title: "Valyou Furniture",
     description: "Running A/B tests to find the most performing case based on real data",
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
-    videoTitle: "Boostra analysis case study",
+    videoTitle: "Furniture brand CR unlock",
     logo: "/image/OurCases/logo/valyou.svg",
     link: "/valyou",
   },
@@ -77,7 +77,7 @@ const cases: OurCasesItem[] = [
     title: "Wellow Socks",
     description: "Transforming brand into niche leader by increasing Conversion Rate",
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
-    videoTitle: "Boostra analysis case study",
+    videoTitle: "Sales uplift without no ads spent",
     logo: "/image/OurCases/logo/Wellow.svg",
     link: "/wellow",
   },
@@ -87,7 +87,7 @@ const cases: OurCasesItem[] = [
     title: "Royal Queen Seeds",
     description: "Improving Conversion Rate from 3.2% to 4% while increasing AOV from $23 to $54 in 3 months",
     videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
-    videoTitle: "Boostra analysis case study",
+    videoTitle: "CR and AOV eCommerce grow",
     logo: "/image/OurCases/logo/rqs_rebranding_logo_header.svg",
     link: "/seeds",
   },
@@ -463,7 +463,7 @@ const PREVIEW_WIDTH = previewConfig.width;
                   )}
                 </Link>
               </div>
-              <div className="cases_text_box flex justify-between items-center w-full">
+              <div className="cases_text_box flex justify-between items-start w-full">
                 <p className={`t-p1 transition-all text duration-300 ${isHovering && hoveredIndex === index ? "opacity-75" : "opacity-100"
                   }`}
                 >

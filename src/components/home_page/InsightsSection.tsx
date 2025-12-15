@@ -76,7 +76,7 @@ export default function InsightsSection() {
         >
           <SplitText
               text="Insights, Inspirations"
-              className="t-p1 insight_title text-black"
+              className="insight_title text-black"
               splitType="lines"
               delay={100}
               duration={0.5}
@@ -112,7 +112,7 @@ export default function InsightsSection() {
                     {insight.title.map((line, lineIndex) => (
                         <p key={lineIndex} className="text-black t-p1 relative group w-fit">
                           {line}
-                          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black underline-animation"></span>
+                          <span className="absolute title_hover_line left-0 w-0 h-[1px] bg-black underline-animation"></span>
                         </p>
                     ))}
                   </div>

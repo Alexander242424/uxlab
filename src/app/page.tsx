@@ -18,7 +18,7 @@ import Slidelogo_9 from "@/assets/logoicons/logo_9.svg";
 import Slidelogo_10 from "@/assets/logoicons/logo_10.svg";
 import Slidelogo_11 from "@/assets/logoicons/logo_11.svg";
 
-import designImage from "@/assets/design_section_image.png";
+import designImage from "@/assets/design_section_image.jpg";
 
 
 const ServiceItems = dynamic(() => import("@/components/home_page/ServiceItems"), { ssr: false });

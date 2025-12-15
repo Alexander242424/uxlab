@@ -121,7 +121,7 @@ export default function Footer() {
                     <div className="row flex flex-col md:flex-row sm:mt-2">
                         {/* Left part - title + contacts + input */}
                         <div className="col-md-6 mb-8 md:mb-0">
-                            <h3 className="hoves-h5-med mb-8">
+                            <h3 className="t-p1 mb-8">
                                 Relax. We&apos;ve Got You.
                             </h3>
                             <div className="flex sm:gap-8">

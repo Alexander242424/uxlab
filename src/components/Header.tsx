@@ -116,8 +116,8 @@ export default function Header() {
               <nav className="hidden md:flex space-x-4 md:space-x-8 t-p1">
                 {pathname === "/" ? (
                   <button
-                    onClick={() => scrollToSection("services")}
-                    className={`relative group header-text cursor-pointer ${activeSection === "services" ? "header-text-active" : ""
+                    onClick={() => scrollToSection("services_list_section")}
+                    className={`relative group header-text cursor-pointer ${activeSection === "services_list_section" ? "header-text-active" : ""
                       }`}
                   >
                     Services
@@ -125,8 +125,8 @@ export default function Header() {
                   </button>
                 ) : (
                   <Link
-                    href="/#services"
-                    className={`relative group header-text cursor-pointer ${pathname === "/" && activeSection === "services" ? "header-text-active" : ""
+                    href="/#services_list_section"
+                    className={`relative group header-text cursor-pointer ${pathname === "/" && activeSection === "services_list_section" ? "header-text-active" : ""
                       }`}
                   >
                     Services
