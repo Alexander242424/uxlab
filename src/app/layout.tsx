@@ -35,15 +35,12 @@ const systemMono = {
 
 export const metadata: Metadata = {
   title: "UXLAB | We Make Interfaces",
-  description:
-    "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+  description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
   openGraph: {
     locale: "en_US",
     type: "website",
-    title:
-      "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
-    description:
-      "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    title: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
+    description: "UXLAB is a UX & UI design studio for apps, websites, and brands. We craft digital products and strategies for startups, scale-ups, and corporates.",
     url: "https://uxlab.digital/",
     siteName: "UXLAB",
     images: [
