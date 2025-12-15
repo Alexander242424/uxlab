@@ -7,12 +7,12 @@ import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 
-import GuideImage from "../../assets/image/OurCases/nespresso-min.jpg";
-import Foundrae_main from "../../assets/image/OurCases/foundrae-min2.jpg";
-import MacDuggal from "../../assets/image/OurCases/Mac Duggal-min.jpg";
-import Valyou from "../../assets/image/OurCases/valyou-min.jpg";
-import Wellow from "../../assets/image/OurCases/wellow-min.jpg";
-import Royal from "../../assets/image/OurCases/royal-min.jpg";
+import GuideImage from "../../assets/image/OurCases/nespresso.webp";
+import Foundrae_main from "../../assets/image/OurCases/foundrae.webp";
+import MacDuggal from "../../assets/image/OurCases/mac_duggal.webp";
+import Valyou from "../../assets/image/OurCases/valyou.webp";
+import Wellow from "../../assets/image/OurCases/wellow.webp";
+import Royal from "../../assets/image/OurCases/royal_queen_seeds_2.webp";
 
 
 import VideoPlayer from "../VideoPlayer";
@@ -441,8 +441,9 @@ const PREVIEW_WIDTH = previewConfig.width;
                     src={item.src}
                     alt={item.alt}
                     loading="lazy"
-                    width={400}
+                    width={2000}
                     height={300}
+                    quality={95}
                     data-index={index}
                     className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
                   />
