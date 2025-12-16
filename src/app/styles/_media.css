@@ -243,6 +243,12 @@
     }
     .logos_slider .row .col{
         flex:  0 0 auto;
+        max-width: 50%;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .logos_slider .row .col:last-child {
+        display: none;
     }
 
     .glanse_section .flex.justify-between.mx-4 {
