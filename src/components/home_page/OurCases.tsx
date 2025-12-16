@@ -441,9 +441,9 @@ const PREVIEW_WIDTH = previewConfig.width;
                     src={item.src}
                     alt={item.alt}
                     loading="lazy"
-                    width={950}
+                    width={900}
                     height={300}
-                    quality={95}
+                    quality={99}
                     data-index={index}
                     className={`w-full rounded-[4px] image-hover-darken ${isHovering && hoveredIndex === index ? "brightness-50" : "brightness-100"}`}
                   />
