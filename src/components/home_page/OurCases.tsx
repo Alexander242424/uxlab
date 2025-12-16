@@ -38,7 +38,7 @@ const cases: OurCasesItem[] = [
     description: "Designing a leading online coffee marketplace with a focus on higher CR and LTV",
     videoSrc: "/video/our_cases/Nespresso.mp4",
     videoTitle: "Nespresso case study",
-    logo: "/image/OurCases/logo/nespresso.svg",
+    logo: "/image/OurCases/logo/nespresso_log.svg",
     link: "/nespresso",
   },
   {
@@ -48,7 +48,7 @@ const cases: OurCasesItem[] = [
     description: "Elevating revenue of jewerly online store by additional 23% in 2 months",
     videoSrc: "/video/our_cases/Foundrae.mp4",
     videoTitle: "Foundrae AOV improvement case",
-    logo: "/image/OurCases/logo/foundrae.svg",
+    logo: "/image/OurCases/logo/foundrae_log.svg",
     link: "/foundrae",
   },
   {
@@ -58,7 +58,7 @@ const cases: OurCasesItem[] = [
     description: "Uplifting Add-to-Cart rate by 33%  for luxury fashion brand with A/B tests in 3 months",
     videoSrc: "/video/our_cases/Mac_Duggal.mp4",
     videoTitle: "Luxury Fashion Brand A/B testing",
-    logo: "/image/OurCases/logo/mac_duggal.svg",
+    logo: "/image/OurCases/logo/mac_duggal_log.svg",
     link: "/mucduggal",
   },
   {
@@ -68,7 +68,7 @@ const cases: OurCasesItem[] = [
     description: "Running A/B tests to find the most performing case based on real data",
     videoSrc: "/video/our_cases/Valyou_Furniture.mp4",
     videoTitle: "Furniture brand CR unlock",
-    logo: "/image/OurCases/logo/valyou.svg",
+    logo: "/image/OurCases/logo/valyou_log.svg",
     link: "/valyou",
   },
   {
@@ -78,7 +78,7 @@ const cases: OurCasesItem[] = [
     description: "Transforming brand into niche leader by increasing Conversion Rate",
     videoSrc: "/video/our_cases/Wellow_Socks.mp4",
     videoTitle: "Sales uplift without no ads spent",
-    logo: "/image/OurCases/logo/Wellow.svg",
+    logo: "/image/OurCases/logo/wellow_log.svg",
     link: "/wellow",
   },
   {
@@ -88,7 +88,7 @@ const cases: OurCasesItem[] = [
     description: "Improving Conversion Rate from 3.2% to 4% while increasing AOV from $23 to $54 in 3 months",
     videoSrc: "/video/our_cases/Royal_Queen_Seeds.mp4",
     videoTitle: "CR and AOV eCommerce grow",
-    logo: "/image/OurCases/logo/rqs_rebranding_logo_header.svg",
+    logo: "/image/OurCases/logo/rqs_rebranding_logo_header_log.svg",
     link: "/seeds",
   },
 
