@@ -144,7 +144,7 @@ body {
     column-gap: 20px;
 }
 .cases_text_box p:first-child {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
 }
 
 /* services section  */
@@ -292,4 +292,8 @@ body {
 }
 .big_quants {
     line-height: 1;
+}
+.logos_slider .col{
+    min-height: 48px;
+    margin-bottom: 24px;
 }

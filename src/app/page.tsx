@@ -28,7 +28,7 @@ const OurCases = dynamic(() => import("@/components/home_page/OurCases"), { ssr:
 const ServicesList = dynamic(() => import("@/components/home_page/ServicesList"), { ssr: false });
 
 const OneModelSection = dynamic(() => import("@/components/home_page/OneModelSection"), { ssr: false });
-const InfiniteSlider = dynamic(() => import("@/components/home_page/InfiniteSlider"), { ssr: false });
+const InfiniteSlider = dynamic(() => import("@/components/home_page/LogosSection"), { ssr: false });
 const GlanceSection = dynamic(() => import("@/components/home_page/glance-section/GlanceSection"), { ssr: false });
 const OverviewCaseVideoSection = dynamic(() => import("@/components/cases/OverviewCaseVideoSection"), { ssr: false });
 const InsightsSection = dynamic(() => import("@/components/home_page/InsightsSection"), { ssr: false });
@@ -44,7 +44,7 @@ const slides = [
   { icon: <Slidelogo_8 /> },
   { icon: <Slidelogo_9 /> },
   { icon: <Slidelogo_10 /> },
-  { icon: <Slidelogo_11 /> },
+  // { icon: <Slidelogo_11 /> },
 ];
 
 export default function HomePage() {

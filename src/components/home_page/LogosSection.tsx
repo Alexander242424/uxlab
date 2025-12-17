@@ -24,11 +24,11 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
             style={{ columnGap: slideSpacing, rowGap: 24 }}
         >
             <div className="container-fluid">
-                <div className="row flex-nowrap overflow-hidden">
+                <div className="row justify-center overflow-hidden">
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className="col flex items-center justify-center"
+                            className="col col-md-3 flex items-center justify-center"
                             style={{
                                 minWidth: "fit-content",
                             }}
