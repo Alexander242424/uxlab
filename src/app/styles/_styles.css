@@ -296,4 +296,6 @@ body {
 .logos_slider .col{
     min-height: 48px;
     margin-bottom: 24px;
+    width: 25%;
+    flex: 1;
 }

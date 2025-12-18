@@ -16,7 +16,6 @@ import Slidelogo_7 from "@/assets/logoicons/logo_7.svg";
 import Slidelogo_8 from "@/assets/logoicons/logo_8.svg";
 import Slidelogo_9 from "@/assets/logoicons/logo_9.svg";
 import Slidelogo_10 from "@/assets/logoicons/logo_10.svg";
-import Slidelogo_11 from "@/assets/logoicons/logo_11.svg";
 
 import designImage from "@/assets/design_section_image.jpg";
 
@@ -44,7 +43,6 @@ const slides = [
   { icon: <Slidelogo_8 /> },
   { icon: <Slidelogo_9 /> },
   { icon: <Slidelogo_10 /> },
-  // { icon: <Slidelogo_11 /> },
 ];
 
 export default function HomePage() {

@@ -247,9 +247,6 @@
         width: 100%;
         margin-bottom: 24px;
     }
-    .logos_slider .row .col:last-child {
-        display: none;
-    }
 
     .glanse_section .flex.justify-between.mx-4 {
         padding-top: 32px !important;
@@ -434,5 +431,12 @@
 @media (max-width: 767px) {
     .design_container .col-lg-4 {
         margin-top: 32px;
+    }
+}
+@media (max-width: 527px) {
+    .logos_slider .row .col {
+        width: 49%;
+        flex: 0 0 49%;
+        min-width: unset !important;
     }
 }
