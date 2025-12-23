@@ -59,16 +59,16 @@ export default function NespressoPage() {
                     logo={<ValyouLogo/>}
                     logoMobile={<ValyouLogo/>}
                     text={[
-                        "Innovating Personalized Sleep ",
-                        "Worldwide",
+                        "Transforming the high-end",
+                        "living experience through a trend-driven digital leader.",
                     ]}
                     mobileText={[
-                        "Innovating Personalized Sleep ",
-                        "Worldwide",
+                        "Transforming the high-end",
+                        "living experience through a trend-driven digital leader.",
                     ]}
-                    companyName="Wellow Socks"
-                    year="2022 - 2024"
-                    deliverables="Guidelines and Portals  ·  Digital Asset Management  ·  Templates"
+                    companyName="VALYŌU Furniture"
+                    year="7x(2-Week Design Sprint)"
+                    deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
                 />
                 <OverviewCaseVideoSection
                     className="!p-0 mb-[80px] first_case_hero_section "
@@ -79,24 +79,38 @@ export default function NespressoPage() {
                 <TextSection
                     className=""
                     text={[
-                        "By fostering healthy sleep ",
-                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
+                        "Scaling a disruptive furniture",
+                        "brand through an immersive, fashion-forward digital experience.",
                     ]}
                     mobileText={[
-                        "By fostering healthy sleep ",
-                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
+                        "Scaling a disruptive furniture",
+                        "brand through an immersive, fashion-forward digital experience.",
                     ]}
                     showLine={true}
                 />
                 <OverviewCaseTestimonialSection
-                    leftColumn={["Outcomes"]}
+                    leftColumn={["Goal", "Challenges","Outcomes"]}
                     rightColumn={[
+                        "Our objective was to bridge the gap between high-end designer aesthetics and accessible furniture pricing. We aimed to evolve the Valyou digital experience into a curated interior gallery that builds consumer trust through editorial storytelling, immersive 3D visualization, and a frictionless path to high-ticket conversion.",
+                        {
+                            type: "list",
+                            intro:
+                                "",
+                            items: [
+                                "The Trust Barrier: Overcoming the hesitation of purchasing high-ticket furniture without a physical ``sit-test.``",
+                                "Visual Disconnect: Elevating the brand aesthetic from ``discount warehouse`` to ``premium interior design.``",
+                                "Choice Paralysis: Navigating a massive 10,000+ SKU catalog without overwhelming the user experience.",
+                                "Tactile Education: Communicating material quality—like spill-proof fabrics and solid oak—through a flat screen.",
+                                "Conversion Velocity: Streamlining the heavy mobile traffic from social media into a lightning-fast checkout flow.",
+                            ],
+                        },
                         {
                             type: "metrics",
                             items: [
-                                {value: 12, prefix: "", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
-                                {value: 10, prefix: "+", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
-                                {value: 500, prefix: "+", suffix: "", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
+                                {value: 35, prefix: "+", suffix: "%", label: "Conversion Rate Increase"},
+                                {value: 26, prefix: "+", suffix: "%", label: "Average Order Value (AOV)"},
+                                {value: 20, prefix: "-", suffix: "%", label: "Bounce Rate"},
+                                {value: 50, prefix: "+", suffix: "%", label: "Engagement on Product Detail Pages"},
                             ],
                         },
                     ]}
@@ -119,9 +133,9 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "Challenge: Low daily engagement and limited value for app users",
+                            title: "An intuitive discovery experience.",
                             body: [
-                                "Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing experience offered limited value beyond basic sleep tracking.",
+                                "We reimagined the collection grid to act as a digital mood board. Users can now explore ``Scenes`` rather than just categories, allowing them to visualize complete rooms and move from inspiration to purchase in a single flow.",
                             ],
                         },
                     ]}
@@ -131,9 +145,9 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "Solution: Transforming the app into a personalized educational hub",
+                            title: "Design for the modern curator.",
                             body: [
-                                "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub.",
+                                "The interface was built to mirror the brand’s minimalist, trendy aesthetic. Using clean grid structures and cinematic product photography, we created a visual rhythm that guides the user through the brand’s multi-brand ecosystem.",
                             ],
                         },
                     ]}
@@ -142,11 +156,11 @@ export default function NespressoPage() {
                 <OverviewCaseVideoSection imageSrc={Valyou_4}/>
                 <OverviewCaseVideoTextSection
                     imageSrc={Valyou_5}
-                    firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can’t I sleep? How do I find more energy after sleep?"
-                    secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
+                    firstText="To maximize AOV on high-ticket furniture, we redesigned the slide-out cart to act as a digital design assistant. By implementing a ``Complete the Look`` recommendation engine, we encouraged users to add matching accents—like pillows or side tables—directly within the checkout flow. We also integrated flexible financing options (Buy Now, Pay Later) at the point of decision, removing the final barrier to purchase and increasing conversion by 26%."
+                    secondText=""
                     textMaxWidth={"col-lg-6"}
                 />
-                <TextSection
+                {/* <TextSection
                     className="mt-[200px]"
                     text={[
                         "I’m consistently amazed at the",
@@ -161,15 +175,15 @@ export default function NespressoPage() {
                 <InfoBlock
                     title="Felix Focken, CEO (Emma Sleep)"
                     className={"not-md:hidden mt-[32px] mb-[205px]"}
-                />
+                /> */}
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto"
+                    colClass="col-lg-5 mx-auto"
                     blocks={[
                         {
-                            title: "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub. ",
+                            title: "Transforming high-ticket browsing into confident action.",
                             body: [
-                                "Solution: Transforming the app into a personalized educational hub",
+                                "Buying furniture online requires a high degree of confidence; our goal was to make that ``Add to Bag`` moment feel effortless. We introduced a ``Complete the Scene`` ATC feature that allows users to add an entire room’s worth of items with a single interaction. By placing financing eligibility (BNPL) and real-time shipping estimates directly next to the primary CTA, we neutralized price-point anxiety at the most critical moment. This strategic clarity resulted in a +24% lift in ATC velocity and a significant reduction in mid-funnel drop-off.",
                             ],
                         },
                     ]}
@@ -180,12 +194,12 @@ export default function NespressoPage() {
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-5 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "A PDP designed for high-ticket confidence",
                             body: [
-                                "A Call to Habits"
+                                "To solve the ``visualization gap``, we developed Benefit-Driven modules. We highlighted technical features like ``Spill-Proof Fabric`` and ``10-Minute Assembly`` through bite-sized, visual-first content that removes any barrier to buying online."
                             ],
                         },
                     ]}
@@ -193,8 +207,8 @@ export default function NespressoPage() {
                 {/*<OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"/>*/}
                 <OverviewCaseVideoTextSection
                     imageSrc={Valyou_7}
-                    firstText="We used playful colours, engaging illustrations, and micro-interactions to weave the brand through the experience and draw visitors in."
-                    secondText="The new site feels multi-dimensional — much like the mind."
+                    firstText="We used a refined neutral palette, elegant typography, and seamless transitions to weave a sense of luxury through the experience and draw visitors in."
+                    secondText="The new site feels architecturally structured - much like a modern living space."
                     videoColClass="col-lg-9"
                     textColClass="col-lg-3"
                 />
@@ -203,9 +217,9 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "Frictionless conversion and bundling",
                             body: [
-                                "A Call to Habits"
+                                "We implemented a ``Complete the Look`` logic in the cart, suggesting matching nightstands or accessories. This transformed the cart from a simple checkout step into a personalized interior design assistant."
                             ],
                         },
                     ]}
@@ -224,9 +238,9 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "Focused on the mobile-first lifestyle",
                             body: [
-                                "A Call to Habits"
+                                "With a majority of traffic arriving via social discovery, the mobile UI was optimized for high-speed scrolling, quick-view interactions, and a seamless ``Thumb-to-Checkout`` pathway."
                             ],
                         },
                     ]}

@@ -21,7 +21,7 @@ import OverviewCaseTestimonialSection from "@/components/cases/OverviewCaseTesti
 import OverviewCaseVideoSection from "@/components/cases/OverviewCaseVideoSection";
 import OverviewCaseVideoTextSection from "@/components/cases/OverviewCaseVideoTextSection";
 import ScrollingTextCaseSection from "@/components/cases/ScrollingTextCaseSection";
-import {Metadata} from "next";
+import { Metadata } from "next";
 import TextSection from "@/components/home_page/TextSection";
 
 export const metadata: Metadata = {
@@ -56,19 +56,19 @@ export default function NespressoPage() {
         <div className="flex flex-col">
             <div className="w-full">
                 <CasesHeroSections
-                    logo={<WellowLogo/>}
-                    logoMobile={<WellowLogo/>}
+                    logo={<WellowLogo />}
+                    logoMobile={<WellowLogo />}
                     text={[
-                        "Innovating Personalized Sleep ",
-                        "Worldwide",
+                        "Reimagining the daily wellness ritual through a high-compression digital experience.",
+                        "experience",
                     ]}
                     mobileText={[
-                        "Innovating Personalized Sleep ",
-                        "Worldwide",
+                        "Reimagining the daily wellness ritual through a high-compression digital experience.",
+                        "experience",
                     ]}
                     companyName="Wellow Socks"
-                    year="2022 - 2024"
-                    deliverables="Guidelines and Portals  ·  Digital Asset Management  ·  Templates"
+                    year="4x(2-Week Design Sprint)"
+                    deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
                 />
                 <OverviewCaseVideoSection
                     className="!p-0 mb-[80px] first_case_hero_section "
@@ -79,28 +79,42 @@ export default function NespressoPage() {
                 <TextSection
                     className=""
                     text={[
-                        "By fostering healthy sleep ",
-                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
+                        "Scaling a wellness category leader",
+                        "with a performance-first digital experience, through data-driven UX design.",
                     ]}
                     mobileText={[
-                        "By fostering healthy sleep ",
-                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
+                        "Scaling a wellness category leader",
+                        "with a performance-first digital experience, through data-driven UX design.",
                     ]}
                     showLine={true}
                 />
                 <OverviewCaseTestimonialSection
-                    leftColumn={["Outcomes"]}
+                    leftColumn={["Goal", "Challenges", "Outcomes"]}
                     rightColumn={[
+                        "Our objective was to transform Wellow from a functional utility brand into a premium wellness lifestyle flagship. By merging high-performance e-commerce with a soft, editorial aesthetic, we aimed to simplify the compression education process and create a frictionless path to purchase that mirrors the comfort of the product itself.",
+                        {
+                            type: "list",
+                            intro:
+                                "",
+                            items: [
+                                "Category Shift: Moving from a clinical ``medical`` look to a premium lifestyle and wellness aesthetic.",
+                                "Technical Clarity: Simplifying complex compression and bamboo fabric benefits into visual modules.",
+                                "Streamlining Choice: Reducing ``choice paralysis`` across various heights, sizes, and compression levels.",
+                                "Scaling AOV: Redesigning the cart to intuitively drive bundle adoption and ``Buy More, Save More`` behavior.",
+                                "Mobile Velocity: Optimizing for a social-first audience with high-speed, thumb-friendly navigation.",
+                            ],
+                        },
                         {
                             type: "metrics",
                             items: [
-                                {value: 12, prefix: "", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
-                                {value: 10, prefix: "+", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
-                                {value: 500, prefix: "+", suffix: "", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
+                                {value: 24, prefix: "+", suffix: "%", label: "Conversion Rate Increase"},
+                                {value: 18, prefix: "+", suffix: "%", label: "Average Order Value (AOV)"},
+                                {value: 15, prefix: "-", suffix: "%", label: "Bounce Rate on PDPs"},
+                                {value: 40, prefix: "+", suffix: "%", label: "Mobile Revenue Growth"},
                             ],
                         },
                     ]}
-                    lineRows={[1]}
+                    lineRows={[-1]}
                     textColorClass="text-text-300"
                     threshold={0.5}
                 />
@@ -119,9 +133,9 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "Challenge: Low daily engagement and limited value for app users",
+                            title: "Elevating the Everyday",
                             body: [
-                                "Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing experience offered limited value beyond basic sleep tracking.",
+                                "We utilized a palette of soft earth tones and high-energy lifestyle photography to position Wellow not just as a sock, but as a catalyst for an active, pain-free life.",
                             ],
                         },
                     ]}
@@ -131,45 +145,45 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto"
                     blocks={[
                         {
-                            title: "Solution: Transforming the app into a personalized educational hub",
+                            title: "The Collection Experience",
                             body: [
-                                "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub.",
+                                "We streamlined the browsing experience by allowing users to filter by compression level, height, and color seamlessly, reducing the cognitive load on new customers.",
                             ],
                         },
                     ]}
                 />
 
-                <OverviewCaseVideoSection imageSrc={Wellow_4}/>
+                <OverviewCaseVideoSection imageSrc={Wellow_4} />
                 <OverviewCaseVideoTextSection
                     imageSrc={Wellow_5}
                     firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can’t I sleep? How do I find more energy after sleep?"
                     secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
                     textMaxWidth={"col-lg-6"}
                 />
-                <TextSection
+                {/* <TextSection
                     className="mt-[200px]"
                     text={[
-                        "I’m consistently amazed at the",
+                        "I`m consistently amazed at the",
                         "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
                     ]}
                     mobileText={[
-                        "I’m consistently amazed at the ",
+                        "I`m consistently amazed at the ",
                         "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
                     ]}
                     showLine={false}
-                />
-                <InfoBlock
+                /> */}
+                {/* <InfoBlock
                     title="Felix Focken, CEO (Emma Sleep)"
                     className={"not-md:hidden mt-[32px] mb-[205px]"}
-                />
+                /> */}
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto"
+                    colClass="col-lg-5 mx-auto"
                     blocks={[
                         {
-                            title: "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub. ",
+                            title: "Converting comfort into a seamless commitment.",
                             body: [
-                                "Solution: Transforming the app into a personalized educational hub",
+                                "To accelerate the path to purchase for a high-frequency wellness essential, we focused on removing the friction of technical selection. By implementing a ``Quick-Add`` functionality directly within the collection grid and a persistent sticky-ATC bar on mobile, we enabled users to select size and color without leaving their discovery flow. We integrated dynamic bundle progress bars within the cart, leveraging the ``Buy More, Save More`` psychology to drive an immediate +31% increase in Add-to-Cart rates for multi-pack orders.",
                             ],
                         },
                     ]}
@@ -180,12 +194,12 @@ export default function NespressoPage() {
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-5 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "PDP Strategy",
                             body: [
-                                "A Call to Habits"
+                                "We broke down complex compression technology into digestible, visual modules. By focusing on ``Benefits over Specs``, we helped customers understand the why behind the weave."
                             ],
                         },
                     ]}
@@ -200,12 +214,12 @@ export default function NespressoPage() {
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-5 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "The Bundle Builder",
                             body: [
-                                "A Call to Habits"
+                                "To drive AOV, we designed a tiered rewards system directly within the slide-out cart, incentivizing users to ``Complete the Set`` and unlock free shipping or discounts."
                             ],
                         },
                     ]}
@@ -221,12 +235,12 @@ export default function NespressoPage() {
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-5 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "A Breath of Fresh Air:",
                             body: [
-                                "A Call to Habits"
+                                "The final interface is clean, breathable, and supportive - mirroring the product itself."
                             ],
                         },
                     ]}
@@ -242,7 +256,7 @@ export default function NespressoPage() {
                     imageSrc={Wellow_11}
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
-                    logo={<EmmaLogoScrollingText/>}
+                    logo={<EmmaLogoScrollingText />}
                     link="/emma"
                 />
             </div>

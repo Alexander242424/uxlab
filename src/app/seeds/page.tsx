@@ -59,16 +59,16 @@ export default function NespressoPage() {
                     logo={<SeedsLogo/>}
                     logoMobile={<SeedsLogo/>}
                     text={[
-                        "Innovating Personalized Sleep ",
-                        "Worldwide",
+                        "Defining a high-performance",
+                        "e-commerce ecosystem for the modern brand.",
                     ]}
                     mobileText={[
-                        "Innovating Personalized Sleep ",
-                        "Worldwide",
+                        "Defining a high-performance",
+                        "e-commerce ecosystem for the modern brand.",
                     ]}
-                    companyName="Seeds Socks"
-                    year="2022 - 2024"
-                    deliverables="Guidelines and Portals  ·  Digital Asset Management  ·  Templates"
+                    companyName="Royal Queen Seeds"
+                    year="5x(2-Week Design Sprint)"
+                    deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Bundles  ·  Mobile UX"
                 />
                 <OverviewCaseVideoSection
                     className="!p-0 mb-[80px] first_case_hero_section "
@@ -79,24 +79,36 @@ export default function NespressoPage() {
                 <TextSection
                     className=""
                     text={[
-                        "By fostering healthy sleep ",
-                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
+                        "Empowering the world's leading",
+                        "cannabis marketplace through a high-velocity digital flagship designed for global scale by merging data with an intuitive e-commerce framework.",
                     ]}
                     mobileText={[
-                        "By fostering healthy sleep ",
-                        "habits, Emma Sleep builds trust, encouraging them to download the app and integrate it into their daily routines. ",
+                        "Empowering the world's leading",
+                        "cannabis marketplace through a high-velocity digital flagship designed for global scale by merging data with an intuitive e-commerce framework.",
                     ]}
                     showLine={true}
                 />
                 <OverviewCaseTestimonialSection
-                    leftColumn={["Outcomes"]}
+                    leftColumn={["Goal", "Challenges", "Outcomes"]}
                     rightColumn={[
+                        "Our objective was to maximize the digital footprint of a global cannabis leader. We aimed to build a conversion-optimized marketplace that simplifies the purchase of high-quality goods while leveraging data-driven design to increase lifetime value (LTV) and lower acquisition costs across competitive international markets.",
+                        {
+                            type: "list",
+                            intro:
+                                "",
+                            items: [
+                                "Conversion Friction: Streamlining a high-risk checkout process to ensure security without sacrificing speed.",
+                                "Complex Data Sets: Displaying vital THC, CBD, and yield metrics without cluttering the mobile shopping experience.",
+                                "LTV Stagnation: Moving beyond one-off seed purchases to build a recurring ecosystem of nutrients and equipment.",
+                            ],
+                        },
                         {
                             type: "metrics",
                             items: [
-                                {value: 12, prefix: "", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
-                                {value: 10, prefix: "+", suffix: "K", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
-                                {value: 500, prefix: "+", suffix: "", label: "Turn Visitors into Loyal Customers with Strategic, Goal-Oriented Interfaces."},
+                                {value: 32, prefix: "+", suffix: "%", label: "Increase in Customer Lifetime Value (LTV)"},
+                                {value: 3.5, prefix: "", suffix: "x", label: "Return on Ad Spend (ROAS) on Targeted Campaigns"},
+                                {value: 48, prefix: "+", suffix: "%", label: "Growth in Subscription-based Products Sales"},
+                                {value: 22, prefix: "-", suffix: "%", label: "Cart Abandonment Rate via One-Step Checkout"},
                             ],
                         },
                     ]}
@@ -116,24 +128,24 @@ export default function NespressoPage() {
                 />
                 <CaseTextBox
                     className="pb-0"
-                    colClass="col-lg-6 mx-auto"
+                    colClass="col-lg-5 mx-auto"
                     blocks={[
                         {
-                            title: "Challenge: Low daily engagement and limited value for app users",
+                            title: "Visual Narrative",
                             body: [
-                                "Emma Sleep wanted users to engage with its mobile app on a daily basis, but the existing experience offered limited value beyond basic sleep tracking.",
+                                "We utilized high-contrast macro photography of premium flower, deep forest greens, and sharp typography to weave the brand’s authority through the experience. The new site feels like a high-end dispensary - focused on quality, potency, and a premium user journey.",
                             ],
                         },
                     ]}
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto"
+                    colClass="col-lg-5 mx-auto"
                     blocks={[
                         {
-                            title: "Solution: Transforming the app into a personalized educational hub",
+                            title: "Engineered for high-conversion discovery.",
                             body: [
-                                "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub.",
+                                "We redesigned the cannabis marketplace to function as a data-rich filter engine. Users can instantly pivot between different products reducing the time from landing page to ``Add to Cart`` by 40%.",
                             ],
                         },
                     ]}
@@ -142,11 +154,11 @@ export default function NespressoPage() {
                 <OverviewCaseVideoSection imageSrc={Seeds_4}/>
                 <OverviewCaseVideoTextSection
                     imageSrc={Seeds_5}
-                    firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can’t I sleep? How do I find more energy after sleep?"
-                    secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
+                    firstText="Users typically approach Royal Queen Seeds with specific desires for their experience. How can I find deep relaxation? Which strain will sharpen my creative focus?"
+                    secondText="By bringing the Strain Effects, Terpene Profiles, and Curated Moods to the forefront, we invite users to explore a deeper level of cannabis appreciation and create opportunities to discover the full breadth of the RQS collection."
                     textMaxWidth={"col-lg-6"}
                 />
-                <TextSection
+                {/* <TextSection
                     className="mt-[200px]"
                     text={[
                         "I’m consistently amazed at the",
@@ -161,15 +173,15 @@ export default function NespressoPage() {
                 <InfoBlock
                     title="Felix Focken, CEO (Emma Sleep)"
                     className={"not-md:hidden mt-[32px]"}
-                />
+                /> */}
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto"
+                    colClass="col-lg-5 mx-auto"
                     blocks={[
                         {
-                            title: "To increase daily engagement and provide meaningful value, Emma Sleep adopted a product-focused approach, redesigning the app to offer a comprehensive educational hub. ",
+                            title: "Selling the harvest, not just the seed.",
                             body: [
-                                "Solution: Transforming the app into a personalized educational hub",
+                                "Each PDP was optimized to highlight ``Potency and Performance.`` By showcasing terpene profiles and visual growth timelines alongside clear ``Buy Now`` triggers, we built the consumer confidence necessary for high-ticket genetic sales.",
                             ],
                         },
                     ]}
@@ -180,12 +192,12 @@ export default function NespressoPage() {
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-5 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "Seamless mobile commerce",
                             body: [
-                                "A Call to Habits"
+                                "With over 85% of traffic arriving via mobile social discovery, we prioritized a ``Thumb-to-Checkout`` pathway. We minimized load times for high-res imagery and implemented biometrically-secure payment gateways to ensure a frictionless mobile finish."
                             ],
                         },
                     ]}
@@ -193,19 +205,19 @@ export default function NespressoPage() {
                 {/*<OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"/>*/}
                 <OverviewCaseVideoTextSection
                     imageSrc={Seeds_7}
-                    firstText="We used playful colours, engaging illustrations, and micro-interactions to weave the brand through the experience and draw visitors in."
-                    secondText="The new site feels multi-dimensional — much like the mind."
+                    firstText="We utilized deep, organic tones, high-fidelity macro photography, and seamless micro-interactions to weave the brand's premium identity through the experience and draw connoisseurs in."
+                    secondText=""
                     videoColClass="col-lg-9"
                     textColClass="col-lg-3"
                 />
                 <CaseTextBox
                     className=""
-                    colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
+                    colClass="col-lg-5 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "Data-driven bundling for higher AOV",
                             body: [
-                                "A Call to Habits"
+                                "To drive LTV, we implemented an intelligent cross-sell engine in the slide-out cart. Based on the selected strain, the system automatically suggests the specific nutrient starter kit or protection equipment required for that specific plant type."
                             ],
                         },
                     ]}
@@ -224,9 +236,9 @@ export default function NespressoPage() {
                     colClass="col-lg-6 mx-auto" // тут задаёшь нужные колонки
                     blocks={[
                         {
-                            title: "By fostering healthy sleep habits, Emma Sleep builds trust with users, encouraging them to download the app and integrate it into their daily routines. ",
+                            title: "Converting intent into action at high speed",
                             body: [
-                                "A Call to Habits"
+                                "To drive record-breaking add-to-cart rates, we focused on removing every point of friction between strain discovery and the bag. By implementing ``Quick-Shop`` overlays and a persistent, high-contrast ``Add to Bag`` bar on mobile, we enabled users to act on their preferences instantly. We integrated real-time inventory triggers and ``User-Favorite`` badges that leverage social proof, resulting in a +38% increase in ATC velocity and a significantly more efficient path to purchase for the modern cannabis consumer."
                             ],
                         },
                     ]}

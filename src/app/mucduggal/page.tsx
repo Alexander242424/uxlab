@@ -164,12 +164,12 @@ export default function NespressoPage() {
                 <TextSection
                     className="mt-[200px]"
                     text={[
-                        "I’m consistently amazed at the ",
-                        "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
+                        "They brought a level of design",
+                        "thinking that redefined the Mac Duggal digital experience. By moving beyond a standard e-commerce site to create an intentional digital gallery, they proved they could translate a brand’s unique heritage into a sophisticated, high-performance interface.",
                     ]}
                     mobileText={[
-                        "I’m consistently amazed at the ",
-                        "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
+                        "They brought a level of design",
+                        "thinking that redefined the Mac Duggal digital experience. By moving beyond a standard e-commerce site to create an intentional digital gallery, they proved they could translate a brand’s unique heritage into a sophisticated, high-performance interface.",
                     ]}
                     showLine={false}
                 />

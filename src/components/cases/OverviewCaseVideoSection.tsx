@@ -47,7 +47,7 @@ export default function OverviewCaseVideoSection({
                     {src ? (
                         <VideoPlayer aspectRatio="" src={src} />
                     ) : (
-                        <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+                        <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} quality={99} className="w-full h-full object-cover" />
                     )}
                 </div>
             </motion.section>
@@ -57,7 +57,7 @@ export default function OverviewCaseVideoSection({
                     {src ? (
                         <VideoPlayer aspectRatio="" src={src} />
                     ) : (
-                        <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} className="w-full h-full object-cover" />
+                        <Image loading={"lazy"} src={imageSrc || ""} alt={imageAlt || ""} quality={99}  className="w-full h-full object-cover" />
                     )}
                 </div>
             </section>
