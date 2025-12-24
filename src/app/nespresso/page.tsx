@@ -2,8 +2,8 @@ import NespressoLogoMobile from "@/assets/Nespresso Logo mobile.svg";
 import NespressoLogo from "@/assets/Nespresso Logo.svg";
 import HeroImage from "@/assets/Nespresso/Nespresso.jpg";
 import NespressoCase1 from "@/assets/Nespresso/mediaRowImg1.jpg";
-import OptionImage from "@/assets/Nespresso/nespresso-last.jpg";
-import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
+import OptionImage from "@/assets/image/OurCases/foundrae.webp";
+import EmmaLogoScrollingText from "@/assets/OurCases/logo/foundrae_log.svg";
 import Case3_9Image from "@/assets/Nespresso/case-3-8.jpg";
 
 
@@ -249,7 +249,7 @@ export default function NespressoPage() {
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}
-                    link="/emma"
+                    link="/foundrae"
                 />
             </div>
         </div>

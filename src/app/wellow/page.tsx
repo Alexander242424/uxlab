@@ -9,9 +9,9 @@ import Wellow_7 from "@/assets/Wellow/wal_7.jpg";
 import Wellow_8 from "@/assets/Wellow/wal_8.jpg";
 import Wellow_9 from "@/assets/Wellow/wal_9.jpg";
 import Wellow_10 from "@/assets/Wellow/wal_10.jpg";
-import Wellow_11 from "@/assets/Nespresso/nespresso-last.jpg";
+import Wellow_11 from "@/assets/image/OurCases/royal_queen_seeds_2.webp";
 
-import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
+import EmmaLogoScrollingText from "@/assets/OurCases/logo/rqs_rebranding_logo_header_log.svg";
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import InfoBlock from "@/components/cases/InfoBlock";
 import CaseTextBox from "@/components/cases/CaseTextBox";
@@ -257,7 +257,7 @@ export default function NespressoPage() {
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText />}
-                    link="/emma"
+                    link="/seeds"
                 />
             </div>
         </div>

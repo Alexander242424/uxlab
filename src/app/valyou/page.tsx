@@ -9,9 +9,9 @@ import Valyou_7 from "@/assets/Valyou/val_7.jpg";
 import Valyou_8 from "@/assets/Valyou/val_8.jpg";
 import Valyou_9 from "@/assets/Valyou/val_9.jpg";
 import Valyou_10 from "@/assets/Valyou/val_10.jpg";
-import Valyou_11 from "@/assets/Nespresso/nespresso-last.jpg";
+import Valyou_11 from "@/assets/image/OurCases/wellow.webp";
 
-import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
+import EmmaLogoScrollingText from "@/assets/OurCases/logo/wellow_log.svg";
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import InfoBlock from "@/components/cases/InfoBlock";
 import CaseTextBox from "@/components/cases/CaseTextBox";
@@ -257,7 +257,7 @@ export default function NespressoPage() {
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}
-                    link="/emma"
+                    link="/wellow"
                 />
             </div>
         </div>

@@ -299,3 +299,13 @@ body {
     width: 25%;
     flex: 1;
 }
+.case_case__video_section img{
+    max-height: 1020px;
+}
+.last_link_section img{
+    min-height: 642px;
+    object-fit: cover;
+}
+.last_link_section svg {
+   width: 100%;
+}

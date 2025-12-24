@@ -1,5 +1,5 @@
 import FoundraeLogo from "@/assets/Foundrae/foundrae.svg";
-import HeroImage from "@/assets/Foundrae/big-img.jpg";
+import HeroImage from "@/assets/image/OurCases/foundrae.webp";
 import FoundraeBigImg1 from "@/assets/Foundrae/found-1.jpg";
 import FoundraeBigImg2 from "@/assets/Foundrae/found-2.jpg";
 import FoundraeBigVideoImage from "@/assets/Foundrae/big_video_image.jpg";
@@ -7,8 +7,8 @@ import FoundraeBigVideoImage2 from "@/assets/Foundrae/big_video_image_2.jpg";
 import FoundraeBigLeftImage from "@/assets/Foundrae/foundrae_left_big_image.jpg";
 import BigHeightImage from "@/assets/Foundrae/big_heigth_img.jpg";
 import BigVideoImage from "@/assets/Foundrae/big_video_image.jpg";
-import OptionImage from "@/assets/Nespresso/nespresso-last.jpg";
-import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
+import OptionImage from "@/assets/image/OurCases/mac_duggal.webp";
+import EmmaLogoScrollingText from "@/assets/OurCases/logo/mac_duggal_log.svg";
 import FoundraeLeftImage from "@/assets/Foundrae/left_image.jpg";
 import FoundraeRightBigImage from "@/assets/Foundrae/right_big_image.jpg";
 
@@ -92,7 +92,7 @@ export default function NespressoPage() {
                 <OverviewCaseTestimonialSection
                     leftColumn={["Goal", "Challenges", "Outcomes"]}
                     rightColumn={[
-                        "Foundrae already felt like a gallery of modern heirlooms. The problem was that the online experience behaved like a gallery too: beautiful, slow, and difficult to shop. Customers were browsing, bookmarking and leaving. The brand story was strong, but the path to purchase was fragile.\n\rWe set one goal: Turn Foundrae’s storytelling into a frictionless, repeatable buying ritual.",
+                        "Foundrae already felt like a gallery of modern heirlooms. The problem was that the online experience behaved like a gallery too: beautiful, slow, and difficult to shop. Customers were browsing, bookmarking and leaving. The brand story was strong, but the path to purchase was fragile.\n\rWe set one goal: Turn Foundrae’s storytelling into a frictionless, repeatable buying ritual.",
                         {
                             type: "list",
                             intro:
@@ -141,7 +141,7 @@ export default function NespressoPage() {
                         {
                             title: "A confidence-first luxury journey",
                             body: [
-                                "Foundrae was already priced and crafted as luxury, but the UX didn’t give customers the same confidence as the pieces themselves. We softened the experience into a calm, deliberate journey: fewer steps, clearer hierarchy, and space for the price to feel justified. Craftsmanship, materials, and guarantees now frame every key decision, so the interface quietly supports commitment instead of hesitation.",
+                                "Foundrae was already priced and crafted as luxury, but the UX didn’t give customers the same confidence as the pieces themselves. We softened the experience into a calm, deliberate journey: fewer steps, clearer hierarchy, and space for the price to feel justified. Craftsmanship, materials, and guarantees now frame every key decision, so the interface quietly supports commitment instead of hesitation.",
                             ],
                         },
                     ]}
@@ -198,7 +198,7 @@ export default function NespressoPage() {
                             body: [
                                 "The catalog once behaved like a conventional store, even though the brand is anything but.",
                                 "",
-                                "We elevated symbolism to the front door: customers can now start with meaning -protection, love, identity - and only then refine by metal, type, or price. Each collection opens with a short narrative that frames the pieces as chapters in a story, not just items on a grid."
+                                "We elevated symbolism to the front door: customers can now start with meaning -protection, love, identity - and only then refine by metal, type, or price. Each collection opens with a short narrative that frames the pieces as chapters in a story, not just items on a grid."
                             ],
                         },
                     ]}
@@ -219,7 +219,7 @@ export default function NespressoPage() {
                             body: [
                                 "The old pages looked premium but stayed quiet on the details that actually close a high-value sale.",
                                 "",
-                                " We rebuilt them as composed, scannable narratives: symbolism, materials, craftsmanship, personalization, sizing, delivery, and returns each have a defined place. Subtle social proof and inline FAQs handle objections next to the CTA, so users feel informed without being pushed."
+                                " We rebuilt them as composed, scannable narratives: symbolism, materials, craftsmanship, personalization, sizing, delivery, and returns each have a defined place. Subtle social proof and inline FAQs handle objections next to the CTA, so users feel informed without being pushed."
                             ],
                         },
                     ]}
@@ -257,7 +257,7 @@ export default function NespressoPage() {
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}
-                    link="/emma"
+                    link="/mucduggal"
                 />
             </div>
         </div>

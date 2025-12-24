@@ -221,7 +221,7 @@ export default function ScrollingTextCaseSection({
   }, [isHovering, isMobile]);
 
   return (
-    <div className="relative w-full h-[600px] md:h-[840px] overflow-hidden">
+    <section className="relative w-full h-[600px] md:h-[840px] overflow-hidden last_link_section">
       {/* Scrolling text background (from ScrollingTextVideoSection) */}
       <div className="absolute inset-0 flex items-center">
         <div
@@ -356,6 +356,6 @@ export default function ScrollingTextCaseSection({
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }

@@ -9,9 +9,9 @@ import Mucduggal_7 from "@/assets/Mucduggal/muc_7.jpg";
 import Mucduggal_8 from "@/assets/Mucduggal/muc_8.jpg";
 import Mucduggal_9 from "@/assets/Mucduggal/muc_9.jpg";
 import Mucduggal_10 from "@/assets/Mucduggal/muc_10.jpg";
-import Mucduggal_11 from "@/assets/Nespresso/nespresso-last.jpg";
+import Mucduggal_11 from "@/assets/image/OurCases/valyou.webp";
 
-import EmmaLogoScrollingText from "@/assets/image/OurCases/logo/emma-logo.svg";
+import EmmaLogoScrollingText from "@/assets/OurCases/logo/valyou_log.svg";
 import CasesHeroSections from "@/components/cases/CasesHeroSections";
 import InfoBlock from "@/components/cases/InfoBlock";
 import CaseTextBox from "@/components/cases/CaseTextBox";
@@ -223,7 +223,7 @@ export default function NespressoPage() {
                     leftImageAlt="Concept sketch"
                     leftTitle=""
                     leftBody={[
-                        "Dress shopping is high-stakes; uncertainty kills conversions. We added fit information, model height, movement shots, and fabric texture details so customers know exactly what they’re buying.",
+                        "Dress shopping is high-stakes; uncertainty kills conversions.We added fit information, model height, movement shots, and fabric texture details so customers know exactly what they’re buying.",
                         "",
                         "This eliminates hesitation and turns more PDP views into confident purchases."
                     ]}
@@ -255,7 +255,7 @@ export default function NespressoPage() {
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}
-                    link="/emma"
+                    link="/valyou"
                 />
             </div>
         </div>
