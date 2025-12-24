@@ -74,12 +74,12 @@ export default function NespressoPage() {
                 <TextSection
                     className=""
                     text={[
-                        "WHOOP.com — Building",
-                        "a sophisticated digital experience for a one-of-a-kind product.",
+                        "Redefining the digital essence of luxury espresso",
+                        "through a high-velocity e-commerce experience. By merging cinematic storytelling with a frictionless replenishment ecosystem, we transformed the daily coffee routine into a sophisticated, high-performance digital gallery for the modern connoisseur.",
                     ]}
                     mobileText={[
-                        "WHOOP.com — Building",
-                        "a sophisticated digital experience for a one-of-a-kind product.",
+                        "Redefining the digital essence of luxury espresso",
+                        "through a high-velocity e-commerce experience. By merging cinematic storytelling with a frictionless replenishment ecosystem, we transformed the daily coffee routine into a sophisticated, high-performance digital gallery for the modern connoisseur.",
                     ]}
                     showLine={true}
                 />

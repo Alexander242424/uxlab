@@ -156,8 +156,8 @@ export default function NespressoPage() {
                 <OverviewCaseVideoSection imageSrc={Wellow_4} />
                 <OverviewCaseVideoTextSection
                     imageSrc={Wellow_5}
-                    firstText="People typically visit Emma Sleep with strong questions about sleep quality. Why can’t I sleep? How do I find more energy after sleep?"
-                    secondText="Bringing the Sleep Challenges, Sleep Scan, and Daily Routine categories to the forefront invites users to dive further into mindful living and creates opportunities to discover everything Emma Sleep has to offer."
+                    firstText="The mobile interface was designed for thumb-ready navigation, featuring a persistent ``Add to Bag`` bar and quick-view product details."
+                    secondText=""
                     textMaxWidth={"col-lg-6"}
                 />
                 {/* <TextSection

@@ -109,7 +109,7 @@ export default function OurCases() {
   const captionRef = useRef<HTMLSpanElement | null>(null);
 
 
-   const [previewConfig, setPreviewConfig] = useState(() => {
+  const [previewConfig, setPreviewConfig] = useState(() => {
     // на сервере window нет
     if (typeof window === "undefined") {
       return {
@@ -159,7 +159,7 @@ export default function OurCases() {
     };
   }, []);
 
-const PREVIEW_WIDTH = previewConfig.width;
+  const PREVIEW_WIDTH = previewConfig.width;
   const PREVIEW_HEIGHT = previewConfig.height;
   const PREVIEW_PADDING_X = 0;
   const BOUNDARY_PADDING = previewConfig.boundaryPadding;
@@ -436,7 +436,11 @@ const PREVIEW_WIDTH = previewConfig.width;
                   }
                 }}
               >
-                <Link href={item.link || "#"}>
+                <Link onClick={() => {
+                  if (typeof window !== "undefined") {
+                    sessionStorage.setItem("force-scroll-top-next", "1");
+                  }
+                }} href={item.link || "#"}>
                   <Image
                     src={item.src}
                     alt={item.alt}

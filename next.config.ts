@@ -22,6 +22,9 @@ const nextConfig: NextConfig = {
 
     },
   },
+  images: {
+    qualities: [70, 75, 90, 99],
+  },
 
   typescript: {
     ignoreBuildErrors: true,

@@ -255,7 +255,7 @@ export default function NespressoPage() {
                     imageAlt="Case study description"
                     videoTitle="Video title for cursor"
                     logo={<EmmaLogoScrollingText/>}
-                    link="/emma"
+                    link="/nespresso"
                 />
             </div>
         </div>

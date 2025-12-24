@@ -174,7 +174,7 @@ export default function NespressoPage() {
                     showLine={false}
                 />
                 <InfoBlock
-                    title="Felix Focken, CEO (Emma Sleep)"
+                    title="Kristen Kleinsorge, Creative Director at Mac Duggal"
                     className={"not-md:hidden mt-[32px] mb-[205px]"}
                 />
                 <OverviewCaseVideoSection

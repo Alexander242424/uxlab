@@ -70,21 +70,21 @@ export default function ScrollingTextCaseSection({
   // Mouse move handler (from OurCases)
   const handleMouseMove = useCallback((e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
-    
+
     // Обчислюємо зміщення підпису на основі позиції миші
     if (isHovering && !isMobile) {
       // Знаходимо поточний елемент для обчислення відносної позиції
       const imageElement = document.querySelector(`img[alt="${imageAlt}"]`) as HTMLElement;
-      
+
       if (imageElement) {
         const imageRect = imageElement.getBoundingClientRect();
         const imageCenterX = imageRect.left + imageRect.width / 2;
         const normalizedX = (e.clientX - imageCenterX) / (imageRect.width / 2);
-        
+
         // Обчислюємо максимальне зміщення на основі ширини блоку відео (200px)
         const videoBlockWidth = 200;
         const maxOffset = Math.min(20, (videoBlockWidth - 80) / 2);
-        
+
         const offset = normalizedX * maxOffset;
         setCaptionOffset(offset);
       } else {
@@ -109,9 +109,9 @@ export default function ScrollingTextCaseSection({
     window.addEventListener("mousemove", handleMouseMove);
 
     if (!isInitialized) {
-      setMousePosition({ 
-        x: window.innerWidth / 2, 
-        y: window.innerHeight / 2 
+      setMousePosition({
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2
       });
       setIsInitialized(true);
     }
@@ -125,23 +125,23 @@ export default function ScrollingTextCaseSection({
   // Cursor styles calculation (from OurCases)
   const cursorStyles = React.useMemo(() => {
     if (!isHovering || isMobile || !isInitialized) return null;
-    
+
     const cursorWidth = 200;
     const cursorHeight = 264;
-    
+
     // Знаходимо елемент зображення для обмеження курсора
     const imageElement = document.querySelector(`img[alt="${imageAlt}"]`) as HTMLElement;
-    
+
     if (!imageElement) {
       // Fallback до вікна браузера якщо зображення не знайдено
       let left = mousePosition.x - cursorWidth / 2;
       let top = mousePosition.y - cursorHeight / 2;
-      
+
       if (left < 0) left = 0;
       if (left + cursorWidth > windowSize.width) left = windowSize.width - cursorWidth;
       if (top < 0) top = 0;
       if (top + cursorHeight > windowSize.height) top = windowSize.height - cursorHeight;
-      
+
       return {
         left,
         top,
@@ -149,34 +149,34 @@ export default function ScrollingTextCaseSection({
         height: `${cursorHeight}px`,
       };
     }
-    
+
     const imageRect = imageElement.getBoundingClientRect();
     const padding = 40; // Відступ від країв зображення
-    
+
     // Обчислюємо межі зображення з відступом (відносно viewport)
     const imageLeft = imageRect.left + padding;
     const imageTop = Math.max(imageRect.top + padding, 0); // Не менше 0
     const imageRight = imageRect.right - padding - cursorWidth;
     const imageBottom = imageRect.bottom - padding - 270;
-    
+
     // Обмежуємо позицію курсора межами зображення та вікна
     let left = mousePosition.x - cursorWidth / 2;
     let top = mousePosition.y - cursorHeight / 2;
-    
+
     // Обмеження по горизонталі
     if (left < imageLeft) left = imageLeft;
     if (left > imageRight) left = imageRight;
-    
+
     // Обмеження по вертикалі з урахуванням скролу
     if (top < imageTop) top = imageTop;
     if (top > imageBottom) top = imageBottom;
-    
+
     // Додаткові обмеження для країв вікна
     if (left < 0) left = 0;
     if (left + cursorWidth > windowSize.width) left = windowSize.width - cursorWidth;
     if (top < 0) top = 0;
     if (top + cursorHeight > windowSize.height) top = windowSize.height - cursorHeight;
-    
+
     return {
       left,
       top,
@@ -209,7 +209,7 @@ export default function ScrollingTextCaseSection({
       const timer = setTimeout(() => {
         setShowVideo(true);
       }, 300);
-      
+
       return () => {
         clearTimeout(timer);
         setShowVideo(false);
@@ -262,22 +262,24 @@ export default function ScrollingTextCaseSection({
               }
             }}
           >
-            <Link href={link}>
+            <Link onClick={() => {
+              if (typeof window !== "undefined") {
+                sessionStorage.setItem("force-scroll-top-next", "1");
+              }
+            }} href={link}>
               <Image
                 src={imageSrc}
                 alt={imageAlt}
                 loading={"lazy"}
                 width={400}
                 height={300}
-                className={`w-full rounded-md image-hover-darken ${
-                  isHovering ? "brightness-50" : "brightness-100"
-                }`}
+                className={`w-full rounded-md image-hover-darken ${isHovering ? "brightness-50" : "brightness-100"
+                  }`}
               />
-              
+
               {logo && (
-                <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] sm:mb-[48px] transition-opacity duration-300 ${
-                  isHovering ? "opacity-0" : "opacity-100"
-                }`}>
+                <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-[21px] sm:mb-[48px] transition-opacity duration-300 ${isHovering ? "opacity-0" : "opacity-100"
+                  }`}>
                   {logo}
                 </div>
               )}
@@ -340,14 +342,14 @@ export default function ScrollingTextCaseSection({
               )
             )}
             <div className="video-cursor-content">
-              <motion.p 
+              <motion.p
                 className="text-text-700 hoves-p3-reg text-center"
-                animate={{ 
+                animate={{
                   x: captionOffset,
-                  transition: { 
-                    duration: 0.3, 
-                    ease: "easeOut" 
-                  } 
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
                 }}
               >
                 {videoTitle}

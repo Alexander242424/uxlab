@@ -171,17 +171,17 @@ export default function NespressoPage() {
                 <TextSection
                     className="mt-[200px]"
                     text={[
-                        "I’m consistently amazed at the ",
-                        "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
+                        "Working with UXLAB completely",
+                        "redefined how Foundrae tells its story online. They didn't just design a website; they built a digital gallery that feels as intentional and handcrafted as the jewelry itself. Their ability to translate a brand's soul into a high-performance interface is truly rare.",
                     ]}
                     mobileText={[
-                        "I’m consistently amazed at the ",
-                        "quality of work Alex produces. From day one Alex just got our brand, created some stunning designs, and ensured the whole process ran smoothly.",
+                        "Working with UXLAB completely",
+                        "redefined how Foundrae tells its story online. They didn't just design a website; they built a digital gallery that feels as intentional and handcrafted as the jewelry itself. Their ability to translate a brand's soul into a high-performance interface is truly rare.",
                     ]}
                     showLine={false}
                 />
                 <InfoBlock
-                    title="Felix Focken, CEO (Emma Sleep)"
+                    title="Bryan Freeman, Head of Retail at Foundrae"
                     className={"not-md:hidden mt-[32px] mb-[205px]"}
                 />
                 <OverviewCaseVideoSection
@@ -206,7 +206,7 @@ export default function NespressoPage() {
                 {/*<OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"/>*/}
                 <OverviewCaseVideoTextSection
                     imageSrc={FoundraeBigLeftImage}
-                    firstText="We aimed to develop a design system for Nespresso to guarantee consistency and optimal performance at scale. The navigation emerged as our primary focus, utilizing a blend of functional and expressive motion to create an innovative wayfinding solution that directs and engages users effectively."
+                    firstText="Jewelry is a high-ticket, high-trust transaction. We killed the liability. We flooded the PDP with clarity and macro-level scale shots. We stopped selling a thumbnail and started selling verified authenticity. The result? Zero hesitation, maximum revenue capture."
                     videoColClass="col-lg-9"
                     textColClass="col-lg-3"
                 />

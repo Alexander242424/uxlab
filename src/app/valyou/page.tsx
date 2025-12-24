@@ -80,11 +80,11 @@ export default function NespressoPage() {
                     className=""
                     text={[
                         "Scaling a disruptive furniture",
-                        "brand through an immersive, fashion-forward digital experience.",
+                        "brand through an immersive, luxury, fashion-forward digital experience.",
                     ]}
                     mobileText={[
                         "Scaling a disruptive furniture",
-                        "brand through an immersive, fashion-forward digital experience.",
+                        "brand through an immersive, luxury, fashion-forward digital experience.",
                     ]}
                     showLine={true}
                 />
