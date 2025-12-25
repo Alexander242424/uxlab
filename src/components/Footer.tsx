@@ -189,7 +189,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/#services_list_section"
+                                            href="/#cases"
                                             className={`relative group text-text-700 t-p1`}
                                         >
                                             Cases
