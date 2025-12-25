@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function NespressoPage() {
     return (
-        <div className="flex flex-col">
+        <div data-page="case" className="flex flex-col">
             <div className="w-full">
                 <CasesHeroSections
                     logo={<NespressoLogo/>}
@@ -192,6 +192,7 @@ export default function NespressoPage() {
                 />
                 {/*<OverviewCaseVideoSection src="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"/>*/}
                 <OverviewCaseVideoTextSection
+                    secondText=""
                     videoSrc="/video/nespressso/0K4deDlD8wKDWus41S2tYo8Yw.mp4"
                     firstText="We aimed to develop a design system for Nespresso to guarantee consistency and optimal performance at scale. The navigation emerged as our primary focus, utilizing a blend of functional and expressive motion to create an innovative wayfinding solution that directs and engages users effectively."
                     videoColClass="col-lg-9"

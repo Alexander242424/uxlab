@@ -11,7 +11,7 @@ type ListContent = {
 };
 
 type MetricsItem = {
-    value: string;
+    value: number;
     label: string;
     prefix?: string;
     suffix?: string;
@@ -29,31 +29,28 @@ interface OverviewCaseTestimonialSectionProps {
     rightColumn: RightColumnItem[];
     mobileText?: string | string[];
     authorText?: string;
-    /** В каких рядах показывать линию (индексы с 0) */
     lineRows?: number[];
-    /** Класс для цвета линии (например text-text-300) */
     textColorClass?: string;
-    /** amount для viewport */
     threshold?: number;
 }
 const CountUp = dynamic(() => import("react-countup"), {
     ssr: false,
 });
 export default function OverviewCaseTestimonialSection({
-                                                           leftColumn,
-                                                           rightColumn,
-                                                           lineRows,
-                                                           textColorClass,
-                                                           threshold,
-                                                       }: OverviewCaseTestimonialSectionProps) {
+    leftColumn,
+    rightColumn,
+    lineRows,
+    textColorClass,
+    threshold,
+}: OverviewCaseTestimonialSectionProps) {
     const rowsCount = Math.max(leftColumn.length, rightColumn.length);
-    const lineRowsSet = new Set(lineRows ?? []); // чтобы проверка была дешёвой
+    const lineRowsSet = new Set(lineRows ?? []);
 
     const renderRightContent = (item: RightColumnItem | undefined, idx: number) => {
         if (!item) return null;
 
         if (typeof item === "string") {
-            const parts = item.split(/\r?\n/); // делим по переносам
+            const parts = item.split(/\r?\n/);
 
             return (
                 <div className="t-p1 text-neutral-100 max-w-[640px] space-y-4">
@@ -92,14 +89,22 @@ export default function OverviewCaseTestimonialSection({
                                 end={metric.value}
                                 duration={3}
                                 decimals={Number.isInteger(metric.value) ? 0 : 1}
-                                enableScrollSpy
-                                className="not-md:text-[7.5rem] text-[10.5rem] big_quants"
+                                enableScrollSpy={true}
+                                scrollSpyOnce={true}
+                                // ❌ enableScrollSpy — УБРАЛИ (он даёт target null в Next dev)
+                                // scrollSpyOnce / scrollSpyDelay тоже не нужны без enableScrollSpy
                                 prefix={metric.prefix ?? ""}
                                 suffix={metric.suffix ?? ""}
-                            />
-                            <span className="t-p1 text-[#A3A3A3] mt-3">
-                                {metric.label}
-                              </span>
+                            >
+                                {({ containerRef, countUpRef }: any) => (
+                                    <span
+                                        ref={containerRef ?? countUpRef}
+                                        className="not-md:text-[7.5rem] text-[10.5rem] big_quants"
+                                    />
+                                )}
+                            </CountUp>
+
+                            <span className="t-p1 text-[#A3A3A3] mt-3">{metric.label}</span>
                         </div>
                     ))}
                 </div>
@@ -132,9 +137,8 @@ export default function OverviewCaseTestimonialSection({
                                     </div>
                                     {showLine && (
                                         <motion.div
-                                            className={`my-[32px] h-[1px] line_animated ${
-                                                textColorClass || "text-text-300"
-                                            }`}
+                                            className={`my-[32px] h-[1px] line_animated ${textColorClass || "text-text-300"
+                                                }`}
                                             style={{
                                                 backgroundColor: "#FFFFFF29",
                                                 transformOrigin: "left center",

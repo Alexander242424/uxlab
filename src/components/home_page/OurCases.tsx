@@ -436,11 +436,7 @@ export default function OurCases() {
                   }
                 }}
               >
-                <Link onClick={() => {
-                  if (typeof window !== "undefined") {
-                    sessionStorage.setItem("force-scroll-top-next", "1");
-                  }
-                }} href={item.link || "#"}>
+                <Link data-scroll="top" href={item.link || "#"}>
                   <Image
                     src={item.src}
                     alt={item.alt}

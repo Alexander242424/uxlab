@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function NespressoPage() {
     return (
-        <div className="flex flex-col">
+        <div data-page="case" className="flex flex-col">
             <div className="w-full">
                 <CasesHeroSections
                     logo={<ValyouLogo/>}

@@ -1,10 +1,10 @@
 "use client";
-import {motion} from "motion/react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import ArrowUpRightSVG from "@/assets/arrow-up-right.svg";
 import SplitText from "../SplitText";
-import {useIsMobile} from "@/hooks/useIsMobile";
-import {useCalModal} from "@/context/CalModalContext";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import { useCalModal } from "@/context/CalModalContext";
 import dynamic from "next/dynamic";
 
 interface ServiceItem {
@@ -20,17 +20,17 @@ const CountUp = dynamic(() => import("react-countup"), {
 
 // Кастомний компонент для рендерингу тексту з посиланнями (оставляем как есть)
 const TextWithLinks = ({
-                           text,
-                           className,
-                           globalIndex,
-                           delay = 100,
-                           duration = 0.8,
-                           ease = "power3.out",
-                           from = {opacity: 0, y: 50},
-                           to = {opacity: 1, y: 0},
-                           threshold = 0.1,
-                           rootMargin = "100px",
-                       }: {
+    text,
+    className,
+    globalIndex,
+    delay = 100,
+    duration = 0.8,
+    ease = "power3.out",
+    from = { opacity: 0, y: 50 },
+    to = { opacity: 1, y: 0 },
+    threshold = 0.1,
+    rootMargin = "100px",
+}: {
     text: string;
     className: string;
     globalIndex: number;
@@ -48,12 +48,12 @@ const TextWithLinks = ({
         const parts: Array<{ type: "text" | "link"; content: string; href?: string }> = [];
 
         const linkPatterns = [
-            {pattern: /Boostra/g, href: "http://getboostra.com"},
-            {pattern: /Tapmy\.store/g, href: "https://app.tapmy.store/get-started"},
+            { pattern: /Boostra/g, href: "http://getboostra.com" },
+            { pattern: /Tapmy\.store/g, href: "https://app.tapmy.store/get-started" },
         ];
 
         const allMatches: Array<{ content: string; href: string; index: number }> = [];
-        linkPatterns.forEach(({pattern, href}) => {
+        linkPatterns.forEach(({ pattern, href }) => {
             let match;
             while ((match = pattern.exec(text)) !== null) {
                 allMatches.push({
@@ -67,7 +67,7 @@ const TextWithLinks = ({
         allMatches.sort((a, b) => a.index - b.index);
 
         if (allMatches.length === 0) {
-            parts.push({type: "text", content: text});
+            parts.push({ type: "text", content: text });
         } else {
             let lastIndex = 0;
 
@@ -75,18 +75,18 @@ const TextWithLinks = ({
                 if (match.index > lastIndex) {
                     const beforeText = text.substring(lastIndex, match.index);
                     if (beforeText) {
-                        parts.push({type: "text", content: beforeText});
+                        parts.push({ type: "text", content: beforeText });
                     }
                 }
 
-                parts.push({type: "link", content: match.content, href: match.href});
+                parts.push({ type: "link", content: match.content, href: match.href });
                 lastIndex = match.index + match.content.length;
             });
 
             if (lastIndex < text.length) {
                 const afterText = text.substring(lastIndex);
                 if (afterText) {
-                    parts.push({type: "text", content: afterText});
+                    parts.push({ type: "text", content: afterText });
                 }
             }
         }
@@ -101,7 +101,7 @@ const TextWithLinks = ({
             className="inline-block"
             initial={from}
             whileInView={to}
-            viewport={{once: true, margin: rootMargin}}
+            viewport={{ once: true, margin: rootMargin }}
             transition={{
                 duration,
                 delay: delay / 1000 + globalIndex * 0.3,
@@ -124,8 +124,8 @@ const TextWithLinks = ({
                 }
                 return (
                     <span key={index} className={className}>
-            {part.content}
-          </span>
+                        {part.content}
+                    </span>
                 );
             })}
         </motion.span>
@@ -190,9 +190,9 @@ const secondParagraphMobile = [
 ];
 
 const quantsList = [
-    {value: 2.2, suffix: "B", label: "Global users reached"},
-    {value: 138, suffix: "", label: "Brands uplifted"},
-    {value: 2, suffix: "", label: "Product sprint"},
+    { value: 2.2, suffix: "B", label: "Global users reached" },
+    { value: 138, suffix: "", label: "Brands uplifted" },
+    { value: 2, suffix: "", label: "Product sprint" },
 ];
 
 // Хелпер: рендерим массив строк с анимацией по словам
@@ -200,7 +200,7 @@ const quantsList = [
 
 export default function ServiceItems() {
     const isMobile = useIsMobile();
-    const {openModal} = useCalModal();
+    const { openModal } = useCalModal();
 
     const handleCalClick = () => {
         openModal("https://cal.com/eugene.orehov/30min?overlayCalendar=true");
@@ -216,10 +216,10 @@ export default function ServiceItems() {
                 style={{
                     transformOrigin: "left",
                 }}
-                initial={{scaleX: 0}}
-                whileInView={{scaleX: 1}}
-                viewport={{once: true, margin: "0px"}}
-                transition={{duration: 1.2, ease: "easeOut"}}
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true, margin: "0px" }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
             />
             <div className="container-fluid">
                 <div className="row">
@@ -233,8 +233,8 @@ export default function ServiceItems() {
                                 delay={100}
                                 duration={0.8}
                                 ease="power3.out"
-                                from={{opacity: 0, y: 50}}
-                                to={{opacity: 1, y: 0}}
+                                from={{ opacity: 0, y: 50 }}
+                                to={{ opacity: 1, y: 0 }}
                                 threshold={0.1}
                                 rootMargin={isMobile ? "-100px" : "-200px"}
                                 textAlign="left"
@@ -254,8 +254,8 @@ export default function ServiceItems() {
                                 delay={100}
                                 duration={0.8}
                                 ease="power3.out"
-                                from={{opacity: 0, y: 50}}
-                                to={{opacity: 1, y: 0}}
+                                from={{ opacity: 0, y: 50 }}
+                                to={{ opacity: 1, y: 0 }}
                                 threshold={0.1}
                                 rootMargin={isMobile ? "-100px" : "-200px"}
                                 textAlign="left"
@@ -267,8 +267,8 @@ export default function ServiceItems() {
                                 delay={100}
                                 duration={0.8}
                                 ease="power3.out"
-                                from={{opacity: 0, y: 50}}
-                                to={{opacity: 1, y: 0}}
+                                from={{ opacity: 0, y: 50 }}
+                                to={{ opacity: 1, y: 0 }}
                                 threshold={0.1}
                                 rootMargin={isMobile ? "-100px" : "-200px"}
                                 textAlign="left"
@@ -278,27 +278,28 @@ export default function ServiceItems() {
                         {/* QUANTS */}
                         <div className="flex quants_row">
                             {quantsList.map((quant, index) => (
-                                <div
-                                    key={index}
-                                    className="mr-8 last:mr-0 quant"
-                                >
+                                <div key={index} className="mr-8 last:mr-0 quant">
                                     <div className="hoves-h3-med text-text-700 main_text t-h1">
                                         <CountUp
                                             start={0}
                                             end={quant.value}
                                             duration={3}
                                             decimals={Number.isInteger(quant.value) ? 0 : 1}
-                                            enableScrollSpy
-                                            className="t-h1"
-                                        />
-                                        {quant.suffix}
+                                            enableScrollSpy={true}
+                                            scrollSpyOnce={true}
+                                            suffix={quant.suffix ?? ""}
+                                        >
+                                            {({ containerRef, countUpRef }: any) => (
+                                                <span ref={containerRef ?? countUpRef} className="t-h1" />
+                                            )}
+                                        </CountUp>
                                     </div>
-                                    <p className="t-p1 text-[#A3A3A3] mt-2">
-                                        {quant.label}
-                                    </p>
+
+                                    <p className="t-p1 text-[#A3A3A3] mt-2">{quant.label}</p>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
             </div>

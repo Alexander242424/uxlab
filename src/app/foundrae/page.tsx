@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function NespressoPage() {
     return (
-        <div className="flex flex-col">
+        <div data-page="case" className="flex flex-col">
             <div className="w-full">
                 <CasesHeroSections
                     logo={<FoundraeLogo/>}
@@ -67,7 +67,7 @@ export default function NespressoPage() {
                         "Reframing a digital jewelry",
                         "gallery into a revenue engine",
                     ]}
-                    companyName=""
+                    companyName="Foundrae"
                     year="6x(2-Week Design Sprint)"
                     deliverables="Optimize the Core User Flow  →  Checkout  ·  Homepage  ·  Subscription  ·  Mobile UX"
                 />
@@ -248,7 +248,7 @@ export default function NespressoPage() {
                 <OverviewCaseVideoSection
                     className="md:pb-8 not-md:mt-[24px]"
                     imageSrc={BigVideoImage}
-                    aspectRatio="1"
+                    // aspectRatio="1"
                 />
 
                 <ScrollingTextCaseSection
