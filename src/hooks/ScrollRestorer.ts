@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
+import { scrollToY } from "@/lib/lenis";
 
 const STORAGE_KEY_PREFIX = "scroll-pos:";
 const FORCE_TOP_KEY = "force-scroll-top-next";
@@ -14,11 +15,6 @@ function isHome(pathname: string) {
   return pathname === "/";
 }
 
-function isCasePageDOM() {
-  // важно: проверяем уже отрендеренный DOM страницы
-  return !!document.querySelector('[data-page="case"]');
-}
-
 function getPathFromHref(href: string) {
   try {
     return new URL(href, window.location.origin).pathname || "/";
@@ -27,17 +23,27 @@ function getPathFromHref(href: string) {
   }
 }
 
+// добиваем несколько кадров, чтобы Lenis/лейаут не отыграл назад
+function forceTopHard() {
+  scrollToY(0, true);
+  requestAnimationFrame(() => scrollToY(0, true));
+  requestAnimationFrame(() => requestAnimationFrame(() => scrollToY(0, true)));
+  requestAnimationFrame(() => requestAnimationFrame(() => requestAnimationFrame(() => scrollToY(0, true))));
+  setTimeout(() => scrollToY(0, true), 0);
+  setTimeout(() => scrollToY(0, true), 50);
+}
+
+
 export default function ScrollRestorer() {
   const pathname = usePathname();
 
-  // отключаем дефолтный restoration
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
   }, []);
 
-  // ловим клики по ссылкам и решаем: форс топ или нет
+  // помечаем переходы, которые должны быть сверху
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (e.defaultPrevented) return;
@@ -52,13 +58,11 @@ export default function ScrollRestorer() {
       if (a.target === "_blank") return;
       if (a.hasAttribute("download")) return;
 
-      // если ссылка помечена как "следующая страница должна быть сверху"
       if (a.getAttribute("data-scroll") === "top") {
         sessionStorage.setItem(FORCE_TOP_KEY, "1");
 
         const nextPath = getPathFromHref(href);
         if (nextPath) {
-          // чтобы никогда не восстанавливалось “где-то внизу”
           sessionStorage.removeItem(`${STORAGE_KEY_PREFIX}${nextPath}`);
         }
       }
@@ -68,46 +72,37 @@ export default function ScrollRestorer() {
     return () => document.removeEventListener("click", handler, true);
   }, []);
 
-  // на переходе применяем позицию
+  // применяем скролл на новом pathname
   useLayoutEffect(() => {
     const storageKey = `${STORAGE_KEY_PREFIX}${pathname}`;
 
     const forceTop = sessionStorage.getItem(FORCE_TOP_KEY) === "1";
     if (forceTop) {
       sessionStorage.removeItem(FORCE_TOP_KEY);
-      window.scrollTo(0, 0);
-      requestAnimationFrame(() => window.scrollTo(0, 0));
-      return;
-    }
-
-    // если это кейс-страница — всегда вверх
-    // (важно: проверка DOM после рендера страницы)
-    if (!isHome(pathname) && isCasePageDOM()) {
-      // на всякий случай грохнем сохранение для этого пути
       sessionStorage.removeItem(storageKey);
-      window.scrollTo(0, 0);
-      requestAnimationFrame(() => window.scrollTo(0, 0));
+      forceTopHard();
       return;
     }
 
-    // восстанавливаем ТОЛЬКО на главной
+    // home: восстановление
     if (isHome(pathname)) {
       const saved = sessionStorage.getItem(storageKey);
       if (saved != null) {
         const y = Number(saved);
         if (isFiniteNumber(y)) {
-          window.scrollTo(0, y);
-          requestAnimationFrame(() => window.scrollTo(0, y));
+          scrollToY(y, true);
+          requestAnimationFrame(() => scrollToY(y, true));
         }
       }
-    } else {
-      // остальные страницы по умолчанию — вверх
-      window.scrollTo(0, 0);
-      requestAnimationFrame(() => window.scrollTo(0, 0));
+      return;
     }
+
+    // все остальные страницы всегда вверх (включая кейсы)
+    sessionStorage.removeItem(storageKey);
+    forceTopHard();
   }, [pathname]);
 
-  // сохраняем скролл ТОЛЬКО на главной
+  // сохраняем скролл только на home
   useEffect(() => {
     if (!isHome(pathname)) return;
 

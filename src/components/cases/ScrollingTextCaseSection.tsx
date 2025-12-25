@@ -6,6 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import VideoPlayer from "../VideoPlayer";
+import { lenisScrollToTop } from "@/lib/lenis";
 
 interface ScrollingTextCaseSectionProps {
   videoSrc?: string;
@@ -262,7 +263,11 @@ export default function ScrollingTextCaseSection({
               }
             }}
           >
-            <Link data-scroll="top" href={link}>
+            <Link
+              scroll={true}
+              data-scroll="top"
+              href={link}
+            >
               <Image
                 src={imageSrc}
                 alt={imageAlt}

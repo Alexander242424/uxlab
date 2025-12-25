@@ -432,6 +432,9 @@
     .design_container .col-lg-4 {
         margin-top: 32px;
     }
+    .last_link_section img {
+        min-height: 460px;
+    }
 }
 @media (max-width: 527px) {
     .logos_slider .row .col {
