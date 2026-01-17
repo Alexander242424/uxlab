@@ -5,6 +5,7 @@ import HeroSection from "@/components/home_page/HeroSection";
 import ShowreelSection from "@/components/home_page/ShowreelSection";
 import TextSection from "@/components/home_page/TextSection";
 
+
 // SVG можно оставить так, но лучше тоже лениво, если слайдер далеко вниз
 import Slidelogo_1 from "@/assets/logoicons/logo_1.svg";
 import Slidelogo_2 from "@/assets/logoicons/logo_2.svg";
@@ -19,6 +20,7 @@ import Slidelogo_10 from "@/assets/logoicons/logo_10.svg";
 
 import designImage from "@/assets/design_section_image.jpg";
 const ServiceItems = dynamic(() => import("@/components/home_page/ServiceItems"));
+const FeatureEngagemant = dynamic(() => import("@/components/home_page/FeatureEngagemant"));
 const DesignOptionSection = dynamic(() => import("@/components/home_page/DesignOptionSection"));
 const AnimatedTextByLetters = dynamic(() => import("@/components/AnimatedTextByLetters"));
 const OurCases = dynamic(() => import("@/components/home_page/OurCases"));
@@ -53,6 +55,7 @@ export default function HomePage() {
         <section className="show_reel_section">
           <ShowreelSection mobileSrc="/video/reel-short-mobile.mp4" desktopSrc="/video/reel-short.mp4" />
         </section>
+        <FeatureEngagemant />
 
         <TextSection
           text={[

@@ -19,10 +19,11 @@ export default function HeroSection() {
     return (
         <section
             ref={containerRef}
-            className="hero_section mx-4 flex flex-col relative min-h-[calc(100dvh-40dvh)] lg:min-h-[calc(100dvh-30dvh)]"
+            // className="hero_section mx-4 flex flex-col relative min-h-[calc(100dvh-90dvh)] lg:min-h-[calc(100dvh-90dvh)]"
+            className="hero_section mx-4 flex flex-col relative min-h-[calc(100dvh-95dvh)] lg:min-h-[calc(100dvh-95dvh)]"
         >
             <motion.div
-                className="container-fluid hero-section-text 2xl:top-0 right-0 w-full mb-[160px] mt-0 "
+                className="container-fluid hero-section-text 2xl:top-0 right-0 w-full mb-[100px] mt-0 "
                 style={{y: textBlockY}}
             >
                 <div className="row mx-0 min-h-[300px]">

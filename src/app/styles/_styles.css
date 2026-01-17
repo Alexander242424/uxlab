@@ -40,6 +40,7 @@ body {
 .show_reel_section {
     margin-top: 32px;
     margin-bottom: 80px;
+
 }
 
 .show_real_video_container video {
@@ -308,4 +309,16 @@ body {
 }
 .last_link_section svg {
    width: 100%;
+}
+.icon_box {
+    position: relative;
+    height: 160px;
+    max-width: 334px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature_item:nth-child(-n + 5) .icon_box {
+    border-bottom: 1px solid #FFFFFF29;
 }
